@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Jupyter/Book
+.ipynb_checkpoints/
+thermalnotes/_build/
+thermalnotes/.jupyter_cache/
+
+# IDE
+.idea/
+.DS_Store
