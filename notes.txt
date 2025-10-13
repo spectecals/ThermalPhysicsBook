@@ -1,0 +1,8 @@
+preface at the start of the book
+learning goals beginning at each section. Sections to be defined.
+
+extra section that goes into probability theory in greater depth.
+
+need a table of contents when its done. Preceded by recommended reading.
+
+need to make a figure function template where some properties can be adjusted.

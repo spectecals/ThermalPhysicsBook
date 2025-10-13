@@ -65,7 +65,7 @@ of an object, depending on its mass. More generically, we write:
 $$Q_{add} = m \int_{T_{initial}}^{T_{final}} c dT$$.
 
 Substances with a high specific heat capacity (such as water) require large amounts of energy to change temperature, which 
-is why water takes a lot of energy to boil; whereas metals, which have lower specific het capacities warm up and cool down
+is why water takes a lot of energy to boil; whereas metals, which have lower specific heat capacities warm up and cool down
 quickly. Recall when you've placed your hand on a cold metal pipe, and shortly after it warms nearly to the temperature
 of your hand. 
 
