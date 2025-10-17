@@ -1,0 +1,47 @@
+.admonition.success > .admonition-title {
+    background-color: #d4edda;  /* pale green title bar */
+    color: #155724; /* dark green text */
+    border-radius: 4px 4px 0 0;
+}
+
+.admonition.info > .admonition-title {
+    background-color: #d1ecf1; /* pale blue title bar */
+    color: #0c5460; /* dark blue text */
+    border-radius: 4px 4px 0 0;
+}
+
+.admonition.definition > .admonition-title {
+    background-color: #e0e0e180;
+    color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Force all admonition title text to black */
+.admonition > .admonition-title {
+    color: #000 !important;
+}
+
+/* Remove default icon */
+.admonition > .admonition-title::before {
+    content: none !important;
+}
+
+.admonition.success > .admonition-title::after {
+    content: "✔";
+    position: absolute;
+    left: 0.6em;
+    top: 40%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #155724;
+}
+
+.admonition.info > .admonition-title::after {
+    content: "✎";
+    position: absolute;
+    left: 0.6em;
+    top: 40%;
+    transform: translateY(-50%);
+    font-weight: 700;
+    color: #0c5460;
+}

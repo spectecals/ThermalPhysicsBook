@@ -4,7 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: Lecture1
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
