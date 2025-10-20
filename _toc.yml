@@ -1,0 +1,4 @@
+format: jb-book
+root: index
+chapters:
+- file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
