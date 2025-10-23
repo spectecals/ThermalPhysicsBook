@@ -6,8 +6,8 @@ __pycache__/
 
 # Jupyter/Book
 .ipynb_checkpoints/
-thermalnotes/_build/
-thermalnotes/.jupyter_cache/
+.jupyter_cache/
+_build/
 
 # IDE
 .idea/

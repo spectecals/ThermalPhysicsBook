@@ -1,4 +1,7 @@
 format: jb-book
 root: index
+options:
+  numbered: 2
+
 chapters:
 - file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
