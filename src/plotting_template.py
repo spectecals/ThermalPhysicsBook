@@ -61,9 +61,4 @@ def interactive_curve(model, x, param_specs, title="", x_label="x", y_label="y")
     controls = widgets.VBox(list(sliders.values()))
     display(controls, fig)
 
-    if savefig:
-        # For this project we use a fixed figure directory: <project_root>/src/figures
-        project_root = Path(__file__).parents[1]  # Goes up two directories. Static method
-        print(project_root)
-
     return fig, controls
