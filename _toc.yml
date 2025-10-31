@@ -1,7 +1,9 @@
 format: jb-book
 root: index
 options:
-  numbered: 2
-
+  numbered: true
 chapters:
 - file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
+- file: unstructed_content_for_lecture_notes/ch2-probability_and_information/Introduction_to_Probability
+- file: unstructed_content_for_lecture_notes/ch3-temperature_and_heat/03_temperature_and_heat
+- file: unstructed_content_for_lecture_notes/ch5-first_law/1_Molecular_model_of_an_ideal_gas

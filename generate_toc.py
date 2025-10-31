@@ -50,6 +50,7 @@ def build_toc(root: Path, notebooks: list[Path], chosen_root: Path) -> dict:
     return {
         "format": "jb-book",
         "root": root_rel,
+        "options": { "numbered": True },
         "chapters": chapters,
     }
 

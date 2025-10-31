@@ -1,0 +1,10 @@
+{
+  "folders": [
+    { "path": "." }
+  ],
+  "settings": {
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "python.terminal.executeInFileDir": false
+  }
+}

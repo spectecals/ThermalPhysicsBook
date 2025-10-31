@@ -32,7 +32,13 @@ html:
   use_repository_button: true
   extra_css:
     - _static/custom.css
-  sidebar:
-    show_nav_level: 2
 
 only_build_toc_files: true
+
+sphinx:
+  config:
+    html_theme_options:
+      show_toc_level: 3  # show to h3 by default (adjust if you use h4) 
+    # load custom assets
+    html_static_path: ["_static"]
+    html_js_files: ["toc-current-only.js"]
