@@ -67,8 +67,8 @@ def main() -> None:
         raise SystemExit(f"Book root not found: {root}")
 
     notebooks = find_notebooks(root)
-    # Explicitly remove index.ipynb so it never becomes a chapter
-    notebooks = [nb for nb in notebooks if nb.name not in PREFERRED_ROOTS]
+    # # Explicitly remove index.ipynb so it never becomes a chapter
+    # notebooks = [nb for nb in notebooks if nb.name not in PREFERRED_ROOTS]
 
     if args.include_underscore:
         # re-run including underscore files

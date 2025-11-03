@@ -3,5 +3,5 @@ matplotlib
 numpy
 scipy
 pandas
-plotly  # from dafydd
-anywidget  # from dafydd
+plotly
+anywidget
