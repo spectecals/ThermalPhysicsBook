@@ -8,7 +8,8 @@ logo: logo.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: "force"
+  kernel_name: "tp_env_fix"
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -25,20 +26,22 @@ repository:
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
+only_build_toc_files: true
+
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
   use_issues_button: true
   use_repository_button: true
   extra_css:
-    - _static/custom.css
-
-only_build_toc_files: true
+    # - _static/custom.css
 
 sphinx:
   config:
     html_theme_options:
       show_toc_level: 3  # show to h3 by default (adjust if you use h4) 
+    suppress_warnings:
+      - myst.header
     # load custom assets
-    html_static_path: ["_static"]
-    html_js_files: ["toc-current-only.js"]
+    # html_static_path: ["_static"]
+    # html_js_files: ["toc-current-only.js"]

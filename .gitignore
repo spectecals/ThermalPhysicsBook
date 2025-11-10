@@ -2,6 +2,7 @@
 __pycache__/
 *.pyc
 .venv/
+tp_env/
 .env
 
 # Jupyter/Book
@@ -12,3 +13,4 @@ _build/
 # IDE
 .idea/
 .DS_Store
+src/questions_indexing.xlsx
