@@ -14,3 +14,4 @@ _build/
 .idea/
 .DS_Store
 src/questions_indexing.xlsx
+/tp-env
