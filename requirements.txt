@@ -6,3 +6,4 @@ pandas
 plotly
 anywidget
 pyyaml
+myst-nb

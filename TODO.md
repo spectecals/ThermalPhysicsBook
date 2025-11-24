@@ -11,13 +11,15 @@
 [] 
 [X] reformat fig17.17 up to example admonition to include everything incl plot in admonition
 [-] everything but the first law from ch.4JL heat and first law
-[] adiabatic before 0th law
+[] adiabatic before 0th law --- NOTE: i've moved things around, included isothermal and isobaric alongside, removed internal energy as relates to kinetic theory in ch.4
+[] align equations
 [] 
-[] full derivation of beta = 3alpha
+[X] full derivation of beta = 3alpha
 [] 
-[] after 3.6 include smaer's section incl egg fig
+[X] after 3.6 include smaer's section incl egg fig
 [] 
-[] add states of matter to section 3.7
+[-] add states of matter to section 3.7
+[] make a bunch of pv figs
 [] 
 [] incorporate jl's part of 3.properties of matter into 4.1, p vs V -- define states of matter, critical point, SHOW dont EXPLAIN isotherms
 [] 
