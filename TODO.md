@@ -17,8 +17,13 @@
 [X] full derivation of beta = 3alpha
 [] 
 [X] after 3.6 include smaer's section incl egg fig
+
+[] add footnote for 3 states of matter
 [] 
 [-] add states of matter to section 3.7
+[]
+[] moving adiabatic ch.5, first law
+[]
 [] make a bunch of pv figs
 [] 
 [] incorporate jl's part of 3.properties of matter into 4.1, p vs V -- define states of matter, critical point, SHOW dont EXPLAIN isotherms
