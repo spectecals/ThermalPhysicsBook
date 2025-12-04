@@ -14,13 +14,16 @@
 [X] example 3.5 fully worked out including math
 [X] add phase diagram section text
 [X] exapnd 3.8 intro
+[X] add states of matter to section 3.7
+[X] add fig 17.24 to section 3.8
+[X] go back through referential sections from JL, include whole nb page
+[X] section 3.8, include some examples of thermal conductivities
 
 [-] - UNDERWAY
 [-] check whether to use \bar or \bra \ket notation - NOTE: underway, will do this later
 [-] everything but the first law from ch.4JL heat and first law
-[-] add states of matter to section 3.7
-[-] add fig 17.24 to section 3.8
 [-] start on ch4
+[-] write up all questions in excel sheet with annotated from where
 
 [O] - WONT DO YET
 [O] add answers to all questions (low prio)
@@ -31,9 +34,6 @@
 [O] incorporate jl's part of 3.properties of matter into 4.1, p vs V -- define states of matter, critical point, SHOW dont EXPLAIN isotherms
 [O] section 3.3: include definitions of adiabatic, reversible processes, equilibrium
 
-[] write up all questions in excel sheet with annotated from where
-[] go back through referential sections from JL, include whole nb page
-[] section 3.8, include some examples of thermal conductivities
 [] maybe plot, definitely example on sections 3.5-3.7
 [] add an equation for convection
 [] include q4 from jl
