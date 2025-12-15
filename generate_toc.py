@@ -4,7 +4,7 @@ import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent
 ROOT_NAME = "index.ipynb"
-EXCLUDE_DIRS = {"_build", ".git", ".ipynb_checkpoints", "node_modules", ".venv", "venv"}
+EXCLUDE_DIRS = {"_build", ".git", ".ipynb_checkpoints", "node_modules", ".venv", "venv", "tp-env"}
 
 
 def is_excluded(p: Path) -> bool:
