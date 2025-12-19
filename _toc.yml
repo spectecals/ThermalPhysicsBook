@@ -11,6 +11,7 @@ chapters:
 - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/01_temperature_and_heat
   sections:
   - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/02_questions
+  - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/03_solutions
 - file: unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
 - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5
     Probability all sections
