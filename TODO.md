@@ -39,6 +39,7 @@
 [/] fig of human breathing section 3.1
 [/] redraw wall bounce section 3.1, rewrite caption without linebreaks
 [/] draw cube with bouncing gas inside, section 3.1
+[/] PV diagram of two isotherms, showing it's possible to move between isotherms by either increasing pressure OR volume (adiabatic vs isobaric), section 3.3
 
 [-] - UNDERWAY
 [-] write up all questions in excel sheet with annotated from where
