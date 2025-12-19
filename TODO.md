@@ -36,10 +36,9 @@
 
 [/] - FOR DAFYDD
 [/] thermometer figure 2.3, identify parts of thermometer with annotations
-[/] fig of human breathing
-[/] redraw wall bounce, rewrite caption without linebreaks
-[/] draw cube with bouncing gas inside
-[/] make a bunch of pv figs
+[/] fig of human breathing section 3.1
+[/] redraw wall bounce section 3.1, rewrite caption without linebreaks
+[/] draw cube with bouncing gas inside, section 3.1
 
 [-] - UNDERWAY
 [-] write up all questions in excel sheet with annotated from where
