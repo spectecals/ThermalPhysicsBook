@@ -40,6 +40,17 @@
 [/] redraw wall bounce section 3.1, rewrite caption without linebreaks
 [/] draw cube with bouncing gas inside, section 3.1
 [/] PV diagram of two isotherms, showing it's possible to move between isotherms by either increasing pressure OR volume (adiabatic vs isobaric), section 3.3
+[/] [[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]
+[/] [[FIG OF BARBELLS SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
+[/] [[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
+[/] [[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]
+[/] [[FIG 18 IN SRC]]
+[/] [[FIG 8.1 IN SRC]]
+[/] [[FIG 8.3 (sorry this one's a bit intense)]]
+[/] [[FIG COMPRESSION IN SRC]]
+[/] [[FIG picture 2 in src]]
+[/] [[FIGURE - PIC 3 - SHOWING PARTICLE IN A BOX BEING PULLED BACK BY OTHER PARTICLES, REDUCING ITS SPEED]]
+[/] [[FIG SHOWING REAL GASES ARE NOT POINT PARTICLES PIC4]]
 
 [-] - UNDERWAY
 [-] write up all questions in excel sheet with annotated from where
@@ -50,3 +61,11 @@
 [O] section 2.3: include definitions of adiabatic, reversible processes, equilibrium
 [O] add an equation for convection
 [O] include q4 from jl (adiabatic comes later)
+
+[ ] - TODO
+[ ] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
+[ ] introduction of cp being cv + 2 isn't explained
+[ ] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
+[ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
+[ ] [[REF FIG 8.3]]
+[ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
