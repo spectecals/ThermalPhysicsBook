@@ -69,3 +69,4 @@
 [ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
 [ ] [[REF FIG 8.3]]
 [ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
+[ ] JLq4 in ch4 is adiabatic, gets covered in next chapter
