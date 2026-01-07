@@ -33,8 +33,12 @@
 [X] check whether to use \bar or \bra \ket notation - USE BRAKET
 [X] start on ch4
 [X] add answers to questions ch1,2
+[X] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
+[X] add questions for ch1 -- what are the 4 laws of thermodynamics
+[X] example calculate efficiency of carnot cycle
+[X] index course overview -- include syllabus and textbooks from powerpoint B28TP HWU -- omit supercooled
 
-[/] - FOR DAFYDD
+[/] - TODO DAFYDD
 [/] thermometer figure 2.3, identify parts of thermometer with annotations
 [/] fig of human breathing section 3.1
 [/] redraw wall bounce section 3.1, rewrite caption without linebreaks
@@ -62,11 +66,14 @@
 [O] add an equation for convection
 [O] include q4 from jl (adiabatic comes later)
 
-[ ] - TODO
-[ ] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
+[ ] - TODO STEF
 [ ] introduction of cp being cv + 2 isn't explained
 [ ] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
 [ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
 [ ] [[REF FIG 8.3]]
 [ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
 [ ] JLq4 in ch4 is adiabatic, gets covered in next chapter
+[ ] find a way to host a link to the jupyterbook - completed sections only
+[ ] index page!! samer will give intro, if not ask
+[ ] copy figures from book, reference them
+[ ] look into learning outcomes, doublecheck
