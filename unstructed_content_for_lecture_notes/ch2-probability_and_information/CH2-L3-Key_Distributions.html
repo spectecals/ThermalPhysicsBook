@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2.3. Probability Theory for Thermal Physics - Lecture 3 &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unstructed_content_for_lecture_notes/ch2-probability_and_information/CH2-L3-Key_Distributions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2.4. Probability Theory - Questions" href="CH2-Problem_Sheet.html" />
+    <link rel="prev" title="2.2. Probability Theory for Thermal Physics - Lecture 2" href="CH2-L2-Combinatorics_and_Bayes_Theorem.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_solutions.html">1.9. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="CH2-L0-Probability_Overview.html">2. Probability Theory for Thermal Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="CH2-L1-Basic_Probability_Concepts.html">2.1. Probability Theory for Thermal Physics - Lecture 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH2-L2-Combinatorics_and_Bayes_Theorem.html">2.2. Probability Theory for Thermal Physics - Lecture 2</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Probability Theory for Thermal Physics - Lecture 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH2-Problem_Sheet.html">2.4. Probability Theory - Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH2-Problem_Sheet_Solutions.html">2.5. Probability Theory - Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch3-temperature_and_heat/01_temperature_and_heat.html">3. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch3-temperature_and_heat/02_questions.html">3.9. Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch4-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">4. Kinetic Theory of Gases</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/unstructed_content_for_lecture_notes/ch2-probability_and_information/CH2-L3-Key_Distributions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Probability Theory for Thermal Physics - Lecture 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-distributions-gaussian-poisson-maxwell-boltzmann">Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-normal-distribution">Gaussian (Normal) Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-limit-theorem">The Central Limit Theorem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-water-should-you-bring-on-a-trip-for-a-group">How much water should you bring on a trip for a group</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distribution">Poisson Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-appears-in-physics">Why it appears in physics:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-and-variance">Mean and Variance:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poissonian-shot-noise">Poissonian (Shot) Noise:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-the-binomial-distribution">Connection to the Binomial Distribution:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-radioactive-decay">Example: Radioactive Decay</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas">Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="probability-theory-for-thermal-physics-lecture-3">
+<h1><span class="section-number">2.3. </span>Probability Theory for Thermal Physics - Lecture 3<a class="headerlink" href="#probability-theory-for-thermal-physics-lecture-3" title="Permalink to this heading">#</a></h1>
+<div class="outcomes admonition">
+<p class="admonition-title">Learning outcomes:</p>
+<ul class="simple">
+<li><p>Identify and use the <strong>normal (Gaussian) distribution</strong> as an approximation to many natural phenomena.</p></li>
+<li><p>Understand the Central Limit Theorem and its relevance to Thermodynamics.</p></li>
+<li><p>Describe the <strong>Poisson distribution</strong> and its relevance to counting statistics and random thermal events.</p></li>
+</ul>
+</div>
+<section id="key-distributions-gaussian-poisson-maxwell-boltzmann">
+<h2>Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann<a class="headerlink" href="#key-distributions-gaussian-poisson-maxwell-boltzmann" title="Permalink to this heading">#</a></h2>
+<p>In thermal physics, we often study systems comprised of an enormous number of particles. Instead of tracking the exact trajectories of each particle exhaustively, we rely on probability distributions which describe the typical behaviour of the system as a whole. The Gaussian, Poisson, and Maxwell-Boltzmann distributions are especially important because they each capture a common pattern observed in physical processes present in thermodynamics. Understanding these distributions helps in explaining how microscopic randomness produces the macroscopic behaviour we observe. Consider this an introduction to these key distributions, as we will go through them in more detail within Chapter 6.</p>
+<section id="gaussian-normal-distribution">
+<h3>Gaussian (Normal) Distribution<a class="headerlink" href="#gaussian-normal-distribution" title="Permalink to this heading">#</a></h3>
+<p>A continuous, bell-shaped probability density function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x; \mu, \sigma)=\frac{1}{\sqrt{2\pi}\, \sigma}\exp\! \left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\tag{2.24}
+\]</div>
+<p>The mean and variance are <span class="math notranslate nohighlight">\(\langle x\rangle=\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma^2\)</span>.
+By the Central Limit Theorem, the sum or average of many independent random variables tends toward a Gaussian distribution, regardless of the original shape.</p>
+<p>The Gaussian distribution is relevant because many physical quantities arise from the combined effect of many small, often random contributions. When these contributions add together, their overall behaviour tends to form a Gaussian distribution with its characteristic bell-shaped curve. This is why energy fluctuations, measurement noise, and small variations in macroscopic observables often follow a normal distribution. In practice, the Gaussian serves as a “default” model for fluctuations in thermal systems, reflecting how microscopic randomness smooths out into predictable macroscopic behaviour. An extremely common type of Gaussian distribution is the <em>standard normal distribution</em>, which is when <span class="math notranslate nohighlight">\(\mu = 0\)</span> and <span class="math notranslate nohighlight">\(\sigma = 1\)</span>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/15488a2ff9ba9c2ca1406cea049588049696f3c00aa875dda4b16a8a77e54caa.png" src="../../_images/15488a2ff9ba9c2ca1406cea049588049696f3c00aa875dda4b16a8a77e54caa.png" />
+</div>
+</div>
+<p>The Gaussian distribution appears constantly in thermal physics because macroscopic quantities are the sum of many small, independent fluctuations. By the Central Limit Theorem, the distribution of these sums tends to a normal distribution regardless of the microscopic details. As a result, Gaussian noise underlies phenomena such as measurement uncertainty, Brownian motion, and thermal fluctuations in equilibrium systems.</p>
+<p>In thermodynamics, the variance of a Gaussian-distributed observable measures the strength of its fluctuations around equilibrium. These fluctuations are typically extremely small for macroscopic systems because the variance of the mean scales as <span class="math notranslate nohighlight">\(\sigma^2 / N\)</span>, with <span class="math notranslate nohighlight">\(N\)</span> on the order of Avogadro’s number. This is why quantities like pressure or temperature appear ‘stable’ in spite of the chaotic molecular motion responsible for it.</p>
+</section>
+</section>
+<section id="the-central-limit-theorem">
+<h2>The Central Limit Theorem<a class="headerlink" href="#the-central-limit-theorem" title="Permalink to this heading">#</a></h2>
+<p>The <em>Central Limit Theorem</em> is one of the most important ideas within probability and statistics. It explains why the Guassian distribution is ubiquitous in nature, even when the system underlying the data is non-Gaussian. The theorem states that *”if you take the mean of many independent samples drawn from any distribution with finite mean and variance, then the distribution of those sample means tends towards a normal distribution as the sample size increases”.</p>
+<p>This new distribution is referred to as the <strong>sampling distribution of the sample mean</strong>. Symbollically, if we have the following:</p>
+<ul class="simple">
+<li><p>Original variable <span class="math notranslate nohighlight">\(X\)</span>,</p></li>
+<li><p>True mean <span class="math notranslate nohighlight">\(\mu = \langle X \rangle\)</span>,</p></li>
+<li><p>True standard deviation <span class="math notranslate nohighlight">\(\sigma = \sqrt{Var(X)}\)</span>,</p></li>
+</ul>
+<p>then if we let <span class="math notranslate nohighlight">\(\bar{X}_n\)</span> be the mean of <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span> independent samples of <span class="math notranslate nohighlight">\(X\)</span>, the distribution of <span class="math notranslate nohighlight">\(\bar{X}_n\)</span> approaches a normal distribution as <span class="math notranslate nohighlight">\(n\)</span> increases:</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{X}_n \sim \mathcal{N}(\mu,  \frac{\sigma^2}{n}).
+\]</div>
+<p>To see this concept in action, let us look at a variable <span class="math notranslate nohighlight">\(x\)</span> which is sampled from an arbitrary discrete distribution, which we define as hosting four values {1, 3, 4, 6} with corresponding weights {0.45, 0.15, 0.10, 0.30}. Any draw from this distribution is independent of previous or subsequent draws.</p>
+<p>As it will be useful for illustrating the reality of the central limit theorem, let us first compute the mean and standard deviation of this distribution:</p>
+<div class="math notranslate nohighlight">
+\[\langle x \rangle = \sum_i x_i \ p_i(x) = 0.45\cdot1 + 0.15\cdot3 + 0.10\cdot4 + 0.30\cdot6 = 3.1 \to \langle x \rangle^2 = 9.61\]</div>
+<div class="math notranslate nohighlight">
+\[\langle x^2 \rangle = \sum_i x_i^2 \ p_i(x) = 0.45\cdot1^2 + 0.15\cdot3^2 + 0.10\cdot4^2 + 0.30\cdot6^2 = 14.20\]</div>
+<div class="math notranslate nohighlight">
+\[\sigma = \sqrt{Var(x)} = \sqrt{\langle x^2 \rangle - \langle x \rangle^2} = \sqrt{14.20 - 9.61} = \sqrt{4.59} \approx 2.14\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/75fa07f7bdc2068aabc20fecf6aee998a26dc5552c8f3178da2127d20c807b78.png" src="../../_images/75fa07f7bdc2068aabc20fecf6aee998a26dc5552c8f3178da2127d20c807b78.png" />
+</div>
+</div>
+<p>Evidently, this distribution does not reflect a normal distribution at all. But observe what happens as we begin to acquire sets consisting of <span class="math notranslate nohighlight">\(n\)</span> samples from this distribution…</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x_{(n=4, \  i=1)} = \{1, 1, 3, 6\} \to \bar{x}_{(n=4, \  i=1)} = 2.75\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{(n=4, \  i=2)} = \{1, 3, 3, 6\} \to \bar{x}_{(n=4, \  i=2)} = 3.25\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{(n=4, \  i=3)} = \{3, 6, 3, 3\} \to \bar{x}_{(n=4, \  i=3)} = 3.75\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_{(n=4, \  i=3)} = \{1, 1, 1, 4\} \to \bar{x}_{(n=4, \  i=4)} = 1.75\)</span>;</p></li>
+</ul>
+<p>etcetera. Were we to draw 4 samles twenty thousand times, calculate the mean of each sample and place them on a histogram, we obtain the distribution on the left below. It still resembles the original distribution, in that there are still gaps in the available outcomes; but by increasing the size of the sample set the distribution we realise begins to more closely resemble a normal distribution. In the plot below, we see that the distribution of the sample means begins to greater represent a normal distribution as we increase the sample size per draw.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/f69cf51ebc48491e143e9b8c3efb243adb737f56d8b2464989df78d81dfd7522.png" src="../../_images/f69cf51ebc48491e143e9b8c3efb243adb737f56d8b2464989df78d81dfd7522.png" />
+</div>
+</div>
+<p>We can see an increasingly peaked Gaussian form as the sample size per draw increases, in line with our expectations. For a small sample size, the distribution closely resembles the initial discrete one, and in fact if we were drawing sample sizes of one it would exactly resemble the original. However, as the draw size increases we begin to observe the classic bell-shaped curve customary of a Gaussian. You’ll note that the mean of these distributions is very close to the original distribution’s mean all along, but the standard deviation increases, making the distribution narrower as the draw size goes up.</p>
+<p>This too is expected, as we noted that the Guassian that emerges from this sampling procedure has a standard deviation <span class="math notranslate nohighlight">\(\sigma_n = \sigma / \sqrt{n}\)</span>. Let us check how well these standard deviations aligned with our expectations…</p>
+<p>Recalling that <span class="math notranslate nohighlight">\(\sigma \approx 2.14\)</span>, we denote the standard deviation we expect to obtain as <span class="math notranslate nohighlight">\(\sigma_{n}\)</span>, and the standard deviation we actually obtain through sampling as <span class="math notranslate nohighlight">\(\hat{\sigma}_n\)</span>. Finally, we define the discrepancy between the two via:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_n = \mid \sigma_{n} - \hat{\sigma}_n \mid
+\]</div>
+<p>Then with these tools at our disposal:</p>
+<div class="math notranslate nohighlight">
+\[\sigma_{n=4} = \frac{2.14}{\sqrt{4}} = 1.07 \to \Delta \sigma_{n=4} = \mid 1.07 - 1.069 \mid = 0.001\]</div>
+<div class="math notranslate nohighlight">
+\[\sigma_{n=20} = \frac{2.14}{\sqrt{20}} = 0.479 \to \Delta \sigma_{n=20} = \mid 0.479 - 0.477 \mid = 0.002\]</div>
+<div class="math notranslate nohighlight">
+\[\sigma_{n=100} = \frac{2.14}{\sqrt{100}} = 0.214 \to \Delta \sigma_{n=100} = \mid 0.214 - 0.214 \mid = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\sigma_{n=500} = \frac{2.14}{\sqrt{500}} = 0.096 \to \Delta \sigma_{n=500} = \mid 0.96 - 0.96 \mid = 0\]</div>
+<p>So as you can see, our newly-generated distributions display near-perfect alignment with the parameter values proposed by the Central Limit Theorem. It is also clear how the standard deviation in these distributions gradually reduces with the increase in draw size, meanining that if we were estimating our uncertainity in the population mean, then taking larger sample sizes from the population would reduce our uncertainity.</p>
+<section id="how-much-water-should-you-bring-on-a-trip-for-a-group">
+<h3>How much water should you bring on a trip for a group<a class="headerlink" href="#how-much-water-should-you-bring-on-a-trip-for-a-group" title="Permalink to this heading">#</a></h3>
+<p>For a more practical example of how the central limit theorem is useful, picture a scenario where you are scheduling a hiking trip for fifty people, and you’re aware that the average person drinks 2.0 <span class="math notranslate nohighlight">\(\pm\)</span> 0.7 L of water on hikes such as these. Your intention is to bring 110 L of water with you, so what is the probability that you exhaust your supply?</p>
+<p>If the 110 L of water is evenly distributed amongst the participants, then their individual allotment is 2.2 L, and we need the average water consumption of the group to be no higher than this. The probability distribution for an individual’s water consumption on a given walk could resemble any shape, but because we know the average consumption, the standard deviation and the sample size already, we can use the Central Limit Theorem to make quick conclusions about the water consumption of a groupL</p>
+<div class="math notranslate nohighlight">
+\[\langle \text{water consumption} \rangle_{50} \sim  \mathcal{N}(\mu,  \frac{\sigma^2}{50}) = \mathcal{N}(2.0,  \frac{0.7^2}{50})\]</div>
+<p>We can quickly compute that the standard deviation in the group’s water consumption should be <span class="math notranslate nohighlight">\(0.7^2 /\sqrt{50} \approx 0.01 \ L\)</span>. Using the graph below, we can see the threshold that we are attempting to compute the probability of surpassing:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/e443dc6017a6196ee7fb8708774b958836eb6097ffc606576c7c87d706e9d22a.png" src="../../_images/e443dc6017a6196ee7fb8708774b958836eb6097ffc606576c7c87d706e9d22a.png" />
+</div>
+</div>
+<p>What is the probability that we lie in the red region? We could compute this by integrating over the Gaussian distribution up to the threshold of 2.2 L, but more simply we can take advantage of the definition of standard deviations. First, how many standard deviations away from the mean is 2.2 L ?</p>
+<p>$<span class="math notranslate nohighlight">\(\frac{2.2 - 2.0}{0.1} = \frac{0.2}{0.1} = 2 \ \text{standard deviations}\)</span>$.</p>
+<p>We can now make use of the <strong>empirical rule</strong> which denotes:</p>
+<p>$<span class="math notranslate nohighlight">\(P(\mu - 1\sigma \leq X \leq \mu + 1\sigma) \approx 68.27\%\)</span>$,</p>
+<p>$<span class="math notranslate nohighlight">\(P(\mu - 2\sigma \leq X \leq \mu + 2\sigma) \approx 95.45\%\)</span>$,</p>
+<p>$<span class="math notranslate nohighlight">\(P(\mu - 3\sigma \leq X \leq \mu + 3\sigma) \approx 99.73\%\)</span>$.</p>
+<p>So, values beyond two standard deviations from the mean have a <span class="math notranslate nohighlight">\(100\% - 95.45\% = 4.55\%\)</span> chance in occurring, but since we are only considering the upper bound, we can half this value to 2.275%. Therefore, there is a 2.275% chance that you run out of water on the trip.</p>
+<p>The Central Limit Theorem is vital to thermodynamics because it explains why macroscopic measurements are stable and predictable despite enormous microscopic randomness. Quantities such as internal energy, pressure on a container wall, heat capacity, or the number of particles in a sub-volume are all sums of contributions from an unfathomably large number of molecules. Although each molecule’s velocity, collision time, or position fluctuates chaotically, these fluctuations are approximately independent. When millions or billions of such contributions are averaged, the Central Limit Theorem guarantees that the resulting distribution of the observable becomes Gaussian with extremely small relative variance. As a result, thermodynamic quantities do not wildly fluctuate, instead they obey smooth laws like the ideal gas law or the Maxwell–Boltzmann distribution. The Central Limit theorem is therefore one of the key bridges between statistical mechanics and classical thermodynamics, and it explains why macroscopic behaviour emerges from microscopic chaos.</p>
+</section>
+</section>
+<section id="poisson-distribution">
+<h2>Poisson Distribution<a class="headerlink" href="#poisson-distribution" title="Permalink to this heading">#</a></h2>
+<p>The Poisson distribution describes the probability of observing <span class="math notranslate nohighlight">\(k\)</span> occurrences of a rare event in a fixed interval of time, space, or volume, when:</p>
+<ol class="arabic simple">
+<li><p>Events occur independently of one another. E.g. if a detector picks up on a photon, it does not increase the chance of another arriving later.</p></li>
+<li><p>The average rate of event occurance is constant.</p></li>
+<li><p>Events do not occur simultaneously. I.e. the probabiity of two or more events occuring in an infinitesmally small interval is negligible.</p></li>
+</ol>
+<p>This distribution is defined by a single parameter, <span class="math notranslate nohighlight">\(\lambda\)</span>, which defines the rate of event occurance:</p>
+<div class="math notranslate nohighlight">
+\[
+P(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}
+\tag{2.25}
+\]</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/eefd7373178e6027c3c69c71a30151a8a77d45380f540a5697a1ad9c1f029650.png" src="../../_images/eefd7373178e6027c3c69c71a30151a8a77d45380f540a5697a1ad9c1f029650.png" />
+</div>
+</div>
+<section id="why-it-appears-in-physics">
+<h3>Why it appears in physics:<a class="headerlink" href="#why-it-appears-in-physics" title="Permalink to this heading">#</a></h3>
+<p>Many physical processes involve independent, randomly spaced events such as:</p>
+<ul class="simple">
+<li><p>radioactive decay (each nucleus decays roughly independently, save for more intense environments like a nuclear reactor),</p></li>
+<li><p>photon arrivals in a photodetector,</p></li>
+<li><p>particle collisions in a dilute gas,</p></li>
+<li><p>cosmic ray counts in stellar observation.</p></li>
+</ul>
+<p>Whenever events occur at steady rate, and exhibit no interdependence, the Poisson model is a natural choice for interpreting the underlying system behaviour.</p>
+</section>
+<section id="mean-and-variance">
+<h3>Mean and Variance:<a class="headerlink" href="#mean-and-variance" title="Permalink to this heading">#</a></h3>
+<p>A distinctive property of the Poisson distribution is that its mean and variance are equal:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle k \rangle = \lambda,
+\qquad
+\mathrm{Var}(k) = \lambda.
+\]</div>
+<p>The standard deviation therefore scales as:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_k = \sqrt{\lambda}.
+\]</div>
+<p>This relationship has important consequences for measurements based on event counting.</p>
+</section>
+<section id="poissonian-shot-noise">
+<h3>Poissonian (Shot) Noise:<a class="headerlink" href="#poissonian-shot-noise" title="Permalink to this heading">#</a></h3>
+<p>In any experiment where you physically count discrete events, e.g. photons hitting a detector, radioactive decays recorded by a Geiger tube, electrons arriving at an amplifier; the number of events detected in a fixed interval fluctuates randomly. Even if the underlying system behaves perfectly, these fluctuations cannot be eliminated: they arise from the fundamental randomness of the arrival process itself.</p>
+<p>For a Poisson process with mean count <span class="math notranslate nohighlight">\(\langle k \rangle = \lambda = N\)</span>, the fluctuations are</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \sqrt{N},
+\]</div>
+<p>so the <em>absolute</em> size of the noise (the size of the fluctuations themselves) increases as you detect more events. However, the <em>relative</em> noise (the size of the fluctuations relative to the signal itself) decreases:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\sigma}{N} = \frac{\sqrt{N}}{N} = \frac{1}{\sqrt{N}}.
+\]</div>
+<p>This means that doubling the number of detected events does not halve the noise; instead the improvement in precision follows a square–root law. Collecting more counts therefore increases the signal-to-noise ratio, but with diminishing returns.</p>
+<p>These fluctuations are known as <em>shot noise</em>. They represent a hard statistical limit on the precision of any measurement based on discrete event counting. No amount of engineering or detector refinement can remove shot noise entirely - it originates from the Poisson statistics of the underlying process, not from imperfections in the apparatus. We can visualise how the absolute and relative noise changes with <span class="math notranslate nohighlight">\(N\)</span> in the figures below:</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/0a6444bd853f6cde7334a69457b90b8d969628757294f2fc49cfa9eae1e1c108.png" src="../../_images/0a6444bd853f6cde7334a69457b90b8d969628757294f2fc49cfa9eae1e1c108.png" />
+</div>
+</div>
+<p>The two plots above illustrate the difference between <em>absolute</em> and <em>relative</em> noise
+in a Poisson process.</p>
+<p>When the mean count is small (left), the fluctuations are about ±10 counts.
+When the mean count is large (right), the fluctuations are about ±100 counts.
+This is the <em>absolute</em> noise, which scales as √N.</p>
+<p>However, compare these fluctuations to the mean:</p>
+<ul class="simple">
+<li><p>10 is 10% of 100,</p></li>
+<li><p>100 is only 1% of 10,000.</p></li>
+</ul>
+<p>This fractional uncertainty is the <em>relative</em> noise, scaling as <span class="math notranslate nohighlight">\(1/\sqrt{N}\)</span>.
+The absolute noise grows, but the relative noise shrinks.</p>
+</section>
+<section id="connection-to-the-binomial-distribution">
+<h3>Connection to the Binomial Distribution:<a class="headerlink" href="#connection-to-the-binomial-distribution" title="Permalink to this heading">#</a></h3>
+<p>The Poisson distribution arises as a limiting case of the binomial distribution. If an event has a very small probability <span class="math notranslate nohighlight">\(p\)</span> of occurring in each of <span class="math notranslate nohighlight">\(n\)</span> independent trials, with <span class="math notranslate nohighlight">\(np = \lambda\)</span> held constant as <span class="math notranslate nohighlight">\(n \rightarrow \infty\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{Binomial}(n,p)
+\;\longrightarrow\;
+\mathrm{Poisson}(\lambda).
+\]</div>
+<p>This explains why the Poisson model is appropriate for rare events occurring in large populations or high-frequency processes: each individual trial is extremely unlikely to produce an event, but the sheer number of trials leads to a steady average rate.</p>
+</section>
+<section id="example-radioactive-decay">
+<h3>Example: Radioactive Decay<a class="headerlink" href="#example-radioactive-decay" title="Permalink to this heading">#</a></h3>
+<p>If a radioactive sample emits on average <span class="math notranslate nohighlight">\(\lambda = 12\)</span> decays per minute, then the probability of detecting exactly <span class="math notranslate nohighlight">\(k = 15\)</span> decays in a given minute is</p>
+<div class="math notranslate nohighlight">
+\[
+P(k=15;\lambda=12)
+=
+\frac{12^{15} e^{-12}}{15!}
+\approx 0.072.
+\]</div>
+<p>Such fluctuations of order <span class="math notranslate nohighlight">\(\sqrt{\lambda} \approx 3.46\)</span> are typical and must be accounted for when interpreting counting experiments in nuclear physics, optics, and particle detection.</p>
+</section>
+</section>
+<section id="maxwellboltzmann-speed-distribution-3d-ideal-gas">
+<h2>Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)<a class="headerlink" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas" title="Permalink to this heading">#</a></h2>
+<p>The Maxwell-Boltzmann distribution is a particular probability distribution named after James Clerk Maxwell and Ludwig Boltzmann, and was first defined for describing particle speeds in idealized gases.</p>
+<div class="math notranslate nohighlight">
+\[
+f(v; T, m)=4\pi\! \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\! \left(-\frac{m v^2}{2k_B T}\right), \qquad v\ge 0
+\tag{2.26}
+\]</div>
+<p>The Maxwell–Boltzmann distribution plays a central role in kinetic theory because it describes the spread of particle speeds in a classical ideal gas. It shows that, at a given temperature, some particles move slowly while others move very fast, and it gives precise predictions for the most probable speed, the average speed, and the rms speed. These predictions feed directly into calculations of pressure, diffusion, heat transfer, and collision rates. In essence, this distribution connects random molecular motion to the observable properties of gases.</p>
+<p>Key quantities:</p>
+<ul class="simple">
+<li><p>Most probable speed: <span class="math notranslate nohighlight">\(v_p=\sqrt{\frac{2k_B T}{m}}\)</span></p></li>
+<li><p>Mean speed: <span class="math notranslate nohighlight">\(\langle v\rangle=\sqrt{\frac{8k_B T}{\pi m}}\)</span></p></li>
+<li><p>RMS speed: <span class="math notranslate nohighlight">\(v_{\mathrm{rms}}=\sqrt{\frac{3k_B T}{m}}\)</span></p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" src="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./unstructed_content_for_lecture_notes\ch2-probability_and_information"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CH2-L2-Combinatorics_and_Bayes_Theorem.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Probability Theory for Thermal Physics - Lecture 2</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CH2-Problem_Sheet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Probability Theory - Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-distributions-gaussian-poisson-maxwell-boltzmann">Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-normal-distribution">Gaussian (Normal) Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-central-limit-theorem">The Central Limit Theorem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-water-should-you-bring-on-a-trip-for-a-group">How much water should you bring on a trip for a group</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distribution">Poisson Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-it-appears-in-physics">Why it appears in physics:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-and-variance">Mean and Variance:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#poissonian-shot-noise">Poissonian (Shot) Noise:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-the-binomial-distribution">Connection to the Binomial Distribution:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-radioactive-decay">Example: Radioactive Decay</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas">Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

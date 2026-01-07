@@ -1,0 +1,108 @@
+/* ================= HARD RESET OF THEME ICONS ================= */
+/* Kill any built-in ::before icon across common containers */
+body .bd-content .admonition > .admonition-title::before,
+body .bd-article .admonition > .admonition-title::before,
+body .admonition > .admonition-title::before,
+body details.admonition > .admonition-title::before {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+}
+
+/* ================= SHARED TITLE LAYOUT ================= */
+.admonition > .admonition-title {
+  position: relative;           /* anchor for our ::after */
+  background: transparent !important;
+  border: 0 !important;
+  margin: 0 0 0.35em 0 !important;
+  padding: 0.4rem 0.6rem 0.3rem 2.2rem !important;  /* space for icon */
+  font-weight: 700;
+  line-height: 1.25;
+  min-height: 1.8rem;           /* prevents clipping under tight line-height */
+}
+
+/* One slot for our replacement icon (use ::after to avoid theme) */
+.admonition > .admonition-title::after {
+  position: absolute;
+  left: 0.6rem;                 /* flush-left inside box */
+  top: 0.35rem;                 /* explicit top anchor; no translate */
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: 1.1em;
+  display: inline-block;
+  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji",system-ui,sans-serif !important;
+  content: "";                  /* per-type will set actual glyph */
+}
+
+/* ================= LIGHT/DARK FADED BACKGROUNDS ================= */
+:root { --admo-bg-alpha: 0.10; --admo-border-alpha: 0.55; }
+html[data-theme="dark"], [data-theme="dark"] {
+  --admo-bg-alpha: 0.18; --admo-border-alpha: 0.65;
+}
+
+/* Shared container cosmetics */
+.admonition.reading,
+.admonition.outcomes,
+.admonition.definition,
+.admonition.example {
+  border-left-width: 6px;
+  border-radius: 8px;
+  padding: 0.6rem 1rem 0.8rem 1.2rem;
+  margin: 1.2rem 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* ================= PER-TYPE COLORS + ICONS ================= */
+
+/* reading — green */
+.admonition.reading {
+  --h: 150; --s: 45%; --l: 34%;
+  --accent: hsl(var(--h) var(--s) var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--admo-bg-alpha));
+  border-left: 6px solid hsl(var(--h) var(--s) var(--l) / var(--admo-border-alpha));
+}
+.admonition.reading > .admonition-title { color: var(--accent); }
+.admonition.reading > .admonition-title::after { content: "\1F4D6\FE0E" !important; color: var(--accent) !important; }
+
+/* outcomes — blue */
+.admonition.outcomes {
+  --h: 210; --s: 65%; --l: 38%;
+  --accent: hsl(var(--h) var(--s) var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--admo-bg-alpha));
+  border-left: 6px solid hsl(var(--h) var(--s) var(--l) / var(--admo-border-alpha));
+}
+.admonition.outcomes > .admonition-title { color: var(--accent); }
+.admonition.outcomes > .admonition-title::after { content: "\270F\FE0E" !important; color: var(--accent) !important; }
+
+/* definition — grey */
+.admonition.definition {
+  --h: 210; --s: 6%; --l: 46%;
+  --accent: hsl(var(--h) var(--s) var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--admo-bg-alpha));
+  border-left: 6px solid hsl(var(--h) var(--s) var(--l) / var(--admo-border-alpha));
+}
+.admonition.definition > .admonition-title { color: var(--accent); }
+.admonition.definition > .admonition-title::after { content: "\24D8" !important; color: var(--accent) !important; }
+
+/* example — red */
+.admonition.example {
+  --h: 0; --s: 68%; --l: 43%;
+  --accent: hsl(var(--h) var(--s) var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--admo-bg-alpha));
+  border-left: 6px solid hsl(var(--h) var(--s) var(--l) / var(--admo-border-alpha));
+}
+.admonition.example > .admonition-title { color: var(--accent); }
+.admonition.example > .admonition-title::after { content: "\003F" !important; color: var(--accent) !important; }
+
+/* Optional: extra belt-and-braces if theme targets deeper selectors */
+body .bd-content .admonition.reading    > .admonition-title::before,
+body .bd-content .admonition.outcomes   > .admonition-title::before,
+body .bd-content .admonition.definition > .admonition-title::before,
+body .bd-content .admonition.example    > .admonition-title::before {
+  content: none !important;
+  display: none !important;
+}

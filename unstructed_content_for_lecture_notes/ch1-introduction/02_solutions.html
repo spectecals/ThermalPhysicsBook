@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>2. Solutions &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unstructed_content_for_lecture_notes/ch1-introduction/02_solutions';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Temperature and Heat" href="../ch2-temperature_and_heat/01_temperature_and_heat.html" />
+    <link rel="prev" title="1.8. Questions" href="02_questions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_questions.html">1.8. Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">3. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">3.9. Questions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">4. Kinetic Theory of Gases</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html">5. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet.html">5.11. Probability Theory - Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions.html">5.12. Probability Theory - Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview.html">5.13. Probability Theory for Thermal Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts.html">5.14. Probability Theory for Thermal Physics - Lecture 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem.html">5.15. Probability Theory for Thermal Physics - Lecture 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions.html">5.16. Probability Theory for Thermal Physics - Lecture 3</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/unstructed_content_for_lecture_notes/ch1-introduction/02_solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="solutions">
+<h1><span class="section-number">2. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>What is the mass of 3 moles of carbon dioxide (CO<sub>2</sub>)? (1 mole of oxygen atoms has a mass of 16 g.)</p></li>
+</ol>
+<p>CO<sub>2</sub> has atomic numbers <span class="math notranslate nohighlight">\(Z = 12, 16\)</span>. The definition of the mole is the number of atoms required such that our carbon-12 weighs 12g, therefore we don’t need to use Avagadro’s number or find the weight of a singular molecule.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \text{sum of atomic numbers} \cdot \text{number of moles} &amp;= \text{mass of gas in grams} \\
+(12 + 16\cdot 2) \cdot 3 &amp;= 44 \cdot 3 = 132\ \text{g} \end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>A typical bacterium has a mass of 10<sup>−12</sup> g. Calculate the mass of a mole of bacteria. (Interestingly, this is about the total number of bacteria living in the guts of all humans resident on planet Earth.) Give your answer in units of elephant-masses (elephants have a mass ~5000 kg).</p></li>
+</ol>
+<p>Here we do require Avagadro’s number, <span class="math notranslate nohighlight">\(6.022 \cdot 10 ^{23}\)</span>, and it will help to write the elephant masses in the form of <span class="math notranslate nohighlight">\(5 \cdot 10^3\  \text{kg}=5 \cdot 10^6\ \text{g} = 1\ \text{g}/ 2\cdot 10^{-7}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{single bacterium mass} \cdot \text{Avagadro's number} / \text{elephant mass} &amp;= \text{elephants composed of bacteria} \\
+10^{-12}\ \text{g} \cdot 6.0210^{23}\ \text{mol}^{-1} \cdot 2\cdot 10^{-7}\ \text{g}^{-1} &amp;= 2 \cdot 6.022 \cdot 10^{(23 - 19)} \\
+&amp;= 12.044 \cdot 10^{4} = 120,000\ \text{elephants}.
+\end{split}\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Are there more water <em>molecules</em> in your body (assuming you are 100% water) or more water <em>droplets</em> in all the oceans in the world? There is approximately <span class="math notranslate nohighlight">\(10^{21}\)</span> kg of water in all of the world’s oceans. Use an estimate of the size of a typical droplet of water.</p></li>
+</ol>
+<p>Average weight of a European is <span class="math notranslate nohighlight">\( \approx 70kg \)</span>. H<sub>2</sub>O has a molar mass of <span class="math notranslate nohighlight">\((2 + 16)\)</span> g. We can start to solve this question by calculating how many moles of water would be required to weigh 70 kg, and then how many molecules total.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+70000\ \text{g} / 18\ \text{g mol}^{-1} &amp;\approx 3900\ \text{mol} \\
+3900\ \text{mol}\cdot 6.022 \cdot 10 ^ {23}\ \text{molecules per mol} &amp;= 2.35 \cdot 10^{27}\ \text{molecules}.
+\end{split}\]</div>
+<p>Raindrops range from 0.5-5 mm typically, so we’ll go with 1 mm diameter droplets. A 0.5 mm radius sphere has volume</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 4/3 \pi (0.5 \cdot 10^{-3})^3\ \text{m}^3 &amp;\approx 0.5 \cdot 10^{-9}\ \text{m}^3 \\
+1000 \text{kg water} &amp;\equiv 1\ \text{m}^3\ \text{water} \\
+0.5 \cdot 10^{-9}\ \text{m}^3 &amp;= 0.5 \cdot 10^{-6}\ \text{kg} \\
+10^{21} \cdot 2 \cdot 10^6 &amp;= 2 \cdot 10^{27} &lt; 2.35 \cdot 10^{27} \end{split}\]</div>
+<p>Depending on your approximation of the droplet size, it could go either way! If you used 1 mm <strong>radius</strong> droplets, you’d have <span class="math notranslate nohighlight">\( 8 \cdot 2 \cdot 10^{27} &gt; 2.35 \cdot 10^{27} \)</span>.</p>
+<ol class="arabic simple" start="4">
+<li><p>A system contains <span class="math notranslate nohighlight">\(n\)</span> atoms, each of which can only have zero or one quanta of energy. How many ways can you arrange <span class="math notranslate nohighlight">\(r\)</span> quanta of energy when:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(n=20,\ r=10\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(n=2\cdot 10^{23},\ r=10^{23}\)</span>?</p></li>
+</ol>
+</li>
+</ol>
+<p>Since atoms are indistinguishable, we’ll need to use <span class="math notranslate nohighlight">\(^nC_R\)</span>, not <span class="math notranslate nohighlight">\(^nP_R\)</span>.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(n=20,\ r=10\)</span>;</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split} \frac{20!}{(20-10)! \cdot 10!} &amp;= \frac{20!}{10!\cdot 10!} \\
+&amp;= 184756 
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(n=2\cdot 10^{23},\ r=10^{23}\)</span></p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ \frac{2\cdot 10^{23}!}{10^{23}!(2\cdot 10^{23}-10^{23})!} = \frac{2\cdot 10^{23}!}{10^{23}!\cdot 10^{23}!} \]</div>
+<p>This number is unfathomably huge. We’re starting to approach the regime where we might need to use <a class="reference external" href="https://en.wikipedia.org/wiki/Large_numbers#Standardized_system_of_writing">tetration</a> just in order to represent it. Doing math in this sort of regime is simply not feasible, no computer can perform this operation. It would require over <span class="math notranslate nohighlight">\(10^{22}\)</span> digits which is just about manageable if we were able to use all the digital storage on the planet (the International Data Corporation’s estimate of the total digital storage that will be manufactured in 2025 is only 22 ZB, or <span class="math notranslate nohighlight">\(22 \cdot 10^{21}\)</span>, so we’ll need to borrow some more from the previous years too). The <em>only</em> way to approach this question is to find some approximate solution.</p>
+<p>Luckily, there is one such approximation specifically for factorials, <a class="reference external" href="https://en.wikipedia.org/wiki/Stirling%27s_approximation">Stirling’s</a>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} n! &amp;\approx \sqrt{2\pi n}\frac{n}{e}^n \\
+\text{ln } n! &amp;\approx n \text{ln } n - n + O(\text{ln } n). \end{split}\]</div>
+<p>This approximation fails for <span class="math notranslate nohighlight">\(n!\)</span> when <span class="math notranslate nohighlight">\(n=0\)</span>, but all subsequent <span class="math notranslate nohighlight">\(n\)</span> is at least close, and for large <span class="math notranslate nohighlight">\(n\)</span> the approximation is effectively exact. The error associated in this approximation is somewhere between <span class="math notranslate nohighlight">\(e^{\frac{1}{12n+1}} &lt; \frac{n!}{S(n)} &lt; e^\frac{1}{12n}\)</span>. For <span class="math notranslate nohighlight">\(n=10^{23}\)</span>, the relative error is on the order of <span class="math notranslate nohighlight">\(10^{-25}\)</span>, i.e. the <em>absolute</em> error will have <span class="math notranslate nohighlight">\(10^{22} - 25\)</span> digits. This is still clearly unbelievably huge but in real life you’re lucky if you can say you know the first 25 digits of a number with certainty.</p>
+<p>We will omit the <span class="math notranslate nohighlight">\(O(\text{ln } n)\)</span> term as we are only interested in the scale of the number and don’t require digit-level accuracy. Let <span class="math notranslate nohighlight">\(n=10^23\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\text{ln } 2n! &amp;\approx 2n \text{ln } 2n - 2n \\
+\text{ln } (n! \cdot n!) &amp;\approx 2 \text{ln } n! \\
+&amp;\approx 2(n \text{ln } n - n) \\
+&amp;= 2n \text{ln } n - 2n \\
+\text{ln }\frac{2n!}{n! \cdot n!} &amp;=  2n \text{ln } 2n - 2n - (2n \text{ln } n - 2n) \\
+&amp;= 2n(\text{ln } 2n - \text{ln } n) \\
+&amp;= 2n(\text{ln } \frac{2n}{n}) \\
+&amp;= 2n(\text{ln } 2) \\
+&amp;= 2 \cdot 10^{23} \text{ln } 2 \\
+&amp;= 1.39 \cdot 10^{23}
+\end{split}\]</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./unstructed_content_for_lecture_notes\ch1-introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_questions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">1.8. </span>Questions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../ch2-temperature_and_heat/01_temperature_and_heat.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Temperature and Heat</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

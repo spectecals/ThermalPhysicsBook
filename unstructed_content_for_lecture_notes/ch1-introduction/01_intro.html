@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Introduction &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unstructed_content_for_lecture_notes/ch1-introduction/01_intro';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="1.10. Questions" href="02_questions.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../../src/Figure_Construction.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_questions.html">1.10. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">1.11. Solutions</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/unstructed_content_for_lecture_notes/ch1-introduction/01_intro.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Introduction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mole">1.1. What is a mole?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-definitions">1.2. Useful definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems">1.3. Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium">1.4. Thermal Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.5. State variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.6. Intensive vs Extensive Variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-variables">Intensive variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paths">1.7. Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal Gases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<div class="reading admonition">
+<p class="admonition-title">Relevant readings and preparation:</p>
+<ul class="simple">
+<li><p>Concepts in Thermal Physics: Chapter 1: 1.1 - 1.4</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapter 18: 18.1 (pg. 608-609), 18.2 (pg. 615)</p></li>
+</ul>
+</div>
+<div class="outcomes admonition">
+<p class="admonition-title">Learning outcomes:</p>
+<ul class="simple">
+<li><p>The number of atoms in an object is large and is measured in units of mole.</p></li>
+<li><p>Common constants and variables</p></li>
+<li><p>Definitions: systems (open, closed, isolated), surroundings</p></li>
+<li><p>Combinatorial problems</p></li>
+</ul>
+</div>
+<section id="what-is-a-mole">
+<h2><span class="section-number">1.1. </span>What is a mole?<a class="headerlink" href="#what-is-a-mole" title="Permalink to this heading">#</a></h2>
+<p>In thermal physics, we deal with enormous numbers of atoms and molecules. These large numbers make it impossible to track individual particles, so we describe their behaviour statistically, in terms of averages. Even numbers we think of as huge, like the Earth’s population (~<span class="math notranslate nohighlight">\(10^9\)</span>) or the U.S. national debt (~<span class="math notranslate nohighlight">\(10^{13}\)</span>), are tiny compared with the numbers of atoms in ordinary matter (around <span class="math notranslate nohighlight">\(10^{23}-10^{25}\)</span> per sample). For instance, 1 kg of nitrogen gas contains about <span class="math notranslate nohighlight">\(2*10^{25}\)</span> molecules. A fast computer counting one molecule per clock cycle would take hundreds of millions of years just to count them! To handle such vast quantities, we use the concept of the mole, a convenient counting unit similar to a “dozen”, but much larger.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition:</p>
+<p>A mole is the quantity of matter that contains as many objects (atoms, molecules, ions) as there are atoms in <em>exactly</em> 12 grams of <span class="math notranslate nohighlight">\(^{12}\)</span>C.</p>
+</div>
+<p>This number, called <strong>Avogadro’s number</strong>, is <span class="math notranslate nohighlight">\(N_A=6.022×10^{23}\)</span>. Thus, one mole of carbon, water, or sodium chloride each contains <span class="math notranslate nohighlight">\(6.022×10^{23}\)</span> of their respective particles.</p>
+</section>
+<section id="useful-definitions">
+<h2><span class="section-number">1.2. </span>Useful definitions<a class="headerlink" href="#useful-definitions" title="Permalink to this heading">#</a></h2>
+<p>Other than Avogadro’s number, there are other definitions useful to understand:</p>
+<p>The <strong>Boltzmann <em>constant</em></strong>, <span class="math notranslate nohighlight">\(k_B\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(k_B=1.38*10^{-23}\)</span> J K<sup>-1</sup></p></li>
+<li><p>This constant relates the average energy <span class="math notranslate nohighlight">\(J\)</span> of a particle in a system to its temperature <span class="math notranslate nohighlight">\(K\)</span>. It serves as a conversion factor between temperature and energy.</p></li>
+</ul>
+<p>The <strong>universal gas <em>constant</em></strong>, <span class="math notranslate nohighlight">\(R\)</span></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R = 8.31\)</span> J K<sup>-1</sup> mol<sup>-1</sup>,</p></li>
+<li><p>Like the Boltzmann constant, this is a proportionality constant relating the energy <span class="math notranslate nohighlight">\(J\)</span> and temperature <span class="math notranslate nohighlight">\(K\)</span> and the amount of substance used <span class="math notranslate nohighlight">\(\text{mol}\)</span>. In other words, it’s the molar equivalent to the Boltzmann constant. This is the constant of proportionality used in the macroscopic form of the ideal gas law (CTP Section 1.4).</p></li>
+<li><p>i.e., <span class="math notranslate nohighlight">\(R = N_A*k_B = k_B * 6.022×10^{23} \)</span> mol<sup>-1</sup>.</p></li>
+</ul>
+</section>
+<section id="systems">
+<h2><span class="section-number">1.3. </span>Systems<a class="headerlink" href="#systems" title="Permalink to this heading">#</a></h2>
+<p>We refer to our objects or regions of interest as a <strong>system</strong>. Everything outside if this system is their <strong>surroundings</strong>, where the <strong>boundary</strong> is the real or imaginary surface that separates the two. The interaction of the system across the boundary with their surroundings define the type of system we’re working with.</p>
+<ul class="simple">
+<li><p><strong>Open systems</strong>: An open system can exchange both matter and energy with its surroundings.</p></li>
+<li><p><strong>Closed systems</strong>: A closed system cannot exchange matter with its surroundings, but energy can still cross the bounday.</p></li>
+<li><p><strong>Isolated systems</strong>: An isolated system cannot exchange matter nor energy with its surroundings.</p></li>
+</ul>
+<p>Thermodynamics is a field that describes its systems while in thermal equilibrium with its surroundings (no heat flow), allowing us to describe changes as transitions between one equilibrium state to another. Each equilibrium state is fully specified by <strong>state variables</strong>, which have definite values only while in equilibrium.</p>
+</section>
+<section id="thermal-equilibrium">
+<h2><span class="section-number">1.4. </span>Thermal Equilibrium<a class="headerlink" href="#thermal-equilibrium" title="Permalink to this heading">#</a></h2>
+<p>A system is in thermal equilibrium when its temperature is the same throughout and does not change with time. If the system is in contact with its surroundings, thermal equilibrium means there is no net heat flow across the boundary. Under these conditions, macroscopic properties remain stable which is why they can be fully described by state variables.</p>
+</section>
+<section id="state-variables">
+<h2><span class="section-number">1.5. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
+<p>A quantity with a unique value for a particular state of the system is a <em>state variable</em>, i.e.:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p>
+<ul>
+<li><p>Defined as the amount of <i>force (F) per unit area (A)</i>, <span class="math notranslate nohighlight">\(p = F/A\)</span> (N m<sup>-2</sup>),</p></li>
+<li><p>There is a zoo of units used to express pressure, which can be confusing for beginners since different fields favour different conventions. Below are some of the commonly used units that you may encounter:</p>
+<ul>
+<li><p>SI units:</p>
+<ul>
+<li><p>pascals (Pa), 1 Pa = 1 N m<sup>-2</sup>. This is the official unit for pressure, and the one we will use in this course.</p></li>
+</ul>
+</li>
+<li><p>Non-SI units:</p>
+<ul>
+<li><p>bars; 1 bar = 100,000 Pa</p></li>
+<li><p>atmospheres (atm); 1 atm = 101,325 Pa, originally defined as the average atmospheric pressure at sea level</p></li>
+<li><p>pounds per square inch (psi); 1 psi = 6,895 Pa, imperial unit. Commonly used in US industries, i.e., tire pressure</p></li>
+<li><p>torrs (Torr); 1 Torr = 133.32 Pa. Based on an absolute scale, equal to 1 atm / 760, 0.000 015% smaller than the millimetre of mercury, widely used in medicine.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span>, internal energy.</p></li>
+</ul>
+<p>If you know the state, these values are fixed, no matter how you got there. Alternatively, some variables implicitly record the history of how a system has changed, these are definitively <em>not</em> functions of state:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(Q\)</span>, heat (involves energy transfer to/from other systems)</p></li>
+<li><p><span class="math notranslate nohighlight">\(W\)</span>, work (i.e., pushing something, powering a motor).</p></li>
+</ul>
+</section>
+<section id="intensive-vs-extensive-variables">
+<h2><span class="section-number">1.6. </span>Intensive vs Extensive Variables<a class="headerlink" href="#intensive-vs-extensive-variables" title="Permalink to this heading">#</a></h2>
+<section id="intensive-variables">
+<h3>Intensive variables<a class="headerlink" href="#intensive-variables" title="Permalink to this heading">#</a></h3>
+<p>These are variables that do not scale with the size of your system. Some examples are:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p></li>
+<li><p><span class="math notranslate nohighlight">\(T\)</span>, temperature</p></li>
+<li><p><span class="math notranslate nohighlight">\(\rho\)</span>, density</p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span>, specific volume, the volume per unit mass <span class="math notranslate nohighlight">\(v = \frav{V}{m}\)</span></p></li>
+</ul>
+</section>
+<section id="extensive-variables">
+<h3>Extensive variables<a class="headerlink" href="#extensive-variables" title="Permalink to this heading">#</a></h3>
+<p>These are variables that <strong>do</strong> scale with the size of your system. Consider:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
+<li><p><span class="math notranslate nohighlight">\(m\)</span>, mass</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>, number of moles</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span>, internal energy</p></li>
+</ul>
+<p>If you drank half a cup of warm coffee, you’ll obviously find that the number of atoms, volume, internal energy and the heat it radiates all halve.</p>
+</section>
+</section>
+<section id="paths">
+<h2><span class="section-number">1.7. </span>Paths<a class="headerlink" href="#paths" title="Permalink to this heading">#</a></h2>
+<p>A process that changes a system’s state is described by a <strong>path</strong>. The path describes <em>how</em> a system changes from one equilibrium state to another. If a process can or cannot be undone, we consider these processes and paths either “reversible” or “irreversible”.</p>
+<figure class="align-default" id="fig-reversible">
+<img alt="../../_images/1.5_reversible.png" src="../../_images/1.5_reversible.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">A reversible process must be perfectly lossless. Real processes aren’t <em>truly</em> reversible but some get close.</span><a class="headerlink" href="#fig-reversible" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<!-- ## The thermodynamic limit
+
+Thermodynamics is a phenomenological theory of macroscopic variables and therefore only strictly holds true for large systems. In fact, we must begin by assuming that the number of particles, $N$, tends to infinity, as does the volume $V$, in such a way that the density $\rho$ of the gas remains constant and uniform,
+
+$$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -->
+</section>
+<section id="sec-idealgas">
+<span id="ideal-gases"></span><h2><span class="section-number">1.8. </span>Ideal Gases<a class="headerlink" href="#sec-idealgas" title="Permalink to this heading">#</a></h2>
+<p>This section introduces a very important concept called the <em>ideal gas law</em>, based around the understanding that the pressure of a gas depends on its temperature and volume.</p>
+<ul class="simple">
+<li><p><strong>Boyle’s law</strong> (who boiled a viper in a vacuum): Experiments show that, at constant temperature, the product of <span class="math notranslate nohighlight">\(p V\)</span> remains constant,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ p \propto \frac{1}{V}. \]</div>
+<ul class="simple">
+<li><p><strong>Charles’ law</strong> (also an avid balloonist): When the pressure is held constant, the volume of a gas increases proportionally with temperature,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ V \propto T. \]</div>
+<ul class="simple">
+<li><p><strong>Gay-Lussac’s law</strong> (who discovered the composition of water): At constant volume, the pressure is proportional to temperature,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ p \propto T. \]</div>
+<p id="sec-idealeqns">Combining these empirical results, alongside <span class="math notranslate nohighlight">\(\rho = \frac{N}{V}\)</span>, we find that <span class="math notranslate nohighlight">\(p V \propto N T\)</span>. Their proportionality is the aforementioned Boltzmann constant, which relates temperature to energy, and forms the <strong>microscopic ideal gas equation</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ p V = N k_B T \qquad \text{(microscopic)}. \]</div>
+<p>Alternatively, we can define it macroscopically in terms of the numbers of moles, <span class="math notranslate nohighlight">\(n\)</span>, through <span class="math notranslate nohighlight">\(N=n * N_A\)</span> and the universal gas constant, <span class="math notranslate nohighlight">\(R = N_A*k_B\)</span>, forming the <strong>macroscopic ideal gas equation</strong>,</p>
+<div class="math notranslate nohighlight">
+\[ p V = n R T \qquad \text{(macroscopic)}. \]</div>
+<p>This <em>ideal gas</em> model assumes that molecules:</p>
+<ol class="arabic simple">
+<li><p>move randomly,</p></li>
+<li><p>collide elastically,</p></li>
+<li><p>do not have intermolecular interactions (such as attracting or repelling each other),</p></li>
+<li><p>and are point-like with negligible volume.</p></li>
+</ol>
+<p>Under these assumptions, the gas pressure arises from molecules striking the container walls. Despite its simplicity, the model accurates describes many real gases under conditions of low pressure and high temperature. At higher densities or lower temperatures, deviations occur because real molecules have finite size and experience intermolecular forces.</p>
+<figure class="align-default" id="fig-kinetic-billiards">
+<img alt="../../_images/1.6_kinetic.png" src="../../_images/1.6_kinetic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Ideal gas as billiard balls in a box. Gas particles are modeled as identical point-like balls moving randomly and colliding elastically with each other and with the walls of the container, illustrating how microscopic motion gives rise to state variables such as pressure and temperature.</span><a class="headerlink" href="#fig-kinetic-billiards" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="combinatorial-problems">
+<h2><span class="section-number">1.9. </span>Combinatorial problems<a class="headerlink" href="#combinatorial-problems" title="Permalink to this heading">#</a></h2>
+<p>Thermal physics studies how large collections of particles behave <em>statistically</em>. Since it is impossible to track every particle individually, we instead count how many distinct configurations a system can have that correspond to a given macroscopic state. This kind of counting is a combinatorial problem specifically important for indistinguishable particles.</p>
+<section id="the-combination-formula">
+<h3>The combination formula<a class="headerlink" href="#the-combination-formula" title="Permalink to this heading">#</a></h3>
+<p>When counting configurations, we need to know how many ways we can choose a certain number of items from a larger set, <strong>without regard to order</strong>. The number of such combinations <span class="math notranslate nohighlight">\(C\)</span> is given by:</p>
+<div class="math notranslate nohighlight">
+\[ ^nC_k = \frac{n!}{k!(n-k)!} \]</div>
+<p>Here <span class="math notranslate nohighlight">\(n\)</span> is the total number of available positions and <span class="math notranslate nohighlight">\(k\)</span> the number of elements we choose to occupy them. <span class="math notranslate nohighlight">\(n!\)</span> refers to “<span class="math notranslate nohighlight">\(n\)</span> factorial”, meaning <span class="math notranslate nohighlight">\(n * (n - 1) * (n - 2) *\ ...\ * 1\)</span>. This formula tells us how many distinct configurations are possible when order does not matter.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: (Identical) eggs in a box</p>
+<p>Imagine we have a carton able to hold 12 <strong>indistinguishable</strong> eggs. How many distinct arrangements of this system are possible if the system has:</p>
+<ul class="simple">
+<li><p>(a) 12 eggs?</p></li>
+<li><p>(b) 4 eggs?</p></li>
+</ul>
+<p>We can approach these problems by using <span class="math notranslate nohighlight">\( ^nC_k = \frac{n!}{k!(n-k)!}\)</span> where <span class="math notranslate nohighlight">\(n\)</span> here is the number of spaces in our carton and <span class="math notranslate nohighlight">\(k\)</span> is the number of eggs.</p>
+<p class="rubric">(a)</p>
+<p>As you can imagine, there’s only one way to store 12 eggs in a carton with 12 spaces:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{n!}{k!(n-k)!} = \frac{12!}{12!(12-12)!} = \frac{12!}{12!*0!} = \frac{12!}{12!*1} = 1. \]</div>
+<p>A critical point of note here, <span class="math notranslate nohighlight">\(0! = 1\)</span>. This may not make sense at first but you can make sense of it by considering how many ways you can arrange 0 items. There’s one way—by not arranging them at all!</p>
+<p class="rubric">(b)</p>
+<p>Using the same approach as before with <span class="math notranslate nohighlight">\( ^nC_k \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{n!}{k!(n-k)!} = \frac{12!}{4!(12-4)!} = \frac{12!}{4!*8!} = \frac{12 * 11 * 10 * 9}{4 * 3 * 2} = 11 * 5 * 9  = 495. \]</div>
+</div>
+<p>Note that for case (b), the intuitive approach “there are 12 spaces for the first egg, then 11 for the second,” so on and so forth, would lead you to the <strong>incorrect</strong> answer for the number of combinations,</p>
+<div class="math notranslate nohighlight">
+\[(\text{from intuition, or}\ ^nP_k) \qquad 12 * 11 * 10 * 9 = \frac{12!}{8!}  \neq \frac{12!}{4!*8!}\qquad(\text{from}\ ^nC_k) .\]</div>
+<p>The equation from “intuition” is the <strong>permutation formula</strong> <span class="math notranslate nohighlight">\( ^nP_k = \frac{n!}{(n-k)!} \)</span> which is used in situations where the ordering matters (i.e., for a pack of cards, or if the eggs were uniquely coloured like easter eggs). This discrepancy between solutions arises because <strong>the eggs are indistinguishable</strong>, meaning that certain arrangements are repeats of prior combinations. This is <strong>almost always the case in thermodynamics</strong> as it’s not possible to keep track of each particle in a gas.</p>
+<p>(If you <em>really</em> wanted to use intuition, you would need to implement an additional condition: “how many ways can I arrange each of my permutations?” For any given arrangement of these 4 eggs, you could could rearrange them amongst themselves like so: “there are 4 spaces for the first egg, 3 for the second, …” resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> times. By dividing the total permutations you calculated by this number, you would rederive the combinatorial solution!)</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./unstructed_content_for_lecture_notes\ch1-introduction"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../src/Figure_Construction.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="02_questions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1.10. </span>Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mole">1.1. What is a mole?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-definitions">1.2. Useful definitions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems">1.3. Systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium">1.4. Thermal Equilibrium</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.5. State variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.6. Intensive vs Extensive Variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-variables">Intensive variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paths">1.7. Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal Gases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

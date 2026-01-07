@@ -1,0 +1,1265 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Probability Theory for Thermal Physics &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5 Probability all sections';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4.11. Probability Theory - Questions" href="CH5-Problem_Sheet.html" />
+    <link rel="prev" title="3.7. Solutions" href="../ch3-kinetic_theory_of_gases/03_solutions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.9. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/02_questions.html">3.6. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/03_solutions.html">3.7. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. Probability Theory for Thermal Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="CH5-Problem_Sheet.html">4.11. Probability Theory - Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-Problem_Sheet_Solutions.html">4.12. Probability Theory - Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-S0-Probability_Overview.html">4.13. Probability Theory for Thermal Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-S1-Basic_Probability_Concepts.html">4.14. Probability Theory for Thermal Physics - Lecture 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-S2-Combinatorics_and_Bayes_Theorem.html">4.15. Probability Theory for Thermal Physics - Lecture 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CH5-S3-Supplementary-Key_Distributions.html">4.16. Probability Theory for Thermal Physics - Lecture 3</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5 Probability all sections.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Probability Theory for Thermal Physics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-and-continuous-probability-distributions">4.1. Discrete and Continuous probability distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-distributions">Discrete Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distributions">Continuous distributions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendencies">4.2. Measures of Central Tendencies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations-of-a-function">Expectations of a function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">Variance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-transformations">4.3. Linear Transformations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-variables-in-probability">4.4. Independent Variables in Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-binomial-distribution">4.5. The Binomial Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">4.6. Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probabilities-bayes-theorem">4.7. Conditional Probabilities - Bayes’ Theorem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-distributions-gaussian-poisson-maxwell-boltzmann">4.8. Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-normal-distribution">Gaussian (Normal) Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distribution">4.9. Poisson Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas">4.10. Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="probability-theory-for-thermal-physics">
+<h1><span class="section-number">4. </span>Probability Theory for Thermal Physics<a class="headerlink" href="#probability-theory-for-thermal-physics" title="Permalink to this heading">#</a></h1>
+<div class="reading admonition">
+<p class="admonition-title">Relevant readings and preparation</p>
+<ul class="simple">
+<li><p>Concepts in Thermal Physics: Chapter 3: 3.1-3.8: pg. 20-28</p></li>
+</ul>
+</div>
+<div class="outcomes admonition">
+<p class="admonition-title">Learning outcomes:</p>
+<ul class="simple">
+<li><p>Distinguish between <strong>discrete</strong> and <strong>continuous</strong> probability distributions.</p></li>
+<li><p>Define and calculate the <strong>variance</strong> and <strong>standard deviation</strong> of a distribution.</p></li>
+<li><p>Understand how <strong>linear transformations</strong> affect the mean and variance of a random variable.</p></li>
+<li><p>Describe the properties and applications of the <strong>binomial distribution</strong> in modelling discrete physical events.</p></li>
+<li><p>Recognise the difference between <strong>independent</strong> and <strong>dependent</strong> probabilities.</p></li>
+<li><p>Apply <strong>Bayes’ theorem</strong> to update parameters of probability distributions in response to new information.</p></li>
+<li><p>Identify and use the <strong>normal (Gaussian) distribution</strong> as an approximation to many natural phenomena.</p></li>
+<li><p>Describe the <strong>Poisson distribution</strong> and its relevance to counting statistics and random thermal events.</p></li>
+</ul>
+</div>
+<p>Reality is filled with uncertainty. Every action or decision we take must be made with incomplete information, since the chain of events leading to an outcome is often so complex that the exact result is unpredictable. Nevertheless, we can still act with quantifiable confidence in an uncertain world. Incomplete information is better than none at all, for example - it is more useful to know that there is a 20% chance of rain tomorrow than to have no forecast whatsoever. Probability is the mathematical framework that allows us to quantify uncertainty, and it is ubiquitous across all fields of scientific study, alongside finance sectors, software development, politics and so forth.</p>
+<p>Probability theory has had an undeniably strong impact in furthering our understanding of thermal physics. This is because we often study systems containing a practically uncountable number of particles, where individual atomic behaviour is unpredictable but collective behaviour is remarkably regular. On macroscopic scales, probabilistic predictions become suitably precise. Measureable quantities such as temperature or pressure emerge as averages over many atomic contribtions. Although each atom behaves differently, and tracking all atoms’ individual motions and collisions is an unfeasible feat, the ensemble’s average behaviour follows well-defined probability distribitions, allowing us to perceive and model system behaviour without complete knowledge.</p>
+<p>Before we delve into the basics of probability theory, we establish a few definitions:</p>
+<ul class="simple">
+<li><p>Probabilities are non-negative numbers which take values between 0 and 1.</p></li>
+<li><p>For a given scenario, all possible outcomes of that scenario form a set of events, with each outcome having an associated probability.</p></li>
+<li><p>If an outcome is not part of this set, its probability of occurring is zero.</p></li>
+<li><p>If the event is certain, the probability of it occurring is one.</p></li>
+<li><p>Events are considered ‘mutually exclusive’ if they cannot occur simultaneously.</p></li>
+<li><p>The sum of probabilities for all mutually exclusive outcomes must equal one for a valid probability distribution.</p></li>
+</ul>
+<section id="discrete-and-continuous-probability-distributions">
+<h2><span class="section-number">4.1. </span>Discrete and Continuous probability distributions<a class="headerlink" href="#discrete-and-continuous-probability-distributions" title="Permalink to this heading">#</a></h2>
+<section id="discrete-distributions">
+<h3>Discrete Distributions<a class="headerlink" href="#discrete-distributions" title="Permalink to this heading">#</a></h3>
+<p><strong>Discrete random variables</strong> can only take values from a finite or countable set. A classic example is a six-sided die, whose outcomes are {1, 2, 3, 4, 5, 6}. If we denote <span class="math notranslate nohighlight">\(x\)</span> as a discrete random variable that takes values <span class="math notranslate nohighlight">\(x_i\)</span> with corresponding probabilities <span class="math notranslate nohighlight">\(P_i\)</span>, we can define several useful quantities that describe its behaviour.</p>
+<p>First, we require that the probabilities of all outcomes must add up to one:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{i} P_{i} = 1.
+\tag{1}
+\]</div>
+<p>The arithmetic mean, or expected value, is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = \sum_i x_i P_i.
+\tag{2}
+\]</div>
+<p>Intuitively, the idea is that for each outcome contributes to the sum in proportion to how likely it is to occur. This is called <em>weighting</em>. If you were to sample the random variable many times, add up all the observed values, and divide by the number of trials, the result would converge to the expected value. We may also define the “mean squared” value:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x^2 \rangle = \sum_i x_i^2 P_i.
+\tag{3}
+\]</div>
+<p>Discrete distributions arise in many areas of thermal and statistical physics. Examples include:</p>
+<ul class="simple">
+<li><p>the amount of molecular collisions in a gas during a fixed time interval,</p></li>
+<li><p>the number of radioactive decay events detected by a sensor,</p></li>
+<li><p>the number of collision required before a molecule transfers its energy,</p></li>
+<li><p>the distribution of energies in systems with discrete energy levels,</p></li>
+<li><p>the probability of transmission or reflection when a particle encounters a barrier,</p></li>
+<li><p>particle velocities and energies in a simulated setting, where values are stored in bins.</p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/073edb3fc8e7a731ba857e651a7aa841f3f6b733ca51bca0f9835c3b3d5b00e8.png" src="../../_images/073edb3fc8e7a731ba857e651a7aa841f3f6b733ca51bca0f9835c3b3d5b00e8.png" />
+</div>
+</div>
+<p>Note that the expected value need not be present in the set of outcomes. A common example of this is the average number of children a family is expected to have across a population. These figures are often cited to occur between 1.8-2.4, yet it is only possible to have an integer number of children. These impossible values only make sense when considering a population rather than an individual sample.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: Expected value and mean squared</p>
+<p>Consider a scenario where random variable <span class="math notranslate nohighlight">\(x\)</span> can take values {0, 1, 2} with corresponding probabilities {<span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>}. This distribution is visualised in figure 2.1. Calculate the expected value for</p>
+<ul class="simple">
+<li><p>(a) the variable, <span class="math notranslate nohighlight">\(\langle x \rangle\)</span></p></li>
+<li><p>(b) the mean squared of the variable, <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>.</p></li>
+</ul>
+<p class="rubric">(a)</p>
+<p>First check that <span class="math notranslate nohighlight">\(\sum P_i = 1\)</span>. Since <span class="math notranslate nohighlight">\(\frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1\)</span> we are good to go. We then calculate the averages as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\langle x \rangle &amp;= \sum_i x_i P_i \\
+&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 2 \cdot \tfrac{1}{4} \\
+&amp;= \tfrac{3}{4} = 0.75
+\end{align*}
+\end{split}\]</div>
+<p>We see that the mean <span class="math notranslate nohighlight">\(\langle x \rangle\)</span> is not one of the possible values <span class="math notranslate nohighlight">\(x\)</span> can take.</p>
+<p class="rubric">(b)</p>
+<p>We follow a similar process for <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\langle x \rangle &amp;= \sum_i x_i P_i \\
+&amp;= 0^2 \cdot \tfrac{1}{2} + 1^2 \cdot \tfrac{1}{4} + 2^2 \cdot \tfrac{1}{4} \\
+&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 4 \cdot \tfrac{1}{4} \\
+&amp;= \tfrac{5}{4} = 1.25
+\end{align*}
+\end{split}\]</div>
+</div>
+</section>
+<section id="continuous-distributions">
+<h3>Continuous distributions<a class="headerlink" href="#continuous-distributions" title="Permalink to this heading">#</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> now be a <strong>continuous random variable</strong>, meaning it can take any value within some range (the bounds may be finite or infinite). We must treat probabilities differently in this case. Imagine a uniform distribution between 1 and 10: one sample might give an exact value like 4, another could be something extremely specific like 3.14159265… Because there are infinitely many possible values, the probability of landing on any one exact value is effectively zero. Instead, we talk about the probability of <span class="math notranslate nohighlight">\(x\)</span> lying within a small interval of width <span class="math notranslate nohighlight">\(dx\)</span>.</p>
+<p>Many real-life quantities are described by continuous distributions. For example, height, commute durations, and local temperature all vary smoothly within finite limits, even if the exact value can be anything within the range. As before, the total probability must sum to one, but because we are now summing over a continuous range, we replace sums with integrals:</p>
+<div class="math notranslate nohighlight">
+\[\int P(x)dx = 1.\]</div>
+<p>We have analogous expressions for <span class="math notranslate nohighlight">\(\langle x \rangle\)</span> and <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\langle x \rangle = \int x P(x)dx;\]</div>
+<div class="math notranslate nohighlight">
+\[\langle x^2 \rangle = \int x^2 P(x)dx.\]</div>
+<p>Continuous random variables are extremely common in thermal physics and statistical mechanics. Typical scenarios include:</p>
+<ul class="simple">
+<li><p>particle speeds in a gas,</p></li>
+<li><p>particle energies in a classical system,</p></li>
+<li><p>waiting times between molecular collision events,</p></li>
+<li><p>spatial fields such as pressure, density and temperature,</p></li>
+<li><p>radiation intensity as a function of frequency.</p></li>
+</ul>
+<div class="example admonition">
+<p class="admonition-title">Uniform Distribution on [0, 10]</p>
+<p>Let a continuous random variable <span class="math notranslate nohighlight">\(x\)</span> be uniformly distributed between 0 and 10:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} P(x) = 
+\begin{cases}
+    \frac{1}{10}, &amp; 0 \le x \le 10, \\
+    0, &amp; \text{otherwise.}
+\end{cases}
+\end{split}\]</div>
+<p>What is the values of</p>
+<ul class="simple">
+<li><p>(a) the expected value <span class="math notranslate nohighlight">\(\langle x \rangle\)</span>?</p></li>
+<li><p>(b) the mean squared value <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>?</p></li>
+</ul>
+<p>First, ensure that <span class="math notranslate nohighlight">\(P(x)\)</span> is a valid probability distribution by checking that it is normalised:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^{10} P(x) \, dx = \int_0^{10} \frac{1}{10} \, dx = \left[\frac{x}{10}\right]^{10}_{0} = 1.
+\]</div>
+<p>We can then compute the expected values:</p>
+<p class="rubric">(a)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\langle x \rangle &amp;= \int_0^{10} x P(x) \, dx = \frac{1}{10} \int_0^{10} x \, dx = \frac{1}{10} \left[\frac{x^2}{2}\right]_0^{10} = 5, \\[6pt]
+\end{align*}
+\end{split}\]</div>
+<p class="rubric">(b)</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\langle x^2 \rangle &amp;= \int_0^{10} x^2 P(x) \, dx = \frac{1}{10} \int_0^{10} x^2 \, dx = \frac{1}{10} \left[\frac{x^3}{3}\right]_0^{10} = \frac{100}{3} \approx 33.33.
+\end{align*}
+\]</div>
+<p>The mean of 5 lies exactly halfway between the bounds, which is as you’d expected for a symmetric uniform distribution.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Exponential Lifetime Distribution</p>
+<p>Now consider a physical system whose lifetime follows an exponential distribution, such as the lifetime of a radioactive nucleus. The probability density of its lifetime is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P(t) =
+\begin{cases}
+\lambda e^{-\lambda t}, &amp; t \ge 0, \\
+0, &amp; t &lt; 0,
+\end{cases}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the decay rate constant. Calculate for this distribution:</p>
+<ul class="simple">
+<li><p>(a) <span class="math notranslate nohighlight">\(\langle t \rangle\)</span></p></li>
+<li><p>(b) <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span></p></li>
+</ul>
+<p class="rubric">(a)</p>
+<p>First, confirm normalisation:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^{\infty} P(t) \, dt = \int_0^{\infty} \lambda e^{-\lambda t} \, dt =
+\lambda \left[-\frac{1}{\lambda} e^{-\lambda t}\right]^{\infty}_0 = \left[-e^{-\lambda t}\right]_0^{\infty} = 1.
+\]</div>
+<p>Then compute the averages:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\langle t \rangle &amp;= \int_0^{\infty} t P(t) \, dt = \lambda \int_0^{\infty} t e^{-\lambda t} \, dt = \frac{1}{\lambda}, \\[6pt]
+\end{align*}
+\end{split}\]</div>
+<p class="rubric">(b)</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\langle t^2 \rangle &amp;= \int_0^{\infty} t^2 P(t) \, dt = \lambda \int_0^{\infty} t^2 e^{-\lambda t} \, dt = \frac{2}{\lambda^2}.
+\end{align*}
+\]</div>
+</div>
+<p>For an exponential lifetime distribution, the mean value <span class="math notranslate nohighlight">\(\langle t \rangle = 1/\lambda\)</span> has a direct physical interpretation: it is the <strong>average lifetime</strong> of the system. In radioactive decay, this corresponds to the characteristic time after which only about <span class="math notranslate nohighlight">\(1/e\)</span> of the original nuclei remain. It is closely related to experimentally measurable quantities such as the half-life.</p>
+<p>The second moment <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span> tells us about the <strong>spread of possible lifetimes</strong>. Combining these results gives the variance, computed via the difference between <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span> and <span class="math notranslate nohighlight">\(\langle t \rangle\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_t^2 = \langle t^2 \rangle - \langle t \rangle^2 = \frac{1}{\lambda^2},
+\]</div>
+<p>which means the standard deviation is equal to the mean:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_t = \langle t \rangle = \frac{1}{\lambda}.
+\]</div>
+<p>This is a distinctive property of exponential decay: the uncertainty in the lifetime is as large as the lifetime itself. Physically, this tells us that individual decay events are highly unpredictable, even though the <em>average behaviour</em> of a large population is very regular and follows an exact exponential law. This contrast between noisy individual lifetimes and smooth ensemble behaviour is one of the central ideas of statistical physics.</p>
+</section>
+</section>
+<section id="measures-of-central-tendencies">
+<h2><span class="section-number">4.2. </span>Measures of Central Tendencies<a class="headerlink" href="#measures-of-central-tendencies" title="Permalink to this heading">#</a></h2>
+<p>When describing a probability distribution, we often want to identify simple central values which best represent the properties and sampling behaviour of a probability distribution. These are known as <strong>measures of central tendency</strong>, and the most common are the <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong>:</p>
+<ul class="simple">
+<li><p><strong>Mean</strong> ⟨x⟩: the expectation or average value of a distribution.</p></li>
+<li><p><strong>Median</strong>: the value that divides the distribution into two equal halves, i,e. the middle value.</p></li>
+<li><p><strong>Mode</strong>: the most probable value, where the probability is maximal.</p></li>
+</ul>
+<p>For symmetric distributions (like the Gaussian), these three measures coincide onto the same value. For asymmetric or skewed distributions, they differ, and thus provide valuable information for characterising a distribution. In general, thermal systems contain huge numbers of particles, so we typically describe their behaviour statistically rather than tracking each particle individually to discern collective behaviour. Measures of central tendency, the mean, median and mode, each give us simple summary values which capture the typical behaviour of a distribution. In the context of thermal physics, these quantities help us understand average energies, particle speeds, and the way these fluctuations cluster around specific values. They can also be useful in that they help us distinguish when system exhibit symmetric behaviour, as is the case when all three measures are in agreement, i.e. <span class="math notranslate nohighlight">\(\text{mean} = \text{median} = \text{mode}\)</span>, or when they exhibit strong asymmetry.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/0c048af5763746c550c73e1c7c3f56e579d72a2db98de1040efae16c4f1ec533.png" src="../../_images/0c048af5763746c550c73e1c7c3f56e579d72a2db98de1040efae16c4f1ec533.png" />
+</div>
+</div>
+<p>While many distributions in thermodynamics are symmetric, like the Gaussian and Binomial distributions commonplace throughout physics, real physical scenarios can often produce assymetrically distributed systems. For example, particle speeds in a gas, or waiting times between detection events are typically not symmetrically distributed. The skewed plot highlights how the mean, median and mode can differ significantly, and illustrates why we cannot rely on just one of these measures when interpretic assymetrically distributed data. In skewed distributions, the mean is pulled towards the distribution’s tail, whilst the median moves between the mean and mode. Regardless, the mode still represents the most probable value, i.e. it is situated at the peak of the distribution.</p>
+<section id="expectations-of-a-function">
+<h3>Expectations of a function<a class="headerlink" href="#expectations-of-a-function" title="Permalink to this heading">#</a></h3>
+<p>As we learned in the section on discrete and continuous distributions, the expectation value computes the arithmetic mean of a distribution <span class="math notranslate nohighlight">\(P(x)\)</span>, with respect to an arbitrary function, <span class="math notranslate nohighlight">\(f(x)\)</span>, which may simply be the variable itself, i.e. <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\langle f(X) \rangle =
+\begin{cases}
+\displaystyle \sum_i f(x_i)P(x_i), &amp; \text{discrete}\\[6pt]
+\displaystyle \int_{-\infty}^{\infty} f(x)p(x)\,dx, &amp; \text{continuous}
+\end{cases}
+\end{split}\]</div>
+<p>Notably, the expected value of a constant is merely itself. Since it’s probability of occurance is 1. For a given constant <span class="math notranslate nohighlight">\(A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+A
+&amp;= \sum_i A_i \cdot P(A_i) \\
+&amp;= A \cdot P(A) \\
+&amp;= A \cdot 1 \\
+&amp;= A
+\end{align}
+\end{split}\]</div>
+</section>
+<section id="variance">
+<h3>Variance<a class="headerlink" href="#variance" title="Permalink to this heading">#</a></h3>
+<p>The <strong>variance</strong> measures the average deviation of values around the mean of a distribution and is always positive. It is defined as follows:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{Var}(X) = \langle (x-⟨x⟩)^2 \rangle
+\]</div>
+<p>We can expand the above expression to derive a simpler expression for calculating the variance of a scalar variable:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Var}(x)
+&amp;= \langle (x - ⟨x⟩)^2 \rangle \\
+&amp;= \langle x^2 - 2⟨x⟩x + ⟨x⟩^2 \rangle \\
+&amp;= \langle x^2 \rangle - 2⟨x⟩⟨x⟩ + ⟨x⟩^2 \\
+&amp;= \langle x^2 \rangle - ⟨x⟩^2.
+\end{aligned}.
+\end{split}\]</div>
+<p>This manner of expressing the variance gives rise to a mnemonic expression with which you can memorise the formula: The variance is “the mean of the squares minus the square of the means.” The variance for a variable <span class="math notranslate nohighlight">\(x\)</span> is often denoted <span class="math notranslate nohighlight">\(\sigma^2_x\)</span>, and relates to the <strong>standard deviation</strong>, which is simply the square root of the variance:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_x = \sqrt{\left\langle (x - \langle x \rangle)^2 \right\rangle}
+= \sqrt{\,\langle x^2 \rangle - \langle x \rangle^2\,}
+\]</div>
+</section>
+</section>
+<section id="linear-transformations">
+<h2><span class="section-number">4.3. </span>Linear Transformations<a class="headerlink" href="#linear-transformations" title="Permalink to this heading">#</a></h2>
+<p>A linear transformation is a mathematical rule which maps one variable to another through scaling and shifting. The genera form is <span class="math notranslate nohighlight">\(y = ax + b\)</span>. The constant <span class="math notranslate nohighlight">\(a\)</span> controls how much the values are stretched <span class="math notranslate nohighlight">\((a &gt; 1)\)</span> or compressed <span class="math notranslate nohighlight">\((a &lt; 1)\)</span>, and <span class="math notranslate nohighlight">\(b\)</span> controls how much they are shifted up <span class="math notranslate nohighlight">\((b &gt; 1)\)</span> or down <span class="math notranslate nohighlight">\((b &lt; 1)\)</span>. Many everyday unit conversions, such as inches to centimeters or Celcius to Kelvin, are examples of linear transformation.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: Inches to centimetres</p>
+<p>The conversion from inches to centimetres, or vice versa, is a linear transformation. If we take <span class="math notranslate nohighlight">\(x\)</span> to be inches, then to find the value <span class="math notranslate nohighlight">\(y\)</span> centimetres, we simply use the scale factor of <span class="math notranslate nohighlight">\(a=2.54\)</span> inches per centimeter and an intercept <span class="math notranslate nohighlight">\(b=0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[y\ \text{in} = x\ \text{cm} \times a + b = 2.54\ x\ \text{in} + 0\]</div>
+</div>
+<!-- stef: probably don't need 3 examples for linear transformations do we? plus these are covered in the next section
+- Converting **Celsius to Kelvin**: $T_K = T_C + 273.15$ → shift only ($a = 1$, $b = 273.15$).
+- Converting **Celcius to Fareneheit**: $T_F = (T_C \times 1.8) + 32$ → scale and shift ($a = 1.8$, $b = 32$). -->
+<section id="expectation-under-a-linear-transformation">
+<h3>Expectation under a linear transformation<a class="headerlink" href="#expectation-under-a-linear-transformation" title="Permalink to this heading">#</a></h3>
+<p>Because the expectation operator <span class="math notranslate nohighlight">\(\langle \cdot \rangle\)</span> is linear, the mean of a transformed variable follows the transformation directly. Scaling random variable <span class="math notranslate nohighlight">\(x\)</span> by <span class="math notranslate nohighlight">\(a\)</span> and shifting by <span class="math notranslate nohighlight">\(b\)</span> means the average value is also scaled by <span class="math notranslate nohighlight">\(a\)</span> and shifted by <span class="math notranslate nohighlight">\(b\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle y \rangle = \langle ax \ + \ b \rangle = a \langle x \rangle \ + \ b
+\]</div>
+<p>A constant (i.e. <span class="math notranslate nohighlight">\(b\)</span>) merely contributes its own value to the expectation, and constant factors (i.e. <span class="math notranslate nohighlight">\(a\)</span>) simply pass through the expectation operator. The full process of calculating <span class="math notranslate nohighlight">\(\langle y \rangle\)</span> following its production through the linear transformation <span class="math notranslate nohighlight">\(y = ax+b\)</span> is as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\langle y \rangle
+&amp;= \langle a x + b \rangle \\[6pt]
+&amp;= \langle a x \rangle + \langle b \rangle \\[6pt]
+&amp;= \langle a \rangle\,\langle x \rangle + \langle b \rangle \\[6pt]
+&amp;= a\,\langle x \rangle + b
+\end{aligned}
+\end{split}\]</div>
+</section>
+<section id="variance-under-a-linear-transformation">
+<h3>Variance under a linear transformation<a class="headerlink" href="#variance-under-a-linear-transformation" title="Permalink to this heading">#</a></h3>
+<p>Variance behaves slightly differently. Shifting by <span class="math notranslate nohighlight">\(b\)</span> has no effect, because moving a distribution left or right does not change its spread. Scaling by <span class="math notranslate nohighlight">\(a\)</span> however does stretch/compress the distribution, manifesting as a squared scaling of the variance. For a variable <span class="math notranslate nohighlight">\(x\)</span> transformed linearly via <span class="math notranslate nohighlight">\(y = a x + b\)</span>:</p>
+<p>Starting with the standard definition of the variance:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{Var}(y) = \langle (y - \langle y \rangle)^2 \rangle
+\]</div>
+<p>and substituting <span class="math notranslate nohighlight">\(y = a x + b\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\mathrm{Var}(y)
+&amp;= \left\langle (ax + b - \langle ax + b \rangle)^2 \right\rangle \\[4pt]
+&amp;= \left\langle (ax + b - (a\langle x \rangle + b))^2 \right\rangle \\[4pt]
+&amp;= \left\langle (a(x - \langle x \rangle))^2 \right\rangle \\[4pt]
+&amp;= a^2\,\left\langle (x - \langle x \rangle)^2 \right\rangle \\[4pt]
+&amp;= a^2\,\mathrm{Var}(x)
+\end{aligned}
+\end{split}\]</div>
+<p>This is an important result for physics and measurement generally, as whenever a quantity is converted or calibrated using a linear relation, its uncertainty scales by the square of that factor.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/47560264c7cad515d0359d89f69b9f41c1e1b75ea36024e7f7bb0556ce7446e9.png" src="../../_images/47560264c7cad515d0359d89f69b9f41c1e1b75ea36024e7f7bb0556ce7446e9.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="independent-variables-in-probability">
+<h2><span class="section-number">4.4. </span>Independent Variables in Probability<a class="headerlink" href="#independent-variables-in-probability" title="Permalink to this heading">#</a></h2>
+<p>In many physical problems we work with more than one random variable. For example, a molecule has both a position and a velocity, and repeated measurements of the same quantity each produce different outcomes. Sometimes these variables are <strong>independent</strong>, meaning that knowing the value of one does not provide any information about the other. A simple example is coin tossing: knowing the result of one flip does not influence the next.</p>
+<p>Formally, two random variables <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are <em>independent</em> if their joint probability distribution factorises into a product series of each variable’s marginal distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+P(u, v) = P_u(u)\,P_v(v).
+\]</div>
+<p>If this holds, the value observed for <span class="math notranslate nohighlight">\(u\)</span> has no bearing on <span class="math notranslate nohighlight">\(v\)</span>, and vice versa. This generalises to any number of independent variables. If <span class="math notranslate nohighlight">\(\vec{x} = (x_1, x_2, \ldots, x_N)\)</span> has each component independent of the other, then</p>
+<div class="math notranslate nohighlight">
+\[
+P(\vec{x}) = \prod_{i=1}^{N} P_i(x_i).
+\]</div>
+<p>A very useful consequence of independence is that the expectation of a product factorises:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\langle uv \rangle
+  &amp;= \int\!\!\int uv\,P_u(u)\,P_v(v)\,du\,dv \\[6pt]
+  &amp;= \left( \int u\,P_u(u)\,du \right)
+     \left( \int v\,P_v(v)\,dv \right) \\[6pt]
+  &amp;= \langle u \rangle \,\langle v \rangle.
+\end{aligned}
+\end{split}\]</div>
+<p>The same reasoning extends directly to <span class="math notranslate nohighlight">\(N\)</span> independent variables:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\left\langle \prod_{i=1}^N X_i \right\rangle
+  &amp;= \int \cdots \int
+     \left( \prod_{i=1}^N x_i \right)
+     \left( \prod_{i=1}^N p_i(x_i) \right)
+     dx_1\cdots dx_N \\[6pt]
+  &amp;= \prod_{i=1}^N \left( \int x_i\, p_i(x_i)\,dx_i \right) \\[6pt]
+  &amp;= \prod_{i=1}^N \langle X_i \rangle.
+\end{aligned}
+\end{split}\]</div>
+<p>This result holds for discrete variables as well: simply replace the integrals within the series with sums.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: Mean and variance</p>
+<p>Suppose that there are <span class="math notranslate nohighlight">\(n\)</span> independent variables, <span class="math notranslate nohighlight">\(X_i\)</span>, each with the same mean <span class="math notranslate nohighlight">\(\langle X \rangle\)</span> and variance <span class="math notranslate nohighlight">\(\sigma^2_X\)</span>. Let <span class="math notranslate nohighlight">\(Y\)</span> be the sum of the random variables, such that <span class="math notranslate nohighlight">\(Y = X_1 + X_2 \ + \ ... \ + \ X_n\)</span>. Find</p>
+<ul class="simple">
+<li><p>(a) the mean of Y</p></li>
+<li><p>(b) the variance of Y</p></li>
+</ul>
+<p class="rubric">(a)</p>
+<p>The mean of <span class="math notranslate nohighlight">\(Y\)</span> is simply the sum of each variable’s expectation value. As each variable <span class="math notranslate nohighlight">\(X_i\)</span> has the same mean <span class="math notranslate nohighlight">\(\langle X \rangle\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle Y \rangle = n \langle X \rangle.
+\]</div>
+<p class="rubric">(b)</p>
+<p>Finding the variance of <span class="math notranslate nohighlight">\(Y\)</span> is a marginally more complicated matter. To start, let’s refer to the formula <span class="math notranslate nohighlight">\(\sigma^2_Y = \langle Y^2 \rangle - \langle Y \rangle^2\)</span>. Seeing as we have <span class="math notranslate nohighlight">\(\langle Y \rangle^2 = n^2 \langle X \rangle^2\)</span>, we only need to calculate <span class="math notranslate nohighlight">\(\langle Y^2 \rangle\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\langle Y^{2} \rangle
+  &amp;= \langle X_{1}^{2} + \cdots + X_{N}^{2} + X_{1}X_{2} + X_{2}X_{1}
+     + X_{1}X_{3} + \cdots \rangle \tag{3.37} \\[6pt]
+  &amp;= \langle X_{1}^{2} \rangle + \cdots + \langle X_{N}^{2} \rangle
+     + \langle X_{1}X_{2} \rangle + \langle X_{2}X_{1} \rangle
+     + \langle X_{1}X_{3} \rangle + \cdots
+\end{align}
+\end{split}\]</div>
+<p>There are <span class="math notranslate nohighlight">\(n\)</span> terms like <span class="math notranslate nohighlight">\(\langle X_1^2 \rangle\)</span> on the right-hand side, and n(n-1) terms like <span class="math notranslate nohighlight">\(\langle X_1 X_2 \rangle\)</span>. The former takes the value <span class="math notranslate nohighlight">\(\langle X^2 \rangle\)</span> and the latter <span class="math notranslate nohighlight">\(\langle X \rangle \langle X \rangle = \langle X \rangle^2\)</span>. Therefore:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle Y^{2} \rangle = n\langle X^2 \rangle + n(n-1)\langle X \rangle^2,
+\]</div>
+<p>and,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\sigma_y^2
+  &amp;= \langle Y^2 \rangle - \langle Y \rangle^2 \\[6pt]
+  &amp;= n\langle X^2 \rangle + n(n-1)\langle X \rangle^2 - n^2\langle X \rangle^2 \\[6pt]
+  &amp;= n\langle X^2 \rangle + n^2\langle X \rangle^2 - n\langle X \rangle^2 - n^2\langle X \rangle^2 \\[6pt]
+  &amp;= n\langle X^2 \rangle - n\langle X \rangle^2 \\[6pt]
+  &amp;= n\!\left(\langle X^2 \rangle - \langle X \rangle^2\right) \\[6pt]
+  &amp;= n\sigma_X^2
+\end{align}
+\end{split}\]</div>
+<p>This tells us that if we make <span class="math notranslate nohighlight">\(n\)</span> independent measurements of the same quantity, and then take their average via <span class="math notranslate nohighlight">\(Y/n\)</span>, the uncertainty in that average is reduced by a factor <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> compared to a single measurement:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{mean} = \frac{\sigma_x}{n}.
+\]</div>
+<p class="rubric">TODO - RMS needs elaboration, cite random walks and possibly Brownian motion.</p>
+<p>This principle - that averaging many independent measurements reduces random error - underlies much of experimental physics. However, it is only applicable for random, uncorrelated errors. Any systematic bias in a measurement setup will persist regardless of repetitions. A related idea actually appears in the study of random walks; such as the motion of a particle buffeted by molecules in a fluid. Each step (period of motion) is independent of the last, so whilst the average displacement after many steps is zero, the root-mean-square displacement grows as <span class="math notranslate nohighlight">\(sqrt{n}\)</span>.</p>
+</div>
+</section>
+<section id="the-binomial-distribution">
+<h2><span class="section-number">4.5. </span>The Binomial Distribution<a class="headerlink" href="#the-binomial-distribution" title="Permalink to this heading">#</a></h2>
+<!-- stef: we've covered combinatorials in chapter 1, i'm going to hash this bit out for now
+### Counting combinations
+Before introducing the binomial distribution, it helps to recall some basic **combinatorics**—the mathematics of counting how many ways outcomes can be arranged.
+
+Suppose you have *n* objects, and you want to choose *k* of them without caring about order in which they are selected.
+The number of distinct selections, aka **combinations**, is:
+
+$$
+{n \choose k} = \frac{n! }{k! (n - k)! }
+$$
+
+where "! " denotes the factorial operation (e. g 5! = 5 × 4 × 3 × 2 × 1).
+For example, there are ${4 \choose 2} = 6$ ways to pick 2 numbers from the set {1, 2 ,3 4}: (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4).
+
+This quantity appears throughout probability theory because it counts how many different sequences can contain *k* particular outcomes (like *successes*) among *n* trials.
+
+--- -->
+<p>Consider an experiment with only two possible outcomes, <strong>success</strong> and <strong>failure</strong>. This is called a <strong>Bernoulli trial</strong>.</p>
+<ul class="simple">
+<li><p>Let the probability of success be <em>p</em>.</p></li>
+<li><p>Then the probability of failure is (1 − <em>p</em>).</p></li>
+</ul>
+<p>If we assign the value 1 to a success and 0 to a failure, the expectation and variance of a single trial are:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = p, \qquad
+\sigma_x^2 = p(1 - p)
+\]</div>
+<p>Now imagine performing <span class="math notranslate nohighlight">\(n\)</span> independent Bernoulli trials; for example, flipping a coin <span class="math notranslate nohighlight">\(n\)</span> times where we count <span class="math notranslate nohighlight">\(k\)</span> heads. Let us consider “heads” as a success.</p>
+<p>There are two ingredients to the probability of obtaining <em>k</em> successes:</p>
+<ol class="arabic simple">
+<li><p><strong>The probability of one specific sequence</strong> with <em>k</em> successes and <em>n − k</em> failures:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+ p^k (1 - p)^{n - k}
+ \]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>The number of possible sequences</strong> with exactly <em>k</em> successes:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+ {n \choose k}
+ \]</div>
+<p>Multiplying these gives the <strong>binomial probability</strong> of observing <em>k</em> successes given <em>n</em> trials:</p>
+<div class="math notranslate nohighlight">
+\[
+P(n, k) = {n \choose k} p^k (1 - p)^{n - k}
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="properties">
+<h2><span class="section-number">4.6. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">#</a></h2>
+<p>From the definition, one can show that the probability of all combinations of successes and failures sums to unity:</p>
+<div class="math notranslate nohighlight">
+\[
+\sum_{k=0}^{n} P(n, k) = 1,
+\]</div>
+<p>so the probabilities are properly normalised.
+The <strong>mean</strong> and <strong>variance</strong> of <em>k</em> are:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle k \rangle = np, \qquad
+\sigma_k^2 = np(1 - p)
+\]</div>
+<p>As <em>n</em> increases, both the mean and standard deviation grow, but the <strong>fractional width</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\sigma_k}{\langle k \rangle} =
+\sqrt{\frac{1 - p}{np}}
+\]</div>
+<p>decreases, meaning the distribution becomes more sharply peaked around <em>k = np</em>.</p>
+<hr class="docutils" />
+<div class="example admonition">
+<p class="admonition-title">Example - coin tossing</p>
+<p>For a fair coin, <span class="math notranslate nohighlight">\(p = \frac{1}{2}\)</span>.</p>
+<ul class="simple">
+<li><p>For 16 tosses, expected heads: <span class="math notranslate nohighlight">\(\langle k \rangle = 8\)</span>; <span class="math notranslate nohighlight">\(\sigma = 2\)</span>.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(10^{20}\)</span> tosses, expected heads: <span class="math notranslate nohighlight">\(\langle k \rangle = 5\times10^{19}\)</span>; <span class="math notranslate nohighlight">\(\sigma = 5\times10^{9}\)</span> - ten orders of magnitude smaller relative to the mean.</p></li>
+</ul>
+<p>Thus, as the number of trials increases, the relative fluctuations around the mean gradually become negligible.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: 1D random walk</p>
+<p>A one-dimensional <strong>random walk</strong> can be viewed as successive Bernoulli trials:
+each step is either forward (+L) or backward (−L) with equal probability <span class="math notranslate nohighlight">\(p = \frac{1}{2}\)</span>.</p>
+<p>After <em>n</em> steps, if <em>k</em> are forward, the net displacement is</p>
+<div class="math notranslate nohighlight">
+\[
+x = (2k - n)L.
+\]</div>
+<p>Using the binomial results,</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = 0, \qquad
+\langle x^2 \rangle = nL^2, \qquad
+\sigma_x = \sqrt{n}\, L,
+\]</div>
+<p>showing that the root-mean-square displacement grows as <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> - a key result that later links to Brownian motion.</p>
+</div>
+</section>
+<section id="conditional-probabilities-bayes-theorem">
+<h2><span class="section-number">4.7. </span>Conditional Probabilities - Bayes’ Theorem<a class="headerlink" href="#conditional-probabilities-bayes-theorem" title="Permalink to this heading">#</a></h2>
+<p>In many physical problems, events are not independent. More often than not, the probability of one event can depend on whether another has occurred. The framework in which we describe dependent events is called “conditional probability”.</p>
+<hr class="docutils" />
+<section id="conditional-probability">
+<h3>Conditional probability<a class="headerlink" href="#conditional-probability" title="Permalink to this heading">#</a></h3>
+<p>If we have two events, A and B, the probability of A <em>given</em> that B has occurred is written:</p>
+<div class="math notranslate nohighlight">
+\[
+P(A\, |\, B) = \frac{P(A \cap B)}{P(B)}
+\]</div>
+<p>provided <span class="math notranslate nohighlight">\(P(B) \neq 0\)</span>.
+Here, <span class="math notranslate nohighlight">\(P(A \cap B)\)</span> means the probability that <em>both</em> A and B occur.</p>
+<p>When events are independent, the occurrence of B does not affect A, so</p>
+<div class="math notranslate nohighlight">
+\[
+P(A\, |\, B) = P(A)
+\]</div>
+<p>and equivalently <span class="math notranslate nohighlight">\(P(A \cap B) = P(A)P(B)\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="bayes-theorem">
+<h3>Bayes’ theorem<a class="headerlink" href="#bayes-theorem" title="Permalink to this heading">#</a></h3>
+<p>Rearranging the definition of conditional probability gives an extremely useful result known as <strong>Bayes’ theorem</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+P(A\, |\, B) = \frac{P(B\, |\, A)\, P(A)}{P(B)}
+\]</div>
+<p>This allows us to update our belief about A after observing B.
+In other words, it connects the <strong>prior</strong> probability <span class="math notranslate nohighlight">\(P(A)\)</span> with the <strong>posterior</strong> probability <span class="math notranslate nohighlight">\(P(A|B)\)</span>.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: medical testing</p>
+<p>A common example used to understand Bayes’ theorem is testing for disease. Suppose a disease affects 1% of a population.
+A test correctly identifies it 99% of the time, but also gives a 5% false-positive rate. In other words, if a person has the disease, the test will return a positive result 99% of the time, and a negative result 1% of the time. Meanwhile, if the person does not have the disease, it will return a negative result 95% of the time, and a positive result 5% of the time.</p>
+<p>Let A = “person has disease” and B = “test is positive”.
+Then:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) = 0.01\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(B|A) = 0.99\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(B|\neg A) = 0. 05\)</span></p></li>
+</ul>
+<p>The overall probability of obtaining a positive test result must factor in both means of obtaining that result:</p>
+<div class="math notranslate nohighlight">
+\[
+P(B) = P(B|A)P(A) + P(B|\neg A)P(\neg A)
+ = 0. 99(0. 01) + 0. 05(0. 99) = 0. 0594
+\]</div>
+<p>Applying Bayes’ theorem:</p>
+<div class="math notranslate nohighlight">
+\[
+P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{0. 99 \times 0. 01}{0. 0594} \approx 0. 17
+\]</div>
+<p>So even with a positive result, there’s only a 17% chance the person actually has the disease.</p>
+<p>This illustrates how rare events can strongly influence conditional probabilities. Follow-up testing can help in reducing the uncertainty of a result, by tightening the variance over repeated trials. That is to say, the probability of obtaining several positive test results in a row, given that the person does not have the disease, is astoundingly small, (and is likely indicative that the person does in fact have the disease.)</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: The Monty Hall Problem</p>
+<p>The Monty Hall problem is a very famous thought experiment in probability, named after the host, Monty Hall, of the 1970s American television game show <em>Let’s Make a Deal</em>. It serves as a canonical example of conditional probability, highlighting how new information can reshape the landscape of a problem even when the underlying setup appears symmetric. The problem is posed as follows: you are on a game show where three doors are presented before you; behind one of these doors is a prize (cash, a car, etc.), whereas behind the other two is a goat. Your objective is to win the prize.</p>
+<p>You pick a door. Before revealing the outcome of your choice, the host -who knows where the prize is - opens one of the remaining doors to reveal a goat. Crucially, the host will never reveal the prize, or the door that you have picked. You are then offered a choice: stick with your original door, or switch to the remaining unopened one. The puzzle is in determining which is, on average, the more viable strategy. Does switching enhance your odds of winning, or does it make no difference at all? Stop to consider your intuition, and think about what information you are being supplied with as you are making this decision.</p>
+<p>Let us review the rules of the game:</p>
+<ul class="simple">
+<li><p>There are three doors; behind one is a prize, the other two hide goats.</p></li>
+<li><p>You pick a door randomly.</p></li>
+<li><p>Before revealing the outcome of your choice, the host opens one of the other doors to reveal a goat.</p></li>
+<li><p>You are then offered to either remain with your initial choice, or to switch to the remaining unopened door.</p></li>
+</ul>
+<p>Let:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(H_i\)</span> denote “the prize is behind door <span class="math notranslate nohighlight">\(i\)</span>”, where <span class="math notranslate nohighlight">\(i \in \{1, 2, 3 \}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_i\)</span> denote “the host opens foor <span class="math notranslate nohighlight">\(i\)</span> and reveals a goat”.</p></li>
+</ul>
+<p>Before anything happens, the prize is equally likely to be behind any of the doors:</p>
+<div class="math notranslate nohighlight">
+\[
+P(H_1) = P(H_2) = P(H_3) = \frac{1}{3}
+\]</div>
+<p>So if you remain steadfast in your decision, you have a <span class="math notranslate nohighlight">\(1/3\)</span> chance of winning. However, the behaviour of the host matters. After they open the door, the problem goes from a generic, random choice to a filtered, curated choice. To see this more clearly, imagine a variant of the original game:</p>
+<ul class="simple">
+<li><p>There are 100 doors to pick from in the beginning.</p></li>
+<li><p>You pick one door.</p></li>
+<li><p>The host looks at the remaining 99, finds the goats, and opens all but one of them.</p></li>
+<li><p>You are again left with a choice between two unopened doors.</p></li>
+</ul>
+<p>Initially, the door you picked carries a <span class="math notranslate nohighlight">\(1/100\)</span> chance of hiding the prize, whereas the remaining 99 doors colelctively carry a <span class="math notranslate nohighlight">\(99/100\)</span> chance. The host’s action of opening 98 goat doors does not re-randomise the scenario, but effectively concentrates the entire <span class="math notranslate nohighlight">\(99/100\)</span> probability mass of “one of the other doors” onto the single remaining unopened door. In this exaggerated scenario, it is intuitively clear that you should pick the door that remained after the host’s action. The three-door scenario case employs exactly the same logic…</p>
+<p>Let us now view this problem through the lens of Bayes’ Theorem. We have our prior probabilities <span class="math notranslate nohighlight">\(P(H_1) = P(H_2) = P(H_3) = \frac{1}{3}\)</span>. Let us say that initially you pick door number 1. Remember that the host has a fixed set of rules:</p>
+<ul class="simple">
+<li><p>They never open your chosen door.</p></li>
+<li><p>They never open the door which hides the prize.</p></li>
+<li><p>If both of the remaining doors hide goats, they choose the door to open randomly.</p></li>
+</ul>
+<p>Now suppose that after choosing door 1, the host opens door 2 to reveal a goat. We now wish to compare:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(H_1 | M_2)\)</span> - The probability that the prize is behind the original door.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(H_3 | M_2)\)</span> - The probability that the prize is behind the other unopened door.</p></li>
+</ul>
+<p>The conditional probabilities on the host’s actions are:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(H_1\)</span> is true, both doors 2 and 3 hide goats, so the host chooses between the two of them randomly.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(M_2 | H_1) = \frac{1}{2}
+\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(H_2\)</span> is true, then the host cannot open door 2, so they must open door 3.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(M_2 | H_2) = 0
+\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(H_3\)</span> is true, then the host must choose door 2 as the player has originally selected door 1.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(M_2 | H_3) = 1
+\]</div>
+<p>From this information, we can calculate the probability of the prize being behind one of the two remaining doors with Bayes’ Theorem.</p>
+<div class="math notranslate nohighlight">
+\[
+P(H_1 | M_2) = \frac{P(M_2 | H_1)P(H_1)}{P(M_2)} = \frac{P(M_2 | H_1)P(H_1)}{P(M_2 | H_1)P(H_1) + P(M_2 | H_2)P(H_2) + P(M_2 | H_3)P(H_3)}.
+\]</div>
+<p>We have all the necessary quantities to compute this probability:</p>
+<div class="math notranslate nohighlight">
+\[
+P(H_1 \mid M_2)
+= \frac{\tfrac{1}{2}\cdot\tfrac{1}{3}}
+       {\tfrac{1}{2}\cdot\tfrac{1}{3} + 0\cdot\tfrac{1}{3} + 1\cdot\tfrac{1}{3}}
+= \frac{\tfrac{1}{6}}{\tfrac{1}{2}}
+= \frac{1}{3}.
+\]</div>
+<p>Similarly,</p>
+<div class="math notranslate nohighlight">
+\[
+P(H_3 | M_2) = \frac{P(M_2 | H_3)P(H_3)}{P(M_2)} = \frac{P(M_2 | H_1)P(H_1)}{P(M_2 | H_1)P(H_1) + P(M_2 | H_2)P(H_2) + P(M_2 | H_3)P(H_3)} = \frac{1 \cdot \tfrac{1}{3}}{\tfrac{1}{2}} = \frac{2}{3}.
+\]</div>
+<p>Therefore, after the host opens door 2 and reveals a goat, your original door still only has probability <span class="math notranslate nohighlight">\(\tfrac{1}{3}\)</span> of hiding the prize, while the other unopened door now carries probability <span class="math notranslate nohighlight">\(\tfrac{2}{3}\)</span>. The optimal strategy is to switch doors.</p>
+</div>
+</section>
+</section>
+<section id="key-distributions-gaussian-poisson-maxwell-boltzmann">
+<h2><span class="section-number">4.8. </span>Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann<a class="headerlink" href="#key-distributions-gaussian-poisson-maxwell-boltzmann" title="Permalink to this heading">#</a></h2>
+<p>In thermal physics, we often study systems comprised of an enormous number of particles. Instead of tracking the exact trajectories of each particle exhaustively, we rely on probability distributions which describe the typical behaviour of the system as a whole. The Gaussian, Poisson, and Maxwell-Boltzmann distributions are especially important because they each capture a common pattern observed in physical processes present in thermodynamics. Understanding these distributions helps in explaining how microscopic randomness produces the macroscopic behaviour we observe. Consider this an introduction to these key distributions, as we will go through them in more detail within Chapter 6.</p>
+<section id="gaussian-normal-distribution">
+<h3>Gaussian (Normal) Distribution<a class="headerlink" href="#gaussian-normal-distribution" title="Permalink to this heading">#</a></h3>
+<p>A continuous, bell-shaped probability density function:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x; \mu, \sigma)=\frac{1}{\sqrt{2\pi}\, \sigma}\exp\! \left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\]</div>
+<p>The mean and variance are <span class="math notranslate nohighlight">\(\langle x\rangle=\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma^2\)</span>.
+By the Central Limit Theorem, the sum or average of many independent random variables tends toward a Gaussian distribution, regardless of the original shape.</p>
+<p>The Gaussian distribution is relevant because many physical quantities arise from the combined effect of many small, often random contributions. When these contributions add together, their overall behaviour tends to form a Gaussian distribution with its characteristic bell-shaped curve. This is why energy fluctuations, measurement noise, and small variations in macroscopic observables often follow a normal distribution. In practice, the Gaussian serves as a “default” model for fluctuations in thermal systems, reflecting how microscopic randomness smooths out into predictable macroscopic behaviour. An extremely common type of Gaussian distribution is the <em>standard normal distribution</em>, which is when <span class="math notranslate nohighlight">\(\mu = 0\)</span> and <span class="math notranslate nohighlight">\(\sigma = 1\)</span>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/00c2cf055499ee3ec2ec54ba3b780a36ea777bb00fd23d90ff5bbfc45d03cb9d.png" src="../../_images/00c2cf055499ee3ec2ec54ba3b780a36ea777bb00fd23d90ff5bbfc45d03cb9d.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/15488a2ff9ba9c2ca1406cea049588049696f3c00aa875dda4b16a8a77e54caa.png" src="../../_images/15488a2ff9ba9c2ca1406cea049588049696f3c00aa875dda4b16a8a77e54caa.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="poisson-distribution">
+<h2><span class="section-number">4.9. </span>Poisson Distribution<a class="headerlink" href="#poisson-distribution" title="Permalink to this heading">#</a></h2>
+<p>A discrete distribution describing the number of rare, independent events occurring in a fixed interval:</p>
+<div class="math notranslate nohighlight">
+\[
+P(k; \lambda)=\frac{\lambda^k e^{-\lambda}}{k! }, \qquad k=0, 1, 2, \dots
+\]</div>
+<p>The mean and variance are both <span class="math notranslate nohighlight">\(\langle k\rangle=\lambda\)</span>.
+It arises as the limit of the binomial distribution for large <span class="math notranslate nohighlight">\(n\)</span>, small <span class="math notranslate nohighlight">\(p\)</span>, with <span class="math notranslate nohighlight">\(\lambda = np\)</span>. The parameter, <span class="math notranslate nohighlight">\(\lambda\)</span>, can be thought of as a rate parameter, controlling the frequency of occurrence for whatever event it is being used to describe.</p>
+<p>The Poisson distribution is important whenever we count events that occur randomly and independently. In thermal physics, this becomes especially relevant when we measure how often certain microscopic events occur over time; for example, molecular collisions, detections of radioactive decay events, or the number of particles crossing a surface. These processes involve random events happening at an approximately steady average rate, which makes the Poisson distribution well-suited to describing them. It helps us understand the size of fluctuations in these counting experiments and explains the origin of <em>shot noise</em>: the unavoidable statistical variations in the number of detected events, even when the average rate stays constant.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/eefd7373178e6027c3c69c71a30151a8a77d45380f540a5697a1ad9c1f029650.png" src="../../_images/eefd7373178e6027c3c69c71a30151a8a77d45380f540a5697a1ad9c1f029650.png" />
+</div>
+</div>
+</section>
+<section id="maxwellboltzmann-speed-distribution-3d-ideal-gas">
+<h2><span class="section-number">4.10. </span>Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)<a class="headerlink" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas" title="Permalink to this heading">#</a></h2>
+<p>The Maxwell-Boltzmann distribution is a particular probability distribution named after James Clerk Maxwell and Ludwig Boltzmann, and was first defined for describing particle speeds in idealized gases.</p>
+<div class="math notranslate nohighlight">
+\[
+f(v; T, m)=4\pi\! \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\! \left(-\frac{m v^2}{2k_B T}\right), \qquad v\ge 0
+\]</div>
+<p>The Maxwell–Boltzmann distribution plays a central role in kinetic theory because it describes the spread of particle speeds in a classical ideal gas. It shows that, at a given temperature, some particles move slowly while others move very fast, and it gives precise predictions for the most probable speed, the average speed, and the rms speed. These predictions feed directly into calculations of pressure, diffusion, heat transfer, and collision rates. In essence, this distribution connects random molecular motion to the observable properties of gases.</p>
+<p>Key quantities:</p>
+<ul class="simple">
+<li><p>Most probable speed: <span class="math notranslate nohighlight">\(v_p=\sqrt{\frac{2k_B T}{m}}\)</span></p></li>
+<li><p>Mean speed: <span class="math notranslate nohighlight">\(\langle v\rangle=\sqrt{\frac{8k_B T}{\pi m}}\)</span></p></li>
+<li><p>RMS speed: <span class="math notranslate nohighlight">\(v_{\mathrm{rms}}=\sqrt{\frac{3k_B T}{m}}\)</span></p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" src="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" />
+</div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./unstructed_content_for_lecture_notes\ch5-probability_for_thermodynamics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../ch3-kinetic_theory_of_gases/03_solutions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.7. </span>Solutions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CH5-Problem_Sheet.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.11. </span>Probability Theory - Questions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-and-continuous-probability-distributions">4.1. Discrete and Continuous probability distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-distributions">Discrete Distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distributions">Continuous distributions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendencies">4.2. Measures of Central Tendencies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations-of-a-function">Expectations of a function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">Variance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-transformations">4.3. Linear Transformations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-variables-in-probability">4.4. Independent Variables in Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-binomial-distribution">4.5. The Binomial Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#properties">4.6. Properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probabilities-bayes-theorem">4.7. Conditional Probabilities - Bayes’ Theorem</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditional-probability">Conditional probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bayes-theorem">Bayes’ theorem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-distributions-gaussian-poisson-maxwell-boltzmann">4.8. Key Distributions - Gaussian, Poisson, Maxwell-Boltzmann</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-normal-distribution">Gaussian (Normal) Distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distribution">4.9. Poisson Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-speed-distribution-3d-ideal-gas">4.10. Maxwell–Boltzmann Speed Distribution (3D Ideal Gas)</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
