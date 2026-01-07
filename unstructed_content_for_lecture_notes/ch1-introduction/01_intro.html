@@ -333,7 +333,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paths">1.7. Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.7. Changing Thermodynamic States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal Gases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
@@ -465,15 +465,24 @@ document.write(`
 <p>If you drank half a cup of warm coffee, you’ll obviously find that the number of atoms, volume, internal energy and the heat it radiates all halve.</p>
 </section>
 </section>
-<section id="paths">
-<h2><span class="section-number">1.7. </span>Paths<a class="headerlink" href="#paths" title="Permalink to this heading">#</a></h2>
+<section id="changing-thermodynamic-states">
+<h2><span class="section-number">1.7. </span>Changing Thermodynamic States<a class="headerlink" href="#changing-thermodynamic-states" title="Permalink to this heading">#</a></h2>
 <p>A process that changes a system’s state is described by a <strong>path</strong>. The path describes <em>how</em> a system changes from one equilibrium state to another. If a process can or cannot be undone, we consider these processes and paths either “reversible” or “irreversible”.</p>
-<figure class="align-default" id="fig-reversible">
-<img alt="../../_images/1.5_reversible.png" src="../../_images/1.5_reversible.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">A reversible process must be perfectly lossless. Real processes aren’t <em>truly</em> reversible but some get close.</span><a class="headerlink" href="#fig-reversible" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p>[[FIG OF REVERSIBLE PATH VS ARBITRARY PATH]]</p>
+<p>A given pair of equilibrium states can be connected by many distinct paths. For example, a system may be taken from state 1 to state 2 by holding temperature constant while varying pressure, or by holding pressure constant while varying temperature, or by varying these variables sequentially or in some combination. The path therefore describes the conditions maintained during the process, not just the initial and final states.</p>
+<p>A <strong>reversible</strong> path has the system remain in equilibrium at all times. This requires the process to proceed sufficiently slowly that the system can continually adjust to changing conditions. In the ideal limit, the path consists of an infinite sequence of equilibrium states, so that the state variables are well defined at every stage of the process.</p>
+<p>An <strong>irreversible</strong> path involves changes that drive the system away from equilibrium such that they can no longer be described by state variables. Consider the rapid compression of a gas with a piston, vigorous stirring, or expansion into a vacuum. During such processes, different parts of the system may not be in equilibrium with one another. As a result, state variables cannot describe the system throughout the process, and the path itself cannot be specified in terms of these variables.</p>
+<!-- 
+```{figure} ../../src/figures/1.5_reversible.png
+:name: fig:reversible
+A reversible process must be perfectly lossless. Real processes aren't *truly* reversible but some get close.
+``` -->
+<p>Paths are often classified by which physical quantity is constrained during the process:</p>
+<ul class="simple">
+<li><p><strong>isothermal</strong>: temperature remains constant</p></li>
+<li><p><strong>isobaric</strong>: pressure remains constant</p></li>
+<li><p><strong>adiabatic</strong>: no heat is exchanged with the surroundings</p></li>
+</ul>
 <!-- ## The thermodynamic limit
 
 Thermodynamics is a phenomenological theory of macroscopic variables and therefore only strictly holds true for large systems. In fact, we must begin by assuming that the number of particles, $N$, tends to infinity, as does the volume $V$, in such a way that the density $\rho$ of the gas remains constant and uniform,
@@ -498,7 +507,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 </ul>
 <div class="math notranslate nohighlight">
 \[ p \propto T. \]</div>
-<p id="sec-idealeqns">Combining these empirical results, alongside <span class="math notranslate nohighlight">\(\rho = \frac{N}{V}\)</span>, we find that <span class="math notranslate nohighlight">\(p V \propto N T\)</span>. Their proportionality is the aforementioned Boltzmann constant, which relates temperature to energy, and forms the <strong>microscopic ideal gas equation</strong>,</p>
+<p>Combining these empirical results, alongside <span class="math notranslate nohighlight">\(\rho = \frac{N}{V}\)</span>, we find that <span class="math notranslate nohighlight">\(p V \propto N T\)</span>. Their proportionality is the aforementioned Boltzmann constant, which relates temperature to energy, and forms the <strong>microscopic ideal gas equation</strong>,</p>
 <div class="math notranslate nohighlight">
 \[ p V = N k_B T \qquad \text{(microscopic)}. \]</div>
 <p>Alternatively, we can define it macroscopically in terms of the numbers of moles, <span class="math notranslate nohighlight">\(n\)</span>, through <span class="math notranslate nohighlight">\(N=n * N_A\)</span> and the universal gas constant, <span class="math notranslate nohighlight">\(R = N_A*k_B\)</span>, forming the <strong>macroscopic ideal gas equation</strong>,</p>
@@ -515,7 +524,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <figure class="align-default" id="fig-kinetic-billiards">
 <img alt="../../_images/1.6_kinetic.png" src="../../_images/1.6_kinetic.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Ideal gas as billiard balls in a box. Gas particles are modeled as identical point-like balls moving randomly and colliding elastically with each other and with the walls of the container, illustrating how microscopic motion gives rise to state variables such as pressure and temperature.</span><a class="headerlink" href="#fig-kinetic-billiards" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Ideal gas as billiard balls in a box. Gas particles are modeled as identical point-like balls moving randomly and colliding elastically with each other and with the walls of the container, illustrating how microscopic motion gives rise to state variables such as pressure and temperature.</span><a class="headerlink" href="#fig-kinetic-billiards" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -631,7 +640,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paths">1.7. Paths</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.7. Changing Thermodynamic States</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal Gases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
