@@ -5,9 +5,9 @@ options:
 chapters:
 # - file: src/Figure_Construction
 - file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
-  sections:
-  - file: unstructed_content_for_lecture_notes/ch1-introduction/02_questions
-  - file: unstructed_content_for_lecture_notes/ch1-introduction/03_solutions
+  # sections:
+  # - file: unstructed_content_for_lecture_notes/ch1-introduction/02_questions
+  # - file: unstructed_content_for_lecture_notes/ch1-introduction/03_solutions
 # - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/01_temperature_and_heat
 #   sections:
 #   - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/02_questions
