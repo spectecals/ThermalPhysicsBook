@@ -1,0 +1,599 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3.7. Solutions &#8212; Thermal Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch3-kinetic_theory_of_gases/03_solutions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Probability Theory for Thermal Physics" href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html" />
+    <link rel="prev" title="3.6. Questions" href="02_questions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Thermal Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="02_questions.html">3.6. Questions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.7. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html">4. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet.html">4.11. Probability Theory - Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions.html">4.12. Probability Theory - Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview.html">4.13. Probability Theory for Thermal Physics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts.html">4.14. Probability Theory for Thermal Physics - Lecture 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem.html">4.15. Probability Theory for Thermal Physics - Lecture 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions.html">4.16. Probability Theory for Thermal Physics - Lecture 3</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch3-kinetic_theory_of_gases/03_solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="solutions">
+<h1><span class="section-number">3.7. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
+<ol class="arabic">
+<li><p>The theory of equipartition relates the internal energy of a gas to its temperature.</p>
+<ol class="arabic">
+<li><p>What assumptions are made in the theory of equipartition? (2)</p>
+  <RAW HTML BREAK>
+  <br><br>
+  </RAW HTML BREAK>
+<ul>
+<li><p>Energy is evenly distributed across each DOF, aka thermal equilibrium</p></li>
+<li><p>Classical mechanics applies, can sum contribution from each DOF</p></li>
+<li><p>Intermolecular interactions negligible (ideal gas)</p></li>
+<li><p>Atoms are point particles (have no size)</p>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+</li>
+</ul>
+</li>
+<li><p>Which of these assumptions must be modified for real gases, and why? (2)</p>
+  <RAW HTML BREAK>
+  <br><br>
+  </RAW HTML BREAK>
+<ul>
+<li><p>Interactions are not negligible (van der Waals), alters force and therefore pressure</p></li>
+<li><p>Particles have volume, therefore rates of collision and effective volume change</p>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+</li>
+</ul>
+</li>
+<li><p>Explain the implications of the theory of equipartition for monatomic versus diatomic molecules. (2)</p>
+  <RAW HTML BREAK>
+  <br><br>
+  </RAW HTML BREAK>
+<div class="math notranslate nohighlight">
+\[ U = \frac{\text{DOF}}{2} nRT \]</div>
+<ul>
+<li><p>Monatomic gases: <span class="math notranslate nohighlight">\(\text{DOF}=3 \Rightarrow U=\frac{3}{2}nRT\)</span></p></li>
+<li><p>Diatomic gases (with vibrational modes frozen): <span class="math notranslate nohighlight">\(\text{DOF}=5 \Rightarrow U=\frac{5}{2}nRT\)</span></p>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+</li>
+</ul>
+</li>
+<li><p>State the internal energy of:</p>
+<ul>
+<li><p>one mole of a monatomic gas, and</p></li>
+<li><p>one mole of a diatomic gas,<br />
+assuming a temperature of 300 K. (2)</p>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}RT = (8.314)(300) = 2.494 \times 10^{3}\ \text{J}\\        U_{\text{mono}} = \frac{3}{2}RT = 3.74 \times 10^{3}\ \text{J}\\        U_{\text{di}}   = \frac{5}{2}RT = 6.24 \times 10^{3}\ \text{J} \end{aligned}\end{align} \]</div>
+  <RAW HTML BREAK>
+  <br><br>
+  </RAW HTML BREAK>
+</li>
+<li><p>What are the implications of the theory of equipartition for gases at low and high temperatures? (2)</p>
+  <RAW HTML BREAK>
+  <br><br>
+  </RAW HTML BREAK>
+<ul>
+<li><p>High <span class="math notranslate nohighlight">\(T\)</span>: Z stays near 1 but additional degrees of freedom become active</p></li>
+<li><p>Low <span class="math notranslate nohighlight">\(T\)</span>: intermolecular effects are stronger, Z correlates with pressure</p>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>The pressure <span class="math notranslate nohighlight">\(p\)</span> in an ideal gas can be shown to be
+<span class="math notranslate nohighlight">\(p=\frac{2}{3}N_V\braket{E_k}\)</span>,
+where <span class="math notranslate nohighlight">\(N_V\)</span> is the number of molecules per unit volume and <span class="math notranslate nohighlight">\(\braket{E_k}\)</span> is the
+average kinetic energy of a molecule. By relating this expression to the pressure
+obtained from the ideal gas law, what can be concluded about the energy per degree
+of freedom in an ideal gas? (5)</p>
+ <RAW HTML BREAK>
+ <br><br>
+ </RAW HTML BREAK>
+<p>Ideal gas law (molecular form):</p>
+<div class="math notranslate nohighlight">
+\[ p = N_V kT \]</div>
+<p>Equating expressions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}N_V kT = \frac{2}{3} N_V \braket{E_k} \\
+        \braket{E_k} = \frac{3}{2} kT \end{split}\]</div>
+<p>Energy per quadratic degree of freedom:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{2}kT\]</div>
+ <RAW HTML BREAK>
+ <br><br>
+ </RAW HTML BREAK>
+</li>
+<li><p>Consider a gas that is raised from temperature <span class="math notranslate nohighlight">\(T_C\)</span> to <span class="math notranslate nohighlight">\(T_H\)</span>. This process is
+conducted either at constant pressure or at constant volume. By considering these
+two processes, show that the ratio of the molar specific heat capacities at constant
+pressure <span class="math notranslate nohighlight">\(c_p\)</span> and constant volume <span class="math notranslate nohighlight">\(c_V\)</span> of an ideal gas is equal to <span class="math notranslate nohighlight">\(5/3\)</span>. (5)</p>
+ <RAW HTML BREAK>
+ <br><br>
+ </RAW HTML BREAK>
+<div class="math notranslate nohighlight">
+\[ c_V \equiv \frac{1}{n}\left(\frac{dQ}{dT}\right)_V \]</div>
+<p>For a monatomic ideal gas:</p>
+<div class="math notranslate nohighlight">
+\[ U(T) = \frac{3}{2}nRT \rightarrow \frac{dU}{dT} = \frac{3}{2}nR. \]</div>
+<p>Constant volume:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \left(\frac{dQ}{dT}\right)_V = \frac{dU}{dT} = \frac{3}{2}nR \\
+        c_V = \frac{1}{n}\frac{dQ}{dT}=\frac{3}{2}R \end{split}\]</div>
+<p>Constant pressure:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} c_P \equiv \frac{1}{n}\left(\frac{dQ}{dT}\right)_P \\
+        dQ_P = dU + p\,dV \end{split}\]</div>
+<p>Ideal gas law:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} pV = nRT \\
+        p\,dV = nR\,dT \end{split}\]</div>
+<p>Insert <span class="math notranslate nohighlight">\(dQ_P\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{dQ_P}{dT} = \frac{3}{2}nR + nR = \frac{5}{2}nR \]</div>
+<p>Ratio:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{c_P}{c_V} = \frac{5}{3} \]</div>
+ <RAW HTML BREAK>
+ <br><br>
+ </RAW HTML BREAK>
+</li>
+</ol>
+<!-- 
+4. Two identical systems each contain $n = 0.06$ mol of an ideal gas at $T = 300$ K and
+   $P = 2.0 \times 10^{5}$ Pa. The pressure in the two systems is reduced by a factor of
+   two, allowing the systems to expand, one adiabatically and one isothermally. What
+   are the final temperatures and volumes of each system? (6)
+
+    <RAW HTML BREAK>
+    <br><br>
+    </RAW HTML BREAK>
+ --></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch3-kinetic_theory_of_gases"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_questions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>Questions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Probability Theory for Thermal Physics</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Samer Kurdi, Dr. Jonathan Leach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
