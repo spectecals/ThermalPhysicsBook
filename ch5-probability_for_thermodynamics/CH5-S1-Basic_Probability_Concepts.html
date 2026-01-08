@@ -171,8 +171,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.9. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.10. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -855,7 +855,7 @@ P(\text{match}) = 1 - \frac{365!}{(365 - N)! \, 365^N}.
 <h3>Picking balls out of a bag<a class="headerlink" href="#picking-balls-out-of-a-bag" title="Permalink to this heading">#</a></h3>
 <p>The game is rather simple. You are presented a bag which contains 5 balls, three of which green, the two remaining are red. You are to extract two balls from the bag successively, and if both are green you win. Notably, the ball acquired after the first round is not replaced, reducing the number of balls to 4. The entry fee for the game is £0.35 and if you win you receive £1. Is it economical to play?</p>
 <p>We can frame this problem relatively simply with a decision tree:</p>
-<img src="../../src/figures/Selecting_Green_Balls.png" width="600px">
+<img src="../src/figures/Selecting_Green_Balls.png" width="600px">
 <p>On the first pick, you have a probability 3/5 of selecting a green ball, as there are 5 possible balls to select and 3 of which are green. On your second pick, the population size has decreased by 1, and hence the probability of a subsequent success is 2/4.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -875,7 +875,7 @@ P(\text{success}) &amp;= P(\text{1st green and 2nd green}) = P(\text{1st green})
 <h3>Determining dependence between two events.<a class="headerlink" href="#determining-dependence-between-two-events" title="Permalink to this heading">#</a></h3>
 <p>You have two fair dice (d6s). Event A is that at least one of the die lands with 6 facing upward, and event B is that the total of both dice is greater than 6. determine whether events A and B are independent.</p>
 <p>You can do so by checking whether <span class="math notranslate nohighlight">\(P(A) = P(A \mid B)\)</span>. The easiest way to determine this is by illustrating all the possible outcomes, then grouping them by the event they fall into:</p>
-<img src="../../src/figures/DiceRolls_DependentEvents.png" width="600px">
+<img src="../src/figures/DiceRolls_DependentEvents.png" width="600px">
 <p>Since <span class="math notranslate nohighlight">\(P(A) = \tfrac{11}{36}\)</span> and <span class="math notranslate nohighlight">\(P(A \mid B) = \tfrac{11}{21}\)</span> the events are clearly dependent on one another.</p>
 </section>
 </section>

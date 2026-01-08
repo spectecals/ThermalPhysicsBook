@@ -321,16 +321,15 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mole">1.1. What is a mole?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-constants">1.2. Useful constants</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems">1.3. Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium">1.4. Thermal equilibrium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.5. State variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.6. Intensive vs extensive variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.4. State variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.5. Intensive vs extensive variables</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-variables">Intensive variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.7. Changing thermodynamic states</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal gases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.6. Changing thermodynamic states</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.7. Ideal gases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.8. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
 </ul>
 </li>
@@ -396,13 +395,14 @@ document.write(`
 <li><p><strong>Isolated systems</strong>: An isolated system cannot exchange matter nor energy with its surroundings.</p></li>
 </ul>
 <p>Thermodynamics is a field that describes its systems while in thermal equilibrium with its surroundings (no heat flow), allowing us to describe changes as transitions between one equilibrium state to another. Each equilibrium state is fully specified by <strong>state variables</strong>, which have definite values only while in equilibrium.</p>
-</section>
-<section id="thermal-equilibrium">
-<h2><span class="section-number">1.4. </span>Thermal equilibrium<a class="headerlink" href="#thermal-equilibrium" title="Permalink to this heading">#</a></h2>
-<p>A system is in thermal equilibrium when its temperature is the same throughout and does not change with time. If the system is in contact with its surroundings, thermal equilibrium means there is no net heat flow across the boundary. Under these conditions, macroscopic properties remain stable which is why they can be fully described by state variables.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition:</p>
+<p>A system is in <b>thermal equilibrium</b> when its temperature is the same throughout and does not change with time.</p>
+</div>
+<p>If the system is in contact with its surroundings, thermal equilibrium means there is no net heat flow across the boundary. Under these conditions, macroscopic properties remain stable which is why they can be fully described by state variables.</p>
 </section>
 <section id="state-variables">
-<h2><span class="section-number">1.5. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
 <p>A quantity with a unique value for a particular state of the system is a <em>state variable</em>, i.e.:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p>
@@ -437,7 +437,7 @@ document.write(`
 </ul>
 </section>
 <section id="intensive-vs-extensive-variables">
-<h2><span class="section-number">1.6. </span>Intensive vs extensive variables<a class="headerlink" href="#intensive-vs-extensive-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5. </span>Intensive vs extensive variables<a class="headerlink" href="#intensive-vs-extensive-variables" title="Permalink to this heading">#</a></h2>
 <section id="intensive-variables">
 <h3>Intensive variables<a class="headerlink" href="#intensive-variables" title="Permalink to this heading">#</a></h3>
 <p>These are variables that do not scale with the size of your system. Some examples are:</p>
@@ -461,7 +461,7 @@ document.write(`
 </section>
 </section>
 <section id="changing-thermodynamic-states">
-<h2><span class="section-number">1.7. </span>Changing thermodynamic states<a class="headerlink" href="#changing-thermodynamic-states" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.6. </span>Changing thermodynamic states<a class="headerlink" href="#changing-thermodynamic-states" title="Permalink to this heading">#</a></h2>
 <p>A process that changes a system’s state is described by a <strong>path</strong>. The path describes <em>how</em> a system changes from one equilibrium state to another. If a process can or cannot be undone, we consider these processes and paths either “reversible” or “irreversible”.</p>
 <p>A given pair of equilibrium states can be connected by many distinct paths. For example, a system may be taken from state A to state B by holding temperature constant while varying pressure, or by holding pressure constant while varying temperature, or by varying these variables sequentially or in some combination. The path therefore describes the conditions maintained during the process, not just the initial and final states.</p>
 <figure class="align-default" id="fig-paths">
@@ -490,7 +490,7 @@ Thermodynamics is a phenomenological theory of macroscopic variables and therefo
 $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -->
 </section>
 <section id="sec-idealgas">
-<span id="ideal-gases"></span><h2><span class="section-number">1.8. </span>Ideal gases<a class="headerlink" href="#sec-idealgas" title="Permalink to this heading">#</a></h2>
+<span id="ideal-gases"></span><h2><span class="section-number">1.7. </span>Ideal gases<a class="headerlink" href="#sec-idealgas" title="Permalink to this heading">#</a></h2>
 <p>This section introduces a very important concept called the <em>ideal gas law</em>, based around the understanding that the pressure of a gas depends on its temperature and volume.</p>
 <ul class="simple">
 <li><p><strong>Boyle’s law</strong> (who boiled a viper in a vacuum): Experiments show that, at constant temperature, the product of <span class="math notranslate nohighlight">\(p V\)</span> remains constant,</p></li>
@@ -529,7 +529,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 </figure>
 </section>
 <section id="combinatorial-problems">
-<h2><span class="section-number">1.9. </span>Combinatorial problems<a class="headerlink" href="#combinatorial-problems" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8. </span>Combinatorial problems<a class="headerlink" href="#combinatorial-problems" title="Permalink to this heading">#</a></h2>
 <p>Thermal physics studies how large collections of particles behave <em>statistically</em>. Since it is impossible to track every particle individually, we instead count how many distinct configurations a system can have that correspond to a given macroscopic state. This kind of counting is a combinatorial problem specifically relevant for indistinguishable particles.</p>
 <section id="the-combination-formula">
 <h3>The combination formula<a class="headerlink" href="#the-combination-formula" title="Permalink to this heading">#</a></h3>
@@ -622,16 +622,15 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mole">1.1. What is a mole?</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-constants">1.2. Useful constants</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems">1.3. Systems</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-equilibrium">1.4. Thermal equilibrium</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.5. State variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.6. Intensive vs extensive variables</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#state-variables">1.4. State variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-vs-extensive-variables">1.5. Intensive vs extensive variables</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intensive-variables">Intensive variables</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensive-variables">Extensive variables</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.7. Changing thermodynamic states</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.8. Ideal gases</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.9. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-thermodynamic-states">1.6. Changing thermodynamic states</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sec-idealgas">1.7. Ideal gases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinatorial-problems">1.8. Combinatorial problems</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
 </ul>
 </li>
