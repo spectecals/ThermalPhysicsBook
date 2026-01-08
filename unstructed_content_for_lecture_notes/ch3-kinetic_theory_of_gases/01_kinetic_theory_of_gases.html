@@ -170,9 +170,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.9. Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -357,20 +357,13 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-energy-modes">Higher energy modes</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-ths-mean-for-c-v-vs-c-p">What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intermolecular-interactions">Intermolecular Interactions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals Forces</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-correction-attractive-interactions">Pressure Correction (Attractive Interactions)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-correction-excluded-volume">Volume Correction (Excluded Volume)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-the-van-der-waals-equation">Constructing the Van der Waals Equation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-constants">Interpretation of the Constants</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a></li>
 </ul>
 </li>
 </ul>
@@ -532,7 +525,7 @@ and use our latest definition of pressure, we obtain</p>
 \[ \therefore E_\text{trans} = \frac{3}{2}Nk_BT = \frac{3}{2}nRT = U \qquad \text{through}\ nR = Nk_B \]</div>
 </div>
 <div class="example admonition">
-<p class="admonition-title">Example: How fast do helium atoms, with mass 6.64 * 10<sup>-27</sup> move in an ideal gas at room temperature?</p>
+<p class="admonition-title">Example: How fast do helium atoms, with mass 6.64 * 10^<sup>-27</sup> move in an ideal gas at room temperature?</p>
 <p>The translational energy of atoms <span class="math notranslate nohighlight">\(E_\text{trans}\)</span> can be sourced from both our degrees of freedom, or equivalently, our kinetic energy,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} 
@@ -559,7 +552,7 @@ v_{rms} = \sqrt{\braket{v^2}} &amp;= \sqrt{\frac{3k_B T}{m}} \\
 <section id="heat-capacities-of-gases-and-equipartition-of-energy">
 <span id="sec-heatcap-equip"></span><h2><span class="section-number">3.3. </span>Heat Capacities of Gases and Equipartition of Energy<a class="headerlink" href="#heat-capacities-of-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h2>
 <p>Equipartition refers to the different degrees of freedom that contribute to the ways in which internal energy is “stored” in a molecule. As a result, this directly relates to the energy required to raise temperature, or the heat capacity.</p>
-<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-capacity"><span class="std std-ref">Heat Capacity</span></a>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
+<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <span class="xref std std-ref">sec:molar_capacity</span>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
 <div class="math notranslate nohighlight">
 \[ c_\text{mol} = \frac{1}{n}\frac{dQ}{dT},\ \text{where}\ c_\text{mol} = \frac{C}{n}. \]</div>
 <p>where C here is the non-specific heat capacity, <span class="math notranslate nohighlight">\(C = \frac{dQ}{dT}\)</span>.</p>
@@ -606,7 +599,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </section>
 <section id="higher-energy-modes">
 <h4>Higher energy modes<a class="headerlink" href="#higher-energy-modes" title="Permalink to this heading">#</a></h4>
-<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures and these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic molecules at room temperature, this required energy is much larger than the thermal energy available and the molecules are in their lowest energy state.</p>
+<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures and these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic moledules at room temperature, this required energy is much larger than the thermal energy available and the molecules are in their lowest energy state.</p>
 <ul class="simple">
 <li><p>Vibrational motion contributes both kinetic and potential energy, so two degrees of freedom can be added</p></li>
 <li><p><span class="math notranslate nohighlight">\(U = 7 * \left(\frac{1}{2}k_BT\right)*N = \frac{7}{2}nRT \)</span></p></li>
@@ -614,8 +607,8 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <p>[[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER’S BREAKDOWN]]</p>
 </section>
 </section>
-<section id="what-does-this-mean-for-c-v-vs-c-p">
-<h3>What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?<a class="headerlink" href="#what-does-this-mean-for-c-v-vs-c-p" title="Permalink to this heading">#</a></h3>
+<section id="what-does-ths-mean-for-c-v-vs-c-p">
+<h3>What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?<a class="headerlink" href="#what-does-ths-mean-for-c-v-vs-c-p" title="Permalink to this heading">#</a></h3>
 <p>[[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -624,9 +617,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 \text{Diatomic, } \qquad C_V &amp;= \frac{5}{2}R, \qquad C_p=C_V + R = \frac{7}{2}R
 \end{align}
 \end{split}\]</div>
-<p>[[FIG OF 18.19 IN SRC]]</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
+<figure class="align-default" id="fig-cp-atomics">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -662,11 +653,9 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></div>
-</div>
+</div></div></figure>
 <p>These are the predictions from equipartition. How about real gases?</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
+<figure class="align-default" id="fig-cp-monatomics">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -705,10 +694,8 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
+</div></div></figure>
+<figure class="align-default" id="fig-cp-diatomics">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -747,8 +734,8 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></div>
-</div>
+</div></div></figure>
+<p>[[FIG OF 18.19 IN SRC]]</p>
 </section>
 </section>
 <section id="compressing-a-gas-or-vapour">
@@ -760,7 +747,7 @@ We slowly compress the vapour while allowing heat exchange so that the process i
 <p>We want to understand how pressure, volume, and the phase of the material change during compression.</p>
 <p>A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)</p>
 <p><strong>Stage 1: Pure Vapour (Gas)</strong></p>
-<p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">ideal gas law</span></a>.</p>
+<p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">Ideal Gas Law</span></a>.</p>
 <ul class="simple">
 <li><p>The pressure increases smoothly as the volume decreases.</p></li>
 <li><p>No liquid is present.</p></li>
@@ -809,7 +796,7 @@ Liquids are nearly incompressible, so:</p>
 <h3>Compressibility<a class="headerlink" href="#compressibility" title="Permalink to this heading">#</a></h3>
 <p>[[FIG 6 IN SRC]]</p>
 <p>In the above plot, the red horizontal line at <span class="math notranslate nohighlight">\(Z = 1\)</span> represents the ideal gas - no deviation with pressure. Real gases show different behaviour depending on temperature.</p>
-<p><strong>High temperature</strong>: Thermal energy dominates over intermolecular forces and molecules do not significantly attract or repel each other, so the curve stays above or close to 1.</p>
+<p><strong>High temperature</strong>: Thermal energy dominates over intermolectular forces and molecules do not significantly attract or repel each other, so the curve stays above or close to 1.</p>
 <p><strong>Low temperature</strong>: Attractive forces matter more, where at moderate pressure, attraction dominates and the gas compresses more easily so <span class="math notranslate nohighlight">\(Z &lt; 1\)</span>. For high pressure, repulsive forces dominate and <span class="math notranslate nohighlight">\(Z &gt; 1\)</span>.</p>
 <p><strong>Boyle temperature</strong>: The Boyle temperature <span class="math notranslate nohighlight">\(T_B\)</span> is the temperature at which a real gas shows minimal deviation from the ideal gas law over a moderate pressure range.
 At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \approx 1\)</span> for relatively low to moderate pressures.</p>
@@ -817,7 +804,7 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 <p>More precisely, if we expand (virial expansion) the compressibility factor:</p>
 <div class="math notranslate nohighlight">
 \[ Z = 1 + B(T)p + C(T)p^2 + \ldots\]</div>
-<p><span class="math notranslate nohighlight">\(B(T)\)</span> is the second virial coefficent, which encodes the balance of intermolecular attractions.</p>
+<p>B(T) is the second virial coefficent, which encodes the balance of intermolecular attractions.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition</p>
 <p>The Boyle temperature T<sub>B</sub> is defined by B(T_B) = 0</p>
@@ -825,8 +812,7 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 <p>Therefore, at <span class="math notranslate nohighlight">\(T=T_B\)</span> the gas obeys the ideal gas equation most closely at low to moderate pressures.</p>
 <p>We can then conclude that attractive forces dominate below <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&lt;1 \rightarrow\)</span> gas is more compressible) and repulsive forces dominate at temperatures greater than <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&gt; 1 \rightarrow\)</span> gas is less compressible).</p>
 <p><strong>Summary</strong></p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
+<figure class="align-default" id="fig-cp-summary">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -872,189 +858,10 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
     </tr>
   </tbody>
 </table>
-</div></div></div>
-</div>
+</div></div></figure>
 </section>
-<section id="intermolecular-interactions">
-<h3>Intermolecular Interactions<a class="headerlink" href="#intermolecular-interactions" title="Permalink to this heading">#</a></h3>
-<p>[[FIG picture 2 in src]]</p>
-<p>In an ideal gas, molecules are treated as point particles with no intermolecular forces.<br />
-However, real gases deviate from ideality because molecules interact through attractive and repulsive forces.</p>
-<p>These interactions can be represented using a molecular potential energy curve, <span class="math notranslate nohighlight">\(\phi(r)\)</span>, where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\phi\)</span> = intermolecular potential energy</p></li>
-<li><p><span class="math notranslate nohighlight">\(r\)</span> = separation between two molecules</p></li>
-<li><p><span class="math notranslate nohighlight">\(r_0\)</span> = equilibrium separation</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p><strong>Very small separations</strong> (<span class="math notranslate nohighlight">\(r &lt; r_0\)</span>)<br />
-Strong repulsive interactions dominate due to electron cloud overlap.</p></li>
-<li><p><strong>Moderate separations</strong> (<span class="math notranslate nohighlight">\(r &gt; r_0\)</span>)<br />
-Weak attractive forces (e.g. van der Waals interactions) pull molecules together.</p></li>
-<li><p><strong>Large separations</strong> (<span class="math notranslate nohighlight">\(r \to \infty\)</span>)<br />
-Interactions become negligible, and</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[
-\phi(r) \to 0 .
-\]</div>
-<p>This behavior corresponds to a Lennard–Jones–type potential.</p>
-<p>To understand the physical consequences of this potential, compute the force derived from it.</p>
-<p>The force is given by the gradient of the potential energy:</p>
-<div class="math notranslate nohighlight">
-\[
-F(r) = -\frac{d\phi}{dr}.
-\]</div>
-<p><strong>Interpretation</strong></p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Region</th>
-      <th>Force</th>
-      <th>Effect</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Small r (molecules are close together)</th>
-      <td>&gt; 0</td>
-      <td>Repulsion</td>
-    </tr>
-    <tr>
-      <th>Large r (molecules are separated)</th>
-      <td>&lt; 0</td>
-      <td>Attraction</td>
-    </tr>
-    <tr>
-      <th>At r = r₀</th>
-      <td>= 0</td>
-      <td>Equilibrium</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p>Graphically, there is a steep rise at small <span class="math notranslate nohighlight">\(r\)</span>, indicating a strong repulsive force due to electron cloud overlap, which prevents molecules from occupying the same space.</p>
-<p>There is also a shallow potential well around <span class="math notranslate nohighlight">\(r_0\)</span>. This region corresponds to intermediate separations where attractive forces dominate, reducing the pressure compared to an ideal gas.</p>
-<p>As <span class="math notranslate nohighlight">\(r \to \infty\)</span>, the potential approaches zero, indicating that the gas can be treated as ideal at large separations.</p>
-<p>For completeness, this behavior can be related to the gas compressibility:</p>
-<ul class="simple">
-<li><p>At low temperature and intermediate pressure, attractive interactions lower the pressure, giving <span class="math notranslate nohighlight">\(Z &lt; 1\)</span>.</p></li>
-<li><p>At high pressure, repulsive interactions dominate, giving <span class="math notranslate nohighlight">\(Z &gt; 1\)</span>.</p></li>
-</ul>
-</section>
-<section id="van-der-waals-forces">
-<h3>Van der Waals Forces<a class="headerlink" href="#van-der-waals-forces" title="Permalink to this heading">#</a></h3>
-<p>We now introduce the van der Waals equation, developed by the 19th-century Dutch physicist J. D. van der Waals, which corrects the ideal gas law to account for real-gas behavior:</p>
-<ul class="simple">
-<li><p>Molecules attract each other at moderate intermolecular distances.</p></li>
-<li><p>Molecules occupy a finite, excluded volume.</p></li>
-</ul>
-<section id="pressure-correction-attractive-interactions">
-<h4>Pressure Correction (Attractive Interactions)<a class="headerlink" href="#pressure-correction-attractive-interactions" title="Permalink to this heading">#</a></h4>
-<p>In a real gas, a molecule approaching the container wall is attracted back toward the bulk by neighboring molecules. Therefore, the net force it exerts on the wall is smaller than in an ideal gas, and the measured pressure is reduced.</p>
-<p>[[FIGURE - PIC 3 - SHOWING PARTICLE IN A BOX BEING PULLED BACK BY OTHER PARTICLES, REDUCING ITS SPEED]]</p>
-<p>For an ideal gas:</p>
-<div class="math notranslate nohighlight">
-\[
-P_{\text{ideal}} = \frac{nRT}{V}
-\]</div>
-<p>Attractive interactions reduce the pressure by an amount proportional to the probability that two molecules are close together:</p>
-<div class="math notranslate nohighlight">
-\[
-P_{\text{corr}} = a\left(\frac{n}{V}\right)^2
-\]</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\frac{n}{V}\)</span> is the number density,</p></li>
-<li><p><span class="math notranslate nohighlight">\(a\)</span> is a constant describing the strength of intermolecular attraction,</p></li>
-<li><p>the square reflects pairwise intermolecular interactions.</p></li>
-</ul>
-<p>The true pressure of a real gas is therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-P = P_{\text{ideal}} - P_{\text{corr}}
-\]</div>
-<p>or equivalently,</p>
-<div class="math notranslate nohighlight">
-\[
-P = \frac{nRT}{V} - a\left(\frac{n}{V}\right)^2
-\]</div>
-<p>which can be rearranged as:</p>
-<div class="math notranslate nohighlight">
-\[
-P + a\left(\frac{n}{V}\right)^2 = \frac{nRT}{V}
-\]</div>
-</section>
-<section id="volume-correction-excluded-volume">
-<h4>Volume Correction (Excluded Volume)<a class="headerlink" href="#volume-correction-excluded-volume" title="Permalink to this heading">#</a></h4>
-<p>Molecules are not point particles. For two hard spheres of radius <span class="math notranslate nohighlight">\(r\)</span>, the centre of one molecule cannot enter a sphere of radius <span class="math notranslate nohighlight">\(2r\)</span> around the other.</p>
-<p>[[FIG SHOWING REAL GASES ARE NOT POINT PARTICLES PIC3]]</p>
-<p>The excluded volume for a pair of molecules is therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-V_{\text{exclude}} = \frac{4}{3}\pi(2r)^3 = \frac{32}{3}\pi r^3
-\]</div>
-<p>Van der Waals simplified this description by introducing a constant <span class="math notranslate nohighlight">\(b\)</span>, defined as the effective excluded volume per mole:</p>
-<div class="math notranslate nohighlight">
-\[
-b = \text{excluded volume per mole}
-\]</div>
-<p>For <span class="math notranslate nohighlight">\(n\)</span> moles of gas, the total excluded volume is:</p>
-<div class="math notranslate nohighlight">
-\[
-\text{Excluded volume} = nb
-\]</div>
-<p>Hence, the volume available for molecular motion is:</p>
-<div class="math notranslate nohighlight">
-\[
-V_{\text{free}} = V - nb
-\]</div>
-</section>
-<section id="constructing-the-van-der-waals-equation">
-<h4>Constructing the Van der Waals Equation<a class="headerlink" href="#constructing-the-van-der-waals-equation" title="Permalink to this heading">#</a></h4>
-<p>Starting from the ideal gas law:</p>
-<div class="math notranslate nohighlight">
-\[
-PV = nRT
-\]</div>
-<p>apply the corrections:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(P \;\rightarrow\; P + a\left(\frac{n}{V}\right)^2\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(V \;\rightarrow\; V - nb\)</span></p></li>
-</ul>
-<p>This yields the van der Waals equation:</p>
-<div class="math notranslate nohighlight">
-\[
-\left(P + a\left(\frac{n}{V}\right)^2\right)(V - nb) = nRT
-\]</div>
-</section>
-<section id="interpretation-of-the-constants">
-<h4>Interpretation of the Constants<a class="headerlink" href="#interpretation-of-the-constants" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong><span class="math notranslate nohighlight">\(a\)</span></strong><br />
-Measures the strength of attractive intermolecular forces. Larger values of <span class="math notranslate nohighlight">\(a\)</span> correspond to stronger attractions and a larger reduction in pressure relative to the ideal gas.</p></li>
-<li><p><strong><span class="math notranslate nohighlight">\(b\)</span></strong><br />
-Represents the effective volume occupied by one mole of molecules. The total molecular volume is <span class="math notranslate nohighlight">\(nb\)</span>, and the remaining accessible volume is <span class="math notranslate nohighlight">\(V - nb\)</span>. Physically, <span class="math notranslate nohighlight">\(b\)</span> encodes the repulsive core of molecules.</p></li>
-</ul>
-<p>Both <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are empirical constants and differ from gas to gas.</p>
-</section>
+<section id="molecular-interactions">
+<h3>Molecular Interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -1140,20 +947,13 @@ Represents the effective volume occupied by one mole of molecules. The total mol
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-energy-modes">Higher energy modes</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-ths-mean-for-c-v-vs-c-p">What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intermolecular-interactions">Intermolecular Interactions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals Forces</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pressure-correction-attractive-interactions">Pressure Correction (Attractive Interactions)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#volume-correction-excluded-volume">Volume Correction (Excluded Volume)</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#constructing-the-van-der-waals-equation">Constructing the Van der Waals Equation</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-the-constants">Interpretation of the Constants</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a></li>
 </ul>
 </li>
 </ul>
