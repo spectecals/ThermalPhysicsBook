@@ -405,32 +405,31 @@ document.write(`
 <h2><span class="section-number">1.4. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
 <p>A quantity with a unique value for a particular state of the system is a <em>state variable</em>, i.e.:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p>
+<li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span>, internal energy</p></li>
+<li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure, the force per unit area: <span class="math notranslate nohighlight">\(p = F/A\)</span></p>
 <ul>
-<li><p>Defined as the amount of <i>force (F) per unit area (A)</i>, <span class="math notranslate nohighlight">\(p = F/A\)</span> (N m<sup>-2</sup>),</p></li>
 <li><p>There is a zoo of units used to express pressure, which can be confusing for beginners since different fields favour different conventions. Below are some of the commonly used units that you may encounter:</p>
 <ul>
 <li><p>SI units:</p>
 <ul>
-<li><p>pascals (Pa), 1 Pa = 1 N m<sup>-2</sup>. This is the official unit for pressure, and the one we will use in this course.</p></li>
+<li><p>pascals (Pa); 1 Pa = 1 N m<sup>-2</sup>. This is the official unit for pressure, and the one we will use in this course</p></li>
 </ul>
 </li>
 <li><p>Non-SI units:</p>
 <ul>
 <li><p>bars; 1 bar = 100,000 Pa</p></li>
-<li><p>atmospheres (atm); 1 atm = 101,325 Pa, originally defined as the average atmospheric pressure at sea level</p></li>
-<li><p>pounds per square inch (psi); 1 psi = 6,895 Pa, imperial unit. Commonly used in US industries, i.e., tire pressure</p></li>
-<li><p>torrs (Torr); 1 Torr = 133.32 Pa. Based on an absolute scale, equal to 1 atm / 760, 0.000 015% smaller than the millimetre of mercury, widely used in medicine.</p></li>
+<li><p>atmospheres (atm); 1 atm = 101,325 Pa. Originally defined as the average atmospheric pressure at sea level</p></li>
+<li><p>pounds per square inch (psi); 1 psi = 6,895 Pa. Imperial unit, commonly used in US industries, i.e., tire pressure</p></li>
+<li><p>torrs (Torr); 1 Torr = 133.32 Pa = 1 atm / 760. <em>Slightly</em> (0.000 015%) smaller than the millimetre of mercury (mmHg), widely used in medicine</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
-<li><p><span class="math notranslate nohighlight">\(U\)</span>, internal energy.</p></li>
 </ul>
-<p>If you know the state, these values are fixed, no matter how you got there. Alternatively, some variables implicitly record the history of how a system has changed, these are definitively <em>not</em> functions of state:</p>
+<p>If you know the state, these values are fixed, no matter how you got there. Alternatively, some variables implicitly record the history of how a system has changed, these are definitively <em>not</em> state variables:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(Q\)</span>, heat (involves energy transfer to/from other systems)</p></li>
 <li><p><span class="math notranslate nohighlight">\(W\)</span>, work (i.e., pushing something, powering a motor).</p></li>
@@ -445,7 +444,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span>, temperature</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rho\)</span>, density</p></li>
-<li><p><span class="math notranslate nohighlight">\(v\)</span>, specific volume, the volume per unit mass <span class="math notranslate nohighlight">\(v = \frac{V}{m}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(v\)</span>, specific volume, the volume per unit mass: <span class="math notranslate nohighlight">\(v = \frac{V}{m}\)</span></p></li>
 </ul>
 </section>
 <section id="extensive-variables">
