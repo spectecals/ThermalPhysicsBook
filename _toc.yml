@@ -3,24 +3,23 @@ root: index
 options:
   numbered: 2
 chapters:
-- file: unstructed_content_for_lecture_notes/ch1-introduction/01_intro
-  # sections:
-  # - file: unstructed_content_for_lecture_notes/ch1-introduction/02_questions
-  # - file: unstructed_content_for_lecture_notes/ch1-introduction/03_solutions
-# - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/01_temperature_and_heat
-#   sections:
-#   - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/02_questions
-#   - file: unstructed_content_for_lecture_notes/ch2-temperature_and_heat/03_solutions
-# - file: unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
-#   sections:
-#   - file: unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/02_questions
-#   - file: unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/03_solutions
-# - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5
-#     Probability all sections
-#   sections:
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-Problem_Sheet
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem
-#   - file: unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions
+- file: ch1-introduction/01_intro
+  sections:
+  - file: ch1-introduction/02_questions
+  - file: ch1-introduction/03_solutions
+- file: ch2-temperature_and_heat/01_temperature_and_heat
+  sections:
+  - file: ch2-temperature_and_heat/02_questions
+  - file: ch2-temperature_and_heat/03_solutions
+- file: ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
+  sections:
+  - file: ch3-kinetic_theory_of_gases/02_questions
+  - file: ch3-kinetic_theory_of_gases/03_solutions
+- file: ch5-probability_for_thermodynamics/CH5 Probability all sections
+  sections:
+  - file: ch5-probability_for_thermodynamics/CH5-Problem_Sheet
+  - file: ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions
+  - file: ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview
+  - file: ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts
+  - file: ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem
+  - file: ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions
