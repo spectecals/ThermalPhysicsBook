@@ -66,3 +66,11 @@
 [ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
 [ ] [[REF FIG 8.3]]
 [ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
+[ ] FROM BREAKDOWN.DOCX
+[ ] omit 5.8 engines from ch.5/6/4
+[ ] 7.3, 7.8 are same chapter
+[ ] 7.6 and 7.7 paired
+[ ] 7.4, 7.9 paired
+[ ] 7.11, 7.12
+[ ] 7.5 2nd law and third law
+[ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
