@@ -180,20 +180,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="03_solutions.html">2.10. Solutions</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/02_questions.html">3.6. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/03_solutions.html">3.7. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html">4. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet.html">4.11. Probability Theory - Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions.html">4.12. Probability Theory - Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview.html">4.13. Probability Theory for Thermal Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts.html">4.14. Probability Theory for Thermal Physics - Lecture 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem.html">4.15. Probability Theory for Thermal Physics - Lecture 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions.html">4.16. Probability Theory for Thermal Physics - Lecture 3</a></li>
-</ul>
-</details></li>
 </ul>
 
     </div>
@@ -378,7 +364,20 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="temperature-and-heat">
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Arc</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">src</span><span class="w"> </span><span class="kn">import</span> <span class="n">plotting_template</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="temperature-and-heat">
 <h1><span class="section-number">2. </span>Temperature and Heat<a class="headerlink" href="#temperature-and-heat" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
@@ -416,7 +415,10 @@ document.write(`
 <li><p>Heat removed is negative (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>)</p></li>
 </ul>
 <figure class="align-default" id="fig-contact">
-<a class="reference internal image-reference" href="../_images/3.2_contact.png"><img alt="../_images/3.2_contact.png" src="../_images/3.2_contact.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.2_contact.png"><img alt="../_images/2.2_contact.png" src="../_images/2.2_contact.png" style="width: 40%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Simply put, if our <em>system</em> is <span class="math notranslate nohighlight">\(T_H\)</span>, heat is leaving the system, therefore Q is negative. If instead our system is <span class="math notranslate nohighlight">\(T_C\)</span>, Q is positive.</span><a class="headerlink" href="#fig-contact" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>Heat is measured in <strong>joules (J)</strong>, and the <strong>rate of heating</strong> is measured in <strong>watts (W)</strong> where 1 W = 1 Js<sup>-1</sup>.</p>
 <div class="example admonition">
@@ -454,9 +456,9 @@ document.write(`
 <p>Because some of the supplied heat goes into doing work when the gas expands at constant pressure, <span class="math notranslate nohighlight">\(C_p\)</span> is always larger than <span class="math notranslate nohighlight">\(C_v\)</span>.</p>
 <p>The specific heat capacity <span class="math notranslate nohighlight">\(c\)</span> is not absolute and varies slightly based on the initial temperature and the temperature interval. This variation is quite small so we’ll be ignoring it for this course.</p>
 <figure class="align-default" id="fig-cp-water">
-<a class="reference internal image-reference" href="../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png"><img alt="../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" src="../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png"><img alt="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png" src="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png" style="width: 80%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <!-- [[NOTE]] i think this should all be alongside 1st law??
@@ -505,9 +507,12 @@ $$ d Q = 0 $$
 <p>It is very important that we now clearly distinguish between temperature and heat. Temperature depends on the physical state of a material and provides a quantitative measure of how hot or cold it is. Heat refers to energy transferred between systems due to a temperature difference and it never describes the energy contained within a system itself.</p>
 <p>The temperature of an object can be changed by transferring heat to or from it, or by altering its energy through other means, such as performing work. Temperature is understood qualitatively through our sense of touch: objects that feel “hot” have higher temperatures than those that feel “cold.” However, touch is unreliable, so temperature must be measured quantitatively through properties that change with temperature, such as electrical resistance, or volume of a substance.</p>
 <figure class="align-default" id="fig-thermometer">
-<a class="reference internal image-reference" href="../_images/3.3_thermometer.png"><img alt="../_images/3.3_thermometer.png" src="../_images/3.3_thermometer.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.3_thermometer.png"><img alt="../_images/2.3_thermometer.png" src="../_images/2.3_thermometer.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">A glass thermometer relies on the thermal expansion of the fluid within, where the bulb is placed in contact with a system of interest to measure the temperature. This sounds obvious as we’ve all used a thermometer before, but why does this work? Why should the thermometer stop precisely at the same temperature as our system of interest?</span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 3</span></a>, in relation to the ideal gas law.</p>
+<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <span class="xref myst">Chapter 3</span>, in relation to the ideal gas law.</p>
 </section>
 <section id="zeroth-law-of-thermodynamics">
 <h2><span class="section-number">2.4. </span>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
@@ -519,10 +524,10 @@ $$ d Q = 0 $$
 <p>Two systems, each separately in thermal equilibrium with a third, are in equilibrium with each other.</p>
 </div>
 <figure class="align-default" id="fig-zeroth-law">
-<a class="reference internal image-reference" href="../_images/3.4_zeroth.png"><img alt="../_images/3.4_zeroth.png" src="../_images/3.4_zeroth.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.4_zeroth.png"><img alt="../_images/2.4_zeroth.png" src="../_images/2.4_zeroth.png" style="width: 70%;" /></a>
 </figure>
 <p>Although formulated after the first three laws, the zeroth law establishes the foundation for measuring temperature. It states that if two bodies are each in thermal equilibrium with a third body, they are in equilibrium with each other.</p>
-<p>This principle underlies how thermometers function. When a thermometer (the second body) is placed in contact with another object (the first body), they reach thermal equilibrium, allowing temperature measurement.</p>
+<p>This principle underlies how thermometers function. When a thermometer (the second body) is placed in contact with another object (the first body), they reach thermal equilibrium, allowing temperature measurement as the temperature in the thermometer matches the temperature of the target.</p>
 </section>
 <section id="thermometers">
 <h2><span class="section-number">2.5. </span>Thermometers<a class="headerlink" href="#thermometers" title="Permalink to this heading">#</a></h2>
@@ -547,7 +552,7 @@ $$ d Q = 0 $$
 <li><p>and <span class="math notranslate nohighlight">\(\Delta T\)</span> is the change in temperature.</p></li>
 </ul>
 <figure class="align-default" id="fig-expansion">
-<a class="reference internal image-reference" href="../_images/3.5_expansion.png"><img alt="../_images/3.5_expansion.png" src="../_images/3.5_expansion.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.5_expansion.png"><img alt="../_images/2.5_expansion.png" src="../_images/2.5_expansion.png" style="width: 80%;" /></a>
 </figure>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
@@ -578,9 +583,9 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <p>In this course we will try to use units of kelvin – this shares the same ‘magnitude’ as Celsius, i.e., <span class="math notranslate nohighlight">\(\Delta K = \Delta C\)</span>, as they both use water and its properties to define their scales. The Celsius scale specifically uses the melting and boiling points of water at 1 atm to define <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100\ ^\circ C\)</span>.</p>
 <p>Historically, the problem with the Celsius scale was that the melting and boiling points of water vary with pressure – on top of Everest, water boils at around <span class="math notranslate nohighlight">\(70\ ^\circ C\)</span>. The implications of this are subtle and strange. If two people in different countries at different altitudes used these properties of water as a gauge for temperature, the idea of a universal unit is immediately redundant.</p>
 <figure class="align-default" id="fig-egg">
-<a class="reference internal image-reference" href="../_images/3.6_egg.png"><img alt="../_images/3.6_egg.png" src="../_images/3.6_egg.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.6_egg.png"><img alt="../_images/2.6_egg.png" src="../_images/2.6_egg.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Even if you were to specify the pressure at which you take these temperature readings, that still requires perfect pressure control. The kelvin scale fixes this problem by using the <em>triple point</em> of water to define the scale. We will define the triple point in the following section but note that the triple point requires a <em>singular value</em> for pressure and temperature which will be the same regardless of their environmental conditions. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>. One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
@@ -594,18 +599,18 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <h2><span class="section-number">2.7. </span>Properties of Matter<a class="headerlink" href="#properties-of-matter" title="Permalink to this heading">#</a></h2>
 <p>The above thermodynamic variables (i.e., pressure/volume/temperature) can be visualised in a plot called a <strong>phase diagram</strong>. For a given substance, i.e., an enclosed box of water, we are able to see how by altering these variables the phase might change.</p>
 <figure class="align-default" id="fig-phase">
-<a class="reference internal image-reference" href="../_images/3.7_phase.png"><img alt="../_images/3.7_phase.png" src="../_images/3.7_phase.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phase.png"><img alt="../_images/2.7_phase.png" src="../_images/2.7_phase.png" style="width: 60%;" /></a>
 </figure>
 <section id="states-of-matter">
 <h3>States of matter<a class="headerlink" href="#states-of-matter" title="Permalink to this heading">#</a></h3>
 <p>In general, we have three* main states of matter: solids, liquids, gases.</p>
 <!-- but in short is the state where atoms get stripped of their electrons to make a gas of ions and free electrons).  -->
 <figure class="align-default" id="fig-phases">
-<a class="reference internal image-reference" href="../_images/3.7_phases.png"><img alt="../_images/3.7_phases.png" src="../_images/3.7_phases.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phases.png"><img alt="../_images/2.7_phases.png" src="../_images/2.7_phases.png" style="width: 80%;" /></a>
 </figure>
 <p>A <strong>vapour</strong> is a substance in the gaseous phase at a temperature lower than its <strong>critical point</strong>.</p>
 <figure class="align-default" id="fig-water">
-<a class="reference internal image-reference" href="../_images/3.6_water.png"><img alt="../_images/3.6_water.png" src="../_images/3.6_water.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.6_water.png"><img alt="../_images/2.6_water.png" src="../_images/2.6_water.png" style="width: 60%;" /></a>
 </figure>
 <p>If a substance is able to hold thermal equilibrium between all three of these phases (solid, liquid and gas) by controlling the thermodynamic variables (pressure and temperature), this will necessarily be a singular point called the <strong>triple point</strong>.</p>
 </section>
@@ -613,7 +618,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
 <p>Consider carbon dioxide, CO<sub>2</sub>, and water, H<sub>2</sub>O.</p>
 <figure class="align-default" id="fig-co2-h2o">
-<img alt="../_images/3.7_co2_h2o.png" src="../_images/3.7_co2_h2o.png" />
+<img alt="../_images/2.7_co2_h2o.png" src="../_images/2.7_co2_h2o.png" />
 </figure>
 <p>For carbon dioxide at 1 atm, note that there exists no liquid phase, resulting in CO<sub>2</sub> <strong>sublimating</strong> (skipping liquid) directly from solid to gas as you increase its temperature above <span class="math notranslate nohighlight">\(-78.5\ ^\circ C\)</span>. This is why frozen CO<sub>2</sub> is commonly referred to as dry ice.</p>
 <p>For water at atmospheric pressure, we can have solid, liquid, or vapour. It is clear here that the triple point of H<sub>2</sub>O occupies a singular point, which is why it is used to determine the kelvin scale.</p>
@@ -622,9 +627,9 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <h3>Phase changes<a class="headerlink" href="#phase-changes" title="Permalink to this heading">#</a></h3>
 <p>As we approach these boundaries between states, energy is used in changing states where there is <em>no change in temperature</em>. The energy associated with the phase change then relates <em>only</em> to the mass of the substance undergoing a phase transition. This is the <strong>latent heat</strong> <span class="math notranslate nohighlight">\(L\)</span> [J kg<sup>-1</sup>] of the phase transition.</p>
 <figure class="align-default" id="fig-phase-circular">
-<a class="reference internal image-reference" href="../_images/3.7_phase_circular.png"><img alt="../_images/3.7_phase_circular.png" src="../_images/3.7_phase_circular.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phase_circular.png"><img alt="../_images/2.7_phase_circular.png" src="../_images/2.7_phase_circular.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>How much energy is used when considering both specific heat and latent for water?</p>
@@ -684,7 +689,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 :name: fig-pd-water
 ``` -->
 <figure class="align-default" id="fig-phase-steps">
-<img alt="../_images/3.7_phase_steps.png" src="../_images/3.7_phase_steps.png" />
+<img alt="../_images/2.7_phase_steps.png" src="../_images/2.7_phase_steps.png" />
 </figure>
 <ol class="arabic simple">
 <li><p>Ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C \rightarrow\)</span> ice at <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span></p></li>
@@ -694,7 +699,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <li><p>Vapor at <span class="math notranslate nohighlight">\(100\ ^\circ C \rightarrow\)</span> vapour at <span class="math notranslate nohighlight">\(110\ ^\circ C\)</span></p></li>
 </ol>
 <figure class="align-default" id="fig-energy-fig">
-<a class="reference internal image-reference" href="../_images/3.7_energy_fig.png"><img alt="../_images/3.7_energy_fig.png" src="../_images/3.7_energy_fig.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_energy_fig.png"><img alt="../_images/2.7_energy_fig.png" src="../_images/2.7_energy_fig.png" style="width: 80%;" /></a>
 </figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -785,7 +790,7 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
 <h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
 <p>Let’s say we have two systems that can exchange heat. System one is at temperature T at the start, but it will tend towards T<sub>env</sub> as time evolves.</p>
 <figure class="align-default" id="fig-cooling">
-<a class="reference internal image-reference" href="../_images/3.7_cooling.png"><img alt="../_images/3.7_cooling.png" src="../_images/3.7_cooling.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" /></a>
 </figure>
 <p>Heat Q leaves the system with temperature T but the environment is so large that T<sub>env</sub> is constant. What is T as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
 <p>Newton’s cooling equation tells us that the heat lost per unit time is proportional to the temperature difference between the two systems.</p>

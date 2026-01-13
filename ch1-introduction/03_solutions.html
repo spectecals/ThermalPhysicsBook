@@ -69,6 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch1-introduction/03_solutions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Temperature and Heat" href="../ch2-temperature_and_heat/01_temperature_and_heat.html" />
     <link rel="prev" title="1.10. Questions" href="02_questions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -172,6 +173,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_intro.html">1. Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="02_questions.html">1.10. Questions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.11. Solutions</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -393,30 +399,47 @@ we can directly divide our total mass of the oceans by this volume after convert
 you used 0.5 mm diameter droplets, you’d have <span class="math notranslate nohighlight">\(8 \cdot 10^{27} &gt; 2.35 \cdot 10^{27}\)</span>.</p>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>A system contains <span class="math notranslate nohighlight">\(n\)</span> atoms, each of which can only have zero or one quanta of energy. How many ways can you arrange <span class="math notranslate nohighlight">\(r\)</span> quanta of energy when:</p></li>
+<li><p>A system contains <span class="math notranslate nohighlight">\(n\)</span> atoms, each of which can only have zero or one quanta of energy. How many ways <span class="math notranslate nohighlight">\(W\)</span> can you arrange <span class="math notranslate nohighlight">\(r\)</span> quanta of energy when:</p></li>
 </ol>
 <div class="dropdown admonition">
-<p class="admonition-title">1. <span class="math notranslate nohighlight">\(n=20,\ r=10\)</span>?</p>
+<p class="admonition-title">1. <span class="math notranslate nohighlight">\(r=20,\ r=10\)</span>?</p>
 <p>Since atoms are indistinguishable, we’ll need to use <span class="math notranslate nohighlight">\(^nC_R\)</span>, not <span class="math notranslate nohighlight">\(^nP_R\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\frac{20!}{(20-10)! \cdot 10!}
-   = \frac{20!}{10!\cdot 10!}
-   = 184756\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\frac{20!}{(20-10)! \cdot 10!} = \frac{20!}{10!\cdot 10!} = 184756 = W
+\]</div>
 </div>
 <div class="dropdown admonition">
-<p class="admonition-title">2. <span class="math notranslate nohighlight">\(n=2\cdot 10^{23},\ r=10^{23}\)</span>?</p>
-<p><span class="math notranslate nohighlight">\(\frac{2\cdot 10^{23}!}{10^{23}!(2\cdot 10^{23}-10^{23})!}
-   = \frac{2\cdot 10^{23}!}{10^{23}!\cdot 10^{23}!}\)</span></p>
-<p>Stirling’s approximation:</p>
-<p><span class="math notranslate nohighlight">\(\ln 2n! \approx 2n \ln 2n - 2n\)</span></p>
-<p><span class="math notranslate nohighlight">\(\ln (n! \cdot n!) \approx 2(\ln n!)
-                        \approx 2(n \ln n - n)
-                        = 2n \ln n - 2n\)</span></p>
-<p><span class="math notranslate nohighlight">\(\ln\frac{2n!}{n! \cdot n!}
-   = 2n \ln 2n - 2n - (2n \ln n - 2n)
-   = 2n(\ln 2n - \ln n)
-   = 2n \ln 2
-   = 2 \cdot 10^{23} \ln 2
-   = 1.39 \cdot 10^{23}\)</span></p>
+<p class="admonition-title">2. <span class="math notranslate nohighlight">\(r=2\cdot 10^{23},\ r=10^{23}\)</span>?</p>
+<p>Using <span class="math notranslate nohighlight">\(^nC_R\)</span> here is considerably more difficult:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{2\cdot 10^{23}!}{10^{23}!(2\cdot 10^{23}-10^{23})!} = \frac{2\cdot 10^{23}!}{10^{23}!\cdot 10^{23}!} = \frac{2\cdot r!}{r!\cdot r!}.
+\]</div>
+<p>We can approximate the numerator and denominator via Stirling’s:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\ln 2r! &amp;\approx 2r \ln 2r - 2r \\
+\ln (r! \cdot r!) &amp;= 2(\ln r!) \approx 2(r \ln r - r)\\
+&amp;= 2r \ln r - 2r
+\end{aligned}
+\end{split}\]</div>
+<p>Dividing the two,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\ln W &amp;= \ln\frac{2r!}{r! \cdot r!} \\
+\ln\frac{2r!}{r! \cdot r!} &amp;= 2r \ln 2r - 2r - (2r \ln r - 2r) \\
+&amp;= 2r(\ln 2r - \ln r) \\
+&amp;= 2r \ln 2 \\
+&amp;= 2 \cdot 10^{23} \ln 2 \\
+&amp;= 1.39 \cdot 10^{23} = \ln W
+\end{aligned}
+\end{split}\]</div>
+<p>Finally, we need to exponentiate our result, which gives us the number of arrangements, <span class="math notranslate nohighlight">\(W\)</span>, being:</p>
+<div class="math notranslate nohighlight">
+\[ W = e^{1.39 \cdot 10^{23}}. \]</div>
 </div>
 <ol class="arabic simple" start="5">
 <li><p>A gas is in thermal equilibrium before being compressed.</p></li>
@@ -431,15 +454,15 @@ you used 0.5 mm diameter droplets, you’d have <span class="math notranslate no
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">3. After the gas is compressed, what condition must be satisfied for these variables to be well defined again?</p>
-<p>The gas must thermalise, i.e., reach thermal equilibrium.</p>
+<p>The gas must thermalise, i.e., reach thermal equilibrium, such that a single value for <span class="math notranslate nohighlight">\(T\)</span> or <span class="math notranslate nohighlight">\(P\)</span> can describe the full system.</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">4. How do the thermodynamic variables change when the gas is compressed?</p>
-<p>Upon compression, the volume will go down, and in doing so the pressure and temperature will increase.</p>
+<p>The volume decreases. With essentially no time for heat to leave, the temperature and pressure increase.</p>
 </div>
 <div class="dropdown admonition">
 <p class="admonition-title">5. Why can these variables not be used to describe the gas during the compression itself?</p>
-<p>The variables are not stable during this timeframe, i.e., the elevated temperature will dissipate to the surroundings immediately after compression, so any measured temperature will not be able to describe the state of the entire system, only the moment that it is measured.</p>
+<p>The variables are not stable during this timeframe, i.e., the elevated temperature will dissipate to the surroundings immediately after compression, and the temperature across the gas will vary. In the centre, the temperature will likely be higher than the gas contacting the walls which are transferring heat out of the system. As a result, we cannot assign a singular value for <span class="math notranslate nohighlight">\(T\)</span>, and therefore the pressure will also vary across the system too.</p>
 </div>
 </section>
 
@@ -481,6 +504,15 @@ you used 0.5 mm diameter droplets, you’d have <span class="math notranslate no
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">1.10. </span>Questions</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../ch2-temperature_and_heat/01_temperature_and_heat.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Temperature and Heat</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
