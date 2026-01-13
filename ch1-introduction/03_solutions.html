@@ -69,7 +69,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch1-introduction/03_solutions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Temperature and Heat" href="../ch2-temperature_and_heat/01_temperature_and_heat.html" />
     <link rel="prev" title="1.10. Questions" href="02_questions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -173,11 +172,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="01_intro.html">1. Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="02_questions.html">1.10. Questions</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">1.11. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -340,8 +334,8 @@ document.write(`
 <p>CO<sub>2</sub> is composed of C and O with atomic numbers <span class="math notranslate nohighlight">\(Z = 12, 16\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\text{total molar mass} \cdot \text{number of moles} = \text{mass of gas in grams} \\
-(12 + 16\cdot 2)\cdot 3 = 44 \cdot 3 = 132\ \text{g}
+\text{total molar mass} \mult \text{number of moles} = \text{mass of gas in grams} \\
+(12 + 16\mult 2)\mult 3 = 44 \mult 3 = 132\ \text{g}
 \end{split}\]</div>
 </div>
 <ol class="arabic simple" start="2">
@@ -356,7 +350,7 @@ write the elephant masses in the form of <span class="math notranslate nohighlig
 \begin{aligned}
 \text{single bacterium mass} \times \text{Avagadro's number} / \text{elephant mass}
 &amp;= \text{elephants composed of bacteria} \\
-10^{-12}\ \text{g} \times 6.022 \cdot 10^{23}\ \text{mol}^{-1} \cdot \frac{1}{5} \cdot 10^{6}\ \text{g}^{-1} &amp;= 2 \times 6.022 \cdot 10^{(23 - 19)} \\
+10^{-12}\ \text{g} \times 6.022 \cdot 10^{23}\ \text{mol}^{-1} \mult \frac{1}{5} \cdot 10^{6}\ \text{g}^{-1} &amp;= 2 \times 6.022 \cdot 10^{(23 - 19)} \\
 = 12.044 \cdot 10^{4} &amp;= 120,000\text{ elephants}
 \end{aligned}
 \end{split}\]</div>
@@ -374,8 +368,8 @@ moles of water constitute a mass of 70 kg, and then how many molecules total.</p
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-70,000\ \text{g} / 18\ \text{g mol}^{-1} &amp;\approx 3900\ \text{mol} \\
-3900\ \text{mol}\times 6.022 \cdot 10^{23}\ \text{molecules per mol} &amp;= 2.35 \cdot 10^{27}\ \text{molecules}
+70,000\ \text{g} / 18\ \text{g mol}^{-1} &amp;\approx 3,900\ \text{mol} \\
+3,900\ \text{mol}\times 6.022 \cdot 10^{23}\ \text{molecules per mol} &amp;= 2.35 \cdot 10^{27}\ \text{molecules}
 \end{aligned}
 \end{split}\]</div>
 <p>Now to calculate how many droplets are in the ocean. Let’s use a reasonable
@@ -390,7 +384,7 @@ we can directly divide our total mass of the oceans by this volume after convert
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-1\ \text{m}^3\ \text{water} \times 1000\ \text{kg m}^{-3} &amp;\equiv 1000\ \text{kg water} \\
+1\ \text{m}^3\ \text{water} \times 1,000\ \text{kg m}^{-3} &amp;\equiv 1,000\ \text{kg water} \\
 10^{-9}\ \text{m}^3\ \text{(droplet)}&amp;= 10^{-6}\ \text{kg} \\
 10^{21}\ \text{kg (ocean)} \times 10^{6} &amp;= 10^{27} &lt; 2.35 \cdot 10^{27}
 \end{aligned}
@@ -399,14 +393,14 @@ we can directly divide our total mass of the oceans by this volume after convert
 you used 0.5 mm diameter droplets, you’d have <span class="math notranslate nohighlight">\(8 \cdot 10^{27} &gt; 2.35 \cdot 10^{27}\)</span>.</p>
 </div>
 <ol class="arabic simple" start="4">
-<li><p>A system contains <span class="math notranslate nohighlight">\(n\)</span> atoms, each of which can only have zero or one quanta of energy. How many ways <span class="math notranslate nohighlight">\(W\)</span> can you arrange <span class="math notranslate nohighlight">\(r\)</span> quanta of energy when:</p></li>
+<li><p>A system contains <span class="math notranslate nohighlight">\(n\)</span> atoms, each of which can only have zero or one quanta of energy. How many ways can you arrange <span class="math notranslate nohighlight">\(r\)</span> quanta of energy when:</p></li>
 </ol>
 <div class="dropdown admonition">
 <p class="admonition-title">1. <span class="math notranslate nohighlight">\(r=20,\ r=10\)</span>?</p>
 <p>Since atoms are indistinguishable, we’ll need to use <span class="math notranslate nohighlight">\(^nC_R\)</span>, not <span class="math notranslate nohighlight">\(^nP_R\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{20!}{(20-10)! \cdot 10!} = \frac{20!}{10!\cdot 10!} = 184756 = W
+\frac{20!}{(20-10)! \cdot 10!} = \frac{20!}{10!\cdot 10!} = 184,756
 \]</div>
 </div>
 <div class="dropdown admonition">
@@ -429,17 +423,19 @@ you used 0.5 mm diameter droplets, you’d have <span class="math notranslate no
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\ln W &amp;= \ln\frac{2r!}{r! \cdot r!} \\
 \ln\frac{2r!}{r! \cdot r!} &amp;= 2r \ln 2r - 2r - (2r \ln r - 2r) \\
 &amp;= 2r(\ln 2r - \ln r) \\
 &amp;= 2r \ln 2 \\
 &amp;= 2 \cdot 10^{23} \ln 2 \\
-&amp;= 1.39 \cdot 10^{23} = \ln W
+&amp;= 1.39 \cdot 10^{23}
 \end{aligned}
 \end{split}\]</div>
-<p>Finally, we need to exponentiate our result, which gives us the number of arrangements, <span class="math notranslate nohighlight">\(W\)</span>, being:</p>
+<p>Finally, we need to exponentiate our result, which gives us the number of arrangements:</p>
 <div class="math notranslate nohighlight">
-\[ W = e^{1.39 \cdot 10^{23}}. \]</div>
+\[
+\text{(base e)}\ e^{1.39 \cdot 10^{23}} = 10^{1.39 \cdot 10^{23} / \ln 10} \approx 10^{6 \cdot 10^{22}}\ \text{(base 10)}.
+\]</div>
+<p>Either form is acceptable, base 10 just shows us the number of digits are in our answer.</p>
 </div>
 <ol class="arabic simple" start="5">
 <li><p>A gas is in thermal equilibrium before being compressed.</p></li>
@@ -504,15 +500,6 @@ you used 0.5 mm diameter droplets, you’d have <span class="math notranslate no
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">1.10. </span>Questions</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../ch2-temperature_and_heat/01_temperature_and_heat.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Temperature and Heat</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
