@@ -333,6 +333,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-very-large-numbers">1.9. Dealing with (very) large numbers</a></li>
 </ul>
             </nav>
         </div>
@@ -364,7 +365,8 @@ document.write(`
 </div>
 <section id="what-is-a-mole">
 <h2><span class="section-number">1.1. </span>What is a mole?<a class="headerlink" href="#what-is-a-mole" title="Permalink to this heading">#</a></h2>
-<p>In thermal physics, we deal with enormous numbers of atoms and molecules. These large numbers make it impossible to track individual particles, so we describe their behaviour statistically, in terms of averages. Even numbers we think of as huge, like the Earth’s population (~<span class="math notranslate nohighlight">\(10^9\)</span>) or the U.S. national debt (~<span class="math notranslate nohighlight">\(10^{13}\)</span>), are tiny compared with the numbers of atoms in ordinary matter (around <span class="math notranslate nohighlight">\(10^{23}-10^{25}\)</span> per sample). For instance, 1 kg of nitrogen gas contains about <span class="math notranslate nohighlight">\(2*10^{25}\)</span> molecules. A fast computer counting one molecule per clock cycle would take hundreds of millions of years just to count them! To handle such vast quantities, we use the concept of the mole, a convenient counting unit similar to a “dozen”, but much larger.</p>
+<p>In thermal physics, we deal with enormous numbers of atoms and molecules. These large numbers make it impossible to track individual particles, so we describe their behaviour statistically, in terms of averages. Even numbers we think of as huge, like the Earth’s population (~<span class="math notranslate nohighlight">\(10^9\)</span>) or the U.S. national debt (~<span class="math notranslate nohighlight">\(10^{13}\)</span>), are tiny compared with the numbers of atoms in ordinary matter (around <span class="math notranslate nohighlight">\(10^{23}-10^{25}\)</span> per sample).</p>
+<p>For instance, 1 kg of nitrogen gas contains about <span class="math notranslate nohighlight">\(2*10^{25}\)</span> molecules. A fast computer counting one molecule per clock cycle would take hundreds of millions of years just to count them! To handle such vast quantities, we use the concept of the mole, a convenient counting unit similar to a “dozen”, but much larger.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition:</p>
 <p>A mole is the quantity of matter that contains as many objects (atoms, molecules, ions) as there are atoms in <em>exactly</em> 12 grams of <span class="math notranslate nohighlight">\(^{12}\)</span>C.</p>
@@ -561,6 +563,40 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <p>(If you <em>really</em> wanted to use intuition, you would need to implement an additional condition: “how many ways can I arrange each of my permutations?” For any given arrangement of the 4 eggs, you could rearrange them amongst themselves like so: “there are 4 spaces for the first egg, 3 for the second, …” resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetitions of each distinct arrangement. By dividing the permutations by the repetitions, you rederive the combinatorial solution!)</p>
 </section>
 </section>
+<section id="dealing-with-very-large-numbers">
+<h2><span class="section-number">1.9. </span>Dealing with (very) large numbers<a class="headerlink" href="#dealing-with-very-large-numbers" title="Permalink to this heading">#</a></h2>
+<p>When working out states for macroscopic quantities, we will need to use factorials on quantities scaled by Avagadro’s constant (<span class="math notranslate nohighlight">\(10^{23}!\)</span>). These numbers are unfathomably huge. Luckily, there is one such approximation specifically for factorials, <strong>Stirling’s</strong>.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}
+\begin{aligned}\\\ln n! &amp;\approx n \ln n - n + O(\ln n)\\\end{aligned}
+\end{aligned}\end{align} \]</div>
+<p>For the purposes of this course, we will omit the <span class="math notranslate nohighlight">\(O(\ln n)\)</span> term as we are only interested in the scale of the number and don’t require digit-level accuracy.</p>
+<p>This approximation “fails” for <span class="math notranslate nohighlight">\(n!\)</span> when <span class="math notranslate nohighlight">\(n=0\)</span> (the equation produces <span class="math notranslate nohighlight">\(0^0\)</span> which <a class="reference external" href="https://en.wikipedia.org/wiki/Zero_to_the_power_of_zero">has no unique mathematical number</a>) but for <span class="math notranslate nohighlight">\(n \geq 1\)</span> the formula is well defined. The Stirling approximation <span class="math notranslate nohighlight">\(S(n)\)</span> is slightly below the true value for <span class="math notranslate nohighlight">\(n!\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+1 &lt; e^{\frac{1}{12n+1}} &lt; \frac{n!}{S(n)} &lt; e^{\frac{1}{12n}}.
+\]</div>
+<p>Notice that as <span class="math notranslate nohighlight">\(n\)</span> approaches infinity, <span class="math notranslate nohighlight">\(\frac{1}{12n} \to 0\)</span> such that <span class="math notranslate nohighlight">\(\frac{n!}{S(n)} \to 1\)</span>, and so we can say the approximation is asymptotically accurate (i.e., it will never be exact as we can never actually use infinity but it improves for higher <span class="math notranslate nohighlight">\(n\)</span>).</p>
+<p>Even estimating the size of the error involves approximation as the quantities are so small that writing them exactly is impractical. Instead, we resort to “big-O notation”, saying it is on the order of <span class="math notranslate nohighlight">\(10^{-49}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+e^{\frac{1}{12n+1}} &amp;\approx \frac{1}{10 ^ {5.2103 \cdot 10^{23}}} \approx 1 + 8.33 \cdot 10^{-25} + O(10^{-49}), \\
+e^{\frac{1}{12n}}   &amp;\approx \frac{1}{10 ^ {5.2095 \cdot 10^{23}}} \approx 1 + 8.33 \cdot 10^{-25} + O(10^{-49}) + 7 \cdot 10^{-50}.
+\end{aligned}
+\end{split}\]</div>
+<p>Our error in proportion to the true value is just</p>
+<div class="math notranslate nohighlight">
+\[
+1 - (1 + 8.33 \cdot 10^{-25}) = 8.33 \cdot 10^{-23}\%.
+\]</div>
+<p>This sounds incredible until you consider that our factorial is roughly:</p>
+<div class="math notranslate nohighlight">
+\[
+10^{23}! &lt; (10^{23})^{10^{23}} = 10^{23 \cdot 10^{23}} \approx 10^{10^{24}}.
+\]</div>
+<p>For reference, a googol is <span class="math notranslate nohighlight">\(10^{100}\)</span>. Our factorial is roughly <span class="math notranslate nohighlight">\(10^{100^{12}}\)</span>. Our absolute error is around <span class="math notranslate nohighlight">\(10^{100^{12} - 25}\)</span>, which in ordinary circumstances would just be plain wrong. As a result, we struggle to accurately do math with large numbers.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -633,6 +669,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-combination-formula">The combination formula</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dealing-with-very-large-numbers">1.9. Dealing with (very) large numbers</a></li>
 </ul>
   </nav></div>
 
