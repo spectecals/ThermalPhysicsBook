@@ -385,7 +385,7 @@ document.write(`
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(R = 8.31\)</span> J K<sup>-1</sup> mol<sup>-1</sup>,</p></li>
 <li><p>Like the Boltzmann constant, this is a proportionality constant relating the energy <span class="math notranslate nohighlight">\(J\)</span> and temperature <span class="math notranslate nohighlight">\(K\)</span> and the amount of substance used <span class="math notranslate nohighlight">\(\text{mol}\)</span>. In other words, it’s the molar equivalent to the Boltzmann constant. This is the constant of proportionality used in the macroscopic form of the ideal gas law (CTP Section 1.4).</p></li>
-<li><p>i.e., <span class="math notranslate nohighlight">\(R = N_A*k_B = k_B * 6.022 \cdot 10^{23} \)</span> mol<sup>-1</sup>.</p></li>
+<li><p>i.e., <span class="math notranslate nohighlight">\(R = N_A \times k_B = k_B \times 6.022 \cdot 10^{23} \)</span> mol<sup>-1</sup>.</p></li>
 </ul>
 </section>
 <section id="systems">
@@ -511,7 +511,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <p>Combining these empirical results, alongside <span class="math notranslate nohighlight">\(\rho = \frac{N}{V}\)</span>, we find that <span class="math notranslate nohighlight">\(p V \propto N T\)</span>. Their proportionality is the aforementioned Boltzmann constant, which relates temperature to energy, and forms the <strong>microscopic ideal gas equation</strong>,</p>
 <div class="math notranslate nohighlight">
 \[ p V = N k_B T \qquad \text{(microscopic)}. \]</div>
-<p>Alternatively, we can define it macroscopically in terms of the numbers of moles, <span class="math notranslate nohighlight">\(n\)</span>, through <span class="math notranslate nohighlight">\(N=n * N_A\)</span> and the universal gas constant, <span class="math notranslate nohighlight">\(R = N_A*k_B\)</span>, forming the <strong>macroscopic ideal gas equation</strong>,</p>
+<p>Alternatively, we can define it macroscopically in terms of the numbers of moles, <span class="math notranslate nohighlight">\(n\)</span>, through <span class="math notranslate nohighlight">\(N=n \times N_A\)</span> and the universal gas constant, <span class="math notranslate nohighlight">\(R = N_A \times k_B\)</span>, forming the <strong>macroscopic ideal gas equation</strong>,</p>
 <div class="math notranslate nohighlight">
 \[ p V = n R T \qquad \text{(macroscopic)}. \]</div>
 <p>This <em>ideal gas</em> model assumes that molecules:</p>
@@ -537,7 +537,7 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <p>When counting configurations, we need to know how many ways we can arrange a certain number of items from a larger set <strong>without regard to order</strong>. The number of such combinations <span class="math notranslate nohighlight">\(C\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
 \[ ^nC_k = \frac{n!}{k!(n-k)!} \]</div>
-<p>Here <span class="math notranslate nohighlight">\(n\)</span> is the total number of available positions, <span class="math notranslate nohighlight">\(k\)</span> the number of elements we choose to occupy them and <span class="math notranslate nohighlight">\(n!\)</span> refers to “<span class="math notranslate nohighlight">\(n\)</span> factorial”, meaning <span class="math notranslate nohighlight">\(n * (n - 1) * (n - 2) *\ ...\ * 1\)</span>. This formula tells us how many distinct configurations are possible when order does not matter.</p>
+<p>Here <span class="math notranslate nohighlight">\(n\)</span> is the total number of available positions, <span class="math notranslate nohighlight">\(k\)</span> the number of elements we choose to occupy them and <span class="math notranslate nohighlight">\(n!\)</span> refers to “<span class="math notranslate nohighlight">\(n\)</span> factorial”, meaning <span class="math notranslate nohighlight">\(n \times (n - 1) \times (n - 2)  \times \ ...\ \times 1\)</span>. This formula tells us how many distinct configurations are possible when order does not matter.</p>
 <div class="example admonition">
 <p class="admonition-title">Example: (Identical) eggs in a box</p>
 <p>Imagine we have a carton able to hold 12 <strong>indistinguishable</strong> eggs. How many distinct arrangements of this system are possible if the system has:</p>
@@ -554,48 +554,53 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <p class="rubric">(b)</p>
 <p>Using the same approach as before with <span class="math notranslate nohighlight">\( ^nC_k \)</span>:</p>
 <div class="math notranslate nohighlight">
-\[ \frac{n!}{k!(n-k)!} = \frac{12!}{4!(12-4)!} = \frac{12!}{4!*8!} = \frac{12 * 11 * 10 * 9}{4 * 3 * 2} = 495. \]</div>
+\[ \frac{n!}{k!(n-k)!} = \frac{12!}{4!(12-4)!} = \frac{12!}{4!*8!} = \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2} = 495. \]</div>
 </div>
 <p>Note that for case (b), the intuitive approach “there are 12 spaces for the first egg, then 11 for the second,” so on and so forth, would lead you to the <strong>incorrect</strong> answer for the number of combinations,</p>
 <div class="math notranslate nohighlight">
-\[(\text{from intuition, or}\ ^nP_k) \qquad 12 * 11 * 10 * 9 = \frac{12!}{8!}  \neq \frac{12!}{4!*8!}\qquad(\text{from}\ ^nC_k) .\]</div>
+\[(\text{from intuition, or}\ ^nP_k) \qquad 12 \times 11 \times 10 \times 9 = \frac{12!}{8!}  \neq \frac{12!}{4!*8!}\qquad(\text{from}\ ^nC_k) .\]</div>
 <p>The equation from “intuition” is the <strong>permutation formula</strong> <span class="math notranslate nohighlight">\( ^nP_k = \frac{n!}{(n-k)!} \)</span> which is used in situations where the ordering matters (i.e., a pack of cards). This discrepancy between solutions arises because <strong>the eggs are indistinguishable</strong>, meaning that certain arrangements are repeats of prior combinations. This is <strong>always the case in thermodynamics</strong> as it’s not possible to identify and keep track of each particle in a gas.</p>
 <p>(If you <em>really</em> wanted to use intuition, you would need to implement an additional condition: “how many ways can I arrange each of my permutations?” For any given arrangement of the 4 eggs, you could rearrange them amongst themselves like so: “there are 4 spaces for the first egg, 3 for the second, …” resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetitions of each distinct arrangement. By dividing the permutations by the repetitions, you rederive the combinatorial solution!)</p>
 </section>
 </section>
 <section id="dealing-with-very-large-numbers">
 <h2><span class="section-number">1.9. </span>Dealing with (very) large numbers<a class="headerlink" href="#dealing-with-very-large-numbers" title="Permalink to this heading">#</a></h2>
-<p>When working out states for macroscopic quantities, we will need to use factorials on quantities scaled by Avagadro’s constant (<span class="math notranslate nohighlight">\(10^{23}!\)</span>). These numbers are unfathomably huge. Luckily, there is one such approximation specifically for factorials, <strong>Stirling’s</strong>.</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-\begin{aligned}\\\ln n! &amp;\approx n \ln n - n + O(\ln n)\\\end{aligned}
-\end{aligned}\end{align} \]</div>
-<p>For the purposes of this course, we will omit the <span class="math notranslate nohighlight">\(O(\ln n)\)</span> term as we are only interested in the scale of the number and don’t require digit-level accuracy.</p>
-<p>This approximation “fails” for <span class="math notranslate nohighlight">\(n!\)</span> when <span class="math notranslate nohighlight">\(n=0\)</span> (the equation produces <span class="math notranslate nohighlight">\(0^0\)</span> which <a class="reference external" href="https://en.wikipedia.org/wiki/Zero_to_the_power_of_zero">has no unique mathematical number</a>) but for <span class="math notranslate nohighlight">\(n \geq 1\)</span> the formula is well defined. The Stirling approximation <span class="math notranslate nohighlight">\(S(n)\)</span> is slightly below the true value for <span class="math notranslate nohighlight">\(n!\)</span>:</p>
+<p>When working out states for macroscopic quantities, we will need to use factorials on quantities scaled by Avogadro’s number <span class="math notranslate nohighlight">\(N_A\)</span> (~<span class="math notranslate nohighlight">\(10^{23}!\)</span>). These numbers are unfathomably huge. Consider an upper bound where we don’t count down from <span class="math notranslate nohighlight">\(n!\)</span> when computing it:</p>
 <div class="math notranslate nohighlight">
 \[
-1 &lt; e^{\frac{1}{12n+1}} &lt; \frac{n!}{S(n)} &lt; e^{\frac{1}{12n}}.
+10^{23}! &lt; (10^{23})^{10^{23}} = 10^{2.3\cdot 10^{24}}.
 \]</div>
-<p>Notice that as <span class="math notranslate nohighlight">\(n\)</span> approaches infinity, <span class="math notranslate nohighlight">\(\frac{1}{12n} \to 0\)</span> such that <span class="math notranslate nohighlight">\(\frac{n!}{S(n)} \to 1\)</span>, and so we can say the approximation is asymptotically accurate (i.e., it will never be exact as we can never actually use infinity but it improves for higher <span class="math notranslate nohighlight">\(n\)</span>).</p>
-<p>Even estimating the size of the error involves approximation as the quantities are so small that writing them exactly is impractical. Instead, we resort to “big-O notation”, saying it is on the order of <span class="math notranslate nohighlight">\(10^{-49}\)</span>:</p>
+<p>For reference, a googol is <span class="math notranslate nohighlight">\(10^{100}\)</span>. Our factorial is roughly <span class="math notranslate nohighlight">\(10^{100^{12}}\)</span>. Luckily Stirling’s formula can be used to approximate these large numbers.</p>
+<div class="math notranslate nohighlight">
+\[
+\ln n! \approx n \ln n - n + O(\ln n)
+\]</div>
+<p>For the purposes of this course, we will omit the <span class="math notranslate nohighlight">\(O(\ln n)\)</span> term as we are only interested in the scale of the number and don’t require digit-level accuracy. This approximation “fails” for <span class="math notranslate nohighlight">\(n!\)</span> when <span class="math notranslate nohighlight">\(n=0\)</span> (the equation produces <span class="math notranslate nohighlight">\(0^0\)</span> which <a class="reference external" href="https://en.wikipedia.org/wiki/Zero_to_the_power_of_zero">has no unique mathematical number</a>) but for <span class="math notranslate nohighlight">\(n \geq 1\)</span> the formula is well defined. The Stirling approximation becomes more accurate (asymptotically approaches exactness) as n increases (approaches infinity).</p>
+<div class="example admonition">
+<p class="admonition-title">Example</p>
+<p>Calculate <span class="math notranslate nohighlight">\(n!\)</span> for:</p>
+<ul class="simple">
+<li><p>(a) <span class="math notranslate nohighlight">\(n = 1,000\)</span></p></li>
+<li><p>(b) <span class="math notranslate nohighlight">\(n = 10^{23}\)</span></p></li>
+</ul>
+<p>(a)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-e^{\frac{1}{12n+1}} &amp;\approx \frac{1}{10 ^ {5.2103 \cdot 10^{23}}} \approx 1 + 8.33 \cdot 10^{-25} + O(10^{-49}), \\
-e^{\frac{1}{12n}}   &amp;\approx \frac{1}{10 ^ {5.2095 \cdot 10^{23}}} \approx 1 + 8.33 \cdot 10^{-25} + O(10^{-49}) + 7 \cdot 10^{-50}.
+\ln n! &amp;\approx n \ln n - n + O(\ln n) \\
+&amp;= 1,000 \times 3 \ln 10 - 1000 = 5908 \\
+n! &amp;\approx e^{5908} = 10^{2566}
 \end{aligned}
 \end{split}\]</div>
-<p>Our error in proportion to the true value is just</p>
+<p>(b)</p>
 <div class="math notranslate nohighlight">
-\[
-1 - (1 + 8.33 \cdot 10^{-25}) = 8.33 \cdot 10^{-23}\%.
-\]</div>
-<p>This sounds incredible until you consider that our factorial is roughly:</p>
-<div class="math notranslate nohighlight">
-\[
-10^{23}! &lt; (10^{23})^{10^{23}} = 10^{23 \cdot 10^{23}} \approx 10^{10^{24}}.
-\]</div>
-<p>For reference, a googol is <span class="math notranslate nohighlight">\(10^{100}\)</span>. Our factorial is roughly <span class="math notranslate nohighlight">\(10^{100^{12}}\)</span>. Our absolute error is around <span class="math notranslate nohighlight">\(10^{100^{12} - 25}\)</span>, which in ordinary circumstances would just be plain wrong. As a result, we struggle to accurately do math with large numbers.</p>
+\[\begin{split}
+\begin{aligned}
+\ln n! &amp;= 10^{23} \times (23 \ln 10 - 1) = 5.2 \cdot 10^{24} \\
+n! &amp;\approx e^{5.2 \cdot 10^{24}} = 10^{2.26\cdot 10^{24}}
+\end{aligned}
+\end{split}\]</div>
+</div>
 </section>
 </section>
 

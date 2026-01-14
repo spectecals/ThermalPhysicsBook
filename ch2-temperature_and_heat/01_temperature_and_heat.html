@@ -180,6 +180,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="03_solutions.html">2.10. Solutions</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/02_questions.html">3.6. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/03_solutions.html">3.7. Solutions</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -364,26 +369,13 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Arc</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">src</span><span class="w"> </span><span class="kn">import</span> <span class="n">plotting_template</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="temperature-and-heat">
+  <section class="tex2jax_ignore mathjax_ignore" id="temperature-and-heat">
 <h1><span class="section-number">2. </span>Temperature and Heat<a class="headerlink" href="#temperature-and-heat" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
 <li><p>Concept in Thermal Physics: Chapter 2, Chapter 4: 4.1, 4.2</p></li>
-<li><p>University Physics with Modern Physics 15th edition: Chapter 17: pg. 569-574, 580–587, Chapter 18: pg. 622-625</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapter 17: Section 17.1-17.2, 17.4-17.5, Chapter 18: Section 18.4</p></li>
 </ul>
 </div>
 <div class="outcomes admonition">
@@ -391,11 +383,11 @@ document.write(`
 <ul class="simple">
 <li><p>Concepts of heat and heat capacity</p></li>
 <li><p>Heat is “thermal energy in transit”</p></li>
-<li><p>Heat capacity is given by <span class="math notranslate nohighlight">\(C = dQ/dT\)</span> and can also be expressed per unit volume or mole, termed the specific heat capacity</p></li>
-<li><p>Temperature, T, of a system …</p></li>
-<li><p>Zeroth law of thermodynamics: XYZ</p></li>
+<li><p>Heat capacity is given by <span class="math notranslate nohighlight">\(C = dQ/dT\)</span> and can also be expressed per unit volume or mole, termed the <em>specific</em> heat capacity</p></li>
+<li><p>Temperature, <span class="math notranslate nohighlight">\(T\)</span>, of a system</p></li>
+<li><p>Zeroth law of thermodynamics</p></li>
 <li><p>Temperature scales: Celsius vs Kelvin</p></li>
-<li><p>Phase transitions…</p></li>
+<li><p>Introduction to phase transitions</p></li>
 </ul>
 </div>
 <section id="heat">
@@ -512,7 +504,7 @@ $$ d Q = 0 $$
 <p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">A glass thermometer relies on the thermal expansion of the fluid within, where the bulb is placed in contact with a system of interest to measure the temperature. This sounds obvious as we’ve all used a thermometer before, but why does this work? Why should the thermometer stop precisely at the same temperature as our system of interest?</span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <span class="xref myst">Chapter 3</span>, in relation to the ideal gas law.</p>
+<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 3</span></a>, in relation to the ideal gas law.</p>
 </section>
 <section id="zeroth-law-of-thermodynamics">
 <h2><span class="section-number">2.4. </span>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
