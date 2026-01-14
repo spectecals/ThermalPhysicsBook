@@ -1,16 +1,3 @@
-/* ================= HARD RESET OF THEME ICONS ================= */
-/* Kill any built-in ::before icon across common containers */
-body .bd-content .admonition > .admonition-title::before,
-body .bd-article .admonition > .admonition-title::before,
-body .admonition > .admonition-title::before,
-body details.admonition > .admonition-title::before {
-  content: none !important;
-  display: none !important;
-  background: none !important;
-  -webkit-mask: none !important;
-  mask: none !important;
-}
-
 /* ================= SHARED TITLE LAYOUT ================= */
 .admonition > .admonition-title {
   position: relative;           /* anchor for our ::after */
@@ -48,7 +35,8 @@ html[data-theme="dark"], [data-theme="dark"] {
 .admonition.reading,
 .admonition.outcomes,
 .admonition.definition,
-.admonition.example {
+.admonition.example,
+.admonition.solution { /* <-- added */
   border-left-width: 6px;
   border-radius: 8px;
   padding: 0.6rem 1rem 0.8rem 1.2rem;
@@ -98,11 +86,35 @@ html[data-theme="dark"], [data-theme="dark"] {
 .admonition.example > .admonition-title { color: var(--accent); }
 .admonition.example > .admonition-title::after { content: "\003F" !important; color: var(--accent) !important; }
 
+/* solution — orange + lightbulb */
+.admonition.solution {
+  --h: 28; --s: 85%; --l: 45%;
+  --accent: hsl(var(--h) var(--s) var(--l));
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--admo-bg-alpha));
+  border-left: 6px solid hsl(var(--h) var(--s) var(--l) / var(--admo-border-alpha));
+}
+.admonition.solution > .admonition-title { color: var(--accent); }
+.admonition.solution > .admonition-title::after { content: "\1F4A1\FE0E" !important; color: var(--accent) !important; }
+/* 
 /* Optional: extra belt-and-braces if theme targets deeper selectors */
 body .bd-content .admonition.reading    > .admonition-title::before,
 body .bd-content .admonition.outcomes   > .admonition-title::before,
 body .bd-content .admonition.definition > .admonition-title::before,
-body .bd-content .admonition.example    > .admonition-title::before {
+body .bd-content .admonition.example    > .admonition-title::before,
+body .bd-content .admonition.solution   > .admonition-title::before { /* <-- added */
   content: none !important;
   display: none !important;
+}
+
+/* Remove the left icon (your F0/FE square) from ALL dropdown admonitions */
+.admonition.dropdown > .admonition-title::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+  -webkit-mask: none !important;
+  mask: none !important;
+}
+/* Dropdown admonition titles: not bold */
+.admonition.dropdown > .admonition-title {
+  font-weight: 400 !important; /* or 500 if you want slightly heavier */
 }
