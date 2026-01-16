@@ -559,8 +559,12 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <p>Note that for case (b), the intuitive approach “there are 12 spaces for the first egg, then 11 for the second,” so on and so forth, would lead you to the <strong>incorrect</strong> answer for the number of combinations,</p>
 <div class="math notranslate nohighlight">
 \[(\text{from intuition, or}\ ^nP_k) \qquad 12 \times 11 \times 10 \times 9 = \frac{12!}{8!}  \neq \frac{12!}{4!*8!}\qquad(\text{from}\ ^nC_k) .\]</div>
-<p>The equation from “intuition” is the <strong>permutation formula</strong> <span class="math notranslate nohighlight">\( ^nP_k = \frac{n!}{(n-k)!} \)</span> which is used in situations where the ordering matters (i.e., a pack of cards). This discrepancy between solutions arises because <strong>the eggs are indistinguishable</strong>, meaning that certain arrangements are repeats of prior combinations. This is <strong>always the case in thermodynamics</strong> as it’s not possible to identify and keep track of each particle in a gas.</p>
-<p>(If you <em>really</em> wanted to use intuition, you would need to implement an additional condition: “how many ways can I arrange each of my permutations?” For any given arrangement of the 4 eggs, you could rearrange them amongst themselves like so: “there are 4 spaces for the first egg, 3 for the second, …” resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetitions of each distinct arrangement. By dividing the permutations by the repetitions, you rederive the combinatorial solution!)</p>
+<p>The equation from “intuition” is the <strong>permutation formula</strong> <span class="math notranslate nohighlight">\( ^nP_k = \frac{n!}{(n-k)!} \)</span> which is used in situations where the ordering matters (i.e., a pack of cards). This discrepancy between solutions arises because the eggs are <strong>indistinguishable</strong>, meaning that certain arrangements are repeats of prior combinations. This is always the case in thermodynamics as it’s not possible to identify and keep track of each particle in a gas.</p>
+<p>(If you <em>really</em> wanted to use intuition, you would need to implement an additional condition: <br />
+                <em>“how many ways can I arrange each of my permutations?”</em> <br />
+For any given arrangement of the 4 eggs, you could rearrange them amongst themselves like so: <br />
+                <em>“there are 4 spaces for the first egg, 3 for the second, …”</em> <br />
+resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetitions of each distinct arrangement. By dividing the permutations by the repetitions, you rederive the combinatorial solution!)</p>
 </section>
 </section>
 <section id="dealing-with-very-large-numbers">
@@ -583,21 +587,21 @@ $$N \rightarrow \inf, \qquad V \rightarrow \inf, \qquad \rho = \frac{N}{V}. $$ -
 <li><p>(a) <span class="math notranslate nohighlight">\(n = 1,000\)</span></p></li>
 <li><p>(b) <span class="math notranslate nohighlight">\(n = 10^{23}\)</span></p></li>
 </ul>
-<p>(a)</p>
+<p class="rubric">(a)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
 \ln n! &amp;\approx n \ln n - n + O(\ln n) \\
 &amp;= 1,000 \times 3 \ln 10 - 1000 = 5908 \\
-n! &amp;\approx e^{5908} = 10^{2566}
+n! &amp;\approx e^{5908} = 10^{0.434 \times 5908} = 10^{2566} \qquad (\text{using } e = 10^{0.434}).
 \end{aligned}
 \end{split}\]</div>
-<p>(b)</p>
+<p class="rubric">(b)</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\ln n! &amp;= 10^{23} \times (23 \ln 10 - 1) = 5.2 \cdot 10^{24} \\
-n! &amp;\approx e^{5.2 \cdot 10^{24}} = 10^{2.26\cdot 10^{24}}
+\ln n! &amp;\approx 10^{23} \times (23 \ln 10 - 1) = 5.2 \cdot 10^{24} \\
+n! &amp;\approx e^{5.2 \cdot 10^{24}} = 10^{2.26\cdot 10^{24}}.
 \end{aligned}
 \end{split}\]</div>
 </div>
