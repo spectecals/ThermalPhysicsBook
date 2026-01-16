@@ -4,8 +4,8 @@ options:
   numbered: 2
 chapters:
 - file: ch1-introduction/01_intro
-  sections:
-  - file: ch1-introduction/02_questions
+  # sections:
+  # - file: ch1-introduction/02_questions
   # - file: ch1-introduction/03_solutions
 # - file: ch2-temperature_and_heat/01_temperature_and_heat
 #   sections:
