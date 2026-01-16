@@ -74,3 +74,6 @@
 [ ] 7.11, 7.12
 [ ] 7.5 2nd law and third law
 [ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
+[ ] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
+[ ] flatten dropdown, just use 5.1, 5.2 etc
+[ ] fix fig2.2, xticks still show, minima highlighted why? x label clipping

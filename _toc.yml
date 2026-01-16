@@ -6,15 +6,15 @@ chapters:
 - file: ch1-introduction/01_intro
   sections:
   - file: ch1-introduction/02_questions
-  - file: ch1-introduction/03_solutions
-- file: ch2-temperature_and_heat/01_temperature_and_heat
-  sections:
-  - file: ch2-temperature_and_heat/02_questions
-  - file: ch2-temperature_and_heat/03_solutions
-- file: ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
-  sections:
-  - file: ch3-kinetic_theory_of_gases/02_questions
-  - file: ch3-kinetic_theory_of_gases/03_solutions
+  # - file: ch1-introduction/03_solutions
+# - file: ch2-temperature_and_heat/01_temperature_and_heat
+#   sections:
+#   - file: ch2-temperature_and_heat/02_questions
+#   - file: ch2-temperature_and_heat/03_solutions
+# - file: ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
+#   sections:
+#   - file: ch3-kinetic_theory_of_gases/02_questions
+#   - file: ch3-kinetic_theory_of_gases/03_solutions
 # - file: ch5-probability_for_thermodynamics/CH5 Probability all sections
 #   sections:
 #   - file: ch5-probability_for_thermodynamics/CH5-Problem_Sheet
