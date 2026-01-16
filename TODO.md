@@ -33,6 +33,11 @@
 [X] check whether to use \bar or \bra \ket notation - USE BRAKET
 [X] start on ch4
 [X] add answers to questions ch1,2
+[X] introduction of cp being cv + 2 isn't explained
+[X] flatten dropdown, just use 5.1, 5.2 etc
+[X] fix fig2.2, xticks still show, minima highlighted why? x label clipping
+[X] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
+[X] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
 
 [/] - FOR DAFYDD
 [/] thermometer figure 2.3, identify parts of thermometer with annotations
@@ -60,9 +65,6 @@
 [O] include q4 from jl (adiabatic comes later)
 
 [ ] - TODO
-[ ] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
-[ ] introduction of cp being cv + 2 isn't explained
-[ ] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
 [ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
 [ ] [[REF FIG 8.3]]
 [ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
@@ -75,5 +77,6 @@
 [ ] 7.5 2nd law and third law
 [ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
 [ ] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
-[ ] flatten dropdown, just use 5.1, 5.2 etc
-[ ] fix fig2.2, xticks still show, minima highlighted why? x label clipping
+[ ] thermal expansion, use figs of spring (how does thermal expansion work) - model using atoms connected by springs, interatomic forces are the springs, atoms in alticce, atoms vibrate, vibration increases with temperature, meaning amplitude of vibration increases.
+[ ] blue line up the middle shows an average x0 turning to the right slowly, showing avg x increases
+[ ] change logo from hwu to unsplash for fire
