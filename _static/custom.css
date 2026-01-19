@@ -118,3 +118,16 @@ body .bd-content .admonition.solution   > .admonition-title::before { /* <-- add
 .admonition.dropdown > .admonition-title {
   font-weight: 400 !important; /* or 500 if you want slightly heavier */
 }
+.answer-narrow {
+  max-width: 78ch;          /* narrower text measure (try 45–60ch) */
+  margin: 0.75rem auto 1rem auto;  /* centers the block */
+  padding: 0.4rem 0.8rem;   /* slight inset */
+  border-left: 3px solid #bbb;
+  opacity: 0.95;
+}
+
+/* keep wrapping sensible */
+.answer-narrow p,
+.answer-narrow li {
+  overflow-wrap: anywhere;
+}
