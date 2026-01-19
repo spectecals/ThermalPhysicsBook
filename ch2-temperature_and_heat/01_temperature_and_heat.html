@@ -69,8 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch2-temperature_and_heat/01_temperature_and_heat';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.9. Questions" href="02_questions.html" />
-    <link rel="prev" title="1.11. Solutions" href="../ch1-introduction/03_solutions.html" />
+    <link rel="prev" title="1. Introduction" href="../ch1-introduction/01_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,29 +161,16 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Thermal Physics - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Thermal Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Temperature and Heat</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_questions.html">2.9. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">2.10. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/02_questions.html">3.6. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/03_solutions.html">3.7. Solutions</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Temperature and Heat</a></li>
 </ul>
 
     </div>
@@ -334,7 +320,10 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">2.1. Heat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">2.2. Heat Capacity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">2.2. Heat Capacity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-specific-heat">Measuring specific heat</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature">2.3. Temperature</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">2.4. Zeroth Law of Thermodynamics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermometers">2.5. Thermometers</a><ul class="visible nav section-nav flex-column">
@@ -384,7 +373,6 @@ document.write(`
 <li><p>Concepts of heat and heat capacity</p></li>
 <li><p>Heat is “thermal energy in transit”</p></li>
 <li><p>Heat capacity is given by <span class="math notranslate nohighlight">\(C = dQ/dT\)</span> and can also be expressed per unit volume or mole, termed the <em>specific</em> heat capacity</p></li>
-<li><p>Temperature, <span class="math notranslate nohighlight">\(T\)</span>, of a system</p></li>
 <li><p>Zeroth law of thermodynamics</p></li>
 <li><p>Temperature scales: Celsius vs Kelvin</p></li>
 <li><p>Introduction to phase transitions</p></li>
@@ -395,13 +383,12 @@ document.write(`
 <p>We all have an intuitive idea of what heat is. While sitting near a fire in winter or standing in the sun, we feel the warmth increasing our temperature, or conversely touching a cold snowball makes our hand feel cool as heat leaves it. From these observations, we understand heat as a form of energy transfer between objects at different temperatures. Heat represents energy moving from one body to another because of a temperature difference, not something an object possesses by itself.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition:</p>
-<p>Heat is thermal energy in transit</p>
+<p>Heat is thermal energy in transit.</p>
 </div>
-<p>Heat is emitted spontaneously from all objects, though the net energy transfer (<strong>heat flow</strong>) will always be in the direction from a warmer body to a cooler one. This direction can be reversed if external energy is supplied, such as in a refrigerator or freezer where electrical power forces heat to move from the cold interior to the warmer surroundings. Thus, the definition of heat focuses on transfer itself, without assuming a specific direction.</p>
+<p>Heat is emitted spontaneously from all objects, though the net energy transfer (<strong>heat flow</strong>) will always be from a warmer body to a cooler one. This direction can be reversed if external energy is supplied, such as in a refrigerator or freezer where electrical power forces heat to move from the cold interior to the warmer surroundings. Thus, the definition of heat focuses on transfer itself, without assuming a specific direction.</p>
 <p>The phrase “in transit” is important because while you can add heat to an object, you cannot say the object contains heat. Heat cannot be stored or measured directly like fuel in a tank. It only exists while energy is being transferred. What an object actually contains is internal energy, which can change through heating or doing work.</p>
 <p>For example, you can warm your cold hands by holding them near a fire (adding heat) or by rubbing them together (doing work). In both cases, their temperature rises, showing that both heat and work increase internal energy.</p>
-<p>As we do not give heat a direction, we instead need to designate bodies or <em>systems</em> that heat is transferred to or from.</p>
-<p>In this course, we adopt the sign convention:</p>
+<p>As we do not give heat a direction, we instead need to designate bodies or <em>systems</em> that heat is transferred to or from. In this course, we adopt the sign convention:</p>
 <ul class="simple">
 <li><p>Heat added is positive (<span class="math notranslate nohighlight">\(Q &gt; 0\)</span>)</p></li>
 <li><p>Heat removed is negative (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>)</p></li>
@@ -412,7 +399,7 @@ document.write(`
 <p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Simply put, if our <em>system</em> is <span class="math notranslate nohighlight">\(T_H\)</span>, heat is leaving the system, therefore Q is negative. If instead our system is <span class="math notranslate nohighlight">\(T_C\)</span>, Q is positive.</span><a class="headerlink" href="#fig-contact" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Heat is measured in <strong>joules (J)</strong>, and the <strong>rate of heating</strong> is measured in <strong>watts (W)</strong> where 1 W = 1 Js<sup>-1</sup>.</p>
+<p>Heat is measured in <em>joules (J)</em>, and the <em>rate</em> of heating is measured in <em>watts (W)</em> where 1 W = 1 Js<sup>-1</sup>.</p>
 <div class="example admonition">
 <p class="admonition-title">Example:</p>
 <p>A (very efficient) hairdryer (1.5kW) is used for 5 minutes. The total heat released is:</p>
@@ -440,19 +427,30 @@ document.write(`
 <p>Another useful quantity is the molar heat capacity, or the heat capacity per mole of substance. For water, whose molar mass is 18 g mol<sup>-1</sup>, the molar heat capacity is found by multiplying the specific heat capacity by the molar mass:</p>
 <div class="math notranslate nohighlight">
 \[ C*m = 4.18 * 10^3\ \text{J kg}^{-1}\ \text{K}^{-1} * 0.018\ \text{kg mol}^{-1} = 75.2\ \text{J mol}^{-1}\ \text{K}^{-1}. \]</div>
-<p>When dealing with gases, two different heat capacities are defined depending on the conditions:</p>
+<section id="measuring-specific-heat">
+<h3>Measuring specific heat<a class="headerlink" href="#measuring-specific-heat" title="Permalink to this heading">#</a></h3>
+<p>When measuring specific heat, two different heat capacities are defined depending on the conditions:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(C_v\)</span>: the heat capacity at constant volume, where the gas does not expand as it is heated.</p></li>
-<li><p><span class="math notranslate nohighlight">\(C_p\)</span>: the heat capacity at constant pressure, where the gas is allowed to expand.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_p\)</span>: the heat capacity at constant pressure - most measurements are done at constant atmospheric pressure, allowing the substance to expand.</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_V\)</span>: the heat capacity at constant volume - where the substance does not expand as it is heated. For most gases, it’s easier to keep the substance in a container, i.e. with constant volume.</p></li>
 </ul>
-<p>Because some of the supplied heat goes into doing work when the gas expands at constant pressure, <span class="math notranslate nohighlight">\(C_p\)</span> is always larger than <span class="math notranslate nohighlight">\(C_v\)</span>.</p>
+<p>Because some of the supplied heat goes into doing work when the gas expands at constant pressure, <span class="math notranslate nohighlight">\(C_p\)</span> is always larger than <span class="math notranslate nohighlight">\(C_V\)</span>.</p>
 <p>The specific heat capacity <span class="math notranslate nohighlight">\(c\)</span> is not absolute and varies slightly based on the initial temperature and the temperature interval. This variation is quite small so we’ll be ignoring it for this course.</p>
 <figure class="align-default" id="fig-cp-water">
-<a class="reference internal image-reference" href="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png"><img alt="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png" src="../_images/aabc85bb59d05f2273481ae42e5e14b892f72781c0bd8084110b89ac0f75cd28.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png"><img alt="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png" src="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>In order to measure the heat <span class="math notranslate nohighlight">\(Q\)</span> needed to raise the temperature <span class="math notranslate nohighlight">\(T\)</span>, we can simply use</p>
+<div class="math notranslate nohighlight">
+\[
+Q = mc \Delta T
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the substance,</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span> is the specific heat capacity.</p></li>
+</ul>
 <!-- [[NOTE]] i think this should all be alongside 1st law??
 
 ## Work and heat in thermodynamic processes
@@ -494,17 +492,18 @@ $$ d Q = 0 $$
 
  -->
 </section>
+</section>
 <section id="temperature">
 <h2><span class="section-number">2.3. </span>Temperature<a class="headerlink" href="#temperature" title="Permalink to this heading">#</a></h2>
 <p>It is very important that we now clearly distinguish between temperature and heat. Temperature depends on the physical state of a material and provides a quantitative measure of how hot or cold it is. Heat refers to energy transferred between systems due to a temperature difference and it never describes the energy contained within a system itself.</p>
 <p>The temperature of an object can be changed by transferring heat to or from it, or by altering its energy through other means, such as performing work. Temperature is understood qualitatively through our sense of touch: objects that feel “hot” have higher temperatures than those that feel “cold.” However, touch is unreliable, so temperature must be measured quantitatively through properties that change with temperature, such as electrical resistance, or volume of a substance.</p>
 <figure class="align-default" id="fig-thermometer">
-<a class="reference internal image-reference" href="../_images/2.3_thermometer.png"><img alt="../_images/2.3_thermometer.png" src="../_images/2.3_thermometer.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.3.1_Thermometer_Bulb_Capillary.png"><img alt="../_images/2.3.1_Thermometer_Bulb_Capillary.png" src="../_images/2.3.1_Thermometer_Bulb_Capillary.png" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">A glass thermometer relies on the thermal expansion of the fluid within, where the bulb is placed in contact with a system of interest to measure the temperature. This sounds obvious as we’ve all used a thermometer before, but why does this work? Why should the thermometer stop precisely at the same temperature as our system of interest?</span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 3</span></a>, in relation to the ideal gas law.</p>
+<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <span class="xref myst">Chapter 3</span>, in relation to the ideal gas law.</p>
 </section>
 <section id="zeroth-law-of-thermodynamics">
 <h2><span class="section-number">2.4. </span>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
@@ -546,6 +545,21 @@ $$ d Q = 0 $$
 <figure class="align-default" id="fig-expansion">
 <a class="reference internal image-reference" href="../_images/2.5_expansion.png"><img alt="../_images/2.5_expansion.png" src="../_images/2.5_expansion.png" style="width: 80%;" /></a>
 </figure>
+<p>We can make sense of this by considering the interatomic forces of a solid as behaving similarly to springs through Hooke’s law,</p>
+<div class="math notranslate nohighlight">
+\[ F \propto -\Delta x \]</div>
+<p>where <span class="math notranslate nohighlight">\(F\)</span> is the restoring force in response to a displacement <span class="math notranslate nohighlight">\(\Delta x\)</span>.</p>
+<figure class="align-default" id="fig-spring">
+<a class="reference internal image-reference" href="../_images/2.5_spring.png"><img alt="../_images/2.5_spring.png" src="../_images/2.5_spring.png" style="width: 40%;" /></a>
+</figure>
+<p>For higher potential energies as a result of higher temperatures, the internal energy causes larger displacements and larger restoring forces in kind. You might then expect the average displacement to stay constant due to the oscillatory nature of springs, though this isn’t quite the case as these restoring forces are <em>not</em> simple springs.</p>
+<figure class="align-default" id="fig-micro-expansion">
+<a class="reference internal image-reference" href="../_images/2.5_micro_expansion.png"><img alt="../_images/2.5_micro_expansion.png" src="../_images/2.5_micro_expansion.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The average <span class="math notranslate nohighlight">\(x\)</span> for increasing <span class="math notranslate nohighlight">\(E\)</span> increases (marked by blue circles).</span><a class="headerlink" href="#fig-micro-expansion" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The restoring forces are asymmetric; i.e., a negative displacement causes a larger restoring force due to repulsion following a different form to attraction. In fact, you can see that for large positive displacements, there comes a point where the attractice force stops increasing, signalling a phase change occurring from a solid to a liquid. Prior to reaching this point however, the average displacement increases with temperature.</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
 <p>A 30m rail track increases in temperature from 0°C to 40°C. <span class="math notranslate nohighlight">\(\alpha\)</span> = 11 * 10<sup>-6</sup> K<sup>-1</sup>, what is the change in length?</p>
@@ -577,7 +591,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <figure class="align-default" id="fig-egg">
 <a class="reference internal image-reference" href="../_images/2.6_egg.png"><img alt="../_images/2.6_egg.png" src="../_images/2.6_egg.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Even if you were to specify the pressure at which you take these temperature readings, that still requires perfect pressure control. The kelvin scale fixes this problem by using the <em>triple point</em> of water to define the scale. We will define the triple point in the following section but note that the triple point requires a <em>singular value</em> for pressure and temperature which will be the same regardless of their environmental conditions. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>. One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
@@ -621,7 +635,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <figure class="align-default" id="fig-phase-circular">
 <a class="reference internal image-reference" href="../_images/2.7_phase_circular.png"><img alt="../_images/2.7_phase_circular.png" src="../_images/2.7_phase_circular.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>How much energy is used when considering both specific heat and latent for water?</p>
@@ -838,8 +852,6 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
 <p>You should check for unit consistency in the Stefan-Boltzmann law. Emissivity (<span class="math notranslate nohighlight">\(e\)</span>) is often larger for dark surfaces than light ones. The emissivity of a smooth copper surface is about 0.3, but <span class="math notranslate nohighlight">\(e\)</span> for a dull black surface can be close to unity.</p>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -873,22 +885,13 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../ch1-introduction/03_solutions.html"
+       href="../ch1-introduction/01_intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1.11. </span>Solutions</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="02_questions.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.9. </span>Questions</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -907,7 +910,10 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat">2.1. Heat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">2.2. Heat Capacity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity">2.2. Heat Capacity</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measuring-specific-heat">Measuring specific heat</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#temperature">2.3. Temperature</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zeroth-law-of-thermodynamics">2.4. Zeroth Law of Thermodynamics</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thermometers">2.5. Thermometers</a><ul class="visible nav section-nav flex-column">
