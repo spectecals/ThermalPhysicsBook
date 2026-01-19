@@ -35,15 +35,14 @@
 [X] add answers to questions ch1,2
 
 [/] - FOR DAFYDD
-[/] thermometer figure 2.3, identify parts of thermometer with annotations
-[/] fig of human breathing section 3.1
+[X] thermometer figure 2.3, identify parts of thermometer with annotations
 [/] redraw wall bounce section 3.1, rewrite caption without linebreaks
 [/] draw cube with bouncing gas inside, section 3.1
-[/] PV diagram of two isotherms, showing it's possible to move between isotherms by either increasing pressure OR volume (adiabatic vs isobaric), section 3.3
-[/] [[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]
-[/] [[FIG OF BARBELLS SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
-[/] [[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
-[/] [[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]
+[X] PV diagram of two isotherms, showing it's possible to move between isotherms by either increasing pressure OR volume (adiabatic vs isobaric), section 3.3
+[X] [[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]
+[X] [[FIG OF BARBELLS SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
+[X] [[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
+[X] [[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]
 [/] [[FIG 18 IN SRC]]
 [/] [[FIG 8.1 IN SRC]]
 [/] [[FIG 8.3 (sorry this one's a bit intense)]]
