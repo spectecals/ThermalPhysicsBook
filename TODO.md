@@ -38,6 +38,8 @@
 [X] fix fig2.2, xticks still show, minima highlighted why? x label clipping
 [X] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
 [X] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
+[X] change logo from hwu to unsplash for fire
+[X] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
 
 [/] - FOR DAFYDD
 [/] thermometer figure 2.3, identify parts of thermometer with annotations
@@ -67,16 +69,15 @@
 [ ] - TODO
 [ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
 [ ] [[REF FIG 8.3]]
-[ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5
-[ ] FROM BREAKDOWN.DOCX
+[ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5 FROM BREAKDOWN.DOCX
 [ ] omit 5.8 engines from ch.5/6/4
+[ ] crossref JL and uni physics book for ch. 7
 [ ] 7.3, 7.8 are same chapter
 [ ] 7.6 and 7.7 paired
 [ ] 7.4, 7.9 paired
 [ ] 7.11, 7.12
 [ ] 7.5 2nd law and third law
 [ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
-[ ] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
-[ ] thermal expansion, use figs of spring (how does thermal expansion work) - model using atoms connected by springs, interatomic forces are the springs, atoms in alticce, atoms vibrate, vibration increases with temperature, meaning amplitude of vibration increases.
+[ ] ch.2 thermal expansion, use figs of spring (how does thermal expansion work) - model using atoms connected by springs, interatomic forces are the springs, atoms in alticce, atoms vibrate, vibration increases with temperature, meaning amplitude of vibration increases.
 [ ] blue line up the middle shows an average x0 turning to the right slowly, showing avg x increases
-[ ] change logo from hwu to unsplash for fire
+[ ] update question excel sheet
