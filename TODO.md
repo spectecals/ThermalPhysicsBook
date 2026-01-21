@@ -40,6 +40,7 @@
 [X] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
 [X] change logo from hwu to unsplash for fire
 [X] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
+[X] blue line up the middle shows an average x0 turning to the right slowly, showing avg x increases
 
 [/] - FOR DAFYDD
 [/] thermometer figure 2.3, identify parts of thermometer with annotations
@@ -79,5 +80,4 @@
 [ ] 7.5 2nd law and third law
 [ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
 [ ] ch.2 thermal expansion, use figs of spring (how does thermal expansion work) - model using atoms connected by springs, interatomic forces are the springs, atoms in alticce, atoms vibrate, vibration increases with temperature, meaning amplitude of vibration increases.
-[ ] blue line up the middle shows an average x0 turning to the right slowly, showing avg x increases
 [ ] update question excel sheet
