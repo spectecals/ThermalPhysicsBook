@@ -829,18 +829,19 @@ Q_\text{in} / m&amp;=(2,256 * 10 + 340,000)\ \text{J kg}^{-1}
 \[\begin{split}
 \begin{align}
 Q_\text{out} &amp;= (Q_\text{in} / m) * m_\text{ice} \\
-125.5\ \text{kJ}&amp;=362.6 \text{kJ kg}^{-1} * m_\text{ice} \\
-m_\text{ice}&amp;=\frac{126}{362.6}=0.35\ \text{kg}.
+125.5\ \text{kJ}&amp;=362.6\ \text{kJ kg}^{-1} * m_\text{ice} \\
+m_\text{ice}&amp;=\frac{125.5\ \text{kJ}}{362.6\ \text{kJ kg}^{-1}}=0.35\ \text{kg}.
 \end{align}
 \end{split}\]</div>
 </div>
 </section>
 <section id="newton-s-law-of-cooling">
 <h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
-<p>Let’s say we have two systems that can exchange heat. System one is at temperature <span class="math notranslate nohighlight">\(T\)</span> at the start, but it will tend towards <span class="math notranslate nohighlight">\(T_\text{env}\)</span> as time <span class="math notranslate nohighlight">\(t\)</span> evolves.</p>
+<p>When a system is hotter than its environment, naturally it will cool.</p>
 <figure class="align-default" id="fig-cooling">
 <a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" /></a>
 </figure>
+<p>The heat transfer can be modelled as between two systems of temperatures <span class="math notranslate nohighlight">\(T_\text{sys}\)</span> and <span class="math notranslate nohighlight">\(T_\text{env}\)</span>. As <span class="math notranslate nohighlight">\(T_\text{sys}\)</span> radiates heat into the environment, its temperature lowers while our environment seemingly doesn’t. As such, we can denote <span class="math notranslate nohighlight">\(T_B=\ \text{constant}\)</span>.</p>
 <p>Heat <span class="math notranslate nohighlight">\(Q\)</span> leaves the system with temperature <span class="math notranslate nohighlight">\(T\)</span> but the environment is so large that <span class="math notranslate nohighlight">\(T_\text{env}\)</span> is constant. What is the temperature as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
 <p>Newton’s cooling equation tells us that the heat lost per unit time is proportional to the temperature difference between the two systems.</p>
 <div class="math notranslate nohighlight">
