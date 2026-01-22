@@ -405,7 +405,7 @@ document.write(`
 <p class="admonition-title">Example</p>
 <p>A (very efficient) hairdryer (1.5kW) is used for 5 minutes. The total heat released is:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(Q = 1500 \text{W} * (5 * 60 \text{s}) = 450 \text{kJ} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Q = 1500 \text{W} \times (5 \times 60 \text{s}) = 450 \text{kJ} \)</span></p></li>
 </ul>
 <p>“Total heat released” refers to heat entering the environment, therefore our ‘system’ is the environment and “Q” is positive. The dryer performed 450 kJ of work <em>on</em> the environment by converting its electrical energy to thermal energy, or <em>heat</em>.</p>
 </div>
@@ -427,7 +427,7 @@ document.write(`
 </div>
 <p>Another useful quantity is the molar heat capacity, or the heat capacity per mole of substance. For water, whose molar mass is 18 g mol<sup>-1</sup>, the molar heat capacity is found by multiplying the specific heat capacity by the molar mass:</p>
 <div class="math notranslate nohighlight">
-\[ C*m = 4.18 * 10^3\ \text{J kg}^{-1}\ \text{K}^{-1} * 0.018\ \text{kg mol}^{-1} = 75.2\ \text{J mol}^{-1}\ \text{K}^{-1}. \]</div>
+\[ C*m = 4.18 \cdot 10^3\ \text{J kg}^{-1}\ \text{K}^{-1} \times 0.018\ \text{kg mol}^{-1} = 75.2\ \text{J mol}^{-1}\ \text{K}^{-1}. \]</div>
 <section id="measuring-specific-heat">
 <h3>Measuring specific heat<a class="headerlink" href="#measuring-specific-heat" title="Permalink to this heading">#</a></h3>
 <p>When measuring specific heat, two different heat capacities are defined depending on the conditions:</p>
@@ -460,7 +460,7 @@ Q = mc \Delta T
 
 A gas expands from $V \rightarrow d V$. What is the work done by the gas?
 
-$$ d W = F\ d y \qquad (\text{work} = \text{force} * \text{distance}) $$
+$$ d W = F\ d y \qquad (\text{work} = \text{force} \times \text{distance}) $$
 $$ = PA\ d y $$
 $$ = P\ d V $$
 $$ \int\ d W=\int P\ d V $$
@@ -565,7 +565,7 @@ $$ d Q = 0 $$
 <p class="admonition-title">Example</p>
 <p>A 30m rail track increases in temperature from 0°C to 40°C. <span class="math notranslate nohighlight">\(\alpha\)</span> = 11 * 10<sup>-6</sup> K<sup>-1</sup>, what is the change in length?</p>
 <div class="math notranslate nohighlight">
-\[\Delta l = 11 * 10 ^ {-6} * 30 * 40 = 0.013\ \text{m}\]</div>
+\[\Delta l = 11 \cdot 10 ^ {-6} \times 30 \times 40 = 0.013\ \text{m}\]</div>
 <p>A cube of the same lengths undergoes the same temperature change, how do we find the change in volume?</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -578,7 +578,7 @@ V_f            &amp;= V_i + \Delta V \\
                &amp; \\
 V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{where}\ \alpha^2\approx 0 \\
 \Delta V       &amp;= 3 \alpha V_i \Delta T \\
-               &amp;=3*11*10^{-6}\ \text{K}^{-1}*30^3\ \text{m}^3*40\ \text{K} \\
+               &amp;=3 \times 11 \cdot 10^{-6}\ \text{K}^{-1} \times (30\ \text{m})^3 \times 40\ \text{K} \\
                &amp;=35.64\ \text{m}^3
 \end{aligned}
 \end{split}\]</div>
@@ -598,7 +598,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <p>Even if you were to specify the pressure at which you take these temperature readings, that still requires perfect pressure control. The kelvin scale fixes this problem by using the <em>triple point</em> of water to define the scale. We will define the triple point in the following section but note that the triple point requires a <em>singular value</em> for pressure and temperature which will be the same regardless of their environmental conditions. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>. One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
 <section id="fahrenheit">
 <h3>Fahrenheit<a class="headerlink" href="#fahrenheit" title="Permalink to this heading">#</a></h3>
-<p>You will often also encounter Fahrenheit, the standard common use metric in the US. Fahrenheit is defined in relation to Celsius as: <span class="math notranslate nohighlight">\(°F = (\frac{9}{5} * °C) + 32\)</span>, such that -20 °C = 0 °F, 0 °C = 32 °F and 37 °C = 98.5 °F (body temperature).</p>
+<p>You will often also encounter Fahrenheit, the standard common use metric in the US. Fahrenheit is defined in relation to Celsius as: <span class="math notranslate nohighlight">\(°F = (\frac{9}{5} \times °C) + 32\)</span>, such that -20 °C = 0 °F, 0 °C = 32 °F and 37 °C = 98.5 °F (body temperature).</p>
 <p>This scale was intended such that it should rarely go negative in common usage. For this purpose, 0 °F was established as the freezing point of an arbitrary mixture of water, ice and a salt to create a solution with a much lower freezing point than water.</p>
 </section>
 </section>
@@ -741,10 +741,10 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 Q     &amp;= Q_1 + Q_2 + Q_3 + Q_4 + Q_5 \\
       &amp;= mc_{\text{ice}}\Delta T_1 + mL_f + mc_{\text{water}}\Delta T_3 + mL_v + mc_{\text{vapour}}\Delta T_5 \\
 Q / m &amp;= c_{\text{ice}}\Delta T_1 + L_f + c_{\text{water}}\Delta T_3 + L_v + c_{\text{vapour}}\Delta T_5 \\
-      &amp;= (2,050*10) + 340,000 + (4,184*100) + 2,256,000 + (10 * 1,890) \\
-      &amp;= 3,053\ \text{k J} \\
-Q     &amp;= 0.2 * 3,053 \\
-      &amp;= 611\ \text{k J}
+      &amp;= (2,050 \times 10) + 340,000 + (4,184 \times 100) + 2,256,000 + (10 \times 1,890) \\
+      &amp;= 3,053\ \text{kJ} \\
+Q     &amp;= 0.2 \times 3,053 \\
+      &amp;= 611\ \text{kJ}
 \end{align}\end{split}\]</div>
 </div>
 <p>For a real material with a constant volume, we find that the state of matter normally relates to pressure and temperature like so:</p>
@@ -793,26 +793,26 @@ Q     &amp;= 0.2 * 3,053 \\
 <p>As such, you’ll see in these diagrams that solids tend to occupy the top-left, liquids the top-right, and gases the bottom-right.</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>How much ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span> do you need to bring 500g of liquid water at <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span> to <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span>?</p>
+<p>How much ice at <span class="math notranslate nohighlight">\(-10\ ^\circ\)</span>C do you need to bring 500g of liquid water at <span class="math notranslate nohighlight">\(60\ ^\circ\)</span>C to <span class="math notranslate nohighlight">\(0\ ^\circ\)</span>C?</p>
 <p>We have two systems,</p>
 <ol class="arabic simple">
-<li><p>Some amount of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span></p></li>
-<li><p>500 grams of water at <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span></p></li>
+<li><p>Some amount of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ\)</span>C,</p></li>
+<li><p>500 grams of water at <span class="math notranslate nohighlight">\(60\ ^\circ\)</span>C.</p></li>
 </ol>
 <p>In order to solve this, we need to know a few values:</p>
 <ul class="simple">
-<li><p>the specific heat of water, <span class="math notranslate nohighlight">\(c=4,184\ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>,</p></li>
-<li><p>the latent energy of fusion (freezing), <span class="math notranslate nohighlight">\(L_f = 340,000\ \text{J kg}^{-1}\)</span>,</p></li>
-<li><p>and the specific heat of ice, <span class="math notranslate nohighlight">\(c=2,256\ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>.</p></li>
+<li><p>the specific heat of water, <span class="math notranslate nohighlight">\(c=4,184\ \ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>,</p></li>
+<li><p>the latent energy of fusion (freezing), <span class="math notranslate nohighlight">\(L_f = 340,000\ \ \text{J kg}^{-1}\)</span>,</p></li>
+<li><p>and the specific heat of ice, <span class="math notranslate nohighlight">\(c=2,256\ \ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>.</p></li>
 </ul>
-<p>To get the water to <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span>, we need to reduce it by <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span>. The energy required can be found through:</p>
+<p>To get the water to <span class="math notranslate nohighlight">\(0\ ^\circ\)</span>C, we need to reduce it by <span class="math notranslate nohighlight">\(60\ ^\circ\)</span>C. The energy required can be found through:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
 Q_\text{in}  &amp;=mc_\text{water} \Delta T \\
-             &amp;=0.5\ \text{kg}*4184\ \text{J kg}^{-1}\ \text{K}^{-1}*(-60\ \text{K}) \\
+             &amp;=0.5\ \text{kg} \times 4184\ \text{J kg}^{-1}\ \text{K}^{-1} \times (-60\ \text{K}) \\
              &amp;=-125,520\ \text{J} = -Q_\text{out} \\
-Q_\text{out} &amp;= 125.5\ \text{k J}.
+Q_\text{out} &amp;= 125.5\ \text{kJ}.
 \end{align}
 \end{split}\]</div>
 <p>Accounting for both the specific heat and the latent heat of ice (the change in temperature and the change of state), we can calculate the heat per unit mass that the ice can absorb.</p>
@@ -821,15 +821,15 @@ Q_\text{out} &amp;= 125.5\ \text{k J}.
 \begin{align}
 Q_\text{out, water}&amp;=Q_\text{in, ice} \\
 &amp;=m*(c_\text{ice} \Delta T + L_f) \\
-Q_\text{in} / m&amp;=(2,256 * 10 + 340,000)\ \text{J kg}^{-1}
+Q_\text{in} / m&amp;=(2,256 \times 10 + 340,000)\ \text{J kg}^{-1}
 \end{align}
 \end{split}\]</div>
 <p>Equating the <span class="math notranslate nohighlight">\(Q_\text{out}\)</span> of the water to the <span class="math notranslate nohighlight">\(Q_\text{in} / m\)</span> of the ice, we can find <span class="math notranslate nohighlight">\(m_\text{ice}\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-Q_\text{out} &amp;= (Q_\text{in} / m) * m_\text{ice} \\
-125.5\ \text{kJ}&amp;=362.6\ \text{kJ kg}^{-1} * m_\text{ice} \\
+Q_\text{out} &amp;= (Q_\text{in} / m) \times m_\text{ice} \\
+125.5\ \text{kJ}&amp;=362.6\ \text{kJ kg}^{-1} \times m_\text{ice} \\
 m_\text{ice}&amp;=\frac{125.5\ \text{kJ}}{362.6\ \text{kJ kg}^{-1}}=0.35\ \text{kg}.
 \end{align}
 \end{split}\]</div>
@@ -892,7 +892,7 @@ m_\text{ice}&amp;=\frac{125.5\ \text{kJ}}{362.6\ \text{kJ kg}^{-1}}=0.35\ \text{
 </ul>
 <p>This relationship is called the <strong>Stefan-Boltzmann law</strong> in honour of its late-19th century discoverers. The <strong>Stefan-Boltzmann constant</strong> <span class="math notranslate nohighlight">\(\sigma\)</span> (Greek sigma) is a fundamental constant with numerical value:</p>
 <div class="math notranslate nohighlight">
-\[ \sigma = 5.67037442 * 10^{-8} \text{Wm}^{-2}\text{K}^4 \]</div>
+\[ \sigma = 5.67037442 \cdot 10^{-8} \text{Wm}^{-2}\text{K}^4 \]</div>
 <p>You should check for unit consistency in the Stefan-Boltzmann law. Emissivity (<span class="math notranslate nohighlight">\(e\)</span>) is often larger for dark surfaces than light ones. The emissivity of a smooth copper surface is about 0.3, but <span class="math notranslate nohighlight">\(e\)</span> for a dull black surface can be close to unity.</p>
 </section>
 </section>
