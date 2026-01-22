@@ -67,10 +67,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.6. Questions" href="02_questions.html" />
-    <link rel="prev" title="2.10. Solutions" href="../ch2-temperature_and_heat/03_solutions.html" />
+    <link rel="prev" title="2. Temperature and Heat" href="../ch2-temperature_and_heat/01_temperature_and_heat.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,29 +162,17 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="Thermal Physics - Home"/>
-    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Thermal Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Kinetic Theory of Gases</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_questions.html">3.6. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">3.7. Solutions</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Kinetic Theory of Gases</a></li>
 </ul>
 
     </div>
@@ -407,7 +395,6 @@ pV = nRT
 \[ \frac{p_1V_1} {T_1}  = \frac{p_2V_2} {T_2} =\ \text{constant.} \qquad (\text{ideal gas, constant mass}) \]</div>
 <p>Notice that <span class="math notranslate nohighlight">\(R\)</span> is not used in this equation.</p>
 <p>This framework links the large-scale, measurable behaviour of gases to the underlying motion and interactions of their molecules.</p>
-<p>[[FIG OF HUMAN BREATHING]]</p>
 <div class="example admonition">
 <p class="admonition-title">Example: Biological respiration</p>
 <p>To breathe, you rely on the ideal gas equation <span class="math notranslate nohighlight">\(pV = nRT\)</span>. Contraction of the diaphragm muscle increases the volume <span class="math notranslate nohighlight">\(V\)</span> of the lungs, decreasing its pressure <span class="math notranslate nohighlight">\(p\)</span>. The lowered pressure causes the lungs to expand and fill with air. (The temperature <span class="math notranslate nohighlight">\(T\)</span> is kept constant.) When you exhale, the diaphragm relaxes, allowing the lungs to contract and expel the air.</p>
@@ -415,10 +402,13 @@ pV = nRT
 <section id="pv-diagrams">
 <h3>pV diagrams<a class="headerlink" href="#pv-diagrams" title="Permalink to this heading">#</a></h3>
 <p>The relationship among pressure, volume, and temperature can be visualised in a three-dimensional <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(V\)</span>-<span class="math notranslate nohighlight">\(T\)</span> space, but in practice it is usually more convenient to use two-dimensional graphs. One common representation is the pV-diagram, which shows how pressure varies with volume. On this diagram, we often draw multiple curves, each corresponding to a constant temperature. These curves are called <strong>isotherms</strong>. Using the ideal gas law <span class="math notranslate nohighlight">\(p=nRT/V\)</span>, we see that along an isotherm the temperature is fixed, so pressure is inversely proportional to volume. As a result, each isotherm forms a hyperbolic curve on the pV-diagram.</p>
-<figure class="align-default" id="fig-cp-isotherm">
-<a class="reference internal image-reference" href="../_images/cbdd77b83d3118230efb95f92b3e20606a73a90c7ef5c80cd4e6278291e9c33c.png"><img alt="../_images/cbdd77b83d3118230efb95f92b3e20606a73a90c7ef5c80cd4e6278291e9c33c.png" src="../_images/cbdd77b83d3118230efb95f92b3e20606a73a90c7ef5c80cd4e6278291e9c33c.png" style="width: 70%;" /></a>
+<figure class="align-default" id="fig-three-isotherms">
+<a class="reference internal image-reference" href="../_images/3.1_Three_Isotherms.png"><img alt="../_images/3.1_Three_Isotherms.png" src="../_images/3.1_Three_Isotherms.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Three isotherms on a pV-diagram, illustrating the temperature dependence of an ideal gas.</span><a class="headerlink" href="#fig-three-isotherms" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<p>Each line represents a different internal energy. We will use p-V diagrams in subsequent sections of this course.</p>
+<p>Each line represents a different internal energy. We will use pV-diagrams in subsequent sections of this course.</p>
 </section>
 </section>
 <section id="molecular-model-of-an-ideal-gas">
@@ -430,14 +420,16 @@ pV = nRT
 <li><p>they move constantly and collide elastically with one another and with the walls,</p></li>
 <li><p>the container walls are rigid and immovable.</p></li>
 </ol>
-<p>[[[FIG OF CUBE CONTAINING BOUNCING PARTICLES]]]</p>
+<figure class="align-default" id="fig-drawing-of-particles-in-a-box-in-motion">
+<a class="reference internal image-reference" href="../_images/1.6_kinetic.png"><img alt="../_images/1.6_kinetic.png" src="../_images/1.6_kinetic.png" style="width: 75%;" /></a>
+</figure>
 <section id="collision-on-one-wall">
 <h3>Collision on one wall<a class="headerlink" href="#collision-on-one-wall" title="Permalink to this heading">#</a></h3>
 <p>Consider a cubic container of volume <span class="math notranslate nohighlight">\(d^3\)</span>, containing molecules of mass <span class="math notranslate nohighlight">\(m\)</span>. Let one molecule have velocity components (<span class="math notranslate nohighlight">\(v_x,v_y,v_z\)</span>) and let it collide with one of the walls, let’s say the wall perpendicular to the x-direction.</p>
-<figure class="align-default" id="fig-cp-bounce">
-<a class="reference internal image-reference" href="../_images/6a40b204ac8b89325ee49010c35659f5be33baaddfce75bde29debd78a7300ae.png"><img alt="../_images/6a40b204ac8b89325ee49010c35659f5be33baaddfce75bde29debd78a7300ae.png" src="../_images/6a40b204ac8b89325ee49010c35659f5be33baaddfce75bde29debd78a7300ae.png" style="width: 70%;" /></a>
+<figure class="align-default" id="fig-elastic-collision">
+<a class="reference internal image-reference" href="../_images/3.2_Elastic_Collision.png"><img alt="../_images/3.2_Elastic_Collision.png" src="../_images/3.2_Elastic_Collision.png" style="width: 65%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">In 2D, velocity components perpendicular to wall <span class="math notranslate nohighlight">\(v_x\)</span> reverse direction, meanwhile <span class="math notranslate nohighlight">\(v_y\)</span> (and <span class="math notranslate nohighlight">\(v_z\)</span> in 3D) are preserved.</span><a class="headerlink" href="#fig-cp-bounce" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">In 2D, velocity components perpendicular to wall reverse direction, meanwhile (and in 3D) are preserved.</span><a class="headerlink" href="#fig-elastic-collision" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>When the molecule strikes the wall, its <strong>velocity changes</strong> from <span class="math notranslate nohighlight">\(+v_x\)</span> to <span class="math notranslate nohighlight">\(−v_x\)</span>.</p>
@@ -458,7 +450,7 @@ pV = nRT
 <figure class="align-default" id="fig-cp-pythagoras">
 <a class="reference internal image-reference" href="../_images/73c8db5aeb86527aff21bcdd71f509d452e11e000feb9a002ed28b586a922945.png"><img alt="../_images/73c8db5aeb86527aff21bcdd71f509d452e11e000feb9a002ed28b586a922945.png" src="../_images/73c8db5aeb86527aff21bcdd71f509d452e11e000feb9a002ed28b586a922945.png" style="width: 40%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Simply using <span class="math notranslate nohighlight">\(z^2 = x^2 + y^2\)</span> for velocities, i.e. <span class="math notranslate nohighlight">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>.</span><a class="headerlink" href="#fig-cp-pythagoras" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Simply using <span class="math notranslate nohighlight">\(z^2 = x^2 + y^2\)</span> for velocities, i.e. <span class="math notranslate nohighlight">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>.</span><a class="headerlink" href="#fig-cp-pythagoras" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -548,7 +540,9 @@ v_{rms} = \sqrt{\braket{v^2}} &amp;= \sqrt{\frac{3k_B T}{m}} \\
 \[ c_\text{mol} = \frac{1}{n}\frac{dQ}{dT},\ \text{where}\ c_\text{mol} = \frac{C}{n}. \]</div>
 <p>where C here is the non-specific heat capacity, <span class="math notranslate nohighlight">\(C = \frac{dQ}{dT}\)</span>.</p>
 <p>Also recall the definitions of <span class="math notranslate nohighlight">\(C_V\)</span> and <span class="math notranslate nohighlight">\(C_p\)</span> – the specific heat associated with raising the temperature while keeping either of the volume (isochoric) or pressure (isobaric) constant, respectively.</p>
-<p>[[FIG OF TWO ISOTHERMS]]</p>
+<figure class="align-default" id="fig-isobar-isochor">
+<a class="reference internal image-reference" href="../_images/3.3_1_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/3.3_1_Isochoric_and_Isobaric_Heating.png" src="../_images/3.3_1_Isochoric_and_Isobaric_Heating.png" style="width: 65%;" /></a>
+</figure>
 <p>Monatomic ideal gases (i.e., noble gases like He, Ne, Ar) each behave like a point particle which makes them the simplest case to describe. From kinetic theory, the average translational energy of <span class="math notranslate nohighlight">\(n\)</span> moles is just</p>
 <div class="math notranslate nohighlight">
 \[ E_{k,\ \text{trans}}=\frac{3}{2}nRT. \]</div>
@@ -569,7 +563,12 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <p>The principle of equipartition of energy, which states that each independent mode of motion (degree of freedom) contributes <span class="math notranslate nohighlight">\(\frac{1}{2}k_BT\)</span> of energy per molecule, or <span class="math notranslate nohighlight">\(\frac{1}{2}RT\)</span> per mole. The number of degrees of freedom depends on the ways in which a molecule can store energy, through translation, rotation, and vibration.</p>
 <section id="monatomic-molecules">
 <h4>Monatomic molecules<a class="headerlink" href="#monatomic-molecules" title="Permalink to this heading">#</a></h4>
-<p>[[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]</p>
+<figure class="align-default" id="fig-translation">
+<a class="reference internal image-reference" href="../_images/3.3_2_Translating_Diatomic_Molecule.png"><img alt="../_images/3.3_2_Translating_Diatomic_Molecule.png" src="../_images/3.3_2_Translating_Diatomic_Molecule.png" style="width: 65%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">TODO: change to monatomic</span><a class="headerlink" href="#fig-translation" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <ul class="simple">
 <li><p>He, Ar, Ne</p></li>
 <li><p>As above, we see that they have 3 (translational) degrees of freedom.</p></li>
@@ -578,7 +577,9 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </section>
 <section id="diatomic-molecules">
 <h4>Diatomic molecules<a class="headerlink" href="#diatomic-molecules" title="Permalink to this heading">#</a></h4>
-<p>[[FIG OF BARBELLS SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER’S BREAKDOWN]]</p>
+<figure class="align-default" id="fig-rotation">
+<a class="reference internal image-reference" href="../_images/3.3_4_Diatomic_Rotational_Modes.png"><img alt="../_images/3.3_4_Diatomic_Rotational_Modes.png" src="../_images/3.3_4_Diatomic_Rotational_Modes.png" style="width: 65%;" /></a>
+</figure>
 <ul class="simple">
 <li><p>H<sub>2</sub>, N<sub>2</sub>, O<sub>2</sub></p></li>
 <li><p>A diatomic molecule has more ways to store energy than monatomic ones.</p></li>
@@ -590,17 +591,24 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </section>
 <section id="higher-energy-modes">
 <h4>Higher energy modes<a class="headerlink" href="#higher-energy-modes" title="Permalink to this heading">#</a></h4>
-<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures and these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic moledules at room temperature, this required energy is much larger than the thermal energy available and the molecules are in their lowest energy state.</p>
+<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures and these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic moledules at room temperature, this required energy is much larger than the thermal energy available.</p>
 <ul class="simple">
 <li><p>Vibrational motion contributes both kinetic and potential energy, so two degrees of freedom can be added</p></li>
 <li><p><span class="math notranslate nohighlight">\(U = 7 * \left(\frac{1}{2}k_BT\right)*N = \frac{7}{2}nRT \)</span></p></li>
 </ul>
-<p>[[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER’S BREAKDOWN]]</p>
+<figure class="align-default" id="fig-spring">
+<a class="reference internal image-reference" href="../_images/3.3_5_Diatomic_Molecule_Spring.png"><img alt="../_images/3.3_5_Diatomic_Molecule_Spring.png" src="../_images/3.3_5_Diatomic_Molecule_Spring.png" style="width: 45%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Vibrational modes are only active at high temperatures, as discussed in (<a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-spring-atom"><span class="std std-ref">Thermal expansion</span></a>).</span><a class="headerlink" href="#fig-spring" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="what-does-ths-mean-for-c-v-vs-c-p">
 <h3>What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?<a class="headerlink" href="#what-does-ths-mean-for-c-v-vs-c-p" title="Permalink to this heading">#</a></h3>
-<p>[[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]</p>
+<figure class="align-default" id="fig-specific-isotherms">
+<a class="reference internal image-reference" href="../_images/3.3_6_Specific_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/3.3_6_Specific_Isochoric_and_Isobaric_Heating.png" src="../_images/3.3_6_Specific_Isochoric_and_Isobaric_Heating.png" style="width: 65%;" /></a>
+</figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -608,7 +616,8 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 \text{Diatomic, } \qquad C_V &amp;= \frac{5}{2}R, \qquad C_p=C_V + R = \frac{7}{2}R
 \end{align}
 \end{split}\]</div>
-<figure class="align-default" id="fig-cp-atomics">
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -644,9 +653,11 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></figure>
+</div></div></div>
+</div>
 <p>These are the predictions from equipartition. How about real gases?</p>
-<figure class="align-default" id="fig-cp-monatomics">
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -685,8 +696,10 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></figure>
-<figure class="align-default" id="fig-cp-diatomics">
+</div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -725,18 +738,22 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
     </tr>
   </tbody>
 </table>
-</div></div></figure>
-<p>[[FIG OF 18.19 IN SRC]]</p>
+</div></div></div>
+</div>
+<figure class="align-default" id="fig-incrementing-modes">
+<a class="reference internal image-reference" href="../_images/3.3_7_incrementing_modes.png"><img alt="../_images/3.3_7_incrementing_modes.png" src="../_images/3.3_7_incrementing_modes.png" style="width: 80%;" /></a>
+</figure>
 </section>
 </section>
 <section id="compressing-a-gas-or-vapour">
 <h2><span class="section-number">3.4. </span>Compressing a gas or vapour<a class="headerlink" href="#compressing-a-gas-or-vapour" title="Permalink to this heading">#</a></h2>
 <p>What happens when we compress a gas or vapour?</p>
-<p>[[FIG 8.1 IN SRC]]</p>
+<figure class="align-default" id="fig-vapour-compression">
+<a class="reference internal image-reference" href="../_images/3.4_0_Vapour_Compression.png"><img alt="../_images/3.4_0_Vapour_Compression.png" src="../_images/3.4_0_Vapour_Compression.png" style="width: 80%;" /></a>
+</figure>
 <p>Scenario: A vapour is contained in a cylinder with a movable piston.
 We slowly compress the vapour while allowing heat exchange so that the process is approximately isothermal (constant temperature).</p>
-<p>We want to understand how pressure, volume, and the phase of the material change during compression.</p>
-<p>A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)</p>
+<p>We want to understand how pressure, volume, and the <em>phase</em> of the material change during compression - phase is a region of matter homogeneous in properties (e.g., liquid, vapour).</p>
 <p><strong>Stage 1: Pure Vapour (Gas)</strong></p>
 <p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">Ideal Gas Law</span></a>.</p>
 <ul class="simple">
@@ -744,7 +761,9 @@ We slowly compress the vapour while allowing heat exchange so that the process i
 <li><p>No liquid is present.</p></li>
 </ul>
 <p>This corresponds to the vapour region on the p-V diagram (right side):</p>
-<p>[[FIG 8.3 (sorry this one’s a bit intense)]]</p>
+<figure class="align-default" id="fig-gas-compression-pv-diagram">
+<a class="reference internal image-reference" href="../_images/3.4_1_Gas_Compression_pV_diagram.png"><img alt="../_images/3.4_1_Gas_Compression_pV_diagram.png" src="../_images/3.4_1_Gas_Compression_pV_diagram.png" style="width: 80%;" /></a>
+</figure>
 <p><strong>Stage 2: Saturation Point (First Drop of Liquid Appears)</strong></p>
 <p>Eventually, the vapour reaches a saturation pressure at the given temperature.
 At this moment:</p>
@@ -763,7 +782,7 @@ Now the system enters the two-phase region.</p></li>
 This constant pressure is the saturation pressure at the chosen temperature.</p></li>
 </ul>
 <div class="math notranslate nohighlight">
-\[P=P_sat(T)=\ \text{constant during the phase}\]</div>
+\[P=P_{sat}(T)=\ \text{constant during the phase}\]</div>
 <p>The work done is used to change phase, not increase pressure.
 This corresponds to the horizontal line inside the dome on the P–V diagram (above).</p>
 <p><strong>Stage 4: Fully Liquid (Subcooled Liquid Region)</strong></p>
@@ -806,10 +825,86 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 </section>
 <section id="molecular-interactions">
 <h3>Molecular Interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
-</section>
-</section>
-<div class="toctree-wrapper compound">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;Behaviour&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;No interactions, point-like particles&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Attractions dominate&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Repulsion dominate&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Ideal-like behaviour&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;Z&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;Z = 1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Z &lt; 1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Z &gt; 1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Z ≈ 1&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+    <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+        <span class="s2">&quot;Ideal gas&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Low T, moderate P&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;High P, any T&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;T_B, moderate pressure&quot;</span><span class="p">,],</span>
+<span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Regime&quot;</span>
+<span class="n">df</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Regime</th>
+      <th>Behaviour</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ideal gas</th>
+      <td>No interactions, point-like particles</td>
+      <td>Z = 1</td>
+    </tr>
+    <tr>
+      <th>Low T, moderate P</th>
+      <td>Attractions dominate</td>
+      <td>Z &lt; 1</td>
+    </tr>
+    <tr>
+      <th>High P, any T</th>
+      <td>Repulsion dominate</td>
+      <td>Z &gt; 1</td>
+    </tr>
+    <tr>
+      <th>T_B, moderate pressure</th>
+      <td>Ideal-like behaviour</td>
+      <td>Z ≈ 1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -843,22 +938,13 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../ch2-temperature_and_heat/03_solutions.html"
+       href="../ch2-temperature_and_heat/01_temperature_and_heat.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.10. </span>Solutions</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Temperature and Heat</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="02_questions.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.6. </span>Questions</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

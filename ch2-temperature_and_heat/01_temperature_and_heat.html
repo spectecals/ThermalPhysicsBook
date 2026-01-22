@@ -67,6 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch2-temperature_and_heat/01_temperature_and_heat';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="1. Introduction" href="../ch1-introduction/01_intro.html" />
@@ -364,7 +365,7 @@ document.write(`
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
 <li><p>Concepts in Thermal Physics: Chapter 2, Chapter 4: 4.1-4.2</p></li>
-<li><p>University Physics with Modern Physics 15th edition: Chapter 17: Section 17.1-17.2, 17.4-17.5, Chapter 18: Section 18.4</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapter 17: Section 17.1-17.2, 17.4-17.5, Chapter 18: Section 18.6</p></li>
 </ul>
 </div>
 <div class="outcomes admonition">
@@ -401,7 +402,7 @@ document.write(`
 </figure>
 <p>Heat is measured in <em>joules (J)</em>, and the <em>rate</em> of heating is measured in <em>watts (W)</em> where 1 W = 1 Js<sup>-1</sup>.</p>
 <div class="example admonition">
-<p class="admonition-title">Example:</p>
+<p class="admonition-title">Example</p>
 <p>A (very efficient) hairdryer (1.5kW) is used for 5 minutes. The total heat released is:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(Q = 1500 \text{W} * (5 * 60 \text{s}) = 450 \text{kJ} \)</span></p></li>
@@ -420,7 +421,7 @@ document.write(`
 </div>
 <p>Heat capacity represents the amount of heat required to raise the object’s temperature by one kelvin. It is a property of the entire object, depending on its size and composition. To compare different materials, it is often more useful to express heat capacity <strong>per unit mass</strong>. This is called the <strong>specific heat capacity</strong> <span class="math notranslate nohighlight">\(c\)</span>, where <span class="math notranslate nohighlight">\(c = C / m\)</span>, measured in units of J kg<sup>-1</sup> K<sup>-1</sup>.</p>
 <div class="example admonition">
-<p class="admonition-title">Example:</p>
+<p class="admonition-title">Example</p>
 <p>If 0.125 kg of water at 18 °C has a total heat capacity <span class="math notranslate nohighlight">\(C\)</span> of 523 J K<sup>-1</sup>, then its specific heat capacity is <span class="math notranslate nohighlight">\(c = 523 / 0.125 = 4184\ \text{J kg}^{-1}\ \text{K}^{-1}\)</span></p>
 <p>This value agrees with the known <span class="math notranslate nohighlight">\(c\)</span> of water, one of the highest capacities among common substances. Consider something traditionally dense like lead – its <span class="math notranslate nohighlight">\(c\)</span> is only 129 J kg<sup>-1</sup> K<sup>-1</sup>, even <span class="math notranslate nohighlight">\(c\)</span> half of water, sitting at just 2093 J kg<sup>-1</sup> K<sup>-1</sup>!</p>
 </div>
@@ -532,7 +533,7 @@ $$ d Q = 0 $$
 </ul>
 <p>All thermometer types depend on reproducible physical properties, yet none directly measure temperature itself – they correlate another property with it.</p>
 <section id="thermal-expansion">
-<h3>Thermal expansion<a class="headerlink" href="#thermal-expansion" title="Permalink to this heading">#</a></h3>
+<span id="sec-spring-atom"></span><h3>Thermal expansion<a class="headerlink" href="#thermal-expansion" title="Permalink to this heading">#</a></h3>
 <p>Materials change in size when their temperature changes.</p>
 <div class="math notranslate nohighlight">
 \[\Delta l = \alpha l_i \Delta T \]</div>
@@ -658,37 +659,65 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>State/transition</th>
-      <th>Specific energy (kJ / kg)</th>
+      <th>State</th>
+      <th>Specific energy (J / kg)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Solid</th>
-      <td>2.05 / K</td>
+      <td>2,050</td>
     </tr>
     <tr>
       <th>Liquid</th>
-      <td>4.18 / K</td>
+      <td>4,184</td>
     </tr>
     <tr>
       <th>Vapour</th>
-      <td>1.89 / K</td>
+      <td>1,890</td>
     </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Transition</th>
+      <th>Latent heat (J)</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
-      <th>Melting</th>
-      <td>333</td>
+      <th>Fusion (freezing)</th>
+      <td>340,000</td>
     </tr>
     <tr>
       <th>Vaporisation</th>
-      <td>2270</td>
+      <td>2,256,000</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
 <div class="example admonition">
-<p class="admonition-title">Example 1</p>
+<p class="admonition-title">Example</p>
 <p>How much energy is required to turn 200g of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span> to vapour at <span class="math notranslate nohighlight">\(110 ^\circ C\)</span>?</p>
 <!-- 
 ```{glue:figure} pd_water_fig
@@ -709,11 +738,13 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 </figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
-Q &amp;= Q_1 + Q_2 + Q_3 + Q_4 + Q_5 \\
-&amp;= c_{\text{ice}}m\Delta T + mL_f + c_{\text{water}}m\Delta T + mL_v + c_{\text{vapour}}m\Delta T \\
-&amp;= m(c_{\text{ice}}\Delta T + L_f + c_{\text{water}}\Delta T + L_v + c_{\text{vapour}}\Delta T) \\
-&amp;= 0.2 * ((2*10) + 333 + (4.2*100) + 2270 + (10 * 1.9)) \\
-&amp;= 600\ \text{kJ} 
+Q     &amp;= Q_1 + Q_2 + Q_3 + Q_4 + Q_5 \\
+      &amp;= mc_{\text{ice}}\Delta T_1 + mL_f + mc_{\text{water}}\Delta T_3 + mL_v + mc_{\text{vapour}}\Delta T_5 \\
+Q / m &amp;= c_{\text{ice}}\Delta T_1 + L_f + c_{\text{water}}\Delta T_3 + L_v + c_{\text{vapour}}\Delta T_5 \\
+      &amp;= (2,050*10) + 340,000 + (4,184*100) + 2,256,000 + (10 * 1,890) \\
+      &amp;= 3,053\ \text{k J} \\
+Q     &amp;= 0.2 * 3,053 \\
+      &amp;= 611\ \text{k J}
 \end{align}\end{split}\]</div>
 </div>
 <p>For a real material with a constant volume, we find that the state of matter normally relates to pressure and temperature like so:</p>
@@ -761,47 +792,59 @@ Q &amp;= Q_1 + Q_2 + Q_3 + Q_4 + Q_5 \\
 </div>
 <p>As such, you’ll see in these diagrams that solids tend to occupy the top-left, liquids the top-right, and gases the bottom-right.</p>
 <div class="example admonition">
-<p class="admonition-title">Example 2</p>
+<p class="admonition-title">Example</p>
 <p>How much ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span> do you need to bring 500g of liquid water at <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span> to <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span>?</p>
 <p>We have two systems,</p>
 <ol class="arabic simple">
-<li><p>? grams of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span></p></li>
+<li><p>Some amount of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span></p></li>
 <li><p>500 grams of water at <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span></p></li>
 </ol>
-<p>Let’s consider what we’re adding to the water</p>
+<p>In order to solve this, we need to know a few values:</p>
+<ul class="simple">
+<li><p>the specific heat of water, <span class="math notranslate nohighlight">\(c=4,184\ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>,</p></li>
+<li><p>the latent energy of fusion (freezing), <span class="math notranslate nohighlight">\(L_f = 340,000\ \text{J kg}^{-1}\)</span>,</p></li>
+<li><p>and the specific heat of ice, <span class="math notranslate nohighlight">\(c=2,256\ \text{J kg}^{-1}\ \text{K}^{-1}\)</span>.</p></li>
+</ul>
+<p>To get the water to <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span>, we need to reduce it by <span class="math notranslate nohighlight">\(60\ ^\circ C\)</span>. The energy required can be found through:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-Q_\text{in}&amp;=c_\text{water} m \Delta T \\
-&amp;=m(c_\text{water}\Delta T) \\
-&amp;=500\ \text{g}*4\ \text{J g}^{-1}\ \text{K}^{-1}*(-60\ \text{K}) \\
-&amp;=-126\ \text{k J} \\
-&amp;=-Q_\text{out} \rightarrow Q_\text{out}=126\ kJ.
+Q_\text{in}  &amp;=mc_\text{water} \Delta T \\
+             &amp;=0.5\ \text{kg}*4184\ \text{J kg}^{-1}\ \text{K}^{-1}*(-60\ \text{K}) \\
+             &amp;=-125,520\ \text{J} = -Q_\text{out} \\
+Q_\text{out} &amp;= 125.5\ \text{k J}.
 \end{align}
 \end{split}\]</div>
-<p>The heat out of the water goes into the ice.</p>
+<p>Accounting for both the specific heat and the latent heat of ice (the change in temperature and the change of state), we can calculate the heat per unit mass that the ice can absorb.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
 Q_\text{out, water}&amp;=Q_\text{in, ice} \\
 &amp;=m*(c_\text{ice} \Delta T + L_f) \\
-&amp;=m*(2.05 * 10 + 333) \\
-126\ \text{kJ}&amp;=m*353.5 \text{kJ kg}^{-1} \\
-m&amp;=\frac{126}{353}=0.36\ \text{kg}
+Q_\text{in} / m&amp;=(2,256 * 10 + 340,000)\ \text{J kg}^{-1}
+\end{align}
+\end{split}\]</div>
+<p>Equating the <span class="math notranslate nohighlight">\(Q_\text{out}\)</span> of the water to the <span class="math notranslate nohighlight">\(Q_\text{in} / m\)</span> of the ice, we can find <span class="math notranslate nohighlight">\(m_\text{ice}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+Q_\text{out} &amp;= (Q_\text{in} / m) * m_\text{ice} \\
+125.5\ \text{kJ}&amp;=362.6 \text{kJ kg}^{-1} * m_\text{ice} \\
+m_\text{ice}&amp;=\frac{126}{362.6}=0.35\ \text{kg}.
 \end{align}
 \end{split}\]</div>
 </div>
 </section>
 <section id="newton-s-law-of-cooling">
 <h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
-<p>Let’s say we have two systems that can exchange heat. System one is at temperature T at the start, but it will tend towards T<sub>env</sub> as time evolves.</p>
+<p>Let’s say we have two systems that can exchange heat. System one is at temperature <span class="math notranslate nohighlight">\(T\)</span> at the start, but it will tend towards <span class="math notranslate nohighlight">\(T_\text{env}\)</span> as time <span class="math notranslate nohighlight">\(t\)</span> evolves.</p>
 <figure class="align-default" id="fig-cooling">
 <a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" /></a>
 </figure>
-<p>Heat Q leaves the system with temperature T but the environment is so large that T<sub>env</sub> is constant. What is T as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
+<p>Heat <span class="math notranslate nohighlight">\(Q\)</span> leaves the system with temperature <span class="math notranslate nohighlight">\(T\)</span> but the environment is so large that <span class="math notranslate nohighlight">\(T_\text{env}\)</span> is constant. What is the temperature as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
 <p>Newton’s cooling equation tells us that the heat lost per unit time is proportional to the temperature difference between the two systems.</p>
 <div class="math notranslate nohighlight">
-\[\frac{dQ}{dT}=-a(T(t)-T_{env})\]</div>
+\[\frac{dQ}{dt}=-a(T(t)-T_{env})\]</div>
 <ul class="simple">
 <li><p>where <span class="math notranslate nohighlight">\(T(t)\)</span> is the temperature as a function of time</p></li>
 <li><p>and <span class="math notranslate nohighlight">\(T_{env}\)</span> is the temperature of the environment.</p></li>
