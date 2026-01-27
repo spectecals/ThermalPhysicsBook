@@ -170,9 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Overview of Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_solutions.html">1.9. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-probability_and_information/CH2-L0-Probability_Overview.html">2. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -400,7 +399,7 @@ document.write(`
 <p class="admonition-title">Definition:</p>
 <p>Heat is thermal energy in transit</p>
 </div>
-<p>Heat is emitted spontaneously from all objects, though the net energy transfer (<strong>heat flow</strong>) will always be in the direction from a warmer body to a cooler one. This direction can be reversed if external energy is supplied, such as in a refrigerator or freezer where electrical power forces heat to move from the cold interior to the warmer surroundings. Thus, the definition of heat focuses on transfer itself, without assuming a specific direction.</p>
+<p>Heat flows spontaneously from a warmer body to a cooler one, though on a microscopic level, both bodies exchange energy with each other. The net energy transfer, or <em>heat flow</em>, is therefore from the warmer body to the cooler one. However, this direction can be reversed if external energy is supplied, such as in a refrigerator or freezer, where electrical power forces heat to move from the cold interior to the warmer surroundings. Thus, the definition of heat focuses on transfer itself, without assuming a specific direction.</p>
 <p>The phrase “in transit” is important because while you can add heat to an object, you cannot say the object contains heat. Heat cannot be stored or measured directly like fuel in a tank. It only exists while energy is being transferred. What an object actually contains is internal energy, which can change through heating or doing work.</p>
 <p>For example, you can warm your cold hands by holding them near a fire (adding heat) or by rubbing them together (doing work). In both cases, their temperature rises, showing that both heat and work increase internal energy.</p>
 <p>As we do not give heat a direction, we instead need to designate bodies or <em>systems</em> that heat is transferred to or from.</p>
@@ -409,9 +408,7 @@ document.write(`
 <li><p>Heat added is positive (<span class="math notranslate nohighlight">\(Q &gt; 0\)</span>)</p></li>
 <li><p>Heat removed is negative (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>)</p></li>
 </ul>
-<figure class="align-default" id="fig-contact">
-<a class="reference internal image-reference" href="../../_images/3.2_contact.png"><img alt="../../_images/3.2_contact.png" src="../../_images/3.2_contact.png" style="width: 40%;" /></a>
-</figure>
+<p>*** [[FIG OF HEAT TRANSFER Q FROM T_HOT TO T_COLD, IF T_H=T_C, Q=0]] ***</p>
 <p>Heat is measured in <strong>joules (J)</strong>, and the <strong>rate of heating</strong> is measured in <strong>watts (W)</strong> where 1 W = 1 Js<sup>-1</sup>.</p>
 <div class="example admonition">
 <p class="admonition-title">Example:</p>
@@ -448,11 +445,9 @@ document.write(`
 <p>Because some of the supplied heat goes into doing work when the gas expands at constant pressure, <span class="math notranslate nohighlight">\(C_p\)</span> is always larger than <span class="math notranslate nohighlight">\(C_v\)</span>.</p>
 <p>The specific heat capacity <span class="math notranslate nohighlight">\(c\)</span> is not absolute and varies slightly based on the initial temperature and the temperature interval. This variation is quite small so we’ll be ignoring it for this course.</p>
 <figure class="align-default" id="fig-cp-water">
-<a class="reference internal image-reference" href="../../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png"><img alt="../../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" src="../../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" style="width: 50%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Permalink to this image">#</a></p>
-</figcaption>
+<img alt="../../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" src="../../_images/7cfe21c80280486717f4d7c6ffb89466ee49c67e5ab86ac235c7ab6bf2268c22.png" />
 </figure>
+<p>Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</p>
 <!-- [[NOTE]] i think this should all be alongside 1st law??
 
 ## Work and heat in thermodynamic processes
@@ -498,12 +493,8 @@ $$ d Q = 0 $$
 <h2><span class="section-number">3.3. </span>Temperature<a class="headerlink" href="#temperature" title="Permalink to this heading">#</a></h2>
 <p>It is very important that we now clearly distinguish between temperature and heat. Temperature depends on the physical state of a material and provides a quantitative measure of how hot or cold it is. Heat refers to energy transferred between systems due to a temperature difference and it never describes the energy contained within a system itself.</p>
 <p>The temperature of an object can be changed by transferring heat to or from it, or by altering its energy through other means, such as performing work. Temperature is understood qualitatively through our sense of touch: objects that feel “hot” have higher temperatures than those that feel “cold.” However, touch is unreliable, so temperature must be measured quantitatively through properties that change with temperature, such as electrical resistance, or volume of a substance.</p>
-<figure class="align-default" id="fig-thermometer">
-<a class="reference internal image-reference" href="../../_images/3.3_thermometer.png"><img alt="../../_images/3.3_thermometer.png" src="../../_images/3.3_thermometer.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch4-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 4</span></a>, in relation to the ideal gas law.</span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<p><strong>(FIG thermometer, section 3.4)</strong></p>
+<p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch4-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 4</span></a>, in relation to the ideal gas law.</p>
 </section>
 <section id="the-zeroth-law-of-thermodynamics">
 <h2><span class="section-number">3.4. </span>The zeroth law of thermodynamics<a class="headerlink" href="#the-zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
@@ -513,9 +504,7 @@ $$ d Q = 0 $$
 <p class="admonition-title">Definition:</p>
 <p>Two systems, each separately in thermal equilibrium with a third, are in equilibrium with each other.</p>
 </div>
-<figure class="align-default" id="fig-zeroth-law">
-<a class="reference internal image-reference" href="../../_images/3.4_zeroth.png"><img alt="../../_images/3.4_zeroth.png" src="../../_images/3.4_zeroth.png" style="width: 50%;" /></a>
-</figure>
+<p>[[FIGURE 17.2 university physics]]</p>
 <p>Although formulated after the first three laws, the zeroth law establishes the foundation for measuring temperature. It states that if two bodies are each in thermal equilibrium with a third body, they are in equilibrium with each other.</p>
 <p>This principle underlies how thermometers function. When a thermometer (the second body) is placed in contact with another object (the first body), they reach thermal equilibrium, allowing temperature measurement.</p>
 </section>
@@ -541,9 +530,6 @@ $$ d Q = 0 $$
 <li><p><span class="math notranslate nohighlight">\(l_i\)</span> is the initial length,</p></li>
 <li><p>and <span class="math notranslate nohighlight">\(\Delta T\)</span> is the change in temperature.</p></li>
 </ul>
-<figure class="align-default" id="fig-expansion">
-<a class="reference internal image-reference" href="../../_images/3.5_expansion.png"><img alt="../../_images/3.5_expansion.png" src="../../_images/3.5_expansion.png" style="width: 80%;" /></a>
-</figure>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
 <p>A 30m rail track increases in temperature from 0°C to 40°C. <span class="math notranslate nohighlight">\(\alpha\)</span> = 11 * 10<sup>-6</sup> K<sup>-1</sup>, what is the change in length?</p>
@@ -559,9 +545,9 @@ V_f            &amp;= V_i + \Delta V \\
                &amp;= l_i w_i h_i (1 + \alpha \Delta T)^3 \\
                &amp;= V_i (1 + 3 \alpha \Delta T + 3 (\alpha \Delta T)^2 + (\alpha \Delta T)^3) \\
                &amp; \\
-V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{where}\ \alpha^2\approx 0 \\
-\Delta V       &amp;= 3 \alpha V_i \Delta T \\
-               &amp;=3*11*10^{-6}\ \text{K}^{-1}*30^3\ \text{m}^3*40\ \text{K} \\
+V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T \qquad\ \qquad \text{where}\ (\Delta T)^{2+}\approx 0 \\
+\Delta V       &amp;= \beta V_i \Delta T \qquad \qquad \qquad \ \ \ \text{with } \beta \approx 3\alpha \\
+               &amp;=33*10^{-6}*30^3*40 \\
                &amp;=35.64\ \text{m}^3
 \end{aligned}
 \end{split}\]</div>
@@ -571,14 +557,11 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <section id="temperature-scales">
 <h2><span class="section-number">3.6. </span>Temperature scales<a class="headerlink" href="#temperature-scales" title="Permalink to this heading">#</a></h2>
 <p>In this course we will try to use units of kelvin – this shares the same ‘magnitude’ as Celsius, i.e., <span class="math notranslate nohighlight">\(\Delta K = \Delta C\)</span>, as they both use water and its properties to define their scales. The Celsius scale specifically uses the melting and boiling points of water at 1 atm to define <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100\ ^\circ C\)</span>.</p>
-<p>Historically, the problem with the Celsius scale was that the melting and boiling points of water vary with pressure – on top of Everest, water boils at around <span class="math notranslate nohighlight">\(70\ ^\circ C\)</span>. The implications of this are subtle and strange. If two people in different countries at different altitudes used these properties of water as a gauge for temperature, the idea of a universal unit is immediately redundant.</p>
-<figure class="align-default" id="fig-egg">
-<a class="reference internal image-reference" href="../../_images/3.6_egg.png"><img alt="../../_images/3.6_egg.png" src="../../_images/3.6_egg.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>Even if you were to specify the pressure at which you take these temperature readings, that still requires perfect pressure control. The kelvin scale fixes this problem by using the <em>triple point</em> of water to define the scale. We will define the triple point in the following section but note that the triple point requires a <em>singular value</em> for pressure and temperature which will be the same regardless of their environmental conditions. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>. One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
+<p>The problem with the Celsius scale is that the melting and boiling points of water vary with pressure – on top of Everest, water boils at around <span class="math notranslate nohighlight">\(70\ ^\circ C\)</span>. The implications of this are subtle and strange. For instance, can you boil an egg on top of Mt. Everest?</p>
+<p>[[FIG SHOWING WHITE HARDENS ABOVE BOILING POINT]]</p>
+<p>Kelvin fixed this problem by using the <em>triple point</em> of water and absolute zero to define the scale. We will define this in the following section but note that the triple point has a <em>singular value</em>, requiring a precise pressure and temperature. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>.</p>
+<p>[[ TRIPLE POINT OF WATER FIGURE ]]</p>
+<p>One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
 <section id="fahrenheit">
 <h3>Fahrenheit<a class="headerlink" href="#fahrenheit" title="Permalink to this heading">#</a></h3>
 <p>You will often also encounter Fahrenheit, the standard common use metric in the US. Fahrenheit is defined in relation to Celsius as: <span class="math notranslate nohighlight">\(°F = (\frac{9}{5} * °C) + 32\)</span>, such that -20 °C = 0 °F, 0 °C = 32 °F and 37 °C = 98.5 °F (body temperature).</p>
@@ -587,42 +570,33 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 </section>
 <section id="properties-of-matter">
 <h2><span class="section-number">3.7. </span>Properties of matter<a class="headerlink" href="#properties-of-matter" title="Permalink to this heading">#</a></h2>
-<p>The above thermodynamic variables (i.e., pressure/volume/temperature) can be visualised in a plot called a <strong>phase diagram</strong>. For a given substance, i.e., an enclosed box of water, we are able to see how by altering these variables the phase might change.</p>
-<figure class="align-default" id="fig-phase">
-<a class="reference internal image-reference" href="../../_images/3.7_phase.png"><img alt="../../_images/3.7_phase.png" src="../../_images/3.7_phase.png" style="width: 60%;" /></a>
-</figure>
+<p>The above thermodynamic variables (i.e., pressure/volume/temperature) can be visualised in a plot called a <strong>phase diagram</strong>. For a given substance, i.e., an enclosed box of nitrogen, we are able to see how by altering these variables the phase might change.</p>
+<p>[[FIG OF PV = const. PHASE DIAGRAM]]</p>
 <section id="states-of-matter">
 <h3>States of matter<a class="headerlink" href="#states-of-matter" title="Permalink to this heading">#</a></h3>
 <p>In general, we have three* main states of matter: solids, liquids, gases.</p>
 <!-- but in short is the state where atoms get stripped of their electrons to make a gas of ions and free electrons).  -->
-<figure class="align-default" id="fig-phases">
-<a class="reference internal image-reference" href="../../_images/3.7_phases.png"><img alt="../../_images/3.7_phases.png" src="../../_images/3.7_phases.png" style="width: 80%;" /></a>
-</figure>
 <p>A <strong>vapour</strong> is a substance in the gaseous phase at a temperature lower than its <strong>critical point</strong>.</p>
-<figure class="align-default" id="fig-water">
-<a class="reference internal image-reference" href="../../_images/3.6_water.png"><img alt="../../_images/3.6_water.png" src="../../_images/3.6_water.png" style="width: 60%;" /></a>
-</figure>
-<p>If a substance is able to hold thermal equilibrium between all three of these phases (solid, liquid and gas) by controlling the thermodynamic variables (pressure and temperature), this will necessarily be a singular point called the <strong>triple point</strong>.</p>
+<p>[[ FIG ]]</p>
+<p>If a substance is able to hold thermal equilibrium between all three of these phases (solid, liquid gas) by controlling the thermodynamic variables (pressure and temperature), this will necessarily (due to 2d geometry) be a singular point called the <strong>triple point</strong>.</p>
+<p>[[ FIG ]]</p>
 </section>
 <section id="examples">
 <h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
-<p>Consider carbon dioxide, CO<sub>2</sub>, and water, H<sub>2</sub>O.</p>
-<figure class="align-default" id="fig-co2-h2o">
-<img alt="../../_images/3.7_co2_h2o.png" src="../../_images/3.7_co2_h2o.png" />
-</figure>
-<p>For carbon dioxide at 1 atm, note that there exists no liquid phase, resulting in CO<sub>2</sub> <strong>sublimating</strong> (skipping liquid) directly from solid to gas as you increase its temperature above <span class="math notranslate nohighlight">\(-78.5\ ^\circ C\)</span>. This is why frozen CO<sub>2</sub> is commonly referred to as dry ice.</p>
-<p>For water at atmospheric pressure, we can have solid, liquid, or vapour. It is clear here that the triple point of H<sub>2</sub>O occupies a singular point, which is why it is used to determine the kelvin scale.</p>
+<p>Carbon dioxide, CO<sub>2</sub>.</p>
+<p>[[ FIG ]]</p>
+<p>At 1 atm, note that there exists no liquid phase, resulting in CO<sub>2</sub> <strong>sublimating</strong> (skipping liquid) directly from solid to gas as you increase its temperature above <span class="math notranslate nohighlight">\(-78.5\ ^\circ C\)</span>. This is why frozen CO<sub>2</sub> is commonly referred to as dry ice.</p>
+<p>Water, H<sub>2</sub>O.</p>
+<p>[[ FIG ]]</p>
+<p>For water at atmospheric pressure, we can have solid, liquid, or vapour. The triple point of H<sub>2</sub>O is used to de</p>
 </section>
 <section id="phase-changes">
 <h3>Phase changes<a class="headerlink" href="#phase-changes" title="Permalink to this heading">#</a></h3>
-<p>As we approach these boundaries between states, energy is used in changing states where there is <em>no change in temperature</em>. The energy associated with the phase change then relates <em>only</em> to the mass of the substance undergoing a phase transition. This is the <strong>latent heat</strong> <span class="math notranslate nohighlight">\(L\)</span> [J kg<sup>-1</sup>] of the phase transition.</p>
-<figure class="align-default" id="fig-phase-circular">
-<a class="reference internal image-reference" href="../../_images/3.7_phase_circular.png"><img alt="../../_images/3.7_phase_circular.png" src="../../_images/3.7_phase_circular.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T}=\frac{Q}{m*0}=\inf \)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>How much energy is used when considering both specific heat and latent for water?</p>
+<p>As we approach these boundaries between states, energy is used in changing states, where during this transition the specific heat is technically undefined. During the change of state, there is no change in temperature despite energy being added to the system. If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T}=\frac{Q}{m*0}=\inf \)</span>. As such, there is an energy associated with the phase change relating only to the mass of the substance undergoing a phase transition. This is the <strong>latent heat</strong> <span class="math notranslate nohighlight">\(L\)</span> [J kg<sup>-1</sup>] of the phase transition.</p>
+<p>[[ FIG OF GAS/LIQUID/SOLID, SHOWING MELT/FREEZE, VAPOUR/CONDENSE, SUBLIMATE/DEPOSIT ]]</p>
+<p>Adding energy to a block of ice,</p>
+<p>[[ FIG ]]</p>
+<p>How much energy is required in each case?</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
@@ -643,7 +617,7 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
   <thead>
     <tr style="text-align: right;">
       <th>State/transition</th>
-      <th>Specific energy (kJ / kg)</th>
+      <th>kJ / kg</th>
     </tr>
   </thead>
   <tbody>
@@ -674,12 +648,8 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <div class="example admonition">
 <p class="admonition-title">Example 1</p>
 <p>How much energy is required to turn 200g of ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C\)</span> to vapour at <span class="math notranslate nohighlight">\(110 ^\circ C\)</span>?</p>
-<!-- 
-```{glue:figure} pd_water_fig
-:name: fig-pd-water
-``` -->
-<figure class="align-default" id="fig-phase-steps">
-<img alt="../../_images/3.7_phase_steps.png" src="../../_images/3.7_phase_steps.png" />
+<figure class="align-default" id="fig-pd-water">
+<img alt="../../_images/85f9879d579607069895b227d22d6908f6eba4ed320ef379ca9fb9fee54017d1.png" src="../../_images/85f9879d579607069895b227d22d6908f6eba4ed320ef379ca9fb9fee54017d1.png" />
 </figure>
 <ol class="arabic simple">
 <li><p>Ice at <span class="math notranslate nohighlight">\(-10\ ^\circ C \rightarrow\)</span> ice at <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span></p></li>
@@ -688,9 +658,6 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <li><p>Water at <span class="math notranslate nohighlight">\(100\ ^\circ C \rightarrow\)</span> vapour at <span class="math notranslate nohighlight">\(100\ ^\circ C\)</span></p></li>
 <li><p>Vapor at <span class="math notranslate nohighlight">\(100\ ^\circ C \rightarrow\)</span> vapour at <span class="math notranslate nohighlight">\(110\ ^\circ C\)</span></p></li>
 </ol>
-<figure class="align-default" id="fig-energy-fig">
-<a class="reference internal image-reference" href="../../_images/3.7_energy_fig.png"><img alt="../../_images/3.7_energy_fig.png" src="../../_images/3.7_energy_fig.png" style="width: 80%;" /></a>
-</figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
 Q &amp;= Q_1 + Q_2 + Q_3 + Q_4 + Q_5 \\
@@ -779,9 +746,7 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
 <section id="newton-s-law-of-cooling">
 <h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
 <p>Let’s say we have two systems that can exchange heat. System one is at temperature T at the start, but it will tend towards T<sub>env</sub> as time evolves.</p>
-<figure class="align-default" id="fig-cooling">
-<a class="reference internal image-reference" href="../../_images/3.7_cooling.png"><img alt="../../_images/3.7_cooling.png" src="../../_images/3.7_cooling.png" style="width: 70%;" /></a>
-</figure>
+<p>[[FIG OF BOILING WATER RADIATING Q –&gt;[TIME]–&gt; FIG OF ROOM TEMP WATER]]</p>
 <p>Heat Q leaves the system with temperature T but the environment is so large that T<sub>env</sub> is constant. What is T as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
 <p>Newton’s cooling equation tells us that the heat lost per unit time is proportional to the temperature difference between the two systems.</p>
 <div class="math notranslate nohighlight">
@@ -812,7 +777,7 @@ m&amp;=\frac{126}{353}=0.36\ \text{kg}
 </section>
 <section id="convection">
 <h3>Convection<a class="headerlink" href="#convection" title="Permalink to this heading">#</a></h3>
-<p>Convection is the transfer of heat by the mass motion of a fluid from one region to another. Examples include hot-air and hot-water heating systems, the cooling system of a car engine, and the circulation of blood in the body. There exists two types of convwiection:</p>
+<p>Convection is the transfer of heat by the mass motion of a fluid from one region to another. Examples include hot-air and hot-water heating systems, the cooling system of a car engine, and the circulation of blood in the body. There exists two types of convection:</p>
 <ul class="simple">
 <li><p><em>Natural (free) convection</em>: where motion arises from density differences caused by temperature gradients. As warmer fluids become less dense, cooler fluids sink and heat is transferred.</p></li>
 <li><p><em>Forced convection</em>: where motion is imposed by an external mechanism, i.e. a pump, fan or some form of mechanical movement. The movement of the fluid in this case is not driven by density or buoyancy, and instead by mechanical work applied to the system.</p></li>
