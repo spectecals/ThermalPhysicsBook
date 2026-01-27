@@ -33,8 +33,9 @@ only_build_toc_files: true
 html:
   use_issues_button: true
   use_repository_button: true
+  favicon: _static/favicon.png
   extra_css:
-    # - _static/custom.css
+    - _static/custom.css
 
 sphinx:
   config:
