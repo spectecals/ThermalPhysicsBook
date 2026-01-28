@@ -170,8 +170,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Overview of Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_solutions.html">1.9. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CH2-L0-Probability_Overview.html">2. Probability Theory for Thermal Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -373,12 +374,6 @@ document.write(`
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="probability-theory-for-thermal-physics-lecture-1">
 <h1><span class="section-number">2.1. </span>Probability Theory for Thermal Physics - Lecture 1<a class="headerlink" href="#probability-theory-for-thermal-physics-lecture-1" title="Permalink to this heading">#</a></h1>
-<div class="reading admonition">
-<p class="admonition-title">Relevant readings and preparation</p>
-<ul class="simple">
-<li><p>Concepts in Thermal Physics: Chapter 3: 3.1-3.6: pg. 20-26</p></li>
-</ul>
-</div>
 <div class="outcomes admonition">
 <p class="admonition-title">Learning outcomes:</p>
 <ul class="simple">
@@ -397,19 +392,19 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[
 \sum_{i} P_{i} = 1.
-\tag{1}
+\tag{2.1}
 \]</div>
 <p>The arithmetic mean, or expected value, is defined as:</p>
 <div class="math notranslate nohighlight">
 \[
 \langle x \rangle = \sum_i x_i P_i.
-\tag{2}
+\tag{2.2}
 \]</div>
 <p>Intuitively, the idea is that for each outcome contributes to the sum in proportion to how likely it is to occur. This is called <em>weighting</em>. If you were to sample the random variable many times, add up all the observed values, and divide by the number of trials, the result would converge to the expected value. We may also define the “mean squared” value:</p>
 <div class="math notranslate nohighlight">
 \[
 \langle x^2 \rangle = \sum_i x_i^2 P_i.
-\tag{3}
+\tag{2.3}
 \]</div>
 <p>Discrete distributions arise in many areas of thermal and statistical physics. Examples include:</p>
 <ul class="simple">
@@ -439,7 +434,7 @@ document.write(`
 \[\begin{split}
 \begin{align*}
 \langle x \rangle &amp;= \sum_i x_i P_i \\
-&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 2 \cdot \tfrac{1}{4} \\
+&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 2 \cdot \tfrac{1}{4} \\\
 &amp;= \tfrac{3}{4} = 0.75
 \end{align*}
 \end{split}\]</div>
@@ -462,12 +457,18 @@ document.write(`
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> now be a <strong>continuous random variable</strong>, meaning it can take any value within some range (the bounds may be finite or infinite). We must treat probabilities differently in this case. Imagine a uniform distribution between 1 and 10: one sample might give an exact value like 4, another could be something extremely specific like 3.14159265… Because there are infinitely many possible values, the probability of landing on any one exact value is effectively zero. Instead, we talk about the probability of <span class="math notranslate nohighlight">\(x\)</span> lying within a small interval of width <span class="math notranslate nohighlight">\(dx\)</span>.</p>
 <p>Many real-life quantities are described by continuous distributions. For example, height, commute durations, and local temperature all vary smoothly within finite limits, even if the exact value can be anything within the range. As before, the total probability must sum to one, but because we are now summing over a continuous range, we replace sums with integrals:</p>
 <div class="math notranslate nohighlight">
-\[\int P(x)dx = 1.\]</div>
+\[
+\int P(x)dx = 1. \tag{2.4}
+\]</div>
 <p>We have analogous expressions for <span class="math notranslate nohighlight">\(\langle x \rangle\)</span> and <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[\langle x \rangle = \int x P(x)dx;\]</div>
+\[
+\langle x \rangle = \int x P(x)dx; \tag{2.5}
+\]</div>
 <div class="math notranslate nohighlight">
-\[\langle x^2 \rangle = \int x^2 P(x)dx.\]</div>
+\[
+\langle x^2 \rangle = \int x^2 P(x)dx. \tag{2.6}
+\]</div>
 <p>Continuous random variables are extremely common in thermal physics and statistical mechanics. Typical scenarios include:</p>
 <ul class="simple">
 <li><p>particle speeds in a gas,</p></li>
@@ -512,7 +513,6 @@ document.write(`
 \end{align*}
 \]</div>
 <p>The mean of 5 lies exactly halfway between the bounds, which is as you’d expected for a symmetric uniform distribution.</p>
-</div>
 <div class="example admonition">
 <p class="admonition-title">Exponential Lifetime Distribution</p>
 <p>Now consider a physical system whose lifetime follows an exponential distribution, such as the lifetime of a radioactive nucleus. The probability density of its lifetime is given by</p>
@@ -551,16 +551,19 @@ P(t) =
 \end{align*}
 \]</div>
 </div>
+</div>
 <p>For an exponential lifetime distribution, the mean value <span class="math notranslate nohighlight">\(\langle t \rangle = 1/\lambda\)</span> has a direct physical interpretation: it is the <strong>average lifetime</strong> of the system. In radioactive decay, this corresponds to the characteristic time after which only about <span class="math notranslate nohighlight">\(1/e\)</span> of the original nuclei remain. It is closely related to experimentally measurable quantities such as the half-life.</p>
 <p>The second moment <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span> tells us about the <strong>spread of possible lifetimes</strong>. Combining these results gives the variance, computed via the difference between <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span> and <span class="math notranslate nohighlight">\(\langle t \rangle\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma_t^2 = \langle t^2 \rangle - \langle t \rangle^2 = \frac{1}{\lambda^2},
+\tag{2.7}
 \]</div>
 <p>which means the standard deviation is equal to the mean:</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma_t = \langle t \rangle = \frac{1}{\lambda}.
+\tag{2.8}
 \]</div>
 <p>This is a distinctive property of exponential decay: the uncertainty in the lifetime is as large as the lifetime itself. Physically, this tells us that individual decay events are highly unpredictable, even though the <em>average behaviour</em> of a large population is very regular and follows an exact exponential law. This contrast between noisy individual lifetimes and smooth ensemble behaviour is one of the central ideas of statistical physics.</p>
 </section>
@@ -609,23 +612,29 @@ A
 <div class="math notranslate nohighlight">
 \[
 \mathrm{Var}(X) = \langle (x-⟨x⟩)^2 \rangle
+\tag{2.9}
 \]</div>
 <p>We can expand the above expression to derive a simpler expression for calculating the variance of a scalar variable:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
+\begin{align}
 \mathrm{Var}(x)
-&amp;= \langle (x - ⟨x⟩)^2 \rangle \\
-&amp;= \langle x^2 - 2⟨x⟩x + ⟨x⟩^2 \rangle \\
-&amp;= \langle x^2 \rangle - 2⟨x⟩⟨x⟩ + ⟨x⟩^2 \\
+&amp;= \langle (x - ⟨x⟩)^2 \rangle
+\\
+&amp;= \langle x^2 - 2⟨x⟩x + ⟨x⟩^2 \rangle
+\\
+&amp;= \langle x^2 \rangle - 2⟨x⟩⟨x⟩ + ⟨x⟩^2
+\\
 &amp;= \langle x^2 \rangle - ⟨x⟩^2.
-\end{aligned}.
+\tag{2.10}
+\end{align}
 \end{split}\]</div>
 <p>This manner of expressing the variance gives rise to a mnemonic expression with which you can memorise the formula: The variance is “the mean of the squares minus the square of the means.” The variance for a variable <span class="math notranslate nohighlight">\(x\)</span> is often denoted <span class="math notranslate nohighlight">\(\sigma^2_x\)</span>, and relates to the <strong>standard deviation</strong>, which is simply the square root of the variance:</p>
 <div class="math notranslate nohighlight">
 \[
 \sigma_x = \sqrt{\left\langle (x - \langle x \rangle)^2 \right\rangle}
 = \sqrt{\,\langle x^2 \rangle - \langle x \rangle^2\,}
+\tag{2.11}
 \]</div>
 </section>
 </section>
@@ -636,7 +645,9 @@ A
 <p class="admonition-title">Example: Inches to centimetres</p>
 <p>The conversion from inches to centimetres, or vice versa, is a linear transformation. If we take <span class="math notranslate nohighlight">\(x\)</span> to be inches, then to find the value <span class="math notranslate nohighlight">\(y\)</span> centimetres, we simply use the scale factor of <span class="math notranslate nohighlight">\(a=2.54\)</span> inches per centimeter and an intercept <span class="math notranslate nohighlight">\(b=0\)</span>:</p>
 <div class="math notranslate nohighlight">
-\[y\ \text{in} = x\ \text{cm} \times a + b = 2.54\ x\ \text{in} + 0\]</div>
+\[
+y\ \text{in} = x\ \text{cm} \times a + b = 2.54\ x\ \text{in} + 0
+\]</div>
 </div>
 <!-- stef: probably don't need 3 examples for linear transformations do we? plus these are covered in the next section
 - Converting **Celsius to Kelvin**: $T_K = T_C + 273.15$ → shift only ($a = 1$, $b = 273.15$).
@@ -647,6 +658,7 @@ A
 <div class="math notranslate nohighlight">
 \[
 \langle y \rangle = \langle ax \ + \ b \rangle = a \langle x \rangle \ + \ b
+\tag{2.12}
 \]</div>
 <p>A constant (i.e. <span class="math notranslate nohighlight">\(b\)</span>) merely contributes its own value to the expectation, and constant factors (i.e. <span class="math notranslate nohighlight">\(a\)</span>) simply pass through the expectation operator. The full process of calculating <span class="math notranslate nohighlight">\(\langle y \rangle\)</span> following its production through the linear transformation <span class="math notranslate nohighlight">\(y = ax+b\)</span> is as follows:</p>
 <div class="math notranslate nohighlight">
@@ -671,14 +683,15 @@ A
 <p>and substituting <span class="math notranslate nohighlight">\(y = a x + b\)</span>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
+\begin{align}
 \mathrm{Var}(y)
 &amp;= \left\langle (ax + b - \langle ax + b \rangle)^2 \right\rangle \\[4pt]
 &amp;= \left\langle (ax + b - (a\langle x \rangle + b))^2 \right\rangle \\[4pt]
 &amp;= \left\langle (a(x - \langle x \rangle))^2 \right\rangle \\[4pt]
 &amp;= a^2\,\left\langle (x - \langle x \rangle)^2 \right\rangle \\[4pt]
 &amp;= a^2\,\mathrm{Var}(x)
-\end{aligned}
+\tag{2.13}
+\end{align}
 \end{split}\]</div>
 <p>This is an important result for physics and measurement generally, as whenever a quantity is converted or calibrated using a linear relation, its uncertainty scales by the square of that factor.</p>
 <div class="cell tag_remove-input docutils container">
@@ -700,6 +713,7 @@ P(u, v) = P_u(u)\,P_v(v).
 <div class="math notranslate nohighlight">
 \[
 P(\vec{x}) = \prod_{i=1}^{N} P_i(x_i).
+\tag{2.14}
 \]</div>
 <p>A very useful consequence of independence is that the expectation of a product factorises:</p>
 <div class="math notranslate nohighlight">
@@ -724,6 +738,7 @@ P(\vec{x}) = \prod_{i=1}^{N} P_i(x_i).
   &amp;= \prod_{i=1}^N \left( \int x_i\, p_i(x_i)\,dx_i \right) \\[6pt]
   &amp;= \prod_{i=1}^N \langle X_i \rangle.
 \end{aligned}
+\tag{2.15}
 \end{split}\]</div>
 <p>This result holds for discrete variables as well: simply replace the integrals within the series with sums.</p>
 <div class="example admonition">
@@ -775,8 +790,8 @@ P(\vec{x}) = \prod_{i=1}^{N} P_i(x_i).
 \[
 \sigma_{mean} = \frac{\sigma_x}{n}.
 \]</div>
-<p class="rubric">TODO - RMS needs elaboration, cite random walks and possibly Brownian motion.</p>
-<p>This principle - that averaging many independent measurements reduces random error - underlies much of experimental physics. However, it is only applicable for random, uncorrelated errors. Any systematic bias in a measurement setup will persist regardless of repetitions. A related idea actually appears in the study of random walks; such as the motion of a particle buffeted by molecules in a fluid. Each step (period of motion) is independent of the last, so whilst the average displacement after many steps is zero, the root-mean-square displacement grows as <span class="math notranslate nohighlight">\(sqrt{n}\)</span>.</p>
+<p>This principle - that averaging many independent measurements reduces error due to randomness - is central to experimental physics. A useful analogy comes from random walks and Brownian motion. In Brownian motion, larger particles suspended in a fluid are constantly buffeted by countless, tiny molecular collisions. Each step is unpredictable and, because the impacts are uncorrelated and occur from all sides, the average displacement is zero. Yet the root-mean-square displacement still grows as <span class="math notranslate nohighlight">\(\sqrt{n}\)</span>, and thus an overall trajectory over time appears.</p>
+<p>The same logic applies to measurement. When fluctuations are truly independent, random error is suppressed by averaging; but any systematic push, whether due to a biased instrument or a drift analogous to a directional force in a random walk, accumulates with repeated measurements rather than diminishes. This distinction between random and biased error explains why averaging reduces noise but cannot eliminate systematic error.</p>
 </div>
 </section>
 <section id="further-examples">
@@ -874,12 +889,12 @@ P(\text{No Pokémon}) = 1 - \frac{1}{n}.
 <p>We presume to think that each searching instance is independent. Your previous efforts have no bearing on future success. Henceforth, the probability of failing to find the right Pokémon after <span class="math notranslate nohighlight">\(n\)</span> attempts is:</p>
 <div class="math notranslate nohighlight">
 \[
-P(\text{No Pokémon after *n* tries}) = \left(1 - \frac{1}{n}\right)^n,
+P(\text{No Pokémon after } n \text{ tries}) = \left(1 - \frac{1}{n}\right)^n,
 \]</div>
 <p>meaning the probability of success on the <span class="math notranslate nohighlight">\(n^{th}\)</span> attempt is merely 1 minus this probability:</p>
 <div class="math notranslate nohighlight">
 \[
-P(\text{Pokémon after *n* tries}) = 1 - \left(1 - \frac{1}{n}\right)^n.
+P(\text{Pokémon after } n \text{ tries}) = 1 - \left(1 - \frac{1}{n}\right)^n.
 \]</div>
 <p>Let’s now graph this probability equation as a function of <em>n</em>…</p>
 <div class="cell tag_remove-input docutils container">

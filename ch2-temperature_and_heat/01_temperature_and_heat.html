@@ -833,7 +833,7 @@ m_\text{ice}&amp;=\frac{126}{362.6}=0.35\ \text{kg}.
 </section>
 <section id="newton-s-law-of-cooling">
 <h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
-<p>Let’s say we have two systems that can exchange heat. System one is at temperature <span class="math notranslate nohighlight">\(T\)</span> at the start, but it will tend towards <span class="math notranslate nohighlight">\(T_\text{env}\)</span> as time <span class="math notranslate nohighlight">\(t\)</span> evolves.</p>
+<p>Consider a system with temperature <span class="math notranslate nohighlight">\(T_\text{sys}\)</span>, placed in contact with the environment with <span class="math notranslate nohighlight">\(T_\text{env}&lt;T_\text{sys}\)</span>.</p>
 <figure class="align-default" id="fig-cooling">
 <a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" /></a>
 </figure>
@@ -842,10 +842,34 @@ m_\text{ice}&amp;=\frac{126}{362.6}=0.35\ \text{kg}.
 <div class="math notranslate nohighlight">
 \[\frac{dQ}{dt}=-a(T(t)-T_{env})\]</div>
 <ul class="simple">
-<li><p>where <span class="math notranslate nohighlight">\(T(t)\)</span> is the temperature as a function of time</p></li>
-<li><p>and <span class="math notranslate nohighlight">\(T_{env}\)</span> is the temperature of the environment.</p></li>
+<li><p>where <span class="math notranslate nohighlight">\(T(t)\)</span> is the temperature as a function of time <span class="math notranslate nohighlight">\([\text{K}]\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{env}\)</span> is the temperature of the environment <span class="math notranslate nohighlight">\([\text{K}]\)</span>,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(a\)</span> is the heat transfer coefficient <span class="math notranslate nohighlight">\([1]\)</span>.</p></li>
 </ul>
-<!-- STUFF ABOUT FIRST LAW WHICH WE HAVE NOT COVERED YET --></section>
+<p>We can use this equation to find the temperature of our system at a time <span class="math notranslate nohighlight">\(t\)</span> through:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\frac{dQ}{dt}&amp;=-a(T(t)-T_\text{env})\\
+\frac{dT}{dt}&amp;=-\frac{a}{C}(T(t)-T_\text{env}) \ \ &amp;\text{(using $Q=C\Delta T$)}\\
+\int \frac{dT}{T-T_\text{env}} &amp;= \int -b\ dt &amp;\text{(where $\frac{a}{C}= b$)} \\
+\ln (T-T_\text{env}) &amp;= - bt + B \qquad &amp;\text{(B = constant)} \\
+T-T_\text{env}&amp;=Be^{-bt} \\
+T(t=0) &amp;= T_\text{env} + B \qquad &amp;\text{($t=0$ finds $B$)} \\
+B &amp;= T_0 - T_\text{env} \\
+T(t) &amp;= T_\text{env} + (T_0-T_\text{env})e^{-bt}
+\end{aligned}
+\end{split}\]</div>
+<p>We can use this result to also find <span class="math notranslate nohighlight">\(Q(t)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q(t) &amp;= C\Delta T = C(T_0 - T(t)) \\
+&amp;= C(T_0 - (T_\text{env} + (T_0-T_\text{env})e^{-bt})) \\
+&amp;= C(T_0 - T_\text{env})(1-e^{-bt})
+\end{aligned}
+\end{split}\]</div>
+</section>
 </section>
 <section id="mechanisms-of-heat-transfer">
 <h2><span class="section-number">2.8. </span>Mechanisms of Heat Transfer<a class="headerlink" href="#mechanisms-of-heat-transfer" title="Permalink to this heading">#</a></h2>
