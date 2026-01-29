@@ -425,7 +425,7 @@ pV = nRT
 </figure>
 <section id="collision-on-one-wall">
 <h3>Collision on one wall<a class="headerlink" href="#collision-on-one-wall" title="Permalink to this heading">#</a></h3>
-<p>Consider a cubic container of volume <span class="math notranslate nohighlight">\(d^3\)</span>, containing molecules of mass <span class="math notranslate nohighlight">\(m\)</span>. Let one molecule have velocity components (<span class="math notranslate nohighlight">\(v_x,v_y,v_z\)</span>) and let it collide with one of the walls, let’s say the wall perpendicular to the x-direction.</p>
+<p>Consider a cubic container of volume <span class="math notranslate nohighlight">\(L_x^3\)</span>, containing molecules of mass <span class="math notranslate nohighlight">\(m\)</span>. Let one molecule have velocity components (<span class="math notranslate nohighlight">\(v_x,v_y,v_z\)</span>) and let it collide with one of the walls, let’s say the wall perpendicular to the x-direction.</p>
 <figure class="align-default" id="fig-elastic-collision">
 <a class="reference internal image-reference" href="../_images/Elastic_Collision.png"><img alt="../_images/Elastic_Collision.png" src="../_images/Elastic_Collision.png" style="width: 70%;" /></a>
 <figcaption>
@@ -438,35 +438,36 @@ pV = nRT
 \[\Delta p_x=−2mv_x = F\Delta t\]</div>
 <p>The <strong>time between collisions</strong> with the <em>same</em> wall is:</p>
 <div class="math notranslate nohighlight">
-\[\Delta t= \frac{2d}{v_x}\]</div>
-<p>where <span class="math notranslate nohighlight">\(d\)</span> is the distance travelled by the molecule, doubled as the particle must bounce back. The <strong>average force from one molecule</strong> on the wall is</p>
+\[\Delta t= \frac{2L_x}{v_x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(L_x\)</span> is the distance travelled by the molecule, doubled as the particle must bounce back. The <strong>average force from one molecule</strong> on the wall is</p>
 <div class="math notranslate nohighlight">
-\[F=\Delta p_x/\Delta t=-2\frac{mv_x }{\left(\frac{2d}{v_x}\right)} = -\frac{mv_x^2}{d}. \]</div>
-<p>Note that the force on the molecule is related to the force on the wall by Newton’s third law: <span class="math notranslate nohighlight">\(F_\text{molecule} = -F_\text{wall}\)</span>. Therefore 1 particle contributes <span class="math notranslate nohighlight">\(F_\text{wall} = mv_x^2/d\)</span>.</p>
+\[F=\Delta p_x/\Delta t=-2\frac{mv_x }{\left(\frac{2L_x}{v_x}\right)} = -\frac{mv_x^2}{L_x}. \]</div>
+<p>Note that the force on the molecule is related to the force on the wall by Newton’s third law: <span class="math notranslate nohighlight">\(F_\text{molecule} = -F_\text{wall}\)</span>. Therefore 1 particle contributes <span class="math notranslate nohighlight">\(F_\text{wall} = mv_x^2/L_x\)</span>.</p>
 <p>For <span class="math notranslate nohighlight">\(N\)</span> molecules, each with possibly different velocities, we take the average:</p>
 <div class="math notranslate nohighlight">
-\[ F_{\text{total}} = \frac{m}{d}(v_{x_1}^2+v_{x_2}^2+...) = \frac{Nm\braket{v_x^2}}{d}. \]</div>
+\[\begin{split}
+\begin{aligned}
+F_{\text{total}} &amp;= \frac{m}{L_x}(v_{x_1}^2+v_{x_2}^2+...) \\
+&amp;= \frac{m}{L_x}\sum^N_{i=1}v_{x_i}^2 \\
+&amp;= \frac{Nm\braket{v_x^2}}{L_x}. 
+\end{aligned}
+\end{split}\]</div>
 <p>Since motion is random, the average kinetic energy is shared equally among directions:</p>
-<figure class="align-default" id="fig-cp-pythagoras">
-<a class="reference internal image-reference" href="../_images/651b2dbf19de133858a934f725957be2ff7562e77ad7cacabdb4832923f9fabb.png"><img alt="../_images/651b2dbf19de133858a934f725957be2ff7562e77ad7cacabdb4832923f9fabb.png" src="../_images/651b2dbf19de133858a934f725957be2ff7562e77ad7cacabdb4832923f9fabb.png" style="width: 40%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Simply using <span class="math notranslate nohighlight">\(z^2 = x^2 + y^2\)</span> for velocities, i.e. <span class="math notranslate nohighlight">\(v^2 = v_x^2 + v_y^2 + v_z^2\)</span>.</span><a class="headerlink" href="#fig-cp-pythagoras" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
 <div class="math notranslate nohighlight">
-\[ \braket{v^2}=\braket{v_x^2}+\braket{v_y^2}+\braket{v_z^2} = 3\braket{v_x^2 } \]</div>
-<div class="math notranslate nohighlight">
-\[ \braket{v_x^2} = \frac{1}{3}\braket{v^2}, \]</div>
-<p>such that</p>
-<div class="math notranslate nohighlight">
-\[ \frac{Nm\braket{v_x^2}}{d} = \frac{N}{3}\left(\frac{m\braket{v^2}}{d}\right).\]</div>
+\[\begin{split}
+\begin{aligned}
+\braket{v^2}=\braket{v_x^2}+\braket{v_y^2}+\braket{v_z^2} = 3\braket{v_x^2} \\
+\braket{v_x^2} = \frac{1}{3}\braket{v^2} \\
+\frac{Nm\braket{v_x^2}}{L_x} = \frac{N}{3}\left(\frac{m\braket{v^2}}{L_x}\right).
+\end{aligned}
+\end{split}\]</div>
 <p>Note that random motion finds <span class="math notranslate nohighlight">\(\braket{v}=0\)</span>, and so <span class="math notranslate nohighlight">\(\braket{v}^2=0\neq\braket{v^2}\)</span>.</p>
 <p>Pressure is the magnitude of the force exerted on the wall per unit area,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-p = \frac{F}{A} &amp;= \frac{F}{d^2} \\
-&amp;= \frac{1}{3}\left(\frac{N}{d^3}m\braket{v^2}\right) \\
+p = \frac{F}{A} &amp;= \frac{F}{L_x^2} \\
+&amp;= \frac{1}{3}\left(\frac{N}{L_x^3}m\braket{v^2}\right) \\
 &amp;= \frac{1}{3}\left(\frac{N}{V}m\braket{v^2}\right).
 \end{align}
 \end{split}\]</div>
@@ -479,8 +480,7 @@ p&amp;=\frac{1}{3}\left(\frac{N}{V}m\braket{v^2}\right)\\
 &amp;=\frac{2}{3}\frac{N}{V}E_k.
 \end{align}
 \end{split}\]</div>
-<p>Pressure is proportional to the number of molecules per unit volume <span class="math notranslate nohighlight">\((\frac{N}{V})\)</span> times the average translational kinetic energy, <span class="math notranslate nohighlight">\(\frac{1}{2}m\braket{v^2}\)</span>. If we recall the ideal gas law (<span class="xref std std-ref">sec:idealeqns</span>) from Chapter 1,
-and use our latest definition of pressure, we obtain</p>
+<p>Pressure is proportional to the number of molecules per unit volume <span class="math notranslate nohighlight">\((\frac{N}{V})\)</span> times the average translational kinetic energy, <span class="math notranslate nohighlight">\(\frac{1}{2}m\braket{v^2}\)</span>. Using the ideal gas law alongside our latest definition of pressure, we obtain</p>
 <div class="math notranslate nohighlight">
 \[ p V = N k_B T = \left(\frac{2}{3}\frac{N}{V}E_k\right) V = \frac{2}{3}NE_k \]</div>
 <p>which, in conjunction with our original definition of kinetic energy in terms of mass and velocity, simply finds that</p>
@@ -535,7 +535,7 @@ v_{rms} = \sqrt{\braket{v^2}} &amp;= \sqrt{\frac{3k_B T}{m}} \\
 <section id="heat-capacities-of-gases-and-equipartition-of-energy">
 <span id="sec-heatcap-equip"></span><h2><span class="section-number">3.3. </span>Heat Capacities of Gases and Equipartition of Energy<a class="headerlink" href="#heat-capacities-of-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h2>
 <p>Equipartition refers to the different degrees of freedom that contribute to the ways in which internal energy is “stored” in a molecule. As a result, this directly relates to the energy required to raise temperature, or the heat capacity.</p>
-<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <span class="xref std std-ref">sec:molar_capacity</span>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
+<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-capacity"><span class="std std-ref">Heat Capacity</span></a>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
 <div class="math notranslate nohighlight">
 \[ c_\text{mol} = \frac{1}{n}\frac{dQ}{dT},\ \text{where}\ c_\text{mol} = \frac{C}{n}. \]</div>
 <p>where C here is the non-specific heat capacity, <span class="math notranslate nohighlight">\(C = \frac{dQ}{dT}\)</span>.</p>
@@ -543,7 +543,7 @@ v_{rms} = \sqrt{\braket{v^2}} &amp;= \sqrt{\frac{3k_B T}{m}} \\
 <figure class="align-default" id="fig-isochoricisobaric-heating">
 <a class="reference internal image-reference" href="../_images/Isochoric_and_Isobaric_Heating.png"><img alt="../_images/Isochoric_and_Isobaric_Heating.png" src="../_images/Isochoric_and_Isobaric_Heating.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Sketched graph depicting two paths of increasing the temperature of an ideal gas; either holding the pressure or volume of the system constant.</span><a class="headerlink" href="#fig-isochoricisobaric-heating" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.3 </span><span class="caption-text">Sketched graph depicting two paths of increasing the temperature of an ideal gas; either holding the pressure or volume of the system constant.</span><a class="headerlink" href="#fig-isochoricisobaric-heating" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Monatomic ideal gases (i.e., noble gases like He, Ne, Ar) each behave like a point particle which makes them the simplest case to describe. From kinetic theory, the average translational energy of <span class="math notranslate nohighlight">\(n\)</span> moles is just</p>
@@ -566,9 +566,11 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <p>The principle of equipartition of energy, which states that each independent mode of motion (degree of freedom) contributes <span class="math notranslate nohighlight">\(\frac{1}{2}k_BT\)</span> of energy per molecule, or <span class="math notranslate nohighlight">\(\frac{1}{2}RT\)</span> per mole. The number of degrees of freedom depends on the ways in which a molecule can store energy, through translation, rotation, and vibration.</p>
 <section id="monatomic-molecules">
 <h4>Monatomic molecules<a class="headerlink" href="#monatomic-molecules" title="Permalink to this heading">#</a></h4>
-<p>[[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/SingleParticleVelocities.png"><img alt="../_images/SingleParticleVelocities.png" src="../_images/SingleParticleVelocities.png" style="width: 40%;" /></a>
+</figure>
 <ul class="simple">
-<li><p>He, Ar, Ne</p></li>
+<li><p>e.g., He, Ar, Ne</p></li>
 <li><p>As above, we see that they have 3 (translational) degrees of freedom.</p></li>
 <li><p><span class="math notranslate nohighlight">\(U = 3 * \left(\frac{1}{2}k_BT\right)*N = \frac{3}{2}nRT \)</span></p></li>
 </ul>
@@ -577,30 +579,20 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <h4>Diatomic molecules<a class="headerlink" href="#diatomic-molecules" title="Permalink to this heading">#</a></h4>
 <figure class="align-default" id="fig-diatomicmolecule-diagram">
 <a class="reference internal image-reference" href="../_images/Diatomic_Molecule_Diagram.png"><img alt="../_images/Diatomic_Molecule_Diagram.png" src="../_images/Diatomic_Molecule_Diagram.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Simple illustration broadly depicting the structure of a diatomic molecule.</span><a class="headerlink" href="#fig-diatomicmolecule-diagram" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="fig-diatomicmolecule-translating">
-<a class="reference internal image-reference" href="../_images/Translating_Diatomic_Molecule.png"><img alt="../_images/Translating_Diatomic_Molecule.png" src="../_images/Translating_Diatomic_Molecule.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Illustration depicting the translation of a diatomic molecule in a cartesian coordinate system centered at the midpoint of the atomic bond.</span><a class="headerlink" href="#fig-diatomicmolecule-translating" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="fig-diatomicmolecule-rotation">
-<a class="reference internal image-reference" href="../_images/Diatomic_Rotational_Modes.png"><img alt="../_images/Diatomic_Rotational_Modes.png" src="../_images/Diatomic_Rotational_Modes.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Illustration depicting the three planes of rotation available to the diatomic molecule in a cartesian coordinate system.</span><a class="headerlink" href="#fig-diatomicmolecule-rotation" title="Permalink to this image">#</a></p>
-</figcaption>
 </figure>
 <ul class="simple">
-<li><p>H<sub>2</sub>, N<sub>2</sub>, O<sub>2</sub></p></li>
 <li><p>A diatomic molecule has more ways to store energy than monatomic ones.</p></li>
 <li><p>Still has the three translational degrees of freedom.</p></li>
 <li><p>Also, two rotational degrees of freedom (rotation along the axis of the molecule is usually negligible unless we get to extreme temperatures)</p></li>
 <li><p><span class="math notranslate nohighlight">\(U = 5 * \left(\frac{1}{2}k_BT\right)*N = \frac{5}{2}nRT \)</span></p></li>
 </ul>
 <p>This prediction agrees well with measured values for diatomic gases such as N<sub>2</sub>, O<sub>2</sub> at room temperature.</p>
+<figure class="align-default" id="fig-diatomicmolecule-translating">
+<a class="reference internal image-reference" href="../_images/Translating_Diatomic_Molecule.png"><img alt="../_images/Translating_Diatomic_Molecule.png" src="../_images/Translating_Diatomic_Molecule.png" style="width: 70%;" /></a>
+</figure>
+<figure class="align-default" id="fig-diatomicmolecule-rotation">
+<a class="reference internal image-reference" href="../_images/Diatomic_Rotational_Modes.png"><img alt="../_images/Diatomic_Rotational_Modes.png" src="../_images/Diatomic_Rotational_Modes.png" style="width: 70%;" /></a>
+</figure>
 </section>
 <section id="higher-energy-modes">
 <h4>Higher energy modes<a class="headerlink" href="#higher-energy-modes" title="Permalink to this heading">#</a></h4>
@@ -612,7 +604,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <figure class="align-default" id="fig-corkscrew-diatominc-bond">
 <a class="reference internal image-reference" href="../_images/Diatomic_Molecule_Spring.png"><img alt="../_images/Diatomic_Molecule_Spring.png" src="../_images/Diatomic_Molecule_Spring.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Sketch of a corkscrew diatomically-bonded molecule.</span><a class="headerlink" href="#fig-corkscrew-diatominc-bond" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.4 </span><span class="caption-text">Sketch of a corkscrew diatomically-bonded molecule.</span><a class="headerlink" href="#fig-corkscrew-diatominc-bond" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -622,7 +614,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <figure class="align-default" id="fig-specific-isobaric-isochoric-heating">
 <a class="reference internal image-reference" href="../_images/Specific_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/Specific_Isochoric_and_Isobaric_Heating.png" src="../_images/Specific_Isochoric_and_Isobaric_Heating.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Graph depicting an isochoric and isochoric process to raise the temperature of an ideal gas by 1 Kelvin.</span><a class="headerlink" href="#fig-specific-isobaric-isochoric-heating" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Graph depicting an isochoric and isochoric process to raise the temperature of an ideal gas by 1 Kelvin.</span><a class="headerlink" href="#fig-specific-isobaric-isochoric-heating" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="math notranslate nohighlight">
@@ -753,7 +745,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <figure class="align-default" id="fig-energy-degrees-of-freedom">
 <a class="reference internal image-reference" href="../_images/Energy_Modes-Degrees_of_Freedom.png"><img alt="../_images/Energy_Modes-Degrees_of_Freedom.png" src="../_images/Energy_Modes-Degrees_of_Freedom.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Graph showing how new degrees of freedom are unlocked as the system attains more energy as per the equipartition theorem.</span><a class="headerlink" href="#fig-energy-degrees-of-freedom" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Graph showing how new degrees of freedom are unlocked as the system attains more energy as per the equipartition theorem.</span><a class="headerlink" href="#fig-energy-degrees-of-freedom" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -764,25 +756,24 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <figure class="align-default" id="fig-watervaporisation">
 <a class="reference internal image-reference" href="../_images/Water_Vaporisation.png"><img alt="../_images/Water_Vaporisation.png" src="../_images/Water_Vaporisation.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.11 </span><span class="caption-text">From left-to-right this figure depicts the reversible process of liquid water evaporating when the volume of its container is expanded, leading to a drop in pressure which results in the water boiling. The process can be reversed by using a force to compress the piston onto the steam, which gradually leads to to condensation as the pressure increases once more.</span><a class="headerlink" href="#fig-watervaporisation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">From left-to-right this figure depicts the reversible process of liquid water evaporating when the volume of its container is expanded, leading to a drop in pressure which results in the water boiling. The process can be reversed by using a force to compress the piston onto the steam, which gradually leads to to condensation as the pressure increases once more.</span><a class="headerlink" href="#fig-watervaporisation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Scenario: A vapour is contained in a cylinder with a movable piston.
 We slowly compress the vapour while allowing heat exchange so that the process is approximately isothermal (constant temperature).</p>
 <p>We want to understand how pressure, volume, and the <em>phase</em> of the material change during compression - phase is a region of matter homogeneous in properties (e.g., liquid, vapour).</p>
 <p><strong>Stage 1: Pure Vapour (Gas)</strong></p>
-<p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">Ideal Gas Law</span></a>.</p>
+<p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">Ideal gases</span></a>.</p>
 <ul class="simple">
 <li><p>The pressure increases smoothly as the volume decreases.</p></li>
 <li><p>No liquid is present.</p></li>
 </ul>
 <p>This corresponds to the vapour region on the p-V diagram (right side):</p>
 <figure class="align-default" id="fig-pv-diagram-for-two-phase-systems">
-<a class="reference internal image-reference" href="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png"><img alt="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png" src="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png"><img alt="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png" src="../_images/pV_Diagram_for_two-phase_system_showing_isotherms.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.12 </span><span class="caption-text">Pressure–volume (P–v) diagram for a two-phase system showing isotherms, liquid–vapour coexistence, and the critical point.
-Source: MIT OpenCourseWare, Thermodynamics, Fig. 8.3. Adapted from lecture notes.
-<a class="reference external" href="https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html">https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html</a></span><a class="headerlink" href="#fig-pv-diagram-for-two-phase-systems" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">Pressure–volume (P–v) diagram for a two-phase system showing isotherms, liquid–vapour coexistence, and the critical point.
+<a class="reference external" href="https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html">Source: MIT OpenCourseWare, Thermodynamics, Fig. 8.3.</a></span><a class="headerlink" href="#fig-pv-diagram-for-two-phase-systems" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Stage 2: Saturation Point (First Drop of Liquid Appears)</strong></p>
@@ -813,11 +804,11 @@ Liquids are nearly incompressible, so:</p>
 <li><p>Further compression causes very little volume change,</p></li>
 <li><p>But pressure increases steeply.</p></li>
 </ul>
-<p>This corresponds to the left side of the p-V diagram. [[REF FIG 8.3]]</p>
+<p>This corresponds to the left side of the p-V diagram.</p>
 <figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/Vapour_Compression.png"><img alt="../_images/Vapour_Compression.png" src="../_images/Vapour_Compression.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.13 </span><span class="caption-text">Schematic illustration of vapour compression in a piston–cylinder.
+<p><span class="caption-number">Fig. 3.9 </span><span class="caption-text">Schematic illustration of vapour compression in a piston–cylinder.
 (A) A gas initially occupies the full volume at low density.
 (B) Compression increases the gas density as the piston moves downward.
 (C) At sufficiently high pressure, liquid nucleation begins within the vapour, producing a two-phase mixture.
@@ -825,7 +816,7 @@ Liquids are nearly incompressible, so:</p>
 (E) The system is fully liquefied, and further compression produces negligible volume change.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><strong>Notes:</strong></p>
+<!-- **Notes:** -->
 <!-- https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html --></section>
 <section id="the-physics-of-real-gases">
 <h2><span class="section-number">3.5. </span>The Physics of Real Gases<a class="headerlink" href="#the-physics-of-real-gases" title="Permalink to this heading">#</a></h2>
@@ -838,7 +829,7 @@ Liquids are nearly incompressible, so:</p>
 <figure class="align-default" id="fig-compressionfactor">
 <a class="reference internal image-reference" href="../_images/CompressionFactor.png"><img alt="../_images/CompressionFactor.png" src="../_images/CompressionFactor.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.14 </span><span class="caption-text">Compression factor <span class="math notranslate nohighlight">\(Z = pV / nRT\)</span> plotted against pressure for a real gas at different temperatures.
+<p><span class="caption-number">Fig. 3.10 </span><span class="caption-text">Compression factor <span class="math notranslate nohighlight">\(Z = pV / nRT\)</span> plotted against pressure for a real gas at different temperatures.
 At high temperatures the gas behaves almost ideally, with <span class="math notranslate nohighlight">\(Z \approx 1\)</span>. At lower temperatures, attractive forces between molecules cause the gas to deviate from ideal behaviour, giving <span class="math notranslate nohighlight">\(Z &lt; 1\)</span> at moderate pressures. At higher pressures, repulsive interactions dominate and <span class="math notranslate nohighlight">\(Z\)</span> increases. The Boyle temperature corresponds to the case where the gas most closely follows ideal-gas behaviour over a range of pressures.</span><a class="headerlink" href="#fig-compressionfactor" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
@@ -858,7 +849,6 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 </div>
 <p>Therefore, at <span class="math notranslate nohighlight">\(T=T_B\)</span> the gas obeys the ideal gas equation most closely at low to moderate pressures.</p>
 <p>We can then conclude that attractive forces dominate below <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&lt;1 \rightarrow\)</span> gas is more compressible) and repulsive forces dominate at temperatures greater than <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&gt; 1 \rightarrow\)</span> gas is less compressible).</p>
-<p><strong>Summary</strong></p>
 </section>
 <section id="molecular-interactions">
 <h3>Molecular Interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
