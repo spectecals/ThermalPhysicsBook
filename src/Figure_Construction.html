@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'src/Figure_Construction';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Core Concepts" href="../unstructed_content_for_lecture_notes/ch1-introduction/01_intro.html" />
+    <link rel="next" title="1. Introduction" href="../unstructed_content_for_lecture_notes/ch1-introduction/01_intro.html" />
     <link rel="prev" title="Welcome to Thermal Physics!" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -168,28 +168,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/03_solutions.html">1.9. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch2-temperature_and_heat/02_questions.html">2.9. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch2-temperature_and_heat/03_solutions.html">2.10. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/02_questions.html">3.4. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/03_solutions.html">3.5. Solutions</a></li>
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html">4. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-Problem_Sheet.html">4.11. Probability Theory - Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-Problem_Sheet_Solutions.html">4.12. Probability Theory - Solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S0-Probability_Overview.html">4.13. Probability Theory for Thermal Physics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts.html">4.14. Probability Theory for Thermal Physics - Lecture 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem.html">4.15. Probability Theory for Thermal Physics - Lecture 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions.html">4.16. Probability Theory for Thermal Physics - Lecture 3</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/02_questions.html">1.10. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unstructed_content_for_lecture_notes/ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
 </ul>
 </details></li>
 </ul>
@@ -352,122 +333,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">myst_nb</span><span class="w"> </span><span class="kn">import</span> <span class="n">glue</span>
-</pre></div>
+  <div class="cell tag_remove-input docutils container">
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">OG_COLORS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;#EE7733&quot;</span><span class="p">,</span> <span class="s2">&quot;#EEAA33&quot;</span><span class="p">,</span> <span class="s2">&quot;#228833&quot;</span><span class="p">,</span> <span class="s2">&quot;#66CC55&quot;</span><span class="p">]</span>
-
-<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-<span class="n">temperatures</span> <span class="o">=</span> <span class="p">[</span><span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">800</span><span class="p">]</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-
-<span class="k">for</span> <span class="n">T</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">temperatures</span><span class="p">,</span> <span class="n">OG_COLORS</span><span class="p">):</span>
-    <span class="n">P</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;$T = </span><span class="si">{</span><span class="n">T</span><span class="si">}</span><span class="s2">$&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2500</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Volume $V$ [arb. units]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Pressure $P$ [arb. units]&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Temperatures&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figtext</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mf">0.04</span><span class="p">,</span>
-    <span class="n">s</span><span class="o">=</span><span class="s2">&quot;Pressure–Volume Curves for an Ideal Gas at Different Temperatures&quot;</span><span class="p">,</span>
-    <span class="n">ha</span><span class="o">=</span><span class="s2">&quot;center&quot;</span>
-<span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/bf947e32cefea085f8f94cea8709f825ce1a00b3bcd6e86db643ba00e15c4978.png" src="../_images/bf947e32cefea085f8f94cea8709f825ce1a00b3bcd6e86db643ba00e15c4978.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M_WATER</span> <span class="o">=</span> <span class="mf">0.01801528</span>
-
-<span class="n">A</span> <span class="o">=</span> <span class="o">-</span><span class="mf">203.6060</span>
-<span class="n">B</span> <span class="o">=</span> <span class="mf">1523.290</span>
-<span class="n">C</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3196.413</span>
-<span class="n">D</span> <span class="o">=</span> <span class="mf">2474.455</span>
-<span class="n">E</span> <span class="o">=</span> <span class="mf">3.855326</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">cp_water_mass</span><span class="p">(</span><span class="n">T_celsius</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Specific heat capacity of liquid water at 1 bar as a function of temperature.</span>
-<span class="sd">    Input:  T_celsius (float or array), temperature in °C</span>
-<span class="sd">    Output: cp in J/(kg·K)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">T_kelvin</span> <span class="o">=</span> <span class="n">T_celsius</span> <span class="o">+</span> <span class="mf">273.15</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">T_kelvin</span> <span class="o">/</span> <span class="mf">1000.0</span>
-
-    <span class="n">cp_molar</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="o">*</span><span class="n">t</span> <span class="o">+</span> <span class="n">C</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">D</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="n">E</span> <span class="o">/</span> <span class="p">(</span><span class="n">t</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># J/mol/K</span>
-    <span class="k">return</span> <span class="n">cp_molar</span> <span class="o">/</span> <span class="n">M_WATER</span>                           <span class="c1"># J/kg/K</span>
-
-<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-<span class="n">cp</span> <span class="o">=</span> <span class="n">cp_water_mass</span><span class="p">(</span><span class="n">T</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">cp</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Temperature (°C)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Specific heat capacity $c_p$ (J kg$^{-1}$ K$^{-1}$)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Specific heat of water as a function of temperature&quot;</span><span class="p">)</span>
-
-<span class="n">T0</span><span class="p">,</span> <span class="n">T100</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">100.0</span>
-<span class="n">cp0</span>   <span class="o">=</span> <span class="n">cp_water_mass</span><span class="p">(</span><span class="n">T0</span><span class="p">)</span>
-<span class="n">cp100</span> <span class="o">=</span> <span class="n">cp_water_mass</span><span class="p">(</span><span class="n">T100</span><span class="p">)</span>
-<span class="c1"># ax.scatter([T0, T100], [cp0, cp100], zorder=3, color=&quot;red&quot;)</span>
-
-<span class="c1"># ax.hlines(cp0,   xmin=-20.0, xmax=T0, linestyles=&quot;dashed&quot;, alpha=0.7, color=&quot;red&quot;)</span>
-<span class="c1"># ax.hlines(cp100, xmin=-20.0, xmax=T100, linestyles=&quot;dashed&quot;, alpha=0.7, color=&quot;red&quot;)</span>
-
-
-<span class="n">x_arrow</span> <span class="o">=</span> <span class="o">-</span><span class="mf">2.0</span>
-<span class="n">y_low</span><span class="p">,</span> <span class="n">y_high</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">cp0</span><span class="p">,</span> <span class="n">cp100</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">cp0</span><span class="p">,</span> <span class="n">cp100</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span>
-    <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x_arrow</span><span class="p">,</span> <span class="n">y_high</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="n">x_arrow</span><span class="p">,</span> <span class="n">y_low</span><span class="p">),</span>
-    <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">&quot;&lt;-&gt;&quot;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
-<span class="p">)</span>
-
-<span class="n">delta_cp</span> <span class="o">=</span> <span class="n">cp100</span> <span class="o">-</span> <span class="n">cp0</span>  <span class="c1"># will be about -5.6 J kg^-1 K^-1</span>
-<span class="n">y_mid</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">y_low</span> <span class="o">+</span> <span class="n">y_high</span><span class="p">)</span>
-
-<span class="c1"># ax.text(</span>
-<span class="c1">#     x_arrow + 2, y_mid,</span>
-<span class="c1">#     rf&quot;$\Delta c_p \approx {delta_cp:+.1f}\ \mathrm{{J\,kg^{{-1}}K^{{-1}}}}$&quot;,</span>
-<span class="c1">#     va=&quot;center&quot;</span>
-<span class="c1"># )</span>
-
-<span class="c1"># tidy limits so the arrow and text fit nicely</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">4100</span><span class="p">,</span> <span class="mi">4280</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-
-<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;cp_water_delta_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/3a420c0c4e8797304ec11d67021f1b3a760c0ed128920288c6495b4c299b02f9.png" src="../_images/3a420c0c4e8797304ec11d67021f1b3a760c0ed128920288c6495b4c299b02f9.png" />
 </div>
@@ -517,7 +390,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Core Concepts</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

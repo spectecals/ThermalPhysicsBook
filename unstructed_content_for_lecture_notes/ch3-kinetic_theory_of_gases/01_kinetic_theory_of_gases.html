@@ -69,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'unstructed_content_for_lecture_notes/ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="3.4. Questions" href="02_questions.html" />
+    <link rel="next" title="3.6. Questions" href="02_questions.html" />
     <link rel="prev" title="2.10. Solutions" href="../ch2-temperature_and_heat/03_solutions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -170,9 +170,9 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.9. Solutions</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.10. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/03_solutions.html">1.11. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -181,8 +181,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">3. Kinetic Theory of Gases</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_questions.html">3.4. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">3.5. Solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_questions.html">3.6. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">3.7. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../ch5-probability_for_thermodynamics/CH5%20Probability%20all%20sections.html">4. Probability Theory for Thermal Physics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -358,6 +358,12 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-ths-mean-for-c-v-vs-c-p">What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a></li>
 </ul>
 </li>
 </ul>
@@ -544,7 +550,7 @@ v_{rms} = \sqrt{\braket{v^2}} &amp;= \sqrt{\frac{3k_B T}{m}} \\
 <!-- skipping Molar specific heat of an ideal gas   --></section>
 </section>
 <section id="heat-capacities-of-gases-and-equipartition-of-energy">
-<h2><span class="section-number">3.3. </span>Heat Capacities of Gases and Equipartition of Energy<a class="headerlink" href="#heat-capacities-of-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h2>
+<span id="sec-heatcap-equip"></span><h2><span class="section-number">3.3. </span>Heat Capacities of Gases and Equipartition of Energy<a class="headerlink" href="#heat-capacities-of-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h2>
 <p>Equipartition refers to the different degrees of freedom that contribute to the ways in which internal energy is “stored” in a molecule. As a result, this directly relates to the energy required to raise temperature, or the heat capacity.</p>
 <p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <span class="xref std std-ref">sec:molar_capacity</span>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
 <div class="math notranslate nohighlight">
@@ -607,16 +613,255 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-\text{Monatomic, } \qquad _V &amp;= \frac{3}{2}R, \qquad C_p=C_V + R = \frac{5}{2}R \\
+\text{Monatomic, } \qquad C_V &amp;= \frac{3}{2}R, \qquad C_p=C_V + R = \frac{5}{2}R \\
 \text{Diatomic, } \qquad C_V &amp;= \frac{5}{2}R, \qquad C_p=C_V + R = \frac{7}{2}R
 \end{align}
 \end{split}\]</div>
 <figure class="align-default" id="fig-cp-atomics">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\\begin{tabular}{lrr}\n\\toprule\nSpecific heats ($\\mathrm{J\\,mol^{-1}\\,K^{-1}}$) &amp; monatomic &amp; diatomic \\\\\n\\midrule\n$C_V$ &amp; 12.500000 &amp; 20.800000 \\\\\n$C_p$ &amp; 20.800000 &amp; 29.100000 \\\\\n\\bottomrule\n\\end{tabular}\n&#39;
-</pre></div>
-</div>
-</figure>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Specific heats (J/mol/K)</th>
+      <th>monatomic</th>
+      <th>diatomic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cv</th>
+      <td>12.5</td>
+      <td>20.8</td>
+    </tr>
+    <tr>
+      <th>Cp</th>
+      <td>20.8</td>
+      <td>29.1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></figure>
 <p>These are the predictions from equipartition. How about real gases?</p>
+<figure class="align-default" id="fig-cp-monatomics">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Monatomic</th>
+      <th>He</th>
+      <th>Ar</th>
+      <th>Ne</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cv</th>
+      <td>12.5</td>
+      <td>12.5</td>
+      <td>12.7</td>
+    </tr>
+    <tr>
+      <th>Cp</th>
+      <td>20.8</td>
+      <td>20.8</td>
+      <td>20.8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></figure>
+<figure class="align-default" id="fig-cp-diatomics">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Diatomic</th>
+      <th>H2</th>
+      <th>N2</th>
+      <th>O2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Cv</th>
+      <td>20.4</td>
+      <td>20.8</td>
+      <td>21.1</td>
+    </tr>
+    <tr>
+      <th>Cp</th>
+      <td>28.8</td>
+      <td>29.1</td>
+      <td>29.4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></figure>
+<p>[[FIG OF 18.19 IN SRC]]</p>
+</section>
+</section>
+<section id="compressing-a-gas-or-vapour">
+<h2><span class="section-number">3.4. </span>Compressing a gas or vapour<a class="headerlink" href="#compressing-a-gas-or-vapour" title="Permalink to this heading">#</a></h2>
+<p>What happens when we compress a gas or vapour?</p>
+<p>[[FIG 8.1 IN SRC]]</p>
+<p>Scenario: A vapour is contained in a cylinder with a movable piston.
+We slowly compress the vapour while allowing heat exchange so that the process is approximately isothermal (constant temperature).</p>
+<p>We want to understand how pressure, volume, and the phase of the material change during compression.</p>
+<p>A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)</p>
+<p><strong>Stage 1: Pure Vapour (Gas)</strong></p>
+<p>Initially, the cylinder contains vapour only. Compression reduces the volume and the pressure rises according to the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">Ideal Gas Law</span></a>.</p>
+<ul class="simple">
+<li><p>The pressure increases smoothly as the volume decreases.</p></li>
+<li><p>No liquid is present.</p></li>
+</ul>
+<p>This corresponds to the vapour region on the p-V diagram (right side):</p>
+<p>[[FIG 8.3 (sorry this one’s a bit intense)]]</p>
+<p><strong>Stage 2: Saturation Point (First Drop of Liquid Appears)</strong></p>
+<p>Eventually, the vapour reaches a saturation pressure at the given temperature.
+At this moment:</p>
+<ul class="simple">
+<li><p>The vapour is just dense enough to start condensing.</p></li>
+<li><p>The first droplet of liquid forms.</p></li>
+<li><p>This is called the dew point.
+Now the system enters the two-phase region.</p></li>
+</ul>
+<p><strong>Stage 3: Two-Phase Mixture (Liquid + Vapour)</strong></p>
+<p>Continuing compression:</p>
+<ul class="simple">
+<li><p>More vapour condenses into liquid.</p></li>
+<li><p>The amount of liquid increases, vapour decreases.</p></li>
+<li><p>Pressure remains constant, even though volume continues to decrease.
+This constant pressure is the saturation pressure at the chosen temperature.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P=P_sat(T)=\ \text{constant during the phase}\]</div>
+<p>The work done is used to change phase, not increase pressure.
+This corresponds to the horizontal line inside the dome on the P–V diagram (above).</p>
+<p><strong>Stage 4: Fully Liquid (Subcooled Liquid Region)</strong></p>
+<p>Eventually, no vapour remains. The system is now all liquid.
+Liquids are nearly incompressible, so:</p>
+<ul class="simple">
+<li><p>Further compression causes very little volume change,</p></li>
+<li><p>But pressure increases steeply.</p></li>
+</ul>
+<p>This corresponds to the left side of the p-V diagram. [[REF FIG 8.3]]</p>
+<p>[[FIG COMPRESSION IN SRC]]</p>
+<p><strong>Notes:</strong></p>
+<!-- https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html --></section>
+<section id="the-physics-of-real-gases">
+<h2><span class="section-number">3.5. </span>The Physics of Real Gases<a class="headerlink" href="#the-physics-of-real-gases" title="Permalink to this heading">#</a></h2>
+<p>In <a class="reference internal" href="#sec-heatcap-equip"><span class="std std-ref">Heat Capacities of Gases and Equipartition of Energy</span></a>, we considered the molecular model for an ideal gas. For a real gas, these assumptions are only approximate. To assess how close a real gas is to ideal behaviour, we define the compressibility factor, <span class="math notranslate nohighlight">\(Z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ Z = PV/nRT \]</div>
+<p>where <span class="math notranslate nohighlight">\(Z=1\)</span> for an ideal gas.</p>
+<section id="compressibility">
+<h3>Compressibility<a class="headerlink" href="#compressibility" title="Permalink to this heading">#</a></h3>
+<p>[[FIG 6 IN SRC]]</p>
+<p>In the above plot, the red horizontal line at <span class="math notranslate nohighlight">\(Z = 1\)</span> represents the ideal gas - no deviation with pressure. Real gases show different behaviour depending on temperature.</p>
+<p><strong>High temperature</strong>: Thermal energy dominates over intermolectular forces and molecules do not significantly attract or repel each other, so the curve stays above or close to 1.</p>
+<p><strong>Low temperature</strong>: Attractive forces matter more, where at moderate pressure, attraction dominates and the gas compresses more easily so <span class="math notranslate nohighlight">\(Z &lt; 1\)</span>. For high pressure, repulsive forces dominate and <span class="math notranslate nohighlight">\(Z &gt; 1\)</span>.</p>
+<p><strong>Boyle temperature</strong>: The Boyle temperature <span class="math notranslate nohighlight">\(T_B\)</span> is the temperature at which a real gas shows minimal deviation from the ideal gas law over a moderate pressure range.
+At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \approx 1\)</span> for relatively low to moderate pressures.</p>
+<p>At T_B, attractive and repulsive effects approximately cancel out, leading to ideal gas behaviour over a range of low to moderate pressures.</p>
+<p>More precisely, if we expand (virial expansion) the compressibility factor:</p>
+<div class="math notranslate nohighlight">
+\[ Z = 1 + B(T)p + C(T)p^2 + \ldots\]</div>
+<p>B(T) is the second virial coefficent, which encodes the balance of intermolecular attractions.</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition</p>
+<p>The Boyle temperature T<sub>B</sub> is defined by B(T_B) = 0</p>
+</div>
+<p>Therefore, at <span class="math notranslate nohighlight">\(T=T_B\)</span> the gas obeys the ideal gas equation most closely at low to moderate pressures.</p>
+<p>We can then conclude that attractive forces dominate below <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&lt;1 \rightarrow\)</span> gas is more compressible) and repulsive forces dominate at temperatures greater than <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&gt; 1 \rightarrow\)</span> gas is less compressible).</p>
+<p><strong>Summary</strong></p>
+<figure class="align-default" id="fig-cp-summary">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Regime</th>
+      <th>Behaviour</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ideal gas</th>
+      <td>No interactions, point-like particles</td>
+      <td>Z = 1</td>
+    </tr>
+    <tr>
+      <th>Low T, moderate P</th>
+      <td>Attractions dominate</td>
+      <td>Z &lt; 1</td>
+    </tr>
+    <tr>
+      <th>High P, any T</th>
+      <td>Repulsion dominate</td>
+      <td>Z &gt; 1</td>
+    </tr>
+    <tr>
+      <th>T_B, moderate pressure</th>
+      <td>Ideal-like behaviour</td>
+      <td>Z ≈ 1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></figure>
+</section>
+<section id="molecular-interactions">
+<h3>Molecular Interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -667,7 +912,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.4. </span>Questions</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>Questions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -703,6 +948,12 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-ths-mean-for-c-v-vs-c-p">What does ths mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a></li>
 </ul>
 </li>
 </ul>
