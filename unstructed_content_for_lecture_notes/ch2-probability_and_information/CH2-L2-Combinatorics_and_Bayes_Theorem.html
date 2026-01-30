@@ -170,9 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Overview of Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_solutions.html">1.9. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CH2-L0-Probability_Overview.html">2. Probability Theory for Thermal Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -358,6 +357,12 @@ document.write(`
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="probability-theory-for-thermal-physics-lecture-2">
 <h1><span class="section-number">2.2. </span>Probability Theory for Thermal Physics - Lecture 2<a class="headerlink" href="#probability-theory-for-thermal-physics-lecture-2" title="Permalink to this heading">#</a></h1>
+<div class="reading admonition">
+<p class="admonition-title">Relevant readings and preparation</p>
+<ul class="simple">
+<li><p>Concepts in Thermal Physics: Chapter 3: 3.1-3.8: pg. 20-28</p></li>
+</ul>
+</div>
 <div class="outcomes admonition">
 <p class="admonition-title">Learning outcomes:</p>
 <ul class="simple">
@@ -403,21 +408,18 @@ This quantity appears throughout probability theory because it counts how many d
 <div class="math notranslate nohighlight">
 \[
  p^k (1 - p)^{n - k}
- \tag{2.16}
  \]</div>
 <ol class="arabic simple" start="2">
 <li><p><strong>The number of possible sequences</strong> with exactly <em>k</em> successes:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[
- {n \choose k} = \frac{n!}{k!(n-k)!}
- \tag{2.17}
+ {n \choose k}
  \]</div>
 <p>Multiplying these gives the <strong>binomial probability</strong> of observing <em>k</em> successes given <em>n</em> trials:</p>
 <div class="math notranslate nohighlight">
 \[
-P(n, k) = {n \choose k} p^k (1 - p)^{n - k} = \frac{n!}{k!(n-k)!} p^k (1 - p)^{n - k}
-\tag{2.18}
+P(n, k) = {n \choose k} p^k (1 - p)^{n - k}
 \]</div>
 </section>
 <hr class="docutils" />
@@ -427,7 +429,6 @@ P(n, k) = {n \choose k} p^k (1 - p)^{n - k} = \frac{n!}{k!(n-k)!} p^k (1 - p)^{n
 <div class="math notranslate nohighlight">
 \[
 \sum_{k=0}^{n} P(n, k) = 1,
-\tag{2.19}
 \]</div>
 <p>so the probabilities are properly normalised.
 The <strong>mean</strong> and <strong>variance</strong> of <em>k</em> are:</p>
@@ -441,7 +442,6 @@ The <strong>mean</strong> and <strong>variance</strong> of <em>k</em> are:</p>
 \[
 \frac{\sigma_k}{\langle k \rangle} =
 \sqrt{\frac{1 - p}{np}}
-\tag{2.20}
 \]</div>
 <p>decreases, meaning the distribution becomes more sharply peaked around <em>k = np</em>.</p>
 <hr class="docutils" />
@@ -475,7 +475,8 @@ x = (2k - n)L.
 </section>
 <section id="should-you-gamble-at-the-casino-roulette-wheel">
 <h2>Should you gamble at the casino? (Roulette wheel)<a class="headerlink" href="#should-you-gamble-at-the-casino-roulette-wheel" title="Permalink to this heading">#</a></h2>
-<p>Generally inadvisable, unless declaring bankruptcy <em>is</em> the objective.</p>
+<p>Generally inadvisable, unless declaring bankruptcy is the objective.</p>
+<p>[[Roulette wheel figure stock image]]</p>
 <p>On a roulette wheel, there are 36 segments which can be bet on, along with the zero segment, meaning there are 37 possible outcomes. There are equally many red tiles as there are black, so the probability of landing on either colour is <span class="math notranslate nohighlight">\(\frac{18}{37}\)</span>. Note that in the American version of the game, there is a second zero tile labelled ‘00’, making the American version of Roulette a worse proposition financially than the European game.</p>
 <p>To play, you must pay an entry fee (£1 here) and select a colour. If your colour comes up, your bet is returned to you along with an additional £1. This begs the question, <em>on average</em>, how much money do you expect to win from your £1? We can calculate the expected return as follows:</p>
 <div class="math notranslate nohighlight">
@@ -518,20 +519,11 @@ P(\text{win}) = \frac{1!}{1!(1-1)!} \left( \frac{18}{37} \right)^1 \left( 1 - \f
 <img alt="../../_images/78ce4357de644b3c3e28a910cb1efc3a1f0d3a5e2ee1825a7ac20de0a23687a0.png" src="../../_images/78ce4357de644b3c3e28a910cb1efc3a1f0d3a5e2ee1825a7ac20de0a23687a0.png" />
 </div>
 </div>
-<p>In this instance, the mode of the distribution is 48. Three wins below our victory condition. Let us see the case where we play 1000 games:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>485
-</pre></div>
-</div>
 <img alt="../../_images/06d1a6a1c542b1e6c11aa019334939f6b3729108ccd55475659984dc6afd83d3.png" src="../../_images/06d1a6a1c542b1e6c11aa019334939f6b3729108ccd55475659984dc6afd83d3.png" />
 </div>
 </div>
-<p>Note the change in x-axis bounds. The mode of this distribution is 485 victories - proportionally higher, at 48.5%, and very close to the success probability defined by roulette (<span class="math notranslate nohighlight">\(p = \tfrac{18}{37} \approx 48.6\%\)</span>). Yet this remains 16 successes short of our break-even condition. The key takeaways are:</p>
-<ul class="simple">
-<li><p>For binomial trials, the mode divided by the total number of trials converges towards the true probability of success as the number of experiments increases.</p></li>
-<li><p>In repeated roulette play, you are more likely to lose than to win. Most of the distribution’s probability mass lies in the region where more losses occur.</p></li>
-</ul>
 </section>
 <hr class="docutils" />
 <section id="conditional-probabilities-bayes-theorem">
@@ -541,7 +533,6 @@ P(\text{win}) = \frac{1!}{1!(1-1)!} \left( \frac{18}{37} \right)^1 \left( 1 - \f
 <div class="math notranslate nohighlight">
 \[
 P(A\, |\, B) = \frac{P(A \cap B)}{P(B)}
-\tag{2.21}
 \]</div>
 <p>provided <span class="math notranslate nohighlight">\(P(B) \neq 0\)</span>.
 Here, <span class="math notranslate nohighlight">\(P(A \cap B)\)</span> means the probability that <em>both</em> A and B occur.</p>
@@ -549,7 +540,6 @@ Here, <span class="math notranslate nohighlight">\(P(A \cap B)\)</span> means th
 <div class="math notranslate nohighlight">
 \[
 P(A\, |\, B) = P(A)
-\tag{2.22}
 \]</div>
 <p>and equivalently <span class="math notranslate nohighlight">\(P(A \cap B) = P(A)P(B)\)</span>.</p>
 <section id="bayes-theorem">
@@ -558,7 +548,6 @@ P(A\, |\, B) = P(A)
 <div class="math notranslate nohighlight">
 \[
 P(A\, |\, B) = \frac{P(B\, |\, A)\, P(A)}{P(B)}
-\tag{2.23}
 \]</div>
 <p>This allows us to update our belief about A after observing B.
 In other words, it connects the <strong>prior</strong> probability <span class="math notranslate nohighlight">\(P(A)\)</span> with the <strong>posterior</strong> probability <span class="math notranslate nohighlight">\(P(A|B)\)</span>.</p>
@@ -566,17 +555,17 @@ In other words, it connects the <strong>prior</strong> probability <span class="
 <p class="admonition-title">Example: medical testing</p>
 <p>A common example used to understand Bayes’ theorem is testing for disease. Suppose a disease affects 1% of a population.
 A test correctly identifies it 99% of the time, but also gives a 5% false-positive rate. In other words, if a person has the disease, the test will return a positive result 99% of the time, and a negative result 1% of the time. Meanwhile, if the person does not have the disease, it will return a negative result 95% of the time, and a positive result 5% of the time.</p>
-<p>Let A = “person has disease” and B = “test is positive”. Here we also use <span class="math notranslate nohighlight">\(\bar{A}\)</span> to denote no disease.
+<p>Let A = “person has disease” and B = “test is positive”.
 Then:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(P(A) = 0.01\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(P(B|A) = 0.99\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(P(B|\bar{A}) = 0. 05\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(B|\neg A) = 0. 05\)</span></p></li>
 </ul>
 <p>The overall probability of obtaining a positive test result must factor in both means of obtaining that result:</p>
 <div class="math notranslate nohighlight">
 \[
-P(B) = P(B|A)P(A) + P(B|\bar{A})P(\bar{A})
+P(B) = P(B|A)P(A) + P(B|\neg A)P(\neg A)
  = 0. 99(0. 01) + 0. 05(0. 99) = 0. 0594
 \]</div>
 <p>Applying Bayes’ theorem:</p>

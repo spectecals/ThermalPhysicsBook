@@ -170,9 +170,8 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Overview of Core Concepts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_questions.html">1.8. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch1-introduction/02_solutions.html">1.9. Solutions</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="CH2-L0-Probability_Overview.html">2. Probability Theory for Thermal Physics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -385,7 +384,6 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[
 f(x; \mu, \sigma)=\frac{1}{\sqrt{2\pi}\, \sigma}\exp\! \left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
-\tag{2.24}
 \]</div>
 <p>The mean and variance are <span class="math notranslate nohighlight">\(\langle x\rangle=\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma^2\)</span>.
 By the Central Limit Theorem, the sum or average of many independent random variables tends toward a Gaussian distribution, regardless of the original shape.</p>
@@ -436,7 +434,7 @@ By the Central Limit Theorem, the sum or average of many independent random vari
 <p>etcetera. Were we to draw 4 samles twenty thousand times, calculate the mean of each sample and place them on a histogram, we obtain the distribution on the left below. It still resembles the original distribution, in that there are still gaps in the available outcomes; but by increasing the size of the sample set the distribution we realise begins to more closely resemble a normal distribution. In the plot below, we see that the distribution of the sample means begins to greater represent a normal distribution as we increase the sample size per draw.</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../../_images/f69cf51ebc48491e143e9b8c3efb243adb737f56d8b2464989df78d81dfd7522.png" src="../../_images/f69cf51ebc48491e143e9b8c3efb243adb737f56d8b2464989df78d81dfd7522.png" />
+<img alt="../../_images/d16aa39ead8aa03161c73b51c17f7d88b195f234fedc0407ce7dd81bf7a21ed5.png" src="../../_images/d16aa39ead8aa03161c73b51c17f7d88b195f234fedc0407ce7dd81bf7a21ed5.png" />
 </div>
 </div>
 <p>We can see an increasingly peaked Gaussian form as the sample size per draw increases, in line with our expectations. For a small sample size, the distribution closely resembles the initial discrete one, and in fact if we were drawing sample sizes of one it would exactly resemble the original. However, as the draw size increases we begin to observe the classic bell-shaped curve customary of a Gaussian. You’ll note that the mean of these distributions is very close to the original distribution’s mean all along, but the standard deviation increases, making the distribution narrower as the draw size goes up.</p>
@@ -490,7 +488,6 @@ By the Central Limit Theorem, the sum or average of many independent random vari
 <div class="math notranslate nohighlight">
 \[
 P(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}
-\tag{2.25}
 \]</div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -587,7 +584,6 @@ P(k=15;\lambda=12)
 <div class="math notranslate nohighlight">
 \[
 f(v; T, m)=4\pi\! \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\! \left(-\frac{m v^2}{2k_B T}\right), \qquad v\ge 0
-\tag{2.26}
 \]</div>
 <p>The Maxwell–Boltzmann distribution plays a central role in kinetic theory because it describes the spread of particle speeds in a classical ideal gas. It shows that, at a given temperature, some particles move slowly while others move very fast, and it gives precise predictions for the most probable speed, the average speed, and the rms speed. These predictions feed directly into calculations of pressure, diffusion, heat transfer, and collision rates. In essence, this distribution connects random molecular motion to the observable properties of gases.</p>
 <p>Key quantities:</p>
@@ -598,7 +594,7 @@ f(v; T, m)=4\pi\! \left(\frac{m}{2\pi k_B T}\right)^{3/2} v^2 \exp\! \left(-\fra
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" src="../../_images/93a311d2216f1a4bf14bdec2fd95e919a04da4a4f763c08cf279e8b038cc09f9.png" />
+<img alt="../../_images/eeee5aef374c56a5e6bc8b0c019375fda9263707a644e038941882cdf20f14a1.png" src="../../_images/eeee5aef374c56a5e6bc8b0c019375fda9263707a644e038941882cdf20f14a1.png" />
 </div>
 </div>
 </section>
