@@ -682,7 +682,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </div></div></div>
 </div>
 <figure class="align-default" id="fig-specific-isobaric-isochoric-heating">
-<a class="reference internal image-reference" href="../_images/Specific_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/Specific_Isochoric_and_Isobaric_Heating.png" src="../_images/Specific_Isochoric_and_Isobaric_Heating.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/Specific_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/Specific_Isochoric_and_Isobaric_Heating.png" src="../_images/Specific_Isochoric_and_Isobaric_Heating.png" style="width: 50%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Graph depicting an isochoric (horizontal) and isobaric (vertical) process to raise the temperature of an ideal gas by 1 Kelvin.</span><a class="headerlink" href="#fig-specific-isobaric-isochoric-heating" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -779,7 +779,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <h2><span class="section-number">3.4. </span>Compressing a gas or vapour<a class="headerlink" href="#compressing-a-gas-or-vapour" title="Permalink to this heading">#</a></h2>
 <p>What happens when we compress a gas or vapour?</p>
 <figure class="align-default" id="fig-watervaporisation">
-<a class="reference internal image-reference" href="../_images/Water_Vaporisation.png"><img alt="../_images/Water_Vaporisation.png" src="../_images/Water_Vaporisation.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/Water_Vaporisation.png"><img alt="../_images/Water_Vaporisation.png" src="../_images/Water_Vaporisation.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.8 </span><span class="caption-text">From left-to-right this figure depicts the reversible process of liquid water evaporating when the volume of its container is expanded, leading to a drop in pressure which results in the water boiling. The process can be reversed by using a force to compress the piston onto the steam, which gradually leads to to condensation as the pressure increases once more.</span><a class="headerlink" href="#fig-watervaporisation" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -852,7 +852,7 @@ Liquids are nearly incompressible, so:</p>
 <section id="compressibility">
 <h3>Compressibility<a class="headerlink" href="#compressibility" title="Permalink to this heading">#</a></h3>
 <figure class="align-default" id="fig-compressionfactor">
-<a class="reference internal image-reference" href="../_images/CompressionFactor.png"><img alt="../_images/CompressionFactor.png" src="../_images/CompressionFactor.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/CompressionFactor.png"><img alt="../_images/CompressionFactor.png" src="../_images/CompressionFactor.png" style="width: 50%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 3.11 </span><span class="caption-text">Compression factor <span class="math notranslate nohighlight">\(Z = pV / nRT\)</span> plotted against pressure for a real gas at different temperatures.
 At high temperatures the gas behaves almost ideally, with <span class="math notranslate nohighlight">\(Z \approx 1\)</span>. At lower temperatures, attractive forces between molecules cause the gas to deviate from ideal behaviour, giving <span class="math notranslate nohighlight">\(Z &lt; 1\)</span> at moderate pressures. At higher pressures, repulsive interactions dominate and <span class="math notranslate nohighlight">\(Z\)</span> increases. The Boyle temperature corresponds to the case where the gas most closely follows ideal-gas behaviour over a range of pressures.</span><a class="headerlink" href="#fig-compressionfactor" title="Permalink to this image">#</a></p>
@@ -924,21 +924,24 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 <p><strong>2. Volume correction</strong></p>
 <p>For two spheres of radius <span class="math notranslate nohighlight">\(r\)</span>, the centre of one cannot enter a sphere of radius <span class="math notranslate nohighlight">\(2r\)</span> around the other. The excluded volume for a pair is then</p>
 <div class="math notranslate nohighlight">
-\[ V_\text{excl.}=\frac{4}{3}\pi (2r)^£ = \frac{32}{3}\pi r^3. \]</div>
+\[ V_\text{excl.}=\frac{4}{3}\pi (2r)^3 = \frac{32}{3}\pi r^3. \]</div>
 <p>Van der Waals simplified this equation and wrote the excluded volume per mole as a constant, <span class="math notranslate nohighlight">\(b = \text{effective excluded volume per mole}\)</span>, resulting in:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-V_\text{excl.} = nb \\
-V_\text{free} = V - nb.
+\begin{aligned}
+V_\text{excl.} &amp;= nb \\
+V_\text{real} &amp;= V_\text{ideal} - nb.
+\end{aligned}
 \end{split}\]</div>
 <p>Inserting the two corrections into our ideal gas formula,</p>
 <div class="math notranslate nohighlight">
-\[
+\[\begin{split}
 \begin{aligned}
-P_\text{ideal} V_\text{ideal} &amp;= nRT,
-\rightarrow (P+a(n/V)^2) \times (V-nB) &amp;= nRT.
+nRT &amp;= P_\text{real} V_\text{real}, \\
+&amp;= (P_\text{ideal} + P_\text{corr}) \times (V_\text{ideal} - V_\text{excl.}), \\
+&amp;= (P+a(n/V)^2) \times (V-nb).
 \end{aligned}
-\]</div>
+\end{split}\]</div>
 <p>To reiterate,</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(a\)</span>: depends on the attractive intermolecular forces, which reduce the pressure of the gas by <em>pulling</em> the molecules together as they <em>push</em> on the walls of the container. The more particles, the stronger the attraction and the larger the pressure correction.</p></li>
