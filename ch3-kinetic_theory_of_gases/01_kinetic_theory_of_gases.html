@@ -333,7 +333,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition-of-energy">Equipartition of Energy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monatomic-molecules">Monatomic molecules</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-energy-modes">Higher energy modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polyatomic-molecules">Polyatomic molecules</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
@@ -550,7 +550,7 @@ v_H &amp;= 2 v_{He}.
 <section id="heat-capacities-of-gases-and-equipartition-of-energy">
 <span id="sec-heatcap-equip"></span><h2><span class="section-number">3.3. </span>Heat Capacities of Gases and Equipartition of Energy<a class="headerlink" href="#heat-capacities-of-gases-and-equipartition-of-energy" title="Permalink to this heading">#</a></h2>
 <p>Equipartition refers to the different degrees of freedom that contribute to the ways in which internal energy is “stored” in a molecule. As a result, this directly relates to the energy required to raise temperature, or the heat capacity.</p>
-<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, (recall from <a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-capacity"><span class="std std-ref">Heat Capacity</span></a>) that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
+<p>In this section, we will attempt to cover the theoretical description of the heat capacity of gases. In order to do so, recall from <a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-capacity"><span class="std std-ref">Heat Capacity</span></a> that the <em>molar specific heat</em>, <span class="math notranslate nohighlight">\(c_\text{mol}\)</span> is the energy required to raise the temperature of 1 mole of gas by 1 K:</p>
 <div class="math notranslate nohighlight">
 \[ c_\text{mol} = \frac{1}{n}\frac{dQ}{dT},\ \text{where}\ c_\text{mol} = \frac{C}{n}. \]</div>
 <p>where C here is the non-specific heat capacity, <span class="math notranslate nohighlight">\(C = \frac{dQ}{dT}\)</span>.</p>
@@ -612,9 +612,9 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </figcaption>
 </figure>
 </section>
-<section id="higher-energy-modes">
-<h4>Higher energy modes<a class="headerlink" href="#higher-energy-modes" title="Permalink to this heading">#</a></h4>
-<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures and these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic moledules at room temperature, this required energy is much larger than the thermal energy available.</p>
+<section id="polyatomic-molecules">
+<h4>Polyatomic molecules<a class="headerlink" href="#polyatomic-molecules" title="Permalink to this heading">#</a></h4>
+<p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures otherwise these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic molecules at room temperature, this required energy is much larger than the thermal energy available.</p>
 <ul class="simple">
 <li><p>Vibrational motion contributes both kinetic and potential energy, so two degrees of freedom can be added</p></li>
 <li><p><span class="math notranslate nohighlight">\(U = 7 * \left(\frac{1}{2}k_BT\right)*N = \frac{7}{2}nRT \)</span></p></li>
@@ -625,7 +625,13 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <p><span class="caption-number">Fig. 3.5 </span><span class="caption-text">Sketch of a corkscrew diatomically-bonded molecule.</span><a class="headerlink" href="#fig-corkscrew-diatominc-bond" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-</section>
+<figure class="align-default" id="fig-energy-degrees-of-freedom">
+<a class="reference internal image-reference" href="../_images/Energy_Modes-Degrees_of_Freedom.png"><img alt="../_images/Energy_Modes-Degrees_of_Freedom.png" src="../_images/Energy_Modes-Degrees_of_Freedom.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Graph showing how new degrees of freedom are unlocked as the system attains more energy as per the equipartition theorem.</span><a class="headerlink" href="#fig-energy-degrees-of-freedom" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<!-- statement that C_polyatomic > C_diatomic > C_monotomic as in polyatomic gases the added heta increases the rotational and vibrational energies, while diatomic have access to  rotational and translational and monatomic to only translational. --></section>
 </section>
 <section id="what-does-this-mean-for-c-v-vs-c-p">
 <h3>What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?<a class="headerlink" href="#what-does-this-mean-for-c-v-vs-c-p" title="Permalink to this heading">#</a></h3>
@@ -636,12 +642,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 \text{Diatomic, } \qquad C_V &amp;= \frac{5}{2}R, \qquad C_p=C_V + R = \frac{7}{2}R
 \end{align}
 \end{split}\]</div>
-<figure class="align-default" id="fig-energy-degrees-of-freedom">
-<a class="reference internal image-reference" href="../_images/Energy_Modes-Degrees_of_Freedom.png"><img alt="../_images/Energy_Modes-Degrees_of_Freedom.png" src="../_images/Energy_Modes-Degrees_of_Freedom.png" style="width: 70%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 3.6 </span><span class="caption-text">Graph showing how new degrees of freedom are unlocked as the system attains more energy as per the equipartition theorem.</span><a class="headerlink" href="#fig-energy-degrees-of-freedom" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<!-- samer's derivations --><p>These are the predictions from equipartition:</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
@@ -661,7 +662,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Specific heats (J/mol/K)</th>
+      <th>Specific heat (J/mol/K)</th>
       <th>monatomic</th>
       <th>diatomic</th>
     </tr>
@@ -684,10 +685,9 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 <figure class="align-default" id="fig-specific-isobaric-isochoric-heating">
 <a class="reference internal image-reference" href="../_images/Specific_Isochoric_and_Isobaric_Heating.png"><img alt="../_images/Specific_Isochoric_and_Isobaric_Heating.png" src="../_images/Specific_Isochoric_and_Isobaric_Heating.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Graph depicting an isochoric (horizontal) and isobaric (vertical) process to raise the temperature of an ideal gas by 1 Kelvin.</span><a class="headerlink" href="#fig-specific-isobaric-isochoric-heating" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3.7 </span><span class="caption-text">Graph depicting the predicted isochoric (horizontal) and isobaric (vertical) process to raise the temperature of an ideal gas by 1 Kelvin.</span><a class="headerlink" href="#fig-specific-isobaric-isochoric-heating" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>These are the predictions from equipartition.</p>
 <p>How about real gases?</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -773,6 +773,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </table>
 </div></div></div>
 </div>
+<p>Measured heat capacities of real gases closely follow equipartition predictions.</p>
 </section>
 </section>
 <section id="compressing-a-gas-or-vapour">
@@ -1020,7 +1021,7 @@ nRT &amp;= P_\text{real} V_\text{real}, \\
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition-of-energy">Equipartition of Energy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monatomic-molecules">Monatomic molecules</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-energy-modes">Higher energy modes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polyatomic-molecules">Polyatomic molecules</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
