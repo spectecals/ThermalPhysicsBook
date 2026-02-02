@@ -83,3 +83,4 @@
 [ ] ch3 by friday (week of 26/01)
 [ ] finish newtons law of cooling derivation
 [ ] give lorenzo access to JL onenote
+[ ] reintroduce q4 from jl 5.d to ch3 Qs
