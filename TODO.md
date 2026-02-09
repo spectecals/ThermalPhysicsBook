@@ -84,3 +84,8 @@
 [ ] finish newtons law of cooling derivation
 [ ] give lorenzo access to JL onenote
 [ ] reintroduce q4 from jl 5.d to ch3 Qs
+
+[X] change W = fs to |F| |s| cos theta
+[X] mention component parallel = positive, perp = 0, parallel and opposite = -ve
+[X] x_a instead of x_1
+[ ] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1), "potential energy function"  work = - delta P, p.e.f important to conservation of energy ,
