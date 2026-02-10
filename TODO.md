@@ -88,4 +88,15 @@
 [X] change W = fs to |F| |s| cos theta
 [X] mention component parallel = positive, perp = 0, parallel and opposite = -ve
 [X] x_a instead of x_1
-[ ] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1), "potential energy function"  work = - delta P, p.e.f important to conservation of energy ,
+[ ] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1), "potential energy function"  work = - delta P, p.e.f important to conservation of energy , applies for conservative forces -- cons energy must satisfy potential energy function, nonconservative functions dont satisfy it which is why you need internal energy
+[X] add another entry to rec reading for just review,
+[X] change parallel F to parallel components of F, mention F_||
+[ ] sec:path needs fixing
+[X] path a = heat = integral of mass, shc
+[ ] mix probability and entropy, 2nd law
+[ ] separate heat engines into self contained chapter
+
+[ ] DAFYDD - change all F_x to F in figures
+[ ] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
+[ ] also label the shaded graph in 4.3 to have the letter W please!
+[ ] remove all text from  figures_for_chapter_4/Figure_19-7.png
