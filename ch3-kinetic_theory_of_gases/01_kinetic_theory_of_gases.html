@@ -323,11 +323,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-state">3.1. Equations of state</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-state">3.1. Equations of State</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams">pV diagrams</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-model-of-an-ideal-gas">3.2. Molecular model of an ideal gas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-model-of-an-ideal-gas">3.2. Molecular Model of an Ideal Gas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collision-on-one-wall">Collision on one wall</a></li>
 </ul>
 </li>
@@ -335,18 +335,18 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition-of-energy">Equipartition of Energy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monatomic-molecules">Monatomic molecules</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polyatomic-molecules">Polyatomic molecules</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-modes">Higher order modes</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a Gas or Vapour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals Forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular interactions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals forces</a></li>
 </ul>
 </li>
 </ul>
@@ -385,7 +385,7 @@ document.write(`
 </ul>
 </div>
 <section id="equations-of-state">
-<h2><span class="section-number">3.1. </span>Equations of state<a class="headerlink" href="#equations-of-state" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Equations of State<a class="headerlink" href="#equations-of-state" title="Permalink to this heading">#</a></h2>
 <p>The behavior of matter and its dependence on temperature can be observed in everyday situations. For example, boiling water produces high-pressure steam, and a potato can burst in the oven if steam cannot escape. Water vapour in the air may condense or even freeze on a very cold glass. These examples illustrate macroscopic properties of matter such as pressure, volume, temperature, and mass. However, matter can also be described from a microscopic perspective, in terms of the masses, speeds, energies, and collisions of the individual molecules that it is composed of. Importantly, the macroscopic and microscopic views are closely connected. For instance, atmospheric pressure is the result of countless air molecules striking surfaces at high speeds.</p>
 <p>To describe the state of a gas we use state variables; pressure (<span class="math notranslate nohighlight">\(p\)</span>), volume (<span class="math notranslate nohighlight">\(V\)</span>), temperature (<span class="math notranslate nohighlight">\(T\)</span>), and amount of substance (often expressed as moles, <span class="math notranslate nohighlight">\(n\)</span>). Changing one of these variables usually affects the others. When the relationship between these variables can be written mathematically, we call it an equation of state. One of the simplest and most important of these is the <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-idealgas"><span class="std std-ref">ideal gas equation we covered in section 1</span></a>, which applies well when gas molecules are far apart and moving rapidly (low pressure and high temperature). The ideal gas law as you may recall is:</p>
 <div class="math notranslate nohighlight">
@@ -406,7 +406,7 @@ pV = nRT
 <p>To breathe, you rely on the ideal gas equation <span class="math notranslate nohighlight">\(pV = nRT\)</span>. Contraction of the diaphragm muscle increases the volume <span class="math notranslate nohighlight">\(V\)</span> of the lungs, decreasing its pressure <span class="math notranslate nohighlight">\(p\)</span>. The lowered pressure causes the lungs to expand and fill with air. (The temperature <span class="math notranslate nohighlight">\(T\)</span> is kept constant.) When you exhale, the diaphragm relaxes, allowing the lungs to contract and expel the air.</p>
 </div>
 <section id="pv-diagrams">
-<h3>pV diagrams<a class="headerlink" href="#pv-diagrams" title="Permalink to this heading">#</a></h3>
+<span id="sec-pv-diagrams"></span><h3>pV diagrams<a class="headerlink" href="#pv-diagrams" title="Permalink to this heading">#</a></h3>
 <p>The relationship among pressure, volume, and temperature can be visualised in a three-dimensional <span class="math notranslate nohighlight">\(p\)</span>-<span class="math notranslate nohighlight">\(V\)</span>-<span class="math notranslate nohighlight">\(T\)</span> space, but in practice it is usually more convenient to use two-dimensional graphs. One common representation is the pV-diagram, which shows how pressure varies with volume. On this diagram, we often draw multiple curves, each corresponding to a constant temperature. These curves are called <strong>isotherms</strong>. Using the ideal gas law <span class="math notranslate nohighlight">\(p=nRT/V\)</span>, we see that along an isotherm the temperature is fixed, so pressure is inversely proportional to volume. As a result, each isotherm forms a hyperbolic curve on the pV-diagram.</p>
 <figure class="align-default" id="fig-three-isotherms">
 <a class="reference internal image-reference" href="../_images/Three_Isotherms.png"><img alt="../_images/Three_Isotherms.png" src="../_images/Three_Isotherms.png" style="width: 75%;" /></a>
@@ -418,7 +418,7 @@ pV = nRT
 </section>
 </section>
 <section id="molecular-model-of-an-ideal-gas">
-<span id="sec-kinetic-gas"></span><h2><span class="section-number">3.2. </span>Molecular model of an ideal gas<a class="headerlink" href="#molecular-model-of-an-ideal-gas" title="Permalink to this heading">#</a></h2>
+<span id="sec-kinetic-gas"></span><h2><span class="section-number">3.2. </span>Molecular Model of an Ideal Gas<a class="headerlink" href="#molecular-model-of-an-ideal-gas" title="Permalink to this heading">#</a></h2>
 <p>The purpose of a molecular theory of matter is to explain the observable, macroscopic properties of materials (pressure, temperature, etc.) by relating them to the behaviour and structure of their molecules. We consider the kinetic-molecular model of an ideal gas, in which a gas is represented as a large number of particles moving freely and colliding within a container. This model allows us to connect the ideal gas equation to Newton’s laws and to later predict the heat capacity of gases. The model relies on several key assumptions:</p>
 <ol class="arabic simple">
 <li><p>the gas consists of a very large number, <span class="math notranslate nohighlight">\(N\)</span>, of identical molecules of mass <span class="math notranslate nohighlight">\(m\)</span> in a volume <span class="math notranslate nohighlight">\(V\)</span>,</p></li>
@@ -615,8 +615,8 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 </figcaption>
 </figure>
 </section>
-<section id="polyatomic-molecules">
-<h4>Polyatomic molecules<a class="headerlink" href="#polyatomic-molecules" title="Permalink to this heading">#</a></h4>
+<section id="higher-order-modes">
+<h4>Higher order modes<a class="headerlink" href="#higher-order-modes" title="Permalink to this heading">#</a></h4>
 <p>Note that molecules can store energy not only through translation and rotation, but also through vibrational motion, where the bonds stretch and bend. Each vibrational mode adds additional degrees of freedom and therefore increases the heat capacity. However, vibrational motion is mostly relevant at higher temperatures otherwise these modes are generally frozen. This is due to quantum mechanics, in which vibrational energy is quantized and therefore a minimum fixed energy must be absorbed before a vibrational state is excited. For most diatomic molecules at room temperature, this required energy is much larger than the thermal energy available.</p>
 <ul class="simple">
 <li><p>Vibrational motion contributes both kinetic and potential energy, so two degrees of freedom can be added</p></li>
@@ -645,7 +645,7 @@ C_V \equiv \left(\frac{dQ}{dT}\right)_V =\frac{3}{2}nR
 \text{Diatomic, } \qquad C_V &amp;= \frac{5}{2}R, \qquad C_p=C_V + R = \frac{7}{2}R
 \end{align}
 \end{split}\]</div>
-<!-- samer's derivations --><p>Let us deal now with the differences between <span class="math notranslate nohighlight">\(C_{V}\)</span> and <span class="math notranslate nohighlight">\(C_{p}\)</span>. Let us first consider a constant-volume thermodynamic process:</p>
+<p>Let us deal now with the differences between <span class="math notranslate nohighlight">\(C_{V}\)</span> and <span class="math notranslate nohighlight">\(C_{p}\)</span>. Let us first consider a constant-volume thermodynamic process:</p>
 <div class="math notranslate nohighlight">
 \[ 
     \Delta V=0 \Rightarrow W=p\Delta V =0
@@ -846,7 +846,7 @@ C_{V}=\frac{Q}{\Delta T}=\frac{E_{kin}}{\Delta T}=\frac{3}{2}R
 </section>
 </section>
 <section id="compressing-a-gas-or-vapour">
-<h2><span class="section-number">3.4. </span>Compressing a gas or vapour<a class="headerlink" href="#compressing-a-gas-or-vapour" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Compressing a Gas or Vapour<a class="headerlink" href="#compressing-a-gas-or-vapour" title="Permalink to this heading">#</a></h2>
 <p>What happens when we compress a gas or vapour?</p>
 <figure class="align-default" id="fig-watervaporisation">
 <a class="reference internal image-reference" href="../_images/Water_Vaporisation.png"><img alt="../_images/Water_Vaporisation.png" src="../_images/Water_Vaporisation.png" style="width: 60%;" /></a>
@@ -946,7 +946,7 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 <p>We can then conclude that attractive forces dominate below <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&lt;1 \rightarrow\)</span> gas is more compressible) and repulsive forces dominate at temperatures greater than <span class="math notranslate nohighlight">\(T_B\)</span> (<span class="math notranslate nohighlight">\(Z&gt; 1 \rightarrow\)</span> gas is less compressible).</p>
 </section>
 <section id="molecular-interactions">
-<h3>Molecular Interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
+<h3>Molecular interactions<a class="headerlink" href="#molecular-interactions" title="Permalink to this heading">#</a></h3>
 <p>In an ideal gas, molecules are treated as point particles with no intermolecular forces. However, real gases deviate from ideality because molecules interact through attactive and repulsive forces.</p>
 <p>These interactions can be represented using a molecular potential energy curve <span class="math notranslate nohighlight">\(\phi(r)\)</span> where:</p>
 <ul class="simple">
@@ -967,7 +967,7 @@ At this temperature, <span class="math notranslate nohighlight">\(Z=PV/nRT \appr
 </ul>
 <p>For completion, we will relate the validity of considering a gas “ideal” by introducing the “gas compressibility” <span class="math notranslate nohighlight">\(Z\)</span>. At low temperatures with lower pressure, <span class="math notranslate nohighlight">\(Z&lt;1\)</span>. At high pressure, repulsion dominates, resulting in <span class="math notranslate nohighlight">\(Z&gt;1\)</span>.</p>
 <section id="van-der-waals-forces">
-<h4>Van der Waals Forces<a class="headerlink" href="#van-der-waals-forces" title="Permalink to this heading">#</a></h4>
+<h4>Van der Waals forces<a class="headerlink" href="#van-der-waals-forces" title="Permalink to this heading">#</a></h4>
 <p>The 19th century Dutch physicist J. D. van der Waals developed an equation to correct for real gas behaviour. Crucially, this equation incorporates the following ideas:</p>
 <ol class="arabic simple">
 <li><p>Molecules attract each other at moderate distances,</p></li>
@@ -1087,11 +1087,11 @@ nRT &amp;= P_\text{real} V_\text{real}, \\
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-state">3.1. Equations of state</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-of-state">3.1. Equations of State</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-diagrams">pV diagrams</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-model-of-an-ideal-gas">3.2. Molecular model of an ideal gas</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-model-of-an-ideal-gas">3.2. Molecular Model of an Ideal Gas</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collision-on-one-wall">Collision on one wall</a></li>
 </ul>
 </li>
@@ -1099,18 +1099,18 @@ nRT &amp;= P_\text{real} V_\text{real}, \\
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equipartition-of-energy">Equipartition of Energy</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#monatomic-molecules">Monatomic molecules</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#diatomic-molecules">Diatomic molecules</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#polyatomic-molecules">Polyatomic molecules</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#higher-order-modes">Higher order modes</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-does-this-mean-for-c-v-vs-c-p">What does this mean for <span class="math notranslate nohighlight">\(C_V\)</span> vs <span class="math notranslate nohighlight">\(C_p\)</span>?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacity-of-solids">Heat capacity of solids</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a gas or vapour</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-gas-or-vapour">3.4. Compressing a Gas or Vapour</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-physics-of-real-gases">3.5. The Physics of Real Gases</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressibility">Compressibility</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular Interactions</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals Forces</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#molecular-interactions">Molecular interactions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#van-der-waals-forces">Van der Waals forces</a></li>
 </ul>
 </li>
 </ul>
