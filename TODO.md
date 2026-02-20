@@ -100,3 +100,5 @@
 [ ] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
 [ ] also label the shaded graph in 4.3 to have the letter W please!
 [ ] remove all text from  figures_for_chapter_4/Figure_19-7.png
+
+[ ] gibbs and clausius missing
