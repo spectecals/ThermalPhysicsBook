@@ -102,3 +102,5 @@
 [ ] remove all text from  figures_for_chapter_4/Figure_19-7.png
 
 [ ] gibbs and clausius missing
+[ ] move 2nd law into ch5 from ch6, including clausius
+[ ] include jonathan leach's example
