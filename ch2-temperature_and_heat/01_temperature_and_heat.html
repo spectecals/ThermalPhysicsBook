@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2. Temperature and Heat &#8212; Thermal Physics</title>
   
@@ -29,45 +28,41 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=57ce8a05" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/toc-current-only.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch2-temperature_and_heat/01_temperature_and_heat';</script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/toc-current-only.js?v=9d1ffc5e"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Kinetic Theory of Gases" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html" />
@@ -168,13 +163,26 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Temperature and Heat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch6-heat_engines/01_Heat_engines.html">6. Heat engines</a></li>
 </ul>
 
     </div>
@@ -204,9 +212,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -300,9 +308,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -363,7 +371,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="temperature-and-heat">
-<h1><span class="section-number">2. </span>Temperature and Heat<a class="headerlink" href="#temperature-and-heat" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">2. </span>Temperature and Heat<a class="headerlink" href="#temperature-and-heat" title="Link to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
@@ -383,7 +391,7 @@ document.write(`
 </ul>
 </div>
 <section id="heat">
-<h2><span class="section-number">2.1. </span>Heat<a class="headerlink" href="#heat" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.1. </span>Heat<a class="headerlink" href="#heat" title="Link to this heading">#</a></h2>
 <p>We all have an intuitive idea of what heat is. While sitting near a fire in winter or standing in the sun, we feel the warmth increasing our temperature, or conversely touching a cold snowball makes our hand feel cool as heat leaves it. From these observations, we understand heat as a form of energy transfer between objects at different temperatures. Heat represents energy moving from one body to another because of a temperature difference, not something an object possesses by itself.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition:</p>
@@ -398,9 +406,10 @@ document.write(`
 <li><p>Heat removed is negative (<span class="math notranslate nohighlight">\(Q &lt; 0\)</span>)</p></li>
 </ul>
 <figure class="align-default" id="fig-contact">
-<a class="reference internal image-reference" href="../_images/2.2_contact.png"><img alt="../_images/2.2_contact.png" src="../_images/2.2_contact.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.2_contact.png"><img alt="../_images/2.2_contact.png" src="../_images/2.2_contact.png" style="width: 40%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Simply put, if our <em>system</em> is <span class="math notranslate nohighlight">\(T_H\)</span>, heat is leaving the system, therefore Q is negative. If instead our system is <span class="math notranslate nohighlight">\(T_C\)</span>, Q is positive.</span><a class="headerlink" href="#fig-contact" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Simply put, if our <em>system</em> is <span class="math notranslate nohighlight">\(T_H\)</span>, heat is leaving the system, therefore Q is negative. If instead our system is <span class="math notranslate nohighlight">\(T_C\)</span>, Q is positive.</span><a class="headerlink" href="#fig-contact" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Heat is measured in <em>joules (J)</em>, and the <em>rate</em> of heating is measured in <em>watts (W)</em> where 1 W = 1 Js<sup>-1</sup>.</p>
@@ -414,7 +423,7 @@ document.write(`
 </div>
 </section>
 <section id="heat-capacity">
-<span id="sec-capacity"></span><h2><span class="section-number">2.2. </span>Heat Capacity<a class="headerlink" href="#heat-capacity" title="Permalink to this heading">#</a></h2>
+<span id="sec-capacity"></span><h2><span class="section-number">2.2. </span>Heat Capacity<a class="headerlink" href="#heat-capacity" title="Link to this heading">#</a></h2>
 <p>In the previous section, we defined heat as energy in transit. We now consider how this heat affects the internal energy of the system, and how much must be added to an object to raise its temperature. The relationship between the amount of heat supplied and the resulting temperature change is described by the heat capacity.</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition:</p>
@@ -432,7 +441,7 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[ C*m = 4.18 * 10^3\ \text{J kg}^{-1}\ \text{K}^{-1} * 0.018\ \text{kg mol}^{-1} = 75.2\ \text{J mol}^{-1}\ \text{K}^{-1}. \]</div>
 <section id="measuring-specific-heat">
-<h3>Measuring specific heat<a class="headerlink" href="#measuring-specific-heat" title="Permalink to this heading">#</a></h3>
+<h3>Measuring specific heat<a class="headerlink" href="#measuring-specific-heat" title="Link to this heading">#</a></h3>
 <p>When measuring specific heat, two different heat capacities are defined depending on the conditions:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(C_p\)</span>: the heat capacity at constant pressure - most measurements are done at constant atmospheric pressure, allowing the substance to expand.</p></li>
@@ -441,9 +450,10 @@ document.write(`
 <p>Because some of the supplied heat goes into doing work when the gas expands at constant pressure, <span class="math notranslate nohighlight">\(C_p\)</span> is always larger than <span class="math notranslate nohighlight">\(C_V\)</span>.</p>
 <p>The specific heat capacity <span class="math notranslate nohighlight">\(c\)</span> is not absolute and varies slightly based on the initial temperature and the temperature interval. This variation is quite small so we’ll be ignoring it for this course.</p>
 <figure class="align-default" id="fig-cp-water">
-<a class="reference internal image-reference" href="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png"><img alt="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png" src="../_images/09461f61ce324a8f4ed1e4827fbd3086456febab2dbc62d20aefad1aac5818d9.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/bc1ef4e1fe0edd25329aa487e88b22c39bbfa5d9ec1c8e1daa15b24742deacaa.png"><img alt="../_images/bc1ef4e1fe0edd25329aa487e88b22c39bbfa5d9ec1c8e1daa15b24742deacaa.png" src="../_images/bc1ef4e1fe0edd25329aa487e88b22c39bbfa5d9ec1c8e1daa15b24742deacaa.png" style="width: 80%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Note that the value of <em>c</em> curves, but the variation in the curve is less than 1% between <span class="math notranslate nohighlight">\(0 ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100 ^\circ C\)</span>.</span><a class="headerlink" href="#fig-cp-water" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In order to measure the heat <span class="math notranslate nohighlight">\(Q\)</span> needed to raise the temperature <span class="math notranslate nohighlight">\(T\)</span>, we can simply use</p>
@@ -458,19 +468,20 @@ Q = mc \Delta T
 </section>
 </section>
 <section id="temperature">
-<h2><span class="section-number">2.3. </span>Temperature<a class="headerlink" href="#temperature" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.3. </span>Temperature<a class="headerlink" href="#temperature" title="Link to this heading">#</a></h2>
 <p>It is very important that we now clearly distinguish between temperature and heat. Temperature depends on the physical state of a material and provides a quantitative measure of how hot or cold it is. Heat refers to energy transferred between systems due to a temperature difference and it never describes the energy contained within a system itself.</p>
 <p>The temperature of an object can be changed by transferring heat to or from it, or by altering its energy through other means, such as performing work. Temperature is understood qualitatively through our sense of touch: objects that feel “hot” have higher temperatures than those that feel “cold.” However, touch is unreliable, so temperature must be measured quantitatively through properties that change with temperature, such as electrical resistance, or volume of a substance.</p>
 <figure class="align-default" id="fig-thermometer">
-<a class="reference internal image-reference" href="../_images/2.3.1_Thermometer_Bulb_Capillary.png"><img alt="../_images/2.3.1_Thermometer_Bulb_Capillary.png" src="../_images/2.3.1_Thermometer_Bulb_Capillary.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.3.1_Thermometer_Bulb_Capillary.png"><img alt="../_images/2.3.1_Thermometer_Bulb_Capillary.png" src="../_images/2.3.1_Thermometer_Bulb_Capillary.png" style="width: 70%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">A glass thermometer relies on the thermal expansion of the fluid within, where the bulb is placed in contact with a system of interest to measure the temperature. This sounds obvious as we’ve all used a thermometer before, but why does this work? Why should the thermometer stop precisely at the same temperature as our system of interest?</span><a class="headerlink" href="#fig-thermometer" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">A glass thermometer relies on the thermal expansion of the fluid within, where the bulb is placed in contact with a system of interest to measure the temperature. This sounds obvious as we’ve all used a thermometer before, but why does this work? Why should the thermometer stop precisely at the same temperature as our system of interest?</span><a class="headerlink" href="#fig-thermometer" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Temperature is linked to the kinetic energy of molecules or the <strong>internal energy</strong>, which we will discuss in <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-kinetic-gas"><span class="std std-ref">Chapter 3</span></a>, in relation to the ideal gas law.</p>
 </section>
 <section id="zeroth-law-of-thermodynamics">
-<h2><span class="section-number">2.4. </span>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.4. </span>Zeroth Law of Thermodynamics<a class="headerlink" href="#zeroth-law-of-thermodynamics" title="Link to this heading">#</a></h2>
 <p>The concept of thermal equilibrium is very important to understand for describing how thermometers work.</p>
 <p>When two objects at different temperatures are placed in contact, thermal energy (heat) flows from the hotter body to the colder body until equilibrium is reached. Heat is defined as energy in transit due to a temperature difference. This process continues until no net heat flow occurs between the two bodies. At this point, the objects have the same temperature, and are said to be in thermal equilibrium. It is very important to realise that the reverse process would not occur, as there is an arrow of time tending towards equilibrium.</p>
 <p>The term thermalisation is defined as the process leading to thermal equilibrium. When bodies are thermalised (or in thermal equilibrium), you would expect that they have the same temperature. This is the implication behind the <em>zeroth law of thermodynamics</em>:</p>
@@ -479,13 +490,14 @@ Q = mc \Delta T
 <p>Two systems, each separately in thermal equilibrium with a third, are in equilibrium with each other.</p>
 </div>
 <figure class="align-default" id="fig-zeroth-law">
-<a class="reference internal image-reference" href="../_images/2.4_zeroth.png"><img alt="../_images/2.4_zeroth.png" src="../_images/2.4_zeroth.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.4_zeroth.png"><img alt="../_images/2.4_zeroth.png" src="../_images/2.4_zeroth.png" style="width: 70%;" />
+</a>
 </figure>
 <p>Although formulated after the first three laws, the zeroth law establishes the foundation for measuring temperature. It states that if two bodies are each in thermal equilibrium with a third body, they are in equilibrium with each other.</p>
 <p>This principle underlies how thermometers function. When a thermometer (the second body) is placed in contact with another object (the first body), they reach thermal equilibrium, allowing temperature measurement as the temperature in the thermometer matches the temperature of the target.</p>
 </section>
 <section id="thermometers">
-<h2><span class="section-number">2.5. </span>Thermometers<a class="headerlink" href="#thermometers" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.5. </span>Thermometers<a class="headerlink" href="#thermometers" title="Link to this heading">#</a></h2>
 <p>Different types of thermometers use measurable properties that vary predictably with temperature:</p>
 <ul class="simple">
 <li><p><strong>Volume of liquid/Liquid thermometers</strong> (i.e. alcohol, mercury) rely on thermal expansion.</p></li>
@@ -496,7 +508,7 @@ Q = mc \Delta T
 </ul>
 <p>All thermometer types depend on reproducible physical properties, yet none directly measure temperature itself – they correlate another property with it.</p>
 <section id="thermal-expansion">
-<span id="sec-spring-atom"></span><h3>Thermal expansion<a class="headerlink" href="#thermal-expansion" title="Permalink to this heading">#</a></h3>
+<span id="sec-spring-atom"></span><h3>Thermal expansion<a class="headerlink" href="#thermal-expansion" title="Link to this heading">#</a></h3>
 <p>Materials change in size when their temperature changes.</p>
 <div class="math notranslate nohighlight">
 \[\Delta l = \alpha l_i \Delta T \]</div>
@@ -507,20 +519,23 @@ Q = mc \Delta T
 <li><p>and <span class="math notranslate nohighlight">\(\Delta T\)</span> is the change in temperature.</p></li>
 </ul>
 <figure class="align-default" id="fig-expansion">
-<a class="reference internal image-reference" href="../_images/2.5_expansion.png"><img alt="../_images/2.5_expansion.png" src="../_images/2.5_expansion.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.5_expansion.png"><img alt="../_images/2.5_expansion.png" src="../_images/2.5_expansion.png" style="width: 80%;" />
+</a>
 </figure>
 <p>We can make sense of this by modelling atoms in a solid as being connected by springs through Hooke’s law,</p>
 <div class="math notranslate nohighlight">
 \[ F \propto -\Delta x \]</div>
 <p>where <span class="math notranslate nohighlight">\(F\)</span> is the restoring force in response to a displacement <span class="math notranslate nohighlight">\(\Delta x\)</span>, where the proportionality would normally be the spring constant, but instead here is supplied by the interatomic forces.</p>
 <figure class="align-default" id="fig-spring">
-<a class="reference internal image-reference" href="../_images/2.5_spring.png"><img alt="../_images/2.5_spring.png" src="../_images/2.5_spring.png" style="width: 40%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.5_spring.png"><img alt="../_images/2.5_spring.png" src="../_images/2.5_spring.png" style="width: 40%;" />
+</a>
 </figure>
 <p>For higher potential energies as a result of higher temperatures, the internal energy causes larger displacements and larger restoring forces in kind. You might then expect the average displacement to stay constant due to the oscillatory nature of springs (and due to the spring constant being, well, <em>constant</em>), though this isn’t quite the case as these restoring forces are <em>not</em> simple springs.</p>
 <figure class="align-default" id="fig-micro-expansion">
-<a class="reference internal image-reference" href="../_images/2.5_micro_expansion.png"><img alt="../_images/2.5_micro_expansion.png" src="../_images/2.5_micro_expansion.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.5_micro_expansion.png"><img alt="../_images/2.5_micro_expansion.png" src="../_images/2.5_micro_expansion.png" style="width: 80%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The Lennard-Jones potential. The average <span class="math notranslate nohighlight">\(x\)</span> (marked by blue circles) increases as the internal energy (<span class="math notranslate nohighlight">\(U(x)\)</span>) rises.</span><a class="headerlink" href="#fig-micro-expansion" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">The Lennard-Jones potential. The average <span class="math notranslate nohighlight">\(x\)</span> (marked by blue circles) increases as the internal energy (<span class="math notranslate nohighlight">\(U(x)\)</span>) rises.</span><a class="headerlink" href="#fig-micro-expansion" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The restoring forces are asymmetric; i.e., a negative displacement causes a larger restoring force due to repulsion following a different form to attraction. You can see that for large positive displacements the attractice force stops increasing, signalling a phase change occurring from a solid to a liquid. Even prior to reaching this point, larger temperatures correspond to higher average displacements and therefore the effective size of the solid increases.</p>
@@ -549,43 +564,47 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 </section>
 </section>
 <section id="temperature-scales">
-<h2><span class="section-number">2.6. </span>Temperature Scales<a class="headerlink" href="#temperature-scales" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.6. </span>Temperature Scales<a class="headerlink" href="#temperature-scales" title="Link to this heading">#</a></h2>
 <p>In this course we will try to use units of kelvin – this shares the same ‘magnitude’ as Celsius, i.e., <span class="math notranslate nohighlight">\(\Delta K = \Delta C\)</span>, as they both use water and its properties to define their scales. The Celsius scale specifically uses the melting and boiling points of water at 1 atm to define <span class="math notranslate nohighlight">\(0\ ^\circ C\)</span> and <span class="math notranslate nohighlight">\(100\ ^\circ C\)</span>.</p>
 <p>Historically, the problem with the Celsius scale was that the melting and boiling points of water vary with pressure – on top of Everest, water boils at around <span class="math notranslate nohighlight">\(70\ ^\circ C\)</span>. The implications of this are subtle and strange. If two people in different countries at different altitudes used these properties of water as a gauge for temperature, the idea of a universal unit is immediately redundant.</p>
 <figure class="align-default" id="fig-egg">
-<a class="reference internal image-reference" href="../_images/2.6_egg.png"><img alt="../_images/2.6_egg.png" src="../_images/2.6_egg.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.6_egg.png"><img alt="../_images/2.6_egg.png" src="../_images/2.6_egg.png" style="width: 70%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.5 </span><span class="caption-text">For instance, can you boil an egg on top of Mt. Everest?</span><a class="headerlink" href="#fig-egg" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Even if you were to specify the pressure at which you take these temperature readings, that still requires perfect pressure control. The kelvin scale fixes this problem by using the <em>triple point</em> of water to define the scale. We will define the triple point in the following section but note that the triple point requires a <em>singular value</em> for pressure and temperature which will be the same regardless of their environmental conditions. With <span class="math notranslate nohighlight">\( \Delta 1\ K=\Delta\ 1\ ^\circ C \)</span>, we then have the triple point of water as <span class="math notranslate nohighlight">\(273.16\ K\)</span>. One kelvin is then defined as a <span class="math notranslate nohighlight">\( 273.16^{\text{th}} \)</span> of the difference between absolute zero and the triple point of water.</p>
 <section id="fahrenheit">
-<h3>Fahrenheit<a class="headerlink" href="#fahrenheit" title="Permalink to this heading">#</a></h3>
+<h3>Fahrenheit<a class="headerlink" href="#fahrenheit" title="Link to this heading">#</a></h3>
 <p>You will often also encounter Fahrenheit, the standard common use metric in the US. Fahrenheit is defined in relation to Celsius as: <span class="math notranslate nohighlight">\(°F = (\frac{9}{5} * °C) + 32\)</span>, such that -20 °C = 0 °F, 0 °C = 32 °F and 37 °C = 98.5 °F (body temperature).</p>
 <p>This scale was intended such that it should rarely go negative in common usage. For this purpose, 0 °F was established as the freezing point of an arbitrary mixture of water, ice and a salt to create a solution with a much lower freezing point than water.</p>
 </section>
 </section>
 <section id="properties-of-matter">
-<h2><span class="section-number">2.7. </span>Properties of Matter<a class="headerlink" href="#properties-of-matter" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.7. </span>Properties of Matter<a class="headerlink" href="#properties-of-matter" title="Link to this heading">#</a></h2>
 <p>The above thermodynamic variables (i.e., pressure/volume/temperature) can be visualised in a plot called a <strong>phase diagram</strong>. For a given substance, i.e., an enclosed box of water, we are able to see how by altering these variables the phase might change.</p>
 <figure class="align-default" id="fig-phase">
-<a class="reference internal image-reference" href="../_images/2.7_phase.png"><img alt="../_images/2.7_phase.png" src="../_images/2.7_phase.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phase.png"><img alt="../_images/2.7_phase.png" src="../_images/2.7_phase.png" style="width: 60%;" />
+</a>
 </figure>
 <section id="states-of-matter">
-<h3>States of matter<a class="headerlink" href="#states-of-matter" title="Permalink to this heading">#</a></h3>
+<h3>States of matter<a class="headerlink" href="#states-of-matter" title="Link to this heading">#</a></h3>
 <p>In general, we have three* main states of matter: solids, liquids, gases.</p>
 <!-- but in short is the state where atoms get stripped of their electrons to make a gas of ions and free electrons).  -->
 <figure class="align-default" id="fig-phases">
-<a class="reference internal image-reference" href="../_images/2.7_phases.png"><img alt="../_images/2.7_phases.png" src="../_images/2.7_phases.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phases.png"><img alt="../_images/2.7_phases.png" src="../_images/2.7_phases.png" style="width: 80%;" />
+</a>
 </figure>
 <p>A <strong>vapour</strong> is a substance in the gaseous phase at a temperature lower than its <strong>critical point</strong>.</p>
 <figure class="align-default" id="fig-water">
-<a class="reference internal image-reference" href="../_images/2.6_water.png"><img alt="../_images/2.6_water.png" src="../_images/2.6_water.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.6_water.png"><img alt="../_images/2.6_water.png" src="../_images/2.6_water.png" style="width: 60%;" />
+</a>
 </figure>
 <p>If a substance is able to hold thermal equilibrium between all three of these phases (solid, liquid and gas) by controlling the thermodynamic variables (pressure and temperature), this will necessarily be a singular point called the <strong>triple point</strong>.</p>
 </section>
 <section id="examples">
-<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
 <p>Consider carbon dioxide, CO<sub>2</sub>, and water, H<sub>2</sub>O.</p>
 <figure class="align-default" id="fig-co2-h2o">
 <img alt="../_images/2.7_co2_h2o.png" src="../_images/2.7_co2_h2o.png" />
@@ -594,12 +613,13 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <p>For water at atmospheric pressure, we can have solid, liquid, or vapour. It is clear here that the triple point of H<sub>2</sub>O occupies a singular point, which is why it is used to determine the kelvin scale.</p>
 </section>
 <section id="phase-changes">
-<h3>Phase changes<a class="headerlink" href="#phase-changes" title="Permalink to this heading">#</a></h3>
+<h3>Phase changes<a class="headerlink" href="#phase-changes" title="Link to this heading">#</a></h3>
 <p>As we approach these boundaries between states, energy is used in changing states where there is <em>no change in temperature</em>. The energy associated with the phase change then relates <em>only</em> to the mass of the substance undergoing a phase transition. This is the <strong>latent heat</strong> <span class="math notranslate nohighlight">\(L\)</span> [J kg<sup>-1</sup>] of the phase transition.</p>
 <figure class="align-default" id="fig-phase-circular">
-<a class="reference internal image-reference" href="../_images/2.7_phase_circular.png"><img alt="../_images/2.7_phase_circular.png" src="../_images/2.7_phase_circular.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_phase_circular.png"><img alt="../_images/2.7_phase_circular.png" src="../_images/2.7_phase_circular.png" style="width: 70%;" />
+</a>
 <figcaption>
-<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.6 </span><span class="caption-text">If we refer back to the definition of specific heat, <span class="math notranslate nohighlight">\( C=\frac{Q}{m\Delta T} \;\underset{\Delta T \to 0}{\longrightarrow}\; \infty\)</span>. As such, during the transition the specific heat is technically <em>undefined</em>.</span><a class="headerlink" href="#fig-phase-circular" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>How much energy is used when considering both specific heat and latent for water?</p>
@@ -622,51 +642,23 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>State</th>
+      <th>State/transition</th>
       <th>Specific energy (J / kg)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Solid</th>
-      <td>2,050</td>
+      <td>2,050 * dT</td>
     </tr>
     <tr>
       <th>Liquid</th>
-      <td>4,184</td>
+      <td>4,184 * dT</td>
     </tr>
     <tr>
       <th>Vapour</th>
-      <td>1,890</td>
+      <td>1,890 * dT</td>
     </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Transition</th>
-      <th>Latent heat (J)</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <th>Fusion (freezing)</th>
       <td>340,000</td>
@@ -678,6 +670,8 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
   </tbody>
 </table>
 </div></div></div>
+</div>
+<div class="cell tag_remove-input docutils container">
 </div>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
@@ -693,7 +687,8 @@ V_i + \Delta V &amp;\approx V_i + 3 \alpha V_i \Delta T + 0 + 0 \qquad \text{whe
 <li><p>Vapor at <span class="math notranslate nohighlight">\(100\ ^\circ C \rightarrow\)</span> vapour at <span class="math notranslate nohighlight">\(110\ ^\circ C\)</span></p></li>
 </ol>
 <figure class="align-default" id="fig-energy-fig">
-<a class="reference internal image-reference" href="../_images/2.7_energy_fig.png"><img alt="../_images/2.7_energy_fig.png" src="../_images/2.7_energy_fig.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_energy_fig.png"><img alt="../_images/2.7_energy_fig.png" src="../_images/2.7_energy_fig.png" style="width: 80%;" />
+</a>
 </figure>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align}
@@ -795,10 +790,11 @@ m_\text{ice}&amp;=\frac{126}{362.6}=0.35\ \text{kg}.
 </div>
 </section>
 <section id="newton-s-law-of-cooling">
-<h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Permalink to this heading">#</a></h3>
+<h3>Newton’s law of cooling<a class="headerlink" href="#newton-s-law-of-cooling" title="Link to this heading">#</a></h3>
 <p>Consider a system with temperature <span class="math notranslate nohighlight">\(T_\text{sys}\)</span>, placed in contact with the environment with <span class="math notranslate nohighlight">\(T_\text{env}&lt;T_\text{sys}\)</span>.</p>
 <figure class="align-default" id="fig-cooling">
-<a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/2.7_cooling.png"><img alt="../_images/2.7_cooling.png" src="../_images/2.7_cooling.png" style="width: 70%;" />
+</a>
 </figure>
 <p>Heat <span class="math notranslate nohighlight">\(Q\)</span> leaves the system with temperature <span class="math notranslate nohighlight">\(T\)</span> but the environment is so large that <span class="math notranslate nohighlight">\(T_\text{env}\)</span> is constant. What is the temperature as a function of time, i.e., what is <span class="math notranslate nohighlight">\(T(t)\)</span>?</p>
 <p>Newton’s cooling equation tells us that the heat lost per unit time is proportional to the temperature difference between the two systems.</p>
@@ -835,10 +831,10 @@ Q(t) = C\Delta T &amp;= C(T_0 - T(t)) \\
 </section>
 </section>
 <section id="mechanisms-of-heat-transfer">
-<h2><span class="section-number">2.8. </span>Mechanisms of Heat Transfer<a class="headerlink" href="#mechanisms-of-heat-transfer" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.8. </span>Mechanisms of Heat Transfer<a class="headerlink" href="#mechanisms-of-heat-transfer" title="Link to this heading">#</a></h2>
 <p>Heat transfer occurs by <strong>conduction, convection, and radiation</strong>.</p>
 <section id="conduction">
-<span id="sec-conduction"></span><h3>Conduction<a class="headerlink" href="#conduction" title="Permalink to this heading">#</a></h3>
+<span id="sec-conduction"></span><h3>Conduction<a class="headerlink" href="#conduction" title="Link to this heading">#</a></h3>
 <p>Conduction is the transfer of heat through a material in contact. It depends on the motion of particles that carry energy from one region to another, typically through lattice vibrations or electron flow <strong>(neighbouring particles exchange and average their energies)</strong>. When one end of a metal rod is placed in a flame, the other end soon becomes hot because energy is transmitted along the rod by molecular and electronic collisions. The rate of heat flow through a material is proportional to the temperature difference and inversely proportional to the length through which the heat flows. Metals have higher thermal conductivities due to delocalised electrons able to move freely through the material, while for insulators the electrons are not free to move, the charges are fixed.</p>
 <p>For a temperature variation along a conducting rod,</p>
 <div class="math notranslate nohighlight">
@@ -853,7 +849,7 @@ Q(t) = C\Delta T &amp;= C(T_0 - T(t)) \\
 <p>“Dead” air, wool, Styrofoam, and fiberglass are good insulators because they have low thermal conductivity while metals like aluminium and copper have high thermal conductivities (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_thermal_conductivities">see here for some examples</a>).</p>
 </section>
 <section id="convection">
-<h3>Convection<a class="headerlink" href="#convection" title="Permalink to this heading">#</a></h3>
+<h3>Convection<a class="headerlink" href="#convection" title="Link to this heading">#</a></h3>
 <p>Convection is the transfer of heat by the mass motion of a fluid from one region to another. Examples include hot-air and hot-water heating systems, the cooling system of a car engine, and the circulation of blood in the body. There exists two types of convwiection:</p>
 <ul class="simple">
 <li><p><em>Natural (free) convection</em>: where motion arises from density differences caused by temperature gradients. As fluids are heated, they become less dense as they expand and therefore rise. Cooler, less dense fluids sink and replace the warmer fluid resulting in heat transfer. Free convection in the oceans is responsible for global heat transfer.</p></li>
@@ -861,7 +857,7 @@ Q(t) = C\Delta T &amp;= C(T_0 - T(t)) \\
 </ul>
 </section>
 <section id="radiation">
-<span id="sec-radiation"></span><h3>Radiation<a class="headerlink" href="#radiation" title="Permalink to this heading">#</a></h3>
+<span id="sec-radiation"></span><h3>Radiation<a class="headerlink" href="#radiation" title="Link to this heading">#</a></h3>
 <p>Radiation transfers heat by electromagnetic waves such as infrared and visible light. It occurs even through a vacuum, as in heat from the Sun or a fire. All objects emit radiation depending on temperature: mainly infrared at room temperature, red-hot at 800°C, and white-hot near 3000°C, with the following rate:</p>
 <div class="math notranslate nohighlight">
 \[ H = Ae\sigma T^4 \]</div>
@@ -996,7 +992,7 @@ By Dr. Samer Kurdi, Dr. Jonathan Leach
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
