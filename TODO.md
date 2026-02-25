@@ -14,9 +14,10 @@
 [ ] - TODO
 [ ] include jonathan leach's example (gibbs/clausius ch5 i think)
 
-[O] DAFYDD - change all F_x to F in figures
-[ ] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
-[ ] also label the shaded graph in 4.3 to have the letter W please!
-[ ] remove all text from  figures_for_chapter_4/Figure_19-7.png
-[ ] [[ FIG OF REVERSIBLE VS IRREVERSIBLE PROCESS ]] -- see pic1 in ch5 folder
+[O] - DAFYDD
+[O] change all F_x to F in figures
+[O] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
+[O] also label the shaded graph in 4.3 to have the letter W please!
+[O] remove all text from  figures_for_chapter_4/Figure_19-7.png
+[O] [[ FIG OF REVERSIBLE VS IRREVERSIBLE PROCESS ]] -- see pic1 in ch5 folder
 
