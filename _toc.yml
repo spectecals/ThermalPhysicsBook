@@ -27,4 +27,5 @@ chapters:
   # - file: ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts
   # - file: ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem
   # - file: ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions
-- file: ch6-heat_engines/01_Heat_engines
+# - file: ch6-heat_engines/01_Heat_engines
+# - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
