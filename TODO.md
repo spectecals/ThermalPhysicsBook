@@ -1,104 +1,23 @@
-[x] - DONE
-[X] right answer first for section 1 example (b)
-[X] fig 17.17 in specific heat capacity section 3.2
-[X] need to hyperlink with tags on earlier sections, ask gpt
-[X] tag section 4.2 with section 1 ideal gases
-[X] reformat fig17.17 up to example admonition to include everything incl plot in admonition
-[X] full derivation of beta = 3alpha
-[X] after 3.6 include smaer's section incl egg fig
-[X] align equations
-[X] adiabatic before 0th law --- NOTE: i've moved things around, included isothermal and isobaric alongside, removed internal energy as relates to kinetic theory in ch.4
-[X] add newton's law of cooling in full from section 3 in JL
-[X] do questions for ch1 and ch3, as many as possible from jonathan's, or from thermalphysics book
-[X] get fig 1 fully worked
-[X] example 3.5 fully worked out including math
-[X] add phase diagram section text
-[X] exapnd 3.8 intro
-[X] add states of matter to section 3.7
-[X] add fig 17.24 to section 3.8
-[X] go back through referential sections from JL, include whole nb page
-[X] section 3.8, include some examples of thermal conductivities
-[X] remove plot backgrounds, png or likewise
-[X] moving adiabatic ch.5, first law
-[X] maybe plot, definitely example on sections 3.5-3.7
-[X] add to note on shc of water the difference in c_p for 0-100 and 0-40
-[X] remove caption from thermometer fig
-[X] add linebreak back to 2.4
-[X] add "see figure ..." to egg figure caption
-[X] review chapter 2
-[X] invert states of matter and egg section, show solid liquid gas, phase diagram, mimic JL
-[X] figure out ordering for end of section 2
-[X] doublecheck 2.6 has been fully copied from JL 2.kelvin vs celsius
-[X] change = inf to -> inf
-[X] check whether to use \bar or \bra \ket notation - USE BRAKET
-[X] start on ch4
-[X] add answers to questions ch1,2
-[X] introduction of cp being cv + 2 isn't explained
-[X] flatten dropdown, just use 5.1, 5.2 etc
-[X] fix fig2.2, xticks still show, minima highlighted why? x label clipping
-[X] "and the molecules are in their lowest energy state". what is meant here? end of diatomic molecule section
-[X] "A phase is a portion of matter homogeneous in properties (e.g., liquid, vapour)" ?
-[X] change logo from hwu to unsplash for fire
-[X] calculate entropy of a fair die and an unfair die in q1.6 -- give probabilities for the unfair die p(1:3) = 1/3, p(4:6)=0
+[X] - DONE
+[X] separate heat engines into self contained chapter
+[X] mix probability and entropy, 2nd law
+[X] move 2nd law into ch5 from ch6, including clausius
+[X] gibbs and clausius missing from ch5
 
-[/] - FOR DAFYDD
-[X] thermometer figure 2.3, identify parts of thermometer with annotations
-[/] redraw wall bounce section 3.1, rewrite caption without linebreaks
-[/] draw cube with bouncing gas inside, section 3.1
-[X] PV diagram of two isotherms, showing it's possible to move between isotherms by either increasing pressure OR volume (adiabatic vs isobaric), section 3.3
-[X] [[FIG OF POINT PARTICLE WITH TRAJECTORIES IN X/Y/Z]]
-[X] [[FIG OF BARBELLS SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
-[X] [[FIG OF CORKSCREW DIATOMIC MOLECULE SHOWING EACH TYPE OF TRANSLATION / ROTATION, SEE PG 25 FROM SAMER'S BREAKDOWN]]
-[X] [[FIG OF ISOTHERM MOVING HORIZONTALLY VS VERTICALLY FOR VOLUME OR PRESSURE, BOTH SHOWING A CHANGE OF 1K BUT ONE SHOWING 12.5J VS ONE WITH 20.8J]]
-[/] [[FIG 18 IN SRC]]
-[/] [[FIG 8.1 IN SRC]]
-[/] [[FIG 8.3 (sorry this one's a bit intense)]]
-[/] [[FIG COMPRESSION IN SRC]]
+[/] - GET SAMER'S REVIEW
+[/] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1) - NOTE: this only makes sense after defining to/by the system, i think it's fine as it is for now?
+[/] "potential energy function"  work = - delta P, p.e.f important to conservation of energy , applies for conservative forces -- cons energy must satisfy potential energy function, nonconservative functions dont satisfy it which is why you need internal energy -- NOTE: added "A force is conservative if the work it does is **path independent** - i.e., by lifting a book and waving it around, work is done by offsetting gravity. The amount of work depends only on the start and endpoints of the potential energy function $V$ of the conservative force, such that $\Delta V = -W$. "
+[/] i moved dafydd's discrete/continuous/mean/variance sections into review: probability. not sure what else needs to be there -- haven't ported over independent variables yet
+[/] repeat of probability review intended or not? 5.1 is probability review, 5.4 wanted probability intro before exampels of pokemon, birthdays?
 
-[-] - UNDERWAY
-[-] write up all questions in excel sheet with annotated from where
-
-[O] - WONT DO YET
-[O] add footnote for 3 states of matter vs 5
-[O] incorporate jl's part of 3.properties of matter into 4.1, p vs V -- define states of matter, critical point, SHOW dont EXPLAIN isotherms
-[O] section 2.3: include definitions of adiabatic, reversible processes, equilibrium
-[O] add an equation for convection
-[O] include q4 from jl (adiabatic comes later)
 
 [ ] - TODO
-[ ] fig 8.3 is a LOT of information that even I don't understand... I think we should go into a lot more detail if we're going to include this figure
-[ ] [[REF FIG 8.3]]
-[ ] add https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node61.html from 8.5 onward to the end of 3.5 FROM BREAKDOWN.DOCX
-[ ] omit 5.8 engines from ch.5/6/4
-[ ] crossref JL and uni physics book for ch. 7
-[ ] 7.3, 7.8 are same chapter
-[ ] 7.6 and 7.7 paired
-[ ] 7.4, 7.9 paired
-[ ] 7.11, 7.12
-[ ] 7.5 2nd law and third law
-[ ] finish chs. 2 and 3, nudge dafydd for figs if any needed
-[ ] ch.2 thermal expansion, use figs of spring (how does thermal expansion work) - model using atoms connected by springs, interatomic forces are the springs, atoms in alticce, atoms vibrate, vibration increases with temperature, meaning amplitude of vibration increases.
-[ ] update question excel sheet
-[ ] qns by thursday
-[ ] ch3 by friday (week of 26/01)
-[ ] finish newtons law of cooling derivation
-[ ] give lorenzo access to JL onenote
-[ ] reintroduce q4 from jl 5.d to ch3 Qs
+[ ] include jonathan leach's example (gibbs/clausius ch5 i think)
 
-[X] change W = fs to |F| |s| cos theta
-[X] mention component parallel = positive, perp = 0, parallel and opposite = -ve
-[X] x_a instead of x_1
-[ ] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1), "potential energy function"  work = - delta P, p.e.f important to conservation of energy , applies for conservative forces -- cons energy must satisfy potential energy function, nonconservative functions dont satisfy it which is why you need internal energy
-[X] add another entry to rec reading for just review,
-[X] change parallel F to parallel components of F, mention F_||
-[ ] sec:path needs fixing
-[X] path a = heat = integral of mass, shc
-[ ] mix probability and entropy, 2nd law
-[ ] separate heat engines into self contained chapter
+[O] - DAFYDD
+[O] change all F_x to F in figures
+[O] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
+[O] also label the shaded graph in 4.3 to have the letter W please!
+[O] remove all text from  figures_for_chapter_4/Figure_19-7.png
+[O] [[ FIG OF REVERSIBLE VS IRREVERSIBLE PROCESS ]] -- see pic1 in ch5 folder
 
-[ ] DAFYDD - change all F_x to F in figures
-[ ] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
-[ ] also label the shaded graph in 4.3 to have the letter W please!
-[ ] remove all text from  figures_for_chapter_4/Figure_19-7.png
-
-[ ] gibbs and clausius missing
