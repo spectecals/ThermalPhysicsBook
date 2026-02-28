@@ -2,23 +2,28 @@ format: jb-book
 root: index
 options:
   numbered: 2
+
 chapters:
 - file: ch1-introduction/01_intro
   # sections:
   # - file: ch1-introduction/02_questions
   # - file: ch1-introduction/03_solutions
+
 - file: ch2-temperature_and_heat/01_temperature_and_heat
   # sections:
   # - file: ch2-temperature_and_heat/02_questions
   # - file: ch2-temperature_and_heat/03_solutions
+
 - file: ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
   # sections:
   # - file: ch3-kinetic_theory_of_gases/02_questions
   # - file: ch3-kinetic_theory_of_gases/03_solutions
+
 - file: ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics
-  # sections:
-  #   - file: ch4-The_First_Law_of_Thermodynamics/02_questions
-  #   - file: ch4-The_First_Law_of_Thermodynamics/03_solutions
+  sections:
+  - file: ch4-first_law_of_thermodynamics/02_questions
+  - file: ch4-first_law_of_thermodynamics/03_solutions
+
 - file: ch5-entropy_and_second_law/01_entropy_and_second_law
   # sections:
   # - file: ch5-probability_for_thermodynamics/CH5-Problem_Sheet
@@ -27,5 +32,6 @@ chapters:
   # - file: ch5-probability_for_thermodynamics/CH5-S1-Basic_Probability_Concepts
   # - file: ch5-probability_for_thermodynamics/CH5-S2-Combinatorics_and_Bayes_Theorem
   # - file: ch5-probability_for_thermodynamics/CH5-S3-Supplementary-Key_Distributions
+
 # - file: ch6-heat_engines/01_Heat_engines
 # - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
