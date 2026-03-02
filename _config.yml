@@ -3,13 +3,13 @@
 
 title: Thermal Physics
 author: Dr. Samer Kurdi, Dr. Jonathan Leach
-logo: logo.jpg
+logo: src/logo.jpg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: "force"
-  kernel_name: "tp_env_fix"
+  kernel_name: "tp_env"
 
 # Define the name of the latex output file for PDF builds
 latex:

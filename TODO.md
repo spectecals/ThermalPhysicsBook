@@ -10,9 +10,16 @@
 [/] i moved dafydd's discrete/continuous/mean/variance sections into review: probability. not sure what else needs to be there -- haven't ported over independent variables yet
 [/] repeat of probability review intended or not? 5.1 is probability review, 5.4 wanted probability intro before exampels of pokemon, birthdays?
 
-
 [ ] - TODO
 [ ] include jonathan leach's example (gibbs/clausius ch5 i think)
+---- TODO BY 04/03 ----
+[ ] fix per mole and molar heat capacity section
+[ ] fix ch5.2, get figs for 5.2 (probability of coins and circle with particles inside)
+---- TODO BY 04/03 ----
+[ ] do not need example 20.11
+[ ] binomial distribution in 5.3
+[ ] third law from JL's notes
+[ ] cut 5.9 and 5.10 (coin toss and back to temperature)
 
 [O] - DAFYDD
 [O] change all F_x to F in figures
