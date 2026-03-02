@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5. Entropy and the Second Law of Thermodynamics &#8212; Thermal Physics</title>
   
@@ -28,42 +29,47 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=57ce8a05" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch5-entropy_and_second_law/01_entropy_and_second_law';</script>
-    <script src="../_static/toc-current-only.js?v=9d1ffc5e"></script>
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Heat engines" href="../ch6-heat_engines/01_Heat_engines.html" />
     <link rel="prev" title="4. The First Law of Thermodynamics" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -161,18 +167,7 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
@@ -180,7 +175,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Entropy and the Second Law of Thermodynamics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ch6-heat_engines/01_Heat_engines.html">6. Heat engines</a></li>
 </ul>
 
     </div>
@@ -210,9 +204,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -306,9 +300,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -329,31 +323,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-probability-and-statistics">5.1. Review: Probability and Statistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.2. Directions of Thermodynamic Processes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-and-boltzmann-entropy">5.3. Gibbs and Boltzmann Entropy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surprises-and-information">Surprises and information</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.4. Probability: Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.5. Probability Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.6. Clausius Definition of Entropy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.7. Entropy Changes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-thermal-conduction">Entropy Change: Thermal Conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-calorimetric-process">Entropy Change: Calorimetric Process</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-free-expansion">Entropy Change: Free Expansion</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-statistical-entropy">Connection to Statistical Entropy</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-of-a-supercooled-fluid">5.8. Entropy of a Supercooled Fluid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.9. The Second Law of Thermodynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.10. Entropy and Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
 </ul>
             </nav>
         </div>
@@ -365,8 +335,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-second-law-of-thermodynamics">
-<h1><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Link to this heading">#</a></h1>
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">gamma</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-second-law-of-thermodynamics">
+<h1><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
@@ -384,141 +363,18 @@ document.write(`
 <li><p>Connect entropy with probability</p></li>
 </ul>
 </div>
-<section id="review-probability-and-statistics">
-<h2><span class="section-number">5.1. </span>Review: Probability and Statistics<a class="headerlink" href="#review-probability-and-statistics" title="Link to this heading">#</a></h2>
-<p>(Brief recap to be added.)</p>
-</section>
 <section id="directions-of-thermodynamic-processes">
-<h2><span class="section-number">5.2. </span>Directions of Thermodynamic Processes<a class="headerlink" href="#directions-of-thermodynamic-processes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.1. </span>Directions of Thermodynamic Processes<a class="headerlink" href="#directions-of-thermodynamic-processes" title="Permalink to this heading">#</a></h2>
 <p>Thermodynamic processes in nature are <strong>irreversible</strong>, meaning they occur spontaneously in one direction only. Examples include heat flowing from hot to cold, the free expansion of a gas, and the conversion of mechanical energy into heat by friction. These processes define a preferred direction in nature, formalized by the <strong>second law of thermodynamics</strong>.</p>
 <p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small.</p>
 <p>Irreversible processes are inherently nonequilibrium processes and cannot be made to run backward by small changes in conditions. Their direction is closely linked to increasing disorder: systems naturally evolve from more ordered states to more random ones. Mechanical energy represents organized motion, while heat corresponds to random molecular motion, so converting work into heat increases disorder and reinforces irreversibility.</p>
-<p>[[ FIG OF REVERSIBLE VS IRREVERSIBLE PROCESS ]]</p>
+<figure class="align-default" id="ice-in-metal-box">
+<a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><strong>(A)</strong> A block of ice melts <em>irreversibly</em> when we place it into a hot (70 <span class="math notranslate nohighlight">\(^{\circ}\)</span>C) metal box, as heat flows from the box into the ice - inducing a phase change into water. The heat will never move from the colder body to the hotter one. <strong>(B)</strong> A block of ice at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C can be melted <em>reversibly</em> if we put it in a 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C metal box. By infinitesimally raising or lowering the temperature of the box, so that we remain extremely close to the phase transition temperature of H<span class="math notranslate nohighlight">\(_2\)</span>O, we can make heat flow into the ice to melt it; or make heat flow out of the water to freeze it.</span><a class="headerlink" href="#ice-in-metal-box" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Examples will be provided once entropy is introduced. We will see that an irreversible process is characterized by a <strong>positive change in the entropy of the universe</strong>, whereas a reversible process corresponds to <strong>zero total entropy change</strong>.</p>
-</section>
-<section id="gibbs-and-boltzmann-entropy">
-<h2><span class="section-number">5.3. </span>Gibbs and Boltzmann Entropy<a class="headerlink" href="#gibbs-and-boltzmann-entropy" title="Link to this heading">#</a></h2>
-<section id="surprises-and-information">
-<h3>Surprises and information<a class="headerlink" href="#surprises-and-information" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Shannon entropy as a measure of uncertainty or surprise</p></li>
-<li><p>Card and deck-of-cards examples</p></li>
-</ul>
-<p>Introduce <strong>Gibbs entropy</strong>, then specialize to <strong>Boltzmann entropy</strong>.</p>
-</section>
-</section>
-<section id="probability-introduction">
-<h2><span class="section-number">5.4. </span>Probability: Introduction<a class="headerlink" href="#probability-introduction" title="Link to this heading">#</a></h2>
-</section>
-<section id="probability-examples">
-<h2><span class="section-number">5.5. </span>Probability Examples<a class="headerlink" href="#probability-examples" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Birthday problem</p></li>
-<li><p>Finding a single microstate (e.g. Pokémon analogy)</p></li>
-</ul>
-</section>
-<section id="clausius-definition-of-entropy">
-<h2><span class="section-number">5.6. </span>Clausius Definition of Entropy<a class="headerlink" href="#clausius-definition-of-entropy" title="Link to this heading">#</a></h2>
-<p>(To be developed.)</p>
-</section>
-<section id="entropy-changes">
-<h2><span class="section-number">5.7. </span>Entropy Changes<a class="headerlink" href="#entropy-changes" title="Link to this heading">#</a></h2>
-<section id="entropy-change-thermal-conduction">
-<h3>Entropy Change: Thermal Conduction<a class="headerlink" href="#entropy-change-thermal-conduction" title="Link to this heading">#</a></h3>
-<p>Tₕ → Q → T𝚌<br />
-Tₕ and T𝚌 remain at those temperatures.</p>
-<p>ΔS = ΔSₕ + ΔS𝚌<br />
-= −Q / Tₕ + Q / T𝚌<br />
-= Q (1 / T𝚌 − 1 / Tₕ)</p>
-</section>
-<hr class="docutils" />
-<section id="entropy-change-calorimetric-process">
-<h3>Entropy Change: Calorimetric Process<a class="headerlink" href="#entropy-change-calorimetric-process" title="Link to this heading">#</a></h3>
-<p>T₁ → T_f ← T₂</p>
-<p>Both are brought to the same final temperature T_f.</p>
-<p>ΔS = ΔS₁ + ΔS₂<br />
-= ∫(δQ₁ / T₁) + ∫(δQ₂ / T₂)</p>
-<p>Cannot take T out of the integral, as it is changing.</p>
-<p>For ideal substances:</p>
-<p>ΔS = m₁ c₁ ln(T_f / T₁) + m₂ c₂ ln(T_f / T₂)</p>
-<p>If T₁ &gt; T_f → T_f / T₁ &lt; 1<br />
-If T₂ &lt; T_f → T_f / T₂ &gt; 1</p>
-<p>Graph:<br />
-ln(T_f / T₁) &lt; 0<br />
-ln(T_f / T₂) &gt; 0</p>
-<p>It follows that:</p>
-<p>m₁ c₁ ln(T_f / T₁) + m₂ c₂ ln(T_f / T₂) &gt; 0</p>
-<hr class="docutils" />
-<section id="example">
-<h4>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h4>
-<p>Equal masses of water at 0 °C and 100 °C are combined.</p>
-<p>Final temperature = 50 °C</p>
-<p>T₁ = 50 °C<br />
-T₂ = 0 °C<br />
-m₁ = m₂ = m<br />
-c₁ = c₂ = c</p>
-<p>ΔS = m c ln(T_f / T₁) + m c ln(T_f / T₂)<br />
-= m c (ln 0.86 + ln 1.18)<br />
-≈ 0.1 m c</p>
-<p>Change in entropy &gt; 0</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="entropy-change-free-expansion">
-<h3>Entropy Change: Free Expansion<a class="headerlink" href="#entropy-change-free-expansion" title="Link to this heading">#</a></h3>
-<p>Initial volume V₁ → Final volume V₂</p>
-<p>Insulated system<br />
-Work = 0<br />
-Heat exchange = 0</p>
-<p>ΔU = Q_in − W_by<br />
-= 0 → ΔT = 0</p>
-<p>This process looks like an isothermal process.</p>
-<p>What is ΔS?</p>
-<p>ΔS = ∫(δQ / T)</p>
-<p>To calculate this, we use a reversible process with the same end states.</p>
-<p>Q_in = W_by<br />
-= ∫ p dV<br />
-= ∫ (nRT / V) dV<br />
-= nRT ln(V₂ / V₁)</p>
-<p>⇒ ΔS = Q_rev / T<br />
-= nRT ln(V₂ / V₁) / T<br />
-= nR ln(V₂ / V₁)</p>
-<hr class="docutils" />
-<section id="id1">
-<h4>Example<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
-<p>1 mole of gas undergoes a free expansion from V₁ → 2V₁.</p>
-<p>What is ΔS?</p>
-<p>ΔS = nR ln(V₂ / V₁)<br />
-= R ln 2</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="connection-to-statistical-entropy">
-<h3>Connection to Statistical Entropy<a class="headerlink" href="#connection-to-statistical-entropy" title="Link to this heading">#</a></h3>
-<p>How does this relate to S = k_B ln Ω?</p>
-<p>Remember that Ω is the number of accessible states.</p>
-<p>Ω ∝ number of locations = V / V_min<br />
-(V_min = molecular volume)</p>
-<p>If we have N molecules that do not occupy the same location, the total number of configurations is:</p>
-<p>Ω₁ = (V₁ / V_min)^N<br />
-Ω₂ = (V₂ / V_min)^N</p>
-<p>Ω₂ / Ω₁ = (V₂ / V₁)^N</p>
-<p>ln(Ω₂ / Ω₁) = N ln(V₂ / V₁)</p>
-<p>k_B ln Ω₂ − k_B ln Ω₁ = ΔS<br />
-ΔS = N k_B ln(V₂ / V₁)<br />
-= nR ln(V₂ / V₁)</p>
-<p>By considering the total number of accessible states, we recover the formula for entropy from the thermodynamic result.</p>
-</section>
-</section>
-<section id="entropy-of-a-supercooled-fluid">
-<h2><span class="section-number">5.8. </span>Entropy of a Supercooled Fluid<a class="headerlink" href="#entropy-of-a-supercooled-fluid" title="Link to this heading">#</a></h2>
-</section>
-<section id="the-second-law-of-thermodynamics">
-<h2><span class="section-number">5.9. </span>The Second Law of Thermodynamics<a class="headerlink" href="#the-second-law-of-thermodynamics" title="Link to this heading">#</a></h2>
-<p>(Notes + textbook Section 20.5.)</p>
-</section>
-<section id="entropy-and-probability">
-<h2><span class="section-number">5.10. </span>Entropy and Probability<a class="headerlink" href="#entropy-and-probability" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -561,15 +417,6 @@ Heat exchange = 0</p>
         <p class="prev-next-title"><span class="section-number">4. </span>The First Law of Thermodynamics</p>
       </div>
     </a>
-    <a class="right-next"
-       href="../ch6-heat_engines/01_Heat_engines.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Heat engines</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -586,31 +433,7 @@ Heat exchange = 0</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-probability-and-statistics">5.1. Review: Probability and Statistics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.2. Directions of Thermodynamic Processes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-and-boltzmann-entropy">5.3. Gibbs and Boltzmann Entropy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surprises-and-information">Surprises and information</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.4. Probability: Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.5. Probability Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.6. Clausius Definition of Entropy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.7. Entropy Changes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-thermal-conduction">Entropy Change: Thermal Conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-calorimetric-process">Entropy Change: Calorimetric Process</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-free-expansion">Entropy Change: Free Expansion</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Example</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-statistical-entropy">Connection to Statistical Entropy</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-of-a-supercooled-fluid">5.8. Entropy of a Supercooled Fluid</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.9. The Second Law of Thermodynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.10. Entropy and Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
 </ul>
   </nav></div>
 
@@ -635,7 +458,7 @@ By Dr. Samer Kurdi, Dr. Jonathan Leach
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
