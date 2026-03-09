@@ -324,6 +324,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -335,15 +340,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell tag_remove-input docutils container">
-</div>
-<section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-second-law-of-thermodynamics">
+  <section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-second-law-of-thermodynamics">
 <h1><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
 <li><p>Concepts in Thermal Physics: Chapter 13 (13.1–13.3, 13.5), Chapter 14 (14.1–14.2, 14.5)</p></li>
 <li><p>University Physics with Modern Physics 15th edition: Chapter 20</p></li>
+<li><p>Introductory Statistics 2e: Chapter 1.1, 2.1 - 2.8, 3.1 - 3.3</p></li>
 <li><p>Entropy video: <a class="reference external" href="https://www.youtube.com/watch?v=uQSoaiubuA0">https://www.youtube.com/watch?v=uQSoaiubuA0</a></p></li>
 </ul>
 </div>
@@ -362,12 +366,216 @@ document.write(`
 <p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small.</p>
 <p>Irreversible processes are inherently nonequilibrium processes and cannot be made to run backward by small changes in conditions. Their direction is closely linked to increasing disorder: systems naturally evolve from more ordered states to more random ones. Mechanical energy represents organized motion, while heat corresponds to random molecular motion, so converting work into heat increases disorder and reinforces irreversibility.</p>
 <figure class="align-default" id="ice-in-metal-box">
-<a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 80%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><strong>(A)</strong> A block of ice melts <em>irreversibly</em> when we place it into a hot (70 <span class="math notranslate nohighlight">\(^{\circ}\)</span>C) metal box, as heat flows from the box into the ice - inducing a phase change into water. The heat will never move from the colder body to the hotter one. <strong>(B)</strong> A block of ice at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C can be melted <em>reversibly</em> if we put it in a 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C metal box. By infinitesimally raising or lowering the temperature of the box, so that we remain extremely close to the phase transition temperature of H<span class="math notranslate nohighlight">\(_2\)</span>O, we can make heat flow into the ice to melt it; or make heat flow out of the water to freeze it.</span><a class="headerlink" href="#ice-in-metal-box" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Examples will be provided once entropy is introduced. We will see that an irreversible process is characterized by a <strong>positive change in the entropy of the universe</strong>, whereas a reversible process corresponds to <strong>zero total entropy change</strong>.</p>
+</section>
+<section id="entropy-and-probability">
+<h2><span class="section-number">5.2. </span>Entropy and Probability<a class="headerlink" href="#entropy-and-probability" title="Permalink to this heading">#</a></h2>
+<p>Entropy <span class="math notranslate nohighlight">\(S\)</span> is a concept associated with disorder, randomness and uncertainty. In thermodynamics, a system has a definite value of entropy for every particular state of the system - i.e., it is a state variable (as in <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-state-vars"><span class="std std-numref">Section 1.4</span></a>). As a brief reminder - pressure and temperature are also state variables; heat and work are not. We can define entropy either thermodynamically (“Clausius” entropy) or statistically (“Gibbs”/”Boltzmann” entropy).</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition</p>
+<p>Entropy is a measure of the uncertainty associated with a random variable.</p>
+</div>
+<p>If an outcome is highly unpredictable, its entropy is high, and its outcome is more likely to “surprise” you. Conversely, if an outcome is highly predictable, its entropy is low, and its outcome is less likely to “surprise” you.</p>
+<p>To motivate the formalism of these definitions of entropy, we’ll first introduce entropy in the context of information theory, via the <strong>Shannon entropy</strong>:</p>
+<div class="math notranslate nohighlight" id="equation-computing">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-computing" title="Permalink to this equation">#</a></span>\[
+H(X) = -\Sigma_i (p_i \log p_i),
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(H\)</span> is the weighted sum of surprises,</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_i\)</span> is the probability (bounded by <span class="math notranslate nohighlight">\((0, 1)\)</span>) of an event <span class="math notranslate nohighlight">\(i\)</span>,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(\log p_i\)</span> quantifies the measurement or “surprise” of an event,</p></li>
+<li><p>further, the logarithm base determines units like so:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log_2\)</span>: “bits”,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln\)</span>: “nats”,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\log_{10}\)</span>: “bans”.</p></li>
+</ul>
+</li>
+</ul>
+<p>For an event with <span class="math notranslate nohighlight">\(\Omega\)</span> outcomes (specifically refers to states in the context of thermodynamics),</p>
+<div class="math notranslate nohighlight">
+\[
+p_i = \frac{1}{\Omega}.
+\]</div>
+<p><strong>Why do we take the logarithm in <a class="reference internal" href="#equation-computing">(5.1)</a>?</strong></p>
+<p>To represent our variable, we want a function <span class="math notranslate nohighlight">\(f(p_i)\)</span> where:</p>
+<ul class="simple">
+<li><p>for zero surprise, <span class="math notranslate nohighlight">\(f(p_i=1)=0\)</span>,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log(p_i = 1) = 0\)</span></p></li>
+</ul>
+</li>
+<li><p>for small p: <span class="math notranslate nohighlight">\(f(p_i)=\ \text{large}\)</span>,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log(p_i \ll 1) = \text{large and negative}\)</span></p></li>
+</ul>
+</li>
+<li><p>and where independent events sum together:</p>
+<ul>
+<li><p>conveniently, <span class="math notranslate nohighlight">\(\log(a*b) = \log(a) + \log(b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\therefore f(p) = - \log(p).
+\]</div>
+<!-- Let’s compare this to tossing a fair / unfair coin. -->
+<div class="example admonition">
+<p class="admonition-title">Example: Tossing an unfair coin</p>
+<p>What is the entropy in tossing an unfair coin (where both sides are heads)?</p>
+<p>Since both sides are heads, the probability of an event’s outcome is simply:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p(H) = 1.0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(p(T) = 0.0\)</span>.
+Seeing as we are certain of the outcome, we should expect <span class="math notranslate nohighlight">\( S=0 \)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\to S &amp;= - \Sigma_i p_i \ln p_i \\
+&amp;= - [p(H) \ln p(H) + p(T) \ln p(T)] \\
+&amp;= 0\ \text{bits of entropy}.
+\end{aligned}
+\end{split}\]</div>
+<p>With 0 bits of entropy, we can see there is <span class="math notranslate nohighlight">\(2^0=1\)</span> modes.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: Tossing a fair coin</p>
+<p>What is the entropy in tossing a fair coin?</p>
+<p>As above, but with different probabilities:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p(H) = p(T) = 0.5\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\to S &amp;= - \Sigma_i p_i \log_2 p_i \ \ \text{bits}\\
+&amp;= - [p(H) \log_2 p(H) + p(T) \log_2 p(T)] \\
+&amp;= - [.5 \log_2 0.5 + 0.5 \log_2 0.5] \\
+&amp;= - 0.5[\log_2 0.5 + \log_2 0.5] \\
+&amp;= - 0.5[\log_2 (0.5 \times 0.5)] \\
+&amp;= - 0.5[-\log_2 4] \\
+&amp;= - 0.5[-2] \\
+&amp;= 1\ \text{bit}.
+\end{aligned}
+\end{split}\]</div>
+<p>With 1 bit of entropy, we can see there are <span class="math notranslate nohighlight">\(2^1=2\)</span> modes.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: Consecutive coin flips</p>
+<p>What is the entropy in tossing a fair coin four times?</p>
+<p>The probability of getting 4 heads in a row with a fair coin is <span class="math notranslate nohighlight">\(P(4H)=2^{-4} = \frac{1}{16} = 6.25\% \)</span> (least probable).
+The probability of getting 2 heads and 2 tails is <span class="math notranslate nohighlight">\(P(2H, 2T) = \binom{4}{2}\cdot\frac{1}{4}^4= \frac{6}{16} = 37.5\%\)</span> (most probable, see [[FIG]] for proof).</p>
+<p>The number of microscopic states grow rapidly with increasing number of coins. For <span class="math notranslate nohighlight">\(N=100\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P(100H) = \frac{1}{2}^{100} = 7.9\% \cdot 10^{-29}, \\
+P(50H, 50T) = \binom{100}{50}\frac{1}{2}^{100} = 7.97\%.
+\end{split}\]</div>
+<p>There is much greater entropy for 50 heads, 50 tails as there are many more combinations of microstates to describe the macrostate.</p>
+</div>
+<p><em>NB: <span class="math notranslate nohighlight">\(\binom{n}{r} \equiv ^nC_r \equiv \frac{n!}{k!(n-k)!}\)</span></em></p>
+<section id="connection-to-thermodynamic-entropy-statistically">
+<h3>Connection to thermodynamic entropy (statistically)<a class="headerlink" href="#connection-to-thermodynamic-entropy-statistically" title="Permalink to this heading">#</a></h3>
+<p>Now let’s consider how entropy is defined in thermodynamics where there are two forms:</p>
+<p><strong>Gibbs</strong>: Suppose a system can be in microcopic state <span class="math notranslate nohighlight">\(i\)</span> with probability <span class="math notranslate nohighlight">\(p_i\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-statistical">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-statistical" title="Permalink to this equation">#</a></span>\[
+S = -k_B \Sigma_i (p_i \ln p_i)
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(S\)</span> measures the average surprise of the event,</p></li>
+<li><p><span class="math notranslate nohighlight">\(k_B\)</span> gives us our units for entropy,</p></li>
+<li><p>and we operate exclusively with <span class="math notranslate nohighlight">\(\ln\)</span>.</p></li>
+</ul>
+<p><strong>Boltzmann</strong>: Consider an isolated system (fixed energy, noninteracting surroundings, fixed volume, fixed number of particles) such that all microstates are equally likely as there are no external influences:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_i &amp;= \frac{1}{\Omega} \\
+\therefore \Sigma_i^\Omega p_i \ln p_i &amp;= \Sigma_i^\Omega \frac{1}{\Omega} \ln \frac{1}{\Omega}  \\
+&amp;= \ln \frac{1}{\Omega}  \\
+&amp;= -\ln \Omega.
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\therefore S = k_B \ln \Omega
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(S\)</span> is the <em>microscopic entropy</em>,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(\Omega\)</span> is the number of microstates for the given macroscopic state.</p>
+<ul>
+<li><p>Large <span class="math notranslate nohighlight">\(\Omega \to \)</span> many possibilities <span class="math notranslate nohighlight">\(\to\)</span> large uncertainties <span class="math notranslate nohighlight">\(\to\)</span> large entropy</p></li>
+<li><p>Small <span class="math notranslate nohighlight">\(\Omega \to \)</span> few possibilities <span class="math notranslate nohighlight">\(\to\)</span> small uncertainties <span class="math notranslate nohighlight">\(\to\)</span> small entropy</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="statistical-form-of-entropy-in-thermodynamics">
+<h3>Statistical form of entropy in thermodynamics<a class="headerlink" href="#statistical-form-of-entropy-in-thermodynamics" title="Permalink to this heading">#</a></h3>
+<p>Consider an ideal gas containing Avagadro’s number of molecules in two states (A) and (B):</p>
+<ul class="simple">
+<li><p>(A) has the gas being uniformly distributed,</p></li>
+<li><p>(B) has the gas being clustered together, in a tenth of the volume.</p></li>
+</ul>
+<figure class="align-default" id="red-ball">
+<img alt="../_images/macroscopic_states.png" src="../_images/macroscopic_states.png" />
+</figure>
+<ul class="simple">
+<li><p>Their macroscopic states are described by the state variables <span class="math notranslate nohighlight">\(T,\ p,\ V\)</span>.</p></li>
+<li><p>Both of their microscopic states are equally likely, however the macroscopic properties of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are different.</p></li>
+<li><p>(A) is more probable as there are more microscopic combinations of states that are able to describe the macrostate!</p></li>
+</ul>
+<p>Let’s consider the case where the gas is composed of <span class="math notranslate nohighlight">\(0.1 \text{mol} \to 6 \cdot 10^{22} \text{molecules}\)</span>.</p>
+<ul class="simple">
+<li><p>Case (A) might have <span class="math notranslate nohighlight">\( 10^{24} \)</span> positions the molecules can occupy,</p></li>
+<li><p>Since case (B) has the molecules clustered together in a tenth of the space, they’re restricted to a smaller subset of positions, <span class="math notranslate nohighlight">\( 10^{23} \)</span>.</p></li>
+</ul>
+<p>As in <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-combinatorials"><span class="std std-numref">Section 1.8</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega_A = \binom{10^{24}}{10^{22}} &gt; \binom{10^{23}}{10^{22}} = \Omega_B \ \text{(using binomial for indistinguishable particles)}.
+\]</div>
+<p>This is where entropy is considered a measure of disorder, as state (A) is more disordered than state (B). However we can see that the underlying reason is that (A) is more probable as there are more combinations of microscopic states that describe its macrostate.</p>
+<div class="example admonition" id="admon-stat-entropy">
+<p class="admonition-title">Example</p>
+<p>Consider the isothermal expansion of a gas from <span class="math notranslate nohighlight">\( V_1 \to V_2 = 2 V_1 \)</span> through an isothermal process. What is the entropy change in this process?</p>
+<!-- 
+```{figure}
+[[FIG OF REVERSIBLE EXPANSION]]
+``` -->
+<p>Let’s start by denoting the number of molecules as <span class="math notranslate nohighlight">\(N\)</span> where each molecule has <span class="math notranslate nohighlight">\(X\)</span> different states it can occupy. We also know that the initial and final volumes are <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(2V_1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Omega &amp;= \text{total number of states for the}\ \textbf{entire system} \\
+\Omega &amp;= X_i \times X_{i+1} \times ... \times X_{N} = X^N \\
+S &amp;= k_B \ln \Omega \\
+&amp;= k_B \ln(X^N) \\
+&amp;= N k_B \ln X \\
+&amp;= nR \ln X \\
+\end{aligned}
+\end{split}\]</div>
+<p>This tells us the entropy for a given volume <span class="math notranslate nohighlight">\(V\)</span> with a given number of states, <span class="math notranslate nohighlight">\(X^N\)</span>. So what is the entropy change when doubling the volume?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta S &amp;= S_2 − S_1 \\
+&amp;= nR \ln(2X) − nR \ln( X) \\
+&amp;= nR \ln(2X / X) \\
+&amp;= nR \ln 2.
+\end{aligned}
+\end{split}\]</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -427,6 +635,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
