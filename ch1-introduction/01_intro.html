@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>1. Introduction &#8212; Thermal Physics</title>
   
@@ -29,45 +28,41 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=57ce8a05" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/toc-current-only.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch1-introduction/01_intro';</script>
-    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <script src="../_static/toc-current-only.js?v=9d1ffc5e"></script>
+    <link rel="icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Temperature and Heat" href="../ch2-temperature_and_heat/01_temperature_and_heat.html" />
@@ -168,13 +163,28 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/02_questions.html">4.11. Questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/03_solutions.html">4.12. Answers</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a></li>
 </ul>
 
@@ -205,9 +215,9 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -301,9 +311,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -352,7 +362,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
@@ -370,7 +380,7 @@ document.write(`
 </ul>
 </div>
 <section id="what-is-a-mole">
-<h2><span class="section-number">1.1. </span>What is a mole?<a class="headerlink" href="#what-is-a-mole" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>What is a mole?<a class="headerlink" href="#what-is-a-mole" title="Link to this heading">#</a></h2>
 <p>In thermal physics, we deal with enormous numbers of atoms and molecules. These large numbers make it impossible to track individual particles, so we describe their behaviour statistically, in terms of averages. Even numbers we think of as huge, like the Earth’s population (~<span class="math notranslate nohighlight">\(10^9\)</span>) or the U.S. national debt (~<span class="math notranslate nohighlight">\(10^{13}\)</span>), are tiny compared with the numbers of atoms in ordinary matter (around <span class="math notranslate nohighlight">\(10^{23}-10^{25}\)</span> per sample).</p>
 <p>For instance, 1 kg of nitrogen gas contains about <span class="math notranslate nohighlight">\(2 \cdot 10^{25}\)</span> molecules. A fast computer counting one molecule per clock cycle would take hundreds of millions of years just to count them! To handle such vast quantities, we use the concept of the mole, a convenient counting unit similar to a “dozen”, but much larger.</p>
 <div class="definition admonition">
@@ -380,7 +390,7 @@ document.write(`
 <p>This number, called <strong>Avogadro’s number</strong>, is <span class="math notranslate nohighlight">\(N_A=6.022 \cdot 10^{23}\)</span>. Thus, one mole of carbon, water, or sodium chloride each contains <span class="math notranslate nohighlight">\(6.022 \cdot 10^{23}\)</span> of their respective particles.</p>
 </section>
 <section id="useful-constants">
-<h2><span class="section-number">1.2. </span>Useful constants<a class="headerlink" href="#useful-constants" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Useful constants<a class="headerlink" href="#useful-constants" title="Link to this heading">#</a></h2>
 <p>Other than Avogadro’s number, there are other definitions useful to understand:</p>
 <p>The <strong>Boltzmann <em>constant</em></strong>, <span class="math notranslate nohighlight">\(k_B\)</span></p>
 <ul class="simple">
@@ -395,7 +405,7 @@ document.write(`
 </ul>
 </section>
 <section id="systems">
-<h2><span class="section-number">1.3. </span>Systems<a class="headerlink" href="#systems" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.3. </span>Systems<a class="headerlink" href="#systems" title="Link to this heading">#</a></h2>
 <p>We refer to our objects or regions of interest as a <strong>system</strong>. Everything outside if this system is their <strong>surroundings</strong>, where the <strong>boundary</strong> is the real or imaginary surface that separates the two. The interaction of the system across the boundary with their surroundings define the type of system we’re working with.</p>
 <ul class="simple">
 <li><p><strong>Open systems</strong>: An open system can exchange both matter and energy with its surroundings.</p></li>
@@ -410,7 +420,7 @@ document.write(`
 <p>If the system is in contact with its surroundings, thermal equilibrium means there is no net heat flow across the boundary. Under these conditions, macroscopic properties remain stable which is why they can be fully described by state variables.</p>
 </section>
 <section id="state-variables">
-<span id="sec-state-vars"></span><h2><span class="section-number">1.4. </span>State variables<a class="headerlink" href="#state-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.4. </span>State variables<a class="headerlink" href="#state-variables" title="Link to this heading">#</a></h2>
 <p>A quantity with a unique value for a particular state of the system is a <em>state variable</em>, i.e.:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
@@ -444,9 +454,9 @@ document.write(`
 </ul>
 </section>
 <section id="intensive-vs-extensive-variables">
-<h2><span class="section-number">1.5. </span>Intensive vs extensive variables<a class="headerlink" href="#intensive-vs-extensive-variables" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.5. </span>Intensive vs extensive variables<a class="headerlink" href="#intensive-vs-extensive-variables" title="Link to this heading">#</a></h2>
 <section id="intensive-variables">
-<h3>Intensive variables<a class="headerlink" href="#intensive-variables" title="Permalink to this heading">#</a></h3>
+<h3>Intensive variables<a class="headerlink" href="#intensive-variables" title="Link to this heading">#</a></h3>
 <p>These are variables that do not scale with the size of your system. Some examples are:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(p\)</span>, pressure</p></li>
@@ -456,7 +466,7 @@ document.write(`
 </ul>
 </section>
 <section id="extensive-variables">
-<h3>Extensive variables<a class="headerlink" href="#extensive-variables" title="Permalink to this heading">#</a></h3>
+<h3>Extensive variables<a class="headerlink" href="#extensive-variables" title="Link to this heading">#</a></h3>
 <p>These are variables that <strong>do</strong> scale with the size of your system. Consider:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(V\)</span>, volume</p></li>
@@ -468,13 +478,13 @@ document.write(`
 </section>
 </section>
 <section id="changing-thermodynamic-states">
-<span id="sec-path"></span><h2><span class="section-number">1.6. </span>Changing thermodynamic states<a class="headerlink" href="#changing-thermodynamic-states" title="Permalink to this heading">#</a></h2>
+<span id="sec-path"></span><h2><span class="section-number">1.6. </span>Changing thermodynamic states<a class="headerlink" href="#changing-thermodynamic-states" title="Link to this heading">#</a></h2>
 <p>A process that changes a system’s state is described by a <strong>path</strong>. The path describes <em>how</em> a system changes from one equilibrium state to another. If a process can or cannot be undone, we consider these processes and paths either “reversible” or “irreversible”.</p>
 <p>A given pair of equilibrium states can be connected by many distinct paths. For example, a system may be taken from state A to state B by holding temperature constant while varying pressure, or by holding pressure constant while varying temperature, or by varying these variables sequentially or in some combination. The path therefore describes the conditions maintained during the process, not just the initial and final states.</p>
 <figure class="align-default" id="fig-paths">
 <img alt="../_images/1.5_paths.png" src="../_images/1.5_paths.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Both processes start and end in the same state, though their paths differ significantly. Path 1 increases <span class="math notranslate nohighlight">\(p\)</span> while holding <span class="math notranslate nohighlight">\(T\)</span> constant, then increases <span class="math notranslate nohighlight">\(T\)</span> while <span class="math notranslate nohighlight">\(p\)</span> is constant. Path 2 keeps <span class="math notranslate nohighlight">\(p / T\)</span>, or equivalently <span class="math notranslate nohighlight">\(V\)</span>, (roughly) constant.</span><a class="headerlink" href="#fig-paths" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Both processes start and end in the same state, though their paths differ significantly. Path 1 increases <span class="math notranslate nohighlight">\(p\)</span> while holding <span class="math notranslate nohighlight">\(T\)</span> constant, then increases <span class="math notranslate nohighlight">\(T\)</span> while <span class="math notranslate nohighlight">\(p\)</span> is constant. Path 2 keeps <span class="math notranslate nohighlight">\(p / T\)</span>, or equivalently <span class="math notranslate nohighlight">\(V\)</span>, (roughly) constant.</span><a class="headerlink" href="#fig-paths" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <p>A <strong>reversible</strong> path has the system remain in equilibrium at all times. This requires the process to proceed sufficiently slowly that the system can continually adjust to changing conditions. In the ideal limit, the path consists of an infinite sequence of equilibrium states, so that the state variables are well defined at every stage of the process.</p>
@@ -487,7 +497,7 @@ document.write(`
 </ul>
 </section>
 <section id="sec-idealgas">
-<span id="ideal-gases"></span><h2><span class="section-number">1.7. </span>Ideal gases<a class="headerlink" href="#sec-idealgas" title="Permalink to this heading">#</a></h2>
+<span id="ideal-gases"></span><h2><span class="section-number">1.7. </span>Ideal gases<a class="headerlink" href="#sec-idealgas" title="Link to this heading">#</a></h2>
 <p>This section introduces a very important concept called the <em>ideal gas law</em>, based around the understanding that the pressure of a gas depends on its temperature and volume.</p>
 <ul class="simple">
 <li><p><strong>Boyle’s law</strong> (who boiled a viper in a vacuum): Experiments show that, at constant temperature, the product of <span class="math notranslate nohighlight">\(p V\)</span> remains constant,</p></li>
@@ -521,15 +531,15 @@ document.write(`
 <figure class="align-default" id="fig-kinetic-billiards">
 <img alt="../_images/1.6_kinetic.png" src="../_images/1.6_kinetic.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Ideal gas as billiard balls in a box. Gas particles are modeled as identical point-like balls moving randomly and colliding elastically with each other and with the walls of the container, illustrating how microscopic motion gives rise to state variables such as pressure and temperature.</span><a class="headerlink" href="#fig-kinetic-billiards" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Ideal gas as billiard balls in a box. Gas particles are modeled as identical point-like balls moving randomly and colliding elastically with each other and with the walls of the container, illustrating how microscopic motion gives rise to state variables such as pressure and temperature.</span><a class="headerlink" href="#fig-kinetic-billiards" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="combinatorial-problems">
-<span id="sec-combinatorials"></span><h2><span class="section-number">1.8. </span>Combinatorial problems<a class="headerlink" href="#combinatorial-problems" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.8. </span>Combinatorial problems<a class="headerlink" href="#combinatorial-problems" title="Link to this heading">#</a></h2>
 <p>Thermal physics studies how large collections of particles behave <em>statistically</em>. Since it is impossible to track every particle individually, we instead count how many distinct configurations a system can have that correspond to a given macroscopic state. This kind of counting is a combinatorial problem specifically relevant for indistinguishable particles.</p>
 <section id="the-combination-formula">
-<h3>The combination formula<a class="headerlink" href="#the-combination-formula" title="Permalink to this heading">#</a></h3>
+<h3>The combination formula<a class="headerlink" href="#the-combination-formula" title="Link to this heading">#</a></h3>
 <p>When counting configurations, we need to know how many ways we can arrange a certain number of items from a larger set <strong>without regard to order</strong>. The number of such combinations <span class="math notranslate nohighlight">\(C\)</span> is given by:</p>
 <div class="math notranslate nohighlight">
 \[ ^nC_k = \frac{n!}{k!(n-k)!} \]</div>
@@ -542,12 +552,12 @@ document.write(`
 <li><p>(b) 4 eggs?</p></li>
 </ul>
 <p>We can approach these problems by using <span class="math notranslate nohighlight">\( ^nC_k = \frac{n!}{k!(n-k)!}\)</span> where <span class="math notranslate nohighlight">\(n\)</span> here is the number of spaces in our carton and <span class="math notranslate nohighlight">\(k\)</span> is the number of eggs.</p>
-<p class="rubric">(a)</p>
+<h1 class="rubric" id="a">(a)</h1>
 <p>As you can imagine, there’s only one way to store 12 eggs in a carton with 12 spaces:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{n!}{k!(n-k)!} = \frac{12!}{12!(12-12)!} = \frac{12!}{12!*0!} = \frac{12!}{12!*1} = 1. \]</div>
 <p>A critical point of note here, <span class="math notranslate nohighlight">\(0! = 1\)</span>. This may not make sense at first but you can make sense of it by considering how many ways you can arrange 0 items. There’s one way—by not arranging them at all!</p>
-<p class="rubric">(b)</p>
+<h1 class="rubric" id="b">(b)</h1>
 <p>Using the same approach as before with <span class="math notranslate nohighlight">\( ^nC_k \)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ \frac{n!}{k!(n-k)!} = \frac{12!}{4!(12-4)!} = \frac{12!}{4!*8!} = \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2} = 495. \]</div>
@@ -564,7 +574,7 @@ resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetit
 </section>
 </section>
 <section id="dealing-with-very-large-numbers">
-<h2><span class="section-number">1.9. </span>Dealing with (very) large numbers<a class="headerlink" href="#dealing-with-very-large-numbers" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.9. </span>Dealing with (very) large numbers<a class="headerlink" href="#dealing-with-very-large-numbers" title="Link to this heading">#</a></h2>
 <p>When working out states for macroscopic quantities, we will need to use factorials on quantities scaled by Avogadro’s number <span class="math notranslate nohighlight">\(N_A\)</span> (~<span class="math notranslate nohighlight">\(10^{23}!\)</span>). These numbers are unfathomably huge. Consider an upper bound where we don’t count down from <span class="math notranslate nohighlight">\(n!\)</span> when computing it:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -583,7 +593,7 @@ resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetit
 <li><p>(a) <span class="math notranslate nohighlight">\(n = 1,000\)</span></p></li>
 <li><p>(b) <span class="math notranslate nohighlight">\(n = 10^{23}\)</span></p></li>
 </ul>
-<p class="rubric">(a)</p>
+<h1 class="rubric" id="id1">(a)</h1>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -592,7 +602,7 @@ resulting in <span class="math notranslate nohighlight">\(4!=12\)</span> repetit
 n! &amp;\approx e^{5908} = 10^{0.434 \times 5908} = 10^{2566} \qquad (\text{using } e = 10^{0.434}).
 \end{aligned}
 \end{split}\]</div>
-<p class="rubric">(b)</p>
+<h1 class="rubric" id="id2">(b)</h1>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
@@ -708,7 +718,7 @@ By Dr. Samer Kurdi, Dr. Jonathan Leach
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
