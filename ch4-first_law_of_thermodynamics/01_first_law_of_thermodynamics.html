@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>4. The First Law of Thermodynamics &#8212; Thermal Physics</title>
   
@@ -28,44 +29,48 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=57ce8a05" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics';</script>
-    <script src="../_static/toc-current-only.js?v=9d1ffc5e"></script>
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.11. Questions" href="02_questions.html" />
+    <link rel="next" title="5. Entropy and the Second Law of Thermodynamics" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html" />
     <link rel="prev" title="3. Kinetic Theory of Gases" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -163,28 +168,13 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">4. The First Law of Thermodynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_questions.html">4.11. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_solutions.html">4.12. Answers</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. The First Law of Thermodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a></li>
 </ul>
 
@@ -215,9 +205,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -311,9 +301,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -349,7 +339,7 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.4. The First Law of Thermodynamics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A Brief History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A brief history</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalism">Formalism</a></li>
 </ul>
 </li>
@@ -364,9 +354,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-pressure-versus-vapour-pressure">Partial pressure versus vapour pressure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-of-an-ideal-gas-free-expansion">4.8. Internal Energy of an ideal gas: Free Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacities-for-an-ideal-gas">4.9. Heat capacities for an ideal gas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-gamma-for-adiabatic-processes">4.10. pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for adiabatic processes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-of-an-ideal-gas-free-expansion">4.8. Internal Energy of an Ideal Gas: Free Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacities-for-an-ideal-gas">4.9. Heat Capacities for an Ideal Gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-gamma-for-adiabatic-processes">4.10. pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for Adiabatic Processes</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-done-during-a-reversible-adiabatic-process">Work done during a reversible adiabatic process</a></li>
 </ul>
 </li>
@@ -382,7 +372,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-first-law-of-thermodynamics">
-<h1><span class="section-number">4. </span>The First Law of Thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>The First Law of Thermodynamics<a class="headerlink" href="#the-first-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation</p>
 <ul class="simple">
@@ -409,34 +399,32 @@ document.write(`
 Building on this foundation, this chapter will explore how different **thermodynamic processes** - such as **cyclic**, **isothermal**, **isochoric**, **isobaric** and **adiabatic** transformations - emerge from the first law when specific constraints are imposed. We then examine **heat capacities**, showing how they quantify a system's response to heating and lead naturally to the gas constant $R$ and the adiabatic index $\gamma$. These ideas culminate in the derivation of the **adiabatic equation of state**, $pV^{\gamma} = \text{const}$, revealing how microscopic energy storage shapes macroscopic gas behaviour.
 
 We will begin by reviewing the concepts of work and internal energy. --><section id="review-work">
-<h2><span class="section-number">4.1. </span>Review: Work<a class="headerlink" href="#review-work" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.1. </span>Review: Work<a class="headerlink" href="#review-work" title="Permalink to this heading">#</a></h2>
 <p>Work is done by exerting a force <span class="math notranslate nohighlight">\(F\)</span> on an object, whilst the object is moved from a distance <span class="math notranslate nohighlight">\(s\)</span>. The energy transferred in this process, or the <em>work done</em>, is simply</p>
 <div class="math notranslate nohighlight" id="equation-4-1">
-<span class="eqno">(4.1)<a class="headerlink" href="#equation-4-1" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-4-1" title="Permalink to this equation">#</a></span>\[\begin{split}
 \strut
 W = F s \\
 [\text{J}] = [\text{N$\cdot$m}]
 \end{split}\]</div>
 <figure class="align-default" id="force-block-same-direction">
-<a class="reference internal image-reference" href="../_images/Figure_6-2.png"><img alt="../_images/Figure_6-2.png" src="../_images/Figure_6-2.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-2.png"><img alt="../_images/Figure_6-2.png" src="../_images/Figure_6-2.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Work is done by a force acting to displace an object.</span><a class="headerlink" href="#force-block-same-direction" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Work is done by a force acting to displace an object.</span><a class="headerlink" href="#force-block-same-direction" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>From <a class="reference internal" href="#equation-4-1">(4.1)</a>, we can see that work can be increased by amplifying the force or by applying the force over a greater distance.</p>
 <p>Force and displacement both have <em>direction</em>, making them both vectors, i.e., <span class="math notranslate nohighlight">\(\vec{F}, \vec{s}\)</span>. As such, it is important to note the magnitude of their parallel components, as in <a class="reference internal" href="#force-block-angle-direction"><span class="std std-numref">Fig. 4.2</span></a>. In order to find the resultant work done, we will need to use the <em>dot product</em>.</p>
 <div class="math notranslate nohighlight" id="equation-4-2">
-<span class="eqno">(4.2)<a class="headerlink" href="#equation-4-2" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-4-2" title="Permalink to this equation">#</a></span>\[
 \strut
 W = \vec{F} \cdot \vec{s} = |\vec{F}||\vec{s}| \ \cos(\phi),
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> is the angle between <span class="math notranslate nohighlight">\(\vec{F}\)</span> and <span class="math notranslate nohighlight">\(\vec{s}\)</span>.</p>
 <figure class="align-default" id="force-block-angle-direction">
-<a class="reference internal image-reference" href="../_images/Figure_6-3.png"><img alt="../_images/Figure_6-3.png" src="../_images/Figure_6-3.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-3.png"><img alt="../_images/Figure_6-3.png" src="../_images/Figure_6-3.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A force acting at an angle to diplacement can be separated into parallel and perpendicular components. Perpendicular components do not contribute to the work done, whereas parallel components <span class="math notranslate nohighlight">\(F_{||}=|F|\cos(\phi)\)</span> do through <a class="reference internal" href="#equation-4-2">(4.2)</a>.</span><a class="headerlink" href="#force-block-angle-direction" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">A force acting at an angle to diplacement can be separated into parallel and perpendicular components. Perpendicular components do not contribute to the work done, whereas parallel components <span class="math notranslate nohighlight">\(F_{||}=|F|\cos(\phi)\)</span> do through <a class="reference internal" href="#equation-4-2">(4.2)</a>.</span><a class="headerlink" href="#force-block-angle-direction" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Note that:</p>
@@ -447,11 +435,11 @@ W = \vec{F} \cdot \vec{s} = |\vec{F}||\vec{s}| \ \cos(\phi),
 <li><p>Antiparallel components <span class="math notranslate nohighlight">\(\vec{F}\)</span> and <span class="math notranslate nohighlight">\(\vec{s}\)</span> will have <span class="math notranslate nohighlight">\(W &lt; 0\)</span> as <span class="math notranslate nohighlight">\(\cos(180)=-1\)</span>.</p></li>
 </ol>
 <section id="the-work-energy-theorem">
-<h3>The work-energy theorem<a class="headerlink" href="#the-work-energy-theorem" title="Link to this heading">#</a></h3>
+<h3>The work-energy theorem<a class="headerlink" href="#the-work-energy-theorem" title="Permalink to this heading">#</a></h3>
 <p>The work-energy theorem simply states that the work done on an object converts into kinetic energy. Despite work being a scalar quantity, it still relates to the direction of motion as this will determine whether the work being done is additive or subtractive.</p>
 <p>Thus, work provides a direct quantitative measure of how forces modify motion. The kinetic energy of a particle is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-4-4">
-<span class="eqno">(4.3)<a class="headerlink" href="#equation-4-4" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-4-4" title="Permalink to this equation">#</a></span>\[\begin{split}
 \strut
 K = \tfrac{1}{2} m \vec{v}^{2}, \\
 [\text{J}] = [\text{kg $\cdot$ m$^2$s$^{-2}$}],
@@ -463,12 +451,12 @@ K = \tfrac{1}{2} m \vec{v}^{2}, \\
 <p>Like work, kinetic energy is a scalar quantity, independent of the direction of motion, and it is always non-negative (<span class="math notranslate nohighlight">\(K \geq 0\)</span>, where <span class="math notranslate nohighlight">\( K = 0 \)</span> only for a particle at rest).</p>
 <p>For motion along a straight line under a constant net force, the total work done equals the difference between the final and initial kinetic energies:</p>
 <div class="math notranslate nohighlight" id="equation-4-5">
-<span class="eqno">(4.4)<a class="headerlink" href="#equation-4-5" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-4-5" title="Permalink to this equation">#</a></span>\[
 W_\text{tot} = K_\text{final} - K_\text{initial} = \Delta K.
 \]</div>
 </section>
 <section id="work-and-energy-with-varying-forces">
-<h3>Work and energy with varying forces<a class="headerlink" href="#work-and-energy-with-varying-forces" title="Link to this heading">#</a></h3>
+<h3>Work and energy with varying forces<a class="headerlink" href="#work-and-energy-with-varying-forces" title="Permalink to this heading">#</a></h3>
 <p>For forces that vary in magnitude or direction, we will need to supplement <a class="reference internal" href="#equation-4-2">(4.2)</a> which only considers the force at a given moment.</p>
 <p>Consider a force that varies as we move along the x-axis, <span class="math notranslate nohighlight">\(F(x)\)</span>. We can divide the displacement from <span class="math notranslate nohighlight">\(x=0\)</span> to a position <span class="math notranslate nohighlight">\(x=a\)</span> into small segments <span class="math notranslate nohighlight">\(\Delta x\)</span>, where we can linearly approximate the work done over each segment:</p>
 <div class="math notranslate nohighlight">
@@ -482,23 +470,21 @@ W = F(x_1) \Delta x_1 + F(x_2) \Delta x_2 + ... =\sum_{i=1}^N{F(x_i)\Delta x_i}.
 \]</div>
 <p>The exact expression is given in integral form, in the limit of <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-4-6">
-<span class="eqno">(4.5)<a class="headerlink" href="#equation-4-6" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-4-6" title="Permalink to this equation">#</a></span>\[
 W = \int_{0}^{a} F(x) dx.
 \]</div>
 <p>A simple example of such a force is the ideal spring, where <span class="math notranslate nohighlight">\(F(x) = kx\)</span> for a spring constant <span class="math notranslate nohighlight">\(k\)</span> and a displacement from the spring’s resting position <span class="math notranslate nohighlight">\(x\)</span>. Graphically, the work done in extending the spring to <span class="math notranslate nohighlight">\(x=a\)</span> equals the area under the <span class="math notranslate nohighlight">\(F(x)\)</span> curve between <span class="math notranslate nohighlight">\(0\)</span> and <span class="math notranslate nohighlight">\(a\)</span>.</p>
 <figure class="align-default" id="springs-and-kx-graph">
-<a class="reference internal image-reference" href="../_images/Figure_6-18-19.png"><img alt="../_images/Figure_6-18-19.png" src="../_images/Figure_6-18-19.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-18-19.png"><img alt="../_images/Figure_6-18-19.png" src="../_images/Figure_6-18-19.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Integrating <span class="math notranslate nohighlight">\(F(x)\)</span> for an ideal spring to find the work done <span class="math notranslate nohighlight">\(W\)</span>. (Left): Extension of an ideal spring from <span class="math notranslate nohighlight">\(x = 0 \to a\)</span>, where the force <span class="math notranslate nohighlight">\(F\)</span> is proportional to the spring’s elongation: <span class="math notranslate nohighlight">\(F(x) = k\Delta x\)</span>. (Right): In integral form, the work done is equivalent to finding the area under the curve.</span><a class="headerlink" href="#springs-and-kx-graph" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Integrating <span class="math notranslate nohighlight">\(F(x)\)</span> for an ideal spring to find the work done <span class="math notranslate nohighlight">\(W\)</span>. (Left): Extension of an ideal spring from <span class="math notranslate nohighlight">\(x = 0 \to a\)</span>, where the force <span class="math notranslate nohighlight">\(F\)</span> is proportional to the spring’s elongation: <span class="math notranslate nohighlight">\(F(x) = k\Delta x\)</span>. (Right): In integral form, the work done is equivalent to finding the area under the curve.</span><a class="headerlink" href="#springs-and-kx-graph" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Let us now consider the case where the spring has already undergone some extension to a point <span class="math notranslate nohighlight">\(x_1\)</span> and we wish to extend it further, to a point <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
 <figure class="align-default" id="springs-x1-to-x2">
-<a class="reference internal image-reference" href="../_images/Figure_6-20a.png"><img alt="../_images/Figure_6-20a.png" src="../_images/Figure_6-20a.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-20a.png"><img alt="../_images/Figure_6-20a.png" src="../_images/Figure_6-20a.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The spring in this case is at rest when <span class="math notranslate nohighlight">\(x=0\)</span>. Our case has the spring already extended to <span class="math notranslate nohighlight">\(x_1\)</span>, and we intend to extend it further to <span class="math notranslate nohighlight">\(x_2\)</span>.</span><a class="headerlink" href="#springs-x1-to-x2" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">The spring in this case is at rest when <span class="math notranslate nohighlight">\(x=0\)</span>. Our case has the spring already extended to <span class="math notranslate nohighlight">\(x_1\)</span>, and we intend to extend it further to <span class="math notranslate nohighlight">\(x_2\)</span>.</span><a class="headerlink" href="#springs-x1-to-x2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>To find the work needed to extend this spring further, we cannot simply use <a class="reference internal" href="#equation-4-1">(4.1)</a> since</p>
@@ -510,21 +496,19 @@ W = \int_{0}^{a} F(x) dx.
 W = \int_{x_1}^{x_2} F_x dx = \int_{x_1}^{x_2} kx dx = \tfrac{1}{2} k(x_2^2 - x_1^2).
 \]</div>
 <figure class="align-default" id="springs-x1-to-x2-graph">
-<a class="reference internal image-reference" href="../_images/Figure_6-20b.png"><img alt="../_images/Figure_6-20b.png" src="../_images/Figure_6-20b.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-20b.png"><img alt="../_images/Figure_6-20b.png" src="../_images/Figure_6-20b.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">The corresponding trapezoid which can be integrated to calculate the energy required for further stretching of the spring. The work here is given by <span class="math notranslate nohighlight">\(W = \tfrac{1}{2}k(x_2^2 - x_1^2)\)</span>.</span><a class="headerlink" href="#springs-x1-to-x2-graph" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.5 </span><span class="caption-text">The corresponding trapezoid which can be integrated to calculate the energy required for further stretching of the spring. The work here is given by <span class="math notranslate nohighlight">\(W = \tfrac{1}{2}k(x_2^2 - x_1^2)\)</span>.</span><a class="headerlink" href="#springs-x1-to-x2-graph" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="displacement-along-a-curve">
-<h3>Displacement along a curve<a class="headerlink" href="#displacement-along-a-curve" title="Link to this heading">#</a></h3>
+<h3>Displacement along a curve<a class="headerlink" href="#displacement-along-a-curve" title="Permalink to this heading">#</a></h3>
 <p>We can also extend the work-energy theorem for motion along a curve, in which a force varies in direction as well as magnitude, and thus the displacement lies along a curved path. Consider the scenario depicted in the figure below:</p>
 <figure class="align-default" id="particle-moving-along-a-curve">
-<a class="reference internal image-reference" href="../_images/Figure_6-23.png"><img alt="../_images/Figure_6-23.png" src="../_images/Figure_6-23.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_6-23.png"><img alt="../_images/Figure_6-23.png" src="../_images/Figure_6-23.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">A particle moves along a curved path from point <span class="math notranslate nohighlight">\(P_1\)</span> to <span class="math notranslate nohighlight">\(P_2\)</span> acted on by a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> that varies in magnitude and direction.</span><a class="headerlink" href="#particle-moving-along-a-curve" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.6 </span><span class="caption-text">A particle moves along a curved path from point <span class="math notranslate nohighlight">\(P_1\)</span> to <span class="math notranslate nohighlight">\(P_2\)</span> acted on by a force <span class="math notranslate nohighlight">\(\vec{F}\)</span> that varies in magnitude and direction.</span><a class="headerlink" href="#particle-moving-along-a-curve" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a particle moving from point <span class="math notranslate nohighlight">\(P_1\)</span> to <span class="math notranslate nohighlight">\(P_2\)</span> along a curve:</p>
@@ -544,7 +528,7 @@ dW = \vec{F} \cdot d\vec{l} = F\cos(\phi) dl = F_{\parallel}dl
 </ul>
 <p>The total work done as the particle moves from <span class="math notranslate nohighlight">\(P_1\)</span> to <span class="math notranslate nohighlight">\(P_2\)</span> is therefore:</p>
 <div class="math notranslate nohighlight" id="equation-4-7">
-<span class="eqno">(4.6)<a class="headerlink" href="#equation-4-7" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-4-7" title="Permalink to this equation">#</a></span>\[
 W = \int_{P_1}^{P_2} = \vec{F} \cdot d\vec{l} = \int_{P_1}^{P_2} F\cos(\phi) \ dl = \int_{P_1}^{P_2} F_{\parallel} dl.
 \]</div>
 <p>This is a line integral, and it accounts for both the changing direction of motion and the changing force along the path.</p>
@@ -552,17 +536,17 @@ W = \int_{P_1}^{P_2} = \vec{F} \cdot d\vec{l} = \int_{P_1}^{P_2} F\cos(\phi) \ d
 </section>
 </section>
 <section id="review-internal-energy">
-<h2><span class="section-number">4.2. </span>Review: Internal Energy<a class="headerlink" href="#review-internal-energy" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.2. </span>Review: Internal Energy<a class="headerlink" href="#review-internal-energy" title="Permalink to this heading">#</a></h2>
 <p>Conservation of energy is fundamental to thermodynamics because it governs how energy is transferred and transformed within a system. It provides the basis for the first law of thermodynamics, which relates changes in internal energy to heat added to a system and work done by the system. By applying energy conservation, we can distinguish between energy stored internally and energy exchanged as work or heat, enabling a consistent understanding of thermodynamic processes and their limits.</p>
 <p>A force is conservative if the work it does is <strong>path independent</strong> - i.e., by lifting a book and waving it around, work is done by offsetting gravity. The amount of work depends only on the start and endpoints of the potential energy function <span class="math notranslate nohighlight">\(V\)</span> of the conservative force, such that <span class="math notranslate nohighlight">\(\Delta V = -W\)</span>.</p>
 <p>However, not all forces are conservative. Forces such as friction cannot be described by a potential energy function but they do not violate the law of conservation of energy. To account for them, we introduce the concept of internal energy, <span class="math notranslate nohighlight">\(U\)</span>.</p>
 <p>Internal energy is the energy associated with the microscopic motion and interactions of the particles which make up a system. Increasing the temperature of a system increases its internal energy; decreasing the temperature lowers it.</p>
 <p>Work done by friction dissipates mechanical energy (kinetic and potential energy) by converting it into random microscopic motion of particles therefore increasing the internal energy of the system and typically raising its temperature.</p>
 <section id="friction">
-<h3>Friction<a class="headerlink" href="#friction" title="Link to this heading">#</a></h3>
+<h3>Friction<a class="headerlink" href="#friction" title="Permalink to this heading">#</a></h3>
 <p>Consider a system in which friction <span class="math notranslate nohighlight">\(W_\text{fric}\)</span> does negative work, such as a block sliding across a rough surface. The block slows down, so its kinetic energy decreases (<span class="math notranslate nohighlight">\(\Delta K &lt; 0\)</span>). The lost energy has not disappeared, it has dissipated into internal energy. Quantitatively, this can be expressed as:</p>
 <div class="math notranslate nohighlight" id="equation-4-8">
-<span class="eqno">(4.7)<a class="headerlink" href="#equation-4-8" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-4-8" title="Permalink to this equation">#</a></span>\[
 -W_\text{fric} = -\Delta K = +\Delta U
 \]</div>
 <ul class="simple">
@@ -576,60 +560,58 @@ K_1 + P_1 + U_\text{int,1} = K_2 + P_2 + U_\text{int,2}.
 \]</div>
 <p>Rearranging and rewriting this in terms of differentials (e.g. <span class="math notranslate nohighlight">\(\Delta K = K_2 - K_1\)</span>) explicitly yields:</p>
 <div class="math notranslate nohighlight" id="equation-4-9">
-<span class="eqno">(4.8)<a class="headerlink" href="#equation-4-9" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-4-9" title="Permalink to this equation">#</a></span>\[
 \Delta K + \Delta P + \Delta U_\text{int} = 0.
 \]</div>
 <p>This is the general statement of energy conservation; although energy may be transferred between kinetic, potential and internal forms, the total energy of a closed system is conserved. If no energy is transferred into internal energy (for example, when only conservative forces act) then <span class="math notranslate nohighlight">\(\Delta U_\text{int} = 0\)</span>, and the familiar result</p>
 <div class="math notranslate nohighlight" id="equation-4-10">
-<span class="eqno">(4.9)<a class="headerlink" href="#equation-4-10" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-4-10" title="Permalink to this equation">#</a></span>\[
 \Delta K + \Delta P = 0
 \]</div>
 <p>is recovered.</p>
 </section>
 </section>
 <section id="work-in-thermodynamic-processes">
-<h2><span class="section-number">4.3. </span>Work in Thermodynamic Processes<a class="headerlink" href="#work-in-thermodynamic-processes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.3. </span>Work in Thermodynamic Processes<a class="headerlink" href="#work-in-thermodynamic-processes" title="Permalink to this heading">#</a></h2>
 <p>In thermodynamics, work is defined generally as energy transferred across a system boundary by any means other than heat. <a class="reference internal" href="#equation-4-1">(4.1)</a> expresses this idea in its canonical mechanical form but thermodynamic processes are not restricted to simple force–displacement interactions. The simplest and most important example of thermodynamic work arises when a compressible system changes volume against an external pressure.</p>
 <figure class="align-default" id="thermodynamicsystem-energyexchange">
-<a class="reference internal image-reference" href="../_images/Figure_19-3.png"><img alt="../_images/Figure_19-3.png" src="../_images/Figure_19-3.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_19-3.png"><img alt="../_images/Figure_19-3.png" src="../_images/Figure_19-3.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">A thermodynamic system may exchange energy with its environment by means of heat, work, or both. Note the sign conventions for <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(W\)</span>.</span><a class="headerlink" href="#thermodynamicsystem-energyexchange" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.7 </span><span class="caption-text">A thermodynamic system may exchange energy with its environment by means of heat, work, or both. Note the sign conventions for <span class="math notranslate nohighlight">\(Q\)</span> and <span class="math notranslate nohighlight">\(W\)</span>.</span><a class="headerlink" href="#thermodynamicsystem-energyexchange" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Consider instead a simple thermodynamic system, a gas in a cylinder with a moveable piston. This system is the basic <strong>engine</strong>.</p>
 <p>When a system such as a gas changes volume, it can do work on its surroundings. For a piston pressed against this system, the expansion causes a displacement doing work; and conversely when the piston moves inward the gas is compressed, doing work on the gas.</p>
 <figure class="align-default" id="infinitesmal-work-on-piston">
-<a class="reference internal image-reference" href="../_images/Figure_19-5.png"><img alt="../_images/Figure_19-5.png" src="../_images/Figure_19-5.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Figure_19-5.png"><img alt="../_images/Figure_19-5.png" src="../_images/Figure_19-5.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">A system (gas) doing infinitesmal work on a piston during a small expansion <span class="math notranslate nohighlight">\(dx\)</span>. The expansion is due to the system’s pressure <span class="math notranslate nohighlight">\(p\)</span> acting over the surface of the piston <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#infinitesmal-work-on-piston" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">A system (gas) doing infinitesmal work on a piston during a small expansion <span class="math notranslate nohighlight">\(dx\)</span>. The expansion is due to the system’s pressure <span class="math notranslate nohighlight">\(p\)</span> acting over the surface of the piston <span class="math notranslate nohighlight">\(A\)</span>.</span><a class="headerlink" href="#infinitesmal-work-on-piston" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>For a piston with cross-sectional surface area (<span class="math notranslate nohighlight">\(A\)</span>), the enclosed gas exerts a pressure <span class="math notranslate nohighlight">\(p\)</span> on the piston face, where pressure is defined as <span class="math notranslate nohighlight">\(p=F/A\)</span>. The work done in this process is</p>
 <div class="math notranslate nohighlight" id="equation-4-11">
-<span class="eqno">(4.10)<a class="headerlink" href="#equation-4-11" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-4-11" title="Permalink to this equation">#</a></span>\[
 dW = F \ dx = pA \ dx.
 \]</div>
 <p>Since <span class="math notranslate nohighlight">\(Adx = dV\)</span>, where dV is the infinitesimal volume change of the system, the work done by the system in this infinitesimal volume change can be expressed as:</p>
 <div class="math notranslate nohighlight" id="equation-4-12">
-<span class="eqno">(4.11)<a class="headerlink" href="#equation-4-12" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.11)<a class="headerlink" href="#equation-4-12" title="Permalink to this equation">#</a></span>\[
 dW = p \ dV.
 \]</div>
 <p>In a finite change of volume, <span class="math notranslate nohighlight">\(V_1\)</span> to <span class="math notranslate nohighlight">\(V_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-4-13">
-<span class="eqno">(4.12)<a class="headerlink" href="#equation-4-13" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.12)<a class="headerlink" href="#equation-4-13" title="Permalink to this equation">#</a></span>\[
 W = \int_{V_1}^{V_2} p dV.
 \]</div>
 <p>A system’s pressure is dependent on volume, i.e., <span class="math notranslate nohighlight">\(p(V)\)</span>, so evaluating <a class="reference internal" href="#equation-4-13">(4.12)</a> requires knowledge of the pressure-volume relationship. This work is represented graphically on a pV diagram (see <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-pv-diagrams"><span class="std std-ref">pV diagrams</span></a>) as the area under the <span class="math notranslate nohighlight">\(pV\)</span> curve between the points <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(V_2\)</span>.</p>
 <p>For <strong>expansion</strong> (<span class="math notranslate nohighlight">\(V_2 &gt; V_1\)</span>), the integral is positive and the system does positive work on its surroundings. For a <strong>compression</strong> (<span class="math notranslate nohighlight">\(V_2 &lt; V_1\)</span>), the integral is negative and the system does negative work. In the special case where pressure is kept constant throughout the whole process, <a class="reference internal" href="#equation-4-13">(4.12)</a> reduces to:</p>
 <div class="math notranslate nohighlight" id="equation-4-14">
-<span class="eqno">(4.13)<a class="headerlink" href="#equation-4-14" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.13)<a class="headerlink" href="#equation-4-14" title="Permalink to this equation">#</a></span>\[
 W = p \cdot (V_2 - V_1).
 \]</div>
 <p>For situations where the volume is constant, <span class="math notranslate nohighlight">\(dV = 0\)</span> and hence no work is done.</p>
 <section id="work-and-heat-in-thermodynamic-processes">
-<h3>Work and heat in thermodynamic processes<a class="headerlink" href="#work-and-heat-in-thermodynamic-processes" title="Link to this heading">#</a></h3>
+<h3>Work and heat in thermodynamic processes<a class="headerlink" href="#work-and-heat-in-thermodynamic-processes" title="Permalink to this heading">#</a></h3>
 <p>We now consider how the work performed by a system and the heat transferred to it during a thermodynamic process depend on the specific path and conditions under which the process occurs.</p>
 <p>When a thermodynamic system described using pressure and volume (<span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(V\)</span>), evolves from an initial state (<span class="math notranslate nohighlight">\(p_1\)</span>, <span class="math notranslate nohighlight">\(V_1\)</span>) to a final state (<span class="math notranslate nohighlight">\(p_2\)</span>, <span class="math notranslate nohighlight">\(V_2\)</span>), it passes through a sequence of intermediate equilibrium states called a <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-path"><span class="std std-ref">path</span></a>.</p>
 <!-- ```{figure} figures_for_chapter_4/Figure_19-7.png
@@ -649,7 +631,7 @@ The work done depends on the path taken - there are infinitely many ways to get 
 - Path 1 $\rightarrow$ 4 (smooth curve)
     - Continuous variation of pressure with volume $\rightarrow$ the work differs from both piecewise paths preceding. --><p>Like work, heat transfer is path dependent.</p>
 <div class="math notranslate nohighlight" id="equation-4-15">
-<span class="eqno">(4.14)<a class="headerlink" href="#equation-4-15" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(4.14)<a class="headerlink" href="#equation-4-15" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \frac{dQ}{dT} &amp;= C \\
 \int{dQ} &amp;= \int{C dT} \\
@@ -661,9 +643,9 @@ Q &amp;= \int_{T_1}^{T_2}{C\ dT}
 </section>
 </section>
 <section id="id1">
-<h2><span class="section-number">4.4. </span>The First Law of Thermodynamics<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.4. </span>The First Law of Thermodynamics<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
 <section id="a-brief-history">
-<h3>A Brief History<a class="headerlink" href="#a-brief-history" title="Link to this heading">#</a></h3>
+<h3>A brief history<a class="headerlink" href="#a-brief-history" title="Permalink to this heading">#</a></h3>
 <p>The first law of thermodynamics is often summarised as:</p>
 <div class="definition admonition">
 <p class="admonition-title">Definition</p>
@@ -696,7 +678,7 @@ Q &amp;= \int_{T_1}^{T_2}{C\ dT}
 Heat came to be recognised as a form of energy rather than a material substance, leading to the abandonment of caloric theory and the formulation of the <strong>first law of thermodynamics</strong>.</p>
 </section>
 <section id="formalism">
-<h3>Formalism<a class="headerlink" href="#formalism" title="Link to this heading">#</a></h3>
+<h3>Formalism<a class="headerlink" href="#formalism" title="Permalink to this heading">#</a></h3>
 <p>A thermodynamic system is characterised by its <strong>internal energy</strong>, denoted <span class="math notranslate nohighlight">\(U\)</span>. Internal energy represents the total energy associated with the system’s internal degrees of freedom, including:</p>
 <ul class="simple">
 <li><p>the combined kinetic energy of the constituent particles (translational, rotational, vibrational modes)</p></li>
@@ -704,7 +686,7 @@ Heat came to be recognised as a form of energy rather than a material substance,
 </ul>
 <p>The <strong>first law of thermodynamics</strong> requires that energy be conserved - often by relating changes in internal energy to heat and work. Although heat and work themselves are not state functions, their net effect on a process is fully captured by the change in internal energy.</p>
 <div class="math notranslate nohighlight" id="equation-4-17">
-<span class="eqno">(4.15)<a class="headerlink" href="#equation-4-17" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.15)<a class="headerlink" href="#equation-4-17" title="Permalink to this equation">#</a></span>\[
 \Delta U = Q - W,
 \]</div>
 <p>where:</p>
@@ -732,17 +714,16 @@ Heat came to be recognised as a form of energy rather than a material substance,
 </section>
 </section>
 <section id="thermodynamic-processes">
-<h2><span class="section-number">4.5. </span>Thermodynamic Processes<a class="headerlink" href="#thermodynamic-processes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.5. </span>Thermodynamic Processes<a class="headerlink" href="#thermodynamic-processes" title="Permalink to this heading">#</a></h2>
 <figure class="align-default" id="thermodynamicprocesses-summary">
-<a class="reference internal image-reference" href="../_images/Thermal_Processes_Summary_Figure.png"><img alt="../_images/Thermal_Processes_Summary_Figure.png" src="../_images/Thermal_Processes_Summary_Figure.png" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Thermal_Processes_Summary_Figure.png"><img alt="../_images/Thermal_Processes_Summary_Figure.png" src="../_images/Thermal_Processes_Summary_Figure.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">The general trajectories of various processes depicted on a pV-diagram. The isobaric and isochoric trajectories are fairly obvious, though note that the isothermal trajectory is also the “constant internal energy” trajectory.</span><a class="headerlink" href="#thermodynamicprocesses-summary" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">The general trajectories of various processes depicted on a pV-diagram. The isobaric and isochoric trajectories are fairly obvious, though note that the isothermal trajectory is also the “constant internal energy” trajectory.</span><a class="headerlink" href="#thermodynamicprocesses-summary" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now let us consider various cases for gas expansion…</p>
 <section id="adiabatic">
-<h3>Adiabatic<a class="headerlink" href="#adiabatic" title="Link to this heading">#</a></h3>
+<h3>Adiabatic<a class="headerlink" href="#adiabatic" title="Permalink to this heading">#</a></h3>
 <p>As in the example above, an <strong>adiabatic</strong> process is one in which there is no heat transfer into or out of the system such that <span class="math notranslate nohighlight">\( Q = 0 \)</span>. Therefore, any temperature change through an adiabatic process must be done entirely through work, and not by heat transfer. Practically speaking, this can be achieved through sufficient system isolation; or by completing the process sufficiently quick such that heat does not have enough time to flow:</p>
 <p>From the first law of thermodynamics:</p>
 <div class="math notranslate nohighlight">
@@ -755,15 +736,13 @@ During adiabatic expansion, the volume of the system is increased without allowi
 During adiabatic compression, the volume of the system decreases without allowing for heat transfer. Compression means that the work done on the system is positive; hence the change in internal energy reflects this which typically corresponds to an increase in the system's temperature. -->
 <p>Let us consider an adiabatic expansion of an isolated system. Specifically lets consider a gas confined in a cylinder with a moveable piston.</p>
 <figure class="align-default">
-<a class="reference internal image-reference" href="../_images/Adiabatic_Expanding_Pistons.png"><img alt="../_images/Adiabatic_Expanding_Pistons.png" src="../_images/Adiabatic_Expanding_Pistons.png" style="width: 70%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Adiabatic_Expanding_Pistons.png"><img alt="../_images/Adiabatic_Expanding_Pistons.png" src="../_images/Adiabatic_Expanding_Pistons.png" style="width: 70%;" /></a>
 </figure>
 <p>The system evolves from an initial state (<span class="math notranslate nohighlight">\(P_1, T_1, V_1\)</span>) to a final state (<span class="math notranslate nohighlight">\(P_2, T_2, V_2\)</span>) as the piston moves outwards and the gas expands. If the system is <strong>isolated</strong> then there is no mechanism for heat transfer between the gas and its surroundings. The process is therefore <strong>adiabatic</strong>, meaning <span class="math notranslate nohighlight">\(Q=0\)</span>.</p>
 <figure class="align-default" id="expanding-piston-adiabatic-pv">
-<a class="reference internal image-reference" href="../_images/Expanding_Pistons_pV_diagram.png"><img alt="../_images/Expanding_Pistons_pV_diagram.png" src="../_images/Expanding_Pistons_pV_diagram.png" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Expanding_Pistons_pV_diagram.png"><img alt="../_images/Expanding_Pistons_pV_diagram.png" src="../_images/Expanding_Pistons_pV_diagram.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">pV diagram depicting an example of adiabatic expansion for an ideal gas.</span><a class="headerlink" href="#expanding-piston-adiabatic-pv" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.10 </span><span class="caption-text">pV diagram depicting an example of adiabatic expansion for an ideal gas.</span><a class="headerlink" href="#expanding-piston-adiabatic-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>During expansion, the gas pushes the piston outward and does work on its surroundings, hence <span class="math notranslate nohighlight">\(W &gt; 0\)</span>. Because no heat enters the system to compensate for the energy loss, the work must come from the gas’s internal energy. As a result, the gas’s internal energy decreases and, for most gases, the drop in internal energy corresponds to a drop in temperature.</p>
@@ -775,7 +754,7 @@ During adiabatic compression, the volume of the system decreases without allowin
 <p>A practical example of adiabatic processes occurs in internal-combustion engines, more specifically in a <strong>compression stroke</strong>: The air-fuel mixture is rapidly compressed, leaving little time for heat exchange with the surroundings and rendering the process approximately adiabatic. Work done on the gas increases its internal energy, causing the temperature to rise.</p>
 </section>
 <section id="isobaric">
-<h3>Isobaric<a class="headerlink" href="#isobaric" title="Link to this heading">#</a></h3>
+<h3>Isobaric<a class="headerlink" href="#isobaric" title="Permalink to this heading">#</a></h3>
 <p>An <strong>isobaric</strong> process is one in which the <strong>pressure remains constant</strong>. Such processes commonly occur when a gas is allowed to expand or contract against a constant external pressure; consider a gas beneath a freely moving piston, or boiling water exposed to atmospheric pressure.</p>
 <p>On a p-V diagram, an isobaric process is represented by a horizontal line, since the pressure does not change whilst the volume increases or decreases.</p>
 <ul class="simple">
@@ -783,21 +762,20 @@ During adiabatic compression, the volume of the system decreases without allowin
 <li><p>Final state: (<span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(V_f\)</span>)</p></li>
 </ul>
 <figure class="align-default" id="isobaric-pv">
-<a class="reference internal image-reference" href="../_images/Isobaric_pV_diagram.png"><img alt="../_images/Isobaric_pV_diagram.png" src="../_images/Isobaric_pV_diagram.png" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Isobaric_pV_diagram.png"><img alt="../_images/Isobaric_pV_diagram.png" src="../_images/Isobaric_pV_diagram.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">pV diagram displaying an example of an isobaric process. The work done here equates to the area beneath the horizontal line.</span><a class="headerlink" href="#isobaric-pv" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.11 </span><span class="caption-text">pV diagram displaying an example of an isobaric process. The work done here equates to the area beneath the horizontal line.</span><a class="headerlink" href="#isobaric-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The area under this horizontal line corresponds to the work done by the gas.</p>
 <div class="math notranslate nohighlight" id="equation-4-19">
-<span class="eqno">(4.16)<a class="headerlink" href="#equation-4-19" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.16)<a class="headerlink" href="#equation-4-19" title="Permalink to this equation">#</a></span>\[
 W = \int_{V_i}^{V_f}pdV = p\int_{V_i}^{V_f}dV = p(V_f - V_i)
 \]</div>
 <p>In an isobaric process, <strong>none</strong> of the quantities <span class="math notranslate nohighlight">\(\Delta U\)</span>, <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(W\)</span> are necessarily zero. The first law still applies as normal. Unlike in the <strong>isothermal</strong> case, the temperature generally changes, so the internal energy also changes. A classic real-world example is boiling water at atmospheric pressure, where volume changes occur while pressure remains constant.</p>
 </section>
 <section id="isothermal">
-<h3>Isothermal<a class="headerlink" href="#isothermal" title="Link to this heading">#</a></h3>
+<span id="sec-isothermal"></span><h3>Isothermal<a class="headerlink" href="#isothermal" title="Permalink to this heading">#</a></h3>
 <p>An <strong>isothermal</strong> process is one which occurs at constant temperature, <span class="math notranslate nohighlight">\(\Delta T = 0\)</span>. For a process to remain isothermal, heat must flow into or out of the system slowly enough that thermal equilibrium with the surroundings is maintained at all times. In practice, this requires good thermal contact with a heat reservoir and quasi-static motion of the piston.</p>
 <p>For many systems, internal energy depends on both temperature and volume. However, for an ideal gas, the internal energy depends only on temperature. Therefore, in an isothermal process involving an ideal gas, <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>. This is a special but extremely important case.</p>
 <p>Starting from the first law:</p>
@@ -811,20 +789,18 @@ Q &amp;= W
 \end{split}\]</div>
 <p>Therefore, all the heat added to the system is converted directly into work done by the gas. No energy gets stored internally. Now let us consider a gas in a cylinder joined to a movable piston, with initial volume <span class="math notranslate nohighlight">\(V_1\)</span> and temperature <span class="math notranslate nohighlight">\(T_1\)</span>.</p>
 <figure class="align-default" id="expanding-gas-moves-piston">
-<a class="reference internal image-reference" href="../_images/Gas_in_cylinder_with_movable_piston.png"><img alt="../_images/Gas_in_cylinder_with_movable_piston.png" src="../_images/Gas_in_cylinder_with_movable_piston.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Gas_in_cylinder_with_movable_piston.png"><img alt="../_images/Gas_in_cylinder_with_movable_piston.png" src="../_images/Gas_in_cylinder_with_movable_piston.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Illustration of a piston in motion as the gas expands, performing work on its environment as the temperature is kept constant - consuming all of the heat added.</span><a class="headerlink" href="#expanding-gas-moves-piston" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.12 </span><span class="caption-text">Illustration of a piston in motion as the gas expands, performing work on its environment as the temperature is kept constant - consuming all of the heat added.</span><a class="headerlink" href="#expanding-gas-moves-piston" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>As the piston moves outward, the gas expands and does work on the surroundings. Expansion by itself would cool the gas. To keep the temperature constant, heat must flow into the gas from the surroundings.</p>
 <p>(Reminder: a compressed gas tends to heat up and an expanding gas tends to cool down. This implies that heat must be added during isothermal expansion to maintain a constant temperature.)</p>
 <p>So what is the work done by the gas? Let’s consult a pV-diagram…</p>
 <figure class="align-default" id="thermodynamicsystem-energyexchange-pv-diagram">
-<a class="reference internal image-reference" href="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png"><img alt="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png" src="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png" style="width: 65%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png"><img alt="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png" src="../_images/Gas_in_cylinder_with_movable_piston_pV-diagram.png" style="width: 65%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Corresponding pV-diagram depicting the isothermal transition between states 1 and 2.</span><a class="headerlink" href="#thermodynamicsystem-energyexchange-pv-diagram" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.13 </span><span class="caption-text">Corresponding pV-diagram depicting the isothermal transition between states 1 and 2.</span><a class="headerlink" href="#thermodynamicsystem-energyexchange-pv-diagram" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The isothermal path follows a curve defined by <span class="math notranslate nohighlight">\(pV=nRT\)</span> in which <span class="math notranslate nohighlight">\(T\)</span> is constant. The pressure decreases smoothly as volume increases. The area under the curve represents the work done by the gas. Compared to an adiabatic expansion from the same initial point, the isothermal curve is less steep, because heat input prevents the temperature from dropping. The work done <em>by</em> the gas is given by:</p>
@@ -839,19 +815,18 @@ p = \frac{nRT}{V},
 \]</div>
 <p>we can substitute this expression for <span class="math notranslate nohighlight">\(p\)</span> into the integral:</p>
 <div class="math notranslate nohighlight" id="equation-4-20">
-<span class="eqno">(4.17)<a class="headerlink" href="#equation-4-20" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.17)<a class="headerlink" href="#equation-4-20" title="Permalink to this equation">#</a></span>\[
 W = nRT \int_i^f \frac{1}{V} dV = nRT \ \left[ \ln(V) \right]_i^f = nRT \ \ln\left(\frac{V_f}{V_i} \right)\]</div>
 <p>In summary, in an ideal isothermal system, the temperature remains constant (<span class="math notranslate nohighlight">\(\Delta T = 0\)</span>), the internal energy change is zero (<span class="math notranslate nohighlight">\(\Delta U = 0\)</span>), and the heat added is equal to the work done by the gas.</p>
 </section>
 </section>
 <section id="cyclic-processes">
-<h2><span class="section-number">4.6. </span>Cyclic Processes<a class="headerlink" href="#cyclic-processes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.6. </span>Cyclic Processes<a class="headerlink" href="#cyclic-processes" title="Permalink to this heading">#</a></h2>
 <p>A <strong>cyclic process</strong> is a thermodynamic process in which a system evolves through a sequence of states and eventually returns to its initial state. On a pV-diagram, a cyclic process appears as a closed loop.</p>
 <figure class="align-default" id="cyclicprocess-above-isotherms">
-<a class="reference internal image-reference" href="../_images/Cyclic_pV_diagram.png"><img alt="../_images/Cyclic_pV_diagram.png" src="../_images/Cyclic_pV_diagram.png" style="width: 50%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Cyclic_pV_diagram.png"><img alt="../_images/Cyclic_pV_diagram.png" src="../_images/Cyclic_pV_diagram.png" style="width: 50%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Illustration of a cyclic process on a pV diagram featuring isothermic paths.</span><a class="headerlink" href="#cyclicprocess-above-isotherms" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.14 </span><span class="caption-text">Illustration of a cyclic process on a pV diagram featuring isothermic paths.</span><a class="headerlink" href="#cyclicprocess-above-isotherms" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Because the system ends in the same state in which it began, all state variables return to their initial values. In particular, the internal energy at the end of the cycle is equal to the internal energy at the beginning, so the resulting change in internal energy over a complete cycle is therefore zero. Notably, the temperature of the system also goes unchanged. Using the first law of thermodynamics:</p>
@@ -870,7 +845,7 @@ U_2 &amp;= U_1,  \\
 \end{split}\]</div>
 <p>When computing the integral of a cyclic process, the limits of integration form a closed loop, and we write the work done by the gas as:</p>
 <div class="math notranslate nohighlight" id="equation-4-18">
-<span class="eqno">(4.18)<a class="headerlink" href="#equation-4-18" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.18)<a class="headerlink" href="#equation-4-18" title="Permalink to this equation">#</a></span>\[
 W = \pm \oint p dV.
 \]</div>
 <ul class="simple">
@@ -917,19 +892,18 @@ W_{by} &amp;= p (V_f - V_i) \\
 </div>
 </section>
 <section id="case-study-cloud-formation">
-<h2><span class="section-number">4.7. </span>Case Study: Cloud Formation<a class="headerlink" href="#case-study-cloud-formation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.7. </span>Case Study: Cloud Formation<a class="headerlink" href="#case-study-cloud-formation" title="Permalink to this heading">#</a></h2>
 <p>Cloud formation provides a useful real-world example of an adiabatic process, recalling that ‘adiabatic’ means no heat is transferred (<span class="math notranslate nohighlight">\(Q = 0\)</span>). Consider moist air being forced up the side of a mountain by the wind, illustrated in the figure below.</p>
 <figure class="align-default" id="cloudformation">
-<a class="reference internal image-reference" href="../_images/CloudFormation.png"><img alt="../_images/CloudFormation.png" src="../_images/CloudFormation.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/CloudFormation.png"><img alt="../_images/CloudFormation.png" src="../_images/CloudFormation.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Illustration of the process of cloud formation, accompanied by the corresponding pV-diagrams as the air vapour pocket ascends and descends the mountain.</span><a class="headerlink" href="#cloudformation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.15 </span><span class="caption-text">Illustration of the process of cloud formation, accompanied by the corresponding pV-diagrams as the air vapour pocket ascends and descends the mountain.</span><a class="headerlink" href="#cloudformation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>As the air rises, it moves into regions of lower atmospheric pressure, brought on at greater altitudes because there is less air from above pushing down due to gravity. To remain in pressure equilibrium with its surroundings, the rising air must <strong>expand</strong>. During this expansion the air does work on its surroundings (i.e. work is being done <em>by</em> the gas). Because the air is not in any meaningful thermal contact with the mountain surface, this expansion occurs with negligible heat exchange and can be treated as being adiabatic.</p>
 <p>From the first law of thermodynamics, an adiabatic expansion leads to a decrease in internal energy which corresponds to a decrease in the gas pocket’s temperature. This cooling is an essential process for cloud formation.</p>
 <section id="partial-pressure-versus-vapour-pressure">
-<h3>Partial pressure versus vapour pressure<a class="headerlink" href="#partial-pressure-versus-vapour-pressure" title="Link to this heading">#</a></h3>
+<h3>Partial pressure versus vapour pressure<a class="headerlink" href="#partial-pressure-versus-vapour-pressure" title="Permalink to this heading">#</a></h3>
 <p>Air is a mixture of gases, including Nitrogen, Oxygen, and water vapour, amongst small amounts of other gases, such as Argon, methane and of course Carbon Dioxide. Each component contributes to the total pressure of the composite gas. The <strong>partial pressure</strong> of a constituent gas is the pressure that gas would exert if it alone occupied the entire volume of the combined, mixture gas.</p>
 <p>For example, if air at a total pressure of 100 kPa contains 2% water vapour, then the partial pressure of the water vapour is</p>
 <div class="math notranslate nohighlight">
@@ -938,10 +912,9 @@ P_{water} = \left( \frac{V_{water}}{V_{total}} \right) p_{total} = 100 \ \text{k
 \]</div>
 <p>The <strong>vapour pressure</strong> of water is the point at which the vapour phase and condensed phase are in thermal equilibrium. Vapour pressure depends strongly on the temperature. Cooler air can hold less water vapour.</p>
 <figure class="align-default" id="micro-evaporation-and-condensation">
-<a class="reference internal image-reference" href="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png"><img alt="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png" src="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png"><img alt="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png" src="ch4-first_law_of_thermodynamics/figures_for_chapter_4/VapourPressure_diagram.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Illustration of the microscopic process of evaporation and condensation which occurs at the surface of a liquid.</span><a class="headerlink" href="#micro-evaporation-and-condensation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.16 </span><span class="caption-text">Illustration of the microscopic process of evaporation and condensation which occurs at the surface of a liquid.</span><a class="headerlink" href="#micro-evaporation-and-condensation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>As the rising air cools during adiabatic expansion, the vapour pressure of the air decreases. Cloud formation begins when the partial pressure of water becomes equal to the vapour pressure. If the air cools further (e.g. by gaining additional elevation), the partial pressure will exceed the vapour pressure, and the excess water must condense into liquid droplets. These droplets scatter light and appear as the clouds we see in the sky.</p>
@@ -950,17 +923,16 @@ P_{water} = \left( \frac{V_{water}}{V_{total}} \right) p_{total} = 100 \ \text{k
 <li><p>When partial pressure &lt; vapour pressure <span class="math notranslate nohighlight">\(\rightarrow\)</span> all water remains in vapour form.</p></li>
 </ul>
 <figure class="align-default" id="pt-cloudformation">
-<a class="reference internal image-reference" href="../_images/Pressure_Temperature_cloud_formation_plot.png"><img alt="../_images/Pressure_Temperature_cloud_formation_plot.png" src="../_images/Pressure_Temperature_cloud_formation_plot.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Pressure_Temperature_cloud_formation_plot.png"><img alt="../_images/Pressure_Temperature_cloud_formation_plot.png" src="../_images/Pressure_Temperature_cloud_formation_plot.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.17 </span><span class="caption-text">Graph depicting the conditions required for cloud formation generalised to different vapours.</span><a class="headerlink" href="#pt-cloudformation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.17 </span><span class="caption-text">Graph depicting the conditions required for cloud formation generalised to different vapours.</span><a class="headerlink" href="#pt-cloudformation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="example admonition">
 <p class="admonition-title">Vapour Pressure Example</p>
 <p>Air can hold up to 3% of its volume at 30°C and 4.2% at 42°C, what is the relative humidity?</p>
 <div class="math notranslate nohighlight" id="equation-4-21">
-<span class="eqno">(4.19)<a class="headerlink" href="#equation-4-21" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.19)<a class="headerlink" href="#equation-4-21" title="Permalink to this equation">#</a></span>\[
 \text{Relative Humidity:} = \frac{\text{partial pressure}}{\text{vapour pressure}} = \frac{3\% \times V}{4.2\% \times V} = 71.4\%
 \]</div>
 <p>If the partial pressure is greater than the vapour pressure, then we have 100% relative humidity.</p>
@@ -968,13 +940,12 @@ P_{water} = \left( \frac{V_{water}}{V_{total}} \right) p_{total} = 100 \ \text{k
 </section>
 </section>
 <section id="internal-energy-of-an-ideal-gas-free-expansion">
-<h2><span class="section-number">4.8. </span>Internal Energy of an ideal gas: Free Expansion<a class="headerlink" href="#internal-energy-of-an-ideal-gas-free-expansion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.8. </span>Internal Energy of an Ideal Gas: Free Expansion<a class="headerlink" href="#internal-energy-of-an-ideal-gas-free-expansion" title="Permalink to this heading">#</a></h2>
 <p>In a free expansion, a gas expands into a vacuum inside an insulated container. No heat enters or leaves the system and the gas does no work: <span class="math notranslate nohighlight">\(Q = W = 0\)</span> thus <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>. Does the temperature of the gas change?</p>
 <figure class="align-default" id="expansion-nowork-noheat">
-<a class="reference internal image-reference" href="../_images/Expansion_NoWork_NoHeat.png"><img alt="../_images/Expansion_NoWork_NoHeat.png" src="../_images/Expansion_NoWork_NoHeat.png" style="width: 60%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Expansion_NoWork_NoHeat.png"><img alt="../_images/Expansion_NoWork_NoHeat.png" src="../_images/Expansion_NoWork_NoHeat.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Figure depicting an enclosed and insulated container containing an ideal gas. In the first state, the gas occupies a volume of 2.0 L and is barred from the rest of the container by a partition barrier. When the barrier breaks, the gas diffuses to fill the rest of the container, with no external work or heat added to the system, whereupon it reaches state 2.</span><a class="headerlink" href="#expansion-nowork-noheat" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.18 </span><span class="caption-text">Figure depicting an enclosed and insulated container containing an ideal gas. In the first state, the gas occupies a volume of 2.0 L and is barred from the rest of the container by a partition barrier. When the barrier breaks, the gas diffuses to fill the rest of the container, with no external work or heat added to the system, whereupon it reaches state 2.</span><a class="headerlink" href="#expansion-nowork-noheat" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Suppose that the temperature <em>did</em> change during free expansion whilst the internal energy stayed constant. We would then have to conclude that the internal energy depends not only on temperature <span class="math notranslate nohighlight">\(T\)</span>, but also on volume <span class="math notranslate nohighlight">\(V\)</span> or pressure <span class="math notranslate nohighlight">\(p\)</span>. However, experiments show that for a low-density (ideal) gas, the temperature does not change during free expansion, despite the fact that <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(p\)</span> do. This leads us to a crucial conclusion:</p>
@@ -989,10 +960,10 @@ U = KE + PE = \text{constant} \ \rightarrow \ PE \uparrow,\ KE \downarrow.\]</di
 <p>If total internal energy remains constant the kinetic energy must drop accordingly - corresponding to a drop in temperature.</p>
 </section>
 <section id="heat-capacities-for-an-ideal-gas">
-<h2><span class="section-number">4.9. </span>Heat capacities for an ideal gas<a class="headerlink" href="#heat-capacities-for-an-ideal-gas" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.9. </span>Heat Capacities for an Ideal Gas<a class="headerlink" href="#heat-capacities-for-an-ideal-gas" title="Permalink to this heading">#</a></h2>
 <p>To understand how heat affects a gas’s internal energy, note that the internal energy depends on both temperature and volume - <span class="math notranslate nohighlight">\(U = U(V, T)\)</span>. Therefore, a small change in internal energy can be expressed in terms of small changes in temperature and volume.</p>
 <div class="math notranslate nohighlight" id="equation-4-22">
-<span class="eqno">(4.20)<a class="headerlink" href="#equation-4-22" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.20)<a class="headerlink" href="#equation-4-22" title="Permalink to this equation">#</a></span>\[
 dU = \left( \frac{\partial U}{\partial T} \right)_V dT + \left( \frac{\partial U}{\partial V} \right)_T dV.
 \]</div>
 <p>In <a class="reference internal" href="#equation-4-22">(4.20)</a> the variable subscript aside the derivative denotes that the variable is held constant during differentiation. Note that:</p>
@@ -1013,7 +984,7 @@ dQ = dU + pdV,
 \]</div>
 <p>and now using <a class="reference internal" href="#equation-4-22">(4.20)</a> we find</p>
 <div class="math notranslate nohighlight" id="equation-4-23">
-<span class="eqno">(4.21)<a class="headerlink" href="#equation-4-23" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.21)<a class="headerlink" href="#equation-4-23" title="Permalink to this equation">#</a></span>\[
 dQ = \left( \frac{\partial U}{\partial T} \right)_V dT + \left[ \left( \frac{\partial U}{\partial V} \right)_T + p \right] dV,
 \]</div>
 <p>which we can then divide by dT to obtain:</p>
@@ -1023,26 +994,26 @@ dQ = \left( \frac{\partial U}{\partial T} \right)_V dT + \left[ \left( \frac{\pa
 \]</div>
 <p>This relationship holds for any changes in temperature or volume, but our goal is to determine how much heat must be added to change the temperature under specific constraints. The first case is when the volume is held constant, which leads to the definition of <strong>heat capacity at constant volume</strong>, <span class="math notranslate nohighlight">\(C_V\)</span>, which describes the heat required to raise the temperature of a system without changing its volume.</p>
 <div class="math notranslate nohighlight" id="equation-4-24">
-<span class="eqno">(4.22)<a class="headerlink" href="#equation-4-24" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.22)<a class="headerlink" href="#equation-4-24" title="Permalink to this equation">#</a></span>\[
 C_V = \left(\frac{\partial Q}{\partial T} \right)_V = \left(\frac{\partial U}{\partial T} \right)_V
 \]</div>
 <p>The <strong>heat capacity at constant pressure</strong> is then given by:</p>
 <div class="math notranslate nohighlight" id="equation-4-25">
-<span class="eqno">(4.23)<a class="headerlink" href="#equation-4-25" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.23)<a class="headerlink" href="#equation-4-25" title="Permalink to this equation">#</a></span>\[
 C_p = \left(\frac{\partial Q}{\partial T} \right)_p = \left( \frac{\partial U}{\partial T} \right)_V + \left[ \left( \frac{\partial U}{\partial V} \right)_T + p \right] \left( \frac{dV}{dT} \right)_p,
 \]</div>
 <p>such that:</p>
 <div class="math notranslate nohighlight" id="equation-4-26">
-<span class="eqno">(4.24)<a class="headerlink" href="#equation-4-26" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.24)<a class="headerlink" href="#equation-4-26" title="Permalink to this equation">#</a></span>\[
 C_p - C_V = \left[ \left( \frac{\partial U}{\partial V} \right)_T + p \right] \left( \frac{dV}{dT} \right)_p.
 \]</div>
 <p>Recall that the heat capacity has units of <span class="math notranslate nohighlight">\(\left[ \text{J} \cdot \text{K}^{-1} \right]\)</span> and refers to a specific amount of gas. It is often practical to express heat capacity per mole or per unit mass; the lower is denoted using a lowercase ‘c’ and is referred to as the <a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html#sec-capacity"><span class="std std-ref"><strong>specific heat capacity</strong></span></a>.</p>
 <div class="math notranslate nohighlight" id="equation-4-27">
-<span class="eqno">(4.25)<a class="headerlink" href="#equation-4-27" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.25)<a class="headerlink" href="#equation-4-27" title="Permalink to this equation">#</a></span>\[
 c_V = \frac{C_V}{M},
 \]</div>
 <div class="math notranslate nohighlight" id="equation-4-28">
-<span class="eqno">(4.26)<a class="headerlink" href="#equation-4-28" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.26)<a class="headerlink" href="#equation-4-28" title="Permalink to this equation">#</a></span>\[
 c_p = \frac{C_p}{M},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(M\)</span> is the mass of the material. Specific heat capacities have units of <span class="math notranslate nohighlight">\(\left[ \text{J} \cdot \text{K}^{-1} \cdot \text{kg}^{-1} \right]\)</span>.</p>
@@ -1063,17 +1034,17 @@ C_p - C_V = \left[ \left( \frac{\partial U}{\partial V} \right)_T + p \right] \l
 \]</div>
 <p>Because <span class="math notranslate nohighlight">\(U = \tfrac{3}{2}RT\)</span>, we therefore have that:</p>
 <div class="math notranslate nohighlight" id="equation-4-29">
-<span class="eqno">(4.27)<a class="headerlink" href="#equation-4-29" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.27)<a class="headerlink" href="#equation-4-29" title="Permalink to this equation">#</a></span>\[
 C_V = \left( \frac{\partial U}{\partial T} \right)_V = \frac{3}{2}R \ \text{per mole},
 \]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-4-30">
-<span class="eqno">(4.28)<a class="headerlink" href="#equation-4-30" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.28)<a class="headerlink" href="#equation-4-30" title="Permalink to this equation">#</a></span>\[
 C_p = C_V + R = \frac{5}{2}R \ \text{per mole}.
 \]</div>
 <p>The ratio of <span class="math notranslate nohighlight">\(C_p\)</span> and <span class="math notranslate nohighlight">\(C_V\)</span> is a very important and useful quantity as named the <strong>adiabatic index</strong> (<span class="math notranslate nohighlight">\(\gamma\)</span>):</p>
 <div class="math notranslate nohighlight" id="equation-4-31">
-<span class="eqno">(4.29)<a class="headerlink" href="#equation-4-31" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.29)<a class="headerlink" href="#equation-4-31" title="Permalink to this equation">#</a></span>\[
 \gamma = \frac{C_p}{C_V}.
 \]</div>
 <p>For an ideal monatomic gas:</p>
@@ -1082,15 +1053,14 @@ C_p = C_V + R = \frac{5}{2}R \ \text{per mole}.
 \gamma = \frac{C_p}{C_V} = \frac{C_V + R}{C_V} = 1 + \frac{R}{C_V} = \frac{5}{3}.
 \]</div>
 <figure class="align-default" id="molarheatcapacities">
-<a class="reference internal image-reference" href="../_images/Adiabatic_table.png"><img alt="../_images/Adiabatic_table.png" src="../_images/Adiabatic_table.png" style="width: 75%;" />
-</a>
+<a class="reference internal image-reference" href="../_images/Adiabatic_table.png"><img alt="../_images/Adiabatic_table.png" src="../_images/Adiabatic_table.png" style="width: 75%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4.19 </span><span class="caption-text">Table depicting the heat isochoric and isobaric heat capacities of monotomic, diatomic and polyatomic gases at low pressure, featuring their adiabatic indices. This table was cited from <em>University Physics with Modern Physics 15th Edition, Chapter 19.7, page 627</em>.</span><a class="headerlink" href="#molarheatcapacities" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 4.19 </span><span class="caption-text">Table depicting the heat isochoric and isobaric heat capacities of monotomic, diatomic and polyatomic gases at low pressure, featuring their adiabatic indices. This table was cited from <em>University Physics with Modern Physics 15th Edition, Chapter 19.7, page 627</em>.</span><a class="headerlink" href="#molarheatcapacities" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="pv-gamma-for-adiabatic-processes">
-<h2><span class="section-number">4.10. </span>pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for adiabatic processes<a class="headerlink" href="#pv-gamma-for-adiabatic-processes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">4.10. </span>pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for Adiabatic Processes<a class="headerlink" href="#pv-gamma-for-adiabatic-processes" title="Permalink to this heading">#</a></h2>
 <p>For a perfect ideal gas, we have that <span class="math notranslate nohighlight">\(pV^{\gamma}\)</span> is constant for all adiabatic processes (recall that adiabatic refers to contexts in which heat transfer (<span class="math notranslate nohighlight">\(Q\)</span>) is zero). This does not mean that each of the parameters <span class="math notranslate nohighlight">\(p\)</span>, <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span> are constant, we instead find that <span class="math notranslate nohighlight">\(\Delta p\)</span>, <span class="math notranslate nohighlight">\(\Delta V\)</span> and <span class="math notranslate nohighlight">\(\Delta \gamma\)</span> are all non-zero, but their resulting values combine to reform the constant <span class="math notranslate nohighlight">\(pV^{\gamma}\)</span>.</p>
 <p>We will prove that <span class="math notranslate nohighlight">\(pV^{\gamma}\)</span> is a constant for adiabatic processes. Starting with the internal energy of an ideal gas:</p>
 <div class="math notranslate nohighlight">
@@ -1151,17 +1121,17 @@ Vdp + pdV = nRdT = - \frac{nRpdV}{C_Vn} = - \frac{RpdV}{C_V}.
 \int{\frac{1}{p}dp} + \gamma \int{\frac{1}{V}dV} = \text{constant},
 \]</div>
 <div class="math notranslate nohighlight" id="equation-4-32">
-<span class="eqno">(4.30)<a class="headerlink" href="#equation-4-32" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.30)<a class="headerlink" href="#equation-4-32" title="Permalink to this equation">#</a></span>\[
 \ln{(p)} + \gamma \ln{(V)} = \text{constant}.
 \]</div>
 <p>A sum of logs <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> is equivalent to a log of the product <span class="math notranslate nohighlight">\(AB\)</span>. Knowing this, and the fact that <span class="math notranslate nohighlight">\(a \times \log(B) = \log(B)^a\)</span>, we can rewrite the above equation as:</p>
 <div class="math notranslate nohighlight" id="equation-4-33">
-<span class="eqno">(4.31)<a class="headerlink" href="#equation-4-33" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.31)<a class="headerlink" href="#equation-4-33" title="Permalink to this equation">#</a></span>\[
 \ln(pV^{\gamma}) = \text{constant}.
 \]</div>
 <p>Finally, to remove the logarithm from the LHS we exponentiate. However, since <span class="math notranslate nohighlight">\(e^{\text{constant}}\)</span> is still a constant, we surmise that:</p>
 <div class="math notranslate nohighlight" id="equation-4-34">
-<span class="eqno">(4.32)<a class="headerlink" href="#equation-4-34" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.32)<a class="headerlink" href="#equation-4-34" title="Permalink to this equation">#</a></span>\[
 pV^{\gamma} = \text{constant},
 \]</div>
 <p>and hence,</p>
@@ -1171,7 +1141,7 @@ p_1V_1^{\gamma} = p_2V_2^{\gamma}
 \]</div>
 <p>for any adiabatic process.</p>
 <section id="work-done-during-a-reversible-adiabatic-process">
-<h3>Work done during a reversible adiabatic process<a class="headerlink" href="#work-done-during-a-reversible-adiabatic-process" title="Link to this heading">#</a></h3>
+<h3>Work done during a reversible adiabatic process<a class="headerlink" href="#work-done-during-a-reversible-adiabatic-process" title="Permalink to this heading">#</a></h3>
 <p>For an adiabatic process, no energy is transferred as heat <span class="math notranslate nohighlight">\(Q = 0\)</span>. For a <strong>reversible (quasi-static)</strong> process, the work done <em>by</em> the gas is:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1184,7 +1154,7 @@ pV^\gamma = K,
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(K\)</span> is a constant. We can therefore write the pressure as</p>
 <div class="math notranslate nohighlight" id="equation-4-35">
-<span class="eqno">(4.33)<a class="headerlink" href="#equation-4-35" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.33)<a class="headerlink" href="#equation-4-35" title="Permalink to this equation">#</a></span>\[
 p = \frac{K}{V^\gamma},
 \]</div>
 <p>Substituting into the expression for the work,</p>
@@ -1200,7 +1170,7 @@ W = \int_{V_1}^{V_2} \frac{K}{V^\gamma} \, dV
 \]</div>
 <p>so the work becomes</p>
 <div class="math notranslate nohighlight" id="equation-4-36">
-<span class="eqno">(4.34)<a class="headerlink" href="#equation-4-36" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(4.34)<a class="headerlink" href="#equation-4-36" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{align}
 W &amp;= \frac{K}{1-\gamma}
 \left( V_2^{1-\gamma} - V_1^{1-\gamma} \right) \\
@@ -1215,12 +1185,12 @@ K V_2^{1-\gamma} = p_2 V_2.
 \]</div>
 <p>Substituting these into the expression for the work gives</p>
 <div class="math notranslate nohighlight" id="equation-4-37">
-<span class="eqno">(4.35)<a class="headerlink" href="#equation-4-37" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.35)<a class="headerlink" href="#equation-4-37" title="Permalink to this equation">#</a></span>\[
 W = \frac{1}{1-\gamma} \left( p_2 V_2 - p_1 V_1 \right).
 \]</div>
 <p>This is commonly written in the equivalent form</p>
 <div class="math notranslate nohighlight" id="equation-4-38">
-<span class="eqno">(4.36)<a class="headerlink" href="#equation-4-38" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4.36)<a class="headerlink" href="#equation-4-38" title="Permalink to this equation">#</a></span>\[
 \boxed{
 W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1}
 }.
@@ -1228,8 +1198,6 @@ W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1}
 <!-- which is obtained by multiplying the numerator and denominator of {eq}`4.37` by -1. -->
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1272,11 +1240,11 @@ W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1}
       </div>
     </a>
     <a class="right-next"
-       href="02_questions.html"
+       href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.11. </span>Questions</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1311,7 +1279,7 @@ W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.4. The First Law of Thermodynamics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A Brief History</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A brief history</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#formalism">Formalism</a></li>
 </ul>
 </li>
@@ -1326,9 +1294,9 @@ W = \frac{p_1 V_1 - p_2 V_2}{\gamma - 1}
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#partial-pressure-versus-vapour-pressure">Partial pressure versus vapour pressure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-of-an-ideal-gas-free-expansion">4.8. Internal Energy of an ideal gas: Free Expansion</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacities-for-an-ideal-gas">4.9. Heat capacities for an ideal gas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-gamma-for-adiabatic-processes">4.10. pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for adiabatic processes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#internal-energy-of-an-ideal-gas-free-expansion">4.8. Internal Energy of an Ideal Gas: Free Expansion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-capacities-for-an-ideal-gas">4.9. Heat Capacities for an Ideal Gas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pv-gamma-for-adiabatic-processes">4.10. pV<span class="math notranslate nohighlight">\(^{\gamma}\)</span> for Adiabatic Processes</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-done-during-a-reversible-adiabatic-process">Work done during a reversible adiabatic process</a></li>
 </ul>
 </li>
@@ -1356,7 +1324,7 @@ By Dr. Samer Kurdi, Dr. Jonathan Leach
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>

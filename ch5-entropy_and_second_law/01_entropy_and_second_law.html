@@ -1,12 +1,13 @@
 
+
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="../" >
+<html lang="en" data-content_root="" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>5. Entropy and the Second Law of Thermodynamics &#8212; Thermal Physics</title>
   
@@ -28,44 +29,48 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=57ce8a05" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js?v=f930bc37"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'ch5-entropy_and_second_law/01_entropy_and_second_law';</script>
-    <script src="../_static/toc-current-only.js?v=9d1ffc5e"></script>
-    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="4.12. Answers" href="../ch4-first_law_of_thermodynamics/03_solutions.html" />
+    <link rel="prev" title="4. The First Law of Thermodynamics" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,28 +167,13 @@
   
   
 </a></div>
-        <div class="sidebar-primary-item">
-
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
-        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/02_questions.html">4.11. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/03_solutions.html">4.12. Answers</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Entropy and the Second Law of Thermodynamics</a></li>
 </ul>
 
@@ -214,9 +204,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</button></div>
+</label></div>
       
     </div>
   
@@ -310,9 +300,9 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</button>
+</label>
 </div></div>
       
     </div>
@@ -333,41 +323,34 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-probability-and-statistics">5.1. Review: Probability and Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.3. Probability: Introduction</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-distributions">Discrete Distributions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distributions">Continuous distributions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendencies">Measures of Central Tendencies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">Variance</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.2. Directions of Thermodynamic Processes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-and-boltzmann-entropy">5.3. Gibbs and Boltzmann Entropy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surprises-and-information">Surprises and information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-variables-in-probability">Independent Variables in Probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-binomial-distribution">The Binomial Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-binomial-distribution">Properties of the Binomial Distribution</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.4. Probability: Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.5. Probability Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.6. Clausius Definition of Entropy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.7. Entropy Changes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-thermal-conduction">Entropy Change: Thermal Conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-calorimetric-process">Entropy Change: Calorimetric Process</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-free-expansion">Entropy Change: Free Expansion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-statistical-entropy">Connection to Statistical Entropy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-entropy-change-supercooling-a-liquid">5.8. What is the entropy change → supercooling a liquid?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-liquid-263-273-k">(1) Heat liquid 263 → 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#freeze-at-273-k">(2) Freeze at 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-solid-273-263-k">(3) Cool solid 273 → 263 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-entropy-change">Total entropy change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.4. Probability Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-birthday-paradox">The Birthday Paradox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-a-particular-pokemon">Finding a Particular Pokémon</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.9. The Second Law of Thermodynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-law">5.10. Second Law</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.11. Entropy and Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.5. Clausius Definition of Entropy</a></li>
 </ul>
             </nav>
         </div>
@@ -379,22 +362,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span><span class="p">,</span> <span class="n">gamma</span>
-</pre></div>
-</div>
-</div>
+  <div class="cell tag_remove-input docutils container">
 </div>
 <section class="tex2jax_ignore mathjax_ignore" id="entropy-and-the-second-law-of-thermodynamics">
-<h1><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics<a class="headerlink" href="#entropy-and-the-second-law-of-thermodynamics" title="Permalink to this heading">#</a></h1>
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
 <li><p>Concepts in Thermal Physics: Chapter 13 (13.1–13.3, 13.5), Chapter 14 (14.1–14.2, 14.5)</p></li>
 <li><p>University Physics with Modern Physics 15th edition: Chapter 20</p></li>
+<li><p>Introductory Statistics 2e: Chapter 1.1, 2.1 - 2.8, 3.1 - 3.3</p></li>
 <li><p>Entropy video: <a class="reference external" href="https://www.youtube.com/watch?v=uQSoaiubuA0">https://www.youtube.com/watch?v=uQSoaiubuA0</a></p></li>
 </ul>
 </div>
@@ -407,130 +384,541 @@ document.write(`
 <li><p>Connect entropy with probability</p></li>
 </ul>
 </div>
-<section id="review-probability-and-statistics">
-<h2><span class="section-number">5.1. </span>Review: Probability and Statistics<a class="headerlink" href="#review-probability-and-statistics" title="Link to this heading">#</a></h2>
-<p>Probability is the mathematical framework that allows us to quantify uncertainty, and it is ubiquitous across all fields of scientific study, alongside finance sectors, software development, politics and so forth. Probability theory has had an undeniably strong impact in furthering our understanding of thermal physics. This is because we often study systems containing a practically uncountable number of particles, where individual atomic behaviour is unpredictable but collective behaviour is remarkably regular.</p>
-<p>Let us begin by outlining the key properties that define probabilities:</p>
+<section id="directions-of-thermodynamic-processes">
+<h2><span class="section-number">5.1. </span>Directions of Thermodynamic Processes<a class="headerlink" href="#directions-of-thermodynamic-processes" title="Permalink to this heading">#</a></h2>
+<p>Thermodynamic processes in nature are <strong>irreversible</strong>, meaning they occur spontaneously in one direction only. Examples include heat flowing from hot to cold, the free expansion of a gas, and the conversion of mechanical energy into heat by friction. These processes define a preferred direction in nature, formalized by the <strong>second law of thermodynamics</strong>.</p>
+<p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small.</p>
+<p>Irreversible processes are inherently nonequilibrium processes and cannot be made to run backward by small changes in conditions. Their direction is closely linked to increasing disorder: systems naturally evolve from more ordered states to more random ones. Mechanical energy represents organized motion, while heat corresponds to random molecular motion, so converting work into heat increases disorder and reinforces irreversibility.</p>
+<figure class="align-default" id="ice-in-metal-box">
+<a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><strong>(A)</strong> A block of ice melts <em>irreversibly</em> when we place it into a hot (70 <span class="math notranslate nohighlight">\(^{\circ}\)</span>C) metal box, as heat flows from the box into the ice - inducing a phase change into water. The heat will never move from the colder body to the hotter one. <strong>(B)</strong> A block of ice at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C can be melted <em>reversibly</em> if we put it in a 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C metal box. By infinitesimally raising or lowering the temperature of the box, so that we remain extremely close to the phase transition temperature of H<span class="math notranslate nohighlight">\(_2\)</span>O, we can make heat flow into the ice to melt it; or make heat flow out of the water to freeze it.</span><a class="headerlink" href="#ice-in-metal-box" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Examples will be provided once entropy is introduced. We will see that an irreversible process is characterized by a <strong>positive change in the entropy of the universe</strong>, whereas a reversible process corresponds to <strong>zero total entropy change</strong>.</p>
+</section>
+<section id="entropy-and-probability">
+<h2><span class="section-number">5.2. </span>Entropy and Probability<a class="headerlink" href="#entropy-and-probability" title="Permalink to this heading">#</a></h2>
+<p>Entropy <span class="math notranslate nohighlight">\(S\)</span> is a concept associated with disorder, randomness and uncertainty. In thermodynamics, a system has a definite value of entropy for every particular state of the system - i.e., it is a state variable (as in <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-state-vars"><span class="std std-numref">Section 1.4</span></a>). As a brief reminder - pressure and temperature are also state variables; heat and work are not. We can define entropy either thermodynamically (“Clausius” entropy) or statistically (“Gibbs”/”Boltzmann” entropy).</p>
+<div class="definition admonition">
+<p class="admonition-title">Definition</p>
+<p>Entropy is a measure of the uncertainty associated with a random variable.</p>
+</div>
+<p>If an outcome is highly unpredictable, its entropy is high, and its outcome is more likely to “surprise” you. Conversely, if an outcome is highly predictable, its entropy is low, and its outcome is less likely to “surprise” you.</p>
+<p>To motivate the formalism of these definitions of entropy, we’ll first introduce entropy in the context of information theory, via the <strong>Shannon entropy</strong>:</p>
+<div class="math notranslate nohighlight" id="equation-computing">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-computing" title="Permalink to this equation">#</a></span>\[
+H(X) = -\Sigma_i (p_i \log p_i),
+\]</div>
 <ul class="simple">
-<li><p>A probability is a non-negative number between 0 and 1 (inclusive).</p></li>
-<li><p>An outcome is a single possible result of a random experiment, with an associated probability.</p></li>
-<li><p>An event is a set of one or more outcomes.</p></li>
-<li><p>The collection of all possible outcomes is called the sample space.</p></li>
-<li><p>The probabilities of all outcomes in the sample space sum to one (an event with probability one is certain).</p></li>
+<li><p>where <span class="math notranslate nohighlight">\(H\)</span> is the weighted sum of surprises,</p></li>
+<li><p><span class="math notranslate nohighlight">\(p_i\)</span> is the probability (bounded by <span class="math notranslate nohighlight">\((0, 1)\)</span>) of an event <span class="math notranslate nohighlight">\(i\)</span>,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(\log p_i\)</span> quantifies the measurement or “surprise” of an event,</p></li>
+<li><p>further, the logarithm base determines units like so:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log_2\)</span>: “bits”,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln\)</span>: “nats”,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\log_{10}\)</span>: “bans”.</p></li>
 </ul>
+</li>
+</ul>
+<p>For an event with <span class="math notranslate nohighlight">\(\Omega\)</span> outcomes (specifically refers to states in the context of thermodynamics),</p>
+<div class="math notranslate nohighlight">
+\[
+p_i = \frac{1}{\Omega}.
+\]</div>
+<p><strong>Why do we take the logarithm in <a class="reference internal" href="#equation-computing">(5.1)</a>?</strong></p>
+<p>To represent our variable, we want a function <span class="math notranslate nohighlight">\(f(p_i)\)</span> where:</p>
+<ul class="simple">
+<li><p>for zero surprise, <span class="math notranslate nohighlight">\(f(p_i=1)=0\)</span>,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log(p_i = 1) = 0\)</span></p></li>
+</ul>
+</li>
+<li><p>for small p: <span class="math notranslate nohighlight">\(f(p_i)=\ \text{large}\)</span>,</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\log(p_i \ll 1) = \text{large and negative}\)</span></p></li>
+</ul>
+</li>
+<li><p>and where independent events sum together:</p>
+<ul>
+<li><p>conveniently, <span class="math notranslate nohighlight">\(\log(a*b) = \log(a) + \log(b)\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\therefore f(p) = - \log(p).
+\]</div>
+<!-- Let’s compare this to tossing a fair / unfair coin. -->
+<div class="example admonition">
+<p class="admonition-title">Example: Tossing an unfair coin</p>
+<p>What is the entropy in tossing an unfair coin (where both sides are heads)?</p>
+<p>Since both sides are heads, the probability of an event’s outcome is simply:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p(H) = 1.0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(p(T) = 0.0\)</span>.
+Seeing as we are certain of the outcome, we should expect <span class="math notranslate nohighlight">\( S=0 \)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\to S &amp;= - \Sigma_i p_i \ln p_i \\
+&amp;= - [p(H) \ln p(H) + p(T) \ln p(T)] \\
+&amp;= 0\ \text{bits of entropy}.
+\end{aligned}
+\end{split}\]</div>
+<p>With 0 bits of entropy, we can see there is <span class="math notranslate nohighlight">\(2^0=1\)</span> modes.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: Tossing a fair coin</p>
+<p>What is the entropy in tossing a fair coin?</p>
+<p>As above, but with different probabilities:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p(H) = p(T) = 0.5\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\to S &amp;= - \Sigma_i p_i \log_2 p_i \ \ \text{bits}\\
+&amp;= - [p(H) \log_2 p(H) + p(T) \log_2 p(T)] \\
+&amp;= - [.5 \log_2 0.5 + 0.5 \log_2 0.5] \\
+&amp;= - 0.5[\log_2 0.5 + \log_2 0.5] \\
+&amp;= - 0.5[\log_2 (0.5 \times 0.5)] \\
+&amp;= - 0.5[-\log_2 4] \\
+&amp;= - 0.5[-2] \\
+&amp;= 1\ \text{bit}.
+\end{aligned}
+\end{split}\]</div>
+<p>With 1 bit of entropy, we can see there are <span class="math notranslate nohighlight">\(2^1=2\)</span> modes.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: Consecutive coin flips</p>
+<p>What is the entropy in tossing a fair coin four times?</p>
+<p>The probability of getting 4 heads in a row with a fair coin is <span class="math notranslate nohighlight">\(P(4H)=2^{-4} = \frac{1}{16} = 6.25\% \)</span> (least probable).
+The probability of getting 2 heads and 2 tails is <span class="math notranslate nohighlight">\(P(2H, 2T) = \binom{4}{2}\cdot\frac{1}{4}^4= \frac{6}{16} = 37.5\%\)</span> (most probable, see [[FIG]] for proof).</p>
+<p>The number of microscopic states grow rapidly with increasing number of coins. For <span class="math notranslate nohighlight">\(N=100\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P(100H) = \frac{1}{2}^{100} = 7.9\% \cdot 10^{-29}, \\
+P(50H, 50T) = \binom{100}{50}\frac{1}{2}^{100} = 7.97\%.
+\end{split}\]</div>
+<p>There is much greater entropy for 50 heads, 50 tails as there are many more combinations of microstates to describe the macrostate.</p>
+</div>
+<p><em>NB: <span class="math notranslate nohighlight">\(\binom{n}{r} \equiv ^nC_r \equiv \frac{n!}{k!(n-k)!}\)</span></em></p>
+<section id="connection-to-thermodynamic-entropy-statistically">
+<h3>Connection to thermodynamic entropy (statistically)<a class="headerlink" href="#connection-to-thermodynamic-entropy-statistically" title="Permalink to this heading">#</a></h3>
+<p>Now let’s consider how entropy is defined in thermodynamics where there are two forms:</p>
+<p><strong>Gibbs</strong>: Suppose a system can be in microcopic state <span class="math notranslate nohighlight">\(i\)</span> with probability <span class="math notranslate nohighlight">\(p_i\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-statistical">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-statistical" title="Permalink to this equation">#</a></span>\[
+S = -k_B \Sigma_i (p_i \ln p_i)
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(S\)</span> measures the average surprise of the event,</p></li>
+<li><p><span class="math notranslate nohighlight">\(k_B\)</span> gives us our units for entropy,</p></li>
+<li><p>and we operate exclusively with <span class="math notranslate nohighlight">\(\ln\)</span>.</p></li>
+</ul>
+<p><strong>Boltzmann</strong>: Consider an isolated system (fixed energy, noninteracting surroundings, fixed volume, fixed number of particles) such that all microstates are equally likely as there are no external influences:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+p_i &amp;= \frac{1}{\Omega} \\
+\therefore \Sigma_i^\Omega p_i \ln p_i &amp;= \Sigma_i^\Omega \frac{1}{\Omega} \ln \frac{1}{\Omega}  \\
+&amp;= \ln \frac{1}{\Omega}  \\
+&amp;= -\ln \Omega.
+\end{aligned}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\therefore S = k_B \ln \Omega
+\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(S\)</span> is the <em>microscopic entropy</em>,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(\Omega\)</span> is the number of microstates for the given macroscopic state.</p>
+<ul>
+<li><p>Large <span class="math notranslate nohighlight">\(\Omega \to \)</span> many possibilities <span class="math notranslate nohighlight">\(\to\)</span> large uncertainties <span class="math notranslate nohighlight">\(\to\)</span> large entropy</p></li>
+<li><p>Small <span class="math notranslate nohighlight">\(\Omega \to \)</span> few possibilities <span class="math notranslate nohighlight">\(\to\)</span> small uncertainties <span class="math notranslate nohighlight">\(\to\)</span> small entropy</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="statistical-form-of-entropy-in-thermodynamics">
+<h3>Statistical form of entropy in thermodynamics<a class="headerlink" href="#statistical-form-of-entropy-in-thermodynamics" title="Permalink to this heading">#</a></h3>
+<p>Consider an ideal gas containing Avagadro’s number of molecules in two states (A) and (B):</p>
+<ul class="simple">
+<li><p>(A) has the gas being uniformly distributed,</p></li>
+<li><p>(B) has the gas being clustered together, in a tenth of the volume.</p></li>
+</ul>
+<figure class="align-default" id="red-ball">
+<img alt="../_images/macroscopic_states.png" src="../_images/macroscopic_states.png" />
+</figure>
+<ul class="simple">
+<li><p>Their macroscopic states are described by the state variables <span class="math notranslate nohighlight">\(T,\ p,\ V\)</span>.</p></li>
+<li><p>Both of their microscopic states are equally likely, however the macroscopic properties of <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> are different.</p></li>
+<li><p>(A) is more probable as there are more microscopic combinations of states that are able to describe the macrostate!</p></li>
+</ul>
+<p>Let’s consider the case where the gas is composed of <span class="math notranslate nohighlight">\(0.1 \text{mol} \to 6 \cdot 10^{22} \text{molecules}\)</span>.</p>
+<ul class="simple">
+<li><p>Case (A) might have <span class="math notranslate nohighlight">\( 10^{24} \)</span> positions the molecules can occupy,</p></li>
+<li><p>Since case (B) has the molecules clustered together in a tenth of the space, they’re restricted to a smaller subset of positions, <span class="math notranslate nohighlight">\( 10^{23} \)</span>.</p></li>
+</ul>
+<p>As in <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-combinatorials"><span class="std std-numref">Section 1.8</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega_A = \binom{10^{24}}{10^{22}} &gt; \binom{10^{23}}{10^{22}} = \Omega_B \ \text{(using binomial for indistinguishable particles)}.
+\]</div>
+<p>This is where entropy is considered a measure of disorder, as state (A) is more disordered than state (B). However we can see that the underlying reason is that (A) is more probable as there are more combinations of microscopic states that describe its macrostate.</p>
+<!-- (admon:stat_entropy)=
+````{admonition} Example
+:class: example
+
+Consider the isothermal expansion of a gas from $ V_1 \to V_2 = 2 V_1 $ through an isothermal process. What is the entropy change in this process?
+<!-- 
+```{figure}
+[[FIG OF REVERSIBLE EXPANSION]]
+``` -->
+<p>Let’s start by denoting the number of molecules as <span class="math notranslate nohighlight">\(N\)</span> where each molecule has <span class="math notranslate nohighlight">\(X\)</span> different states it can occupy. We also know that the initial and final volumes are <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(2V_1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Omega &amp;= \text{total number of states for the}\ \textbf{entire system} \\
+\Omega &amp;= X_i \times X_{i+1} \times ... \times X_{N} = X^N \\
+S &amp;= k_B \ln \Omega \\
+&amp;= k_B \ln(X^N) \\
+&amp;= N k_B \ln X \\
+&amp;= nR \ln X \\
+\end{aligned}
+\end{split}\]</div>
+<p>This tells us the entropy for a given volume <span class="math notranslate nohighlight">\(V\)</span> with a given number of states, <span class="math notranslate nohighlight">\(X^N\)</span>. So what is the entropy change when doubling the volume?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\Delta S &amp;= S_2 − S_1 \\
+&amp;= nR \ln(2X) − nR \ln( X) \\
+&amp;= nR \ln(2X / X) \\
+&amp;= nR \ln 2.
+\end{aligned}
+\end{split}\]</div>
+<div class="highlight---&gt; notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="probability-introduction">
+<h2><span class="section-number">5.3. </span>Probability: Introduction<a class="headerlink" href="#probability-introduction" title="Permalink to this heading">#</a></h2>
+<p>In thermal physics, we study systems containing a practically uncountable number of particles. Although individual atomic behaviour is largely unpredictable and tracking every motion and collision is unfeasible, the collective behaviour of large ensembles is remarkably regular. On macroscopic scales, measurable quantities such as temperature and pressure emerge as averages over many atomic contributions, and these averages follow well-defined probability distributions that allow us to model system behaviour without complete microscopic knowledge.</p>
+<p>Before we delve into the basics of probability theory, we establish a few core definitions and properties:</p>
+<ul class="simple">
+<li><p>A probability is a real number between 0 and 1:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(A) \in [0,1]\)</span></p></li>
+<li><p>In particular, probabilities are non-negative, so <span class="math notranslate nohighlight">\(P(A) \geq 0\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>The set of all possible outcomes of a random experiment is called the <strong>sample space</strong>, denoted by <span class="math notranslate nohighlight">\(\Omega\)</span>.</p>
+<ul>
+<li><p>If a single possible outcome is written as <span class="math notranslate nohighlight">\(\omega\)</span>, then <span class="math notranslate nohighlight">\(\omega \in \Omega\)</span>.</p></li>
+<li><p>For a discrete sample space, we may write
+$<span class="math notranslate nohighlight">\(
+\Omega = \{\omega_1, \omega_2, \omega_3, \dots, \omega_N\}.
+\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>An <strong>outcome</strong> is one specific possible result of the experiment.</p>
+<ul>
+<li><p>For example, a single outcome is represented by <span class="math notranslate nohighlight">\(\omega\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>An <strong>event</strong> is a set containing one or more outcomes.</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(A\)</span> is an event, then <span class="math notranslate nohighlight">\(A \subseteq \Omega\)</span>.</p></li>
+<li><p>In other words, an event is a subset of the sample space.</p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>If an outcome is not contained in the sample space, then it is not a possible result of the experiment, and its probability is zero. This is sometimes denoted an “impossible event”, <span class="math notranslate nohighlight">\(\Phi\)</span>.</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(\Phi) = 0\)</span></p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>If an event is certain, then it coincides with the entire sample space, and its probability is one:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(\Omega) = 1\)</span></p></li>
+</ul>
+</li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>Events are said to be <strong>mutually exclusive</strong> if they cannot occur at the same time.</p></li>
+</ul>
+<br>
+<ul class="simple">
+<li><p>For a valid probability distribution, the probabilities of all mutually exclusive outcomes in the sample space must sum to one.</p>
+<ul>
+<li><p>For a discrete sample space, this is written as
+$<span class="math notranslate nohighlight">\(
+\sum_i P(\{\omega_i\}) = 1.
+\)</span>$</p></li>
+<li><p>For a continuous sample space, this is written as
+$<span class="math notranslate nohighlight">\(
+\int_{\Omega} P(\omega) \ d\omega = 1.
+\)</span>$</p></li>
+</ul>
+</li>
+</ul>
+<br><div class="example admonition">
+<p class="admonition-title">Example: Flipping a coin</p>
+<p>Consider a fair coin toss. The <strong>sample space</strong> is the set of all possible outcomes:</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega = \{H, T\},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(H\)</span> denotes heads and <span class="math notranslate nohighlight">\(T\)</span> denotes tails. The individual outcomes may be labelled</p>
+<div class="math notranslate nohighlight">
+\[
+\omega_1 = H, \qquad \omega_2 = T.
+\]</div>
+<p>Since the coin is fair, each outcome is assigned equal probability:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\{\omega_1\}) = P(\{H\}) = \frac{1}{2}, \qquad
+P(\{\omega_2\}) = P(\{T\}) = \frac{1}{2}.
+\]</div>
+<p>These probabilities satisfy the probability axioms we just specified:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) \in [0,1]\)</span> for any event (A),</p></li>
+<li><p>probabilities are non-negative,</p></li>
+<li><p>and the total probability over the sample space is</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(\Omega) = P(\{H\}) + P(\{T\}) = \frac{1}{2} + \frac{1}{2} = 1.
+\]</div>
+<p>Now consider the experiment of tossing the same fair coin twice. The sample space becomes</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega = \{HH, HT, TH, TT\},
+\]</div>
+<p>where each outcome is an ordered pair describing the results of the first and second toss. Since the tosses are independent and the coin is fair, each outcome has probability</p>
+<div class="math notranslate nohighlight">
+\[
+P(\{HH\}) = P(\{HT\}) = P(\{TH\}) = P(\{TT\}) = \frac{1}{4}.
+\]</div>
+<p>We can now define some events:</p>
+<ul>
+<li><p><strong>Event <span class="math notranslate nohighlight">\(A\)</span>:</strong> getting heads in one toss.</p>
+<div class="math notranslate nohighlight">
+\[
+  A = \{H\}, \qquad P(A) = \frac{1}{2}.
+  \]</div>
+</li>
+<li><p><strong>Event <span class="math notranslate nohighlight">\(B\)</span>:</strong> getting at least one head in two tosses.</p>
+<div class="math notranslate nohighlight">
+\[
+  B = \{HH, HT, TH\}.
+  \]</div>
+<p>Since these outcomes are mutually exclusive,</p>
+<div class="math notranslate nohighlight">
+\[
+  P(B) = P(\{HH\}) + P(\{HT\}) + P(\{TH\}) = \frac{1}{4}+\frac{1}{4}+\frac{1}{4} = \frac{3}{4}.
+  \]</div>
+</li>
+<li><p><strong>Event <span class="math notranslate nohighlight">\(C\)</span>:</strong> getting heads on the first toss.</p>
+<div class="math notranslate nohighlight">
+\[
+  C = \{HH, HT\}.
+  \]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+  P(C) = P(\{HH\}) + P(\{HT\}) = \frac{1}{4}+\frac{1}{4} = \frac{1}{2}.
+  \]</div>
+</li>
+</ul>
+<p>This example shows how probabilities are assigned to outcomes in the sample space, how events cane be defined as subsets of the sample space, and how the probability of an event is found by summing the probabilities of the outcomes the event set contains.</p>
+</div>
 <section id="discrete-distributions">
-<h3>Discrete Distributions<a class="headerlink" href="#discrete-distributions" title="Link to this heading">#</a></h3>
+<h3>Discrete Distributions<a class="headerlink" href="#discrete-distributions" title="Permalink to this heading">#</a></h3>
 <p><strong>Discrete random variables</strong> can only take values from a finite or countable set. A classic example is a six-sided die, whose outcomes are {1, 2, 3, 4, 5, 6}. If we denote <span class="math notranslate nohighlight">\(x\)</span> as a discrete random variable that takes values <span class="math notranslate nohighlight">\(x_i\)</span> with corresponding probabilities <span class="math notranslate nohighlight">\(P_i\)</span>, we can define several useful quantities that describe its behaviour.</p>
 <p>First, we require that the probabilities of all outcomes must add up to one:</p>
 <div class="math notranslate nohighlight" id="equation-2-1">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-2-1" title="Link to this equation">#</a></span>\[
-\sum_{i} P_{i} = 1.\]</div>
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-2-1" title="Permalink to this equation">#</a></span>\[
+\sum_{i} P_{i} = 1.
+\]</div>
 <p>The arithmetic mean, or expected value, is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-2-2">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-2-2" title="Link to this equation">#</a></span>\[
-\langle x \rangle = \sum_i x_i P_i.\]</div>
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-2-2" title="Permalink to this equation">#</a></span>\[
+\langle x \rangle = \sum_i x_i P_i.
+\]</div>
 <p>Intuitively, the idea is that for each outcome contributes to the sum in proportion to how likely it is to occur. This is called <em>weighting</em>. If you were to sample the random variable many times, add up all the observed values, and divide by the number of trials, the result would converge to the expected value. We may also define the “mean squared” value:</p>
 <div class="math notranslate nohighlight" id="equation-2-3">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-2-3" title="Link to this equation">#</a></span>\[
-\langle x^2 \rangle = \sum_i x_i^2 P_i.\]</div>
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-2-3" title="Permalink to this equation">#</a></span>\[
+\langle x^2 \rangle = \sum_i x_i^2 P_i.
+\]</div>
 <!-- Discrete distributions arise in many areas of thermal and statistical physics. Examples include:
 - the amount of molecular collisions in a gas during a fixed time interval,
 - the number of radioactive decay events detected by a sensor,
 - the number of collision required before a molecule transfers its energy,
 - the distribution of energies in systems with discrete energy levels,
 - the probability of transmission or reflection when a particle encounters a barrier,
-- particle velocities and energies in a simulated setting, where values are stored in bins. --><div class="cell tag_figure docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">4</span><span class="p">])</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$x$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;$P(x)$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;$0$&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$1/4$&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;$1/2$&quot;</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">,</span><span class="s1">&#39;right&#39;</span><span class="p">]:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="n">spine</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/47677e202cf08c176b560a3fb92500bff40b50994f80676fe3baaa931f194a53.png" src="../_images/47677e202cf08c176b560a3fb92500bff40b50994f80676fe3baaa931f194a53.png" />
-</div>
-</div>
-<!-- Note that the expected value need not be present in the set of outcomes. A common example of this is the average number of children a family is expected to have across a population. These figures are often cited to occur between 1.8-2.4, yet it is only possible to have an integer number of children. These impossible values only make sense when considering a population rather than an individual sample.
-
-```{admonition} Example: Expected value and mean squared
-:class: example
-Consider a scenario where random variable $x$ can take values {0, 1, 2} with corresponding probabilities {$\frac{1}{2}$, $\frac{1}{4}$, $\frac{1}{4}$}. This distribution is visualised in figure 2.1. Calculate the expected value for
-
-- (a) the variable, $\langle x \rangle$
-- (b) the mean squared of the variable, $\langle x^2 \rangle$.
-
-## (a)
-
-First check that $\sum P_i = 1$. Since $\frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1$ we are good to go. We then calculate the averages as follows:
-
-$$
+- particle velocities and energies in a simulated setting, where values are stored in bins. -->
+<figure class="align-default" id="probability-mass-function">
+<a class="reference internal image-reference" href="../_images/pmf.png"><img alt="../_images/pmf.png" src="../_images/pmf.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">An arbitrary probability mass function for a variable which may take on three values. These three possible values are denoted along the x-axis, with their corresponding probability of occurance along the y-axis. The bar height of each corresponds to its ‘likelihood’ of occurance when the variable <span class="math notranslate nohighlight">\(x\)</span> is sampled.</span><a class="headerlink" href="#probability-mass-function" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note that the expected value need not be present in the set of outcomes.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: Expected value and mean squared</p>
+<p>Consider a scenario where random variable <span class="math notranslate nohighlight">\(x\)</span> can take values {0, 1, 2} with corresponding probabilities {<span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{4}\)</span>}. This distribution is visualised in figure 2.1. Calculate the expected value for</p>
+<ul class="simple">
+<li><p>(a) the variable, <span class="math notranslate nohighlight">\(\langle x \rangle\)</span></p></li>
+<li><p>(b) the mean squared of the variable, <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>.</p></li>
+</ul>
+<p class="rubric">(a)</p>
+<p>First check that <span class="math notranslate nohighlight">\(\sum P_i = 1\)</span>. Since <span class="math notranslate nohighlight">\(\frac{1}{2} + \frac{1}{4} + \frac{1}{4} = 1\)</span> we are good to go. We then calculate the averages as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align*}
-\langle x \rangle &= \sum_i x_i P_i \\
-&= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 2 \cdot \tfrac{1}{4} \\\
-&= \tfrac{3}{4} = 0.75
+\langle x \rangle &amp;= \sum_i x_i P_i \\
+&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 2 \cdot \tfrac{1}{4} \\\
+&amp;= \tfrac{3}{4} = 0.75
 \end{align*}
-$$
-
-We see that the mean $\langle x \rangle$ is not one of the possible values $x$ can take.
-
-## (b)
-
-We follow a similar process for $\langle x^2 \rangle$:
-
-$$
+\end{split}\]</div>
+<p>We see that the mean <span class="math notranslate nohighlight">\(\langle x \rangle\)</span> is not one of the possible values <span class="math notranslate nohighlight">\(x\)</span> can take.</p>
+<p class="rubric">(b)</p>
+<p>We follow a similar process for <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{align*}
-\langle x \rangle &= \sum_i x_i P_i \\
-&= 0^2 \cdot \tfrac{1}{2} + 1^2 \cdot \tfrac{1}{4} + 2^2 \cdot \tfrac{1}{4} \\
-&= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 4 \cdot \tfrac{1}{4} \\
-&= \tfrac{5}{4} = 1.25
+\langle x \rangle &amp;= \sum_i x_i P_i \\
+&amp;= 0^2 \cdot \tfrac{1}{2} + 1^2 \cdot \tfrac{1}{4} + 2^2 \cdot \tfrac{1}{4} \\
+&amp;= 0 \cdot \tfrac{1}{2} + 1 \cdot \tfrac{1}{4} + 4 \cdot \tfrac{1}{4} \\
+&amp;= \tfrac{5}{4} = 1.25
 \end{align*}
-$$
-``` --></section>
+\end{split}\]</div>
+</div>
+</section>
 <section id="continuous-distributions">
-<h3>Continuous distributions<a class="headerlink" href="#continuous-distributions" title="Link to this heading">#</a></h3>
+<h3>Continuous distributions<a class="headerlink" href="#continuous-distributions" title="Permalink to this heading">#</a></h3>
 <p>Let <span class="math notranslate nohighlight">\(x\)</span> now be a <strong>continuous random variable</strong>, meaning it can take any value within some range (the bounds may be finite or infinite). We must treat probabilities differently in this case. Imagine a uniform distribution between 1 and 10: one sample might give an exact value like 4, another could be something extremely specific like 3.14159265… Because there are infinitely many possible values, the probability of landing on any one exact value is effectively zero. Instead, we talk about the probability of <span class="math notranslate nohighlight">\(x\)</span> lying within a small interval of width <span class="math notranslate nohighlight">\(dx\)</span>.</p>
 <p>Many real-life quantities are described by continuous distributions. For example, height, commute durations, and local temperature all vary smoothly within finite limits, even if the exact value can be anything within the range. As before, the total probability must sum to one, but because we are now summing over a continuous range, we replace sums with integrals:</p>
 <div class="math notranslate nohighlight" id="equation-2-4">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-2-4" title="Link to this equation">#</a></span>\[
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-2-4" title="Permalink to this equation">#</a></span>\[
 \int P(x)dx = 1. 
 \]</div>
 <p>We have analogous expressions for <span class="math notranslate nohighlight">\(\langle x \rangle\)</span> and <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-2-5">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-2-5" title="Link to this equation">#</a></span>\[
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-2-5" title="Permalink to this equation">#</a></span>\[
 \langle x \rangle = \int x P(x)dx; 
 \]</div>
 <div class="math notranslate nohighlight" id="equation-2-6">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-2-6" title="Link to this equation">#</a></span>\[
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-2-6" title="Permalink to this equation">#</a></span>\[
 \langle x^2 \rangle = \int x^2 P(x)dx. 
 \]</div>
-<!-- 
-Continuous random variables are extremely common in thermal physics and statistical mechanics. Typical scenarios include:
-- particle speeds in a gas,
-- particle energies in a classical system,
-- waiting times between molecular collision events,
-- spatial fields such as pressure, density and temperature,
-- radiation intensity as a function of frequency. --></section>
+<p>Continuous random variables are extremely common in thermal physics and statistical mechanics. For example particle speeds in a gas and particle energies in a classical system.</p>
+<div class="example admonition">
+<p class="admonition-title">Uniform Distribution on [0, 10]</p>
+<p>Let a continuous random variable <span class="math notranslate nohighlight">\(x\)</span> be uniformly distributed between 0 and 10:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} P(x) =
+\begin{cases}
+    \frac{1}{10}, &amp; 0 \le x \le 10, \\
+    0, &amp; \text{otherwise.}
+\end{cases}
+\end{split}\]</div>
+<p>What is the values of</p>
+<ul class="simple">
+<li><p>(a) the expected value <span class="math notranslate nohighlight">\(\langle x \rangle\)</span>?</p></li>
+<li><p>(b) the mean squared value <span class="math notranslate nohighlight">\(\langle x^2 \rangle\)</span>?</p></li>
+</ul>
+<p>First, ensure that <span class="math notranslate nohighlight">\(P(x)\)</span> is a valid probability distribution by checking that it is normalised:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_0^{10} P(x) \, dx = \int_0^{10} \frac{1}{10} \, dx = \left[\frac{x}{10}\right]^{10}_{0} = 1.
+\]</div>
+<p>We can then compute the expected values:</p>
+<p class="rubric">(a)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\langle x \rangle &amp;= \int_0^{10} x P(x) \, dx = \frac{1}{10} \int_0^{10} x \, dx = \frac{1}{10} \left[\frac{x^2}{2}\right]_0^{10} = 5, \\[6pt]
+\end{align*}
+\end{split}\]</div>
+<p class="rubric">(b)</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align*}
+\langle x^2 \rangle &amp;= \int_0^{10} x^2 P(x) \, dx = \frac{1}{10} \int_0^{10} x^2 \, dx = \frac{1}{10} \left[\frac{x^3}{3}\right]_0^{10} = \frac{100}{3} \approx 33.33.
+\end{align*}
+\]</div>
+<p>The mean of 5 lies exactly halfway between the bounds, which is as you’d expected for a symmetric uniform distribution.</p>
+</div>
+</section>
+<section id="measures-of-central-tendencies">
+<h3>Measures of Central Tendencies<a class="headerlink" href="#measures-of-central-tendencies" title="Permalink to this heading">#</a></h3>
+<p>When describing a probability distribution, we often want to identify simple central values which best represent the properties and sampling behaviour of a probability distribution. These are known as <strong>measures of central tendency</strong>, and the most common are the <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong>:</p>
+<ul class="simple">
+<li><p><strong>Mean</strong> ⟨x⟩: the expectation or average value of a distribution.</p></li>
+<li><p><strong>Median</strong>: the value that divides the distribution into two equal halves, i,e. the middle value.</p></li>
+<li><p><strong>Mode</strong>: the most probable value, where the probability is maximal.</p></li>
+</ul>
+<p>For symmetric distributions (like the Gaussian), these three measures coincide onto the same value. For asymmetric or skewed distributions, they differ, and thus provide valuable information for characterising a distribution. Measures of central tendency, the mean, median and mode, each give us simple summary values which capture the typical behaviour of a distribution. In the context of thermal physics, these quantities help us understand concepts like average energies and particle speeds. They can also be useful in that they help us distinguish when system exhibit symmetric behaviour, as is the case when all three measures are in agreement, i.e. <span class="math notranslate nohighlight">\(\text{mean} = \text{median} = \text{mode}\)</span>, or when they exhibit strong asymmetry.</p>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../_images/measures_of_central_tendencies.png"><img alt="../_images/measures_of_central_tendencies.png" src="../_images/measures_of_central_tendencies.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text"><strong>(A)</strong> a symmetric distribution where the mean, mode and median correspond to the same value in the distribution’s domain, and <strong>(B)</strong> an asymmetric distribution (right) where, mode &lt; median &lt; mean. Distribution <strong>(B)</strong> demonstrates positive skew (the tail is heading in the positive direction) - were it negatively skewed, we would have mean &lt; median &lt; mode.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>While many distributions in thermodynamics are symmetric, like the Gaussian and Binomial distributions commonplace throughout physics, real physical scenarios can often produce asymmetrically distributed systems. For example, particle speeds in a gas, or waiting times between detection events are typically not symmetrically distributed about the mean. The skewed plot highlights how the mean, median and mode can differ significantly, and illustrates why we cannot rely on just one of these measures when interpreting asymmetrically distributed data. In skewed distributions, the mean is pulled towards the distribution’s tail, whilst the median moves between the mean and the mode. Regardless, the mode still represents the most probable value, i.e. it is situated at the peak of the distribution.</p>
+<section id="variance">
+<h4>Variance<a class="headerlink" href="#variance" title="Permalink to this heading">#</a></h4>
+<p>The <strong>variance</strong> measures the average deviation of values around the mean of a distribution and is always positive. It is defined as follows:</p>
+<div class="math notranslate nohighlight" id="equation-2-9">
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-2-9" title="Permalink to this equation">#</a></span>\[
+\mathrm{Var}(X) = \langle (x-⟨x⟩)^2 \rangle\]</div>
+<p>We can expand the above expression to derive a simpler expression for calculating the variance of a scalar variable:</p>
+<div class="math notranslate nohighlight" id="equation-2-10">
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-2-10" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{align}
+\mathrm{Var}(x)
+&amp;= \langle (x - ⟨x⟩)^2 \rangle
+\\
+&amp;= \langle x^2 - 2⟨x⟩x + ⟨x⟩^2 \rangle
+\\
+&amp;= \langle x^2 \rangle - 2⟨x⟩⟨x⟩ + ⟨x⟩^2
+\\
+&amp;= \langle x^2 \rangle - ⟨x⟩^2.
+\end{align}
+\end{split}\]</div>
+<p>This manner of expressing the variance gives rise to a mnemonic expression with which you can memorise the formula: The variance is “the mean of the squares minus the square of the means.” The variance for a variable <span class="math notranslate nohighlight">\(x\)</span> is often denoted <span class="math notranslate nohighlight">\(\sigma^2_x\)</span>, and relates to the <strong>standard deviation</strong>, which is simply the square root of the variance:</p>
+<div class="math notranslate nohighlight" id="equation-2-11">
+<span class="eqno">(5.11)<a class="headerlink" href="#equation-2-11" title="Permalink to this equation">#</a></span>\[
+\sigma_x = \sqrt{\left\langle (x - \langle x \rangle)^2 \right\rangle}
+= \sqrt{\,\langle x^2 \rangle - \langle x \rangle^2\,}
+\]</div>
+</section>
 <section id="expectation-under-a-linear-transformation">
-<h3>Expectation under a linear transformation<a class="headerlink" href="#expectation-under-a-linear-transformation" title="Link to this heading">#</a></h3>
+<h4>Expectation under a linear transformation<a class="headerlink" href="#expectation-under-a-linear-transformation" title="Permalink to this heading">#</a></h4>
 <p>Because the expectation operator <span class="math notranslate nohighlight">\(\langle \cdot \rangle\)</span> is linear, the mean of a transformed variable follows the transformation directly. Scaling random variable <span class="math notranslate nohighlight">\(x\)</span> by <span class="math notranslate nohighlight">\(a\)</span> and shifting by <span class="math notranslate nohighlight">\(b\)</span> means the average value is also scaled by <span class="math notranslate nohighlight">\(a\)</span> and shifted by <span class="math notranslate nohighlight">\(b\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-2-12">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-2-12" title="Link to this equation">#</a></span>\[
+<span class="eqno">(5.12)<a class="headerlink" href="#equation-2-12" title="Permalink to this equation">#</a></span>\[
 \langle y \rangle = \langle ax \ + \ b \rangle = a \langle x \rangle \ + \ b\]</div>
 <p>A constant (i.e. <span class="math notranslate nohighlight">\(b\)</span>) merely contributes its own value to the expectation, and constant factors (i.e. <span class="math notranslate nohighlight">\(a\)</span>) simply pass through the expectation operator. The full process of calculating <span class="math notranslate nohighlight">\(\langle y \rangle\)</span> following its production through the linear transformation <span class="math notranslate nohighlight">\(y = ax+b\)</span> is as follows:</p>
 <div class="math notranslate nohighlight">
@@ -545,7 +933,7 @@ Continuous random variables are extremely common in thermal physics and statisti
 \end{split}\]</div>
 </section>
 <section id="variance-under-a-linear-transformation">
-<h3>Variance under a linear transformation<a class="headerlink" href="#variance-under-a-linear-transformation" title="Link to this heading">#</a></h3>
+<h4>Variance under a linear transformation<a class="headerlink" href="#variance-under-a-linear-transformation" title="Permalink to this heading">#</a></h4>
 <p>Variance behaves slightly differently. Shifting by <span class="math notranslate nohighlight">\(b\)</span> has no effect, because moving a distribution left or right does not change its spread. Scaling by <span class="math notranslate nohighlight">\(a\)</span> however does stretch/compress the distribution, manifesting as a squared scaling of the variance. For a variable <span class="math notranslate nohighlight">\(x\)</span> transformed linearly via <span class="math notranslate nohighlight">\(y = a x + b\)</span>:</p>
 <p>Starting with the standard definition of the variance:</p>
 <div class="math notranslate nohighlight">
@@ -554,7 +942,7 @@ Continuous random variables are extremely common in thermal physics and statisti
 \]</div>
 <p>and substituting <span class="math notranslate nohighlight">\(y = a x + b\)</span>,</p>
 <div class="math notranslate nohighlight" id="equation-2-13">
-<span class="eqno">(5.8)<a class="headerlink" href="#equation-2-13" title="Link to this equation">#</a></span>\[\begin{split}
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-2-13" title="Permalink to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
 \mathrm{Var}(y)
 &amp;= \left\langle (ax + b - \langle ax + b \rangle)^2 \right\rangle \\
@@ -564,483 +952,354 @@ Continuous random variables are extremely common in thermal physics and statisti
 &amp;= a^2\,\mathrm{Var}(x)
 \end{aligned}
 \end{split}\]</div>
-<p>This is an important result for physics and measurement generally, as whenever a quantity is converted or calibrated using a linear relation, its uncertainty scales by the square of that factor.</p>
-</section>
-</section>
-<section id="directions-of-thermodynamic-processes">
-<h2><span class="section-number">5.2. </span>Directions of Thermodynamic Processes<a class="headerlink" href="#directions-of-thermodynamic-processes" title="Link to this heading">#</a></h2>
-<p>Thermodynamic processes in nature are <strong>irreversible</strong>, meaning they occur spontaneously in one direction only. Examples include heat flowing from hot to cold, the free expansion of a gas, and the conversion of mechanical energy into heat by friction. These processes define a preferred direction in nature, formalized by the <strong>second law of thermodynamics</strong>.</p>
-<p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small.</p>
-<p>Irreversible processes are inherently nonequilibrium processes and cannot be made to run backward by small changes in conditions. Their direction is closely linked to increasing disorder: systems naturally evolve from more ordered states to more random ones. Mechanical energy represents organized motion, while heat corresponds to random molecular motion, so converting work into heat increases disorder and reinforces irreversibility.</p>
-<figure class="align-default" id="ice-in-metal-box">
-<a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 60%;" />
-</a>
+<p>This is an important result generally, as whenever a quantity is converted or calibrated using a linear relation, its uncertainty scales by the square of that factor. We can see visually how linear transformations affect the shape of a distribution, and thus the population-level effects:</p>
+<figure class="align-default" id="linear-transformed-distribution">
+<a class="reference internal image-reference" href="../_images/linear_transformation_mean.png"><img alt="../_images/linear_transformation_mean.png" src="../_images/linear_transformation_mean.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text"><strong>(A)</strong> A block of ice melts <em>irreversibly</em> when we place it into a hot (70 <span class="math notranslate nohighlight">\(^{\circ}\)</span>C) metal box, as heat flows from the box into the ice - inducing a phase change into water. The heat will never move from the colder body to the hotter one. <strong>(B)</strong> A block of ice at 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C can be melted <em>reversibly</em> if we put it in a 0<span class="math notranslate nohighlight">\(^{\circ}\)</span>C metal box. By infinitesimally raising or lowering the temperature of the box, so that we remain extremely close to the phase transition temperature of H<span class="math notranslate nohighlight">\(_2\)</span>O, we can make heat flow into the ice to melt it; or make heat flow out of the water to freeze it.</span><a class="headerlink" href="#ice-in-metal-box" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">A distribution before (blue) and after (red) undergoing a linear transformation. There are a myriad of situations for which this can apply. Injecting more energy into the system (e.g. by heating it) will shift the mean energy of the population, but also broaden the variety of energies exhibited.</span><a class="headerlink" href="#linear-transformed-distribution" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Examples will be provided once entropy is introduced. We will see that an irreversible process is characterized by a <strong>positive change in the entropy of the universe</strong>, whereas a reversible process corresponds to <strong>zero total entropy change</strong>.</p>
 </section>
-<section id="gibbs-and-boltzmann-entropy">
-<h2><span class="section-number">5.3. </span>Gibbs and Boltzmann Entropy<a class="headerlink" href="#gibbs-and-boltzmann-entropy" title="Link to this heading">#</a></h2>
-<p>(Section 20.8 + JL notes).</p>
-<section id="surprises-and-information">
-<h3>Surprises and information<a class="headerlink" href="#surprises-and-information" title="Link to this heading">#</a></h3>
+</section>
+<section id="independent-variables-in-probability">
+<h3>Independent Variables in Probability<a class="headerlink" href="#independent-variables-in-probability" title="Permalink to this heading">#</a></h3>
+<p>In many physical problems we work with more than one random variable. For example, a molecule has both a position and a velocity, and repeated measurements of the same quantity each produce different outcomes. Sometimes these variables are <strong>independent</strong>, meaning that knowing the value of one does not provide any information about the other. A simple example is coin tossing: knowing the result of one flip does not influence the next.</p>
+<p>Formally, two random variables <span class="math notranslate nohighlight">\(u\)</span> and <span class="math notranslate nohighlight">\(v\)</span> are <em>independent</em> if their joint probability distribution factorises into a product series of each variable’s marginal distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+P(u, v) = P_u(u)\,P_v(v).
+\]</div>
+<p>If this holds, the value observed for <span class="math notranslate nohighlight">\(u\)</span> has no bearing on <span class="math notranslate nohighlight">\(v\)</span>, and vice versa. This generalises to any number of independent variables. If <span class="math notranslate nohighlight">\(\vec{x} = (x_1, x_2, \ldots, x_N)\)</span> has each component independent of the other, then</p>
+<div class="math notranslate nohighlight" id="equation-2-14">
+<span class="eqno">(5.14)<a class="headerlink" href="#equation-2-14" title="Permalink to this equation">#</a></span>\[
+P(\vec{x}) = \prod_{i=1}^{N} P_i(x_i).\]</div>
+<p>A very useful consequence of independence is that the expectation of a product factorises:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\langle uv \rangle
+  &amp;= \int\!\!\int uv\,P_u(u)\,P_v(v)\,du\,dv \\[6pt]
+  &amp;= \left( \int u\,P_u(u)\,du \right)
+     \left( \int v\,P_v(v)\,dv \right) \\[6pt]
+  &amp;= \langle u \rangle \,\langle v \rangle.
+\end{aligned}
+\end{split}\]</div>
+<p>The same reasoning extends directly to <span class="math notranslate nohighlight">\(N\)</span> independent variables:</p>
+<div class="math notranslate nohighlight" id="equation-2-15">
+<span class="eqno">(5.15)<a class="headerlink" href="#equation-2-15" title="Permalink to this equation">#</a></span>\[\begin{split}
+\begin{aligned}
+\left\langle \prod_{i=1}^N X_i \right\rangle
+  &amp;= \int \cdots \int
+     \left( \prod_{i=1}^N x_i \right)
+     \left( \prod_{i=1}^N p_i(x_i) \right)
+     dx_1\cdots dx_N \\[6pt]
+  &amp;= \prod_{i=1}^N \left( \int x_i\, p_i(x_i)\,dx_i \right) \\[6pt]
+  &amp;= \prod_{i=1}^N \langle X_i \rangle.
+\end{aligned}
+\end{split}\]</div>
+<p>This result holds for discrete variables as well: simply replace the integrals within the series with sums.</p>
+</section>
+<section id="the-binomial-distribution">
+<h3>The Binomial Distribution<a class="headerlink" href="#the-binomial-distribution" title="Permalink to this heading">#</a></h3>
+<p>Refer to chapter 1 <a class="reference internal" href="../ch1-introduction/01_intro.html#sec-combinatorials"><span class="std std-ref">for a refresher on combinatorial problems</span></a>. Combinations appear frequently throughout probability theory because it is used to count how many different sequences can contain <em>k</em> particular outcomes (like <em>successes</em>) among <em>n</em> trials.</p>
+<p>Consider an experiment with only two possible outcomes, <strong>success</strong> and <strong>failure</strong>. This is called a <strong>Bernoulli trial</strong>.</p>
 <ul class="simple">
-<li><p>Shannon entropy as a measure of uncertainty or surprise</p></li>
-<li><p>Card and deck-of-cards examples</p></li>
+<li><p>Let the probability of success be <em>p</em>.</p></li>
+<li><p>Then the probability of failure is (1 − <em>p</em>).</p></li>
 </ul>
-<p>Introduce <strong>Gibbs entropy</strong>, then specialize to <strong>Boltzmann entropy</strong>.</p>
+<p>If we assign the value 1 to a success and 0 to a failure, the expectation and variance of a single trial are:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = p, \qquad
+\sigma_x^2 = p(1 - p)
+\]</div>
+<p>Now imagine performing <span class="math notranslate nohighlight">\(n\)</span> independent Bernoulli trials; for example, flipping a coin <span class="math notranslate nohighlight">\(n\)</span> times where we count <span class="math notranslate nohighlight">\(k\)</span> heads. Let us consider “heads” as a success.</p>
+<p>There are two ingredients to the probability of obtaining <em>k</em> successes:</p>
+<ol class="arabic simple">
+<li><p><strong>The probability of one specific sequence</strong> with <em>k</em> successes and <em>n − k</em> failures:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-2-16">
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-2-16" title="Permalink to this equation">#</a></span>\[
+p^k (1 - p)^{n - k}
+\]</div>
+<ol class="arabic simple" start="2">
+<li><p><strong>The number of possible sequences</strong> with exactly <em>k</em> successes:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-2-17">
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-2-17" title="Permalink to this equation">#</a></span>\[
+{n \choose k} = \frac{n!}{k!(n-k)!}
+\]</div>
+<p>Multiplying these gives the <strong>binomial probability</strong> of observing <em>k</em> successes given <em>n</em> trials:</p>
+<div class="math notranslate nohighlight" id="equation-2-18">
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-2-18" title="Permalink to this equation">#</a></span>\[
+P(n, k) = {n \choose k} p^k (1 - p)^{n - k} = \frac{n!}{k!(n-k)!} p^k (1 - p)^{n - k}
+\]</div>
+<section id="properties-of-the-binomial-distribution">
+<h4>Properties of the Binomial Distribution<a class="headerlink" href="#properties-of-the-binomial-distribution" title="Permalink to this heading">#</a></h4>
+<p>From the definition, one can show that the probability of all combinations of successes and failures sums to unity:</p>
+<div class="math notranslate nohighlight" id="equation-2-19">
+<span class="eqno">(5.19)<a class="headerlink" href="#equation-2-19" title="Permalink to this equation">#</a></span>\[
+\sum_{k=0}^{n} P(n, k) = 1,
+\]</div>
+<p>so the probabilities are properly normalized.
+The <strong>mean</strong> and <strong>variance</strong> of <em>k</em> are:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle k \rangle = np, \qquad
+\sigma_k^2 = np(1 - p)
+\]</div>
+<p>As <em>n</em> increases, both the mean and standard deviation grow, but the <strong>fractional width</strong></p>
+<div class="math notranslate nohighlight" id="equation-2-20">
+<span class="eqno">(5.20)<a class="headerlink" href="#equation-2-20" title="Permalink to this equation">#</a></span>\[
+\frac{\sigma_k}{\langle k \rangle} =
+\sqrt{\frac{1 - p}{np}}
+\]</div>
+<p>decreases, meaning the distribution becomes more sharply peaked around <em>k = np</em>.</p>
+<figure class="align-default" id="some-binomials">
+<a class="reference internal image-reference" href="../_images/binomial_distributions.png"><img alt="../_images/binomial_distributions.png" src="../_images/binomial_distributions.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Plot of possible binomial distributions with varied trial sizes and success probabilities.</span><a class="headerlink" href="#some-binomials" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="example admonition">
+<p class="admonition-title">Example - coin tossing</p>
+<p>For a fair coin, <span class="math notranslate nohighlight">\(p = \frac{1}{2}\)</span>.</p>
+<ul class="simple">
+<li><p>For 16 tosses, expected heads: <span class="math notranslate nohighlight">\(\langle k \rangle = 8\)</span>; <span class="math notranslate nohighlight">\(\sigma = 2\)</span>.</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(10^{20}\)</span> tosses, expected heads: <span class="math notranslate nohighlight">\(\langle k \rangle = 5\times10^{19}\)</span>; <span class="math notranslate nohighlight">\(\sigma = 5\times10^{9}\)</span> - ten orders of magnitude smaller relative to the mean.</p></li>
+</ul>
+<p>Thus, as the number of trials increases, the relative fluctuations around the mean gradually become negligible.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: 1D random walk</p>
+<p>A one-dimensional <strong>random walk</strong> can be viewed as successive Bernoulli trials:
+each step is either forward (+L) or backward (−L) with equal probability <span class="math notranslate nohighlight">\(p = \frac{1}{2}\)</span>.</p>
+<p>After <em>n</em> steps, if <em>k</em> are forward, the net displacement is</p>
+<div class="math notranslate nohighlight">
+\[
+x = (2k - n)L.
+\]</div>
+<p>Using the binomial results,</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = 0, \qquad
+\langle x^2 \rangle = nL^2, \qquad
+\sigma_x = \sqrt{n}\, L,
+\]</div>
+<p>showing that the root-mean-square displacement grows as <span class="math notranslate nohighlight">\(\sqrt{n}\)</span> - a key result that later links to Brownian motion.</p>
+</div>
 </section>
 </section>
-<section id="probability-introduction">
-<h2><span class="section-number">5.4. </span>Probability: Introduction<a class="headerlink" href="#probability-introduction" title="Link to this heading">#</a></h2>
 </section>
 <section id="probability-examples">
-<h2><span class="section-number">5.5. </span>Probability Examples<a class="headerlink" href="#probability-examples" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">5.4. </span>Probability Examples<a class="headerlink" href="#probability-examples" title="Permalink to this heading">#</a></h2>
+<section id="the-birthday-paradox">
+<h3>The Birthday Paradox<a class="headerlink" href="#the-birthday-paradox" title="Permalink to this heading">#</a></h3>
+<p>In a group of <em>N</em> people, what is the probability that at least two of them share the same birthday?
+We denote this probability as <span class="math notranslate nohighlight">\(P(\text{match})\)</span>. The complementary probability — that <strong>no one</strong> shares a birthday — is <span class="math notranslate nohighlight">\(P(\text{no match})\)</span>, and clearly:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{match}) = 1 - P(\text{no match}).
+\]</div>
+<p>It’s usually easier to calculate the complementary case first.</p>
+<p>In the standard formulation of the birthday problem, we assume that birthdays are <strong>independent</strong> and <strong>uniformly distributed</strong> across the 365 days of the year, and that there are no instances of sampling bias, and that leap years do not exist.</p>
+<p>If there are <em>N</em> people in the group and no one shares a birthday:</p>
 <ul class="simple">
-<li><p>Birthday problem</p></li>
-<li><p>Finding a single microstate (e.g. Pokémon analogy)</p></li>
+<li><p>The first person can have any of 365 birthdays.</p></li>
+<li><p>The second must have a different one - 364 options.</p></li>
+<li><p>The third must avoid the first two - 363 options.</p></li>
+<li><p>And so on…</p></li>
 </ul>
+<p>Therefore, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{no match}) =
+\frac{365}{365} \times \frac{364}{365} \times \frac{363}{365} \times \frac{362}{365} \times \dots \times \frac{365 - N + 1}{365},
+\]</div>
+<p>which we can express compactly using factorials as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+P(\text{no match})
+&amp;= \frac{365 \times 364 \times 363 \times \dots \times (365 - N + 1)}{365^N} \\
+&amp;= \frac{365!}{(365 - N)! \, 365^N}.
+\end{align}
+\end{split}\]</div>
+<p>Finally, the probability that <strong>at least one</strong> shared birthday occurs in the group is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{match}) = 1 - \frac{365!}{(365 - N)! \, 365^N}.
+\]</div>
+<p>Let’s now graph this probability as a function of <em>N</em> to see how quickly it rises.</p>
+<figure class="align-default" id="the-birthday-problem">
+<a class="reference internal image-reference" href="../_images/birthday_probabilities.png"><img alt="../_images/birthday_probabilities.png" src="../_images/birthday_probabilities.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.6 </span><span class="caption-text">The probability trace of at least one pair of identical birthdays occuring as a function of the population. We observe that the probability of this happening hits ~50% once we have 23 people gathered, and asymtotes to a certain event once we surpass 50 people. The number of pairs grows faster than the population, leading to a sharp increase in the probability of a pair of matching birthdays despite the population being well below 365.</span><a class="headerlink" href="#the-birthday-problem" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="finding-a-particular-pokemon">
+<h3>Finding a Particular Pokémon<a class="headerlink" href="#finding-a-particular-pokemon" title="Permalink to this heading">#</a></h3>
+<p>You find yourself in the Sinnoh region, scouring for a particular Pokémon. You tell your accompanying friend that the probability of finding the Pokémon you seek per searching instance is <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>, to which they reply that, on average, you need only search <span class="math notranslate nohighlight">\(n\)</span> times to find your quarry. Intuitively that sounds sensible, but is it true?</p>
+<p>What is the probability of success based on her logic? The probability of finding the Pokémon on your first try is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{Pokémon}) = \frac{1}{n},
+\]</div>
+<p>so naturally the probability of not finding the Pokémon on the first attempt is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{No Pokémon}) = 1 - \frac{1}{n}.
+\]</div>
+<p>We presume to think that each searching instance is independent. Your previous efforts have no bearing on future success. Henceforth, the probability of failing to find the right Pokémon after <span class="math notranslate nohighlight">\(n\)</span> attempts is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{No Pokémon after } n \text{ tries}) = \left(1 - \frac{1}{n}\right)^n,
+\]</div>
+<p>meaning the probability of success by the <span class="math notranslate nohighlight">\(n^{th}\)</span> attempt is merely 1 minus this probability:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{Pokémon after } n \text{ tries}) = 1 - \left(1 - \frac{1}{n}\right)^n.
+\]</div>
+<p>Let’s now graph this probability equation as a function of <em>n</em>:</p>
+<figure class="align-default" id="pokemon-search">
+<a class="reference internal image-reference" href="../_images/pokemon_search.png"><img alt="../_images/pokemon_search.png" src="../_images/pokemon_search.png" style="width: 75%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.7 </span><span class="caption-text">The probability of at least one success after <span class="math notranslate nohighlight">\(n\)</span> independent attempt, when each attempt succeeds with probability <span class="math notranslate nohighlight">\(\tfrac{1}{n}\)</span>. As <span class="math notranslate nohighlight">\(n\)</span> increases, this probability approaches <span class="math notranslate nohighlight">\(1 - \tfrac{1}{e} \approx 0.632\)</span>. This is a general trend that can be applied to any scenario in the limit of repeated independent failure. By definition, when <span class="math notranslate nohighlight">\(n=1\)</span>, the probability of success is <span class="math notranslate nohighlight">\(\tfrac{1}{1} = 1\)</span>, so we are certain to succeed on the first attempt.</span><a class="headerlink" href="#pokemon-search" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>As <span class="math notranslate nohighlight">\(n\)</span> gets larger, the probability of finding the Pokémon you are after steadily converges to a constant value of ~0.632. So to be certain you’ll find your Pokémon you’ll need to search more than <em>n</em> times. Although graphing it helps with intuition, we can discern a more accurate result by taking the limit of the probability function with respect to <span class="math notranslate nohighlight">\(n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{n \to \infty} \left(1 - \left(1 - \frac{1}{n}\right)^n\right) = 1 - \frac{1}{e} = 0.632...
+\]</div>
+<p>This is the consequence of a special case where we have a probability of success as being one over the number of trials. Be careful: we are increasing the rarity of the Pokémon alongside the number of attempts we make, which is why the probability does not tend to infinity as we increase the number of attempts. We don’t see this same convergence when the number of trials doesn’t match the denominator.</p>
+<p>Let us consider flipping a coin 10 times, and managing to land 10 heads in a row. The probability of this happening is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{10 in a row}) = \frac{1}{2^{10}}= \frac{1}{1024}.
+\]</div>
+<p>So what is the probability of getting 10 in a row after 1024 tries? Bearing in mind that each trial is 10 coin flips…</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{10 in a row after 1024 tries}) = 1 - \left(1 - \frac{1}{1024}\right)^{1024} = 0.632 = 63.2\%,
+\]</div>
+<p>and if we were to try two thousand times?</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{10 in a row after 2000 tries}) = 1 - \left(1 - \frac{1}{1024}\right)^{2000} = 0.858 = 85.8\%.
+\]</div>
+<p>In summary, when the probability of success for an individual trial is <span class="math notranslate nohighlight">\(\frac{1}{n}\)</span>, the probability of success after <span class="math notranslate nohighlight">\(m\)</span> tries is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(\text{success after m tries}) = 1 - \left(1 - \frac{1}{n}\right)^m.
+\]</div>
+</section>
 </section>
 <section id="clausius-definition-of-entropy">
-<h2><span class="section-number">5.6. </span>Clausius Definition of Entropy<a class="headerlink" href="#clausius-definition-of-entropy" title="Link to this heading">#</a></h2>
-<p>(To be developed.)</p>
-</section>
-<section id="entropy-changes">
-<h2><span class="section-number">5.7. </span>Entropy Changes<a class="headerlink" href="#entropy-changes" title="Link to this heading">#</a></h2>
-<section id="entropy-change-thermal-conduction">
-<h3>Entropy Change: Thermal Conduction<a class="headerlink" href="#entropy-change-thermal-conduction" title="Link to this heading">#</a></h3>
-<p>Heat <span class="math notranslate nohighlight">\(Q\)</span> flows from a hot reservoir at temperature <span class="math notranslate nohighlight">\(T_h\)</span> to a cold reservoir at temperature <span class="math notranslate nohighlight">\(T_c\)</span>.<br />
-Both reservoirs remain at constant temperature.</p>
-<p>The total entropy change is</p>
+<h2><span class="section-number">5.5. </span>Clausius Definition of Entropy<a class="headerlink" href="#clausius-definition-of-entropy" title="Permalink to this heading">#</a></h2>
+<p>Here we will introduce the macroscopic definition of entropy known as the Clausius definition.</p>
+<p>Consider a system undergoing an isothermal expansion of an ideal gas.</p>
+<p>Add heat dQ and let the system expand so that the temperature T remains constant.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\Delta S = \Delta S_h + \Delta S_c \\
-= -\frac{Q}{T_h} + \frac{Q}{T_c} \\
-= Q\left(\frac{1}{T_c} - \frac{1}{T_h}\right)
+\begin{aligned}
+dU &amp;= 0 \qquad \text{(constant internal energy for isothermal ideal gas)} \\
+dQ &amp;= dW (\text{first law}) \\
+&amp;= p\ dV \\
+&amp;= \frac{RT}{V}dV \\
+\therefore \frac{dV}{V} &amp;= \frac{dQ}{RT}.
+\end{aligned}
 \end{split}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(T_h &gt; T_c\)</span>, the quantity in brackets is positive, so</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S &gt; 0.
-\]</div>
-</section>
-<section id="entropy-change-calorimetric-process">
-<h3>Entropy Change: Calorimetric Process<a class="headerlink" href="#entropy-change-calorimetric-process" title="Link to this heading">#</a></h3>
-<p>Two bodies initially at temperatures <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> are brought into thermal contact and reach a common final temperature <span class="math notranslate nohighlight">\(T_f\)</span>.</p>
-<p>The total entropy change is</p>
+<p>Because gas expansion results in a larger accessible space, <span class="math notranslate nohighlight">\( \frac{dV}{V} \)</span> is a measure of “randomness”:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\Delta S = \Delta S_1 + \Delta S_2 \\
-= \int \frac{\delta Q_1}{T_1} + \int \frac{\delta Q_2}{T_2}
+\begin{aligned}
+\frac{dV}{V} &amp;\propto \frac{dQ}{T} [\text{J / K}] \\
+&amp;= dS \qquad (\text{for an infinitesimal reversible process*}). \\
+\to \Delta S = S_2 - S_1 = \frac{Q}{T} \qquad (\text{reversible isothermal process})
+\end{aligned}
 \end{split}\]</div>
-<p>The temperature cannot be taken outside the integral because it changes during the process.</p>
-<p>For ideal substances with constant specific heat:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = m_1 c_1 \ln\left(\frac{T_f}{T_1}\right) + m_2 c_2 \ln\left(\frac{T_f}{T_2}\right)
-\]</div>
-<p>If <span class="math notranslate nohighlight">\(T_1 &gt; T_f\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{T_f}{T_1}\right) &lt; 0
-\]</div>
-<p>If <span class="math notranslate nohighlight">\(T_2 &lt; T_f\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{T_f}{T_2}\right) &gt; 0
-\]</div>
-<p>It follows that</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S &gt; 0.
-\]</div>
-<div class="example admonition">
-<p class="admonition-title">Example</p>
-<p>Equal masses of water at <span class="math notranslate nohighlight">\(0^\circ\)</span>C and <span class="math notranslate nohighlight">\(100^\circ\)</span>C are combined.</p>
-<p>Final temperature: <span class="math notranslate nohighlight">\(T_f = 50^\circ\)</span>C.</p>
-<p>Convert to Kelvin:</p>
-<div class="math notranslate nohighlight">
-\[
-T_1 = 373\,\text{K}, \quad
-T_2 = 273\,\text{K}, \quad
-T_f = 323\,\text{K}
-\]</div>
-<p>With <span class="math notranslate nohighlight">\(m_1 = m_2 = m\)</span> and <span class="math notranslate nohighlight">\(c_1 = c_2 = c\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S
-= mc \ln\left(\frac{323}{373}\right)
-+ mc \ln\left(\frac{323}{273}\right)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\approx mc (\ln 0.866 + \ln 1.183)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\approx 0.10\, mc
-\]</div>
-<p>Thus,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S &gt; 0.
-\]</div>
-</div>
-</section>
-<section id="entropy-change-free-expansion">
-<h3>Entropy Change: Free Expansion<a class="headerlink" href="#entropy-change-free-expansion" title="Link to this heading">#</a></h3>
-<p>Consider a gas expanding freely from volume <span class="math notranslate nohighlight">\(V_1\)</span> to <span class="math notranslate nohighlight">\(V_2\)</span>.</p>
+<p>*(as this equation is only true for processes performed at thermal equilibrium)</p>
+<p>Consider,</p>
 <ul class="simple">
-<li><p>The system is insulated</p></li>
-<li><p><span class="math notranslate nohighlight">\(Q = 0\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(W = 0\)</span></p></li>
+<li><p>Case 1, <span class="math notranslate nohighlight">\((Q / T)\)</span> is large (<span class="math notranslate nohighlight">\(T\)</span> is small): adding heat to a cold system <span class="math notranslate nohighlight">\(\to\)</span> significant rise in molecular motion.</p></li>
+<li><p>Case 2, <span class="math notranslate nohighlight">\((Q / T)\)</span> is small (<span class="math notranslate nohighlight">\(T\)</span> is large): add heat to a hot system <span class="math notranslate nohighlight">\(\to\)</span> far less noticeable rise in molecular motion.</p></li>
 </ul>
-<p>From the First Law [[REF FIRSTLAW]]:</p>
+<p>Generally, entropy change is related to heat transfer divided by temperature:</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta U = Q - W = 0
+\Delta S = \int^2_1\frac{dQ}{T}
 \]</div>
-<p>For an ideal gas, this implies <span class="math notranslate nohighlight">\(\Delta T = 0\)</span>.</p>
-<p>To calculate the entropy change, we evaluate a reversible path between the same initial and final states:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = \int \frac{\delta Q_{\text{rev}}}{T}
-\]</div>
-<p>For an isothermal reversible expansion:</p>
-<div class="math notranslate nohighlight">
-\[
-Q_{\text{rev}} = \int p\,dV
-\]</div>
-<p>Using <span class="math notranslate nohighlight">\(p = \frac{nRT}{V}\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-Q_{\text{rev}} = \int_{V_1}^{V_2} \frac{nRT}{V}\, dV \\
-= nRT \ln\left(\frac{V_2}{V_1}\right)
-\end{split}\]</div>
-<p>Therefore,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Delta S = \frac{Q_{\text{rev}}}{T} \\
-= nR \ln\left(\frac{V_2}{V_1}\right)
-\end{split}\]</div>
+<ul class="simple">
+<li><p>where <span class="math notranslate nohighlight">\(\Delta S\)</span> is the entropy chane in a reversible process,</p></li>
+<li><p><span class="math notranslate nohighlight">\(dQ\)</span> is an infinitesimal heat flow in to the system,</p></li>
+<li><p>and <span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature.</p></li>
+</ul>
+<p>NB: entropy calculations depend on current system state, not on its past history. So we use <span class="math notranslate nohighlight">\(\Delta S = S_2 - S_1 \)</span> as it is not path dependent.</p>
 <div class="example admonition">
-<p class="admonition-title">Example</p>
-<p>One mole of gas undergoes a free expansion from <span class="math notranslate nohighlight">\(V_1\)</span> to <span class="math notranslate nohighlight">\(2V_1\)</span>.</p>
+<p class="admonition-title">Entropy change in a temperature change</p>
+<p>One kilogram of water at 0°C is heated to 100°C, compute the change in entropy. Assume the specific heat of water is constant at <span class="math notranslate nohighlight">\(c = 4190\)</span> J kg<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span> over this temperature range.</p>
+<p>The entropy change depends only on the initial and final states of the system, whether the process is reversible or irreversible.</p>
+<p>Imagine a reversible process where the temperature is increased in infinitesimal steps dT.</p>
+<p>Using the entropy definition:</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta S = R \ln 2
+dS = dQ_{rev} / T
 \]</div>
+<p>For each infinitesimal step:</p>
+<div class="math notranslate nohighlight">
+\[
+dQ = m c dT
+\]</div>
+<p>Substitute:</p>
+<div class="math notranslate nohighlight">
+\[
+dS = (m c dT) / T
+\]</div>
+<p>Integrate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+ΔS = \int (m c / T) dT \\
+= m c \ln(T_2 / T_1)
+\end{split}\]</div>
 </div>
-</section>
-<section id="connection-to-statistical-entropy">
-<h3>Connection to Statistical Entropy<a class="headerlink" href="#connection-to-statistical-entropy" title="Link to this heading">#</a></h3>
-<p>Recall Boltzmann’s formula:</p>
-<div class="math notranslate nohighlight">
-\[
-S = k_B \ln \Omega
-\]</div>
-<p>If available spatial states scale with volume:</p>
-<div class="math notranslate nohighlight">
-\[
-\Omega \propto \left(\frac{V}{V_{\min}}\right)^N
-\]</div>
-<p>Then</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\Omega_1 = \left(\frac{V_1}{V_{\min}}\right)^N \\
-\Omega_2 = \left(\frac{V_2}{V_{\min}}\right)^N
-\end{split}\]</div>
-<p>Taking the ratio:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\Omega_2}{\Omega_1}
-= \left(\frac{V_2}{V_1}\right)^N
-\]</div>
-<p>Taking the logarithm:</p>
-<div class="math notranslate nohighlight">
-\[
-\ln\left(\frac{\Omega_2}{\Omega_1}\right)
-= N \ln\left(\frac{V_2}{V_1}\right)
-\]</div>
-<p>Therefore,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S
-= k_B \ln \Omega_2 - k_B \ln \Omega_1
-= N k_B \ln\left(\frac{V_2}{V_1}\right)
-\]</div>
-<p>Using <span class="math notranslate nohighlight">\(N k_B = nR\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = nR \ln\left(\frac{V_2}{V_1}\right)
-\]</div>
-<p>Thus the thermodynamic entropy change is recovered directly from the statistical definition.</p>
-</section>
-</section>
-<section id="what-is-the-entropy-change-supercooling-a-liquid">
-<h2><span class="section-number">5.8. </span>What is the entropy change → supercooling a liquid?<a class="headerlink" href="#what-is-the-entropy-change-supercooling-a-liquid" title="Link to this heading">#</a></h2>
-<p>1 kg liquid at <span class="math notranslate nohighlight">\(-10^\circ\mathrm{C}\)</span>  →  1 kg solid at <span class="math notranslate nohighlight">\(-10^\circ\mathrm{C}\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-T = 263 \ \mathrm{K}
-\]</div>
-<p>Latent heat:</p>
-<div class="math notranslate nohighlight">
-\[
-L = 333 \ \mathrm{kJ/kg}
-\]</div>
-<p>Heat released:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+<!-- ### Calculating entropy (thermodynamically)
+
+Can we get the same answer as in {ref}`admon:stat_entropy` by considering the thermodynamic approach?
+
+From the first law (in {numref}`sec:isothermal`), we can immediately set:
+
+$$
+\Delta U = 0, \\
+\therefore Q = W.
+$$
+
+We can substitute $Q_\text{rev}$ for $W$ in {eq}`stateful` to find an expression in terms of work:
+
+$$
+\Delta S = \int \frac{dQ_\text{rev}}{T} = \frac{W}{T}.
+$$
+
+[[ FIG OF INTEGRAL ON ISOTHERM ]]
+
+$$
 \begin{aligned}
-Q &amp;= mL \\
-  &amp;= (1 \ \mathrm{kg})(333 \ \mathrm{kJ/kg}) \\
-  &amp;= 333 \ \mathrm{kJ}
+W &= \int_{V_1}^{V_2} p\ dV \\
+&= \int \frac{nRT}{V}dV \\
+&= nRT \ln\frac{V_2}{V_1} \\
+&= nRT \ln 2 \\
+&= T \Delta S.
+\therefore \Delta S &= nR \ln 2
 \end{aligned}
-\end{split}\]</div>
-<p>This heat is released into the environment.</p>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = \Delta S_{\text{system}} + \Delta S_{\text{environment}}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\Delta S
-= \frac{\Delta Q_{\text{system}}}{T_{\text{system}}}
-+ \frac{\Delta Q_{\text{env}}}{T_{\text{env}}}
-\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S
-&amp;= \frac{-333}{263}
-+ \frac{333}{273} \\
-&amp;= -1.266 + 1.220 \\
-&amp;= -0.046 \ \mathrm{kJ/K}
-\end{aligned}
-\end{split}\]</div>
-<p>This appears to violate the Second Law.</p>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<p>The formula</p>
-<div class="math notranslate nohighlight">
-\[
-S = \int \frac{\delta Q}{T}
-\]</div>
-<p>is valid only for reversible processes.</p>
-<p>Freezing at <span class="math notranslate nohighlight">\(-10^\circ\mathrm{C}\)</span> is irreversible because heat transfer occurs across a finite temperature difference.</p>
-<p>To calculate the entropy change correctly, a reversible path between the same initial and final states must be constructed.</p>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<p>Initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span></p>
-<p>Final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span></p>
-<p>Reversible path:</p>
-<ol class="arabic simple">
-<li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K}\)</span></p></li>
-<li><p>Freeze at <span class="math notranslate nohighlight">\(273 \ \mathrm{K}\)</span></p></li>
-<li><p>Cool solid <span class="math notranslate nohighlight">\(273 \rightarrow 263 \ \mathrm{K}\)</span></p></li>
-</ol>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<section id="heat-liquid-263-273-k">
-<h3>(1) Heat liquid 263 → 273 K<a class="headerlink" href="#heat-liquid-263-273-k" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q &amp;= c_{\text{liq}} m \Delta T \\
-  &amp;= (4.2 \ \mathrm{kJ/kg\,K})(1 \ \mathrm{kg})(10 \ \mathrm{K}) \\
-  &amp;= 42 \ \mathrm{kJ}
-\end{aligned}
-\end{split}\]</div>
-<p>System entropy change:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S_{\text{system}}
-&amp;= \int \frac{\delta Q_{\text{rev}}}{T} \\
-&amp;= cm \int_{T_i}^{T_f} \frac{dT}{T} \\
-&amp;= cm \ln\left(\frac{T_f}{T_i}\right) \\
-&amp;= 4.2 \ln\left(\frac{273}{263}\right) \\
-&amp;= 0.157 \ \mathrm{kJ/K}
-\end{aligned}
-\end{split}\]</div>
-<p>Environment entropy change:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{env}}
-= \frac{-42}{273}
-= -0.154 \ \mathrm{kJ/K}
-\]</div>
-<p>Total for step (1):</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_1
-= 0.157 - 0.154
-= 0.00288 \ \mathrm{kJ/K}
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-</section>
-<section id="freeze-at-273-k">
-<h3>(2) Freeze at 273 K<a class="headerlink" href="#freeze-at-273-k" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[
-Q = mL = 333 \ \mathrm{kJ}
-\]</div>
-<p>System entropy change:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{system}}
-= \frac{-333}{273}
-= -1.220 \ \mathrm{kJ/K}
-\]</div>
-<p>Environment entropy change:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{env}}
-= \frac{+333}{273}
-= +1.220 \ \mathrm{kJ/K}
-\]</div>
-<p>Total for step (2):</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_2 = 0
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-</section>
-<section id="cool-solid-273-263-k">
-<h3>(3) Cool solid 273 → 263 K<a class="headerlink" href="#cool-solid-273-263-k" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q &amp;= c_{\text{ice}} m \Delta T \\
-  &amp;= (2.1 \ \mathrm{kJ/kg\,K})(1)(10) \\
-  &amp;= 21 \ \mathrm{kJ}
-\end{aligned}
-\end{split}\]</div>
-<p>System entropy change:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S_{\text{system}}
-&amp;= cm \ln\left(\frac{263}{273}\right) \\
-&amp;= 2.1 \ln\left(\frac{263}{273}\right) \\
-&amp;= -0.078 \ \mathrm{kJ/K}
-\end{aligned}
-\end{split}\]</div>
-<p>Environment entropy change:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{env}}
-= \frac{+21}{273}
-= 0.077 \ \mathrm{kJ/K}
-\]</div>
-<p>Total for step (3):</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_3
-= -0.00144 \ \mathrm{kJ/K}
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-</section>
-<section id="total-entropy-change">
-<h3>Total entropy change<a class="headerlink" href="#total-entropy-change" title="Link to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S_{\text{total}}
-&amp;= \Delta S_1 + \Delta S_2 + \Delta S_3 \\
-&amp;= 0.00288 + 0 - 0.00144 \\
-&amp;= 0.00144 \ \mathrm{kJ/K}
-\end{aligned}
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-\boxed{\Delta S_{\text{total}} = 0.00144 \ \mathrm{kJ/K} &gt; 0}
-\]</div>
-<p>The Second Law is satisfied.</p>
-</section>
-</section>
-<section id="the-second-law-of-thermodynamics">
-<h2><span class="section-number">5.9. </span>The Second Law of Thermodynamics<a class="headerlink" href="#the-second-law-of-thermodynamics" title="Link to this heading">#</a></h2>
-<p>(JL notes + textbook Section 20.5.)</p>
-</section>
-<section id="second-law">
-<h2><span class="section-number">5.10. </span>Second Law<a class="headerlink" href="#second-law" title="Link to this heading">#</a></h2>
-<p>An isolated system will evolve towards a state of thermal equilibrium.</p>
-<p>The entropy of an isolated system will increase or remain constant with time.</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{isolated}} \ge 0
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<section id="example">
-<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
-<p>Two systems at finite temperatures <span class="math notranslate nohighlight">\(T_H\)</span> and <span class="math notranslate nohighlight">\(T_C\)</span> exchange heat <span class="math notranslate nohighlight">\(Q\)</span>.</p>
-<p>Show that this process does not violate the Second Law.</p>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<p>For a system at constant temperature,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = \int \frac{\delta Q}{T}
-\]</div>
-<p>If <span class="math notranslate nohighlight">\(T\)</span> is constant,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S = \frac{1}{T} \int \delta Q
-= \frac{\Delta Q}{T}
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-<p>The total entropy change is</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{total}}
-= \Delta S_H + \Delta S_C
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{total}}
-= \frac{\Delta Q_H}{T_H}
-+ \frac{\Delta Q_C}{T_C}
-\]</div>
-<p>System <span class="math notranslate nohighlight">\(C\)</span> receives heat <span class="math notranslate nohighlight">\(Q\)</span>, system <span class="math notranslate nohighlight">\(H\)</span> loses heat <span class="math notranslate nohighlight">\(Q\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta Q_H = -Q
-\qquad
-\Delta Q_C = +Q
-\]</div>
-<p>Therefore,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S_{\text{total}}
-&amp;= \frac{-Q}{T_H}
-+ \frac{Q}{T_C} \\
-&amp;= Q\left(\frac{1}{T_C}
-- \frac{1}{T_H}\right)
-\end{aligned}
-\end{split}\]</div>
-<p>Since</p>
-<div class="math notranslate nohighlight">
-\[
-T_H &gt; T_C
-\]</div>
-<p>it follows that</p>
-<div class="math notranslate nohighlight">
-\[
-\left(\frac{1}{T_C}
-- \frac{1}{T_H}\right) &gt; 0
-\]</div>
-<p>Hence,</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{total}} \ge 0
-\]</div>
-<p>The Second Law is satisfied.</p>
-</section>
-</section>
-<section id="entropy-and-probability">
-<h2><span class="section-number">5.11. </span>Entropy and Probability<a class="headerlink" href="#entropy-and-probability" title="Link to this heading">#</a></h2>
+$$
+
+We can get the same change in entropy whether we use  
+S = −k_B ∑ p_i ln p_i  
+or  
+ΔS = ∫ δQ_rev / T  
+as the definitions. -->
+<p>–&gt;</p>
 </section>
 </section>
 
@@ -1075,12 +1334,12 @@ T_H &gt; T_C
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../ch4-first_law_of_thermodynamics/03_solutions.html"
+       href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.12. </span>Answers</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>The First Law of Thermodynamics</p>
       </div>
     </a>
 </div>
@@ -1099,41 +1358,34 @@ T_H &gt; T_C
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-probability-and-statistics">5.1. Review: Probability and Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.3. Probability: Introduction</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discrete-distributions">Discrete Distributions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continuous-distributions">Continuous distributions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#measures-of-central-tendencies">Measures of Central Tendencies</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variance">Variance</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-under-a-linear-transformation">Expectation under a linear transformation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variance-under-a-linear-transformation">Variance under a linear transformation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.2. Directions of Thermodynamic Processes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gibbs-and-boltzmann-entropy">5.3. Gibbs and Boltzmann Entropy</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surprises-and-information">Surprises and information</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#independent-variables-in-probability">Independent Variables in Probability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-binomial-distribution">The Binomial Distribution</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-of-the-binomial-distribution">Properties of the Binomial Distribution</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.4. Probability: Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.5. Probability Examples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.6. Clausius Definition of Entropy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.7. Entropy Changes</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-thermal-conduction">Entropy Change: Thermal Conduction</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-calorimetric-process">Entropy Change: Calorimetric Process</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-free-expansion">Entropy Change: Free Expansion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-statistical-entropy">Connection to Statistical Entropy</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-entropy-change-supercooling-a-liquid">5.8. What is the entropy change → supercooling a liquid?</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#heat-liquid-263-273-k">(1) Heat liquid 263 → 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#freeze-at-273-k">(2) Freeze at 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cool-solid-273-263-k">(3) Cool solid 273 → 263 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-entropy-change">Total entropy change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-examples">5.4. Probability Examples</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-birthday-paradox">The Birthday Paradox</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-a-particular-pokemon">Finding a Particular Pokémon</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.9. The Second Law of Thermodynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-law">5.10. Second Law</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.11. Entropy and Probability</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.5. Clausius Definition of Entropy</a></li>
 </ul>
   </nav></div>
 
@@ -1158,7 +1410,7 @@ By Dr. Samer Kurdi, Dr. Jonathan Leach
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2022.
       <br/>
     
   </p>
