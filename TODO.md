@@ -20,8 +20,6 @@
 [ ] binomial distribution in 5.3
 [ ] third law from JL's notes
 [ ] cut 5.9 and 5.10 (coin toss and back to temperature)
-[ ] need to add example 20.6 properly to clausius section
-[ ] haven't included 2nd entropy example in clausius pdf
 
 [O] - DAFYDD
 [O] change all F_x to F in figures
