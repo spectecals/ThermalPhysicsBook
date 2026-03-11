@@ -20,6 +20,17 @@
 [ ] binomial distribution in 5.3
 [ ] third law from JL's notes
 [ ] cut 5.9 and 5.10 (coin toss and back to temperature)
+[ ] need to add example 20.6 properly to clausius section
+[ ] haven't included 2nd entropy example in clausius pdf
+[ ] copy key concept from end of clausius pdf
+[ ] "s can approach it if temperature and pressure differences are made very small." - means you must maintain thermal equilibrium, tell students that. can then reference here in calusius 5.5
+[ ] end of clausius, show equivalence with statistical efinition in "entropy change free expansion / conenction to stat entropy"
+[ ] move second law before superocoled
+[ ] remove back to temperature section
+[ ] entropy change pdf covers thermal conduction calometric process
+[ ] move definitions in module 6.5 (second law) to 5.secondlaw, and then reference back to module 5 in module 6
+[ ] 4/5 qns on entropy from both books
+[ ] Q&As ARE FIRST PRIORITY!
 
 [O] - DAFYDD
 [O] change all F_x to F in figures
