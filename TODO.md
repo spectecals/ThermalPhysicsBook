@@ -3,34 +3,30 @@
 [X] mix probability and entropy, 2nd law
 [X] move 2nd law into ch5 from ch6, including clausius
 [X] gibbs and clausius missing from ch5
+[X] fix ch5.2, get figs for 5.2 (probability of coins and circle with particles inside)
+[X] do not need example 20.11
+[X] binomial distribution in 5.3
+[X] third law from JL's notes
+[X] cut 5.9 and 5.10 (coin toss and back to temperature)
+[X] move second law before superocoled
+[X] remove back to temperature section
 
 [/] - GET SAMER'S REVIEW
-[/] fig 4.5 should be W = - U, (x1 - x2) not (x2 - x1) - NOTE: this only makes sense after defining to/by the system, i think it's fine as it is for now?
-[/] "potential energy function"  work = - delta P, p.e.f important to conservation of energy , applies for conservative forces -- cons energy must satisfy potential energy function, nonconservative functions dont satisfy it which is why you need internal energy -- NOTE: added "A force is conservative if the work it does is **path independent** - i.e., by lifting a book and waving it around, work is done by offsetting gravity. The amount of work depends only on the start and endpoints of the potential energy function $V$ of the conservative force, such that $\Delta V = -W$. "
-[/] i moved dafydd's discrete/continuous/mean/variance sections into review: probability. not sure what else needs to be there -- haven't ported over independent variables yet
-[/] repeat of probability review intended or not? 5.1 is probability review, 5.4 wanted probability intro before exampels of pokemon, birthdays?
+[/] CANT FIND: include jonathan leach's example (gibbs/clausius ch5 i think)
+[/] IS THIS FIXED? fix per mole and molar heat capacity section
+[/] issue with commented out block at end of clausius entropy! we haven't define the S = qrev/t prior to here. this also is required for explaining why "\Delta S &= S_2 - S_1 = \frac{Q}{T} \qquad (\text{reversible isothermal process})"
 
 [ ] - TODO
-[ ] include jonathan leach's example (gibbs/clausius ch5 i think)
----- TODO BY 04/03 ----
-[ ] fix per mole and molar heat capacity section
-[ ] fix ch5.2, get figs for 5.2 (probability of coins and circle with particles inside)
----- TODO BY 04/03 ----
-[ ] do not need example 20.11
-[ ] binomial distribution in 5.3
-[ ] third law from JL's notes
-[ ] cut 5.9 and 5.10 (coin toss and back to temperature)
+[ ] Q&As ARE FIRST PRIORITY!
+[ ] 4/5 qns on entropy from both books
+
 [ ] need to add example 20.6 properly to clausius section
-[ ] haven't included 2nd entropy example in clausius pdf
 [ ] copy key concept from end of clausius pdf
 [ ] "s can approach it if temperature and pressure differences are made very small." - means you must maintain thermal equilibrium, tell students that. can then reference here in calusius 5.5
 [ ] end of clausius, show equivalence with statistical efinition in "entropy change free expansion / conenction to stat entropy"
-[ ] move second law before superocoled
-[ ] remove back to temperature section
 [ ] entropy change pdf covers thermal conduction calometric process
 [ ] move definitions in module 6.5 (second law) to 5.secondlaw, and then reference back to module 5 in module 6
-[ ] 4/5 qns on entropy from both books
-[ ] Q&As ARE FIRST PRIORITY!
+[ ] check for any [[]]
 
 [O] - DAFYDD
 [O] change all F_x to F in figures
