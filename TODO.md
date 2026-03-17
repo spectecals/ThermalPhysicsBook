@@ -2,6 +2,7 @@
 [-] "s can approach it if temperature and pressure differences are made very small." - means you must maintain thermal equilibrium, tell students that. can then reference here in calusius 5.5
 
 [ ] - TODO
+[ ] - supercooled logic doesnt make sense, particularly the "represents the phase change between water and ice" bit
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
@@ -9,6 +10,7 @@
 [O] - [[ FIG AS ABOVE, BUT USE T_1, T_2 INSTEAD OF T_H AND T_C, CONVERTS INTO A SINGULAR BODY LABELLED T_f]] -- see Module5_stefan/4.png
 [O] - [[ FIG OF ALLOWED HEAT FLOW ONLY FROM HOT->COLD NOT COLD-> HOLD, LABEL THE CASES: (1) AND (2)]] -- see Module5_stefan/5.pdf
 [O] - [[ FIG OF 1KG 20C WATER -> 1KG ICE ]]
+[O] - [[ FIGS FOR END OF THIRD LAW ]]
 
 [/] - GET SAMER'S REVIEW
 [/] CANT FIND: include jonathan leach's example (gibbs/clausius ch5 i think)
