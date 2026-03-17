@@ -29,5 +29,5 @@ chapters:
   # - file: ch5-entropy_and_second_law/02_questions
   # - file: ch5-entropy_and_second_law/03_solutions
 
-# - file: ch6-heat_engines/01_Heat_engines
+- file: ch6-heat_engines/01_Heat_engines
 # - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
