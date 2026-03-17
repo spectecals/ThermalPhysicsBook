@@ -326,7 +326,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy">Statistical form of entropy</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.3. Probability: Introduction</a><ul class="visible nav section-nav flex-column">
@@ -350,7 +350,20 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-a-particular-pokemon">Finding a Particular Pokémon</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.5. Clausius Definition of Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-entropy">5.5. Clausius Entropy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamical-form-of-entropy">Thermodynamical form of entropy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.6. Entropy Changes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-conduction">Thermal Conduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calorimetric-processes">Calorimetric Processes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.7. The Second Law of Thermodynamics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intuitive-picture">Intuitive Picture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forms-of-the-second-law">Forms of the Second Law</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -369,8 +382,8 @@ document.write(`
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation:</p>
 <ul class="simple">
-<li><p>Concepts in Thermal Physics: Chapter 13 (13.1–13.3, 13.5), Chapter 14 (14.1–14.2, 14.5)</p></li>
-<li><p>University Physics with Modern Physics 15th edition: Chapter 20</p></li>
+<li><p>Concepts in Thermal Physics: Chapter 13 (13.1–13.3, 13.5), Chapter 14 (14.1–14.2, 14.5), Chapter 18</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapter 20 (20.1, 20.5, 20.7-20.8)</p></li>
 <li><p>Introductory Statistics 2e: Chapter 1.1, 2.1 - 2.8, 3.1 - 3.3</p></li>
 <li><p>Entropy video: <a class="reference external" href="https://www.youtube.com/watch?v=uQSoaiubuA0">https://www.youtube.com/watch?v=uQSoaiubuA0</a></p></li>
 </ul>
@@ -387,7 +400,7 @@ document.write(`
 <section id="directions-of-thermodynamic-processes">
 <h2><span class="section-number">5.1. </span>Directions of Thermodynamic Processes<a class="headerlink" href="#directions-of-thermodynamic-processes" title="Permalink to this heading">#</a></h2>
 <p>Thermodynamic processes in nature are <strong>irreversible</strong>, meaning they occur spontaneously in one direction only. Examples include heat flowing from hot to cold, the free expansion of a gas, and the conversion of mechanical energy into heat by friction. These processes define a preferred direction in nature, formalized by the <strong>second law of thermodynamics</strong>.</p>
-<p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small.</p>
+<p>By contrast, <strong>reversible processes</strong> are idealized limits in which the system remains infinitesimally close to thermodynamic equilibrium at all times. Such processes can be reversed by an infinitesimal change in external conditions, for example when heat flows between bodies with nearly equal temperatures. Perfect reversibility cannot be achieved in practice, but real processes can approach it if temperature and pressure differences are made very small. This will become increasingly relevant when dealing with entropy in reversible processes.</p>
 <p>Irreversible processes are inherently nonequilibrium processes and cannot be made to run backward by small changes in conditions. Their direction is closely linked to increasing disorder: systems naturally evolve from more ordered states to more random ones. Mechanical energy represents organized motion, while heat corresponds to random molecular motion, so converting work into heat increases disorder and reinforces irreversibility.</p>
 <figure class="align-default" id="ice-in-metal-box">
 <a class="reference internal image-reference" href="../_images/Reversible_Processes.png"><img alt="../_images/Reversible_Processes.png" src="../_images/Reversible_Processes.png" style="width: 80%;" /></a>
@@ -543,8 +556,8 @@ p_i &amp;= \frac{1}{\Omega} \\
 </li>
 </ul>
 </section>
-<section id="statistical-form-of-entropy-in-thermodynamics">
-<h3>Statistical form of entropy in thermodynamics<a class="headerlink" href="#statistical-form-of-entropy-in-thermodynamics" title="Permalink to this heading">#</a></h3>
+<section id="statistical-form-of-entropy">
+<span id="sec-stat-therm"></span><h3>Statistical form of entropy<a class="headerlink" href="#statistical-form-of-entropy" title="Permalink to this heading">#</a></h3>
 <p>Consider an ideal gas containing Avagadro’s number of molecules in two states (A) and (B):</p>
 <ul class="simple">
 <li><p>(A) has the gas being uniformly distributed,</p></li>
@@ -569,15 +582,6 @@ p_i &amp;= \frac{1}{\Omega} \\
 \Omega_A = \binom{10^{24}}{10^{22}} &gt; \binom{10^{23}}{10^{22}} = \Omega_B \ \text{(using binomial for indistinguishable particles)}.
 \]</div>
 <p>This is where entropy is considered a measure of disorder, as state (A) is more disordered than state (B). However we can see that the underlying reason is that (A) is more probable as there are more combinations of microscopic states that describe its macrostate.</p>
-<!-- (admon:stat_entropy)=
-````{admonition} Example
-:class: example
-
-Consider the isothermal expansion of a gas from $ V_1 \to V_2 = 2 V_1 $ through an isothermal process. What is the entropy change in this process?
-<!-- 
-```{figure}
-[[FIG OF REVERSIBLE EXPANSION]]
-``` -->
 <p>Let’s start by denoting the number of molecules as <span class="math notranslate nohighlight">\(N\)</span> where each molecule has <span class="math notranslate nohighlight">\(X\)</span> different states it can occupy. We also know that the initial and final volumes are <span class="math notranslate nohighlight">\(V_1\)</span> and <span class="math notranslate nohighlight">\(2V_1\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1193,109 +1197,300 @@ P(\text{success after m tries}) = 1 - \left(1 - \frac{1}{n}\right)^m.
 \]</div>
 </section>
 </section>
-<section id="clausius-definition-of-entropy">
-<h2><span class="section-number">5.5. </span>Clausius Definition of Entropy<a class="headerlink" href="#clausius-definition-of-entropy" title="Permalink to this heading">#</a></h2>
+<section id="clausius-entropy">
+<h2><span class="section-number">5.5. </span>Clausius Entropy<a class="headerlink" href="#clausius-entropy" title="Permalink to this heading">#</a></h2>
 <p>Here we will introduce the macroscopic definition of entropy known as the Clausius definition.</p>
-<p>Consider a system undergoing an isothermal expansion of an ideal gas.</p>
-<p>Add heat dQ and let the system expand so that the temperature T remains constant.</p>
+<p>Consider a system undergoing expansion of an ideal gas.</p>
+<p>Add infinitesimal heat dQ and let the system expand so that the temperature T remains constant (isothermal process).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-dU &amp;= 0 \qquad \text{(constant internal energy for isothermal ideal gas)} \\
-dQ &amp;= dW \qquad \text{(first law)} \\
-&amp;= p\ dV \\
-&amp;= \frac{RT}{V}dV \\
-\therefore \frac{dV}{V} &amp;= \frac{dQ}{RT}.
+\text{d}U &amp;= 0 \qquad \text{(isothermal)} \\
+\therefore \text{d}Q &amp;= \text{d}W \qquad \text{(first law)} \\
+&amp;= p\ \text{d}V \\
+&amp;= \frac{RT}{V}\text{d}V \\
+\to \frac{\text{d}Q}{RT} &amp;= \frac{\text{d}V}{V}.
 \end{aligned}
 \end{split}\]</div>
-<p>Because gas expansion results in a larger accessible space, <span class="math notranslate nohighlight">\( \frac{dV}{V} \)</span> is a measure of “randomness”:</p>
+<p>Because gas expansion results in a larger accessible space, <span class="math notranslate nohighlight">\( \frac{dV}{V} \)</span> is related to the rate of possible positions, and therefore a measure of “randomness”:</p>
+<!-- For an infinitesimal reversible process* (a process conducted entirely under thermal equilibrium): -->
 <div class="math notranslate nohighlight">
 \[\begin{split}
+\strut
 \begin{aligned}
-\frac{dV}{V} &amp;\propto \frac{dQ}{T} [\text{J / K}] \\
-&amp;= dS \qquad (\text{for an infinitesimal reversible process*}). \\
-\to \Delta S &amp;= S_2 - S_1 = \frac{Q}{T} \qquad (\text{reversible isothermal process})
+\frac{\text{d}V}{V} &amp;\propto \frac{\text{d}Q}{T} \ \ [\text{J / K}] \\
+&amp;= \text{d}S. \\
+\to \Delta S &amp;= S_2 - S_1 = \frac{Q}{T},
 \end{aligned}
 \end{split}\]</div>
-<p>*(as this equation is only true for processes performed at thermal equilibrium)</p>
+<p>where the final equality only holds for an infinitesimal reversible process, else <span class="math notranslate nohighlight">\( \Delta S &gt; \frac{Q}{T} \)</span>.</p>
 <p>Consider,</p>
 <ul class="simple">
-<li><p>Case 1, <span class="math notranslate nohighlight">\((Q / T)\)</span> is large (<span class="math notranslate nohighlight">\(T\)</span> is small): adding heat to a cold system <span class="math notranslate nohighlight">\(\to\)</span> significant rise in molecular motion.</p></li>
-<li><p>Case 2, <span class="math notranslate nohighlight">\((Q / T)\)</span> is small (<span class="math notranslate nohighlight">\(T\)</span> is large): add heat to a hot system <span class="math notranslate nohighlight">\(\to\)</span> far less noticeable rise in molecular motion.</p></li>
+<li><p>Case 1, <span class="math notranslate nohighlight">\([Q / T]\)</span> is large (<span class="math notranslate nohighlight">\(T\)</span> is small): adding heat to a cold system <span class="math notranslate nohighlight">\(\to\)</span> significant rise in molecular motion.</p></li>
+<li><p>Case 2, <span class="math notranslate nohighlight">\([Q / T]\)</span> is small (<span class="math notranslate nohighlight">\(T\)</span> is large): add heat to a hot system <span class="math notranslate nohighlight">\(\to\)</span> far less noticeable rise in molecular motion.</p></li>
 </ul>
-<p>Generally, entropy change is related to heat transfer divided by temperature:</p>
+<p>Generally, entropy change is related to heat transfer in proportion to temperature:</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta S = \int^2_1\frac{dQ}{T}
 \]</div>
 <ul class="simple">
-<li><p>where <span class="math notranslate nohighlight">\(\Delta S\)</span> is the entropy chane in a reversible process,</p></li>
+<li><p>where <span class="math notranslate nohighlight">\(\Delta S\)</span> is the entropy change in a reversible process,</p></li>
 <li><p><span class="math notranslate nohighlight">\(dQ\)</span> is an infinitesimal heat flow in to the system,</p></li>
 <li><p>and <span class="math notranslate nohighlight">\(T\)</span> is the absolute temperature.</p></li>
 </ul>
 <p>NB: entropy calculations depend on current system state, not on its past history. So we use <span class="math notranslate nohighlight">\(\Delta S = S_2 - S_1 \)</span> as it is not path dependent.</p>
 <div class="example admonition">
 <p class="admonition-title">Entropy change in a temperature change</p>
-<p>One kilogram of water at 0°C is heated to 100°C, compute the change in entropy. Assume the specific heat of water is constant at <span class="math notranslate nohighlight">\(c = 4190\)</span> J kg<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span> over this temperature range.</p>
+<p>10 kg of water at 0°C is heated to 100°C, compute the change in entropy. Assume the specific heat of water is constant with <span class="math notranslate nohighlight">\(c = 4190\)</span> J kg<span class="math notranslate nohighlight">\(^{-1}\)</span> K<span class="math notranslate nohighlight">\(^{-1}\)</span> over this temperature range.</p>
 <p>The entropy change depends only on the initial and final states of the system, whether the process is reversible or irreversible.</p>
-<p>Imagine a reversible process where the temperature is increased in infinitesimal steps dT.</p>
-<p>Using the entropy definition:</p>
-<div class="math notranslate nohighlight">
-\[
-dS = dQ_{rev} / T
-\]</div>
-<p>For each infinitesimal step:</p>
-<div class="math notranslate nohighlight">
-\[
-dQ = m c dT
-\]</div>
-<p>Substitute:</p>
-<div class="math notranslate nohighlight">
-\[
-dS = (m c dT) / T
-\]</div>
-<p>Integrate:</p>
+<p>Imagine a reversible process where the temperature is increased in infinitesimal steps d<span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Using <span class="math notranslate nohighlight">\( dS = \text{d}Q_\text{rev} / T \)</span>, each infinitesimal (reversible) step has:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-ΔS = \int (m c / T) dT \\
-= m c \ln(T_2 / T_1)
-\end{split}\]</div>
-</div>
-<!-- ### Calculating entropy (thermodynamically)
-
-Can we get the same answer as in {ref}`admon:stat_entropy` by considering the thermodynamic approach?
-
-From the first law (in {numref}`sec:isothermal`), we can immediately set:
-
-$$
-\Delta U = 0, \\
-\therefore Q = W.
-$$
-
-We can substitute $Q_\text{rev}$ for $W$ in {eq}`stateful` to find an expression in terms of work:
-
-$$
-\Delta S = \int \frac{dQ_\text{rev}}{T} = \frac{W}{T}.
-$$
-
-[[ FIG OF INTEGRAL ON ISOTHERM ]]
-
-$$
 \begin{aligned}
-W &= \int_{V_1}^{V_2} p\ dV \\
-&= \int \frac{nRT}{V}dV \\
-&= nRT \ln\frac{V_2}{V_1} \\
-&= nRT \ln 2 \\
-&= T \Delta S.
-\therefore \Delta S &= nR \ln 2
+\text{d}Q &amp;= m c \text{d}T \\
+\text{d}S &amp;= \frac{m c \text{d}T}{T} \\
+ΔS &amp;= \int_{T_1}^{T_2} \frac{m c \text{d}T}{T} \\
+&amp;= m c \ln(T_2 / T_1)\\
+&amp;= 10 \times 4190 \times \ln\frac{373}{273} \\
+&amp;= 1.31 \cdot 10^4\ \text{[J / K]}.
 \end{aligned}
+\end{split}\]</div>
+<p>This problem may be attempted without using an integral, i.e. through <span class="math notranslate nohighlight">\( \Delta S = Q / T \)</span>, but this would be <em>wrong</em> as this formula requires that the process be <em>isothermal</em>. The <em>only</em> way to find the change in entropy due to a change in temperature involves evaluating an integral.</p>
+</div>
+<section id="thermodynamical-form-of-entropy">
+<h3>Thermodynamical form of entropy<a class="headerlink" href="#thermodynamical-form-of-entropy" title="Permalink to this heading">#</a></h3>
+<p>Let us see what happens when we tackle the problem encountered in <a class="reference internal" href="#sec-stat-therm"><span class="std std-ref">Statistical form of entropy</span></a> with the Clausius definition of entropy.</p>
+<p>Consider a gas in an insulated system expanding freely from volume <span class="math notranslate nohighlight">\(V_1\)</span> to <span class="math notranslate nohighlight">\(V_2\)</span>.</p>
+<p>As the system is insulated,</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta U = Q - W = 0
+\]</div>
+<p>For an ideal gas, this implies <span class="math notranslate nohighlight">\(\Delta T = 0\)</span>.</p>
+<p>To calculate the entropy change, we evaluate a reversible path between the same initial and final states:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S = \int \frac{\delta Q_{\text{rev}}}{T}
+\]</div>
+<p>For an isothermal reversible expansion:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{\text{rev}} = \int p\,dV
+\]</div>
+<p>Using <span class="math notranslate nohighlight">\(p = \frac{nRT}{V}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+Q_{\text{rev}} &amp;= \int p\ dV \\
+&amp;= \int_{V_1}^{V_2} \frac{nRT}{V}dV \\
+&amp;= nRT \ln\frac{V_2}{V_1} \\
+&amp;= nRT \ln 2 \\
+&amp;= T \Delta S. \\
+\therefore \Delta S &amp;= nR \ln 2
+\end{aligned}
+\end{split}\]</div>
+<p>I.e., we get the same change in entropy regardless of whether we use</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+S &amp;= −k_B \Sigma p_i \ln p_i   \\
+&amp;\text{or}   \\
+\Delta S &amp;= \int \text{d}Q_\text{rev} / T
+\end{aligned}
+\end{split}\]</div>
+<p>as the definitions.</p>
+</section>
+</section>
+<section id="entropy-changes">
+<h2><span class="section-number">5.6. </span>Entropy Changes<a class="headerlink" href="#entropy-changes" title="Permalink to this heading">#</a></h2>
+<section id="thermal-conduction">
+<h3>Thermal Conduction<a class="headerlink" href="#thermal-conduction" title="Permalink to this heading">#</a></h3>
+<p>Heat <span class="math notranslate nohighlight">\(Q\)</span> flows from a hot reservoir at temperature <span class="math notranslate nohighlight">\(T_h\)</span> to a cold reservoir at temperature <span class="math notranslate nohighlight">\(T_c\)</span>.<br />
+Both reservoirs remain at constant temperature.</p>
+<!-- [[FIG OF HOT->Q-> COLD]] -->
+<p>The total entropy change is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Delta S = \Delta S_h + \Delta S_c \\
+= -\frac{Q}{T_h} + \frac{Q}{T_c} \\
+= Q\left(\frac{1}{T_c} - \frac{1}{T_h}\right)
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(T_h &gt; T_c\)</span>, the quantity in brackets is positive, so</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S &gt; 0.
+\]</div>
+</section>
+<section id="calorimetric-processes">
+<h3>Calorimetric Processes<a class="headerlink" href="#calorimetric-processes" title="Permalink to this heading">#</a></h3>
+<p>Two bodies initially at temperatures <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> are brought into thermal contact and reach a common final temperature <span class="math notranslate nohighlight">\(T_f\)</span>.</p>
+<!-- [[ FIG AS ABOVE, BUT USE T_1, T_2 INSTEAD OF T_H AND T_C, CONVERTS INTO A SINGULAR BODY LABELLED T_f]] -->
+<p>The total entropy change is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Delta S = \Delta S_1 + \Delta S_2 \\
+= \int_1^f \frac{\delta Q_1}{T_1} + \int_2^f \frac{\delta Q_2}{T_2}
+\end{split}\]</div>
+<p>The temperature cannot be taken outside the integral because it changes during the process.</p>
+<p>For ideal substances with constant specific heat:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S = m_1 c_1 \ln\left(\frac{T_f}{T_1}\right) + m_2 c_2 \ln\left(\frac{T_f}{T_2}\right).
+\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(T &gt; T_f\)</span>, then <span class="math notranslate nohighlight">\( \ln\left(\frac{T_f}{T}\right) &lt; 0 \)</span>,</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(T &lt; T_f\)</span>, then <span class="math notranslate nohighlight">\( \ln\left(\frac{T_f}{T}\right) &gt; 0 \)</span>.</p></li>
+</ul>
+<p>It follows that</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S &gt; 0.
+\]</div>
+<div class="example admonition">
+<p class="admonition-title">Example</p>
+<p>Equal masses of water at <span class="math notranslate nohighlight">\(0^\circ\)</span>C and <span class="math notranslate nohighlight">\(100^\circ\)</span>C are combined.</p>
+<p>Final temperature: <span class="math notranslate nohighlight">\(T_f = 50^\circ\)</span>C.</p>
+<p>Convert to Kelvin:</p>
+<div class="math notranslate nohighlight">
+\[
+T_1 = 373\,\text{K}, \quad
+T_2 = 273\,\text{K}, \quad
+T_f = 323\,\text{K}
+\]</div>
+<p>With <span class="math notranslate nohighlight">\(m_1 = m_2 = m\)</span> and <span class="math notranslate nohighlight">\(c_1 = c_2 = c\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S
+= mc \ln\left(\frac{323}{373}\right)
++ mc \ln\left(\frac{323}{273}\right)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\approx mc (\ln 0.866 + \ln 1.183)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\approx 0.10\, mc
+\]</div>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta S &gt; 0.
+\]</div>
+<p>This shows that heat flow from higher to lower temperature is a natural process, and that it is irreversible. The entropy of the higher temperature object decreases, the colder object increases, and the net total must always increase.</p>
+</div>
+<!-- ### Connection to Statistical Entropy
+
+Recall Boltzmann’s formula:
+
+$$
+S = k_B \ln \Omega
 $$
 
-We can get the same change in entropy whether we use  
-S = −k_B ∑ p_i ln p_i  
-or  
-ΔS = ∫ δQ_rev / T  
-as the definitions. -->
+If available spatial states scale with volume:
+
+$$
+\Omega \propto \left(\frac{V}{V_{\min}}\right)^N
+$$
+
+Then
+
+$$
+\Omega_1 = \left(\frac{V_1}{V_{\min}}\right)^N \\
+\Omega_2 = \left(\frac{V_2}{V_{\min}}\right)^N
+$$
+
+Taking the ratio:
+
+$$
+\frac{\Omega_2}{\Omega_1}
+= \left(\frac{V_2}{V_1}\right)^N
+$$
+
+Taking the logarithm:
+
+$$
+\ln\left(\frac{\Omega_2}{\Omega_1}\right)
+= N \ln\left(\frac{V_2}{V_1}\right)
+$$
+
+Therefore,
+
+$$
+\Delta S
+= k_B \ln \Omega_2 - k_B \ln \Omega_1
+= N k_B \ln\left(\frac{V_2}{V_1}\right)
+$$
+
+Using $N k_B = nR$:
+
+$$
+\Delta S = nR \ln\left(\frac{V_2}{V_1}\right)
+$$
+
+Thus the thermodynamic entropy change is recovered directly from the statistical definition. --></section>
+</section>
+<section id="the-second-law-of-thermodynamics">
+<h2><span class="section-number">5.7. </span>The Second Law of Thermodynamics<a class="headerlink" href="#the-second-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
+<p>In a natural <strong>irreversible</strong> process, like heat flow from a hot to cold object, we see that the net entropy increases. In a reversible process (not a typical process) the increase of entropy in the cold object and decrease of entropy of the hot object are equal. Therefore the net entropy is zero. We can then define thr “entropy statement” of the 2nd law of thermodynamics:</p>
+<div class="definition admonition">
+<p class="admonition-title">2nd Law of Thermodynamics</p>
+<p>No process is possible in which the total entropy decreases, when all systems that take part in the process are included.</p>
+<div class="math notranslate nohighlight">
+\[ \Delta S_\text{total} \geq 0 \]</div>
+<p>The entropy of an isolated system will increase of remain constant over time.</p>
+</div>
+<section id="intuitive-picture">
+<h3>Intuitive Picture<a class="headerlink" href="#intuitive-picture" title="Permalink to this heading">#</a></h3>
+<p>The second law of thermodynamics is that the entropy of a closed system will increase or remain constant with time.</p>
+<div class="math notranslate nohighlight">
+\[ \Delta S_\text{closed} \geq 0 \]</div>
+<p>This means that heat always flows from systems with higher temperatures to ones with lower temperatures.</p>
+<!-- [[ FIG OF ALLOWED HEAT FLOW ONLY FROM HOT->COLD NOT COLD-> HOLD, LABEL THE CASES: (1) AND (2)]] -->
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(T_1 = 100^\circ\)</span> C</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_2 = 0^\circ\)</span> C</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>System 1 <span class="math notranslate nohighlight">\( \to Q \to \)</span> System 2
+$<span class="math notranslate nohighlight">\(
+ \begin{aligned}
+ \Delta S &amp;= \Delta S_1 + \Delta S_2 \\
+ &amp;= \frac{-Q}{T_1} + \frac{Q}{T_2} \\
+ &amp;= Q\left(\frac{1}{T_2} - \frac{1}{T_1}\right) \\
+ &amp;&gt; 0 \\quad (T_1 &gt; T_2) \\
+ \to &amp; \text{allowed}.
+ \end{aligned}
+ \)</span>$</p></li>
+<li><p>System 2 <span class="math notranslate nohighlight">\( \to Q \to \)</span> System 1
+$<span class="math notranslate nohighlight">\(
+ \begin{aligned}
+ \Delta S &amp;= \Delta S_1 + \Delta S_2 \\
+ &amp;= \frac{Q}{T_1} - \frac{Q}{T_2} \\
+ &amp;= Q\left(\frac{1}{T_1} - \frac{1}{T_2}\right) \\
+ &amp;&lt; 0 \\quad (T_1 &gt; T_2) \\
+ \to &amp; \text{not allowed}.
+ \end{aligned}
+ \)</span>$</p></li>
+</ol>
+<p>Recall distribution of particles in a convection process; entropy increases over time, even though at some steps have a local decrease in entropy. Therefore the increase of entropy in irreversible processes measures the increase of randomness of the universe.</p>
+</section>
+<section id="forms-of-the-second-law">
+<h3>Forms of the Second Law<a class="headerlink" href="#forms-of-the-second-law" title="Permalink to this heading">#</a></h3>
+<div class="definition admonition">
+<p class="admonition-title">Clausius Statement</p>
+<p>No process is possible whose sole result is the transfer of heat from a colder to a hotter body.</p>
+</div>
+<p>The Clausius statement describes normal, irreversible processes as heat is always able to flow from a hot to cold body and the reverse process is never able in isolation. This process of heat transfer is also related to the increase of the entropy of the system, connecting it to the entropy statement of the second alw.</p>
+<p>The second law can also be stated in a third way concering how easy it is to change between forms of energy. For example, the ease of conversion of work into heat give the Kelvin statement:</p>
+<div class="definition admonition">
+<p class="admonition-title">Kelvin Statement</p>
+<p>No process is possible whose sole result is the complete conversion of heat into work.</p>
+</div>
+<p>The Kelvin statement makes clear that therer are limits to the availability of energy and the ways it can be converted. It also implies that it is impossible to build a 100% thermally efficient heat engine. We will explore this in Module 6, and the equivalency of the Kelvin and Clausius statements.</p>
+</section>
 </section>
 </section>
 
@@ -1357,7 +1552,7 @@ as the definitions. -->
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#directions-of-thermodynamic-processes">5.1. Directions of Thermodynamic Processes</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-and-probability">5.2. Entropy and Probability</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-thermodynamic-entropy-statistically">Connection to thermodynamic entropy (statistically)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy-in-thermodynamics">Statistical form of entropy in thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-form-of-entropy">Statistical form of entropy</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-introduction">5.3. Probability: Introduction</a><ul class="visible nav section-nav flex-column">
@@ -1381,7 +1576,20 @@ as the definitions. -->
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#finding-a-particular-pokemon">Finding a Particular Pokémon</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-definition-of-entropy">5.5. Clausius Definition of Entropy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clausius-entropy">5.5. Clausius Entropy</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamical-form-of-entropy">Thermodynamical form of entropy</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-changes">5.6. Entropy Changes</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermal-conduction">Thermal Conduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calorimetric-processes">Calorimetric Processes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-second-law-of-thermodynamics">5.7. The Second Law of Thermodynamics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intuitive-picture">Intuitive Picture</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forms-of-the-second-law">Forms of the Second Law</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
