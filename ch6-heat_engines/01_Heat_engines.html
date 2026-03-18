@@ -324,8 +324,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-thermal-effiency-of-cyclic-processes">6.1. Review: Thermal effiency of cyclic processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-heat-engines">6.1. Introduction to heat engines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-cycle">6.2. Carnot cycle</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-fridge">Carnot fridge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-most-efficient-engine">What is the most efficient engine?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency-of-carnot-cycle">Efficiency of Carnot cycle</a></li>
 </ul>
 </li>
@@ -359,9 +361,10 @@ document.write(`
 <div class="reading admonition">
 <p class="admonition-title">Relevant readings and preparation</p>
 <ul class="simple">
-<li><p>Concept in Thermal Physics: Chapter 13: 13.1-13.3, 13.5, Chapter 14, 14.1-14.2, 14.5</p></li>
-<li><p>University Physics with Modern Physics 15th edition: Chapter 20.</p></li>
-<li><p>Entropy Video: <a class="reference external" href="https://www.youtube.com/watch?v=uQSoaiubuA0">https://www.youtube.com/watch?v=uQSoaiubuA0</a></p></li>
+<li><p>Concept in Thermal Physics: Chapter 13: 13.2-13.5, 13.7</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapter 20: 20.2-20.4,20.6</p></li>
+<li><p>Octane ratings expained: <a class="reference external" href="https://www.youtube.com/watch?v=8VWEwEveGTQ&amp;amp;ab_channel=EricTheCarGuy">https://www.youtube.com/watch?v=8VWEwEveGTQ&amp;ab_channel=EricTheCarGuy</a></p></li>
+<li><p>A reality check on renewables: <a class="reference external" href="https://www.youtube.com/watch?v=E0W1ZZYIV8o&amp;amp;t=378s&amp;amp;ab_channel=TED-Ed">https://www.youtube.com/watch?v=E0W1ZZYIV8o&amp;t=378s&amp;ab_channel=TED-Ed</a></p></li>
 </ul>
 </div>
 <div class="outcomes admonition">
@@ -374,83 +377,138 @@ document.write(`
 <li><p>Calculate the efficiency of the corresponding Carnot cycle.</p></li>
 </ul>
 </div>
-<section id="review-thermal-effiency-of-cyclic-processes">
-<h2><span class="section-number">6.1. </span>Review: Thermal effiency of cyclic processes<a class="headerlink" href="#review-thermal-effiency-of-cyclic-processes" title="Permalink to this heading">#</a></h2>
-<p>Any device that transforms heat partially into work or mechanical energy is called heat engine.  Independently from the type of engine, the working principle includes a quantity of matter, here defined as working substance, that undergoes through different thermodynamic processes e.g. expansion, compression, inflow or outflow of heat etc…</p>
-<p>It is also possible to distinguish heat engines as open processes or cyclic processes. One example of the former, that will be explored in \ref{ref: internal combustion} is the case of internal-combustion engines. In fact, these engines exploit a mixture of air and fuel, which eventually is discarded.
-From now on heat engines will be described only as cyclic processes (it is possible to approximate open processes as cyclic).</p>
-<p>Considering the first law of thermodynamics applied at the case of thermodynamic cyclic processes, this means that:</p>
-<div class="math notranslate nohighlight">
-\[
-U_{2}-U_{1}=0\Rightarrow Q=W
-\]</div>
-<p>, i.e. the net heat flowing in heat engines equals the net work done.
-All heat engines absorb heat from a source at high temperature, and after performing some mechanical work, discard some heat at a lower temperature.</p>
-<p>When studying heat engines, it is useful as a zeroth-order approximation to define two objects with which the working substance can interact:</p>
+<section id="introduction-to-heat-engines">
+<h2><span class="section-number">6.1. </span>Introduction to heat engines<a class="headerlink" href="#introduction-to-heat-engines" title="Permalink to this heading">#</a></h2>
+<p>Heat engines are devices that transform heat partially into work or mechanical energy.  Independently from the type of engine, heat engines requires a working substance that undergoes through different thermodynamic processes e.g. expansion, compression, heating, cooling.</p>
+<p>Two types of heat engines exist:</p>
+<ul class="simple">
+<li><p><strong>Closed engines</strong>: where working substance is contained in the system and recirculated through a full cycle of thermodynamics processes (es. Rankine cycle)</p></li>
+<li><p><strong>Open engines</strong>: where working substance is not recirculated. The substance is taken from the environment (eg. air), used and expelled (e.g. internal combustation engines ad Otto cycle).</p></li>
+</ul>
+<p>Both open and closed heat engines can operate in a cyclic process, meaning that after thermodynamic processes are complete, the engine returns to its initial state.</p>
+<p>A useful approach is to use two reservoirs with which the working substance can interact:</p>
 <ul class="simple">
 <li><p>Hot reservoir, which represents the heat source, and provides the working substance with large amounts of heat without reducing its temperature <span class="math notranslate nohighlight">\(T_{H}\)</span>.</p></li>
 <li><p>Cold reservoir, able to absorb large quantities of heat discarded by the working substance without increasing its temperature <span class="math notranslate nohighlight">\(T_{C}\)</span>.</p></li>
 </ul>
-<p>That being said, it is possible to represent the energy transformation in a heat engine through an energy-flow diagram, in which the engine is represented by a circle, surrounded at the top by the hot reservoir, and the bottom by the cold one.
-The amount of heat provided by the hot reservoir to the engine <span class="math notranslate nohighlight">\(Q_{H}\)</span> is represented by a pipeline connecting the two elements, whose width is proportional to its magnitude. The same notation is used to describe the amount of heat discarded from the engine to the cold reservoir <span class="math notranslate nohighlight">\(|Q_{C}|\)</span>.
-An additional branch coming out of the engine represent the amount of heat that has been converted to mechanical work <span class="math notranslate nohighlight">\(W\)</span>.</p>
+<p>An additional branch coming out of the engine represents the amount of heat that has been converted to mechanical work <span class="math notranslate nohighlight">\(W\)</span>. See <a class="reference internal" href="#heat-engine-schematic"><span class="std std-numref">Fig. 6.1</span></a> for a general diagram of a heat engine.</p>
+<figure class="align-default" id="heat-engine-schematic">
+<a class="reference internal image-reference" href="../_images/EngineSchematic.png"><img alt="../_images/EngineSchematic.png" src="../_images/EngineSchematic.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">General schematic of a heat engine operating between the hot reservoir at <span class="math notranslate nohighlight">\(T_{H}\)</span> and the cold one at <span class="math notranslate nohighlight">\(T_{C}\)</span>.</span><a class="headerlink" href="#heat-engine-schematic" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Considering the first law of thermodynamics applied at the case of thermodynamic cyclic processes, this means that:</p>
+<div class="math notranslate nohighlight">
+\[U_{2}-U_{1}=0\Rightarrow Q=W,\]</div>
+<p>i.e. the net heat flowing in heat engines equals the net work done.
+All heat engines absorb heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> from a source at high temperature <span class="math notranslate nohighlight">\(T_{H}\)</span>, and after performing some mechanical work, discard some heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> at a lower temperature <span class="math notranslate nohighlight">\(T_{C}\)</span>.</p>
+<p>The net heat <span class="math notranslate nohighlight">\(Q\)</span> per cycle is:</p>
+<div class="math notranslate nohighlight">
+\[Q=Q_{H} + Q_{C}=Q_{H}-|Q_{C}|\]</div>
+<p>The net work <span class="math notranslate nohighlight">\(W\)</span> per cycle is equal to the net heat since we are dealing with a cyclic process:</p>
+<div class="math notranslate nohighlight">
+\[W=Q_{H}+Q_{C}=Q_{H}-|Q_{C}|\]</div>
+<p>The maximum amount of work would be achieved if it was possible to convert all <span class="math notranslate nohighlight">\(Q_{H}\)</span> and by having <span class="math notranslate nohighlight">\(Q_{C}=0\)</span>. This is not possible, as there will always be some heat wasted.</p>
+<p>A way to quantify how well the engine is able to convert heat into work is by calculating the thermal efficiency <span class="math notranslate nohighlight">\(e\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[e=\frac{W}{Q_{H}} =1+\frac{Q_{C}}{Q_{H}}=1-\frac{|Q_{C}|}{Q_{H}}\]</div>
 </section>
 <section id="carnot-cycle">
 <h2><span class="section-number">6.2. </span>Carnot cycle<a class="headerlink" href="#carnot-cycle" title="Permalink to this heading">#</a></h2>
-<p>According to second law, it cannot exist a heat engine with a 100% efficiency.</p>
-<p>In an ideal case, what is the maximum efficiency that can be reached?</p>
+<p>According to second law of thermodynamics, a heat engine with a 100% efficiency cannot exist.</p>
+<p>What is then the maximum conversion from heat to work reached by a heat engine?</p>
 <p>The answer was given in 1824 by the French engineer Sadi Carnot, who
-developed a hypothetical, idealized heat engine that has the maximum possible efficiency
-consistent with the second law. The cycle of this engine is called the Carnot cycle.</p>
-<p>For maximum heat engine efficiency we must avoid all irreversible processes. Therefore, considering the general working principle of an heat engine:</p>
+developed a hypothetical, idealized heat engine that has the maximum possible efficiency  consistent with the second law. The cycle of this engine is called the Carnot cycle.</p>
+<p>For maximum heat engine efficiency all processes must be reversible. This results in:</p>
 <ul class="simple">
-<li><p>During heat transfers there must not be temperature drops, since heat flow at different temperatures is an irreversible process. This means that isothermal transformation must occur</p></li>
-<li><p>During any other process involving temperature changes from <span class="math notranslate nohighlight">\(T_{C}\)</span> and <span class="math notranslate nohighlight">\(T_{H}\)</span>, there must not be any heat transfer, thus imposing them to be adiabatic.</p></li>
+<li><p>No temperature drops, i.e. isothermal processes at <span class="math notranslate nohighlight">\(T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{C}\)</span>;</p></li>
+<li><p>When <span class="math notranslate nohighlight">\(T_{C}&lt;T&lt;T_{H}\)</span>, there is no heat transfer between heat engines and reservoirs, i.e. adiabatic processes occur.</p></li>
 </ul>
-<p>[FIG NEEDED OF CARNOT CYCLE PV DIAGRAM]</p>
-<p>In fig. it is reported the <span class="math notranslate nohighlight">\(pV\)</span> diagram of Carnot cycle:</p>
-<ul class="simple">
-<li><p>Isothermal expansion (<span class="math notranslate nohighlight">\(ab\)</span>) at temperature <span class="math notranslate nohighlight">\(T_{H}\)</span> absorbing heat <span class="math notranslate nohighlight">\(Q_{H}\)</span>;</p></li>
-<li><p>Adiabatic expansion (<span class="math notranslate nohighlight">\(bc\)</span>) from <span class="math notranslate nohighlight">\(T_{H}\)</span> to <span class="math notranslate nohighlight">\(T_{C}\)</span>;</p></li>
-<li><p>Isothermal compression (<span class="math notranslate nohighlight">\(cd\)</span>) at temperature <span class="math notranslate nohighlight">\(T_{C}\)</span> rejecting heat <span class="math notranslate nohighlight">\(|Q_{C}|\)</span>;</p></li>
-<li><p>Adiabatic compression (<span class="math notranslate nohighlight">\(da\)</span>) from <span class="math notranslate nohighlight">\(T_{C}\)</span> to <span class="math notranslate nohighlight">\(T_{H}\)</span></p></li>
-</ul>
+<figure class="align-default" id="carnot-pv">
+<a class="reference internal image-reference" href="../_images/CarnotFridge.png"><img alt="../_images/CarnotFridge.png" src="../_images/CarnotFridge.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the Carnot engine cycle operating between <span class="math notranslate nohighlight">\(T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{C}\)</span>. Blue curves correspond to isothermal processes, while red ones correspond to adiabatic transformations.</span><a class="headerlink" href="#carnot-pv" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="#carnot-pv"><span class="std std-numref">Fig. 6.2</span></a> is presented. It shows 2 isothermal and 2 adiabatic reversible steps, detailed below:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(a-b\)</span>: Isothermal expansion at temperature <span class="math notranslate nohighlight">\(T_{H}\)</span> absorbing heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> from hot reservoir;</p></li>
+<li><p><span class="math notranslate nohighlight">\(b-c\)</span>: Adiabatic expansion from <span class="math notranslate nohighlight">\(T_{H}\)</span> to <span class="math notranslate nohighlight">\(T_{C}\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(c-d\)</span>: Isothermal compression at temperature <span class="math notranslate nohighlight">\(T_{C}\)</span> rejecting heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> to the cold reservoir;</p></li>
+<li><p><span class="math notranslate nohighlight">\(d-a\)</span>: Adiabatic compression from <span class="math notranslate nohighlight">\(T_{C}\)</span> to <span class="math notranslate nohighlight">\(T_{H}\)</span></p></li>
+</ol>
+<section id="carnot-fridge">
+<h3>Carnot fridge<a class="headerlink" href="#carnot-fridge" title="Permalink to this heading">#</a></h3>
+<p>Since all processes of the Carnot cycle are imposed to be reversible, the cycle can be reversed. This results in the device operating as a refrigerator. In fact, in this case heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> is extracted from the  cold reservoir and heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> is then rejected to the hot reservoir. In order for the cycle be possible, a work input <span class="math notranslate nohighlight">\(W\)</span> (negative in this case) is required. This operation, schematized in <a class="reference internal" href="#carnot-fridge-scheme"><span class="std std-numref">Fig. 6.3</span></a>, corresponds to the <span class="math notranslate nohighlight">\(pV\)</span> diagram reported in <a class="reference internal" href="#carnot-fridge-pv"><span class="std std-numref">Fig. 6.4</span></a>.</p>
+<figure class="align-default" id="carnot-fridge-scheme">
+<a class="reference internal image-reference" href="../_images/RefrigeratorSchematic.png"><img alt="../_images/RefrigeratorSchematic.png" src="../_images/RefrigeratorSchematic.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">General schematic of a Carnot fridge operating between <span class="math notranslate nohighlight">\(T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{C}\)</span>.</span><a class="headerlink" href="#carnot-fridge-scheme" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="carnot-fridge-pv">
+<a class="reference internal image-reference" href="../_images/CarnotFridgeReversed.png"><img alt="../_images/CarnotFridgeReversed.png" src="../_images/CarnotFridgeReversed.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.4 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the Carnot fridge cycle operating between <span class="math notranslate nohighlight">\(T_{H}\)</span> and <span class="math notranslate nohighlight">\(T_{C}\)</span>. Blue curves correspond to isothermal processes, while red ones correspond to adiabatic transformations.</span><a class="headerlink" href="#carnot-fridge-pv" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="what-is-the-most-efficient-engine">
+<h3>What is the most efficient engine?<a class="headerlink" href="#what-is-the-most-efficient-engine" title="Permalink to this heading">#</a></h3>
+<p>It can be proven that Carnot engine is the most efficient engine. To do that, let us start by assuming it can exist a “super-Carnot” engine, which is characterized by an effiency <span class="math notranslate nohighlight">\(e_{SC}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[e_{SC}=e_{C}(1+x)=\frac{W}{Q_{H}}(1+x),\]</div>
+<p><span class="math notranslate nohighlight">\(x\)</span> being a positive quantity and <span class="math notranslate nohighlight">\(e_{C}\)</span> the efficiency of the regular Carnot engine. Now , let us attach next to this super-engine a  regular Carnot fridge with efficiency <span class="math notranslate nohighlight">\(e_{CF}=Q_{C}/W\)</span>, as depicted in <a class="reference internal" href="#supercarnot"><span class="std std-numref">Fig. 6.5</span></a>:</p>
+<figure class="align-default" id="supercarnot">
+<a class="reference internal image-reference" href="../_images/SuperCarnot.png"><img alt="../_images/SuperCarnot.png" src="../_images/SuperCarnot.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.5 </span><span class="caption-text">Schematic of the system. From the left the “super-Carnot” engine (labeled SC), the regular Carnot fridge (CF), while on the right the schematics of the resulting system.</span><a class="headerlink" href="#supercarnot" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Since the work produced by the super-Carnot engine matches the work required by the fridge to work, the resulting system will consist of a transfer of heat from the cold reservoir to the hot one without any work required.</p>
+<p>Moreover, from the definition of efficiency of the Carnot fridge given above, it is possible to observe:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e_{CF}=\frac{Q_{C}}{W},\quad e_{CF}=\frac{Q_{C}^{CF}}{W(1+x)}\\
+\Rightarrow Q_{C}^{CF}=Q_{C}(1+x)=\left(Q_{H}-W\right)(1+x)\end{split}\]</div>
+<p>and then the heat transferred to the hot reservoir by the Carnot fridge will be:</p>
+<div class="math notranslate nohighlight">
+\[Q_{H}^{CF}=Q_{C}(1+x)+W(1+x)=\underbrace{(Q_{C}+W)}_{Q_{H}}(1+x)\]</div>
+<p>Let us express now also the total amount of heat rejected to the hot reservoir:</p>
+<div class="math notranslate nohighlight">
+\[Q_{H}-Q_{H}^{CF}=Q_{H}-Q_{H}(1+x)=-Q_{H}x,\]</div>
+<p>while the total heat extracted from the cold reservoir to the system will correspond</p>
+<div class="math notranslate nohighlight">
+\[-Q_{C}^{SC}+Q_{C}^{CF}=\underbrace{-Q_{H}+W(1+x)}_{-Q_{C}^{SC}}+\underbrace{\left(Q_{H}-W\right)\left(1+x\right)}_{Q_{C}^{CF}}=Q_{H}x\]</div>
+<p>Calculating the variation of entropy:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S=\Delta S_{H}+\Delta S_{C}=+\frac{Q_{H}x}{T_{H}}-\frac{Q_{H}x}{T_{C}}=xQ_{H}\left(\frac{1}{T_{H}}-\frac{1}{T_{C}}\right)&lt;0,\]</div>
+<p>which is negative since <span class="math notranslate nohighlight">\(T_{H}&gt;T_{C}\)</span>. This clearly violates the second law of thermodynamics and then it is false to assume a super Carnot engine to exist with <span class="math notranslate nohighlight">\(x&gt;0\)</span>. To satisfy second law, <span class="math notranslate nohighlight">\(x\leq 0\)</span>, which means the Carnot engine is the most efficient heat engine.</p>
+</section>
 <section id="efficiency-of-carnot-cycle">
 <h3>Efficiency of Carnot cycle<a class="headerlink" href="#efficiency-of-carnot-cycle" title="Permalink to this heading">#</a></h3>
-<p>To calculate the efficiency let’s calculate:</p>
+<p>To calculate the efficiency of the Carnot engine let’s calculate:</p>
 <div class="math notranslate nohighlight">
-\[Q_{H}=W_{ab}=nRT_{H}\mathrm{ln}\frac{V_{b}}{V_{a}}\]</div>
-<p>, while:</p>
+\[Q_{H}=W_{ab}=nRT_{H}\mathrm{ln}\frac{V_{b}}{V_{a}}&gt;0,\]</div>
+<p>while:</p>
 <div class="math notranslate nohighlight">
-\[Q_{C}=W_{cd}=nRT_{C}\mathrm{ln}\frac{V_{d}}{V_{c}}=-nRT_{C}\mathrm{ln}\frac{V_{c}}{V_{d}}\]</div>
+\[Q_{C}=W_{cd}=nRT_{C}\mathrm{ln}\frac{V_{d}}{V_{c}}&lt;0\]</div>
 <p>In adiabatic processes <span class="math notranslate nohighlight">\(bc\)</span> and <span class="math notranslate nohighlight">\(da\)</span> it holds:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{gather*}
+\[\begin{split}\begin{gather*}
 T_{H}V{b}^{\gamma-1}=T_{C}V_{c}^{\gamma-1}\\
 T_{C}V_{d}^{\gamma-1}=T_{H}V_{a}^{\gamma-1}
-\end{gather*}
-\end{split}\]</div>
-<p>, which then results:</p>
+\end{gather*},\end{split}\]</div>
+<p>which then results:</p>
 <div class="math notranslate nohighlight">
 \[\frac{V_{b}}{V_{a}}=\frac{V_{c}}{V_{d}}\]</div>
 <p>The thermal efficiency of the cycle is then:</p>
 <div class="math notranslate nohighlight">
-\[e=1+\frac{Q_{C}}{Q_{H}}=1-\frac{T_{C}}{T_{H}}\underbrace{\frac{\mathrm{ln}\frac{V_{b}}{V_{a}}}{\mathrm{ln}\frac{V_{c}}{V_{d}}}}_{=1}=1-\frac{T_{C}}{T_{H}}\]</div>
-<p>The net heat <span class="math notranslate nohighlight">\(Q\)</span> per cycle is:</p>
+\[e=1+\frac{Q_{C}}{Q_{H}}=1-\frac{T_{C}}{T_{H}}\underbrace{\frac{\mathrm{ln}\frac{V_{c}}{V_{d}}}{\mathrm{ln}\frac{V_{b}}{V_{a}}}}_{=1}=1-\frac{T_{C}}{T_{H}}\]</div>
+<p>Equivalently, the coefficient of performance of the Carnot refrigerator can be proven to be:</p>
 <div class="math notranslate nohighlight">
-\[
-Q=Q_{H} +Q_{C}=Q_{H}−|Q_{C}|
-\]</div>
-<p>The net work <span class="math notranslate nohighlight">\(W\)</span> per cycle is equal to the net heat since we are dealing with a cyclic process:</p>
-<div class="math notranslate nohighlight">
-\[
-W=Q_{H}−|Q_{C}|
-\]</div>
-<p>The maximum amount of work would be achieved if it was possible to convert all <span class="math notranslate nohighlight">\(Q_{H}\)</span> and by having <span class="math notranslate nohighlight">\(Q_{C}=0\)</span>. From experience this is not possible, as there will always be some heat wasted.</p>
-<p>A way to quantify how well the engine is able to convert heat into work is by calculating the thermal efficiency <span class="math notranslate nohighlight">\(e\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[e=\frac{W}{Q_{H}} =1+\frac{Q_{C}}{Q_{H}}=1−\frac{Q_{C}}{Q_{H}}∣\]</div>
+\[K=\frac{Q_{C}}{|W|}=\frac{T_{C}}{T_{H}-T_{C}}\]</div>
+<p>, where now <span class="math notranslate nohighlight">\(W\)</span> is negative (input work required to drive the cycle).</p>
 </section>
 </section>
 <section id="internal-combustion-engine">
@@ -460,22 +518,27 @@ W=Q_{H}−|Q_{C}|
 <p>[FIG NEEDED]</p>
 <section id="otto-cycle">
 <h3>Otto cycle<a class="headerlink" href="#otto-cycle" title="Permalink to this heading">#</a></h3>
-<p>Considering again fig. \ref{}, let’s analyze the five steps:</p>
+<p>Considering again <code class="xref std std-numref docutils literal notranslate"><span class="pre">InternalCombustion</span></code>, let’s analyze the five steps:</p>
 <ul class="simple">
 <li><p>Compression stroke: the piston compresesses the mixture (adiabatic compression from <span class="math notranslate nohighlight">\(rV\)</span> to <span class="math notranslate nohighlight">\(V\)</span>, with <span class="math notranslate nohighlight">\(r\)</span> compression ratio);</p></li>
 <li><p>Ignition: the mixture is then ignited (heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> is absorbed from the hot reservoir at constant volume).</p></li>
 <li><p>Power stroke: the heated gas expands (adiabatic expansion from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(rV\)</span>)</p></li>
 <li><p>Exhaust stroke: combustion products are expelled through the opening of exhaust valves (exchange of heat <span class="math notranslate nohighlight">\(|Q_{C}|\)</span> to the cold reservoir at constant volume).</p></li>
 </ul>
-<p>This idealized model of the thermodynamic processes in a gasoline engine is called Otto cycle.</p>
-<p>[FIG NEEDED OF OTTO CYCLE]</p>
+<p>This idealized model of the thermodynamic processes in a gasoline engine is called Otto cycle and its diagram is reported in <a href="#id1"><span class="problematic" id="id2">Otto_pv</span></a></p>
+<figure class="align-default" id="otto-pv">
+<a class="reference internal image-reference" href="../_images/OttoCycle.png"><img alt="../_images/OttoCycle.png" src="../_images/OttoCycle.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of Otto cycle.</span><a class="headerlink" href="#otto-pv" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>It is possible to calculate the efficiency of this idealized cycle.</p>
 <p>Starting from processes bc and da which are constant-volume:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{gather*}
-Q_{H}=nC_{V}(T_{c}−T_{b})&gt;0\\
-Q_{C}=nC_{V}(T_{a}−T_{d})&lt;0
+Q_{H}=nC_{V}(T_{c}−T_{b})\\
+Q_{C}=nC_{V}(T_{a}-T_{d})
 \end{gather*}
 \end{split}\]</div>
 <p>The thermal efficiency <span class="math notranslate nohighlight">\(e\)</span> is given then by:</p>
@@ -505,9 +568,16 @@ Substituting into Eq. \ref{}:</p>
 <section id="diesel-cycle">
 <h3>Diesel cycle<a class="headerlink" href="#diesel-cycle" title="Permalink to this heading">#</a></h3>
 <p>The Diesel engine represents an alternative to the gasoline one, whose usefulness comes from the possibility to increase the compression ratio without risking pre-ignition of the fuel (it is injected in the cylinder after the compression stroke, right before the power stroke).</p>
-<p>[FIG NEEDED WITH DIESEL PV DIAGRAM]</p>
-<p>In fig. \ref{}  it is reported the pV diagram of the Diesel cycle. Starting at point a, air (no fuel injected in this phase) is compressed adiabatically to point b. Differently from Otto cycle, from state b to c heat is given by the hot reservoir at constant pressure.  Then thermodynamic processes cd  and da follow the same behaviour as in gasoline cycle.</p>
+<figure class="align-default" id="diesel-pv">
+<a class="reference internal image-reference" href="../_images/DieselCycle.png"><img alt="../_images/DieselCycle.png" src="../_images/DieselCycle.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of Diesel cycle.</span><a class="headerlink" href="#diesel-pv" title="Permalink to this image">#</a></p>
+<div class="legend">
+<p>In <a class="reference internal" href="#diesel-pv"><span class="std std-numref">Fig. 6.7</span></a>  it is reported the pV diagram of the Diesel cycle. Starting at point a, air (no fuel injected in this phase) is compressed adiabatically to point b. Differently from Otto cycle, from state b to c heat is given by the hot reservoir at constant pressure.  Then thermodynamic processes cd  and da follow the same behaviour as in gasoline cycle.</p>
 <p>Since the value of the compression ratio can rise up to 20 (15-20 typical values), the theoretical efficiency of the idealized Diesel cycle is about 70%.</p>
+</div>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="refrigerators-and-refrigeration-cycle">
@@ -567,6 +637,18 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 \[\underbrace{Q_{C}-|Q_{C}|}_{\mathrm{anti-Clausius}}+\underbrace{Q_{H}-|Q_{C}|+W}_{\mathrm{heat-engine}}=0 \Rightarrow (Q_{H}-|Q_{C}|)+W=0\]</div>
 <p>, which corresponds to the so-called “anti-Kelvin” system, i.e. an heat engine capable of extracting heat from a single reservoir and converting it entirely to work.</p>
 <p>The two statements can be proven to be equivalent also starting from an anti-Kelvin engine in series with a regular refrigerator, which eventually leads to the Clausius statement.</p>
+<div class="example admonition">
+<p class="admonition-title">Can an engine with 100% efficiency exist?</p>
+<p>To answer, let us state that such an engine can exist, and let us attach it to a fridge (which we will see after), as depicted in fig. \ref{}.</p>
+<p>[FIG NEEDED HERE FROM JL NOTES]</p>
+<p>The engine, having 100 %  thermal effiency, converts all the heat extracted <span class="math notranslate nohighlight">\(Q_{H}\)</span> from the hot reservoir to work <span class="math notranslate nohighlight">\(W\)</span>, which is used to make the fridge work and extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir (this time <span class="math notranslate nohighlight">\(Q_{C}\)</span> is positive) and deliver <span class="math notranslate nohighlight">\(Q_{H}\)</span> to the hot one.</p>
+<p>Balancing out the whole system, it turns out that the outcome of the combined engine is to extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir without any work required.</p>
+<p>Let us calculate now the variation of entropy associated to the combined engine:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S=\Delta S_{H}+\Delta S_{C}= 0-\frac{Q_{C}}{T_{C}}\]</div>
+<p>, which then results in a negative quantity. As already discussed in the previous chapter, second law of thermodynamics states that it’s not possible for a thermodynamic transformation to occur without an increase of the entropy associated to the system.</p>
+<p>This means that the system composed of the “perfect” engine and the fridge cannot exist, thus proving that there are no heat engines with 100 % thermal efficiency.</p>
+</div>
 </section>
 </section>
 <section id="rankine-cycle">
@@ -677,8 +759,10 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#review-thermal-effiency-of-cyclic-processes">6.1. Review: Thermal effiency of cyclic processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-heat-engines">6.1. Introduction to heat engines</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-cycle">6.2. Carnot cycle</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#carnot-fridge">Carnot fridge</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-most-efficient-engine">What is the most efficient engine?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency-of-carnot-cycle">Efficiency of Carnot cycle</a></li>
 </ul>
 </li>
