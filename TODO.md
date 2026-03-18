@@ -2,12 +2,16 @@
 [-] "s can approach it if temperature and pressure differences are made very small." - means you must maintain thermal equilibrium, tell students that. can then reference here in calusius 5.5
 
 [ ] - TODO
-[ ] - supercooled logic doesnt make sense, particularly the "represents the phase change between water and ice" bit
+[ ] - now lets consider sueporcooling process that we then take a liqudi col it to -10 and once we take it out its still in it s liquid form, and then we nucleate its solidification process by creating agitation through slamming thew ater bottle. now the heat thats generated is then released tothe environment but what is the entropy change in the supercooledm fprocess. 
+[ ] - S(T \to 0) \to 0 FIX 
+[ ] - change -10 in supercooled to 0 deg. needd to 
+[ ] - change in entropy of the environment due to the heat released during the phase change
+[ ] - a is q in supercooled liquid
+[ ] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
+[ ] - copy out annex, use JL notes to relate concepts and examples
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
-[O] - [[FIG OF HOT->Q-> COLD]] -- see Module5_stefan/3_entropy_change.pdf
-[O] - [[ FIG AS ABOVE, BUT USE T_1, T_2 INSTEAD OF T_H AND T_C, CONVERTS INTO A SINGULAR BODY LABELLED T_f]] -- see Module5_stefan/4.png
 [O] - [[ FIG OF ALLOWED HEAT FLOW ONLY FROM HOT->COLD NOT COLD-> HOLD, LABEL THE CASES: (1) AND (2)]] -- see Module5_stefan/5.pdf
 [O] - [[ FIG OF 1KG 20C WATER -> 1KG ICE ]]
 [O] - [[ FIGS FOR END OF THIRD LAW ]]
@@ -17,6 +21,11 @@
 [/] IS THIS FIXED? fix per mole and molar heat capacity section
 
 [X] - DONE
+[X] - generally if you ocol down a liquid you can expect that you ggo from a solid aka water to ice, and the heat thats generated. in first case we're just considering general water converting to ice at -10, considering the heat expelled as mass times latent heat
+[X] - supercooled logic doesnt make sense, particularly the "represents the phase change between water and ice" bit
+[X] - 5.2 nRln2 should be in example admonition -- expand based on 8_stat.pdf
+[X] - [[FIG OF HOT->Q-> COLD]] -- see Module5_stefan/3_entropy_change.pdf
+[X] - [[ FIG AS ABOVE, BUT USE T_1, T_2 INSTEAD OF T_H AND T_C, CONVERTS INTO A SINGULAR BODY LABELLED T_f]] -- see Module5_stefan/4.png
 [X] check for any [[]]
 [XO] change all F_x to F in figures
 [XO] clean up my botch jobs (i changed $x$ to $a$ in figure 4.3 in paint, looks bad)
