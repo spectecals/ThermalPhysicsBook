@@ -3,6 +3,7 @@
 [-] - change -10 in supercooled to 0 deg. NB: supercooling is cooling past point of freezing without solidifying!
 
 [ ] - TODO
+[ ] - i think ch5 supercool is wrong - should be -10 and 0, nothing else. can't freeze a liquid at room temp, so the reversible process should not be water from -10 to 20, freeze, cool to -10. it should be -10 to 0, freeze, 0 to -10.
 [ ] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
 [ ] - copy out annex, use JL notes to relate concepts and examples
 
