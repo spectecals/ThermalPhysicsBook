@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>5.9. Solutions &#8212; Thermal Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch5-entropy_and_second_law/03_solutions';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="5.8. Questions" href="02_questions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Thermal Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="02_questions.html">5.8. Questions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.9. Solutions</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch5-entropy_and_second_law/03_solutions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solutions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="solutions">
+<h1><span class="section-number">5.9. </span>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h1>
+<ol class="arabic">
+<li><p>0.35kg of ice at 0.0<span class="math notranslate nohighlight">\(^\circ\)</span> C is heated until it is all melted.</p>
+<ol class="arabic simple">
+<li><p>What is the change in entropy of this body?</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>The process occurs at constant temperature <span class="math notranslate nohighlight">\(T = 273.15\)</span> K. The heat required to melt the ice is <span class="math notranslate nohighlight">\(Q = mL_f\)</span>, where the latent heat of fusion is <span class="math notranslate nohighlight">\(L_f = 334{,}000\)</span> J kg<span class="math notranslate nohighlight">\(^{-1}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[Q = mL_f = 0.35 \times 334{,}000 = 116{,}900 \text{ J}\]</div>
+<p>Since the temperature is constant throughout:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S = \frac{Q}{T} = \frac{116{,}900}{273.15} = 429 \text{ J K}^{-1}\]</div>
+ </div>
+<ol class="arabic simple" start="2">
+<li><p>The source of heat is a very massive body at a temperature of 25.0<span class="math notranslate nohighlight">\(^\circ\)</span> C. What is the change in entropy of this body?</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>The heat source loses the same quantity of heat <span class="math notranslate nohighlight">\(Q = 116{,}900\)</span> J at a constant temperature <span class="math notranslate nohighlight">\(T = 298.15\)</span> K. Being very massive, its temperature does not change, so:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S = -\frac{Q}{T} = -\frac{116{,}900}{298.15} = -392 \text{ J K}^{-1}\]</div>
+ </div>
+<ol class="arabic simple" start="3">
+<li><p>What is the total change in entropy of the water and the heat source?</p></li>
+</ol>
+ <div class="answer-narrow">
+<div class="math notranslate nohighlight">
+\[\Delta S_\mathrm{total} = \Delta S_\mathrm{ice} + \Delta S_\mathrm{source} = 429 + (-392) = +36 \text{ J K}^{-1}\]</div>
+<p>The total entropy increases, as expected for an irreversible process — heat flows spontaneously from the warm source to the colder ice.</p>
+ </div>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic simple" start="2">
+<li><p>Three moles of an ideal gas undergo a reversible isothermal compression at 20.0<span class="math notranslate nohighlight">\(^\circ\)</span> C. During this compression, 1850 J of work is done on the gas. What is the change of entropy of the gas?</p></li>
+</ol>
+<div class="answer-narrow">
+<p>For an isothermal process, <span class="math notranslate nohighlight">\(\Delta U = 0\)</span>, so the first law gives <span class="math notranslate nohighlight">\(Q = \Delta U + W = W\)</span>. Since 1850 J of work is done <em>on</em> the gas, the gas does work <span class="math notranslate nohighlight">\(W = -1850\)</span> J, and therefore releases heat:</p>
+<div class="math notranslate nohighlight">
+\[Q = -1850 \text{ J}\]</div>
+<p>The entropy change at constant temperature <span class="math notranslate nohighlight">\(T = 293.15\)</span> K is:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S = \frac{Q}{T} = \frac{-1850}{293.15} = -6.31 \text{ J K}^{-1}\]</div>
+</div>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic" start="3">
+<li><p>Two moles of an ideal gas occupy a volume <span class="math notranslate nohighlight">\(V\)</span>. The gas expands isothermally and reversibly to a volume <span class="math notranslate nohighlight">\(3V\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Is the velocity distribution changed by the isothermal expansion? Explain.</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>No. Since the expansion is isothermal, T remains constant, so the distribution of molecular speeds is unchanged.</p>
+ </div>
+<ol class="arabic simple" start="2">
+<li><p>Using the statistical definition of entropy, calculate the change in entropy of the gas (Boltzmann).</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>As the number of states is related to volume, <span class="math notranslate nohighlight">\( V^N \propto \Omega \)</span>, we can see that:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} V^N \propto \Omega \\
+      \therefore \frac{\Omega_1}{\Omega_2} \equiv (\frac{V_2}{V_1})^N \\
+      = (\frac{3V_1}{V_1})^N \\
+      = 3^N \\
+      \therefore \Delta S = k_B \ln 3^N = N k_B \ln 3
+      \end{split}\]</div>
+<p>As the gas contains two moles, <span class="math notranslate nohighlight">\(N = 2 N_A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+      \Delta S = 2R \ln 3= 18.3 \text{ J K}^{-1}.
+      \]</div>
+ </div>
+<ol class="arabic simple" start="3">
+<li><p>Compare this to the entropy change for a free expansion between the same states (Clausius). What do you notice?</p></li>
+</ol>
+ <div class="answer-narrow">
+<div class="math notranslate nohighlight">
+\[\Delta S = nR\ln\frac{V_f}{V_i} = 2R\ln\frac{3V}{V} = 2R\ln 3 = 18.3 \text{ J K}^{-1}\]</div>
+<p>The result is identical. This is expected — entropy is a state function, so <span class="math notranslate nohighlight">\(\Delta S\)</span> depends only on the initial and final states, not on whether the path is reversible or irreversible.</p>
+ </div>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic" start="4">
+<li><p>A 10.0 L gas tank containing 3.2 moles of ideal He gas at 20.0<span class="math notranslate nohighlight">\(^\circ\)</span> C is placed inside a completely evacuated, insulated bell jar of volume 35.0 L. A small hole in the tank allows the He to leak out into the jar until the gas reaches a final equilibrium state with no more leakage.</p>
+<ol class="arabic simple">
+<li><p>What is the change in entropy of this system due to the leaking of the gas?</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>This is a free expansion into an insulated container. The gas expands from the 10.0 L tank to fill the entire 35.0 L volume. Since the container is insulated and the gas is ideal, the temperature does not change, and we can use a reversible isothermal path to compute <span class="math notranslate nohighlight">\(\Delta S\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\Delta S = nR\ln\frac{V_f}{V_i} = 3.2 \times 8.314 \times \ln\!\left(\frac{35.0}{10.0}\right) = 26.6 \times 1.2526 = 33.3 \text{ J K}^{-1}\]</div>
+ </div>
+<ol class="arabic simple" start="2">
+<li><p>Is the process reversible or irreversible? How do you know?</p></li>
+</ol>
+ <div class="answer-narrow">
+<p>The process is irreversible. The total entropy change of the universe is positive (<span class="math notranslate nohighlight">\(\Delta S_\mathrm{total} &gt; 0\)</span>), since the insulated container does not allow any entropy exchange with the surroundings. Gas expanding freely into a vacuum is a classic example of an irreversible process — it cannot spontaneously return to its initial state without external work being done.</p>
+ </div>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic simple" start="5">
+<li><p>A mug of tea has been left to cool from 90<span class="math notranslate nohighlight">\(^\circ\)</span> C to 18<span class="math notranslate nohighlight">\(^\circ\)</span> C. If there is 0.2 kg of tea in the mug, and the tea has specific heat capacity 4200 J K<span class="math notranslate nohighlight">\(^{-1}\)</span> kg<span class="math notranslate nohighlight">\(^{-1}\)</span>, show that the entropy of the tea has decreased by 185.7 J K<span class="math notranslate nohighlight">\(^{-1}\)</span>. Comment on the sign of this result.</p></li>
+</ol>
+<div class="answer-narrow">
+<p><span class="math notranslate nohighlight">\(\Delta S = -\int_{291}^{363} c \frac{dT}{T} = -c \ln(363/291) = -185.7\)</span> J K<span class="math notranslate nohighlight">\(^{-1}\)</span>. The sign is negative because the tea loses heat. However, the entropy of the surroundings increases by <span class="math notranslate nohighlight">\(C(363 - 291)/291 = +207.8\)</span> J K<span class="math notranslate nohighlight">\(^{-1}\)</span>, which is larger, so the entropy of the Universe increases overall.</p>
+</div>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic simple" start="6">
+<li><p>In a free expansion of a perfect gas (also called Joule expansion), we know <span class="math notranslate nohighlight">\(U\)</span> does not change, and no work is done. However, the entropy must increase because the process is irreversible. Are these statements compatible with the first law <span class="math notranslate nohighlight">\(\text{d}U = T\text{d}S - p\text{d}V\)</span>?</p></li>
+</ol>
+<div class="answer-narrow">
+<p>Yes: the first law always holds. In a free expansion <span class="math notranslate nohighlight">\(\text{d}U = 0\)</span> and <span class="math notranslate nohighlight">\(\text{d}W = p\text{d}V = 0\)</span>, so <span class="math notranslate nohighlight">\(T\text{d}S = p\text{d}V\)</span>, meaning both sides are zero and the equation is satisfied. The entropy increase is real but is calculated via a reversible path between the same endpoints.</p>
+</div>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic" start="7">
+<li><p>Suppose that you are offered a choice of the following: a certain £10 or the chance of rolling a fair die and receiving £36 if it comes up 5 or 6, but nothing otherwise. What is the economical choice to make and why?</p>
+ <div class="answer-narrow">
+<p>Since the die is fair,</p>
+<div class="math notranslate nohighlight">
+\[
+    P(5 \text{ or } 6) = \frac{1}{6} + \frac{1}{6}
+    = \frac{2}{6}
+    = \frac{1}{3}.
+    \]</div>
+<p>The expected winnings are</p>
+<div class="math notranslate nohighlight">
+\[
+    \langle \text{£} \rangle = \frac{1}{3} \times 36 = 12.
+    \]</div>
+<p>Since £12 <span class="math notranslate nohighlight">\(&gt;\)</span> £10, option 2 is the better economic choice, unless you specifically require £10 with certainty.</p>
+ </div>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic" start="8">
+<li><p>You have a coin that is unfairly weighted, such that the probability of flipping it and obtaining heads is <span class="math notranslate nohighlight">\(P(H) = 0.3\)</span>.</p>
+<ol class="arabic">
+<li><p>What is the probability that in five tosses of the coin there will be two heads?</p>
+<div class="answer-narrow">
+<p>Here <span class="math notranslate nohighlight">\(n=5\)</span>, <span class="math notranslate nohighlight">\(k=2\)</span>, and <span class="math notranslate nohighlight">\(p=0.3\)</span>. Using the binomial distribution,</p>
+<div class="math notranslate nohighlight">
+\[
+      P(k=2)
+      =
+      \frac{n!}{k!(n-k)!}
+      p^k(1-p)^{n-k}.
+      \]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[
+      P(2)
+      =
+      \frac{5!}{2!\,3!}
+      (0.3)^2
+      (0.7)^3
+      \approx 0.3087.
+      \]</div>
+<p>So the probability is about 0.309, or 30.9%.</p>
+</div>
+</li>
+<li><p>Sketch the full binomial distribution for this coin being tossed five times.</p>
+  <div class="answer-narrow">
+<p>See the figure of the corresponding Binomial distribution below.</p>
+  </div>
+</li>
+<li><p>What is the mean number of heads and corresponding standard deviation if the coin is thrown 10,000 times?</p>
+<div class="answer-narrow">
+<p>For a binomial distribution,</p>
+<div class="math notranslate nohighlight">
+\[
+      \mu = np = 10000 \times 0.3 = 3000,
+      \]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[
+      \sigma = \sqrt{np(1-p)}
+      =
+      \sqrt{10000 \times 0.3 \times 0.7}
+      \approx 45.8.
+      \]</div>
+<p>So the mean number of heads is 3000 and the standard deviation is about 45.8.</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+<figure class="align-default" id="binomialq">
+<a class="reference internal image-reference" href="../_images/binomialQ.png"><img alt="../_images/binomialQ.png" src="../_images/binomialQ.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.8 </span><span class="caption-text">Graph of the Binomial distribution corresponding to five flips of an unfair coin.</span><a class="headerlink" href="#binomialq" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic" start="9">
+<li><p>A physical system has a lifetime that follows an exponential distribution, such as the lifetime of a radioactive nucleus. The probability density is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+   P(t) =
+   \begin{cases}
+   \lambda e^{-\lambda t}, &amp; t \ge 0, \\
+   0, &amp; t &lt; 0,
+   \end{cases}
+   \end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is the decay rate constant.</p>
+<ol class="arabic">
+<li><p>Show that this probability distribution is normalised.</p>
+<div class="answer-narrow">
+<p>To confirm normalisation,</p>
+<div class="math notranslate nohighlight">
+\[
+      \int_0^{\infty} P(t)\,dt
+      =
+      \int_0^{\infty} \lambda e^{-\lambda t}\,dt
+      =
+      \lambda \left[-\frac{1}{\lambda}e^{-\lambda t}\right]_0^{\infty}
+      =
+      \left[-e^{-\lambda t}\right]_0^{\infty}
+      =
+      1
+      \]</div>
+<p>So the distribution is properly normalised.</p>
+</div>
+</li>
+<li><p>Calculate the mean lifetime, <span class="math notranslate nohighlight">\(\langle t \rangle\)</span>.</p>
+<div class="answer-narrow">
+<div class="math notranslate nohighlight">
+\[
+      \langle t \rangle
+      =
+      \int_0^{\infty} t\,P(t)\,dt
+      =
+      \lambda \int_0^{\infty} t e^{-\lambda t}\,dt
+      =
+      \frac{1}{\lambda}.
+      \]</div>
+</div>
+</li>
+<li><p>Calculate the second moment, <span class="math notranslate nohighlight">\(\langle t^2 \rangle\)</span>.</p>
+<div class="answer-narrow">
+<div class="math notranslate nohighlight">
+\[
+      \langle t^2 \rangle
+      =
+      \int_0^{\infty} t^2\,P(t)\,dt
+      =
+      \lambda \int_0^{\infty} t^2 e^{-\lambda t}\,dt
+      =
+      \frac{2}{\lambda^2}.
+      \]</div>
+</div>
+</li>
+<li><p>Hence show that the variance is <span class="math notranslate nohighlight">\(\sigma_t^2 = \frac{1}{\lambda^2}\)</span>, and comment on what this means physically.</p>
+<div class="answer-narrow">
+<p>The variance is</p>
+<div class="math notranslate nohighlight">
+\[
+      \sigma_t^2
+      =
+      \langle t^2 \rangle - \langle t \rangle^2
+      =
+      \frac{2}{\lambda^2} - \frac{1}{\lambda^2}
+      =
+      \frac{1}{\lambda^2}.
+      \]</div>
+<p>Hence</p>
+<div class="math notranslate nohighlight">
+\[
+      \sigma_t = \frac{1}{\lambda}.
+      \]</div>
+<p>This means the standard deviation is equal to the mean lifetime. Individual decay events are therefore highly unpredictable, even though the average behaviour of a large collection of decaying systems follows an exact exponential law.</p>
+</div>
+</li>
+</ol>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK>
+<ol class="arabic simple" start="10">
+<li><p>A random variable <span class="math notranslate nohighlight">\(x\)</span> takes the values 1, 2, 3, 4, 5 with probabilities</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+   P(x=1)=0.1,\qquad P(x=2)=0.2,\qquad P(x=3)=0.4,\qquad P(x=4)=0.2,\qquad P(x=5)=0.1.
+   \]</div>
+<ol class="arabic">
+<li><p>Show that this probability distribution is normalised.</p>
+<div class="answer-narrow">
+<p>Adding the probabilities gives</p>
+<div class="math notranslate nohighlight">
+\[
+      0.1+0.2+0.4+0.2+0.1 = 1.
+      \]</div>
+<p>So the distribution is properly normalised.</p>
+</div>
+</li>
+<li><p>Calculate the mean value <span class="math notranslate nohighlight">\(\langle x \rangle\)</span>.</p>
+<div class="answer-narrow">
+<div class="math notranslate nohighlight">
+\[
+      \langle x \rangle = \sum_x xP(x)
+      = 1(0.1)+2(0.2)+3(0.4)+4(0.2)+5(0.1).
+      \]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[
+      \langle x \rangle = 0.1+0.4+1.2+0.8+0.5 = 3.0.
+      \]</div>
+</div>
+</li>
+<li><p>Find the mode of the distribution.</p>
+<div class="answer-narrow">
+<p>The mode is the most probable value. Since the largest probability is <span class="math notranslate nohighlight">\(0.4\)</span> at <span class="math notranslate nohighlight">\(x=3\)</span>, the mode is</p>
+<div class="math notranslate nohighlight">
+\[
+      \text{mode} = 3.
+      \]</div>
+</div>
+</li>
+<li><p>Find the median of the distribution.</p>
+<div class="answer-narrow">
+<p>The cumulative probabilities are</p>
+<div class="math notranslate nohighlight">
+\[
+      P(x\leq 1)=0.1,\qquad P(x\leq 2)=0.3,\qquad P(x\leq 3)=0.7.
+      \]</div>
+<p>Since the cumulative probability first exceeds 0.5 at <span class="math notranslate nohighlight">\(x=3\)</span>, the median is</p>
+<div class="math notranslate nohighlight">
+\[
+      \text{median} = 3.
+      \]</div>
+</div>
+</li>
+<li><p>A new variable <span class="math notranslate nohighlight">\(y\)</span> is defined by</p>
+<div class="math notranslate nohighlight">
+\[
+      y = 2x + 1.
+      \]</div>
+<p>Calculate the mean, mode, and median of <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="answer-narrow">
+<p>Since <span class="math notranslate nohighlight">\(\langle x \rangle = 3\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+      \langle y \rangle = 2\langle x\rangle + 1 = 2(3)+1 = 7.
+      \]</div>
+<p>The mode transforms in the same way:</p>
+<div class="math notranslate nohighlight">
+\[
+      \text{mode of } y = 2(3)+1 = 7.
+      \]</div>
+<p>The median also transforms in the same way:</p>
+<div class="math notranslate nohighlight">
+\[
+      \text{median of } y = 2(3)+1 = 7.
+      \]</div>
+<p>Therefore, the mean, mode, and median of <span class="math notranslate nohighlight">\(y\)</span> are all equal to 7.</p>
+</div>
+</li>
+</ol>
+<RAW HTML BREAK>
+<br><br>
+</RAW HTML BREAK></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch5-entropy_and_second_law"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_questions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">5.8. </span>Questions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Samer Kurdi, Dr. Jonathan Leach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
