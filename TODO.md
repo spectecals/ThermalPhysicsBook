@@ -1,22 +1,22 @@
+[ ] - TODO
+[ ] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
+
+[O] - DAFYDD
+[O] - fig for coin toss heads 4x in a row
+
+[/] - GET SAMER'S REVIEW
+
 [-] - NOT DONE
 [-] "s can approach it if temperature and pressure differences are made very small." - means you must maintain thermal equilibrium, tell students that. can then reference here in calusius 5.5
 [-] - change -10 in supercooled to 0 deg. NB: supercooling is cooling past point of freezing without solidifying!
 
-[ ] - TODO
-[ ] - i think ch5 supercool is wrong - should be -10 and 0, nothing else. can't freeze a liquid at room temp, so the reversible process should not be water from -10 to 20, freeze, cool to -10. it should be -10 to 0, freeze, 0 to -10.
-[ ] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
-[ ] - copy out annex, use JL notes to relate concepts and examples
-
-[O] - DAFYDD
-[O] - CHECK [[]]
-[O] - fig for coin toss heads 4x in a row
-[O] - [[ FIGS FOR END OF THIRD LAW ]]
-
-[/] - GET SAMER'S REVIEW
-[/] - CANT FIND: include jonathan leach's example (gibbs/clausius ch5 i think)
-[/] - IS THIS FIXED? fix per mole and molar heat capacity section
-
 [X] - DONE
+[X] - copy out annex, use JL notes to relate concepts and examples
+[X] - CHECK [[]]
+[X] - [[ FIGS FOR END OF THIRD LAW ]]
+[X] - CANT FIND: include jonathan leach's example (gibbs/clausius ch5 i think)
+[X] - IS THIS FIXED? fix per mole and molar heat capacity section
+[X] - i think ch5 supercool is wrong - should be -10 and 0, nothing else. can't freeze a liquid at room temp, so the reversible process should not be water from -10 to 20, freeze, cool to -10. it should be -10 to 0, freeze, 0 to -10.
 [X] - [[ FIG OF ALLOWED HEAT FLOW ONLY FROM HOT->COLD NOT COLD-> HOLD, LABEL THE CASES: (1) AND (2)]] -- see Module5_stefan/5.pdf
 [X] - [[ FIG OF 1KG 20C WATER -> 1KG ICE ]]
 [X] - a is q in supercooled liquid

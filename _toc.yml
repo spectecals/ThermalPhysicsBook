@@ -5,32 +5,31 @@ options:
 
 chapters:
 - file: ch1-introduction/01_intro
-#   # sections:
-#   # - file: ch1-introduction/02_questions
-#   # - file: ch1-introduction/03_solutions
+  # sections:
+  # - file: ch1-introduction/02_questions
+  # - file: ch1-introduction/03_solutions
 
 - file: ch2-temperature_and_heat/01_temperature_and_heat
-#   # sections:
-#   # - file: ch2-temperature_and_heat/02_questions
-#   # - file: ch2-temperature_and_heat/03_solutions
+  # sections:
+  # - file: ch2-temperature_and_heat/02_questions
+  # - file: ch2-temperature_and_heat/03_solutions
 
 - file: ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases
-#   # sections:
-#   # - file: ch3-kinetic_theory_of_gases/02_questions
-#   # - file: ch3-kinetic_theory_of_gases/03_solutions
+  # sections:
+  # - file: ch3-kinetic_theory_of_gases/02_questions
+  # - file: ch3-kinetic_theory_of_gases/03_solutions
 
 - file: ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics
-#   sections:
-#   - file: ch4-first_law_of_thermodynamics/02_questions
-#   - file: ch4-first_law_of_thermodynamics/03_solutions
+  # sections:
+  # - file: ch4-first_law_of_thermodynamics/02_questions
+  # - file: ch4-first_law_of_thermodynamics/03_solutions
 
 - file: ch5-entropy_and_second_law/01_entropy_and_second_law
   # sections:
   # - file: ch5-entropy_and_second_law/02_questions
   # - file: ch5-entropy_and_second_law/03_solutions
 
-# - file: ch6-heat_engines/01_Heat_engines
-#  sections:
-#  - file: ch6-heat_engines/02_Questions
-# - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
-#
+- file: ch6-heat_engines/01_Heat_engines
+  # sections:
+  # - file: ch6-heat_engines/02_Questions
+  # - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
