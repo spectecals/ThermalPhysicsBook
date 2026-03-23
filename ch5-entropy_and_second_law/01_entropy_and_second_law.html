@@ -176,11 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Entropy and the Second Law of Thermodynamics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../ch6-heat_engines/01_Heat_engines.html">6. Heat engines</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../ch6-heat_engines/02_Questions.html">6.7. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ch6-heat_engines/03_Solutions.html">6.8. Solutions</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch6-heat_engines/01_Heat_engines.html">6. Heat engines</a></li>
 </ul>
 
     </div>
@@ -1351,7 +1347,7 @@ S &amp;= \text{d}Q / T
 <h3>Calorimetric Processes<a class="headerlink" href="#calorimetric-processes" title="Permalink to this heading">#</a></h3>
 <p>Two bodies initially at temperatures <span class="math notranslate nohighlight">\(T_H\)</span> and <span class="math notranslate nohighlight">\(T_C\)</span> are brought into thermal contact and reach a common final temperature <span class="math notranslate nohighlight">\(T_f\)</span>.</p>
 <figure class="align-default" id="blocksreachingequilibrium">
-<a class="reference internal image-reference" href="../_images/BlocksReachingEquilibrium.png"><img alt="../_images/BlocksReachingEquilibrium.png" src="../_images/BlocksReachingEquilibrium.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="../_images/BlocksReachingEquilibrium.png"><img alt="../_images/BlocksReachingEquilibrium.png" src="../_images/BlocksReachingEquilibrium.png" style="width: 100%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5.9 </span><span class="caption-text">Heat transfer between two reservoirs. <span class="math notranslate nohighlight">\(Q\)</span> is transferred from <span class="math notranslate nohighlight">\(T_H\)</span> to <span class="math notranslate nohighlight">\(T_C\)</span> and after some time the reservoirs reach the same temperature <span class="math notranslate nohighlight">\(T_f\)</span>.</span><a class="headerlink" href="#blocksreachingequilibrium" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -1476,7 +1472,7 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
 <p><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Two thermal bodies with temperatures <span class="math notranslate nohighlight">\(T_H\)</span> and <span class="math notranslate nohighlight">\(T_C\)</span> are transferring heat <span class="math notranslate nohighlight">\(Q\)</span>. Case (A) depicts heat transfer from <span class="math notranslate nohighlight">\(T_H\)</span> to <span class="math notranslate nohighlight">\(T_C\)</span>, and case (B) depicts transfer from <span class="math notranslate nohighlight">\(T_C\)</span> to <span class="math notranslate nohighlight">\(T_H\)</span>. We know case (B) is not allowed, but can we prove it?</span><a class="headerlink" href="#allowedheattransfers" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Let’s calculate <span class="math notranslate nohighlight">\(\Delta S\)</span> for cases (A) and (B) in figure {ref} <code class="docutils literal notranslate"><span class="pre">AllowedHeatTransfers</span></code>.</p>
+<p>Let’s calculate <span class="math notranslate nohighlight">\(\Delta S\)</span> for cases (A) and (B) in figure <a class="reference internal" href="#allowedheattransfers"><span class="std std-ref">Two thermal bodies with temperatures T_H and T_C are transferring heat Q. Case (A) depicts heat transfer from T_H to T_C, and case (B) depicts transfer from T_C to T_H. We know case (B) is not allowed, but can we prove it?</span></a>.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(T_H = 100^\circ\)</span> C</p></li>
 <li><p><span class="math notranslate nohighlight">\(T_C = 0^\circ\)</span> C</p></li>
@@ -1490,12 +1486,9 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
     &amp;= \frac{-Q}{T_H} + \frac{Q}{T_C} \\
     &amp;= Q\left(\frac{1}{T_C} - \frac{1}{T_H}\right) \\
     \Delta S &amp;&gt; 0 \qquad (\text{since } T_H &gt; T_C) \\
-    \to &amp;\ \ \text{process is allowed}.
+    \to \ \ \text{process is allowed } &amp; \text{as it does not violate the 2nd law}.
     \end{aligned}
     \end{split}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> (does not violate the 2nd law of thermodynamics)
-</pre></div>
-</div>
 </li>
 <li><p>Case B: heat flow from <span class="math notranslate nohighlight">\(T_C \to T_H\)</span></p>
 <div class="math notranslate nohighlight">
@@ -1505,12 +1498,9 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
     &amp;= \frac{Q}{T_H} - \frac{Q}{T_C} \\
     &amp;= Q\left(\frac{1}{T_H} - \frac{1}{T_C}\right) \\
     \Delta S &amp;&lt; 0 \qquad (\text{since }T_C &lt; T_H) \\
-    \to &amp;\ \ \text{process is not allowed}.
+    \to \ \ \text{process is not } &amp; \text{allowed as it violates the 2nd law}.
     \end{aligned}
     \end{split}\]</div>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> (violates the 2nd law of thermodynamics)
-</pre></div>
-</div>
 </li>
 </ol>
 </section>
@@ -1541,9 +1531,9 @@ Q = 1\ \text{kg} \times 333 \ \text{kJ/kg} \\
 \therefore Q = 333 \ \text{kJ}.
 \end{split}\]</div>
 <figure class="align-default" id="shockedsystem">
-<a class="reference internal image-reference" href="../_images/ShockedSystem.png"><img alt="../_images/ShockedSystem.png" src="../_images/ShockedSystem.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/ShockedSystem.png"><img alt="../_images/ShockedSystem.png" src="../_images/ShockedSystem.png" style="width: 70%;" /></a>
 </figure>
-<p>Now consider a bottle of purified water and cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). When the bottle is taken out and exposed to room temperature (<span class="math notranslate nohighlight">\(20 ^\circ\)</span> C), the water remains liquid at <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C. We can then induce crystallization of the water into ice by creating a nucleation site, for example by (slamming the bottle onto a surface)[<a class="reference external" href="https://www.youtube.com/watch?v=uQSoaiubuA0">https://www.youtube.com/watch?v=uQSoaiubuA0</a>], thereby releasing the latent heat of fusion into the environment.</p>
+<p>Now consider a bottle of purified water and cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). When the bottle is taken out and exposed to room temperature (<span class="math notranslate nohighlight">\(20 ^\circ\)</span> C), the water remains liquid at <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C. We can then induce crystallization of the water into ice by creating a nucleation site, for example by <a href="https://www.youtube.com/watch?v=uQSoaiubuA0" target="_blank">slamming the bottle onto a surface</a>, thereby releasing the latent heat of fusion into the environment.</p>
 <p>This is the heat released into the environment, but what is the change in entropy of this process? Please note that the environment acts as a heat sink.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1561,7 +1551,7 @@ Q = 1\ \text{kg} \times 333 \ \text{kJ/kg} \\
 \Delta S &amp;= -0.03\ \text{kJ / K}.
 \end{aligned}
 \end{split}\]</div>
-<p>As <span class="math notranslate nohighlight">\(\Deta S &lt; 0\)</span>, this violates the second law of thermodynamics.</p>
+<p>As <span class="math notranslate nohighlight">\(\Delta S &lt; 0\)</span>, this violates the second law of thermodynamics.</p>
 <p>This is because the formula <span class="math notranslate nohighlight">\( \text{d} S = \frac{\text{d}Q}{T} \)</span> is only valid for reversible processes. Freezing at <span class="math notranslate nohighlight">\(-10^\circ\mathrm{C}\)</span> is irreversible because heat transfer occurs across a finite temperature difference.</p>
 <p>To calculate the entropy change correctly, a reversible path between the same initial and final states must be constructed. Our goal has an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction:</p>
 <ol class="arabic simple">
@@ -1716,23 +1706,28 @@ c = T\left(\frac{\text{d}S}{\text{d}T}\right) \\
 =\frac{\text{d}S}{\text{d}\ln T}
 \end{split}\]</div>
 <ul class="simple">
-<li><p>at <span class="math notranslate nohighlight">\( T \to 0, \ln T \to \infty, S \to 0 hence c \to 0 \)</span>.
+<li><p>at <span class="math notranslate nohighlight">\( T \to 0, \ln T \to \infty, S \to 0\)</span> hence <span class="math notranslate nohighlight">\(c \to 0 \)</span>.
 The result that <span class="math notranslate nohighlight">\( c = 0 \)</span> disagrees with the equipartition theorem in <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-heatcap-equip"><span class="std std-numref">Section 3.3</span></a> where <span class="math notranslate nohighlight">\(c = \frac{R}{2}\)</span> per mole per degree of freedom, but that’s because the equipartition function is a high temperature theorem, and is invalid for low temperatures.</p></li>
 </ul>
 <section id="what-is-the-outcome-of-the-3rd-law">
 <h3>What is the outcome of the 3rd law?<a class="headerlink" href="#what-is-the-outcome-of-the-3rd-law" title="Permalink to this heading">#</a></h3>
 <p>One outcome of the third law is that absolute zero is unattainable in a finite number of steps (and is messy to prove).</p>
-<!-- [[ FIGS of zigzags FOR END OF THIRD LAW ]] -->
+<figure class="align-default" id="rd-law">
+<a class="reference internal image-reference" href="../_images/Entropy_Temperature_AB.png"><img alt="../_images/Entropy_Temperature_AB.png" src="../_images/Entropy_Temperature_AB.png" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Entropy curves <span class="math notranslate nohighlight">\(X\)</span> as a function of temperature. In (1), curves <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are sufficiently separated that it is possible to alternate between adiabatic and isothermal processes such that a finite number of steps may result in <span class="math notranslate nohighlight">\(T=0\)</span>. In (2), it is impossible to reach absolute zero if the third law is obeyed.</span><a class="headerlink" href="#rd-law" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Let us denote parameters describing the state of the system with <span class="math notranslate nohighlight">\(X\)</span>. Consider two cases:</p>
 <ul class="simple">
-<li><p>Case 1, <span class="math notranslate nohighlight">\( S(T \to 0) &gt; 0 \)</span>. Here, the third law is not obeyed.</p></li>
+<li><p>Case 1, <span class="math notranslate nohighlight">\( S(T \to 0) \geq 0 \)</span>. Here, the third law is not obeyed for all systems.</p></li>
 <li><p>Case 2, <span class="math notranslate nohighlight">\( S(T \to 0) \to 0 \)</span>. Here, the third law is obeyed.</p></li>
 </ul>
 <p>The procedure for proving this is as follows:</p>
 <p>Transitions from <span class="math notranslate nohighlight">\(X_1 \to X_2\)</span> are an isothermal increase in <span class="math notranslate nohighlight">\(X\)</span> (cooling).
 Transitions from <span class="math notranslate nohighlight">\(X_2 \to X_1\)</span> are an adiabatic decrease in <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>From Figure [[ZIGZAGS]], it is clear that it is possible to cool to <span class="math notranslate nohighlight">\( T=0K \)</span> okay with having a finite number of steps.
-For case 2, it is clear that it will take an infinite number of steps to reach <span class="math notranslate nohighlight">\(T=0\)</span> K as both curves in FIgure [[ZIGZAG]] satisfy the third law.</p>
+<p>From <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.11</span></a>, it is clear that it is possible to cool to <span class="math notranslate nohighlight">\( T=0K \)</span> okay with having a finite number of steps.
+For case 2, it is clear that it will take an infinite number of steps to reach 0 K as both curves in <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.11</span></a> satisfy the third law as both <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> curves are arbitrarily close as <span class="math notranslate nohighlight">\(T \to 0\)</span> K.</p>
 </section>
 </section>
 </section>

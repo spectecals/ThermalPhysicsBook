@@ -70,7 +70,6 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.7. Questions" href="02_Questions.html" />
     <link rel="prev" title="5. Entropy and the Second Law of Thermodynamics" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -176,11 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Heat engines</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_Questions.html">6.7. Questions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_Solutions.html">6.8. Solutions</a></li>
-</ul>
-</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Heat engines</a></li>
 </ul>
 
     </div>
@@ -370,6 +365,7 @@ document.write(`
 <li><p>Concept in Thermal Physics: Chapter 13: 13.2-13.5, 13.7</p></li>
 <li><p>University Physics with Modern Physics 15th edition: Chapter 20: 20.2-20.4,20.6</p></li>
 <li><p>Octane ratings expained: <a class="reference external" href="https://www.youtube.com/watch?v=8VWEwEveGTQ&amp;amp;ab_channel=EricTheCarGuy">https://www.youtube.com/watch?v=8VWEwEveGTQ&amp;ab_channel=EricTheCarGuy</a></p></li>
+<li><p>Carnot cycle and Carnot engine: <a class="reference external" href="https://www.khanacademy.org/science/physics/thermodynamics/laws-of-thermodynamics/v/carnot-cycle-and-carnot-engine">https://www.khanacademy.org/science/physics/thermodynamics/laws-of-thermodynamics/v/carnot-cycle-and-carnot-engine</a></p></li>
 <li><p>A reality check on renewables: <a class="reference external" href="https://www.youtube.com/watch?v=E0W1ZZYIV8o&amp;amp;t=378s&amp;amp;ab_channel=TED-Ed">https://www.youtube.com/watch?v=E0W1ZZYIV8o&amp;t=378s&amp;ab_channel=TED-Ed</a></p></li>
 </ul>
 </div>
@@ -421,12 +417,7 @@ All heat engines absorb heat <span class="math notranslate nohighlight">\(Q_{H}\
 <p>A way to quantify how well the engine is able to convert heat into work is by calculating the thermal efficiency <span class="math notranslate nohighlight">\(e\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[e=\frac{W}{Q_{H}} =1+\frac{Q_{C}}{Q_{H}}=1-\frac{|Q_{C}|}{Q_{H}}\]</div>
-<p>Since the heat rejected to the enviroment <span class="math notranslate nohighlight">\(Q_{C}\)</span> in a heat engine is always negative, the efficiency of a heat engine is always less than unity. This fundamental limitation is expressed by the <strong>Kelvin-Planck statement of the second law of thermodynamics</strong>, which states:</p>
-<div class="definition admonition">
-<p class="admonition-title">Definition: Kelvin-Planck statement</p>
-<p>It is impossible for any device operating on a cycle to receive heat from a single thermal reservoir and produce a net amount of work.</p>
-</div>
-<p>In other words, no heat engine can convert all the heat it receives into work. A portion of the energy must always be rejected to a lower-temperature environment. This limitation is not caused by friction or other practical imperfections. Even an ideal heat engine cannot achieve 100% efficiency. The maximum possible efficiency depends only on the temperatures of the hot and cold reservoirs, a result that will be discussed in the context of the Carnot cycle.</p>
+<p>Since the heat rejected to the enviroment <span class="math notranslate nohighlight">\(Q_{C}\)</span> in a heat engine is always negative, the efficiency of a heat engine is always less than unity. This fundamental limitation is expressed by the <strong>Kelvin-Planck statement of the second law of thermodynamics</strong>, which states that no heat engine can convert all the heat it receives into work. A portion of the energy must always be rejected to a lower-temperature environment. This limitation is not caused by friction or other practical imperfections. Even an ideal heat engine cannot achieve 100% efficiency. The maximum possible efficiency depends only on the temperatures of the hot and cold reservoirs, a result that will be discussed in the context of the Carnot cycle.</p>
 </section>
 <section id="carnot-cycle">
 <h2><span class="section-number">6.2. </span>Carnot cycle<a class="headerlink" href="#carnot-cycle" title="Permalink to this heading">#</a></h2>
@@ -520,9 +511,9 @@ T_{C}V_{d}^{\gamma-1}=T_{H}V_{a}^{\gamma-1}
 <p>The thermal efficiency of the cycle is then:</p>
 <div class="math notranslate nohighlight">
 \[e=1+\frac{Q_{C}}{Q_{H}}=1-\frac{T_{C}}{T_{H}}\underbrace{\frac{\mathrm{ln}\frac{V_{c}}{V_{d}}}{\mathrm{ln}\frac{V_{b}}{V_{a}}}}_{=1}=1-\frac{T_{C}}{T_{H}}\]</div>
-<p>Equivalently, the coefficient of performance of the Carnot refrigerator can be proven to be:</p>
+<p>Equivalently, the coefficient of performance (<span class="math notranslate nohighlight">\(COP\)</span>) of the Carnot refrigerator can be proven to be:</p>
 <div class="math notranslate nohighlight">
-\[K=\frac{Q_{C}}{|W|}=\frac{T_{C}}{T_{H}-T_{C}}\]</div>
+\[COP=\frac{Q_{C}}{|W|}=\frac{T_{C}}{T_{H}-T_{C}}\]</div>
 <p>, where now <span class="math notranslate nohighlight">\(W\)</span> is negative (input work required to drive the cycle).</p>
 </section>
 <section id="carnot-principles">
@@ -538,35 +529,42 @@ The Carnot cycle is not a practical engine cycle and cannot be implemented exact
 <p>[FIG NEEDED]</p>
 <section id="otto-cycle">
 <h3>Otto cycle<a class="headerlink" href="#otto-cycle" title="Permalink to this heading">#</a></h3>
-<p>Considering again <code class="xref std std-numref docutils literal notranslate"><span class="pre">InternalCombustion</span></code>, let’s analyze the five steps:</p>
+<p>The Otto cycle is composed of 4 main processes: two adiabatic  and two isochoric processes summarized in  <code class="xref std std-numref docutils literal notranslate"><span class="pre">InternalCombustion</span></code>, and outlined below:</p>
 <ul class="simple">
-<li><p>Compression stroke: the piston compresesses the mixture (adiabatic compression from <span class="math notranslate nohighlight">\(rV\)</span> to <span class="math notranslate nohighlight">\(V\)</span>, with <span class="math notranslate nohighlight">\(r\)</span> compression ratio);</p></li>
-<li><p>Ignition: the mixture is then ignited (heat <span class="math notranslate nohighlight">\(Q_{H}\)</span> is absorbed from the hot reservoir at constant volume).</p></li>
-<li><p>Power stroke: the heated gas expands (adiabatic expansion from <span class="math notranslate nohighlight">\(V\)</span> to <span class="math notranslate nohighlight">\(rV\)</span>)</p></li>
-<li><p>Exhaust stroke: combustion products are expelled through the opening of exhaust valves (exchange of heat <span class="math notranslate nohighlight">\(|Q_{C}|\)</span> to the cold reservoir at constant volume).</p></li>
+<li><p><strong>Step 0</strong>: Intake stroke. Here the piston moves down, allowing gasoline-air mixture to enter the cylinder via the intake valve.</p></li>
+<li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the misture (adiabatic process).</p></li>
+<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Ignition. The spark plug ignites the mixture.<span class="math notranslate nohighlight">\(Q_{H}\)</span> is added to the system by the burnt fuel. This is an isochoric step.</p></li>
+<li><p><strong>Step 3 (<span class="math notranslate nohighlight">\(c-d\)</span>)</strong>: Power stroke. The hot mixture expands with pistons being pushed down. This is an adiabatic expansion step, in which the volume is expanded from <span class="math notranslate nohighlight">\(V\)</span> back to <span class="math notranslate nohighlight">\(rV\)</span>.</p></li>
+<li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> id rejected to the cold reservoir.</p></li>
 </ul>
 <p>This idealized model of the thermodynamic processes in a gasoline engine is called Otto cycle and its diagram is reported in <a class="reference internal" href="#otto-pv"><span class="std std-numref">Fig. 6.6</span></a></p>
 <figure class="align-default" id="otto-pv">
 <a class="reference internal image-reference" href="../_images/OttoCycle.png"><img alt="../_images/OttoCycle.png" src="../_images/OttoCycle.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of Otto cycle. Red curves represent adiabatic transformations, while purple curves stand for isochoric processes.</span><a class="headerlink" href="#otto-pv" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.6 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the Otto cycle. Red curves represent adiabatic processes, while purple curves represent the isochoric processes.</span><a class="headerlink" href="#otto-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>It is possible to calculate the efficiency of this idealized cycle.</p>
-<p>Starting from processes bc and da which are constant-volume:</p>
+<p>Let us now calculate the efficiency of the Otto cycle</p>
+<p>Let us start from the ioschoric processes <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(d-a\)</span>. An isochoric process is a process at constant volume. Since the volume is not changed, o work is done, <span class="math notranslate nohighlight">\(W=0\)</span>, as:</p>
+<div class="math notranslate nohighlight">
+\[dW=pdV\]</div>
+<p>From the first law of thermodynamics <span class="math notranslate nohighlight">\(\Delta U=Q-W=Q\)</span> and then:</p>
+<div class="math notranslate nohighlight">
+\[Q=nC_{V}\Delta T\]</div>
+<p>Substituting:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{gather*}
-Q_{H}=nC_{V}(T_{c}−T_{b})\\
-Q_{C}=nC_{V}(T_{a}-T_{d})
+Q_{H}=nC_{V}(T_{c}−T_{b})&gt;0\quad ,\mathrm{Heat\ added},\ T\uparrow\\
+Q_{C}=nC_{V}(T_{a}-T_{d})&lt;0\quad ,\mathrm{Heat\ removed},\ T\downarrow
 \end{gather*}
 \end{split}\]</div>
 <p>The thermal efficiency <span class="math notranslate nohighlight">\(e\)</span> is given then by:</p>
 <div class="math notranslate nohighlight">
 \[
-e=\frac{Q_{H}+Q_{C}}{Q_{H}}=\frac{T_{c}−T_{b}+T_{a}−T_{d}}{T_{c}−T_{b}}
+e=\frac{Q_{H}+Q_{C}}{Q_{H}}=\frac{T_{c}−T_{b}+T_{a}−T_{d}}{T_{c}−T_{b}} 
 \]</div>
-<p>By making use of the fact that processes ab and cd are adiabatic:</p>
+<p>Because processes <span class="math notranslate nohighlight">\(a-b\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span> are adiabatic, we know that:</p>
 <div class="math notranslate nohighlight">
 \[
 T_{a}V_{a}^{γ−1}=T_{b}V_{b}^{γ−1}\quad \mathrm{and}\  
@@ -579,23 +577,35 @@ T_{a}(rV)^{γ−1}=T_{b}V^{γ−1}\\
 T_{c}V^{γ−1}=T_{d}(rV)^{γ−1}
 \end{gather*}\end{split}\]</div>
 <p>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is the ratio of heat capacities of the gas.
-Substituting into Eq. \ref{}:</p>
+Substituting into <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq:eff_Otto</span></code>:</p>
 <div class="math notranslate nohighlight">
 \[e=\frac{T_{d}r^{γ−1}−T_{a}r^{γ−1}+T_{a}−T_{d}}{T_{d}r^{γ−1}−T_{a}r^{γ−1}}=\frac{(T_{d}−T_{a})(r^{γ−1}−1)}{(T_{d}−T_{a})r^{γ−1}}=1−\frac{1}{r^{γ−1}}\]</div>
-<p>Even in the case of an idealized model as Otto cycle, it is worth observing that the thermal efficiency is always less then 1. Using as reference values <span class="math notranslate nohighlight">\(r=8\)</span> and <span class="math notranslate nohighlight">\(\gamma=1.4\)</span> the theoretical efficiency is <span class="math notranslate nohighlight">\(e[\%]\approx 56 \%\)</span>: in real internal-combustion engines, where the mixture does not behave as an ideal gas and phenomena such as friction, heat dissipation and turbulence are considered, efficiency is much lower (typically around 35 %).</p>
-<p>Increasing the compression ratio would result in an higher efficiency, but in reality this also increases the temperature at the end of the compression stroke. This can result in a spontaneous ignition of the fuel, which is known as detonation or pre-ignition, which eventually damages mechanically the engine.</p>
+<p>In the idealized model of the Otto cycle, it is worth noting that the thermal efficiency is always less then 1. Using as reference values <span class="math notranslate nohighlight">\(r=8\)</span> and <span class="math notranslate nohighlight">\(\gamma=1.4\)</span> (for air) the theoretical efficiency is <span class="math notranslate nohighlight">\(e\approx 56 \%\)</span>. In real internal-combustion engines, where the mixture does not behave as an ideal gas and when phenomena such as friction, heat dissipation and turbulence are considered, efficiency is lower (typically around <span class="math notranslate nohighlight">\(\approx 35 \% \)</span>).</p>
+<p>Increasing the compression ratio would result in an higher efficiency, but in reality this also increases the temperature at the end of the compression stroke. This can result in a spontaneous ignition of the fuel, which is known as detonation or pre-ignition, which can eventually damage the engine.</p>
 </section>
 <section id="diesel-cycle">
 <h3>Diesel cycle<a class="headerlink" href="#diesel-cycle" title="Permalink to this heading">#</a></h3>
-<p>The Diesel engine represents an alternative to the gasoline one, whose usefulness comes from the possibility to increase the compression ratio without risking pre-ignition of the fuel (it is injected in the cylinder after the compression stroke, right before the power stroke).</p>
+<p>Diesel engine operates similarly to the gasoline engine. Its cycle is called the Diesel cycle with one one main difference that no fuel is injected in the cylinder at the beginning of the compression stroke. This difference permits the increase of the compression ratio as it is removing the risk of pre-ignition of the fuel.</p>
+<p>The Diesel cycle is shown in <a class="reference internal" href="#diesel-pv"><span class="std std-numref">Fig. 6.7</span></a> and is composed of 2 adiabatic steps, in addition to an isochoric and isobaric step. The steps are summarized below:</p>
+<ul class="simple">
+<li><p><strong>Step 0</strong>: Intake stroke. Only air enters the cylinder (no fuel)</p></li>
+<li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the air. This is an adiabatic process, where the gas is compressed from <span class="math notranslate nohighlight">\(rV\)</span> to <span class="math notranslate nohighlight">\(V\)</span></p></li>
+<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Fuel ignition. This step is the main difference from the Otto cycle. Intake valve injects fuel fast enough to keep the pressure constant. Fuel ignites spontaneously (no spark plug) as high temperature is developed during adiabatic compression (<span class="math notranslate nohighlight">\(a-b\)</span>)</p></li>
+<li><p><strong>Step 3 (<span class="math notranslate nohighlight">\(c-d\)</span>)</strong>: Power stroke. The hot mixture expands with pistons being pushed down. This is an adiabatic expansion step, in which the volume is expanded from <span class="math notranslate nohighlight">\(V\)</span> back to <span class="math notranslate nohighlight">\(rV\)</span>.</p></li>
+<li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> id rejected to the cold reservoir.</p></li>
+</ul>
 <figure class="align-default" id="diesel-pv">
 <a class="reference internal image-reference" href="../_images/DieselCycle.png"><img alt="../_images/DieselCycle.png" src="../_images/DieselCycle.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of Diesel cycle. Red curves represent adiabatic processes, while purple and yellow ones stand for isochoric and isobaric transformation respectively.</span><a class="headerlink" href="#diesel-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In <a class="reference internal" href="#diesel-pv"><span class="std std-numref">Fig. 6.7</span></a>  it is reported the pV diagram of the Diesel cycle. Starting at point a, air (no fuel injected in this phase) is compressed adiabatically to point b. Differently from Otto cycle, from state b to c heat is given by the hot reservoir at constant pressure.  Then thermodynamic processes cd  and da follow the same behaviour as in gasoline cycle.</p>
-<p>Since the value of the compression ratio can rise up to 20 (15-20 typical values), the theoretical efficiency of the idealized Diesel cycle is about 70%.</p>
+<p>The Diesel cycle enables theoretical compression ratios of 15-20 and a theoretical efficiency of <span class="math notranslate nohighlight">\(\approx 70 \% \)</span> (using <span class="math notranslate nohighlight">\(\gamma\approx 1.4\)</span> for air).</p>
+<p>Summarizing:</p>
+<ul class="simple">
+<li><p>Otto cycle: Fuel+air before compression <span class="math notranslate nohighlight">\(\Rightarrow\)</span> Risk of preignition before completing compression;</p></li>
+<li><p>Diesel cycle: compressing air before injecting fuel <span class="math notranslate nohighlight">\(\Rightarrow\)</span> No preignition, higher compression ratios and higher thermal efficiency.</p></li>
+</ul>
 </section>
 </section>
 <section id="refrigerators-and-refrigeration-cycle">
@@ -720,8 +730,6 @@ Inside the reactor the reaction occurring is:</p>
 To control the chain reaction, rods made of boron are implemented (they absorb neutrons): when rods are inserted in the reactor, the reaction is slowed down, while it speeds up when rods are removed.</p>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -762,15 +770,6 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title"><span class="section-number">5. </span>Entropy and the Second Law of Thermodynamics</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="02_Questions.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.7. </span>Questions</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
