@@ -1,5 +1,4 @@
 [ ] - TODO
-[ ] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
@@ -11,6 +10,7 @@
 [-] - change -10 in supercooled to 0 deg. NB: supercooling is cooling past point of freezing without solidifying!
 
 [X] - DONE
+[X] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
 [X] - copy out annex, use JL notes to relate concepts and examples
 [X] - CHECK [[]]
 [X] - [[ FIGS FOR END OF THIRD LAW ]]
