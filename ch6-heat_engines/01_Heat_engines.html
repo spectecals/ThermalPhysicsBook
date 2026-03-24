@@ -338,14 +338,9 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-refrigeration-cycle">6.4. Refrigerators and refrigeration cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-law-of-thermodynamics">6.5. Second law of thermodynamics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">Equivalence between Kelvin and Clausius statement</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">Nuclear power</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">6.5. Equivalence between Kelvin and Clausius statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a></li>
 </ul>
             </nav>
         </div>
@@ -610,8 +605,9 @@ Substituting into <code class="xref std std-numref docutils literal notranslate"
 </section>
 <section id="refrigerators-and-refrigeration-cycle">
 <h2><span class="section-number">6.4. </span>Refrigerators and refrigeration cycle<a class="headerlink" href="#refrigerators-and-refrigeration-cycle" title="Permalink to this heading">#</a></h2>
-<p>Refrigerators can be seen as heat engines operating in reverse. It takes heat from a cold place (the inside of the refrigerator) and gives it off to a warmer place (air in the room); in order to do that the refrigerator requires a net input of mechanical work.
-With the sign conventions already introduced, for a refrigerator <span class="math notranslate nohighlight">\(Q_{C}\)</span> is positive but both <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\(Q_{H}\)</span> are negative.
+<p>In nature, heat is transferred spontaneously from regions of higher temperature to regions of lower temperature. For example, a hot object placed in a cooler environment will naturally lose heat until thermal equilibrium is reached.
+The reverse process, however, cannot occur spontaneously. Transferring heat from a colder region to a warmer one requires the use of special devices known as <strong>refrigerators</strong>. Like heat engines, refrigerators operate on thermodynamic cycles and use a working fluid called a <strong>refrigerant</strong>.</p>
+<p>With the sign conventions already introduced, for a refrigerator <span class="math notranslate nohighlight">\(Q_{C}\)</span> is positive but both <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\(Q_{H}\)</span> are negative.
 Hence:</p>
 <div class="math notranslate nohighlight">
 \[|W|=-W\quad\quad |Q_{H}|=-Q_{H}\]</div>
@@ -619,11 +615,14 @@ Hence:</p>
 <p>From the first law of thermodynamics:</p>
 <div class="math notranslate nohighlight">
 \[Q_{H}+Q_{C}-W=0 \Rightarrow |Q_{H}|=Q_{C}+|W|\]</div>
-<p>The best refrigerator is the one that is able to remove the largest amount of <span class="math notranslate nohighlight">\(Q_{C}\)</span> with the smallest amount of work <span class="math notranslate nohighlight">\(W\)</span>. The figure of merit to classify performance is then defined <span class="math notranslate nohighlight">\(K\)</span>, i.e. coefficient of performance:</p>
+<p>The best refrigerator is the one that is able to remove the largest amount of <span class="math notranslate nohighlight">\(Q_{C}\)</span> with the smallest amount of work <span class="math notranslate nohighlight">\(W\)</span>.
+The effectiveness of a refrigerator is measured by the <strong>coefficient of performance</strong> (<span class="math notranslate nohighlight">\(COP\)</span>), which quantifies how much heat can be removed from the cold region per unit of work supplied.</p>
+<p>For a refrigerator, the desired effect is the removal of heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the refrigerated space, while the required input is the work <span class="math notranslate nohighlight">\(W\)</span> supplied to the compressor. The coefficient of performance of a refrigerator is therefore defined as:</p>
 <div class="math notranslate nohighlight">
-\[K=\frac{Q_{C}}{|W|}=\frac{Q_{C}}{|Q_{H}|-Q_{C}}\]</div>
+\[COP=\frac{Q_{C}}{|W|}=\frac{Q_{C}}{|Q_{H}|-Q_{C}}\]</div>
+<p>Unlike the thermal efficiency of a heat engine, the coefficient of performance of a refrigerator can be greater than unity. This simply means that the amount of heat removed from the refrigerated space can be larger than the mechanical work supplied to the compressor.</p>
 <p>[EXAMPLE ON JL NOTES, SIMPLE CALCULATION]</p>
-<p>Let us look now in detail the thermodynamic transformations the working substance undergoes in a refriegeration cycle:</p>
+<p>Let us look now in detail the thermodynamic transformations the refrigerant undergoes in a refrigeration cycle used in household refrigerators:</p>
 <p>[FIG NEEDED OF PV DIAGRAM OF REFRIGERATION CYCLE FROM JL NOTES]</p>
 <p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
 <ol class="arabic simple">
@@ -632,31 +631,30 @@ Hence:</p>
 <li><p>Adiabatic compression</p></li>
 <li><p>Isobaric compression</p></li>
 </ol>
+<!-- ## Second law of thermodynamics
+The experimental impossibility to build a heat engine characterized by 100% effiency is the basis of the second law of thermodynamics.
+Historically different statements have been provided to explain this phenomenon:
+- 1850: German scientist Rudolf Clausius formulates his statement of second law, which states:
+
+```{admonition} Definition: Clausius statement
+:class: definition
+It is impossible for any process to have as its sole result the transfer of heat from a cooler to 
+a hotter object.
+```
+This corresponds in having a 100% workless refrigerator, which from experience is not possible.
+
+- Later, both Lord Kelvin and Max Planck formulated another statement known as Kelvin-Planck statement or heat engine statement of second law:
+
+```{admonition} Definition: Kelvin-Planck statement
+:class: definition
+It is impossible to build a heat engine whose only outcome is to absorb energy in the form of heat from a single thermal reservoir and to deliver an equivalent amount of work.
+```
+This corresponds to a heat engine characterized by 100% thermal efficiency, which has already been shown to be not possible.
+
+It is important to point out that neither of these impossibilities violates the first law of thermodynamics. The second law, therefore, cannot be deducted from the first but comes out by itself as a separate law of nature. -->
 </section>
-<section id="second-law-of-thermodynamics">
-<h2><span class="section-number">6.5. </span>Second law of thermodynamics<a class="headerlink" href="#second-law-of-thermodynamics" title="Permalink to this heading">#</a></h2>
-<p>The experimental impossibility to build a heat engine characterized by 100% effiency is the basis of the second law of thermodynamics.
-Historically different statements have been provided to explain this phenomenon:</p>
-<ul class="simple">
-<li><p>1850: German scientist Rudolf Clausius formulates his statement of second law, which states:</p></li>
-</ul>
-<div class="definition admonition">
-<p class="admonition-title">Definition: Clausius statement</p>
-<p>It is impossible for any process to have as its sole result the transfer of heat from a cooler to
-a hotter object.</p>
-</div>
-<p>This corresponds in having a 100% workless refrigerator, which from experience is not possible.</p>
-<ul class="simple">
-<li><p>Later, both Lord Kelvin and Max Planck formulated another statement known as Kelvin-Planck statement or heat engine statement of second law:</p></li>
-</ul>
-<div class="definition admonition">
-<p class="admonition-title">Definition: Kelvin-Planck statement</p>
-<p>It is impossible to build a heat engine whose only outcome is to absorb energy in the form of heat from a single thermal reservoir and to deliver an equivalent amount of work.</p>
-</div>
-<p>This corresponds to a heat engine characterized by 100% thermal efficiency, which has already been shown to be not possible.</p>
-<p>It is important to point out that neither of these impossibilities violates the first law of thermodynamics. The second law, therefore, cannot be deducted from the first but comes out by itself as a separate law of nature.</p>
 <section id="equivalence-between-kelvin-and-clausius-statement">
-<h3>Equivalence between Kelvin and Clausius statement<a class="headerlink" href="#equivalence-between-kelvin-and-clausius-statement" title="Permalink to this heading">#</a></h3>
+<h2><span class="section-number">6.5. </span>Equivalence between Kelvin and Clausius statement<a class="headerlink" href="#equivalence-between-kelvin-and-clausius-statement" title="Permalink to this heading">#</a></h2>
 <p>It is possible to show that the two statements of second law are completely equivalent.
 To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless refrigerator and to attach in series a regular heat engine, as reported in Fig.</p>
 <p>[FIG NEEDED OF ANTICLAUSIUS+HEAT ENGINE]</p>
@@ -678,7 +676,6 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 <p>This means that the system composed of the “perfect” engine and the fridge cannot exist, thus proving that there are no heat engines with 100 % thermal efficiency.</p>
 </div>
 </section>
-</section>
 <section id="rankine-cycle">
 <h2><span class="section-number">6.6. </span>Rankine cycle<a class="headerlink" href="#rankine-cycle" title="Permalink to this heading">#</a></h2>
 <p>In real life, trying to reproduce Carnot cycle is practically impossible because of:</p>
@@ -698,12 +695,13 @@ Differently from Carnot cycle, Rankine exploits adiabatic expansion(compressions
 <li><p>Adibatic expansion through the turbine, thus generating mechanical work (possibly converted in electrical energy). Endpoint of the transformation is a low-pressure, high-volume, liquid-vapour mixture.</p></li>
 <li><p>Heat is removed by means of a condenser through isobaric compression, thus ending at the start of 1) with a low-volume, low-pressure liquid.</p></li>
 </ol>
+</section>
 <section id="nuclear-power">
-<h3>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h3>
-<p>Let us focus now on a particular case of Rankine cycle by analyzing the scheme of a nuclear power plant.</p>
-<p>[FIG needed of NUCLEAR POWER PLANT JL NOTES]</p>
-<p>Comparing Fig. \ref{} to the general Rankine cycle scheme, it is possible to observe that the most distinctive part to look at corresponds to the heater (reactor), where the working substance undergoes a change from liquid to vapour phase because of injection of heat.
-In the nuclear power plant, heat is produced through nuclear reactions, i.e. reactions involving a structural modification of the nucleus of matter involved.</p>
+<h2><span class="section-number">6.7. </span>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h2>
+<p>Thermodynamic principles also apply to systems that exploit nuclear reactions to generate electricity. Energy can exist in many forms—thermal, mechanical,kinetic, potential, chemical, electrical, and nuclear—and their sum constitutes the total energy of a system. In thermodynamic analysis we are usually interested in the change of energy rather than its absolute value. In most engineering
+applications, the energy extracted from a source is converted into thermal energy and subsequently into mechanical work by means of a heat engine.
+Nuclear power plants operate according to the same thermodynamic principle as conventional thermal power plants. The key difference lies in the source of heat. Instead of burning fossil fuels, nuclear reactors generate heat through nuclear reactions occurring inside the reactor core. The thermal energy produced by these reactions heats water to produce steam, which expands through a turbine connected to an electrical generator, thereby converting thermal energy into mechanical and then electrical energy.</p>
+<p><code class="xref std std-numref docutils literal notranslate"><span class="pre">NUCLEAR_POWER_PLANT</span></code> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
 <p>Among the possible reactions, fission of unstable nuclei are the ones exploited to retrieve the needed energy to sustain the nuclear power plant.
 Inside the reactor the reaction occurring is:</p>
 <div class="math notranslate nohighlight">
@@ -728,7 +726,10 @@ Inside the reactor the reaction occurring is:</p>
 <p>[FIG NEEDED OF CHAIN REACTION DECAY IN JL NOTES]</p>
 <p>In order to maximize the efficiency of the reaction, neutrons need to be slowed down. To achieve that, heavy water is used (<span class="math notranslate nohighlight">\(\mathrm{D}_{2}\mathrm{O}\)</span>) is used.
 To control the chain reaction, rods made of boron are implemented (they absorb neutrons): when rods are inserted in the reactor, the reaction is slowed down, while it speeds up when rods are removed.</p>
-</section>
+<p>Another possible source of nuclear energy is <strong>fusion</strong>, in which tow light nuclei combine to form a heavier nucleus while releasing energy. An example is the fusion reaction of two deuterium nuclei (deuterium is an isotope of hydrogen):</p>
+<div class="math notranslate nohighlight">
+\[    ^{2}_{1}\mathrm{H}+^{2}_{1}\mathrm{H}\rightarrow\ ^{3}_{2}\mathrm{He}+n\]</div>
+<p>Fusion reactions are responsible for the enormous energy output of the Sunand other stars. However, achieving controlled fusion on Earth is extremely challenging because the positevly charged nuclei strongly repel each other through Coulomb forces. To overcome this repulsion, the reacting particles must reach temperatures on the order of <span class="math notranslate nohighlight">\(10^{8}\)</span> K, conditions typically found only in stellar interiors or nuclear explosions.</p>
 </section>
 </section>
 
@@ -801,14 +802,9 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-refrigeration-cycle">6.4. Refrigerators and refrigeration cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#second-law-of-thermodynamics">6.5. Second law of thermodynamics</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">Equivalence between Kelvin and Clausius statement</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">Nuclear power</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">6.5. Equivalence between Kelvin and Clausius statement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a></li>
 </ul>
   </nav></div>
 

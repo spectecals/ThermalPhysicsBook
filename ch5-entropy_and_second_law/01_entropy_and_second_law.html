@@ -1522,19 +1522,11 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
 </section>
 <section id="entropy-change-in-supercooling-liquids">
 <h2><span class="section-number">5.8. </span>Entropy Change in Supercooling Liquids<a class="headerlink" href="#entropy-change-in-supercooling-liquids" title="Permalink to this heading">#</a></h2>
-<p>Consider a bottle of water placed in a freezer and cooled to <span class="math notranslate nohighlight">\(0 ^\circ\)</span> C until it solidifies into ice. We can calculate the heat generated during this phase transition as</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-Q = mL \\
-L = 333 \ \text{kJ/kg} \\
-Q = 1\ \text{kg} \times 333 \ \text{kJ/kg} \\
-\therefore Q = 333 \ \text{kJ}.
-\end{split}\]</div>
+<p>Consider a bottle of purified water, cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). When the bottle is taken out and exposed to room temperature (<span class="math notranslate nohighlight">\(20 ^\circ\)</span> C), the water remains liquid at <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C. We can then induce crystallization of the water into ice by creating a nucleation site, for example by <a href="https://www.youtube.com/watch?v=uQSoaiubuA0" target="_blank">slamming the bottle onto a surface</a>, thereby releasing the latent heat of fusion into the environment.</p>
 <figure class="align-default" id="shockedsystem">
 <a class="reference internal image-reference" href="../_images/ShockedSystem.png"><img alt="../_images/ShockedSystem.png" src="../_images/ShockedSystem.png" style="width: 70%;" /></a>
 </figure>
-<p>Now consider a bottle of purified water and cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). When the bottle is taken out and exposed to room temperature (<span class="math notranslate nohighlight">\(20 ^\circ\)</span> C), the water remains liquid at <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C. We can then induce crystallization of the water into ice by creating a nucleation site, for example by <a href="https://www.youtube.com/watch?v=uQSoaiubuA0" target="_blank">slamming the bottle onto a surface</a>, thereby releasing the latent heat of fusion into the environment.</p>
-<p>This is the heat released into the environment, but what is the change in entropy of this process? Please note that the environment acts as a heat sink.</p>
+<p>What is the change in entropy of this process? Please note that the environment acts as a heat sink.</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta S = \Delta S_\text{water/ice} + \Delta S_\text{environment}
@@ -1547,19 +1539,22 @@ Q = 1\ \text{kg} \times 333 \ \text{kJ/kg} \\
 \[\begin{split}
 \begin{aligned}
 \Delta S &amp;= \frac{\Delta Q_\text{water/ice}}{T_\text{water/ice}}+\frac{Q_\text{env}}{T_\text{env}} \\ 
-&amp;= \frac{-333}{263} + \frac{333}{273} \\
-\Delta S &amp;= -0.03\ \text{kJ / K}.
+&amp;= \frac{-333}{263} + \frac{333}{293} \\
+\Delta S &amp;= -0.13\ \text{kJ / K}.
 \end{aligned}
 \end{split}\]</div>
 <p>As <span class="math notranslate nohighlight">\(\Delta S &lt; 0\)</span>, this violates the second law of thermodynamics.</p>
-<p>This is because the formula <span class="math notranslate nohighlight">\( \text{d} S = \frac{\text{d}Q}{T} \)</span> is only valid for reversible processes. Freezing at <span class="math notranslate nohighlight">\(-10^\circ\mathrm{C}\)</span> is irreversible because heat transfer occurs across a finite temperature difference.</p>
-<p>To calculate the entropy change correctly, a reversible path between the same initial and final states must be constructed. Our goal has an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction:</p>
+<p>This calculation incorrectly assumes that latent heat is released at 263 K and transferred directly to an environment at 293 K. In reality, when crystallization begins in supercooled water, the release of latent heat rapidly raises the system temperature to the melting point (273 K). As a result, the phase change occurs at 273 K, and heat exchange with the surroundings takes place in the immediate surroundings at this temperature.</p>
+<p>To calculate the entropy change correctly, a reversible path must be constructed. This path must have an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction:</p>
+<!-- This is because the formula $ \text{d} S = \frac{\text{d}Q}{T} $ is only valid for reversible processes. Freezing at $-10^\circ\mathrm{C}$ is irreversible because heat transfer occurs across a finite temperature difference. -->
 <ol class="arabic simple">
-<li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K} \to \Delta S_1 \)</span></p></li>
+<li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K} \to \Delta S_1 \)</span>, due to heat release from the supercooling phase transition</p></li>
 <li><p>Freeze at <span class="math notranslate nohighlight">\(273 \ \mathrm{K} \to \Delta S_2 \)</span></p></li>
 <li><p>Cool solid <span class="math notranslate nohighlight">\(273 \rightarrow 263 \ \mathrm{K} \to \Delta S_3 \)</span></p></li>
 </ol>
-<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 + \Delta S_3 \)</span>.</p>
+<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 + \Delta S_3 \)</span>. This path does not represent the real process. It is chosen so that all heat transfers occur reversibly, allowing use of</p>
+<div class="math notranslate nohighlight">
+\[ \text{d}S=\frac{\text{d}Q_\text{rev}}{T}. \]</div>
 <p><span class="math notranslate nohighlight">\(\,\)</span></p>
 <section id="heat-liquid-263-273-k">
 <h3>(1) Heat liquid 263 → 273 K<a class="headerlink" href="#heat-liquid-263-273-k" title="Permalink to this heading">#</a></h3>
@@ -1601,11 +1596,15 @@ Q &amp;= c_{\text{liquid}} m \Delta T \\
 </section>
 <section id="freeze-at-273-k">
 <h3>(2) Freeze at 273 K<a class="headerlink" href="#freeze-at-273-k" title="Permalink to this heading">#</a></h3>
+<p>As in the usual case, a bottle of water placed in a freezer until it solidifies into ice. We can calculate the heat generated during this phase transition as</p>
 <div class="math notranslate nohighlight">
-\[
-Q = mL = 333 \ \mathrm{kJ}
-\]</div>
-<p>System entropy change:</p>
+\[\begin{split}
+Q = mL \\
+L = 333 \ \text{kJ/kg} \\
+Q = 1\ \text{kg} \times 333 \ \text{kJ/kg} \\
+\therefore Q = 333 \ \text{kJ}.
+\end{split}\]</div>
+<p>This is the heat released into the environment, but what about the entropy changes? System entropy:</p>
 <div class="math notranslate nohighlight">
 \[
 \Delta S_{\text{system}}
