@@ -346,7 +346,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy Density of Fuel and Energy Storage systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy density of fuel and energy storage systems</a></li>
 </ul>
             </nav>
         </div>
@@ -828,7 +828,7 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 </section>
 </section>
 <section id="energy-density-of-fuel-and-energy-storage-systems">
-<h2><span class="section-number">6.8. </span>Energy Density of Fuel and Energy Storage systems<a class="headerlink" href="#energy-density-of-fuel-and-energy-storage-systems" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">6.8. </span>Energy density of fuel and energy storage systems<a class="headerlink" href="#energy-density-of-fuel-and-energy-storage-systems" title="Permalink to this heading">#</a></h2>
 <p>Specific energy (MJ/kg), measures how much energy can be stored per unit mass of a fuel or energy carrier. It is a critical parameter when comparing different energy sources, particularly for applications such as transportation and power generation, where mass constraints are important.</p>
 <p>Uranium, used as a nuclear fuel, has an extraordinarily high specific energy compared to all chemical fuels. According to the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density_Extended_Reference_Table">Energy Density Extended Reference Table</a>, uranium used in nuclear fission has a specific energy on the order of <span class="math notranslate nohighlight">\(\sim 8\times 10^{7}\)</span> MJ/kg (depending on burnup assumptions). This immense value arises because nuclear reactions convert a small fraction of mass directly into energy, as described by mass-energy equivalence. As a result, a very small quantity of uranium can produce vast amounts of energy (<a class="reference internal" href="#sec-nuclear"><span class="std std-ref">Module 6.7</span></a>), which is why nuclear power plants require relatively little fuel compared to fossil-fuel plants.</p>
 <p>In contrast, conventional liquid fuels such as gasoline and diesel rely on chemical energy stored in molecular bonds. Gasoline has a specific energy of approximately 46 MJ/kg, while diesel is slightly higher at about 45–46 MJ/kg. These values are many orders of magnitude lower than uranium but are still very high among chemical fuels. Their relatively high specific energy, combined with their liquid state at ambient conditions, makes them highly suitable for transportation, where both energy density and ease of storage are essential. Diesel’s marginally higher energy density, along with higher engine efficiency, explains its widespread use in heavy-duty transport and industrial applications.</p>
@@ -844,11 +844,17 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 <tr class="row-even"><td><p>Uranium (fission)</p></td>
 <td><p><span class="math notranslate nohighlight">\(\sim 8 \times 10^7\)</span></p></td>
 </tr>
-<tr class="row-odd"><td><p>Diesel</p></td>
+<tr class="row-odd"><td><p>Natural gas</p></td>
+<td><p>53.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Diesel</p></td>
 <td><p><span class="math notranslate nohighlight">\(\sim 45-46\)</span></p></td>
 </tr>
-<tr class="row-even"><td><p>Gasoline</p></td>
+<tr class="row-odd"><td><p>Gasoline</p></td>
 <td><p><span class="math notranslate nohighlight">\(\sim 46\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Coal</p></td>
+<td><p>26-33</p></td>
 </tr>
 <tr class="row-odd"><td><p>Lithium-ion battery</p></td>
 <td><p><span class="math notranslate nohighlight">\(\sim 0.36-0.875\)</span></p></td>
@@ -859,35 +865,30 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 <p>Below we tackle two examples showcasing how nuclear and petrol efficiency:</p>
 <div class="example admonition">
 <p class="admonition-title">A Car Powered by Nuclear Fuel</p>
-<p><strong>Question</strong> An average car consumes about 5 L of gasoline per day. Assume that gasoline has average density</p>
-<div class="math notranslate nohighlight">
-\[\rho = 0.75\ \mathrm{kg}\ \mathrm{L}^{-1}\]</div>
-<p>and lower specific energy:</p>
-<div class="math notranslate nohighlight">
-\[H = 44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}\]</div>
-<p>Suppose that all practical difficulties associated with radioactivity and waste disposal are ignored, and that a car is instead powered by uranium-235. If the car is equipped with 0.1 kg of uranium-235, determine whether the car would ever need refueling under average driving conditions.</p>
+<p><strong>Question</strong> An average car consumes about 5 L of gasoline per day. Assume that gasoline has average density <span class="math notranslate nohighlight">\(\rho = 0.75\ \mathrm{kg}\ \mathrm{L}^{-1}\)</span> and lower specific energy <span class="math notranslate nohighlight">\(H = 44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}\)</span>.</p>
+<p>Suppose that all practical difficulties associated with radioactivity and waste disposal are ignored, and that a car is instead powered by uranium-235. If the car is equipped with 0.1 kg of uranium-235, determine whether the car would ever need refueling under average driving conditions. The specific energy of uranium-235 is <span class="math notranslate nohighlight">\(8\times 10^{10}\ \mathrm{kJ}\mathrm{kg}^{-1}\)</span></p>
 <p><strong>Solution</strong>. We first calculate the mass of gasoline consumed by the car in one day. Using the given density and daily fuel consumption,</p>
 <div class="math notranslate nohighlight">
-\[m_{\mathrm{gasoline}} = \rho V = (0.75\ \mathrm{kg}\ \mathrm{L}^{−1})(5\ \mathrm{L}/\mathrm{day}) = 3.75\ \mathrm{kg}/\mathrm{day}\]</div>
+\[m_{\mathrm{gasoline}} = \rho V = (0.75\ \mathrm{kg}\ \mathrm{L}^{−1})(5\ \mathrm{L}\mathrm{day}^{-1}) = 3.75\ \mathrm{kg}\mathrm{day}^{-1}\]</div>
 <p>The corresponding energy supplied to the car per day is therefore</p>
 <div class="math notranslate nohighlight">
-\[E_{\mathrm{day}} = m_{\mathrm{gasoline}}H = (3.75\ \mathrm{kg/day})(44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}) = 165000\ \mathrm{kJ/day}\]</div>
-<p>Next, we calculate the total energy available from the nuclear fuel. The complete fission of 1 kg of uranium-235 releases approximately <span class="math notranslate nohighlight">\(6.73\times 10^{10}\ \mathrm{kJ/kg}\)</span>.</p>
-<p>Therefore, for <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235, the total energy available is:</p>
+\[E_{\mathrm{day}} = m_{\mathrm{gasoline}}H = (3.75\ \mathrm{kg}\ \mathrm{day}^{-1})(44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}) = 165000\ \mathrm{kJ}\ \mathrm{day}^{-1}\]</div>
+<p>Next, we calculate the total energy available from the nuclear fuel. The complete fission of uranium-235 releases approximately <span class="math notranslate nohighlight">\(8\times 10^{10}\ \mathrm{kJ/kg}\)</span> (i.e. its specific energy).</p>
+<p>For <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235, the total energy available is:</p>
 <div class="math notranslate nohighlight">
 \[
-E_{\mathrm{nuclear}} = (6.73\times 10^{10}\ \mathrm{kJ/kg})(0.1\ \mathrm{kg}) = 6.73\times 10^{9}\ \mathrm{kJ}\]</div>
+E_{\mathrm{nuclear}} = (8\times 10^{10}\ \mathrm{kJ}\ \mathrm{kg}^{-1})(0.1\ \mathrm{kg}) = 8\times 10^{9}\ \mathrm{kJ}\]</div>
 <p>The number of days for which this amount of nuclear fuel could supply the car is</p>
 <div class="math notranslate nohighlight">
 \[
-N =\frac{E_{\mathrm{nuclear}}}{E_{\mathrm{day}}}=\frac{6.73 \times 10^{9}\ \mathrm{kJ}}{165000\ \mathrm{kJ/day}}\approx 40,790\ \mathrm{days}.\]</div>
-<p>This corresponds to approximately <span class="math notranslate nohighlight">\(\approx 112\)</span> years. Therefore, from a purely energetic point of view, the car would not need
+N =\frac{E_{\mathrm{nuclear}}}{E_{\mathrm{day}}}=\frac{8 \times 10^{9}\ \mathrm{kJ}}{165000\ \mathrm{kJ}\ \mathrm{day}^{-1}}\approx 48484\ \mathrm{days}.\]</div>
+<p>This corresponds to approximately <span class="math notranslate nohighlight">\(\approx 132\)</span> years. Therefore, from a purely energetic point of view, the car would not need
 refueling during its lifetime.</p>
 <p><strong>Equivalent power consumption during the same period</strong>
-It is useful to compare this result with the amount of gasoline that would be required to provide the same total energy. Since the car consumes <span class="math notranslate nohighlight">\(3.75\)</span> kg of gasoline per day, the total gasoline mass needed over <span class="math notranslate nohighlight">\(40790\)</span> days would be:</p>
+It is useful to compare this result with the amount of gasoline that would be required to provide the same total energy. Since the car consumes <span class="math notranslate nohighlight">\(3.75\)</span> kg of gasoline per day, the total gasoline mass needed over <span class="math notranslate nohighlight">\(48484\)</span> days would be:</p>
 <div class="math notranslate nohighlight">
-\[m_{\mathrm{total}} = (3.75\ \mathrm{kg/day})(40790\ \mathrm{days})\approx 1.53\times 10^{5}\ \mathrm{kg}\]</div>
-<p>Thus, about <span class="math notranslate nohighlight">\(150\)</span> tons of gasoline would be required to supply the same amount of energy as <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235.
+\[m_{\mathrm{total}} = (3.75\ \mathrm{kg}\ \mathrm{day}^{-1})(48484\ \mathrm{days})\approx 1.82\times 10^{5}\ \mathrm{kg}\]</div>
+<p>Thus, about <span class="math notranslate nohighlight">\(182\)</span> tons of gasoline would be required to supply the same amount of energy as <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235.
 This comparison illustrates the extremely high energy density of nuclear fuel
 compared with conventional chemical fuels.</p>
 </div>
@@ -903,48 +904,58 @@ So:</p>
 The tunnel width will be:</p>
 <div class="math notranslate nohighlight">
 \[d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}\]</div>
+<p><strong>Alternative method</strong>.</p>
+<p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube.</p>
+<p><strong>Solution</strong>.</p>
+<p>The width <span class="math notranslate nohighlight">\(d\)</span> of the tube can be found starting from the volume <span class="math notranslate nohighlight">\(V\)</span> of the tank, since:</p>
+<div class="math notranslate nohighlight">
+\[V=l\cdot d^{2}\Rightarrow d=\sqrt{\frac{V}{l}}\]</div>
+<p>, where <span class="math notranslate nohighlight">\(l\)</span> is the Edinburgh-London distance.
+Substituting:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+d&amp;=\sqrt{\frac{50\ \mathrm{L}}{(500\ \mathrm{miles})\cdot (1600\ \mathrm{m}\ miles^{-1}) }}=\\
+&amp;=\sqrt{\frac{50\times 10^{-3}\ \mathrm{m}^{3}}{8\times 10^{5}\ \mathrm{m}}}=250\ \mu\mathrm{m}
+\end{aligned}
+\end{split}\]</div>
+<p>The width of the tube is <span class="math notranslate nohighlight">\(d=250\ \mu\mathrm{m}\)</span>, thus showing just how energetically dense petrol is.
+That’s the key issue with fossil fuels: their energy density is extremely high. They pack a huge amount of usable energy into a small space. This is why replacing fossil fuels is so difficult and costly. It’s not just about producing energy – it’s about storing it efficiently.</p>
 </div>
-<div class="cell tag_remove-input docutils container">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">50e-3</span><span class="o">/</span><span class="mf">8e5</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Phase</th>
-      <th>Solid</th>
-      <th>Liquid</th>
-      <th>Gas</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Pressure</th>
-      <td>high</td>
-      <td>high</td>
-      <td>low</td>
-    </tr>
-    <tr>
-      <th>Temperature</th>
-      <td>low</td>
-      <td>high</td>
-      <td>high</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00025
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">8e9</span><span class="o">/</span><span class="mf">165e3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48484.84848484849
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">48485</span><span class="o">/</span><span class="mi">365</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>132.83561643835617
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -1026,7 +1037,7 @@ The tunnel width will be:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy Density of Fuel and Energy Storage systems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy density of fuel and energy storage systems</a></li>
 </ul>
   </nav></div>
 
