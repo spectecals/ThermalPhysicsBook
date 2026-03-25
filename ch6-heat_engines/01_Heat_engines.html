@@ -346,6 +346,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy Density of Fuel and Energy Storage systems</a></li>
 </ul>
             </nav>
         </div>
@@ -631,6 +632,23 @@ The effectiveness of a refrigerator is measured by the <strong>coefficient of pe
 <div class="math notranslate nohighlight">
 \[COP=\frac{Q_{C}}{|W|}=\frac{Q_{C}}{|Q_{H}|-Q_{C}}\]</div>
 <p>Unlike the thermal efficiency of a heat engine, the coefficient of performance of a refrigerator can be greater than unity. This simply means that the amount of heat removed from the refrigerated space can be larger than the mechanical work supplied to the compressor.</p>
+<div class="example admonition">
+<p class="admonition-title">Example</p>
+<p>A refrigerator has a <span class="math notranslate nohighlight">\(COP=5\)</span>. It absorbs 120 J of energy from a cold reservoir in each cycle. Find:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(a) Work required in each cycle
+
+(b) Energy rejected to the hot reservoir
+</pre></div>
+</div>
+<p>(a)</p>
+<div class="math notranslate nohighlight">
+\[COP=\frac{Q_{C}}{|W|}=\frac{120\ \mathrm{J}}{|W|}=5\ \Rightarrow\ |W|=\frac{120\ \mathrm{J}}{5}=24\ \mathrm{J}\Rightarrow W=-24\ \mathrm{J}\]</div>
+<p>(b)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+|Q_{H}|&amp;=Q_{C}-|W|=\\
+&amp;=120\ \mathrm{J}-24\ \mathrm{J}=96\ \mathrm{J}\end{split}\]</div>
+</div>
 <p>Let us look now in detail the thermodynamic transformations the refrigerant undergoes in a refrigeration cycle used in household refrigerators:</p>
 <p>[FIG NEEDED OF PV DIAGRAM OF REFRIGERATION CYCLE FROM JL NOTES]</p>
 <p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
@@ -681,7 +699,7 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 <p>Let us calculate now the variation of entropy associated to the combined engine:</p>
 <div class="math notranslate nohighlight">
 \[\Delta S=\Delta S_{H}+\Delta S_{C}= 0-\frac{Q_{C}}{T_{C}}\]</div>
-<p>, which then results in a negative quantity. As already discussed in the previous chapter, second law of thermodynamics states that it’s not possible for a thermodynamic transformation to occur without an increase of the entropy associated to the system.</p>
+<p>, which then results in a negative quantity. As already discussed in the previous chapter (<a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html#sec-second-law"><span class="std std-ref">Module 5.7</span></a>), second law of thermodynamics states that it’s not possible for a thermodynamic transformation to occur without an increase of the entropy associated to the system.</p>
 <p>This means that the system composed of the “perfect” engine and the fridge cannot exist, thus proving that there are no heat engines with 100 % thermal efficiency.</p>
 </div>
 </section>
@@ -728,7 +746,7 @@ Heat is rejected at constant pressure, and the steam condenses back into liquid.
 </ul>
 </section>
 <section id="nuclear-power">
-<h2><span class="section-number">6.7. </span>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h2>
+<span id="sec-nuclear"></span><h2><span class="section-number">6.7. </span>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h2>
 <p>Thermodynamic principles also apply to systems that exploit nuclear reactions to generate electricity. Energy can exist in many forms,thermal, mechanical,kinetic, potential, chemical, electrical, and nuclear and their sum constitutes the total energy of a system. In thermodynamic analysis we are usually interested in the change of energy rather than its absolute value. In most engineering
 applications, the energy extracted from a source is converted into thermal energy and subsequently into mechanical work by means of a heat engine.
 Nuclear power plants operate according to the same thermodynamic principle as conventional thermal power plants. The key difference lies in the source of heat. Instead of burning fossil fuels, nuclear reactors generate heat through nuclear reactions occurring inside the reactor core. The thermal energy produced by these reactions heats water to produce steam, which expands through a turbine connected to an electrical generator, thereby converting thermal energy into mechanical and then electrical energy.</p>
@@ -741,7 +759,7 @@ Nuclear power plants operate according to the same thermodynamic principle as co
 <p><a class="reference internal" href="#nuclear-power-plant"><span class="std std-numref">Fig. 6.8</span></a> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
 <section id="nuclear-fission">
 <h3>Nuclear fission<a class="headerlink" href="#nuclear-fission" title="Permalink to this heading">#</a></h3>
-<p>The heat produced in nuclear reeactors originates from <strong>nuclear fission reactions</strong>. In this process, a heavy atomic nucleus absorb a neutron and becomes unstable, splitting into smaller nuclei while releasing additional neutrons and a large amount of energy.
+<p>The heat produced in nuclear reeactors originates from nuclear fission reactions. In this process, a heavy atomic nucleus absorb a neutron and becomes unstable, splitting into smaller nuclei while releasing additional neutrons and a large amount of energy.
 Inside the reactor the following reaction can occur:</p>
 <div class="math notranslate nohighlight">
 \[_{92}^{235}\mathrm{U}+n\rightarrow\  _{56}^{142}\mathrm{Ba}+\ _{36}^{91}\mathrm{Kr}+3n+E\]</div>
@@ -754,21 +772,21 @@ In this reaction a uranium-235 nucleus absorbs a neutron and splits into barium-
 \]</div>
 <p>, where <span class="math notranslate nohighlight">\(\Delta m\)</span> is the decrease in mass and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light. This mass change is directly related to the binding energy, which measures how tightly nucleons are held together in a nucleus. The fission products (barium and krypton) have a higher binding energy per nucleon than uranium-235, meaning they are more stable and tightly bound. As a result, the total binding energy increase during the reaction. Since binding energy contributes negatively to the mass of a nucleus, an increase in binding energy leads to a decrease in total mass. The lost mass is therefore released as energy, which appears as heat in the reactor and is ultimately used to generate electricity.</p>
 <p>Binding energy is the energy required to completely disassemble a nucleus into its individual protons and neutrons. Equivalently, it is the energy released when a nucleus is formed from these nucleons. A useful quantity is the binding energy per nucleon, which indicates how tightly each nucleon is bound within the nucleus.
-In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.9</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) constituting the nucles is reported.</p>
+In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.9</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) is reported.</p>
 <figure class="align-default" id="binding-energy">
 <a class="reference internal image-reference" href="../_images/Binding_energy.png"><img alt="../_images/Binding_energy.png" src="../_images/Binding_energy.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The graph of binding energy per nucleon as a function of the number of nucleons shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
+<p>The graph of binding energy per nucleon as a function of the number of nucleons (<a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.9</span></a>) shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
 <p>In the case of uranium-235, the binding energy per nucleon is approximately 7.6 MeV. Since one eV corresponds to <span class="math notranslate nohighlight">\(1.6\times 10^{−19} \mathrm{J}\)</span>, the total binding energy of a uranium-235 nucleus can be estimated as:</p>
 <div class="math notranslate nohighlight">
-\[E_{binding}=235\cdot 7.6\ \mathrm{MeV}\cdot 1.6\times 10^{-19}\ \mathrm{J/eV}=2.86\times 10^{-10}\ \mathrm{J}\]</div>
+\[E_{\mathrm{binding}}=235\cdot 7.6\ \mathrm{MeV}\cdot 1.6\times 10^{-19}\ \mathrm{J/eV}=2.86\times 10^{-10}\ \mathrm{J}\]</div>
 <p>When uranium undergoes fission, it splits into nuclei that lie closer to the peak of the binding energy curve, meaning they are more tightly bound. This increase in binding energy corresponds to a decrease in total mass.</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>Uranium <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}\)</span> decays into Thorium  <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}\)</span> and an <span class="math notranslate nohighlight">\(\alpha\)</span> particle.</p>
+<p><strong>Question</strong>. Uranium <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}\)</span> decays into Thorium  <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}\)</span> and an <span class="math notranslate nohighlight">\(\alpha\)</span> particle.</p>
 <div class="math notranslate nohighlight">
 \[    _{92}^{238}\mathrm{U}\rightarrow\ _{90}^{234}\mathrm{Th}\ +\ _{2}^{4}\alpha\]</div>
 <p>Calculate how much energy is released in the process.</p>
@@ -798,60 +816,134 @@ In the plot of <a class="reference internal" href="#binding-energy"><span class=
 <p>[FIG NEEDED OF CHAIN REACTION DECAY IN JL NOTES]</p>
 <p>In order to maximize the efficiency of the reaction, neutrons need to be slowed down. To achieve that, heavy water is used (<span class="math notranslate nohighlight">\(\mathrm{D}_{2}\mathrm{O}\)</span>) is used.
 To control the chain reaction, rods made of boron are implemented (they absorb neutrons): when rods are inserted in the reactor, the reaction is slowed down, while it speeds up when rods are removed.</p>
-<p>Another possible source of nuclear energy is <strong>fusion</strong>, in which tow light nuclei combine to form a heavier nucleus while releasing energy. An example is the fusion reaction of two deuterium nuclei (deuterium is an isotope of hydrogen):</p>
-<div class="math notranslate nohighlight">
-\[    ^{2}_{1}\mathrm{H}+^{2}_{1}\mathrm{H}\rightarrow\ ^{3}_{2}\mathrm{He}+n\]</div>
 </section>
 <section id="nuclear-fusion">
 <h3>Nuclear fusion<a class="headerlink" href="#nuclear-fusion" title="Permalink to this heading">#</a></h3>
+<p>Another possible source of nuclear energy is <strong>fusion</strong>, in which tow light nuclei combine to form a heavier nucleus while releasing energy. An example is the fusion reaction of two deuterium nuclei (deuterium is an isotope of hydrogen):</p>
+<div class="math notranslate nohighlight">
+\[    ^{2}_{1}\mathrm{H}+^{2}_{1}\mathrm{H}\rightarrow\ ^{3}_{2}\mathrm{He}+n\]</div>
 <p>Fusion reactions are responsible for the enormous energy output of the Sunand other stars. However, achieving controlled fusion on Earth is extremely challenging because the positevly charged nuclei strongly repel each other through Coulomb forces. To overcome this repulsion, the reacting particles must reach temperatures on the order of <span class="math notranslate nohighlight">\(10^{8}\)</span> K, conditions typically found only in stellar interiors or nuclear explosions.</p>
+</section>
+</section>
+<section id="energy-density-of-fuel-and-energy-storage-systems">
+<h2><span class="section-number">6.8. </span>Energy Density of Fuel and Energy Storage systems<a class="headerlink" href="#energy-density-of-fuel-and-energy-storage-systems" title="Permalink to this heading">#</a></h2>
+<p>Specific energy (MJ/kg), measures how much energy can be stored per unit mass of a fuel or energy carrier. It is a critical parameter when comparing different energy sources, particularly for applications such as transportation and power generation, where mass constraints are important.</p>
+<p>Uranium, used as a nuclear fuel, has an extraordinarily high specific energy compared to all chemical fuels. According to the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density_Extended_Reference_Table">Energy Density Extended Reference Table</a>, uranium used in nuclear fission has a specific energy on the order of <span class="math notranslate nohighlight">\(\sim 8\times 10^{7}\)</span> MJ/kg (depending on burnup assumptions). This immense value arises because nuclear reactions convert a small fraction of mass directly into energy, as described by mass-energy equivalence. As a result, a very small quantity of uranium can produce vast amounts of energy (<a class="reference internal" href="#sec-nuclear"><span class="std std-ref">Module 6.7</span></a>), which is why nuclear power plants require relatively little fuel compared to fossil-fuel plants.</p>
+<p>In contrast, conventional liquid fuels such as gasoline and diesel rely on chemical energy stored in molecular bonds. Gasoline has a specific energy of approximately 46 MJ/kg, while diesel is slightly higher at about 45–46 MJ/kg. These values are many orders of magnitude lower than uranium but are still very high among chemical fuels. Their relatively high specific energy, combined with their liquid state at ambient conditions, makes them highly suitable for transportation, where both energy density and ease of storage are essential. Diesel’s marginally higher energy density, along with higher engine efficiency, explains its widespread use in heavy-duty transport and industrial applications.</p>
+<p>Lithium-ion batteries, which store energy electrochemically rather than chemically through combustion, have significantly lower specific energy. Typical lithium-ion batteries have a specific energy in the range of <span class="math notranslate nohighlight">\(\sim\)</span>0.5–0.9 MJ/kg (roughly 150–250 Wh/kg). This is about 50-100 times lower than gasoline or diesel. Despite this limitation, lithium-ion batteries are widely used because they are rechargeable and can achieve high energy conversion efficiencies. Their lower specific energy, however, remains a key constraint in applications such as long-range electric vehicles and aviation.</p>
+<div class="pst-scrollable-table-container"><table class="table" id="tab-energy-density">
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Specific Energy Compartiosn Summary for Uranium, diesel, gasoline and Li-ion battereis. For a complete list ofspecific energy for other storage types visit <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density_Extended_Reference_Table">Energy Density Extended Reference Table</a></span><a class="headerlink" href="#tab-energy-density" title="Permalink to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Energy source</p></th>
+<th class="head"><p>Specific Energy (MJ/kg)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Uranium (fission)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim 8 \times 10^7\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Diesel</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim 45-46\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Gasoline</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim 46\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Lithium-ion battery</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim 0.36-0.875\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Below we tackle two examples showcasing how nuclear and petrol efficiency:</p>
 <div class="example admonition">
 <p class="admonition-title">A Car Powered by Nuclear Fuel</p>
 <p><strong>Question</strong> An average car consumes about 5 L of gasoline per day. Assume that gasoline has average density</p>
 <div class="math notranslate nohighlight">
 \[\rho = 0.75\ \mathrm{kg}\ \mathrm{L}^{-1}\]</div>
-<p>and lower heating value</p>
+<p>and lower specific energy:</p>
 <div class="math notranslate nohighlight">
 \[H = 44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}\]</div>
 <p>Suppose that all practical difficulties associated with radioactivity and waste disposal are ignored, and that a car is instead powered by uranium-235. If the car is equipped with 0.1 kg of uranium-235, determine whether the car would ever need refueling under average driving conditions.</p>
 <p><strong>Solution</strong>. We first calculate the mass of gasoline consumed by the car in one day. Using the given density and daily fuel consumption,</p>
 <div class="math notranslate nohighlight">
-\[m_{gasoline} = \rho V = (0.75\ \mathrm{kg}\ \mathrm{L}^{−1})(5\ \mathrm{L}/\mathrm{day}) = 3.75\ \mathrm{kg}/\mathrm{day}\]</div>
+\[m_{\mathrm{gasoline}} = \rho V = (0.75\ \mathrm{kg}\ \mathrm{L}^{−1})(5\ \mathrm{L}/\mathrm{day}) = 3.75\ \mathrm{kg}/\mathrm{day}\]</div>
 <p>The corresponding energy supplied to the car per day is therefore</p>
 <div class="math notranslate nohighlight">
-\[E_{day} = m_{gasoline}H = (3.75\ \mathrm{kg/day})(44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}) = 165000\ \mathrm{kJ/day}\]</div>
+\[E_{\mathrm{day}} = m_{\mathrm{gasoline}}H = (3.75\ \mathrm{kg/day})(44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}) = 165000\ \mathrm{kJ/day}\]</div>
 <p>Next, we calculate the total energy available from the nuclear fuel. The complete fission of 1 kg of uranium-235 releases approximately <span class="math notranslate nohighlight">\(6.73\times 10^{10}\ \mathrm{kJ/kg}\)</span>.</p>
 <p>Therefore, for <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235, the total energy available is:</p>
 <div class="math notranslate nohighlight">
 \[
-E_{nuclear} = (6.73\times 10^{10}\ \mathrm{kJ/kg})(0.1\ \mathrm{kg}) = 6.73\times 10^{9}\ \mathrm{kJ}\]</div>
+E_{\mathrm{nuclear}} = (6.73\times 10^{10}\ \mathrm{kJ/kg})(0.1\ \mathrm{kg}) = 6.73\times 10^{9}\ \mathrm{kJ}\]</div>
 <p>The number of days for which this amount of nuclear fuel could supply the car is</p>
 <div class="math notranslate nohighlight">
 \[
-N =\frac{E_{nuclear}}{Eday}=\frac{6.73 \times 10^{9}\ \mathrm{kJ}}{165000\ \mathrm{kJ/day}}\approx 40,790\ \mathrm{days}.\]</div>
+N =\frac{E_{\mathrm{nuclear}}}{E_{\mathrm{day}}}=\frac{6.73 \times 10^{9}\ \mathrm{kJ}}{165000\ \mathrm{kJ/day}}\approx 40,790\ \mathrm{days}.\]</div>
 <p>This corresponds to approximately <span class="math notranslate nohighlight">\(\approx 112\)</span> years. Therefore, from a purely energetic point of view, the car would not need
 refueling during its lifetime.</p>
 <p><strong>Equivalent power consumption during the same period</strong>
 It is useful to compare this result with the amount of gasoline that would be required to provide the same total energy. Since the car consumes <span class="math notranslate nohighlight">\(3.75\)</span> kg of gasoline per day, the total gasoline mass needed over <span class="math notranslate nohighlight">\(40790\)</span> days would be:</p>
 <div class="math notranslate nohighlight">
-\[m_{total} = (3.75\ \mathrm{kg/day})(40790\ \mathrm{days})\approx 1.53\times 10^{5}\ \mathrm{kg}\]</div>
+\[m_{\mathrm{total}} = (3.75\ \mathrm{kg/day})(40790\ \mathrm{days})\approx 1.53\times 10^{5}\ \mathrm{kg}\]</div>
 <p>Thus, about <span class="math notranslate nohighlight">\(150\)</span> tons of gasoline would be required to supply the same amount of energy as <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235.
 This comparison illustrates the extremely high energy density of nuclear fuel
 compared with conventional chemical fuels.</p>
 </div>
 <div class="example admonition">
 <p class="admonition-title">How efficient is petrol?</p>
-<p>If, instead of a tank of petrol, we used a straw to suck up fuel, how wide does the channel to hol the fuel need to be?</p>
+<p><strong>Question</strong>. If, instead of a tank of petrol, we used a straw to suck up fuel, how wide does the channel to hold the fuel need to be?</p>
+<p><strong>Answer</strong></p>
 <p>Typical cars consume <span class="math notranslate nohighlight">\(\approx 40\ \mathrm{mpg}\)</span> (miles per gallon), where <span class="math notranslate nohighlight">\(1\ \mathrm{mile}=1.6\ \mathrm{km}\)</span> and <span class="math notranslate nohighlight">\(1\ \mathrm{gallon}=4.546\ \mathrm{L}\)</span>.
 So:</p>
 <div class="math notranslate nohighlight">
-\[1\ \mathrm{mpg}=0.425\ \mathrm{km}\ \mathrm{L}^{-1}\Rightarrow 40\ \mathrm{mpg}=0.07\ \mathrm{L/km}=7\times 10^{-5}\ \mathrm{m}^{3}/\mathrm{km}=7\times 10^{-8}\ \mathrm{m}^{2} \]</div>
+\[1\ \mathrm{mpg}=0.425\ \mathrm{km}\ \mathrm{L}^{-1}\Rightarrow 40\ \mathrm{mpg}=0.07\ \mathrm{Lkm}^{-1}=7\times 10^{-5}\ \mathrm{m}^{3}\mathrm{km}^{-1}=7\times 10^{-8}\ \mathrm{m}^{2} \]</div>
 <p>The calculated quantity has the dimension of an area. This is in fact the area of the tunnel that you need to suck up fuel.
 The tunnel width will be:</p>
 <div class="math notranslate nohighlight">
 \[d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}\]</div>
 </div>
-</section>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Phase</th>
+      <th>Solid</th>
+      <th>Liquid</th>
+      <th>Gas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Pressure</th>
+      <td>high</td>
+      <td>high</td>
+      <td>low</td>
+    </tr>
+    <tr>
+      <th>Temperature</th>
+      <td>low</td>
+      <td>high</td>
+      <td>high</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </section>
 </section>
 
@@ -932,6 +1024,7 @@ The tunnel width will be:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-density-of-fuel-and-energy-storage-systems">6.8. Energy Density of Fuel and Energy Storage systems</a></li>
 </ul>
   </nav></div>
 
