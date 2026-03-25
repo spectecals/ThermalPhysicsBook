@@ -1538,23 +1538,23 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
-\Delta S &amp;= \frac{\Delta Q_\text{water/ice}}{T_\text{water/ice}}+\frac{Q_\text{env}}{T_\text{env}} \\ 
+\Delta S &amp;= \frac{Q_\text{water/ice}}{T_\text{water/ice}}+\frac{Q_\text{env}}{T_\text{env}} \\ 
 &amp;= \frac{-333}{263} + \frac{333}{293} \\
 \Delta S &amp;= -0.13\ \text{kJ / K}.
 \end{aligned}
 \end{split}\]</div>
 <p>As <span class="math notranslate nohighlight">\(\Delta S &lt; 0\)</span>, this violates the second law of thermodynamics.</p>
-<p>This calculation incorrectly assumes that latent heat is released at 263 K and transferred directly to an environment at 293 K. In reality, when crystallization begins in supercooled water, the release of latent heat rapidly raises the system temperature to the melting point (273 K). As a result, the phase change occurs at 273 K, and heat exchange with the surroundings takes place in the immediate surroundings at this temperature.</p>
-<p>To calculate the entropy change correctly, a reversible path must be constructed. This path must have an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction:</p>
-<!-- This is because the formula $ \text{d} S = \frac{\text{d}Q}{T} $ is only valid for reversible processes. Freezing at $-10^\circ\mathrm{C}$ is irreversible because heat transfer occurs across a finite temperature difference. -->
+<p>This calculation incorrectly assumes that latent heat is released at 263 K and transferred directly to an environment at 293 K. In reality, when crystallization begins in supercooled water, the release of latent heat rapidly raises the temperature to the melting point (273 K) where the phase change occurs, and heat exchange takes place in the immediate surroundings at this temperature.</p>
+<p>To calculate the entropy change correctly, a reversible path must be constructed, allowing use of</p>
+<div class="math notranslate nohighlight">
+\[ \text{d}S=\frac{\text{d}Q_\text{rev}}{T}. \]</div>
+<p>This path must have an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction:</p>
 <ol class="arabic simple">
 <li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K} \to \Delta S_1 \)</span>, due to heat release from the supercooling phase transition</p></li>
 <li><p>Freeze at <span class="math notranslate nohighlight">\(273 \ \mathrm{K} \to \Delta S_2 \)</span></p></li>
 <li><p>Cool solid <span class="math notranslate nohighlight">\(273 \rightarrow 263 \ \mathrm{K} \to \Delta S_3 \)</span></p></li>
 </ol>
-<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 + \Delta S_3 \)</span>. This path does not represent the real process. It is chosen so that all heat transfers occur reversibly, allowing use of</p>
-<div class="math notranslate nohighlight">
-\[ \text{d}S=\frac{\text{d}Q_\text{rev}}{T}. \]</div>
+<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 + \Delta S_3 \)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\,\)</span></p>
 <section id="heat-liquid-263-273-k">
 <h3>(1) Heat liquid 263 → 273 K<a class="headerlink" href="#heat-liquid-263-273-k" title="Permalink to this heading">#</a></h3>
@@ -1714,7 +1714,7 @@ The result that <span class="math notranslate nohighlight">\( c = 0 \)</span> di
 <figure class="align-default" id="rd-law">
 <a class="reference internal image-reference" href="../_images/Entropy_Temperature_AB.png"><img alt="../_images/Entropy_Temperature_AB.png" src="../_images/Entropy_Temperature_AB.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Entropy curves <span class="math notranslate nohighlight">\(X\)</span> as a function of temperature. In (1), curves <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are sufficiently separated that it is possible to alternate between adiabatic and isothermal processes such that a finite number of steps may result in <span class="math notranslate nohighlight">\(T=0\)</span>. In (2), it is impossible to reach absolute zero if the third law is obeyed.</span><a class="headerlink" href="#rd-law" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Entropy curves <span class="math notranslate nohighlight">\(X\)</span> as a function of temperature. In (A), curves <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are sufficiently separated that it is possible to alternate between adiabatic and isothermal processes such that a finite number of steps may result in <span class="math notranslate nohighlight">\(T=0\)</span>. In (B), it is impossible to reach absolute zero if the third law is obeyed.</span><a class="headerlink" href="#rd-law" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Let us denote parameters describing the state of the system with <span class="math notranslate nohighlight">\(X\)</span>. Consider two cases:</p>

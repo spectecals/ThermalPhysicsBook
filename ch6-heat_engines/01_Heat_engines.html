@@ -340,7 +340,12 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-refrigeration-cycle">6.4. Refrigerators and refrigeration cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">6.5. Equivalence between Kelvin and Clausius statement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fission">Nuclear fission</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-reactions">Chain reactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -415,7 +420,7 @@ All heat engines absorb heat <span class="math notranslate nohighlight">\(Q_{H}\
 <p>Since the heat rejected to the enviroment <span class="math notranslate nohighlight">\(Q_{C}\)</span> in a heat engine is always negative, the efficiency of a heat engine is always less than unity. This fundamental limitation is expressed by the <strong>Kelvin-Planck statement of the second law of thermodynamics</strong>, which states that no heat engine can convert all the heat it receives into work. A portion of the energy must always be rejected to a lower-temperature environment. This limitation is not caused by friction or other practical imperfections. Even an ideal heat engine cannot achieve 100% efficiency. The maximum possible efficiency depends only on the temperatures of the hot and cold reservoirs, a result that will be discussed in the context of the Carnot cycle.</p>
 </section>
 <section id="carnot-cycle">
-<h2><span class="section-number">6.2. </span>Carnot cycle<a class="headerlink" href="#carnot-cycle" title="Permalink to this heading">#</a></h2>
+<span id="sec-carnot"></span><h2><span class="section-number">6.2. </span>Carnot cycle<a class="headerlink" href="#carnot-cycle" title="Permalink to this heading">#</a></h2>
 <p>According to second law of thermodynamics, a heat engine with a 100% efficiency cannot exist.
 What is then the maximum conversion from heat to work reached by a heat engine?</p>
 <p>The answer was given in 1824 by the French engineer Sadi Carnot, who
@@ -494,10 +499,20 @@ developed a hypothetical, idealized heat engine that has the maximum possible ef
 <p>while:</p>
 <div class="math notranslate nohighlight">
 \[Q_{C}=W_{cd}=nRT_{C}\mathrm{ln}\frac{V_{d}}{V_{c}}&lt;0\]</div>
-<p>In adiabatic processes <span class="math notranslate nohighlight">\(bc\)</span> and <span class="math notranslate nohighlight">\(da\)</span> it holds:</p>
+<p>In adiabatic processes <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(d-a\)</span>, we know from <a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html#subsec-adiabatic"><span class="std std-ref">Module 4.10</span></a> that the pressur-volume relationship is:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{gather*}
-T_{H}V{b}^{\gamma-1}=T_{C}V_{c}^{\gamma-1}\\
+pV^{\gamma}=\mathrm{constant},\quad \gamma=\frac{C_{p}}{C_{V}}\\
+\Rightarrow p_{1}V_{1}^{\gamma}=p_{2}V_{2}^{\gamma}
+\end{gather*}\end{split}\]</div>
+<p>Substituting into the ideal gas low we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}nRT\frac{V^{\gamma}}{V}=\mathrm{constant}\\
+\Rightarrow TV^{\gamma-1}=\mathrm{constant}\end{split}\]</div>
+<p>and then for processes <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(d-a\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{gather*}
+T_{H}V_{b}^{\gamma-1}=T_{C}V_{c}^{\gamma-1}\\
 T_{C}V_{d}^{\gamma-1}=T_{H}V_{a}^{\gamma-1}
 \end{gather*},\end{split}\]</div>
 <p>which then results:</p>
@@ -518,13 +533,13 @@ The Carnot cycle is not a practical engine cycle and cannot be implemented exact
 </section>
 </section>
 <section id="internal-combustion-engine">
-<h2><span class="section-number">6.3. </span>Internal combustion engine<a class="headerlink" href="#internal-combustion-engine" title="Permalink to this heading">#</a></h2>
+<span id="sec-internal-combustion"></span><h2><span class="section-number">6.3. </span>Internal combustion engine<a class="headerlink" href="#internal-combustion-engine" title="Permalink to this heading">#</a></h2>
 <p>An internal combustion engine is a particular type of heat engine in which energy is retrieved by means of the combustion occurring inside the working fluid (which is typically a mixture of air and fuel).</p>
 <p>In fig. \ref{} it is reported the working principle of one type of gasoline engine.</p>
 <p>[FIG NEEDED]</p>
 <section id="otto-cycle">
 <h3>Otto cycle<a class="headerlink" href="#otto-cycle" title="Permalink to this heading">#</a></h3>
-<p>The Otto cycle is composed of 4 main processes: two adiabatic  and two isochoric processes summarized in  <code class="xref std std-numref docutils literal notranslate"><span class="pre">InternalCombustion</span></code>, and outlined below:</p>
+<p>The Otto cycle is composed of 4 main processes: two adiabatic  and two isochoric processes summarized in  <a class="reference internal" href="#otto-pv"><span class="std std-numref">Fig. 6.6</span></a>, and outlined below:</p>
 <ul class="simple">
 <li><p><strong>Step 0</strong>: Intake stroke. Here the piston moves down, allowing gasoline-air mixture to enter the cylinder via the intake valve.</p></li>
 <li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the misture (adiabatic process).</p></li>
@@ -532,34 +547,33 @@ The Carnot cycle is not a practical engine cycle and cannot be implemented exact
 <li><p><strong>Step 3 (<span class="math notranslate nohighlight">\(c-d\)</span>)</strong>: Power stroke. The hot mixture expands with pistons being pushed down. This is an adiabatic expansion step, in which the volume is expanded from <span class="math notranslate nohighlight">\(V\)</span> back to <span class="math notranslate nohighlight">\(rV\)</span>.</p></li>
 <li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> id rejected to the cold reservoir.</p></li>
 </ul>
-<p>This idealized model of the thermodynamic processes in a gasoline engine is called Otto cycle and its diagram is reported in <a class="reference internal" href="#otto-pv"><span class="std std-numref">Fig. 6.6</span></a></p>
 <figure class="align-default" id="otto-pv">
 <a class="reference internal image-reference" href="../_images/OttoCycle.png"><img alt="../_images/OttoCycle.png" src="../_images/OttoCycle.png" style="width: 60%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.6 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the Otto cycle. Red curves represent adiabatic processes, while purple curves represent the isochoric processes.</span><a class="headerlink" href="#otto-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Let us now calculate the efficiency of the Otto cycle</p>
-<p>Let us start from the ioschoric processes <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(d-a\)</span>. An isochoric process is a process at constant volume. Since the volume is not changed, o work is done, <span class="math notranslate nohighlight">\(W=0\)</span>, as:</p>
+<p>Let us now calculate the efficiency of the Otto cycle.
+Let us start from the ioschoric processes <span class="math notranslate nohighlight">\(b-c\)</span> and <span class="math notranslate nohighlight">\(d-a\)</span>. An isochoric process is a process at constant volume. Since the volume is not changed, no work is done, <span class="math notranslate nohighlight">\(W=0\)</span>, as:</p>
 <div class="math notranslate nohighlight">
 \[dW=pdV\]</div>
-<p>From the first law of thermodynamics <span class="math notranslate nohighlight">\(\Delta U=Q-W=Q\)</span> and then:</p>
+<p>From the first law of thermodynamics we know that <span class="math notranslate nohighlight">\(\Delta U=Q-W=Q\)</span>. <span class="math notranslate nohighlight">\(Q\)</span> is then given by:</p>
 <div class="math notranslate nohighlight">
 \[Q=nC_{V}\Delta T\]</div>
-<p>Substituting:</p>
+<p><span class="math notranslate nohighlight">\(Q_{H}\)</span> and <span class="math notranslate nohighlight">\(Q_{C}\)</span> can then be written as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{gather*}
-Q_{H}=nC_{V}(T_{c}−T_{b})&gt;0\quad ,\mathrm{Heat\ added},\ T\uparrow\\
-Q_{C}=nC_{V}(T_{a}-T_{d})&lt;0\quad ,\mathrm{Heat\ removed},\ T\downarrow
+Q_{H}=nC_{V}(T_{c}−T_{b})&gt;0\quad ,\mathrm{Heat\ added},\ T_{c}&gt;T_{b}\\
+Q_{C}=nC_{V}(T_{a}-T_{d})&lt;0\quad ,\mathrm{Heat\ removed},\ T_{a}&lt;T_{b}
 \end{gather*}
 \end{split}\]</div>
-<p>The thermal efficiency <span class="math notranslate nohighlight">\(e\)</span> is given then by:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>The thermal efficiency <span class="math notranslate nohighlight">\(e\)</span> of the Otto cycle is given by:</p>
+<div class="math notranslate nohighlight" id="equation-eq-eff-otto">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-eff-otto" title="Permalink to this equation">#</a></span>\[
 e=\frac{Q_{H}+Q_{C}}{Q_{H}}=\frac{T_{c}−T_{b}+T_{a}−T_{d}}{T_{c}−T_{b}} 
 \]</div>
-<p>Because processes <span class="math notranslate nohighlight">\(a-b\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span> are adiabatic, we know that:</p>
+<p>Because processes <span class="math notranslate nohighlight">\(a-b\)</span> and <span class="math notranslate nohighlight">\(c-d\)</span> are adiabatic, we know from <a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html#subsec-adiabatic"><span class="std std-ref">Module 4.10</span></a> and <a class="reference internal" href="#sec-carnot"><span class="std std-ref">Module 6.2</span></a> that:</p>
 <div class="math notranslate nohighlight">
 \[
 T_{a}V_{a}^{γ−1}=T_{b}V_{b}^{γ−1}\quad \mathrm{and}\  
@@ -572,7 +586,7 @@ T_{a}(rV)^{γ−1}=T_{b}V^{γ−1}\\
 T_{c}V^{γ−1}=T_{d}(rV)^{γ−1}
 \end{gather*}\end{split}\]</div>
 <p>, where <span class="math notranslate nohighlight">\(\gamma\)</span> is the ratio of heat capacities of the gas.
-Substituting into <code class="xref std std-numref docutils literal notranslate"><span class="pre">eq:eff_Otto</span></code>:</p>
+Substituting into <a class="reference internal" href="#equation-eq-eff-otto">(6.1)</a>:</p>
 <div class="math notranslate nohighlight">
 \[e=\frac{T_{d}r^{γ−1}−T_{a}r^{γ−1}+T_{a}−T_{d}}{T_{d}r^{γ−1}−T_{a}r^{γ−1}}=\frac{(T_{d}−T_{a})(r^{γ−1}−1)}{(T_{d}−T_{a})r^{γ−1}}=1−\frac{1}{r^{γ−1}}\]</div>
 <p>In the idealized model of the Otto cycle, it is worth noting that the thermal efficiency is always less then 1. Using as reference values <span class="math notranslate nohighlight">\(r=8\)</span> and <span class="math notranslate nohighlight">\(\gamma=1.4\)</span> (for air) the theoretical efficiency is <span class="math notranslate nohighlight">\(e\approx 56 \%\)</span>. In real internal-combustion engines, where the mixture does not behave as an ideal gas and when phenomena such as friction, heat dissipation and turbulence are considered, efficiency is lower (typically around <span class="math notranslate nohighlight">\(\approx 35 \% \)</span>).</p>
@@ -580,27 +594,23 @@ Substituting into <code class="xref std std-numref docutils literal notranslate"
 </section>
 <section id="diesel-cycle">
 <h3>Diesel cycle<a class="headerlink" href="#diesel-cycle" title="Permalink to this heading">#</a></h3>
-<p>Diesel engine operates similarly to the gasoline engine. Its cycle is called the Diesel cycle with one one main difference that no fuel is injected in the cylinder at the beginning of the compression stroke. This difference permits the increase of the compression ratio as it is removing the risk of pre-ignition of the fuel.</p>
-<p>The Diesel cycle is shown in <a class="reference internal" href="#diesel-pv"><span class="std std-numref">Fig. 6.7</span></a> and is composed of 2 adiabatic steps, in addition to an isochoric and isobaric step. The steps are summarized below:</p>
+<p>The Diesel engine operates similarly to the gasoline engine. Its cycle is called the Diesel cycle with one one main difference that no fuel is injected in the cylinder at the beginning of the compression stroke compared to the Otto cycle. This difference permits the increase of the compression ratio as it removes the risk of pre-ignition of the fuel.</p>
+<p>The Diesel cycle is shown in <a class="reference internal" href="#diesel-pv"><span class="std std-numref">Fig. 6.7</span></a> and is composed of two adiabatic steps, in addition to an isochoric and isobaric step. The steps are summarized below:</p>
 <ul class="simple">
-<li><p><strong>Step 0</strong>: Intake stroke. Only air enters the cylinder (no fuel)</p></li>
-<li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the air. This is an adiabatic process, where the gas is compressed from <span class="math notranslate nohighlight">\(rV\)</span> to <span class="math notranslate nohighlight">\(V\)</span></p></li>
-<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Fuel ignition. This step is the main difference from the Otto cycle. Intake valve injects fuel fast enough to keep the pressure constant. Fuel ignites spontaneously (no spark plug) as high temperature is developed during adiabatic compression (<span class="math notranslate nohighlight">\(a-b\)</span>)</p></li>
+<li><p><strong>Step 0</strong>: Intake stroke. Only air enters the cylinder (no fuel).</p></li>
+<li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the air. This is an adiabatic process, where the gas is compressed from <span class="math notranslate nohighlight">\(rV\)</span> to <span class="math notranslate nohighlight">\(V\)</span>.</p></li>
+<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Fuel ignition. This step is the main difference from the Otto cycle. Intake valve injects fuel fast enough to keep the pressure constant. Fuel ignites spontaneously (no spark plug) as high temperature is developed during adiabatic compression (<span class="math notranslate nohighlight">\(a-b\)</span>).</p></li>
 <li><p><strong>Step 3 (<span class="math notranslate nohighlight">\(c-d\)</span>)</strong>: Power stroke. The hot mixture expands with pistons being pushed down. This is an adiabatic expansion step, in which the volume is expanded from <span class="math notranslate nohighlight">\(V\)</span> back to <span class="math notranslate nohighlight">\(rV\)</span>.</p></li>
-<li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> id rejected to the cold reservoir.</p></li>
+<li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> is rejected to the cold reservoir.</p></li>
 </ul>
 <figure class="align-default" id="diesel-pv">
 <a class="reference internal image-reference" href="../_images/DieselCycle.png"><img alt="../_images/DieselCycle.png" src="../_images/DieselCycle.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of Diesel cycle. Red curves represent adiabatic processes, while purple and yellow ones stand for isochoric and isobaric transformation respectively.</span><a class="headerlink" href="#diesel-pv" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.7 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the Diesel cycle. The red curves represent adiabatic processes, while the purple and yellow curves represent isochoric and isobaric processes respectively.</span><a class="headerlink" href="#diesel-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The Diesel cycle enables theoretical compression ratios of 15-20 and a theoretical efficiency of <span class="math notranslate nohighlight">\(\approx 70 \% \)</span> (using <span class="math notranslate nohighlight">\(\gamma\approx 1.4\)</span> for air).</p>
-<p>Summarizing:</p>
-<ul class="simple">
-<li><p>Otto cycle: Fuel+air before compression <span class="math notranslate nohighlight">\(\Rightarrow\)</span> Risk of preignition before completing compression;</p></li>
-<li><p>Diesel cycle: compressing air before injecting fuel <span class="math notranslate nohighlight">\(\Rightarrow\)</span> No preignition, higher compression ratios and higher thermal efficiency.</p></li>
-</ul>
+<p>The Diesel cycle enables theoretical compression ratios of 15-20 and a corresponding theoretical efficiency of <span class="math notranslate nohighlight">\(\approx 70 \% \)</span> (using <span class="math notranslate nohighlight">\(\gamma\approx 1.4\)</span> for air).</p>
+<p>In summary, the key distinction between the Otto and Diesel cycle lies in when fuel is introduced with respect to compression stroke, and this fundamentally shapes their performance limits. The Otto cycle’s pre-mixed fuel-air mixture limits compression due to risk of premature ignition cappin its efficiency. In contrast, the Diesel cycle compresses only air and injects fuel afterwards, eliminating the constraint and enabling significantly higher compression ratios. This make the Diesel engine more efficient.</p>
 </section>
 </section>
 <section id="refrigerators-and-refrigeration-cycle">
@@ -621,7 +631,6 @@ The effectiveness of a refrigerator is measured by the <strong>coefficient of pe
 <div class="math notranslate nohighlight">
 \[COP=\frac{Q_{C}}{|W|}=\frac{Q_{C}}{|Q_{H}|-Q_{C}}\]</div>
 <p>Unlike the thermal efficiency of a heat engine, the coefficient of performance of a refrigerator can be greater than unity. This simply means that the amount of heat removed from the refrigerated space can be larger than the mechanical work supplied to the compressor.</p>
-<p>[EXAMPLE ON JL NOTES, SIMPLE CALCULATION]</p>
 <p>Let us look now in detail the thermodynamic transformations the refrigerant undergoes in a refrigeration cycle used in household refrigerators:</p>
 <p>[FIG NEEDED OF PV DIAGRAM OF REFRIGERATION CYCLE FROM JL NOTES]</p>
 <p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
@@ -656,7 +665,7 @@ It is important to point out that neither of these impossibilities violates the 
 <section id="equivalence-between-kelvin-and-clausius-statement">
 <h2><span class="section-number">6.5. </span>Equivalence between Kelvin and Clausius statement<a class="headerlink" href="#equivalence-between-kelvin-and-clausius-statement" title="Permalink to this heading">#</a></h2>
 <p>It is possible to show that the two statements of second law are completely equivalent.
-To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless refrigerator and to attach in series a regular heat engine, as reported in Fig.</p>
+To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless (i.e. no work needed to drive the refrigeration) refrigerator and to attach in series a regular heat engine, as reported in Fig.</p>
 <p>[FIG NEEDED OF ANTICLAUSIUS+HEAT ENGINE]</p>
 <p>Writing down first law equation for the total system:</p>
 <div class="math notranslate nohighlight">
@@ -678,58 +687,165 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 </section>
 <section id="rankine-cycle">
 <h2><span class="section-number">6.6. </span>Rankine cycle<a class="headerlink" href="#rankine-cycle" title="Permalink to this heading">#</a></h2>
-<p>In real life, trying to reproduce Carnot cycle is practically impossible because of:</p>
+<p>In <a class="reference internal" href="#sec-internal-combustion"><span class="std std-ref">Module 6.3</span></a> gas power cycles were introduced, in which the working fluid remains in the gaseous phase throughout the entire cycle. In this chapter, we turn to vapour power cycles, where the working fluid is alternately vaporized and condensed. These cycles are widely used in large-scale power generation and can also be coupled with process heating in applications known as cogeneration.
+The increasing demand for higher thermal efficiencies in power generation has driven the development of improved vapour power cycle configurations. These include modifications such as reheat, regenerative feedwater heating, and combined gas-vapour cycles, all aimed at extracting more useful work from a given heat input.</p>
+<p>Among the various working fluids available, water (steam) is the most commonly used due to its low cost, availability, and high latent heat of vaporization. Although steam power plants may differ in their heat source – such as coal, nuclear, or natural gas – the fundamental thermodynamic processes remain largely the same.
+To understand the design and performance of these systems, it is useful to first consider the theoretical limits of efficiency and the practical constraints that arise in real cycles. This leads to the development of the Rankine cycle, which forms the basis of modern steam power plants.</p>
+<p>Before introducing the Rankine cycle, it is useful to recall the Carnot cycle, which represents the maximum theoretical efficiency achievable between two temperature limits. However, despite its theoretical importance, the Carnot cycle cannot be implemented in real systems due to several practical limitations:</p>
 <ul class="simple">
-<li><p>Isothermal heat addition</p></li>
-<li><p>Isothermal heat rejection</p></li>
-<li><p>Compression of a wet-vapour mixture</p></li>
+<li><p>Isothermal heat addition and rejection require infinitely slow heat transfer: Maintaining constant temperature during heat transfer requires an infinitesimally small temperature difference between the working fluid and the heat source/sink. On a pV diagram, these processes appear as smooth curves, but in reality achieving them would require unrealistically long times and extremely large heat exchangers.</p></li>
+<li><p>Compression of a wet vapour mixture is mechanically impractical: During the Carnot cycle, compression occurs in the two-phase region. Compressing a vapour can induce condensation, forming liquid droplets within the flow (recall <a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html#sec-heatcap-equip"><span class="std std-ref">Module 3.4</span></a>). These droplets can damage compressors or turbine blades and lead to severe efficiency losses, making the process mechanically unsafe and energetically inefficient.</p></li>
 </ul>
-<p>In modern heat engines, and in particular in steam-based power plants, the most implemented thermodynamic cycle is the so-called Rankine cycle.
-Differently from Carnot cycle, Rankine exploits adiabatic expansion(compressions) of purely gaseous(liquid) phases of the working substance, which is far easier to achieve mechanically and energetically.</p>
-<p>Moreover, differently from Otto and Diesel cycles, Rankine cycle is an example of external combustion engine, since the working fluid and the combustion substance are different.</p>
-<p>[FIG NEEDED OF RANKINE CYCLE pV diagram+ components scheme]</p>
-<p>Here in Fig. is a sketch on the <span class="math notranslate nohighlight">\(pV\)</span> diagram of the thermodynamic cycle. Basically:</p>
-<ol class="arabic simple">
-<li><p>Isovolumic transformation of working fluid (liquid phase) from low pressure to high pressure (pump involved)</p></li>
-<li><p>Isobaric expansion through heater</p></li>
-<li><p>Adibatic expansion through the turbine, thus generating mechanical work (possibly converted in electrical energy). Endpoint of the transformation is a low-pressure, high-volume, liquid-vapour mixture.</p></li>
-<li><p>Heat is removed by means of a condenser through isobaric compression, thus ending at the start of 1) with a low-volume, low-pressure liquid.</p></li>
-</ol>
+<p>While Otto and Diesel cycles describe internal combustion engines, steam power plants operate on a fundamentally different principle based on external heat addition, where the working fluid is separate from the combustion process.</p>
+<p>The Rankine cycle avoids the key limitations of the Carnot cycle by:</p>
+<ul class="simple">
+<li><p>Replacing isothermal heat transfer with constant-pressure processes</p></li>
+<li><p>Ensuring that compression occurs only in the liquid phase</p></li>
+<li><p>Allowing expansion to occur primarily in the vapour phase</p></li>
+</ul>
+<p>These modifications make the cycle feasible for power generation systems. The physical layout of the Rankine cycle is provided in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_schematics</span></code> and is composed of a pump, boiler, turbine and condensor.</p>
+<p>[FIG NEEDED OF RANKINE SCHEMATICS]</p>
+<p>The Rankine Cycle stages (refer to <span class="math notranslate nohighlight">\(pV\)</span> diagram, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_diagram</span></code>) can be clearly identified on the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
+<p>[FIG NEEDED OF RANKINE <span class="math notranslate nohighlight">\(PV\)</span> DIAGRAM OR TS]</p>
+<ul class="simple">
+<li><p>1 → 2: Pump (liquid compression (isoentropic)). Water enters as a saturated liquid from the condenser. It is compressed to a higher pressure by the pump. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this appears as a nearly vertical line (very small volume change). Because the fluid is liquid, no phase change occurs, and the work required is small.</p></li>
+<li><p>2 → 3: Boiler (constant-pressure heat addition)
+The high pressure water water is heated to high pressure steam at constant pressure:</p>
+<ul>
+<li><p>First, temperature rises (compressed liquid region)</p></li>
+<li><p>Then phase change occurs (liquid → vapour)</p></li>
+<li><p>Optionally, the vapour is superheated ( shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">super_heated_rankine</span></code>). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this corresponds to a large increase in specific volume as the water evaporates.</p></li>
+</ul>
+</li>
+</ul>
+<p>Note that some common heat sources for the boiler include: burning fossil fuels (e.g. coal, natural gas), nuclear energy (heat fromn nuclear fission), solar energy, geothermal (heat from hot fluids in the ground).</p>
+<ul class="simple">
+<li><p>3 → 4: Turbine (adiabatic – more accurately it is isoentropic – expansion)
+High-pressure steam expands through the turbine, producing mechanical work, which.can be used for example to spin a generator.
+Pressure and temperature decrease, and the fluid may enter the wet region (vapour–liquid mixture). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this is a downward-sloping expansion curve.</p></li>
+<li><p>4 → 1: Condenser (constant-pressure heat rejection)
+Heat is rejected at constant pressure, and the steam condenses back into liquid. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, the volume decreases significantly as the fluid returns to the saturated liquid state.</p></li>
+</ul>
 </section>
 <section id="nuclear-power">
 <h2><span class="section-number">6.7. </span>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h2>
-<p>Thermodynamic principles also apply to systems that exploit nuclear reactions to generate electricity. Energy can exist in many forms—thermal, mechanical,kinetic, potential, chemical, electrical, and nuclear—and their sum constitutes the total energy of a system. In thermodynamic analysis we are usually interested in the change of energy rather than its absolute value. In most engineering
+<p>Thermodynamic principles also apply to systems that exploit nuclear reactions to generate electricity. Energy can exist in many forms,thermal, mechanical,kinetic, potential, chemical, electrical, and nuclear and their sum constitutes the total energy of a system. In thermodynamic analysis we are usually interested in the change of energy rather than its absolute value. In most engineering
 applications, the energy extracted from a source is converted into thermal energy and subsequently into mechanical work by means of a heat engine.
 Nuclear power plants operate according to the same thermodynamic principle as conventional thermal power plants. The key difference lies in the source of heat. Instead of burning fossil fuels, nuclear reactors generate heat through nuclear reactions occurring inside the reactor core. The thermal energy produced by these reactions heats water to produce steam, which expands through a turbine connected to an electrical generator, thereby converting thermal energy into mechanical and then electrical energy.</p>
 <p><code class="xref std std-numref docutils literal notranslate"><span class="pre">NUCLEAR_POWER_PLANT</span></code> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
-<p>Among the possible reactions, fission of unstable nuclei are the ones exploited to retrieve the needed energy to sustain the nuclear power plant.
-Inside the reactor the reaction occurring is:</p>
+<section id="nuclear-fission">
+<h3>Nuclear fission<a class="headerlink" href="#nuclear-fission" title="Permalink to this heading">#</a></h3>
+<p>The heat produced in nuclear reeactors originates from <strong>nuclear fission reactions</strong>. In this process, a heavy atomic nucleus absorb a neutron and becomes unstable, splitting into smaller nuclei while releasing additional neutrons and a large amount of energy.
+Inside the reactor the following reaction can occur:</p>
 <div class="math notranslate nohighlight">
 \[_{92}^{235}\mathrm{U}+n\rightarrow\  _{56}^{142}\mathrm{Ba}+\ _{36}^{91}\mathrm{Kr}+3n+E\]</div>
-<p>, where top-left numbers correspond to mass number (protons+neutrons), the bottom-left one to the atomic number, and <span class="math notranslate nohighlight">\(n\)</span> stands for neutrons and <span class="math notranslate nohighlight">\(E\)</span> for the released energy due to the difference in binding energies of atoms. In fact, it holds that:</p>
+<p>, where top-left numbers correspond to mass number (protons+neutrons), the bottom-left one to the atomic number, and <span class="math notranslate nohighlight">\(n\)</span> stands for neutrons.
+In this reaction a uranium-235 nucleus absorbs a neutron and splits into barium-142 and krypton-91 and three additional neutrons, releasing energy <span class="math notranslate nohighlight">\(E\)</span>.</p>
+<p>Crucially, the total mass of the products is slightly less than the total mass of the reactants. This difference in mass, called the mass defect, is what produces the energy. The “missing” mass is converted into energy according to Einstein’s relation:</p>
 <div class="math notranslate nohighlight">
 \[
-    E=mc^{2}
+    E=\Delta mc^{2}
 \]</div>
-<p>, where <span class="math notranslate nohighlight">\(m\)</span> is the mass of the atom and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light.</p>
-<p>[FIG NEEDED OF NUCLEI INSTABILITY FROM JL NOTES]</p>
-<p>In the plot the binding energy behavior associated to the number of nucleons (protons and/or neutrons) constituting the nucles is reported.</p>
+<p>, where <span class="math notranslate nohighlight">\(\Delta m\)</span> is the decrease in mass and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light. This mass change is directly related to the binding energy, which measures how tightly nucleons are held together in a nucleus. The fission products (barium and krypton) have a higher binding energy per nucleon than uranium-235, meaning they are more stable and tightly bound. As a result, the total binding energy increase during the reaction. Since binding energy contributes negatively to the mass of a nucleus, an increase in binding energy leads to a decrease in total mass. The lost mass is therefore released as energy, which appears as heat in the reactor and is ultimately used to generate electricity.</p>
+<p>Binding energy is the energy required to completely disassemble a nucleus into its individual protons and neutrons. Equivalently, it is the energy released when a nucleus is formed from these nucleons. A useful quantity is the binding energy per nucleon, which indicates how tightly each nucleon is bound within the nucleus.
+In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.8</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) constituting the nucles is reported.</p>
+<figure class="align-default" id="binding-energy">
+<a class="reference internal image-reference" href="../_images/Binding_energy.png"><img alt="../_images/Binding_energy.png" src="../_images/Binding_energy.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.8 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The graph of binding energy per nucleon as a function of the number of nucleons shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
+<p>In the case of uranium-235, the binding energy per nucleon is approximately 7.6 MeV. Since one eV corresponds to <span class="math notranslate nohighlight">\(1.6\times 10^{−19} \mathrm{J}\)</span>, the total binding energy of a uranium-235 nucleus can be estimated as:</p>
+<div class="math notranslate nohighlight">
+\[E_{binding}=235\cdot 7.6\ \mathrm{MeV}\cdot 1.6\times 10^{-19}\ \mathrm{J/eV}=2.86\times 10^{-10}\ \mathrm{J}\]</div>
+<p>When uranium undergoes fission, it splits into nuclei that lie closer to the peak of the binding energy curve, meaning they are more tightly bound. This increase in binding energy corresponds to a decrease in total mass.</p>
 <div class="example admonition">
 <p class="admonition-title">Example</p>
-<p>Uranium <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}\)</span> decays into Thorium  <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}\)</span> and an <span class="math notranslate nohighlight">\(\alpha\)</span> particle. Calculate how much energy is released in the process.</p>
-<p>The mass of <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}=238.0508\mathrm{u}\)</span>, mass of <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}=234.0426\mathrm{u}\)</span> and mass of <span class="math notranslate nohighlight">\(_{2}^{4}\alpha=4.0026\mathrm{u}\)</span>.</p>
-<p>Remembering that <span class="math notranslate nohighlight">\(1\mathrm{u}=1.66\times 10^{-27} \mathrm{kg} \)</span>:</p>
+<p>Uranium <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}\)</span> decays into Thorium  <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}\)</span> and an <span class="math notranslate nohighlight">\(\alpha\)</span> particle.</p>
 <div class="math notranslate nohighlight">
-\[E=(238.0508-234.0426-4.0026)\cdot 1.66\cdot 10^{-27} \mathrm{kg}\cdot c^{2}=8.37\cdot 10^{-13}\ J\]</div>
+\[    _{92}^{238}\mathrm{U}\rightarrow\ _{90}^{234}\mathrm{Th}\ +\ _{2}^{4}\alpha\]</div>
+<p>Calculate how much energy is released in the process.</p>
+<p><strong>Hint</strong>.</p>
+<ul class="simple">
+<li><p>Mass of <span class="math notranslate nohighlight">\(_{92}^{238}\mathrm{U}=238.0508\ \mathrm{u}\)</span></p></li>
+<li><p>Mass of <span class="math notranslate nohighlight">\(_{90}^{234}\mathrm{Th}=234.0426\ \mathrm{u}\)</span></p></li>
+<li><p>Mass of <span class="math notranslate nohighlight">\(_{2}^{4}\alpha=4.0026\ \mathrm{u}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(1\ \mathrm{u}=1\ \mathrm{atomic\ mass\ unit}=\frac{1}{12}\ \mathrm{of\ mass\ of\ carbon-12}=1.66\times 10^{-27}\ \mathrm{kg}\)</span></p></li>
+</ul>
+<p><strong>Solution</strong>.</p>
+<p>Let us substitute masses from left side and right side of the reaction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\Delta m &amp;= 238.0505\ \mathrm{u}- \left(234.0426+4.0026\right)\ \mathrm{u}=\\
+&amp;= 0.0056\ \mathrm{u}= 9.2988\times 10^{-30}\ \mathrm{kg}
+\end{aligned}
+\end{split}\]</div>
+<p>Plugging into Einstein’s equation:</p>
+<div class="math notranslate nohighlight">
+\[E=\Delta m c^{2}=(9.2988\times 10^{-30}\ \mathrm{kg})(3\times 10^{8}\ \mathrm{m/s})^{2}=8.37\cdot 10^{-13}\ \mathrm{J}\]</div>
 </div>
-<p>Coming back to the nuclear reaction describing uranium decay, we observe the presence of 3 neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction.</p>
+</section>
+<section id="chain-reactions">
+<h3>Chain reactions<a class="headerlink" href="#chain-reactions" title="Permalink to this heading">#</a></h3>
+<p>In the nuclear reaction describing uranium decay, we observe the presence of three neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction.</p>
 <p>[FIG NEEDED OF CHAIN REACTION DECAY IN JL NOTES]</p>
 <p>In order to maximize the efficiency of the reaction, neutrons need to be slowed down. To achieve that, heavy water is used (<span class="math notranslate nohighlight">\(\mathrm{D}_{2}\mathrm{O}\)</span>) is used.
 To control the chain reaction, rods made of boron are implemented (they absorb neutrons): when rods are inserted in the reactor, the reaction is slowed down, while it speeds up when rods are removed.</p>
 <p>Another possible source of nuclear energy is <strong>fusion</strong>, in which tow light nuclei combine to form a heavier nucleus while releasing energy. An example is the fusion reaction of two deuterium nuclei (deuterium is an isotope of hydrogen):</p>
 <div class="math notranslate nohighlight">
 \[    ^{2}_{1}\mathrm{H}+^{2}_{1}\mathrm{H}\rightarrow\ ^{3}_{2}\mathrm{He}+n\]</div>
+</section>
+<section id="nuclear-fusion">
+<h3>Nuclear fusion<a class="headerlink" href="#nuclear-fusion" title="Permalink to this heading">#</a></h3>
 <p>Fusion reactions are responsible for the enormous energy output of the Sunand other stars. However, achieving controlled fusion on Earth is extremely challenging because the positevly charged nuclei strongly repel each other through Coulomb forces. To overcome this repulsion, the reacting particles must reach temperatures on the order of <span class="math notranslate nohighlight">\(10^{8}\)</span> K, conditions typically found only in stellar interiors or nuclear explosions.</p>
+<div class="example admonition">
+<p class="admonition-title">A Car Powered by Nuclear Fuel</p>
+<p><strong>Question</strong> An average car consumes about 5 L of gasoline per day. Assume that gasoline has average density</p>
+<div class="math notranslate nohighlight">
+\[\rho = 0.75\ \mathrm{kg}\ \mathrm{L}^{-1}\]</div>
+<p>and lower heating value</p>
+<div class="math notranslate nohighlight">
+\[H = 44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}\]</div>
+<p>Suppose that all practical difficulties associated with radioactivity and waste disposal are ignored, and that a car is instead powered by uranium-235. If the car is equipped with 0.1 kg of uranium-235, determine whether the car would ever need refueling under average driving conditions.</p>
+<p><strong>Solution</strong>. We first calculate the mass of gasoline consumed by the car in one day. Using the given density and daily fuel consumption,</p>
+<div class="math notranslate nohighlight">
+\[m_{gasoline} = \rho V = (0.75\ \mathrm{kg}\ \mathrm{L}^{−1})(5\ \mathrm{L}/\mathrm{day}) = 3.75\ \mathrm{kg}/\mathrm{day}\]</div>
+<p>The corresponding energy supplied to the car per day is therefore</p>
+<div class="math notranslate nohighlight">
+\[E_{day} = m_{gasoline}H = (3.75\ \mathrm{kg/day})(44000\ \mathrm{kJ}\ \mathrm{kg}^{−1}) = 165000\ \mathrm{kJ/day}\]</div>
+<p>Next, we calculate the total energy available from the nuclear fuel. The complete fission of 1 kg of uranium-235 releases approximately <span class="math notranslate nohighlight">\(6.73\times 10^{10}\ \mathrm{kJ/kg}\)</span>.</p>
+<p>Therefore, for <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235, the total energy available is:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{nuclear} = (6.73\times 10^{10}\ \mathrm{kJ/kg})(0.1\ \mathrm{kg}) = 6.73\times 10^{9}\ \mathrm{kJ}\]</div>
+<p>The number of days for which this amount of nuclear fuel could supply the car is</p>
+<div class="math notranslate nohighlight">
+\[
+N =\frac{E_{nuclear}}{Eday}=\frac{6.73 \times 10^{9}\ \mathrm{kJ}}{165000\ \mathrm{kJ/day}}\approx 40,790\ \mathrm{days}.\]</div>
+<p>This corresponds to approximately <span class="math notranslate nohighlight">\(\approx 112\)</span> years. Therefore, from a purely energetic point of view, the car would not need
+refueling during its lifetime.</p>
+<p><strong>Equivalent power consumption during the same period</strong>
+It is useful to compare this result with the amount of gasoline that would be required to provide the same total energy. Since the car consumes <span class="math notranslate nohighlight">\(3.75\)</span> kg of gasoline per day, the total gasoline mass needed over <span class="math notranslate nohighlight">\(40790\)</span> days would be:</p>
+<div class="math notranslate nohighlight">
+\[m_{total} = (3.75\ \mathrm{kg/day})(40790\ \mathrm{days})\approx 1.53\times 10^{5}\ \mathrm{kg}\]</div>
+<p>Thus, about <span class="math notranslate nohighlight">\(150\)</span> tons of gasoline would be required to supply the same amount of energy as <span class="math notranslate nohighlight">\(0.1\)</span> kg of uranium-235.
+This comparison illustrates the extremely high energy density of nuclear fuel
+compared with conventional chemical fuels.</p>
+</div>
+<div class="example admonition">
+<p class="admonition-title">How efficient is petrol?</p>
+<p>If, instead of a tank of petrol, we used a straw to suck up fuel, how wide does the channel to hol the fuel need to be?</p>
+<p>Typical cars consume <span class="math notranslate nohighlight">\(\approx 40\ \mathrm{mpg}\)</span> (miles per gallon), where <span class="math notranslate nohighlight">\(1\ \mathrm{mile}=1.6\ \mathrm{km}\)</span> and <span class="math notranslate nohighlight">\(1\ \mathrm{gallon}=4.546\ \mathrm{L}\)</span>.
+So:</p>
+<div class="math notranslate nohighlight">
+\[1\ \mathrm{mpg}=0.425\ \mathrm{km}\ \mathrm{L}^{-1}\Rightarrow 40\ \mathrm{mpg}=0.07\ \mathrm{L/km}=7\times 10^{-5}\ \mathrm{m}^{3}/\mathrm{km}=7\times 10^{-8}\ \mathrm{m}^{2} \]</div>
+<p>The calculated quantity has the dimension of an area. This is in fact the area of the tunnel that you need to suck up fuel.
+The tunnel width will be:</p>
+<div class="math notranslate nohighlight">
+\[d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}\]</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -804,7 +920,12 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#refrigerators-and-refrigeration-cycle">6.4. Refrigerators and refrigeration cycle</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equivalence-between-kelvin-and-clausius-statement">6.5. Equivalence between Kelvin and Clausius statement</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rankine-cycle">6.6. Rankine cycle</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-power">6.7. Nuclear power</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fission">Nuclear fission</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chain-reactions">Chain reactions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nuclear-fusion">Nuclear fusion</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
