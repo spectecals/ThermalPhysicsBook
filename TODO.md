@@ -1,5 +1,4 @@
 [ ] - TODO
-[ ] - fix case a. b, 1, 2 in third law chapter 5, 
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
@@ -19,6 +18,12 @@ calculate entropy -->
 [-] - change -10 in supercooled to 0 deg. NB: supercooling is cooling past point of freezing without solidifying!
 
 [X] - DONE
+[X] - figure caption for ice water supercool
+[X] - now let us consider the entropy change of this process - cut out discussion up to 0 kJ
+[X] - we recall that the equation S = dq/T is only valid for a reversible process
+[X] - using figure 5.11 as a reference we will identify 3 steps in this process, p1, p2 p3, p1 is blah blah associated with heat after shock, and then the freezing process after the release of heat -- the system heats up to 0 deg C where the rest of the phase transition takes place, absorbing heat -- p2 is now the heat 
+[X] - fix case a. b, 1, 2 in third law chapter 5, 
+[X] - 0 degrees in figure of supercool
 [X] - SUNDAY! distributions, part 7 JL, annex files in feedback mod7 - dont touch boltzmann or moelcular  from JL
 [X] - copy out annex, use JL notes to relate concepts and examples
 [X] - CHECK [[]]
