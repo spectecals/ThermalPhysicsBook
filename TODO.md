@@ -1,7 +1,16 @@
 [ ] - TODO
+[ ] - fix case a. b, 1, 2 in third law chapter 5, 
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
+<!-- 
+firstly lets take a place shocking nucleation, entropy is delt as
+we know this process based on new fig, causes a release of heat
+we could be persuaded to calculate entropy like this
+-- wrong way --
+however delta s < 0, violates 2nd law>
+consider 3 different reversible steps, 123,
+calculate entropy -->
 
 [/] - GET SAMER'S REVIEW
 
