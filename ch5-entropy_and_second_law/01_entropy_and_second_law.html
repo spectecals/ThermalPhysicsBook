@@ -366,7 +366,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-in-supercooling-liquids">5.8. Entropy Change in Supercooling Liquids</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-1-heat-liquid-263-273-k"><span class="math notranslate nohighlight">\((S_1)\)</span> Heat liquid 263 → 273 K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-2-freeze-at-273-k"><span class="math notranslate nohighlight">\((S_2)\)</span> Freeze at 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-3-cool-solid-273-263-k"><span class="math notranslate nohighlight">\((S_3)\)</span> Cool solid 273 → 263 K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-entropy-change">Total entropy change</a></li>
 </ul>
 </li>
@@ -1522,41 +1521,32 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
 </section>
 <section id="entropy-change-in-supercooling-liquids">
 <h2><span class="section-number">5.8. </span>Entropy Change in Supercooling Liquids<a class="headerlink" href="#entropy-change-in-supercooling-liquids" title="Permalink to this heading">#</a></h2>
-<p>Consider a bottle of purified water, cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). We can then induce crystallization of the water into ice by creating a nucleation site, for example by <a href="https://www.youtube.com/watch?v=ph8xusY3GTM&t=30s" target="_blank">slamming the bottle onto a surface</a>. This process will heat the system but for simplicity we will consider the case where the system is cooled back to the starting temperature.</p>
+<p>Consider a bottle of purified water, cooled to <span class="math notranslate nohighlight">\(-10 ^\circ\)</span> C such that it <em>does not solidify into ice</em> (as there are no nucleation sites). We can then induce crystallization of the water into ice by creating a nucleation site, for example by <a href="https://www.youtube.com/watch?v=ph8xusY3GTM&t=30s" target="_blank">slamming the bottle onto a surface</a>. This process will release the latent heat of fusion into the environment, raising the temperature of the system.</p>
 <figure class="align-default" id="shockedsystem">
 <a class="reference internal image-reference" href="../_images/ShockedSystem.png"><img alt="../_images/ShockedSystem.png" src="../_images/ShockedSystem.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">A supercooled liquid heats up during the process of changing phase to a solid, releasing its latent heat of fusion and raising its temperature.</span><a class="headerlink" href="#shockedsystem" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<p>This process releases the latent heat of fusion into the environment but what is the change in entropy of this process? Please note that the environment acts as a heat sink.</p>
+<p>Now let us consider the entropy change of this process. Recall that the equation</p>
 <div class="math notranslate nohighlight">
 \[
-\Delta S = \Delta S_\text{water/ice} + \Delta S_\text{environment}
+\Delta S = \frac{\Delta Q}{T}
 \]</div>
-<ul class="simple">
-<li><p>where <span class="math notranslate nohighlight">\(\Delta S_\text{water/ice}\)</span> represents the entropy change due to the phase change between water and ice</p></li>
-<li><p>and <span class="math notranslate nohighlight">\(\Delta S_\text{environment}\)</span> represents the entropy change due to heat released to the environment.</p></li>
-</ul>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S &amp;= \frac{\Delta Q_\text{water/ice}}{T_\text{water/ice}}+\frac{Q_\text{env}}{T_\text{env}} \\ 
-&amp;= \frac{-333}{263} + \frac{333}{263} \\
-\Delta S &amp;= 0.0\ \text{kJ / K}.
-\end{aligned}
-\end{split}\]</div>
-<p>This doesn’t immediately reveal itself to be incorrect but consider the definition of entropy as a measure of disorder. The formation of crystalline structures creates order and therefore must reduce entropy. The corrected value must therefore find <span class="math notranslate nohighlight">\(\Delta S_\text{total} &lt; 0\)</span>, and no matter how small this term is, it would mean that we are violating the second law of thermodynamics.</p>
+<p>is only applicable in reversible processes.</p>
 <figure class="align-default" id="supercooling">
 <a class="reference internal image-reference" href="../_images/supercool.png"><img alt="../_images/supercool.png" src="../_images/supercool.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Temperature as a function of time during our supercooling procedure. We cool down to <span class="math notranslate nohighlight">\(T(t_1) = 263 K\)</span> with no phase transition. The shock caused by a slam or similar event introduces nucleation sites, allowing the phase transition to occur from <span class="math notranslate nohighlight">\(t_1\)</span> through <span class="math notranslate nohighlight">\(P_1\)</span>. The heat released during the phase transition brings the temperature to <span class="math notranslate nohighlight">\(T(t_2)=273 \text{ K } = 0 ^\circ\)</span> C. As the system continues to be cooled, the temperature remains constant throughout <span class="math notranslate nohighlight">\(P_2\)</span> until the rest of the water freezes at <span class="math notranslate nohighlight">\(t_3\)</span>. The process then finishes by cooling to <span class="math notranslate nohighlight">\(T(t_4)=T(t_1)=T_c=263\)</span> K. <span class="math notranslate nohighlight">\(P_4\)</span> denotes the naive (incorrect) approach outlined above.</span><a class="headerlink" href="#supercooling" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Temperature as a function of time while constantly being cooled. We cool down to <span class="math notranslate nohighlight">\(T(t_1) = 263 \text{ K }\)</span> with no phase transition when a shock introduces nucleation sites, allowing the phase transition to occur at <span class="math notranslate nohighlight">\(t_1\)</span>. The heat released during the phase transition brings the temperature to <span class="math notranslate nohighlight">\(T(t_2)=273 \text{ K } = 0 ^\circ\)</span> C. As the system continues to be cooled, the temperature remains constant until <span class="math notranslate nohighlight">\(t_3\)</span> where all water has converted to ice, allowing for further cooling below <span class="math notranslate nohighlight">\(0 ^\circ\)</span> C.</span><a class="headerlink" href="#supercooling" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>To calculate the entropy change correctly, a reversible path must be constructed such that thermal equilibrium is maintained throughout each step at each point in time. Our goal has an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>. Consider the following construction, where we can assume that the 3 steps below are reversible and therefore calculate the total entropy of the combined process:</p>
+<p>To calculate the entropy change correctly, a reversible path must be constructed such that thermal equilibrium is maintained throughout each step at each point in time.</p>
+<p>Our goal has an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(273 \ \mathrm{K}\)</span>. This constitutes the process from <span class="math notranslate nohighlight">\(t_1\)</span> to <span class="math notranslate nohighlight">\(t_3\)</span>, where we will assume that the liquid has completely converted into ice. Consider the following construction, where we can assume that the steps are reversible and therefore calculate the total entropy of the combined process:</p>
 <ol class="arabic simple">
 <li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K} (\Delta S_1) \)</span></p></li>
 <li><p>Freeze at <span class="math notranslate nohighlight">\(273 \ \mathrm{K} (\Delta S_2) \)</span></p></li>
-<li><p>Cool solid <span class="math notranslate nohighlight">\(273 \rightarrow 263 \ \mathrm{K} (\Delta S_3) \)</span></p></li>
 </ol>
-<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 + \Delta S_3 \)</span>.</p>
+<p>such that <span class="math notranslate nohighlight">\(\Delta S_\text{total} = \Delta S_1 + \Delta S_2 \)</span>.</p>
 <p><span class="math notranslate nohighlight">\(\,\)</span></p>
 <section id="s-1-heat-liquid-263-273-k">
 <h3><span class="math notranslate nohighlight">\((S_1)\)</span> Heat liquid 263 → 273 K<a class="headerlink" href="#s-1-heat-liquid-263-273-k" title="Permalink to this heading">#</a></h3>
@@ -1623,41 +1613,6 @@ Q = mL = 333 \ \mathrm{kJ}
 \]</div>
 <p><span class="math notranslate nohighlight">\(\,\)</span></p>
 </section>
-<section id="s-3-cool-solid-273-263-k">
-<h3><span class="math notranslate nohighlight">\((S_3)\)</span> Cool solid 273 → 263 K<a class="headerlink" href="#s-3-cool-solid-273-263-k" title="Permalink to this heading">#</a></h3>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-Q &amp;= c_{\text{ice}} m \Delta T \\
-  &amp;= (2.1 \ \mathrm{kJ/kg\,K})(1)(10) \\
-  &amp;= 21 \ \mathrm{kJ}
-\end{aligned}
-\end{split}\]</div>
-<p>System entropy change:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\Delta S_{\text{system}}
-&amp;= cm \ln\left(\frac{263}{273}\right) \\
-&amp;= 2.1 \ln\left(\frac{263}{273}\right) \\
-&amp;= -0.0784 \ \mathrm{kJ/K}
-\end{aligned}
-\end{split}\]</div>
-<p>Environment entropy change:</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_{\text{env}}
-= \frac{+21}{273}
-= 0.077 \ \mathrm{kJ/K}
-\]</div>
-<p>Total for step (3):</p>
-<div class="math notranslate nohighlight">
-\[
-\Delta S_3
-= 0.077 - 0.07844 = -0.00144 \ \mathrm{kJ/K}
-\]</div>
-<p><span class="math notranslate nohighlight">\(\,\)</span></p>
-</section>
 <section id="total-entropy-change">
 <h3>Total entropy change<a class="headerlink" href="#total-entropy-change" title="Permalink to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
@@ -1665,14 +1620,10 @@ Q &amp;= c_{\text{ice}} m \Delta T \\
 \begin{aligned}
 \Delta S_{\text{total}}
 &amp;= \Delta S_1 + \Delta S_2 + \Delta S_3 \\
-&amp;= 0.00288 + 0 - 0.00144 \\
-&amp;= 0.00144 \ \mathrm{kJ/K}
+&amp;= 0.00288 + 0 \\
+\Delta S_{\text{total}} &amp;= 0.00288 \ \mathrm{kJ/K} &gt; 0
 \end{aligned}
 \end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-\boxed{\Delta S_{\text{total}} = 0.00144 \ \mathrm{kJ/K} &gt; 0}
-\]</div>
 <p>The Second Law is satisfied.</p>
 </section>
 </section>
@@ -1712,7 +1663,7 @@ The result that <span class="math notranslate nohighlight">\( c = 0 \)</span> di
 <figure class="align-default" id="rd-law">
 <a class="reference internal image-reference" href="../_images/Entropy_Temperature_AB.png"><img alt="../_images/Entropy_Temperature_AB.png" src="../_images/Entropy_Temperature_AB.png" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Entropy curves <span class="math notranslate nohighlight">\(X\)</span> as a function of temperature. In (A), curves <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are sufficiently separated that it is possible to alternate between adiabatic and isothermal processes such that a finite number of steps may result in <span class="math notranslate nohighlight">\(T=0\)</span>. In (B), it is impossible to reach absolute zero if the third law is obeyed.</span><a class="headerlink" href="#rd-law" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.13 </span><span class="caption-text">Entropy curves <span class="math notranslate nohighlight">\(X\)</span> as a function of temperature. In (A), curves <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> are sufficiently separated that it is possible to alternate between adiabatic and isothermal processes such that a finite number of steps may result in <span class="math notranslate nohighlight">\(T=0\)</span>. In (B), it is impossible to reach absolute zero if the third law is obeyed.</span><a class="headerlink" href="#rd-law" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Let us denote parameters describing the state of the system with <span class="math notranslate nohighlight">\(X\)</span>. Consider two cases:</p>
@@ -1723,8 +1674,8 @@ The result that <span class="math notranslate nohighlight">\( c = 0 \)</span> di
 <p>The procedure for proving this is as follows:</p>
 <p>Transitions from <span class="math notranslate nohighlight">\(X_1 \to X_2\)</span> are an isothermal increase in <span class="math notranslate nohighlight">\(X\)</span> (cooling).
 Transitions from <span class="math notranslate nohighlight">\(X_2 \to X_1\)</span> are an adiabatic decrease in <span class="math notranslate nohighlight">\(X\)</span>.</p>
-<p>From <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.12</span></a>, it is clear that it is possible to cool to <span class="math notranslate nohighlight">\( T=0\)</span> K within a finite number of steps.
-For case 2, it is clear that it will take an infinite number of steps to reach 0 K as both curves in <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.12</span></a> satisfy the third law as both <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> curves are arbitrarily close as <span class="math notranslate nohighlight">\(T \to 0\)</span> K.</p>
+<p>From <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.13</span></a>, it is clear that it is possible to cool to <span class="math notranslate nohighlight">\( T=0\)</span> K within a finite number of steps.
+For case 2, it is clear that it will take an infinite number of steps to reach 0 K as both curves in <a class="reference internal" href="#rd-law"><span class="std std-numref">Fig. 5.13</span></a> satisfy the third law as both <span class="math notranslate nohighlight">\(X_1\)</span> and <span class="math notranslate nohighlight">\(X_2\)</span> curves are arbitrarily close as <span class="math notranslate nohighlight">\(T \to 0\)</span> K.</p>
 </section>
 </section>
 </section>
@@ -1834,7 +1785,6 @@ For case 2, it is clear that it will take an infinite number of steps to reach 0
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entropy-change-in-supercooling-liquids">5.8. Entropy Change in Supercooling Liquids</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-1-heat-liquid-263-273-k"><span class="math notranslate nohighlight">\((S_1)\)</span> Heat liquid 263 → 273 K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-2-freeze-at-273-k"><span class="math notranslate nohighlight">\((S_2)\)</span> Freeze at 273 K</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#s-3-cool-solid-273-263-k"><span class="math notranslate nohighlight">\((S_3)\)</span> Cool solid 273 → 263 K</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#total-entropy-change">Total entropy change</a></li>
 </ul>
 </li>
