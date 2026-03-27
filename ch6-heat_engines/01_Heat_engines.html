@@ -538,7 +538,7 @@ The Carnot cycle is not a practical engine cycle and cannot be implemented exact
 <p>An internal combustion engine is a particular type of heat engine in which energy is retrieved by means of the combustion occurring inside the working fluid (which is typically a mixture of air and fuel).</p>
 <p>In <a class="reference internal" href="#internal-engine-schematics"><span class="std std-numref">Fig. 6.6</span></a> it is reported the working principle of one type of gasoline engine.</p>
 <figure class="align-default" id="internal-engine-schematics">
-<a class="reference internal image-reference" href="../_images/Internal_engine_schematics.png"><img alt="../_images/Internal_engine_schematics.png" src="../_images/Internal_engine_schematics.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/Internal_engine_schematics.png"><img alt="../_images/Internal_engine_schematics.png" src="../_images/Internal_engine_schematics.png" style="width: 70%;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Working principle schematics of an internal combustion engine. In particular, the Otto engine schematic is reported.</span><a class="headerlink" href="#internal-engine-schematics" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -549,7 +549,7 @@ The Carnot cycle is not a practical engine cycle and cannot be implemented exact
 <ul class="simple">
 <li><p><strong>Step 0</strong>: Intake stroke. Here the piston moves down, allowing gasoline-air mixture to enter the cylinder via the intake valve.</p></li>
 <li><p><strong>Step 1 (<span class="math notranslate nohighlight">\(a-b\)</span>)</strong>: Compression stroke. The intake valve closes and the piston compresses the misture (adiabatic process).</p></li>
-<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Ignition. The spark plug ignites the mixture.<span class="math notranslate nohighlight">\(Q_{H}\)</span> is added to the system by the burnt fuel. This is an isochoric step.</p></li>
+<li><p><strong>Step 2 (<span class="math notranslate nohighlight">\(b-c\)</span>)</strong>: Ignition stroke. The spark plug ignites the mixture.<span class="math notranslate nohighlight">\(Q_{H}\)</span> is added to the system by the burnt fuel. This is an isochoric step.</p></li>
 <li><p><strong>Step 3 (<span class="math notranslate nohighlight">\(c-d\)</span>)</strong>: Power stroke. The hot mixture expands with pistons being pushed down. This is an adiabatic expansion step, in which the volume is expanded from <span class="math notranslate nohighlight">\(V\)</span> back to <span class="math notranslate nohighlight">\(rV\)</span>.</p></li>
 <li><p><strong>Step 4 (<span class="math notranslate nohighlight">\(d-a\)</span>)</strong>: Exhaust stroke. The exhaust valve opens and combustion residuals are expelled. The cylinder is ready for the next cycle. This is an isochoric process, where heat <span class="math notranslate nohighlight">\(Q_{C}\)</span> id rejected to the cold reservoir.</p></li>
 </ul>
@@ -627,7 +627,12 @@ The reverse process, however, cannot occur spontaneously. Transferring heat from
 Hence:</p>
 <div class="math notranslate nohighlight">
 \[|W|=-W\quad\quad |Q_{H}|=-Q_{H}\]</div>
-<p>[FIG NEEDED OF REFRIGERATOR DIAGRAM]</p>
+<p>In <a class="reference internal" href="#fridgescheme"><span class="std std-numref">Fig. 6.9</span></a> the schematic of the refrigerator is reported.</p>
+<figure class="align-default" id="fridgescheme">
+<a class="reference internal image-reference" href="../_images/FridgeScheme.png"><img alt="../_images/FridgeScheme.png" src="../_images/FridgeScheme.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Schematics of a refrigerator.</span><a class="headerlink" href="#fridgescheme" title="Permalink to this image">#</a></p>
+<div class="legend">
 <p>From the first law of thermodynamics:</p>
 <div class="math notranslate nohighlight">
 \[Q_{H}+Q_{C}-W=0 \Rightarrow |Q_{H}|=Q_{C}+|W|\]</div>
@@ -656,16 +661,22 @@ The effectiveness of a refrigerator is measured by the <strong>coefficient of pe
 \end{aligned}
 \end{split}\]</div>
 </div>
+</div>
+</figcaption>
+</figure>
 <p>Let us look now in detail the thermodynamic transformations the refrigerant undergoes in a refrigeration cycle used in household refrigerators:</p>
 <figure class="align-default" id="refrigeration-pv">
 <a class="reference internal image-reference" href="../_images/Refrigeration_pV.png"><img alt="../_images/Refrigeration_pV.png" src="../_images/Refrigeration_pV.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the refrigeration cycle characterizing a typical household refrigerator.</span><a class="headerlink" href="#refrigeration-pv" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram reported in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Refrigeration_pV</span></code>:</p>
+<p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram reported in <a class="reference internal" href="#refrigeration-pv"><span class="std std-numref">Fig. 6.10</span></a>:</p>
 <ol class="arabic simple">
-<li><p>Adiabatic expansion from the liquid substance to vapour+liquid phase</p></li>
-<li><p>Isobaric expansion ending in a high <span class="math notranslate nohighlight">\(T\)</span>, low <span class="math notranslate nohighlight">\(p\)</span> and high <span class="math notranslate nohighlight">\(V\)</span> and absorbing heat from inside the refrigerator</p></li>
-<li><p>Adiabatic compression</p></li>
-<li><p>Isobaric compression</p></li>
+<li><p><span class="math notranslate nohighlight">\(a-b\)</span>: Adiabatic expansion. The refrigerant partially evaporates (i.e. there is a phase change from the liquid phase to the vapour+liquid phase), thus ending as a lower-pressure, higher-volume liquid-vapour mixture.</p></li>
+<li><p><span class="math notranslate nohighlight">\(b-c\)</span>: Isobaric expansion. The refrigerant mixture changes phase from liquid-vapour mixture to vapour phase, thus ending in a high <span class="math notranslate nohighlight">\(T\)</span>, low <span class="math notranslate nohighlight">\(p\)</span> and high <span class="math notranslate nohighlight">\(V\)</span> state and absorbing heat <span class="math notranslate nohighlight">\(Q_{in}\)</span> from inside the refrigerator.</p></li>
+<li><p><span class="math notranslate nohighlight">\(c-d\)</span>: Adiabatic compression. The refrigerant gets compressed adiabatically by a pump, thus ending up in a high-pressure, high-volume gas.</p></li>
+<li><p><span class="math notranslate nohighlight">\(d-a\)</span>: Isobaric compression. The refrigerant condenses from the vapour phase to the liquid phase, thus releasing heat <span class="math notranslate nohighlight">\(Q_{out}\)</span> to the external environment.</p></li>
 </ol>
 <!-- ## Second law of thermodynamics
 The experimental impossibility to build a heat engine characterized by 100% effiency is the basis of the second law of thermodynamics.
@@ -692,22 +703,27 @@ It is important to point out that neither of these impossibilities violates the 
 <section id="equivalence-between-kelvin-and-clausius-statement">
 <h2><span class="section-number">6.5. </span>Equivalence between Kelvin and Clausius statement<a class="headerlink" href="#equivalence-between-kelvin-and-clausius-statement" title="Permalink to this heading">#</a></h2>
 <p>It is possible to show that the two statements of second law are completely equivalent.
-To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless (i.e. no work needed to drive the refrigeration) refrigerator and to attach in series a regular heat engine, as reported in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Anticlausius</span></code></p>
+To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless (i.e. no work needed to drive the refrigeration) refrigerator and to attach in series a regular heat engine, as reported in <a class="reference internal" href="#anticlausius"><span class="std std-numref">Fig. 6.11</span></a></p>
 <figure class="align-default" id="anticlausius">
 <a class="reference internal image-reference" href="../_images/Anticlausius_scheme.png"><img alt="../_images/Anticlausius_scheme.png" src="../_images/Anticlausius_scheme.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.11 </span><span class="caption-text">Schematics of an “anti-Clausius” system (labeled F in figure) and a regular heat engine (E) attached in series.</span><a class="headerlink" href="#anticlausius" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <p>Writing down first law equation for the total system:</p>
 <div class="math notranslate nohighlight">
 \[\underbrace{Q_{C}-|Q_{C}|}_{\mathrm{anti-Clausius}}+\underbrace{Q_{H}-|Q_{C}|+W}_{\mathrm{heat-engine}}=0 \Rightarrow (Q_{H}-|Q_{C}|)+W=0\]</div>
 <p>, which corresponds to the so-called “anti-Kelvin” system, i.e. an heat engine capable of extracting heat from a single reservoir and converting it entirely to work.</p>
 <p>The two statements can be proven to be equivalent also starting from an anti-Kelvin engine in series with a regular refrigerator, which eventually leads to the Clausius statement.</p>
-<div class="example admonition">
-<p class="admonition-title">Can an engine with 100% efficiency exist?</p>
-<p>To answer, let us state that such an engine can exist, and let us attach it to a fridge (which we will see after), as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">100_efficiency</span></code>.</p>
 <figure class="align-default" id="efficiency">
 <a class="reference internal image-reference" href="../_images/100_efficiency.png"><img alt="../_images/100_efficiency.png" src="../_images/100_efficiency.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.12 </span><span class="caption-text">Schematics of 100 % efficient engine (E) and a regular fridge (F) attached in series.</span><a class="headerlink" href="#efficiency" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-</div>
+<div class="example admonition">
+<p class="admonition-title">Can an engine with 100% efficiency exist?</p>
+<p>To answer, let us state that such an engine can exist, and let us attach it to a fridge (which we will see after), as depicted in <a class="reference internal" href="#efficiency"><span class="std std-numref">Fig. 6.12</span></a>.</p>
 <p>The engine, having 100 %  thermal effiency, converts all the heat extracted <span class="math notranslate nohighlight">\(Q_{H}\)</span> from the hot reservoir to work <span class="math notranslate nohighlight">\(W\)</span>, which is used to make the fridge work and extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir (this time <span class="math notranslate nohighlight">\(Q_{C}\)</span> is positive) and deliver <span class="math notranslate nohighlight">\(Q_{H}\)</span> to the hot one.</p>
 <p>Balancing out the whole system, it turns out that the outcome of the combined engine is to extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir without any work required.</p>
 <p>Let us calculate now the variation of entropy associated to the combined engine:</p>
@@ -715,8 +731,6 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 \[\Delta S=\Delta S_{H}+\Delta S_{C}= 0-\frac{Q_{C}}{T_{C}}\]</div>
 <p>, which then results in a negative quantity. As already discussed in the previous chapter (<a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html#sec-second-law"><span class="std std-ref">Module 5.7</span></a>), second law of thermodynamics states that it’s not possible for a thermodynamic transformation to occur without an increase of the entropy associated to the system.</p>
 <p>This means that the system composed of the “perfect” engine and the fridge cannot exist, thus proving that there are no heat engines with 100 % thermal efficiency.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
 </div>
 </section>
 <section id="rankine-cycle">
@@ -737,34 +751,52 @@ To understand the design and performance of these systems, it is useful to first
 <li><p>Ensuring that compression occurs only in the liquid phase</p></li>
 <li><p>Allowing expansion to occur primarily in the vapour phase</p></li>
 </ul>
-<p>These modifications make the cycle feasible for power generation systems. The physical layout of the Rankine cycle is provided in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_schematics</span></code> and is composed of a pump, boiler, turbine and condensor.</p>
-<p>[FIG NEEDED OF RANKINE SCHEMATICS]</p>
-<p>The Rankine Cycle stages (refer to <span class="math notranslate nohighlight">\(TS\)</span> diagram, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_diagram</span></code>) can be clearly identified on the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
+<p>These modifications make the cycle feasible for power generation systems. The physical layout of the Rankine cycle is provided in <a class="reference internal" href="#rankine-schematics"><span class="std std-numref">Fig. 6.13</span></a> and is composed of a pump, boiler, turbine and condensor.</p>
+<figure class="align-default" id="rankine-schematics">
+<a class="reference internal image-reference" href="../_images/Rankine_schematics.png"><img alt="../_images/Rankine_schematics.png" src="../_images/Rankine_schematics.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.13 </span><span class="caption-text">Schematics of Rankine cycle.</span><a class="headerlink" href="#rankine-schematics" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Rankine Cycle stages (refer to <span class="math notranslate nohighlight">\(pV\)</span> diagram, <a class="reference internal" href="#rankine-diagram-pv"><span class="std std-numref">Fig. 6.14</span></a>) can be clearly identified on the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
+<figure class="align-default" id="rankine-diagram-pv">
+<a class="reference internal image-reference" href="../_images/Rankine_diagram_pV.png"><img alt="../_images/Rankine_diagram_pV.png" src="../_images/Rankine_diagram_pV.png" style="width: 70%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.14 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the regular Rankine cycle.</span><a class="headerlink" href="#rankine-diagram-pv" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>In this course <span class="math notranslate nohighlight">\(pV\)</span> diagrams were mostly used to describle the various thermodynamics processes. For the Rankine cycle, its processes are commonly explained using temperature vs. entropy (<span class="math notranslate nohighlight">\(TS\)</span>) diagrams (<a class="reference internal" href="#rankine-diagram"><span class="std std-numref">Fig. 6.15</span></a> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">super_heated_engine</span></code>).</p>
 <figure class="align-default" id="rankine-diagram">
 <a class="reference internal image-reference" href="../_images/TS_Diagram1.png"><img alt="../_images/TS_Diagram1.png" src="../_images/TS_Diagram1.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.15 </span><span class="caption-text"><span class="math notranslate nohighlight">\(TS\)</span> diagram of Rankine cycle.</span><a class="headerlink" href="#rankine-diagram" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
 <figure class="align-default" id="super-heated-rankine">
 <a class="reference internal image-reference" href="../_images/TS_Diagram2.png"><img alt="../_images/TS_Diagram2.png" src="../_images/TS_Diagram2.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.16 </span><span class="caption-text"><span class="math notranslate nohighlight">\(TS\)</span> diagram of super-heated Rankine cycle.</span><a class="headerlink" href="#super-heated-rankine" title="Permalink to this image">#</a></p>
+</figcaption>
 </figure>
-<ul class="simple">
+<p>In detail:</p>
+<ul>
 <li><p>1 → 2: Pump (liquid compression (isoentropic)). Water enters as a saturated liquid from the condenser. It is compressed to a higher pressure by the pump. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this appears as a nearly vertical line (very small volume change). Because the fluid is liquid, no phase change occurs, and the work required is small.</p></li>
 <li><p>2 → 3: Boiler (constant-pressure heat addition)
 The high pressure water water is heated to high pressure steam at constant pressure:</p>
-<ul>
+<ul class="simple">
 <li><p>First, temperature rises (compressed liquid region)</p></li>
 <li><p>Then phase change occurs (liquid → vapour)</p></li>
-<li><p>Optionally, the vapour is superheated ( shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">super_heated_rankine</span></code>). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this corresponds to a large increase in specific volume as the water evaporates.</p></li>
-</ul>
-</li>
+<li><p>Optionally, the vapour is superheated ( shown in <a class="reference internal" href="#super-heated-rankine"><span class="std std-numref">Fig. 6.16</span></a>). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this corresponds to a large increase in specific volume as the water evaporates.</p></li>
 </ul>
 <p>Note that some common heat sources for the boiler include: burning fossil fuels (e.g. coal, natural gas), nuclear energy (heat fromn nuclear fission), solar energy, geothermal (heat from hot fluids in the ground).</p>
-<ul class="simple">
+</li>
 <li><p>3 → 4: Turbine (adiabatic – more accurately it is isoentropic – expansion)
 High-pressure steam expands through the turbine, producing mechanical work, which.can be used for example to spin a generator.
-Pressure and temperature decrease, and the fluid may enter the wet region (vapour–liquid mixture). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this is a downward-sloping expansion curve.</p></li>
+Pressure and temperature decrease, and the fluid may enter the wet region (vapour–liquid mixture). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram this is a downward-sloping expansion curve.</p></li>
 <li><p>4 → 1: Condenser (constant-pressure heat rejection)
 Heat is rejected at constant pressure, and the steam condenses back into liquid. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, the volume decreases significantly as the fluid returns to the saturated liquid state.</p></li>
 </ul>
+ <!-- On the $TS$ diagram ({numref}`Rankine_diagram`), the process appears as two coinciding point (no change in entropy and temperature). -->
 </section>
 <section id="nuclear-power">
 <span id="sec-nuclear"></span><h2><span class="section-number">6.7. </span>Nuclear power<a class="headerlink" href="#nuclear-power" title="Permalink to this heading">#</a></h2>
@@ -774,10 +806,10 @@ Nuclear power plants operate according to the same thermodynamic principle as co
 <figure class="align-default" id="nuclear-power-plant">
 <a class="reference internal image-reference" href="../_images/Nuclear_power_plant.png"><img alt="../_images/Nuclear_power_plant.png" src="../_images/Nuclear_power_plant.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.9 </span><span class="caption-text">Schematics of a nuclear power plant. Image taken from <a class="reference external" href="https://science.howstuffworks.com/nuclear-power2.htm">https://science.howstuffworks.com/nuclear-power2.htm</a> .</span><a class="headerlink" href="#nuclear-power-plant" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.17 </span><span class="caption-text">Schematics of a nuclear power plant. Image taken from <a class="reference external" href="https://science.howstuffworks.com/nuclear-power2.htm">https://science.howstuffworks.com/nuclear-power2.htm</a> .</span><a class="headerlink" href="#nuclear-power-plant" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#nuclear-power-plant"><span class="std std-numref">Fig. 6.9</span></a> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
+<p><a class="reference internal" href="#nuclear-power-plant"><span class="std std-numref">Fig. 6.17</span></a> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
 <section id="nuclear-fission">
 <h3>Nuclear fission<a class="headerlink" href="#nuclear-fission" title="Permalink to this heading">#</a></h3>
 <p>The heat produced in nuclear reeactors originates from nuclear fission reactions. In this process, a heavy atomic nucleus absorb a neutron and becomes unstable, splitting into smaller nuclei while releasing additional neutrons and a large amount of energy.
@@ -793,14 +825,14 @@ In this reaction a uranium-235 nucleus absorbs a neutron and splits into barium-
 \]</div>
 <p>, where <span class="math notranslate nohighlight">\(\Delta m\)</span> is the decrease in mass and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light. This mass change is directly related to the binding energy, which measures how tightly nucleons are held together in a nucleus. The fission products (barium and krypton) have a higher binding energy per nucleon than uranium-235, meaning they are more stable and tightly bound. As a result, the total binding energy increase during the reaction. Since binding energy contributes negatively to the mass of a nucleus, an increase in binding energy leads to a decrease in total mass. The lost mass is therefore released as energy, which appears as heat in the reactor and is ultimately used to generate electricity.</p>
 <p>Binding energy is the energy required to completely disassemble a nucleus into its individual protons and neutrons. Equivalently, it is the energy released when a nucleus is formed from these nucleons. A useful quantity is the binding energy per nucleon, which indicates how tightly each nucleon is bound within the nucleus.
-In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.10</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) is reported.</p>
+In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.18</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) is reported.</p>
 <figure class="align-default" id="binding-energy">
 <a class="reference internal image-reference" href="../_images/Binding_energy.png"><img alt="../_images/Binding_energy.png" src="../_images/Binding_energy.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.10 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.18 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The graph of binding energy per nucleon as a function of the number of nucleons (<a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.10</span></a>) shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
+<p>The graph of binding energy per nucleon as a function of the number of nucleons (<a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.18</span></a>) shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
 <p>In the case of uranium-235, the binding energy per nucleon is approximately 7.6 MeV. Since one eV corresponds to <span class="math notranslate nohighlight">\(1.6\times 10^{−19} \mathrm{J}\)</span>, the total binding energy of a uranium-235 nucleus can be estimated as:</p>
 <div class="math notranslate nohighlight">
 \[E_{\mathrm{binding}}=235\cdot 7.6\ \mathrm{MeV}\cdot 1.6\times 10^{-19}\ \mathrm{J/eV}=2.86\times 10^{-10}\ \mathrm{J}\]</div>
@@ -833,8 +865,13 @@ In the plot of <a class="reference internal" href="#binding-energy"><span class=
 </section>
 <section id="chain-reactions">
 <h3>Chain reactions<a class="headerlink" href="#chain-reactions" title="Permalink to this heading">#</a></h3>
-<p>In the nuclear reaction describing uranium decay, we observe the presence of three neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction.</p>
-<p>[FIG NEEDED OF CHAIN REACTION DECAY IN JL NOTES]</p>
+<p>In the nuclear reaction describing uranium decay, we observe the presence of three neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction, as illustrated in <a class="reference internal" href="#chain-decay"><span class="std std-numref">Fig. 6.19</span></a>.</p>
+<figure class="align-default" id="chain-decay">
+<a class="reference internal image-reference" href="../_images/Chain_decay.png"><img alt="../_images/Chain_decay.png" src="../_images/Chain_decay.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.19 </span><span class="caption-text">Schematics of chain reaction decay occurring inside the reactor of a nuclear power plant.</span><a class="headerlink" href="#chain-decay" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>In order to maximize the efficiency of the reaction, neutrons need to be slowed down. To achieve that, heavy water is used (<span class="math notranslate nohighlight">\(\mathrm{D}_{2}\mathrm{O}\)</span>) is used.
 To control the chain reaction, rods made of boron are implemented (they absorb neutrons): when rods are inserted in the reactor, the reaction is slowed down, while it speeds up when rods are removed.</p>
 </section>
@@ -849,11 +886,11 @@ To control the chain reaction, rods made of boron are implemented (they absorb n
 <section id="energy-density-of-fuel-and-energy-storage-systems">
 <h2><span class="section-number">6.8. </span>Energy density of fuel and energy storage systems<a class="headerlink" href="#energy-density-of-fuel-and-energy-storage-systems" title="Permalink to this heading">#</a></h2>
 <p>Specific energy (MJ/kg), measures how much energy can be stored per unit mass of a fuel or energy carrier. It is a critical parameter when comparing different energy sources, particularly for applications such as transportation and power generation, where mass constraints are important.</p>
-<p>Uranium, used as a nuclear fuel, has an extraordinarily high specific energy compared to all chemical fuels. According to the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density_Extended_Reference_Table">Energy Density Extended Reference Table</a>, uranium used in nuclear fission has a specific energy on the order of <span class="math notranslate nohighlight">\(\sim 8\times 10^{7}\)</span> MJ/kg (depending on burnup assumptions). This immense value arises because nuclear reactions convert a small fraction of mass directly into energy, as described by mass-energy equivalence. As a result, a very small quantity of uranium can produce vast amounts of energy (<a class="reference internal" href="#sec-nuclear"><span class="std std-ref">Module 6.7</span></a>), which is why nuclear power plants require relatively little fuel compared to fossil-fuel plants.</p>
+<p>Uranium, used as a nuclear fuel, has an extraordinarily high specific energy compared to all chemical fuels. According to the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density">Energy Density Table</a>, uranium used in nuclear fission has a specific energy on the order of <span class="math notranslate nohighlight">\(\sim 8\times 10^{7}\)</span> MJ/kg (depending on burnup assumptions). This immense value arises because nuclear reactions convert a small fraction of mass directly into energy, as described by mass-energy equivalence. As a result, a very small quantity of uranium can produce vast amounts of energy (<a class="reference internal" href="#sec-nuclear"><span class="std std-ref">Module 6.7</span></a>), which is why nuclear power plants require relatively little fuel compared to fossil-fuel plants.</p>
 <p>In contrast, conventional liquid fuels such as gasoline and diesel rely on chemical energy stored in molecular bonds. Gasoline has a specific energy of approximately 46 MJ/kg, while diesel is slightly higher at about 45–46 MJ/kg. These values are many orders of magnitude lower than uranium but are still very high among chemical fuels. Their relatively high specific energy, combined with their liquid state at ambient conditions, makes them highly suitable for transportation, where both energy density and ease of storage are essential. Diesel’s marginally higher energy density, along with higher engine efficiency, explains its widespread use in heavy-duty transport and industrial applications.</p>
 <p>Lithium-ion batteries, which store energy electrochemically rather than chemically through combustion, have significantly lower specific energy. Typical lithium-ion batteries have a specific energy in the range of <span class="math notranslate nohighlight">\(\sim\)</span>0.5–0.9 MJ/kg (roughly 150–250 Wh/kg). This is about 50-100 times lower than gasoline or diesel. Despite this limitation, lithium-ion batteries are widely used because they are rechargeable and can achieve high energy conversion efficiencies. Their lower specific energy, however, remains a key constraint in applications such as long-range electric vehicles and aviation.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="tab-energy-density">
-<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Specific Energy Compartiosn Summary for Uranium, diesel, gasoline and Li-ion battereis. For a complete list ofspecific energy for other storage types visit <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density_Extended_Reference_Table">Energy Density Extended Reference Table</a></span><a class="headerlink" href="#tab-energy-density" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Specific Energy Compartiosn Summary for Uranium, diesel, gasoline and Li-ion battereis. For a complete list ofspecific energy for other storage types visit <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_density">Energy Density Table</a></span><a class="headerlink" href="#tab-energy-density" title="Permalink to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Energy source</p></th>
 <th class="head"><p>Specific Energy (MJ/kg)</p></th>
@@ -936,11 +973,7 @@ d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}
 $$
 
 **Alternative method**. -->
-<p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube.</p>
-<figure class="align-default" id="edinburgh-london">
-<a class="reference internal image-reference" href="../_images/Edinburgh_to_London_pipe.png"><img alt="../_images/Edinburgh_to_London_pipe.png" src="../_images/Edinburgh_to_London_pipe.png" style="width: 60%;" /></a>
-</figure>
-</div>
+<p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube (<a class="reference internal" href="#edinburgh-london"><span class="std std-numref">Fig. 6.20</span></a> for reference).</p>
 <p><strong>Solution</strong>.</p>
 <p>The width <span class="math notranslate nohighlight">\(d\)</span> of the tube can be found starting from the volume <span class="math notranslate nohighlight">\(V\)</span> of the tank, since:</p>
 <div class="math notranslate nohighlight">
@@ -949,25 +982,19 @@ $$
 Substituting:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{aligned}
-d&amp;=\sqrt{\frac{50\ \mathrm{L}}{(500\ \mathrm{miles})\cdot (1600\ \mathrm{m}\ miles^{-1}) }}=\\
+d&amp;=\sqrt{\frac{50\ \mathrm{L}}{(500\ \mathrm{miles})\cdot (1600\ \mathrm{m}\ \mathrm{miles}^{-1}) }}=\\
 &amp;=\sqrt{\frac{50\times 10^{-3}\ \mathrm{m}^{3}}{8\times 10^{5}\ \mathrm{m}}}=250\ \mu\mathrm{m}
 \end{aligned}
 \end{split}\]</div>
 <p>The width of the tube is <span class="math notranslate nohighlight">\(d=250\ \mu\mathrm{m}\)</span>, thus showing just how energetically dense petrol is.
 That’s the key issue with fossil fuels: their energy density is extremely high. They pack a huge amount of usable energy into a small space. This is why replacing fossil fuels is so difficult and costly. It’s not just about producing energy – it’s about storing it efficiently.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-
-
-
-
-
-
-
-
-
-</pre></div>
 </div>
+<figure class="align-default" id="edinburgh-london">
+<a class="reference internal image-reference" href="../_images/Edinburgh_to_London_pipe.png"><img alt="../_images/Edinburgh_to_London_pipe.png" src="../_images/Edinburgh_to_London_pipe.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6.20 </span><span class="caption-text">On the left, sketch of UK map with Edinburgh-London distance. On the right, the sketch of the ideal tube of length <span class="math notranslate nohighlight">\(l\)</span> and width <span class="math notranslate nohighlight">\(d\)</span> containing a full tank of fuel.</span><a class="headerlink" href="#edinburgh-london" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 
