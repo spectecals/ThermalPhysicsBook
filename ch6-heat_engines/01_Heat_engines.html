@@ -657,8 +657,10 @@ The effectiveness of a refrigerator is measured by the <strong>coefficient of pe
 \end{split}\]</div>
 </div>
 <p>Let us look now in detail the thermodynamic transformations the refrigerant undergoes in a refrigeration cycle used in household refrigerators:</p>
-<p>[FIG NEEDED OF PV DIAGRAM OF REFRIGERATION CYCLE FROM JL NOTES]</p>
-<p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
+<figure class="align-default" id="refrigeration-pv">
+<a class="reference internal image-reference" href="../_images/Refrigeration_pV.png"><img alt="../_images/Refrigeration_pV.png" src="../_images/Refrigeration_pV.png" style="width: 60%;" /></a>
+</figure>
+<p>Looking at the <span class="math notranslate nohighlight">\(pV\)</span> diagram reported in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Refrigeration_pV</span></code>:</p>
 <ol class="arabic simple">
 <li><p>Adiabatic expansion from the liquid substance to vapour+liquid phase</p></li>
 <li><p>Isobaric expansion ending in a high <span class="math notranslate nohighlight">\(T\)</span>, low <span class="math notranslate nohighlight">\(p\)</span> and high <span class="math notranslate nohighlight">\(V\)</span> and absorbing heat from inside the refrigerator</p></li>
@@ -690,8 +692,10 @@ It is important to point out that neither of these impossibilities violates the 
 <section id="equivalence-between-kelvin-and-clausius-statement">
 <h2><span class="section-number">6.5. </span>Equivalence between Kelvin and Clausius statement<a class="headerlink" href="#equivalence-between-kelvin-and-clausius-statement" title="Permalink to this heading">#</a></h2>
 <p>It is possible to show that the two statements of second law are completely equivalent.
-To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless (i.e. no work needed to drive the refrigeration) refrigerator and to attach in series a regular heat engine, as reported in Fig.</p>
-<p>[FIG NEEDED OF ANTICLAUSIUS+HEAT ENGINE]</p>
+To do that, let us imagine to have an “anti-Clausius” system, i.e. a workless (i.e. no work needed to drive the refrigeration) refrigerator and to attach in series a regular heat engine, as reported in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Anticlausius</span></code></p>
+<figure class="align-default" id="anticlausius">
+<a class="reference internal image-reference" href="../_images/Anticlausius_scheme.png"><img alt="../_images/Anticlausius_scheme.png" src="../_images/Anticlausius_scheme.png" style="width: 60%;" /></a>
+</figure>
 <p>Writing down first law equation for the total system:</p>
 <div class="math notranslate nohighlight">
 \[\underbrace{Q_{C}-|Q_{C}|}_{\mathrm{anti-Clausius}}+\underbrace{Q_{H}-|Q_{C}|+W}_{\mathrm{heat-engine}}=0 \Rightarrow (Q_{H}-|Q_{C}|)+W=0\]</div>
@@ -699,8 +703,11 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 <p>The two statements can be proven to be equivalent also starting from an anti-Kelvin engine in series with a regular refrigerator, which eventually leads to the Clausius statement.</p>
 <div class="example admonition">
 <p class="admonition-title">Can an engine with 100% efficiency exist?</p>
-<p>To answer, let us state that such an engine can exist, and let us attach it to a fridge (which we will see after), as depicted in fig. \ref{}.</p>
-<p>[FIG NEEDED HERE FROM JL NOTES]</p>
+<p>To answer, let us state that such an engine can exist, and let us attach it to a fridge (which we will see after), as depicted in <code class="xref std std-numref docutils literal notranslate"><span class="pre">100_efficiency</span></code>.</p>
+<figure class="align-default" id="efficiency">
+<a class="reference internal image-reference" href="../_images/100_efficiency.png"><img alt="../_images/100_efficiency.png" src="../_images/100_efficiency.png" style="width: 60%;" /></a>
+</figure>
+</div>
 <p>The engine, having 100 %  thermal effiency, converts all the heat extracted <span class="math notranslate nohighlight">\(Q_{H}\)</span> from the hot reservoir to work <span class="math notranslate nohighlight">\(W\)</span>, which is used to make the fridge work and extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir (this time <span class="math notranslate nohighlight">\(Q_{C}\)</span> is positive) and deliver <span class="math notranslate nohighlight">\(Q_{H}\)</span> to the hot one.</p>
 <p>Balancing out the whole system, it turns out that the outcome of the combined engine is to extract <span class="math notranslate nohighlight">\(Q_{C}\)</span> from the cold reservoir without any work required.</p>
 <p>Let us calculate now the variation of entropy associated to the combined engine:</p>
@@ -708,6 +715,8 @@ To do that, let us imagine to have an “anti-Clausius” system, i.e. a workles
 \[\Delta S=\Delta S_{H}+\Delta S_{C}= 0-\frac{Q_{C}}{T_{C}}\]</div>
 <p>, which then results in a negative quantity. As already discussed in the previous chapter (<a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html#sec-second-law"><span class="std std-ref">Module 5.7</span></a>), second law of thermodynamics states that it’s not possible for a thermodynamic transformation to occur without an increase of the entropy associated to the system.</p>
 <p>This means that the system composed of the “perfect” engine and the fridge cannot exist, thus proving that there are no heat engines with 100 % thermal efficiency.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </section>
 <section id="rankine-cycle">
@@ -730,8 +739,13 @@ To understand the design and performance of these systems, it is useful to first
 </ul>
 <p>These modifications make the cycle feasible for power generation systems. The physical layout of the Rankine cycle is provided in <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_schematics</span></code> and is composed of a pump, boiler, turbine and condensor.</p>
 <p>[FIG NEEDED OF RANKINE SCHEMATICS]</p>
-<p>The Rankine Cycle stages (refer to <span class="math notranslate nohighlight">\(pV\)</span> diagram, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_diagram</span></code>) can be clearly identified on the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
-<p>[FIG NEEDED OF RANKINE <span class="math notranslate nohighlight">\(PV\)</span> DIAGRAM OR TS]</p>
+<p>The Rankine Cycle stages (refer to <span class="math notranslate nohighlight">\(TS\)</span> diagram, <code class="xref std std-numref docutils literal notranslate"><span class="pre">Rankine_diagram</span></code>) can be clearly identified on the <span class="math notranslate nohighlight">\(pV\)</span> diagram:</p>
+<figure class="align-default" id="rankine-diagram">
+<a class="reference internal image-reference" href="../_images/TS_Diagram1.png"><img alt="../_images/TS_Diagram1.png" src="../_images/TS_Diagram1.png" style="width: 60%;" /></a>
+</figure>
+<figure class="align-default" id="super-heated-rankine">
+<a class="reference internal image-reference" href="../_images/TS_Diagram2.png"><img alt="../_images/TS_Diagram2.png" src="../_images/TS_Diagram2.png" style="width: 60%;" /></a>
+</figure>
 <ul class="simple">
 <li><p>1 → 2: Pump (liquid compression (isoentropic)). Water enters as a saturated liquid from the condenser. It is compressed to a higher pressure by the pump. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this appears as a nearly vertical line (very small volume change). Because the fluid is liquid, no phase change occurs, and the work required is small.</p></li>
 <li><p>2 → 3: Boiler (constant-pressure heat addition)
@@ -899,18 +913,34 @@ compared with conventional chemical fuels.</p>
 </div>
 <div class="example admonition">
 <p class="admonition-title">How efficient is petrol?</p>
-<p><strong>Question</strong>. If, instead of a tank of petrol, we used a straw to suck up fuel, how wide does the channel to hold the fuel need to be?</p>
-<p><strong>Answer</strong></p>
-<p>Typical cars consume <span class="math notranslate nohighlight">\(\approx 40\ \mathrm{mpg}\)</span> (miles per gallon), where <span class="math notranslate nohighlight">\(1\ \mathrm{mile}=1.6\ \mathrm{km}\)</span> and <span class="math notranslate nohighlight">\(1\ \mathrm{gallon}=4.546\ \mathrm{L}\)</span>.
-So:</p>
-<div class="math notranslate nohighlight">
-\[1\ \mathrm{mpg}=0.425\ \mathrm{km}\ \mathrm{L}^{-1}\Rightarrow 40\ \mathrm{mpg}=0.07\ \mathrm{Lkm}^{-1}=7\times 10^{-5}\ \mathrm{m}^{3}\mathrm{km}^{-1}=7\times 10^{-8}\ \mathrm{m}^{2} \]</div>
-<p>The calculated quantity has the dimension of an area. This is in fact the area of the tunnel that you need to suck up fuel.
-The tunnel width will be:</p>
-<div class="math notranslate nohighlight">
-\[d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}\]</div>
-<p><strong>Alternative method</strong>.</p>
+<!-- **Question**. If, instead of a tank of petrol, we used a straw to suck up fuel, how wide does the channel to hold the fuel need to be?
+
+**Answer**
+
+Typical cars consume $\approx 40\ \mathrm{mpg}$ (miles per gallon), where $1\ \mathrm{mile}=1.6\ \mathrm{km}$ and $1\ \mathrm{gallon}=4.546\ \mathrm{L}$.
+So:
+
+$$
+
+1\ \mathrm{mpg}=0.425\ \mathrm{km}\ \mathrm{L}^{-1}\Rightarrow 40\ \mathrm{mpg}=0.07\ \mathrm{Lkm}^{-1}=7\times 10^{-5}\ \mathrm{m}^{3}\mathrm{km}^{-1}=7\times 10^{-8}\ \mathrm{m}^{2} 
+
+$$
+
+The calculated quantity has the dimension of an area. This is in fact the area of the tunnel that you need to suck up fuel.
+The tunnel width will be:
+
+$$
+
+d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}
+
+$$
+
+**Alternative method**. -->
 <p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube.</p>
+<figure class="align-default" id="edinburgh-london">
+<a class="reference internal image-reference" href="../_images/Edinburgh_to_London_pipe.png"><img alt="../_images/Edinburgh_to_London_pipe.png" src="../_images/Edinburgh_to_London_pipe.png" style="width: 60%;" /></a>
+</figure>
+</div>
 <p><strong>Solution</strong>.</p>
 <p>The width <span class="math notranslate nohighlight">\(d\)</span> of the tube can be found starting from the volume <span class="math notranslate nohighlight">\(V\)</span> of the tank, since:</p>
 <div class="math notranslate nohighlight">
@@ -925,42 +955,18 @@ d&amp;=\sqrt{\frac{50\ \mathrm{L}}{(500\ \mathrm{miles})\cdot (1600\ \mathrm{m}\
 \end{split}\]</div>
 <p>The width of the tube is <span class="math notranslate nohighlight">\(d=250\ \mu\mathrm{m}\)</span>, thus showing just how energetically dense petrol is.
 That’s the key issue with fossil fuels: their energy density is extremely high. They pack a huge amount of usable energy into a small space. This is why replacing fossil fuels is so difficult and costly. It’s not just about producing energy – it’s about storing it efficiently.</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mf">50e-3</span><span class="o">/</span><span class="mf">8e5</span><span class="p">)</span><span class="o">**</span><span class="mf">0.5</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+
+
+
+
+
+
+
+
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.00025
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">8e9</span><span class="o">/</span><span class="mf">165e3</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>48484.84848484849
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">48485</span><span class="o">/</span><span class="mi">365</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>132.83561643835617
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
