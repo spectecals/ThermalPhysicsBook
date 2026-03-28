@@ -1,0 +1,104 @@
+Traceback (most recent call last):
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\nbclient\client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\jupyter_core\utils\__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "C:\Users\stefa\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\nbclient\client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\nbclient\client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\stefa\Documents\ThermalPhysicsBook\tp-env\lib\site-packages\nbclient\client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+trials = 100
+victory = int((trials / 2) + 1)
+probabilities = binomial(num_trials=trials, probability=(18 / 37))
+mean = trials * (18 / 37)
+
+plt.figure(figsize=(5, 5))
+
+plt.plot(range(1, trials + 1),
+         probabilities,
+         color='k')
+
+# Vertical line at "victory"
+plt.vlines(x=victory,
+           ymin=0,
+           ymax=max(probabilities) * 1.05,
+           color='k',
+           linestyle='--',
+           linewidth=1.5)
+
+# Shaded regions
+plt.fill_between(range(1, victory),
+                 probabilities[:victory - 1],
+                 color='deepskyblue',
+                 alpha=0.3)
+
+plt.fill_between(range(victory, trials + 1),
+                 probabilities[victory - 1:],
+                 color='red',
+                 alpha=0.3)
+
+# Arrows (scaled to 20 trials)
+plt.arrow(victory, max(probabilities) * 0.8,
+          10, 0,
+          width=0.001,
+          length_includes_head=True,
+          head_width=0.003,
+          head_length=0.4,
+          color='k')
+
+plt.arrow(victory, max(probabilities) * 0.8,
+          -10, 0,
+          width=0.001,
+          length_includes_head=True,
+          head_width=0.003,
+          head_length=0.4,
+          color='k')
+
+# Text labels (scaled)
+plt.text(victory + 13,
+         max(probabilities) * 0.80,
+         "Win\nCondition",
+         color='r',
+         ha='left')
+
+plt.text(victory - 13,
+         max(probabilities) * 0.80,
+         "Lose\nCondition",
+         color='deepskyblue',
+         ha='right')
+
+plt.xlabel("Number of Roulette Wheel Wins")
+plt.ylabel("Probability of k wins")
+plt.xlim(1, trials)
+plt.ylim(0, max(probabilities) * 1.1)
+
+plt.show()
+------------------
+
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mNameError[0m                                 Traceback (most recent call last)
+Cell [1;32mIn[6], line 3[0m
+[0;32m      1[0m trials [38;5;241m=[39m [38;5;241m100[39m
+[0;32m      2[0m victory [38;5;241m=[39m [38;5;28mint[39m((trials [38;5;241m/[39m [38;5;241m2[39m) [38;5;241m+[39m [38;5;241m1[39m)
+[1;32m----> 3[0m probabilities [38;5;241m=[39m [43mbinomial[49m[43m([49m[43mnum_trials[49m[38;5;241;43m=[39;49m[43mtrials[49m[43m,[49m[43m [49m[43mprobability[49m[38;5;241;43m=[39;49m[43m([49m[38;5;241;43m18[39;49m[43m [49m[38;5;241;43m/[39;49m[43m [49m[38;5;241;43m37[39;49m[43m)[49m[43m)[49m
+[0;32m      4[0m mean [38;5;241m=[39m trials [38;5;241m*[39m ([38;5;241m18[39m [38;5;241m/[39m [38;5;241m37[39m)
+[0;32m      6[0m plt[38;5;241m.[39mfigure(figsize[38;5;241m=[39m([38;5;241m5[39m, [38;5;241m5[39m))
+
+Cell [1;32mIn[5], line 6[0m, in [0;36mbinomial[1;34m(num_trials, probability)[0m
+[0;32m      3[0m probabilities [38;5;241m=[39m []
+[0;32m      5[0m [38;5;28;01mfor[39;00m trial [38;5;129;01min[39;00m trials:
+[1;32m----> 6[0m     combination [38;5;241m=[39m [43mmath[49m[38;5;241m.[39mcomb(num_trials, trial)
+[0;32m      7[0m     trial_probability [38;5;241m=[39m probability [38;5;241m*[39m[38;5;241m*[39m trial [38;5;241m*[39m ([38;5;241m1[39m [38;5;241m-[39m probability) [38;5;241m*[39m[38;5;241m*[39m (num_trials [38;5;241m-[39m trial)
+[0;32m      8[0m     probabilities[38;5;241m.[39mappend(combination [38;5;241m*[39m trial_probability)
+
+[1;31mNameError[0m: name 'math' is not defined
+

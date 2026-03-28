@@ -1534,14 +1534,14 @@ Thus the thermodynamic entropy change is recovered directly from the statistical
 \Delta S = \frac{\Delta Q}{T}
 \]</div>
 <p>is only applicable in reversible processes.</p>
+<p>To calculate the entropy change correctly, a reversible path must be constructed such that thermal equilibrium is maintained throughout each step at each point in time.</p>
 <figure class="align-default" id="supercooling">
 <a class="reference internal image-reference" href="../_images/supercool.png"><img alt="../_images/supercool.png" src="../_images/supercool.png" style="width: 70%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Temperature as a function of time while constantly being cooled. We cool down to <span class="math notranslate nohighlight">\(T(t_1) = 263 \text{ K }\)</span> with no phase transition when a shock introduces nucleation sites, allowing the phase transition to occur at <span class="math notranslate nohighlight">\(t_1\)</span>. The heat released during the phase transition brings the temperature to <span class="math notranslate nohighlight">\(T(t_2)=273 \text{ K } = 0 ^\circ\)</span> C. As the system continues to be cooled, the temperature remains constant until <span class="math notranslate nohighlight">\(t_3\)</span> where all water has converted to ice, allowing for further cooling below <span class="math notranslate nohighlight">\(0 ^\circ\)</span> C.</span><a class="headerlink" href="#supercooling" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Temperature of purified water as a function of time while constantly cooled. When the temperature reaches <span class="math notranslate nohighlight">\(T(t_1) = 263 \text{ K }\)</span>, a shock introduces nucleation sites allowing the phase transition. The heat released during the phase transition brings the temperature to <span class="math notranslate nohighlight">\(T(t_2)=273 \text{ K } = 0 ^\circ\)</span> C. As the system continues to be cooled, the temperature remains constant until <span class="math notranslate nohighlight">\(t_3\)</span> where all water has converted to ice, allowing for further cooling below <span class="math notranslate nohighlight">\(0 ^\circ\)</span> C.</span><a class="headerlink" href="#supercooling" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>To calculate the entropy change correctly, a reversible path must be constructed such that thermal equilibrium is maintained throughout each step at each point in time.</p>
-<p>Our goal has an initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(273 \ \mathrm{K}\)</span>. This constitutes the process from <span class="math notranslate nohighlight">\(t_1\)</span> to <span class="math notranslate nohighlight">\(t_3\)</span>, where we will assume that the liquid has completely converted into ice. Consider the following construction, where we can assume that the steps are reversible and therefore calculate the total entropy of the combined process:</p>
+<p>As in <a class="reference internal" href="#supercooling"><span class="std std-numref">Fig. 5.12</span></a>, our process has the initial state: liquid at <span class="math notranslate nohighlight">\(263 \ \mathrm{K}\)</span>, and final state: solid at <span class="math notranslate nohighlight">\(273 \ \mathrm{K}\)</span>. This constitutes the process from <span class="math notranslate nohighlight">\(t_1\)</span> to <span class="math notranslate nohighlight">\(t_3\)</span>, where we will assume that the liquid has completely converted into ice. Consider the following construction, where we can assume that the steps are reversible and therefore calculate the total entropy of the combined process:</p>
 <ol class="arabic simple">
 <li><p>Heat liquid <span class="math notranslate nohighlight">\(263 \rightarrow 273 \ \mathrm{K} (\Delta S_1) \)</span></p></li>
 <li><p>Freeze at <span class="math notranslate nohighlight">\(273 \ \mathrm{K} (\Delta S_2) \)</span></p></li>
@@ -1620,11 +1620,9 @@ Q = mL = 333 \ \mathrm{kJ}
 \begin{aligned}
 \Delta S_{\text{total}}
 &amp;= \Delta S_1 + \Delta S_2 + \Delta S_3 \\
-&amp;= 0.00288 + 0 \\
-\Delta S_{\text{total}} &amp;= 0.00288 \ \mathrm{kJ/K} &gt; 0
+&amp;= 0.00288 \ \mathrm{kJ/K} &gt; 0
 \end{aligned}
 \end{split}\]</div>
-<p>The Second Law is satisfied.</p>
 </section>
 </section>
 <section id="the-third-law-of-thermodynamics">
