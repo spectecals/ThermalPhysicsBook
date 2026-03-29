@@ -765,19 +765,19 @@ To understand the design and performance of these systems, it is useful to first
 <p><span class="caption-number">Fig. 6.14 </span><span class="caption-text"><span class="math notranslate nohighlight">\(pV\)</span> diagram of the regular Rankine cycle.</span><a class="headerlink" href="#rankine-diagram-pv" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>In this course <span class="math notranslate nohighlight">\(pV\)</span> diagrams were mostly used to describle the various thermodynamics processes. For the Rankine cycle, its processes are commonly explained using temperature vs. entropy (<span class="math notranslate nohighlight">\(TS\)</span>) diagrams (<a class="reference internal" href="#rankine-diagram"><span class="std std-numref">Fig. 6.15</span></a> and <code class="xref std std-numref docutils literal notranslate"><span class="pre">super_heated_engine</span></code>).</p>
-<figure class="align-default" id="rankine-diagram">
-<a class="reference internal image-reference" href="../_images/TS_Diagram1.png"><img alt="../_images/TS_Diagram1.png" src="../_images/TS_Diagram1.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6.15 </span><span class="caption-text"><span class="math notranslate nohighlight">\(TS\)</span> diagram of Rankine cycle.</span><a class="headerlink" href="#rankine-diagram" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<figure class="align-default" id="super-heated-rankine">
-<a class="reference internal image-reference" href="../_images/TS_Diagram2.png"><img alt="../_images/TS_Diagram2.png" src="../_images/TS_Diagram2.png" style="width: 60%;" /></a>
-<figcaption>
-<p><span class="caption-number">Fig. 6.16 </span><span class="caption-text"><span class="math notranslate nohighlight">\(TS\)</span> diagram of super-heated Rankine cycle.</span><a class="headerlink" href="#super-heated-rankine" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
+<!-- In this course $pV$ diagrams were mostly used to describle the various thermodynamics processes. For the Rankine cycle, its processes are commonly explained using temperature vs. entropy ($TS$) diagrams ({numref}`Rankine_diagram` and {numref}`super_heated_engine`).
+
+```{figure} figures_for_chapter_6/TS_Diagram1.png
+:width: 60%
+:name: Rankine_diagram
+$TS$ diagram of Rankine cycle.
+```
+
+```{figure} figures_for_chapter_6/TS_Diagram2.png
+:width: 60%
+:name: super_heated_rankine
+$TS$ diagram of super-heated Rankine cycle.
+``` -->
 <p>In detail:</p>
 <ul>
 <li><p>1 → 2: Pump (liquid compression (isoentropic)). Water enters as a saturated liquid from the condenser. It is compressed to a higher pressure by the pump. On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this appears as a nearly vertical line (very small volume change). Because the fluid is liquid, no phase change occurs, and the work required is small.</p></li>
@@ -786,7 +786,7 @@ The high pressure water water is heated to high pressure steam at constant press
 <ul class="simple">
 <li><p>First, temperature rises (compressed liquid region)</p></li>
 <li><p>Then phase change occurs (liquid → vapour)</p></li>
-<li><p>Optionally, the vapour is superheated ( shown in <a class="reference internal" href="#super-heated-rankine"><span class="std std-numref">Fig. 6.16</span></a>). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this corresponds to a large increase in specific volume as the water evaporates.</p></li>
+<li><p>Optionally, the vapour is superheated ( shown in <code class="xref std std-numref docutils literal notranslate"><span class="pre">super_heated_rankine</span></code>). On the <span class="math notranslate nohighlight">\(pV\)</span> diagram, this corresponds to a large increase in specific volume as the water evaporates.</p></li>
 </ul>
 <p>Note that some common heat sources for the boiler include: burning fossil fuels (e.g. coal, natural gas), nuclear energy (heat fromn nuclear fission), solar energy, geothermal (heat from hot fluids in the ground).</p>
 </li>
@@ -806,10 +806,10 @@ Nuclear power plants operate according to the same thermodynamic principle as co
 <figure class="align-default" id="nuclear-power-plant">
 <a class="reference internal image-reference" href="../_images/Nuclear_power_plant.png"><img alt="../_images/Nuclear_power_plant.png" src="../_images/Nuclear_power_plant.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.17 </span><span class="caption-text">Schematics of a nuclear power plant. Image taken from <a class="reference external" href="https://science.howstuffworks.com/nuclear-power2.htm">https://science.howstuffworks.com/nuclear-power2.htm</a> .</span><a class="headerlink" href="#nuclear-power-plant" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.15 </span><span class="caption-text">Schematics of a nuclear power plant. Image taken from <a class="reference external" href="https://science.howstuffworks.com/nuclear-power2.htm">https://science.howstuffworks.com/nuclear-power2.htm</a> .</span><a class="headerlink" href="#nuclear-power-plant" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#nuclear-power-plant"><span class="std std-numref">Fig. 6.17</span></a> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
+<p><a class="reference internal" href="#nuclear-power-plant"><span class="std std-numref">Fig. 6.15</span></a> illustrates the basic layout of a nuclear power station. Heat generated inside the reactor building is transferred to water in a boiler system, producing high-pressure steam. The steam drives a turbine connected to a generator, which produces electricity that is transmitted to the power grid. A cooling system removes excess heat and condenses the steam so that the cycle can continue.</p>
 <section id="nuclear-fission">
 <h3>Nuclear fission<a class="headerlink" href="#nuclear-fission" title="Permalink to this heading">#</a></h3>
 <p>The heat produced in nuclear reeactors originates from nuclear fission reactions. In this process, a heavy atomic nucleus absorb a neutron and becomes unstable, splitting into smaller nuclei while releasing additional neutrons and a large amount of energy.
@@ -825,14 +825,14 @@ In this reaction a uranium-235 nucleus absorbs a neutron and splits into barium-
 \]</div>
 <p>, where <span class="math notranslate nohighlight">\(\Delta m\)</span> is the decrease in mass and <span class="math notranslate nohighlight">\(c\)</span> is the speed of light. This mass change is directly related to the binding energy, which measures how tightly nucleons are held together in a nucleus. The fission products (barium and krypton) have a higher binding energy per nucleon than uranium-235, meaning they are more stable and tightly bound. As a result, the total binding energy increase during the reaction. Since binding energy contributes negatively to the mass of a nucleus, an increase in binding energy leads to a decrease in total mass. The lost mass is therefore released as energy, which appears as heat in the reactor and is ultimately used to generate electricity.</p>
 <p>Binding energy is the energy required to completely disassemble a nucleus into its individual protons and neutrons. Equivalently, it is the energy released when a nucleus is formed from these nucleons. A useful quantity is the binding energy per nucleon, which indicates how tightly each nucleon is bound within the nucleus.
-In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.18</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) is reported.</p>
+In the plot of <a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.16</span></a> the binding energy behavior associated to the number of nucleons (protons and/or neutrons) is reported.</p>
 <figure class="align-default" id="binding-energy">
 <a class="reference internal image-reference" href="../_images/Binding_energy.png"><img alt="../_images/Binding_energy.png" src="../_images/Binding_energy.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.18 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.16 </span><span class="caption-text">Binding energy per nucleon as a function of mass number (number of nucleons). The curve peaks near iron (<span class="math notranslate nohighlight">\(^{56}\mathrm{Fe}\)</span>), indicating the region of maximum nuclear stability. Light nuclei (low mass number) release energy through fusion as they move up the curve toward higher binding energy, while heavy nuclei (high mass number, e.g., uranium) release energy through fission as they split into nuclei closer to the peak. Image taken from <a class="reference external" href="https://www.nature.com/articles/s41598-022-16498-4">https://www.nature.com/articles/s41598-022-16498-4</a> .</span><a class="headerlink" href="#binding-energy" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The graph of binding energy per nucleon as a function of the number of nucleons (<a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.18</span></a>) shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
+<p>The graph of binding energy per nucleon as a function of the number of nucleons (<a class="reference internal" href="#binding-energy"><span class="std std-numref">Fig. 6.16</span></a>) shows that nuclei around iron (e.g., iron-56) are the most stable, as they have the highest binding energy per nucleon. Lighter nuclei (such as hydrogen or helium) can release energy by fusion, where they combine to form more tightly bound nuclei. In contrast, very heavy nuclei (such as uranium-235) have lower binding energy per nucleon and can release energy through fission, where they split into smaller, more stable nuclei.</p>
 <p>In the case of uranium-235, the binding energy per nucleon is approximately 7.6 MeV. Since one eV corresponds to <span class="math notranslate nohighlight">\(1.6\times 10^{−19} \mathrm{J}\)</span>, the total binding energy of a uranium-235 nucleus can be estimated as:</p>
 <div class="math notranslate nohighlight">
 \[E_{\mathrm{binding}}=235\cdot 7.6\ \mathrm{MeV}\cdot 1.6\times 10^{-19}\ \mathrm{J/eV}=2.86\times 10^{-10}\ \mathrm{J}\]</div>
@@ -865,11 +865,11 @@ In the plot of <a class="reference internal" href="#binding-energy"><span class=
 </section>
 <section id="chain-reactions">
 <h3>Chain reactions<a class="headerlink" href="#chain-reactions" title="Permalink to this heading">#</a></h3>
-<p>In the nuclear reaction describing uranium decay, we observe the presence of three neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction, as illustrated in <a class="reference internal" href="#chain-decay"><span class="std std-numref">Fig. 6.19</span></a>.</p>
+<p>In the nuclear reaction describing uranium decay, we observe the presence of three neutrons as reaction products, which can collide with other uranium atoms, thus giving rise to a chain reaction, as illustrated in <a class="reference internal" href="#chain-decay"><span class="std std-numref">Fig. 6.17</span></a>.</p>
 <figure class="align-default" id="chain-decay">
 <a class="reference internal image-reference" href="../_images/Chain_decay.png"><img alt="../_images/Chain_decay.png" src="../_images/Chain_decay.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.19 </span><span class="caption-text">Schematics of chain reaction decay occurring inside the reactor of a nuclear power plant.</span><a class="headerlink" href="#chain-decay" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.17 </span><span class="caption-text">Schematics of chain reaction decay occurring inside the reactor of a nuclear power plant.</span><a class="headerlink" href="#chain-decay" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>In order to maximize the efficiency of the reaction, neutrons need to be slowed down. To achieve that, heavy water is used (<span class="math notranslate nohighlight">\(\mathrm{D}_{2}\mathrm{O}\)</span>) is used.
@@ -973,7 +973,7 @@ d=\sqrt{7\times 10^{-8}\ \mathrm{m}^{2}}\approx 264\ \mu\mathrm{m}
 $$
 
 **Alternative method**. -->
-<p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube (<a class="reference internal" href="#edinburgh-london"><span class="std std-numref">Fig. 6.20</span></a> for reference).</p>
+<p>A typical family car with a 50-litre tank can travel about 500 miles – roughly the distance from Edinburgh to London – on a single tank of petrol. All that energy is stored compactly inside the car. What happens if you tried to lay that fuel out along a tube which covers the Edinburgh-London distance instead? Determine the width of the tube (<a class="reference internal" href="#edinburgh-london"><span class="std std-numref">Fig. 6.18</span></a> for reference).</p>
 <p><strong>Solution</strong>.</p>
 <p>The width <span class="math notranslate nohighlight">\(d\)</span> of the tube can be found starting from the volume <span class="math notranslate nohighlight">\(V\)</span> of the tank, since:</p>
 <div class="math notranslate nohighlight">
@@ -992,7 +992,7 @@ That’s the key issue with fossil fuels: their energy density is extremely high
 <figure class="align-default" id="edinburgh-london">
 <a class="reference internal image-reference" href="../_images/Edinburgh_to_London_pipe.png"><img alt="../_images/Edinburgh_to_London_pipe.png" src="../_images/Edinburgh_to_London_pipe.png" style="width: 60%;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 6.20 </span><span class="caption-text">On the left, sketch of UK map with Edinburgh-London distance. On the right, the sketch of the ideal tube of length <span class="math notranslate nohighlight">\(l\)</span> and width <span class="math notranslate nohighlight">\(d\)</span> containing a full tank of fuel.</span><a class="headerlink" href="#edinburgh-london" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6.18 </span><span class="caption-text">On the left, sketch of UK map with Edinburgh-London distance. On the right, the sketch of the ideal tube of length <span class="math notranslate nohighlight">\(l\)</span> and width <span class="math notranslate nohighlight">\(d\)</span> containing a full tank of fuel.</span><a class="headerlink" href="#edinburgh-london" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
