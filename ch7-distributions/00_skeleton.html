@@ -1,0 +1,1067 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>7. Statistical Distributions in Thermodynamics &#8212; Thermal Physics</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/toc-current-only.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ch7-distributions/00_skeleton';</script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="6. Heat engines" href="../ch6-heat_engines/01_Heat_engines.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.jpg" class="logo__image only-light" alt="Thermal Physics - Home"/>
+    <script>document.write(`<img src="../_static/logo.jpg" class="logo__image only-dark" alt="Thermal Physics - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../ch1-introduction/01_intro.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch2-temperature_and_heat/01_temperature_and_heat.html">2. Temperature and Heat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch3-kinetic_theory_of_gases/01_kinetic_theory_of_gases.html">3. Kinetic Theory of Gases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch4-first_law_of_thermodynamics/01_first_law_of_thermodynamics.html">4. The First Law of Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch5-entropy_and_second_law/01_entropy_and_second_law.html">5. Entropy and the Second Law of Thermodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ch6-heat_engines/01_Heat_engines.html">6. Heat engines</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Statistical Distributions in Thermodynamics</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ch7-distributions/00_skeleton.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Statistical Distributions in Thermodynamics</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-distributions">7.1. Gaussian Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distributions">7.2. Poisson Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-the-binomial-distribution">Connection to the binomial distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-distributions">7.3. Exponential Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-boltzmann-factor">The Boltzmann factor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-exponential-atmosphere">Application: The Exponential Atmosphere</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-distributions">7.4. Maxwell–Boltzmann Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">7.5. Mean Free Path</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation">Derivation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-statistics">7.6. Quantum Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-vs-quantum-description">Classical vs Quantum Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-levels-bands-and-the-boltzmann-distribution">Energy Levels, Bands, and the Boltzmann Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermidirac-distribution">Fermi–Dirac Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boseeinstein-distribution-and-black-body-radiation">Bose–Einstein Distribution and Black-Body Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-classical-vs-quantum-distributions">Summary: Classical vs Quantum Distributions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell tag_remove-input docutils container">
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="statistical-distributions-in-thermodynamics">
+<h1><span class="section-number">7. </span>Statistical Distributions in Thermodynamics<a class="headerlink" href="#statistical-distributions-in-thermodynamics" title="Permalink to this heading">#</a></h1>
+<div class="reading admonition">
+<p class="admonition-title">Relevant readings and preparation:</p>
+<ul class="simple">
+<li><p>Concepts in Thermal Physics: Chapters 4–5, 13–14</p></li>
+<li><p>University Physics with Modern Physics 15th edition: Chapters 18, 38–39</p></li>
+<li><p>Introductory Statistics 2e: Chapters 4–6</p></li>
+</ul>
+</div>
+<div class="outcomes admonition">
+<p class="admonition-title">Learning outcomes:</p>
+<ul class="simple">
+<li><p>Understand why statistical descriptions are essential in thermal physics</p></li>
+<li><p>Define and apply the Gaussian and Poisson distributions</p></li>
+<li><p>Derive and use the Maxwell–Boltzmann speed distribution</p></li>
+<li><p>Apply the barometric formula and explain exponential decay of atmospheric pressure</p></li>
+<li><p>Derive the mean free path and apply it to real gases</p></li>
+<li><p>Use the Boltzmann entropy formula <span class="math notranslate nohighlight">\(S = k_B \ln \Omega\)</span></p></li>
+<li><p>Distinguish classical from quantum statistics; describe the Fermi–Dirac distribution</p></li>
+</ul>
+</div>
+<p>A cubic centimetre of air at room temperature contains around <span class="math notranslate nohighlight">\(2.7 \times 10^{19}\)</span> molecules — each colliding billions of times per second. Tracking every molecule individually is impossible. What saves us is that the <em>collective</em> behaviour of enormous numbers of particles is remarkably regular: macroscopic quantities like temperature and pressure emerge as averages, and those averages obey precise probability distributions. This chapter builds the statistical toolkit needed to describe gases, from everyday conditions down to the quantum regime.</p>
+<p>In thermal physics, we often study systems comprised of an enormous number of particles. Instead of tracking the exact trajectories of each particle exhaustively, we rely on probability distributions which describe the typical behaviour of the system as a whole. The Gaussian, Poisson, and Maxwell–Boltzmann distributions are especially important because they each capture a common pattern observed in physical processes present in thermodynamics. Understanding these distributions helps in explaining how microscopic randomness produces the macroscopic behaviour we observe.</p>
+<section id="gaussian-distributions">
+<h2><span class="section-number">7.1. </span>Gaussian Distributions<a class="headerlink" href="#gaussian-distributions" title="Permalink to this heading">#</a></h2>
+<p>The most important of the distributions is the <strong>Gaussian</strong> (or Normal) distribution. The <strong>Central Limit Theorem</strong> guarantees that any quantity formed by summing many small, independent random contributions converges to a Gaussian — regardless of what those contributions look like individually. Energy fluctuations, measurement noise, and small departures from equilibrium all follow this pattern. In practice, the Gaussian serves as a “default” model for fluctuations in thermal systems, reflecting how microscopic randomness smooths out into predictable macroscopic behaviour.</p>
+<figure class="align-default" id="dice">
+<a class="reference internal image-reference" href="../_images/CLT_for_die.png"><img alt="../_images/CLT_for_die.png" src="../_images/CLT_for_die.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text">For one die, the probability distribution is uniform, preferring no value over any other. With two dice, the probability increases uniformly for each outcome, and then decreases once reaching 7, the most likely outcome (6 of 36 combinations result in a 7). As the number of dice used increase, the structure of the Gaussian distribution is retrieved, as is shown in the 1000 dice case.</span><a class="headerlink" href="#dice" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<!-- NB: figure's wrong. remove gaussian "approximation" (which is just an overlayed gaussian dist.) and let gaussian distribution become self-evident with the n=1000 case -->
+<p>The <strong>Gaussian probability density function</strong> for a continuous random variable <span class="math notranslate nohighlight">\(x\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x;\,\mu,\sigma) = \frac{1}{\sqrt{2\pi}\,\sigma}
+\exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+\]</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\mu\)</span></p></td>
+<td><p>Mean — the location of the peak</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sigma^2\)</span></p></td>
+<td><p>Variance — controls the width</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></td>
+<td><p>Standard deviation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Because the Gaussian is symmetric, the mean, median, and mode all coincide. The special case <span class="math notranslate nohighlight">\(\mu = 0\)</span>, <span class="math notranslate nohighlight">\(\sigma = 1\)</span> is called the <strong>standard normal distribution</strong>.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/4aee72259e3adbbf399e69d61f2b55ee335ee027af9cbe4e909a0b010d6e112d.png" src="../_images/4aee72259e3adbbf399e69d61f2b55ee335ee027af9cbe4e909a0b010d6e112d.png" />
+</div>
+</div>
+<p><strong>In thermal physics:</strong> each Cartesian component of a molecule’s velocity follows a Gaussian,</p>
+<div class="math notranslate nohighlight">
+\[
+f(v_x) = \sqrt{\frac{m}{2\pi k_B T}}\,\exp\!\left(-\frac{mv_x^2}{2k_B T}\right)
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\mu = 0\)</span> (no preferred direction) and <span class="math notranslate nohighlight">\(\sigma^2 = k_B T/m\)</span>. The spread grows with temperature — a first hint that temperature is a measure of the width of the molecular velocity distribution.</p>
+</section>
+<section id="poisson-distributions">
+<h2><span class="section-number">7.2. </span>Poisson Distributions<a class="headerlink" href="#poisson-distributions" title="Permalink to this heading">#</a></h2>
+<p>Many measurements consist of <strong>rare events</strong> which, should their occurrence be independent, are accurately modelled with the <strong>Poisson distribution</strong>.</p>
+<figure class="align-default" id="poiss">
+<a class="reference internal image-reference" href="../_images/basic_poisson.png"><img alt="../_images/basic_poisson.png" src="../_images/basic_poisson.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text">The Poisson distribution has a characteristic tail, where the nature of events occurring is strictly non-negative and discrete.</span><a class="headerlink" href="#poiss" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The Poisson distribution is important whenever we count events that occur randomly and independently. In thermal physics, this becomes especially relevant when we measure how often certain microscopic events occur over time — for example, molecular collisions, detections of radioactive decay events, or the number of particles crossing a surface. These processes involve random events happening at an approximately steady average rate, which makes the Poisson distribution well-suited to describing them.</p>
+<p>If on average <span class="math notranslate nohighlight">\(\lambda\)</span> events occur per interval, the probability of exactly <span class="math notranslate nohighlight">\(k\)</span> events is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(k;\,\lambda) = \frac{\lambda^k\,e^{-\lambda}}{k!}, \qquad k = 0, 1, 2, \ldots
+\]</div>
+<p>The parameter <span class="math notranslate nohighlight">\(\lambda\)</span> can be thought of as a rate parameter, controlling the frequency of occurrence for whatever event it is being used to describe. Both the mean and the variance equal <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle k \rangle = \lambda, \qquad \mathrm{Var}(k) = \lambda
+\quad\Rightarrow\quad \sigma = \sqrt{\lambda}
+\]</div>
+<p>The fractional uncertainty in a counting experiment is therefore <span class="math notranslate nohighlight">\(\sigma/\langle k\rangle = 1/\sqrt{\lambda}\)</span> — doubling the counting time halves the relative error.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/6f906fe45f413ffd8c73673cfcab537b6843f5e99eee54ec7902a7dcdf040313.png" src="../_images/6f906fe45f413ffd8c73673cfcab537b6843f5e99eee54ec7902a7dcdf040313.png" />
+</div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>Binomial</p></th>
+<th class="head"><p>Poisson</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Outcomes per trial</p></td>
+<td><p>2 (success/failure)</p></td>
+<td><p>Count of events</p></td>
+</tr>
+<tr class="row-odd"><td><p>Parameters</p></td>
+<td><p><span class="math notranslate nohighlight">\(n\)</span> (trials), <span class="math notranslate nohighlight">\(p\)</span> (prob.)</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lambda\)</span> (mean rate)</p></td>
+</tr>
+<tr class="row-even"><td><p>Mean</p></td>
+<td><p><span class="math notranslate nohighlight">\(np\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Variance</p></td>
+<td><p><span class="math notranslate nohighlight">\(np(1-p)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Limit</p></td>
+<td><p>General</p></td>
+<td><p><span class="math notranslate nohighlight">\(n\to\infty\)</span>, <span class="math notranslate nohighlight">\(p\to0\)</span>, <span class="math notranslate nohighlight">\(np=\lambda\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This distribution helps us understand the size of fluctuations in measurements and explains the origin of <strong>shot noise</strong>: the unavoidable statistical variations in the number of detected events, even when the average rate stays constant.</p>
+<section id="connection-to-the-binomial-distribution">
+<h3>Connection to the binomial distribution<a class="headerlink" href="#connection-to-the-binomial-distribution" title="Permalink to this heading">#</a></h3>
+<p>The Poisson distribution arises as the limit of the binomial <span class="math notranslate nohighlight">\(P(n,k) = \binom{n}{k}p^k(1-p)^{n-k}\)</span> when <span class="math notranslate nohighlight">\(n \to \infty\)</span> and <span class="math notranslate nohighlight">\(p \to 0\)</span> with <span class="math notranslate nohighlight">\(np = \lambda\)</span> held fixed. In other words: when an event is rare but the number of opportunities is very large, Poisson statistics apply.</p>
+<p>For <span class="math notranslate nohighlight">\(\lambda \gtrsim 20\)</span>, the Poisson distribution becomes approximately Gaussian with <span class="math notranslate nohighlight">\(\mu = \lambda\)</span>, <span class="math notranslate nohighlight">\(\sigma^2 = \lambda\)</span>.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: molecules in a small volume</p>
+<p>Suppose the mean number of gas molecules in a tiny fixed volume is <span class="math notranslate nohighlight">\(\lambda = 3.5\)</span>. What is the probability of finding exactly 3 molecules?</p>
+<div class="math notranslate nohighlight">
+\[
+P(3;\,3.5) = \frac{3.5^3\,e^{-3.5}}{3!}
+= \frac{42.875 \times 0.0302}{6} \approx 0.216
+\]</div>
+<p>So there is roughly a 1-in-5 chance of counting exactly 3 molecules — even though 3 is the closest integer to the mean. The Poisson distribution captures the inherent randomness in such counts.</p>
+</div>
+</section>
+</section>
+<section id="exponential-distributions">
+<h2><span class="section-number">7.3. </span>Exponential Distributions<a class="headerlink" href="#exponential-distributions" title="Permalink to this heading">#</a></h2>
+<p>The <strong>exponential distribution</strong> describes the probability of a continuous quantity that decays (or grows) at a constant proportional rate. It appears whenever the chance of an event occurring in the next small interval is independent of how long you have already been waiting — a property called <strong>memorylessness</strong>, true only for the exponential and geometric distributions.</p>
+<figure class="align-default" id="exp">
+<a class="reference internal image-reference" href="../_images/basic_exp.png"><img alt="../_images/basic_exp.png" src="../_images/basic_exp.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.3 </span><span class="caption-text">As in the Poisson case, we have a decay as <span class="math notranslate nohighlight">\(x\)</span> increases, though this model is ubiquitous across all fields of physics - note that it is firstly simpler (and in fact one of the terms of the Poisson distribution) and secondly continuous.</span><a class="headerlink" href="#exp" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The probability density function is:</p>
+<div class="math notranslate nohighlight">
+\[
+f(x;\,\lambda) = \lambda\,e^{-\lambda x}, \qquad x \geq 0
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\lambda &gt; 0\)</span> is the <strong>rate parameter</strong>. The mean and standard deviation are both <span class="math notranslate nohighlight">\(1/\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle x \rangle = \frac{1}{\lambda}, \qquad \sigma = \frac{1}{\lambda}
+\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(\sigma = \langle x \rangle\)</span> — the spread is always equal to the mean, a distinctive signature of exponential behaviour.</p>
+<p>In thermal physics the exponential distribution arises directly from the <strong>Boltzmann factor</strong>: the probability of a system having energy <span class="math notranslate nohighlight">\(E\)</span> is proportional to <span class="math notranslate nohighlight">\(e^{-E/k_BT}\)</span>. Any time energy or another additive cost grows linearly with some variable, the probability of reaching a given value falls off exponentially. Common examples include:</p>
+<ul class="simple">
+<li><p>Number density of a gas as a function of altitude (potential energy <span class="math notranslate nohighlight">\(= mgh\)</span>)</p></li>
+<li><p>Population of an excited atomic state (energy gap <span class="math notranslate nohighlight">\(\Delta E\)</span>)</p></li>
+<li><p>Intensity of radiation absorbed through a material (Beer–Lambert law)</p></li>
+<li><p>Time between molecular collisions (links to mean free path, Section 5)</p></li>
+</ul>
+<section id="the-boltzmann-factor">
+<h3>The Boltzmann factor<a class="headerlink" href="#the-boltzmann-factor" title="Permalink to this heading">#</a></h3>
+<p>For a system in thermal equilibrium at temperature <span class="math notranslate nohighlight">\(T\)</span>, the probability of occupying a state with energy <span class="math notranslate nohighlight">\(E\)</span> is proportional to:</p>
+<div class="math notranslate nohighlight">
+\[
+p(E) \propto e^{-E/k_BT}
+\]</div>
+<p>This single expression is the engine behind every exponential distribution in thermodynamics.</p>
+</section>
+<section id="application-the-exponential-atmosphere">
+<h3>Application: The Exponential Atmosphere<a class="headerlink" href="#application-the-exponential-atmosphere" title="Permalink to this heading">#</a></h3>
+<p>The Earth’s atmosphere can be viewed as a large thermodynamic system composed of a mixture of gases surrounding the planet and interacting continuously with solar radiation and the surface of the Earth. The temperature, pressure, and motion of the atmosphere determine weather patterns and regulate the global climate.</p>
+<p>The atmosphere is heated primarily by solar radiation and cooled by infrared radiation emitted back into space. Gravity produces strong vertical pressure gradients, while temperature differences across the Earth’s surface generate horizontal pressure gradients that drive winds and large-scale circulation.</p>
+<p>The Earth’s atmosphere is composed mainly of nitrogen (~78%), oxygen (~21%), and trace gases (argon, carbon dioxide, water vapour, etc.). Despite their small concentrations, trace gases can significantly affect thermodynamic behaviour due to their interaction with radiation. The atmosphere is divided into layers based on temperature variation with altitude: the troposphere (~0–12 km, where weather occurs), the stratosphere, the mesosphere, and the thermosphere.</p>
+<p>A striking consequence of the Boltzmann factor is that atmospheric pressure decreases <em>exponentially</em> with altitude. We know that pressure decreases as a function of altitude — but by how much? To answer this precisely, we combine the ideal gas law with a force balance.</p>
+<p><strong>Number density and pressure</strong></p>
+<p>The number density <span class="math notranslate nohighlight">\(N_v\)</span> is the number of molecules per unit volume:</p>
+<div class="math notranslate nohighlight">
+\[
+N_v = \frac{N}{V}
+\]</div>
+<p>From the ideal gas law <span class="math notranslate nohighlight">\(PV = Nk_BT\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{N}{V} = \frac{P}{k_B T} = N_v \quad\Rightarrow\quad P = N_v k_B T
+\]</div>
+<p>Pressure is proportional to the number of molecules per unit volume times temperature.</p>
+<p><strong>Hydrostatic equilibrium</strong></p>
+<p>Consider a thin horizontal slice of atmosphere at height <span class="math notranslate nohighlight">\(h\)</span>, with area <span class="math notranslate nohighlight">\(A\)</span> and thickness <span class="math notranslate nohighlight">\(dh\)</span>. The forces acting on it are:</p>
+<div class="math notranslate nohighlight">
+\[
+F_{\text{bottom}} = PA, \qquad
+F_{\text{top}} = (P + dP)A, \qquad
+F_{\text{weight}} = N_v(A\,dh)\,mg
+\]</div>
+<p>Balancing these (the slab is stationary):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+PA &amp;= N_v(A\,dh)\,mg + (P + dP)A \\
+\Rightarrow\quad -dP\,A &amp;= N_v(A\,dh)\,mg \\
+\Rightarrow\quad -dP &amp;= N_v m g\,dh
+\end{aligned}
+\end{split}\]</div>
+<p>Substituting <span class="math notranslate nohighlight">\(N_v = P/k_B T\)</span> at constant temperature:</p>
+<div class="math notranslate nohighlight">
+\[
+dP = -\frac{P}{k_B T}\,mg\,dh
+\]</div>
+<p><strong>The barometric formula</strong></p>
+<p>Separating variables and integrating from sea level (<span class="math notranslate nohighlight">\(P_0\)</span> at <span class="math notranslate nohighlight">\(h_0 = 0\)</span>) to height <span class="math notranslate nohighlight">\(h\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{P_0}^{P} \frac{dP'}{P'} = -\int_0^h \frac{mg}{k_BT}\,dh'
+\quad\Rightarrow\quad
+\ln\left(\frac{P}{P_0}\right) = -\frac{mgh}{k_BT}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P(h) = P_0\,\exp\!\left(-\frac{mgh}{k_BT}\right) = P_0\,e^{-h/H}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(H = k_BT/mg\)</span> is the <strong>scale height</strong> — the altitude over which pressure falls by a factor of <span class="math notranslate nohighlight">\(e\)</span>. Since <span class="math notranslate nohighlight">\(N_v = P/k_BT\)</span>, the number density follows exactly the same exponential:</p>
+<div class="math notranslate nohighlight">
+\[
+N_v(h) = N_0\,e^{-h/H}
+\]</div>
+<p>This is precisely the Boltzmann factor <span class="math notranslate nohighlight">\(e^{-E/k_BT}\)</span> applied to gravitational potential energy <span class="math notranslate nohighlight">\(E = mgh\)</span>. For air at <span class="math notranslate nohighlight">\(T = 273\,\text{K}\)</span> with <span class="math notranslate nohighlight">\(m = 4.8\times10^{-26}\,\text{kg}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+H = \frac{k_BT}{mg}
+= \frac{1.38\times10^{-23} \times 273}{4.8\times10^{-26} \times 9.8}
+\approx 8.0\,\text{km}
+\]</div>
+<div class="example admonition">
+<p class="admonition-title">Example: pressure on Everest and Ben Nevis</p>
+<p>Assume no change in temperature (<span class="math notranslate nohighlight">\(T = 273\,\text{K}\)</span>, i.e. <span class="math notranslate nohighlight">\(0^\circ\)</span>C) and average molecular mass <span class="math notranslate nohighlight">\(m = 4.8\times10^{-26}\,\text{kg}\)</span>.</p>
+<p><strong>Mount Everest</strong> (<span class="math notranslate nohighlight">\(h = 8848\,\text{m}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{mgh}{k_BT}
+= \frac{(4.8\times10^{-26})(9.8)(8848)}{(1.38\times10^{-23})(273)}
+\approx 1.11
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P = P_0\,e^{-1.11} = 1\,\text{atm} \times 0.33 = 0.33\,\text{atm}
+\]</div>
+<p><strong>Ben Nevis</strong> (<span class="math notranslate nohighlight">\(h = 1344\,\text{m}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+P = 1\,\text{atm} \times
+\exp\!\left(-\frac{(4.8\times10^{-26})(9.8)(1344)}{(1.38\times10^{-23})(273)}\right)
+\approx 0.84\,\text{atm}
+\]</div>
+</div>
+<p><strong>Horizontal pressure gradients and atmospheric motion</strong></p>
+<p>Uneven solar heating across the Earth’s surface creates horizontal pressure differences: warmer regions become less dense, generating pressure gradients. Air flows from high to low pressure, driving wind. Due to Earth’s rotation, moving air is deflected by the <strong>Coriolis force</strong>, causing rotation around low-pressure regions rather than direct inward flow — this is the origin of cyclones and anticyclones.</p>
+<p><strong>Radiation balance</strong></p>
+<p>The Earth’s temperature is set by the balance between incoming solar radiation and outgoing thermal radiation. The incoming energy per unit area is <span class="math notranslate nohighlight">\(S(1-\alpha)/4\)</span>, where <span class="math notranslate nohighlight">\(S \approx 1360\,\text{W\,m}^{-2}\)</span> is the solar constant and <span class="math notranslate nohighlight">\(\alpha\)</span> is the albedo. At equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{S(1-\alpha)}{4} = \sigma T^4
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\sigma\)</span> is the Stefan–Boltzmann constant. The Earth’s actual surface temperature is higher than this simple estimate because <strong>greenhouse gases</strong> (water vapour, CO<span class="math notranslate nohighlight">\(_2\)</span>, methane, nitrous oxide) absorb outgoing infrared radiation and re-emit it in all directions, trapping heat in the lower atmosphere. Increasing greenhouse gas concentrations reduce heat loss to space, shifting radiative equilibrium and raising surface temperature.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/b0210e47dee578c47a4370e2039adeb91d4a547c453f46db8b4b57ce5df436b3.png" src="../_images/b0210e47dee578c47a4370e2039adeb91d4a547c453f46db8b4b57ce5df436b3.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="maxwellboltzmann-distributions">
+<h2><span class="section-number">7.4. </span>Maxwell–Boltzmann Distributions<a class="headerlink" href="#maxwellboltzmann-distributions" title="Permalink to this heading">#</a></h2>
+<p>The Maxwell–Boltzmann distribution is named after James Clerk Maxwell and Ludwig Boltzmann, and was first defined for describing particle speeds in idealised gases. The Gaussian tells us about individual velocity <em>components</em>; what about the distribution of molecular <em>speeds</em> — the magnitude <span class="math notranslate nohighlight">\(v = \sqrt{v_x^2+v_y^2+v_z^2}\)</span>? This connects directly to measurable quantities: pressure, diffusion rates, collision rates, and heat transfer all depend on how fast molecules are moving.</p>
+<figure class="align-default" id="mb">
+<a class="reference internal image-reference" href="../_images/basic_MB.png"><img alt="../_images/basic_MB.png" src="../_images/basic_MB.png" style="width: 90%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7.4 </span><span class="caption-text">The Maxwell–Boltzmann distribution is even moreso akin to the Poisson distribution - asymmetric, undefined below 0, with a peak at some value above 0. Note that it differs significantly in use however, as it is continuous.</span><a class="headerlink" href="#mb" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Because each component <span class="math notranslate nohighlight">\(v_x, v_y, v_z\)</span> is an independent Gaussian (Section 1), transforming to spherical coordinates in velocity space introduces a geometric factor — the surface area of a sphere of radius <span class="math notranslate nohighlight">\(v\)</span> in velocity space — giving the <strong>Maxwell–Boltzmann speed distribution</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+f(v;\,T,m) = 4\pi\!\left(\frac{m}{2\pi k_B T}\right)^{\!3/2}
+v^2\,\exp\!\left(-\frac{mv^2}{2k_B T}\right), \qquad v \geq 0
+\]</div>
+<p>The Maxwell–Boltzmann distribution plays a central role in kinetic theory because it describes the spread of particle speeds in a classical ideal gas. It shows that, at a given temperature, some particles move slowly while others move very fast, and it gives precise predictions for the most probable speed, the average speed, and the rms speed. These predictions feed directly into calculations of pressure, diffusion, heat transfer, and collision rates. In essence, this distribution connects random molecular motion to the observable properties of gases.</p>
+<p>The <span class="math notranslate nohighlight">\(v^2\)</span> factor means the distribution is zero at <span class="math notranslate nohighlight">\(v=0\)</span> and right-skewed. Three characteristic speeds summarise it:</p>
+<div class="math notranslate nohighlight">
+\[
+v_p = \sqrt{\frac{2k_BT}{m}}, \qquad
+\langle v \rangle = \sqrt{\frac{8k_BT}{\pi m}}, \qquad
+v_{\mathrm{rms}} = \sqrt{\frac{3k_BT}{m}}
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(v_p &lt; \langle v \rangle &lt; v_{\mathrm{rms}}\)</span> — a direct consequence of the right skew.</p>
+<p><strong>Physical intuition:</strong></p>
+<ul class="simple">
+<li><p>Increasing <span class="math notranslate nohighlight">\(T\)</span> broadens the distribution and shifts all three speeds to higher values — at higher temperature the distribution is broader, at lower temperature it is narrower.</p></li>
+<li><p>Lighter molecules move faster at the same <span class="math notranslate nohighlight">\(T\)</span> — this is why hydrogen escapes Earth’s atmosphere while heavier nitrogen and oxygen do not.</p></li>
+<li><p>All energy states remain accessible to classical particles, in contrast to the quantum case (Section 6).</p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">32</span>
+    <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\langle v</span>
+                                                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unterminated string literal (detected at line 32)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: rms speed of nitrogen at 300 K</p>
+<p>For <span class="math notranslate nohighlight">\(N_2\)</span> (<span class="math notranslate nohighlight">\(m = 28\times10^{-3} / 6.022\times10^{23} = 4.65\times10^{-26}\,\text{kg}\)</span>) at <span class="math notranslate nohighlight">\(T = 300\,\text{K}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+v_{\mathrm{rms}} = \sqrt{\frac{3k_BT}{m}}
+= \sqrt{\frac{3 \times 1.38\times10^{-23} \times 300}{4.65\times10^{-26}}}
+\approx 517\,\text{m\,s}^{-1}
+\]</div>
+<p>This is faster than the speed of sound in air (<span class="math notranslate nohighlight">\(\approx 343\,\text{m\,s}^{-1}\)</span>), which makes sense: pressure waves propagate by molecular collisions, so molecular speeds set the upper bound on sound speed.</p>
+</div>
+</section>
+<section id="mean-free-path">
+<h2><span class="section-number">7.5. </span>Mean Free Path<a class="headerlink" href="#mean-free-path" title="Permalink to this heading">#</a></h2>
+<p>We know how many molecules there are per unit volume and how fast they move. The next natural question: <em>how far does a molecule travel before colliding with another one?</em> This is the <strong>mean free path</strong> <span class="math notranslate nohighlight">\(\lambda\)</span>, a quantity that controls viscosity, thermal conductivity, and the design of vacuum systems.</p>
+<p>At ambient pressure (<span class="math notranslate nohighlight">\(P = 101325\,\text{Pa} = 1013\,\text{hPa}\)</span>), the number density is <span class="math notranslate nohighlight">\(N_v = 2.7\times10^{25}\,\text{molecules\,m}^{-3}\)</span> and the mean free path is <span class="math notranslate nohighlight">\(\lambda \approx 68\,\text{nm}\)</span> — about 200 molecular diameters. This means that out of <span class="math notranslate nohighlight">\(2.7\times10^{25}\)</span> molecules in a cubic metre, each one travels on average only 68 nm before colliding with another. In high vacuum (<span class="math notranslate nohighlight">\(P &lt; 10^{-7}\,\text{Pa}\)</span>), <span class="math notranslate nohighlight">\(\lambda\)</span> stretches to <span class="math notranslate nohighlight">\(\sim 10^5\,\text{km}\)</span>, meaning molecules travel vast distances without collision — a regime essential for particle accelerators, electron microscopes, and space simulation chambers.</p>
+<section id="derivation">
+<h3>Derivation<a class="headerlink" href="#derivation" title="Permalink to this heading">#</a></h3>
+<p>Treat molecules as hard spheres of diameter <span class="math notranslate nohighlight">\(d\)</span>. An equivalent picture: one molecule moves as a point particle while all others are expanded to diameter <span class="math notranslate nohighlight">\(2d\)</span>. A molecule moving with velocity <span class="math notranslate nohighlight">\(v\)</span> sweeps out a cylindrical collision volume <span class="math notranslate nohighlight">\(\pi d^2\,vt\)</span> in time <span class="math notranslate nohighlight">\(t\)</span>, and collides with every molecule whose centre lies inside this cylinder.</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{\text{distance travelled}}{\text{number of collisions}}
+= \frac{vt}{\pi d^2\,vt\,N_v}
+= \frac{1}{\pi d^2 N_v}
+\]</div>
+<p>More accurately, accounting for the relative motion between the moving molecule and its targets (the average relative speed is <span class="math notranslate nohighlight">\(\sqrt{2}\,v\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\lambda = \frac{1}{\sqrt{2}\,\pi d^2 N_v}
+= \frac{k_BT}{\sqrt{2}\,\pi d^2 P}}
+\]</div>
+<p>The second form makes the pressure dependence explicit: halving the pressure exactly doubles the mean free path.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: nitrogen at 20°C</p>
+<p>At <span class="math notranslate nohighlight">\(T = 293\,\text{K}\)</span> (<span class="math notranslate nohighlight">\(20^\circ\)</span>C), <span class="math notranslate nohighlight">\(P = 10^5\,\text{Pa}\)</span>, and molecular diameter <span class="math notranslate nohighlight">\(d = 2\times10^{-10}\,\text{m}\)</span>:</p>
+<p><strong>Step 1 — Number density:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+N_v = \frac{P}{k_BT} = \frac{1\times10^5}{1.38\times10^{-23}\times293}
+\approx 2.5\times10^{25}\,\text{m}^{-3}
+\]</div>
+<p><strong>Step 2 — Mean free path:</strong></p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{1}{\sqrt{2}\,\pi\,(2\times10^{-10})^2\times2.5\times10^{25}}
+\approx 2.25\times10^{-7}\,\text{m} = 225\,\text{nm}
+\]</div>
+</div>
+<div class="example admonition">
+<p class="admonition-title">Example: finding temperature from mean free path (Question 2)</p>
+<p>If <span class="math notranslate nohighlight">\(\lambda = 200\,\text{nm}\)</span>, <span class="math notranslate nohighlight">\(d = 0.2\,\text{nm}\)</span>, and <span class="math notranslate nohighlight">\(P = 101325\,\text{Pa}\)</span>, find <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Rearranging <span class="math notranslate nohighlight">\(\lambda = k_BT/(\sqrt{2}\,\pi d^2 P)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+T = \frac{\sqrt{2}\,\pi d^2 P\,\lambda}{k_B}
+= \frac{\sqrt{2}\times\pi\times(0.2\times10^{-9})^2\times101325\times200\times10^{-9}}{1.38\times10^{-23}}
+\approx 260\,\text{K}
+\]</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</section>
+</section>
+<section id="quantum-statistics">
+<h2><span class="section-number">7.6. </span>Quantum Statistics<a class="headerlink" href="#quantum-statistics" title="Permalink to this heading">#</a></h2>
+<section id="classical-vs-quantum-description">
+<h3>Classical vs Quantum Description<a class="headerlink" href="#classical-vs-quantum-description" title="Permalink to this heading">#</a></h3>
+<p>So far we have dealt with molecules treated as classical, distinguishable particles. This is justified when the thermal de Broglie wavelength <span class="math notranslate nohighlight">\(\lambda_{dB}\)</span> is much smaller than the inter-particle spacing — i.e. when:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{dB} = \frac{h}{\sqrt{2\pi m k_B T}} \ll \text{inter-particle spacing}
+\]</div>
+<p>In this classical limit, particles are distinguishable and the Maxwell–Boltzmann distribution applies. This is not true for <strong>electrons</strong>, which are an example of <strong>fermions</strong>, or for <strong>photons</strong>, which are <strong>bosons</strong>.</p>
+<p>In quantum mechanics, identical particles are truly indistinguishable: swapping two particles produces no observable change. This leads to two fundamentally different particle types with very different statistical behaviour:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Particle Type</p></th>
+<th class="head"><p>Examples</p></th>
+<th class="head"><p>Statistics</p></th>
+<th class="head"><p>Principle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fermions</p></td>
+<td><p>Electrons, protons, neutrons</p></td>
+<td><p>Fermi–Dirac</p></td>
+<td><p>Pauli exclusion</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bosons</p></td>
+<td><p>Photons, phonons, <span class="math notranslate nohighlight">\(^4\)</span>He</p></td>
+<td><p>Bose–Einstein</p></td>
+<td><p>No restriction</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The <strong>Pauli exclusion principle</strong> states that two or more identical fermions cannot occupy the same quantum state at the same time. Electrons occupy the lowest available energy levels first, filling them one by one. This is in direct contrast to photons, which can all occupy the same energy level simultaneously.</p>
+</section>
+<section id="energy-levels-bands-and-the-boltzmann-distribution">
+<h3>Energy Levels, Bands, and the Boltzmann Distribution<a class="headerlink" href="#energy-levels-bands-and-the-boltzmann-distribution" title="Permalink to this heading">#</a></h3>
+<p>Energy levels in atoms are discrete: <span class="math notranslate nohighlight">\(n = 1, 2, 3, \ldots\)</span> with associated orbitals s, p, d, … . When many atoms are brought together to form a solid, their wavefunctions combine and energy levels split into closely spaced <strong>bands</strong>.</p>
+<p>In metals (e.g. copper), electrons partially fill a conduction band and are free to move — giving rise to electrical conduction. The energy gap between the valence and conduction bands is <span class="math notranslate nohighlight">\(E_g \sim 2\)</span>–<span class="math notranslate nohighlight">\(3\,\text{eV}\)</span>, while the thermal energy at room temperature is only <span class="math notranslate nohighlight">\(k_BT \approx 0.026\,\text{eV}\)</span> — far too small to bridge the gap in an insulator.</p>
+<p>The classical <strong>Boltzmann distribution</strong> gives the probability that a particle has energy <span class="math notranslate nohighlight">\(E_i\)</span> in thermal equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[
+p(E_i) = \frac{e^{-E_i / k_B T}}{\displaystyle\sum_j e^{-E_j / k_B T}}
+\]</div>
+<p>As <span class="math notranslate nohighlight">\(T \to 0\)</span>, this suppresses all states with <span class="math notranslate nohighlight">\(E_i &gt; 0\)</span>, so <span class="math notranslate nohighlight">\(p(E_i) \to 0\)</span> for excited states and <span class="math notranslate nohighlight">\(p(E_i) \to 1\)</span> for the ground state — all classical particles fall into the lowest energy state. At high <span class="math notranslate nohighlight">\(T\)</span>, all states become equally accessible.</p>
+</section>
+<section id="fermidirac-distribution">
+<h3>Fermi–Dirac Distribution<a class="headerlink" href="#fermidirac-distribution" title="Permalink to this heading">#</a></h3>
+<p>For fermions, the Pauli exclusion principle restricts each quantum state to at most one particle. The mean occupancy of a state with energy <span class="math notranslate nohighlight">\(E\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{\mathrm{FD}}(E) = \frac{1}{e^{(E - E_F)/k_BT} + 1}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(E_F\)</span> is the <strong>Fermi energy</strong> — the chemical potential at zero temperature, equal to the highest occupied energy level at <span class="math notranslate nohighlight">\(T = 0\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Condition</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(f_{\mathrm{FD}}(E)\)</span></p></th>
+<th class="head"><p>Physical meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T = 0\)</span>, <span class="math notranslate nohighlight">\(E &lt; E_F\)</span></p></td>
+<td><p>1</p></td>
+<td><p>State definitely occupied</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T = 0\)</span>, <span class="math notranslate nohighlight">\(E &gt; E_F\)</span></p></td>
+<td><p>0</p></td>
+<td><p>State definitely empty</p></td>
+</tr>
+<tr class="row-even"><td><p>Any <span class="math notranslate nohighlight">\(T\)</span>, <span class="math notranslate nohighlight">\(E = E_F\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\tfrac{1}{2}\)</span></p></td>
+<td><p>Always half-occupied</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(E \gg E_F + k_BT\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx e^{-(E-E_F)/k_BT}\)</span></p></td>
+<td><p>Recovers Boltzmann</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>At <span class="math notranslate nohighlight">\(T = 0\)</span> the distribution is a perfect step — the <strong>Fermi sea</strong> — with all states below <span class="math notranslate nohighlight">\(E_F\)</span> full and all above empty. Finite temperature smears the step over a range <span class="math notranslate nohighlight">\(\sim k_BT\)</span> around <span class="math notranslate nohighlight">\(E_F\)</span>.</p>
+<p>In copper <span class="math notranslate nohighlight">\(E_F \approx 7\,\text{eV}\)</span> while <span class="math notranslate nohighlight">\(k_BT \approx 0.026\,\text{eV}\)</span> at room temperature. Only electrons within <span class="math notranslate nohighlight">\(\sim k_BT\)</span> of the Fermi level can be thermally excited — the vast majority are frozen deep in the Fermi sea. This is why the electronic heat capacity is far smaller than the classical prediction.</p>
+</section>
+<section id="boseeinstein-distribution-and-black-body-radiation">
+<h3>Bose–Einstein Distribution and Black-Body Radiation<a class="headerlink" href="#boseeinstein-distribution-and-black-body-radiation" title="Permalink to this heading">#</a></h3>
+<p>For bosons there is no restriction on occupancy. The mean number of bosons in a state with energy <span class="math notranslate nohighlight">\(E\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{\mathrm{BE}}(E) = \frac{1}{e^{(E - \mu)/k_BT} - 1}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mu\)</span> is the chemical potential. For photons in thermal equilibrium, <span class="math notranslate nohighlight">\(\mu = 0\)</span> because photons are freely created and destroyed by the cavity walls.</p>
+<p><strong>Black-body radiation</strong> is one of the most important applications of Bose–Einstein statistics. Thermal radiation is one of the fundamental mechanisms by which energy is transferred in nature — unlike conduction and convection, it does not require a material medium and can propagate through empty space. Every body at finite temperature emits electromagnetic radiation as a consequence of microscopic atomic and molecular transitions; thermal fluctuations continuously excite and de-excite internal energy levels, leading to the spontaneous emission of photons.</p>
+<p>A <strong>black body</strong> is an idealised object that absorbs all incident radiation regardless of wavelength or direction. A practical realisation consists of a cavity with a small aperture: radiation entering the hole undergoes many reflections and is essentially all absorbed, while the radiation field inside depends only on temperature — not on the material. <strong>Kirchhoff’s law</strong> states:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{E(\nu, T)}{a(\nu)} = E_{\text{bb}}(\nu, T)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a(\nu)\)</span> is the absorptivity and <span class="math notranslate nohighlight">\(E_{\text{bb}}\)</span> is the black-body emission. This implies that good absorbers are good emitters, and a perfect absorber (<span class="math notranslate nohighlight">\(a(\nu) = 1\)</span>) emits maximally.</p>
+<p>Kirchhoff’s law does not determine the spectral shape. Classical physics (Rayleigh–Jeans) predicted <span class="math notranslate nohighlight">\(u \propto \nu^2\)</span> with no upper limit — the <strong>ultraviolet catastrophe</strong>. Max Planck resolved this in 1900 by proposing that energy is quantised in units of <span class="math notranslate nohighlight">\(E_n = nh\nu\)</span>. The average energy per oscillator is then given by the Bose–Einstein distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+\langle E \rangle = \frac{h\nu}{e^{h\nu/k_BT} - 1}
+\]</div>
+<p>Combined with the density of electromagnetic modes (<span class="math notranslate nohighlight">\(8\pi\nu^2/c^3\)</span>), this gives <strong>Planck’s law</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+u(\nu, T) = \frac{8\pi h\nu^3}{c^3}\,\frac{1}{e^{h\nu/k_BT} - 1}
+\]</div>
+<p>The spectrum arises from two competing effects: the number of modes grows as <span class="math notranslate nohighlight">\(\nu^2\)</span>, while the Bose–Einstein occupation falls exponentially at high frequency, producing a peak. As temperature increases, total emitted radiation increases and the peak shifts to higher frequencies.</p>
+<div class="example admonition">
+<p class="admonition-title">Example: relative intensity of spectral lines</p>
+<p>Two energy levels <span class="math notranslate nohighlight">\(E_1\)</span> and <span class="math notranslate nohighlight">\(E_2\)</span> are populated according to the Boltzmann distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{N_2}{N_1} = e^{-(E_2 - E_1)/k_B T}
+\]</div>
+<p>Given <span class="math notranslate nohighlight">\(E_2 - E_1 = 0.20\,\text{eV}\)</span> and <span class="math notranslate nohighlight">\(T = 3000\,\text{K}\)</span> (<span class="math notranslate nohighlight">\(k_B = 8.617\times10^{-5}\,\text{eV\,K}^{-1}\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{E_2 - E_1}{k_B T}
+= \frac{0.20}{(8.617\times10^{-5})(3000)}
+\approx 0.77
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{I_2}{I_1} = \frac{N_2}{N_1} = e^{-0.77} \approx 0.46
+\]</div>
+<p>The higher-energy spectral line has ~46% of the intensity of the lower-energy line.</p>
+</div>
+</section>
+<section id="summary-classical-vs-quantum-distributions">
+<h3>Summary: Classical vs Quantum Distributions<a class="headerlink" href="#summary-classical-vs-quantum-distributions" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Classical particles</strong> → distinguishable → Maxwell–Boltzmann: all energy states are accessible, higher energies exponentially suppressed</p></li>
+<li><p><strong>Fermions</strong> → Fermi–Dirac → obey Pauli exclusion: at most one particle per state, sharp Fermi sea at low <span class="math notranslate nohighlight">\(T\)</span></p></li>
+<li><p><strong>Bosons</strong> → Bose–Einstein → no restriction: can cluster in low-energy states, gives Planck’s black-body law</p></li>
+</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Maxwell–Boltzmann</p></th>
+<th class="head"><p>Bose–Einstein</p></th>
+<th class="head"><p>Fermi–Dirac</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Particle type</p></td>
+<td><p>Classical</p></td>
+<td><p>Bosons</p></td>
+<td><p>Fermions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Distinguishable?</p></td>
+<td><p>Yes</p></td>
+<td><p>No</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>Occupancy per state</p></td>
+<td><p>Unlimited</p></td>
+<td><p>Unlimited</p></td>
+<td><p><span class="math notranslate nohighlight">\(\leq 1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Distribution</p></td>
+<td><p><span class="math notranslate nohighlight">\(\propto e^{-E/k_BT}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{1}{e^{(E-\mu)/k_BT}-1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dfrac{1}{e^{(E-E_F)/k_BT}+1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Applications</p></td>
+<td><p>Ideal gases, molecular speeds</p></td>
+<td><p>Photons, phonons, cold atoms</p></td>
+<td><p>Electrons in metals/semiconductors</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In the high-temperature, low-density limit — when <span class="math notranslate nohighlight">\(e^{(E-\mu)/k_BT} \gg 1\)</span> — both quantum distributions reduce to the classical Maxwell–Boltzmann result. Quantum indistinguishability ceases to matter, and classical statistical mechanics is recovered.</p>
+<p>At low temperatures, quantum effects dominate: fermions are locked into the Fermi sea while bosons can undergo <strong>Bose–Einstein condensation</strong> into the ground state — a macroscopic quantum phenomenon first observed experimentally in 1995.</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ch7-distributions"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../ch6-heat_engines/01_Heat_engines.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Heat engines</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-distributions">7.1. Gaussian Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#poisson-distributions">7.2. Poisson Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connection-to-the-binomial-distribution">Connection to the binomial distribution</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponential-distributions">7.3. Exponential Distributions</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-boltzmann-factor">The Boltzmann factor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#application-the-exponential-atmosphere">Application: The Exponential Atmosphere</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maxwellboltzmann-distributions">7.4. Maxwell–Boltzmann Distributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mean-free-path">7.5. Mean Free Path</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivation">Derivation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quantum-statistics">7.6. Quantum Statistics</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-vs-quantum-description">Classical vs Quantum Description</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#energy-levels-bands-and-the-boltzmann-distribution">Energy Levels, Bands, and the Boltzmann Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fermidirac-distribution">Fermi–Dirac Distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#boseeinstein-distribution-and-black-body-radiation">Bose–Einstein Distribution and Black-Body Radiation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-classical-vs-quantum-distributions">Summary: Classical vs Quantum Distributions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Samer Kurdi, Dr. Jonathan Leach
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
