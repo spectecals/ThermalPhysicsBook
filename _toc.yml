@@ -35,5 +35,5 @@ chapters:
   # - file: ch9-appendix-probability_for_thermodynamics/CH5 Probability all sections
 
 - file: ch7-distributions/00_skeleton
-  sections:
-  - file: ch7-distributions/01_distributions
+  # sections:
+  # - file: ch7-distributions/01_distributions
