@@ -1,4 +1,15 @@
 [ ] - TODO
+[ ] - molecular speeds
+    dont do bose einstein
+    maxwell-boltzmann  y
+    poisson  Y!
+    normal
+    gibbs
+    fermi-dirac  y
+    exponential  y
+
+    use more from JL's notes especially on boltzmann, poisson, maxwell
+    atmosphere example : maxwell
 
 [O] - DAFYDD
 [O] - fig for coin toss heads 4x in a row
